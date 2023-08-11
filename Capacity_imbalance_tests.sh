@@ -13,13 +13,24 @@ else
     compete_vm2=$3
 fi
 # Start VMs (three with 16 cores)
-echo "Starting VMs..."
-virsh start $prob_vm
-virsh start $compete_vm1
-virsh start $compete_vm2
+vms=("prob_vm" "compete_vm1" "compete_vm2")
+
+for vm in "${vms[@]}"; do
+    vm_status=$(virsh list --all | grep -w "$vm" | awk '{print $3$4}')
+    if [ "$vm_status" != "running" ]; then
+        echo "Starting $vm..."
+        virsh start $vm
+    else
+        echo "$vm is running"
+    fi
+done
+
+
+
+
 
 #Ensure that the core amount is correct
-for vm in $prob_vm $compete_vm1 $compete_vm2; do
+for vm in  "${vms[@]}"; do
     virsh setvcpus $vm 16 --live --config
     if [ $? -ne 0 ]; then
         echo "Maximum CPU value for VMs must be at least 16"
@@ -28,7 +39,7 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
 done
 
 #Check that everything is set up properly
-for vm in $prob_vm $compete_vm1 $compete_vm2; do
+for vm in "${vms[@]}"; do
     echo "Testing SSH for $vm..."
 
     # Attempt to SSH into VM with a timeout of 10 seconds
@@ -49,6 +60,7 @@ done
 ssh ubuntu@$compete_vm1 "sudo kill all sysbench" &
 ssh ubuntu@$compete_vm2 "sudo kill all sysbench" &
 ssh ubuntu@$prob_vm "sudo kill all sysbench" &
+
 # Among 16 cores of measuring VM, set the environment for 8 cores so that they receive 33% of the total capacity of the physical CPUs.
 for i in {0..15}; do
     virsh vcpupin $prob_vm $i $i

@@ -20,23 +20,29 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
         virsh start $vm
     else
         echo "$vm is running"
+        virsh start $vm
     fi
 done
 
 
-echo "Starting VMs..."
-virsh start $prob_vm
-virsh start $compete_vm1
-virsh start $compete_vm2
 
-
-
-#Ensure that the core amount is correct
-for vm in $prob_vm $compete_vm1 $compete_vm2; do
-    virsh setvcpus $vm 16 --live --config
-    if [ $? -ne 0 ]; then
-        echo "Maximum CPU value for VMs must be at least 16"
-        exit 1
+for vm in "${vms[@]}"; do
+    # Get the current number of vcpus for the VM
+    current_vcpus=$(virsh vcpucount $vm --live | grep "live" | awk '{print $2}')
+    if [ "$current_vcpus" -ne 16 ]; then
+        echo "Adjusting core count for $vm..."
+        virsh shutdown $vm
+        while virsh dominfo $vm | grep -q "running"; do
+            sleep 2
+        done
+        virsh setvcpus $vm 16 --config --maximum
+        virsh setvcpus $vm 16 --config --live
+        virsh start $vm
+        while ! virsh dominfo $vm | grep -q "running"; do
+            sleep 2
+        done
+    else
+        echo "$vm has correct number of cores"
     fi
 done
 

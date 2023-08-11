@@ -95,7 +95,7 @@ ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sysbench --time=40 --threads=32 cpu run &
 
 SYSBENCH_PID=$!
-
+echo $SYSBENCH_PID
 # Sleep for a brief moment to ensure sysbench has started
 sleep 1
 

@@ -4,9 +4,9 @@
 
 if [ "$#" -ne 2 ]; then
     echo "VM names not supplied, Assuming default VM specs"
-    prob_vm="Your_VM_Name_Here"
-    compete_vm1="Your_VM_Name_Here"
-    compete_vm2="Your_VM_Name_Here"
+    prob_vm="e-vm1"
+    compete_vm1="e-vm3"
+    compete_vm2="vm1"
 else
     prob_vm=$1
     compete_vm1=$2

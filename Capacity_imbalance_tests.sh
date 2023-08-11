@@ -111,7 +111,7 @@ done
 
 # Wait for sysbench to complete
 wait $SYSBENCH_PID
-
+ENDSSH
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"

@@ -26,7 +26,7 @@ done
 
 
 
-for vm in "${vms[@]}"; do
+for vm in $prob_vm $compete_vm1 $compete_vm2; do
     # Get the current number of vcpus for the VM
     current_vcpus=$(virsh vcpucount $vm --live | grep "live" | awk '{print $2}')
     echo $current_vcpus

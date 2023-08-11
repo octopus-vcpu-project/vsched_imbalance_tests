@@ -65,9 +65,9 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
     fi
 done
 
-ssh ubuntu@$compete_vm1 "sudo kill all sysbench" &
-ssh ubuntu@$compete_vm2 "sudo kill all sysbench" &
-ssh ubuntu@$prob_vm "sudo kill all sysbench" &
+ssh ubuntu@$compete_vm1 "sudo killall sysbench" &
+ssh ubuntu@$compete_vm2 "sudo killall sysbench" &
+ssh ubuntu@$prob_vm "sudo killall sysbench" &
 
 # Among 16 cores of measuring VM, set the environment for 8 cores so that they receive 33% of the total capacity of the physical CPUs.
 for i in {0..15}; do
@@ -78,8 +78,8 @@ done
 
 
 #Engage workload in competition
-ssh ubuntu@$compete_vm1 "sysbench cpu --threads=16 --time=100000 cpu run" &
-ssh ubuntu@$compete_vm2 "sysbench cpu --threads=16 --time=100000 cpu run" &
+ssh ubuntu@$compete_vm1 "sysbench --threads=16 --time=100000 cpu run" &
+ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"

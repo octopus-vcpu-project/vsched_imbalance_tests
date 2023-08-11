@@ -46,6 +46,9 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
     fi
 done
 
+ssh ubuntu@$compete_vm1 "sudo kill all sysbench" &
+ssh ubuntu@$compete_vm2 "sudo kill all sysbench" &
+ssh ubuntu@$prob_vm "sudo kill all sysbench" &
 # Among 16 cores of measuring VM, set the environment for 8 cores so that they receive 33% of the total capacity of the physical CPUs.
 for i in {0..15}; do
     virsh vcpupin $prob_vm $i $i

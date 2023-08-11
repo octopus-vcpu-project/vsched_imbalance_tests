@@ -104,13 +104,13 @@ TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 
 # Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
-    echo $i > /proc/$SYSBENCH_PID/task/${TID_ARRAY[$i]}/cpuset
+    sudo echo $i > /proc/$SYSBENCH_PID/task/${TID_ARRAY[$i]}/cpuset
 done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
 for i in {8..31}; do
-    echo $CPU > /proc/$SYSBENCH_PID/task/${TID_ARRAY[$i]}/cpuset
+    sudo echo $CPU > /proc/$SYSBENCH_PID/task/${TID_ARRAY[$i]}/cpuset
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))
     fi

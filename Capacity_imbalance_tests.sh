@@ -98,18 +98,18 @@ SYSBENCH_PID=$(pidof sysbench)
 echo $SYSBENCH_PID
 # Sleep for a brief moment to ensure sysbench has started
 sleep 1
-
+echo "test"
 TID_ARRAY=($(pgrep -w -l -P $SYSBENCH_PID | awk '{print $1}'))
 
 # Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
-    taskset -pc $i ${TID_ARRAY[$i]}
+    taskset -c $i ${TID_ARRAY[$i]}
 done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
 for i in {8..31}; do
-    taskset -pc $CPU ${TID_ARRAY[$i]}
+    taskset -c $CPU ${TID_ARRAY[$i]}
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))
     fi

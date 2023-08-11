@@ -94,7 +94,7 @@ echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sysbench --time=40 --threads=32 cpu run &
 
-SYSBENCH_PID=$!
+SYSBENCH_PID=$(pidof sysbench)
 echo $SYSBENCH_PID
 # Sleep for a brief moment to ensure sysbench has started
 sleep 1

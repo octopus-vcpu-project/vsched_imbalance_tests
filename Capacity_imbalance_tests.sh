@@ -94,12 +94,13 @@ echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sysbench --time=50 --threads=32 cpu run &
 
+# Sleep for a brief moment to ensure sysbench has started and then get its PID
+sleep 1
 SYSBENCH_PID=$(pidof sysbench)
 echo $SYSBENCH_PID
-# Sleep for a brief moment to ensure sysbench has started
-sleep 1
-echo "test"
-TID_ARRAY=($(pgrep -w -l -P $SYSBENCH_PID | awk '{print $1}'))
+
+# Get the list of threads (from /proc filesystem)
+TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 
 # Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
@@ -118,6 +119,11 @@ done
 # Wait for sysbench to complete
 wait $SYSBENCH_PID
 ENDSSH
+
+
+
+
+
 
 wait
 echo "Script execution completed!"

@@ -12,10 +12,8 @@ else
     compete_vm1=$2
     compete_vm2=$3
 fi
-# Start VMs (three with 16 cores)
-VMs=("prob_vm" "compete_vm1" "compete_vm2")
 
-for vm in $prob_vm $compete_vm1 $compete_vm2;; do
+for vm in $prob_vm $compete_vm1 $compete_vm2; do
     vm_status=$(virsh list --all | grep -w "$vm" | awk '{print $3$4}')
     if [ "$vm_status" != "running" ]; then
         echo "Starting $vm..."

@@ -92,6 +92,7 @@ ssh ubuntu@$prob_vm "sysbench --time=20 --threads=32 cpu run" > "$OUTPUT_FILE"
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
+sudo su
 sysbench --time=50 --threads=32 cpu run &
 
 # Sleep briefly and then get its PID

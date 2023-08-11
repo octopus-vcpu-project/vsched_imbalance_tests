@@ -103,14 +103,13 @@ TID_ARRAY=($(pgrep -w -l -P $SYSBENCH_PID | awk '{print $1}'))
 
 # Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
-    taskset -c $i ${TID_ARRAY[$i]}
+    taskset -pc $i ${TID_ARRAY[$i]}
 done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
 for i in {8..31}; do
-    taskset -c $CPU ${TID_ARRAY[$i]}
-    # Check if it's time to switch to the next CPU
+    taskset -pc $CPU ${TID_ARRAY[$i]}
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))
     fi

@@ -105,13 +105,13 @@ echo "Thread IDs: ${TID_ARRAY[@]}"
 
 # Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
-    taskset -c $i ${TID_ARRAY[$i]}
+    taskset -c -p $i ${TID_ARRAY[$i]}
 done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
 for i in {8..31}; do
-    taskset -c $CPU ${TID_ARRAY[$i]}
+    taskset -c -p $CPU ${TID_ARRAY[$i]}
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))
     fi

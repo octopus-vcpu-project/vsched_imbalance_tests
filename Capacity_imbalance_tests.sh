@@ -29,7 +29,7 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
     # Get the current number of vcpus for the VM
     current_vcpus=$(virsh vcpucount $vm --live | grep "live" | awk '{print $2}')
     echo "$current_vcpus"
-    if [ "$current_vcpus" -ne 16 ]; then
+    if [ "$current_vcpus" -ne "16" ]; then
         echo "Adjusting core count for $vm..."
         virsh shutdown $vm
         while virsh dominfo $vm | grep -q "running"; do
@@ -84,8 +84,33 @@ ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 # Run sysbench with 2*16 threads for 180 seconds
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(naive)"
+sleep 3
 ssh ubuntu@$prob_vm "sysbench --time=100 --threads=32 cpu run" > "$OUTPUT_FILE"
+OUTPUT_FILE="cpc_test_1_bad$(date +%Y%m%d%H%M%S).txt"
+echo "Running sysbench with 2*16 threads for 180 seconds...(bad(on purpose))"
+ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
+sysbench --time=100 --threads=32 cpu run &
 
+# Sleep briefly and then get its PID
+sleep 1
+SYSBENCH_PID=$(pidof sysbench)
+echo "Sysbench PID: $SYSBENCH_PID"
+
+# Get the list of threads (from /proc filesystem)
+TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
+echo "Thread IDs: ${TID_ARRAY[@]}"
+
+# Pin the first 8 threads 1-1 to CPUs 0-7
+for i in {0..15}; do
+    taskset -c -p $i ${TID_ARRAY[$i]}
+done
+
+for i in {16..31}; do
+    taskset -c -p $i ${TID_ARRAY[$i]}
+done
+
+# Wait for sysbench to complete
+wait $SYSBENCH_PID
 
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
@@ -124,7 +149,4 @@ ENDSSH
 
 
 
-
-
-wait
-echo "Script execution completed!"
+echo "Finished"

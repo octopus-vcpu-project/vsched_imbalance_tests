@@ -92,26 +92,26 @@ ssh ubuntu@$prob_vm "sysbench --time=20 --threads=32 cpu run" > "$OUTPUT_FILE"
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
-sudo su
 sysbench --time=50 --threads=32 cpu run &
 
 # Sleep briefly and then get its PID
 sleep 1
 SYSBENCH_PID=$(pidof sysbench)
-echo $SYSBENCH_PID
+echo "Sysbench PID: $SYSBENCH_PID"
 
 # Get the list of threads (from /proc filesystem)
 TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
+echo "Thread IDs: ${TID_ARRAY[@]}"
 
 # Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
-    sudo echo $i > /proc/$SYSBENCH_PID/task/${TID_ARRAY[$i]}/cpuset
+    taskset -c $i ${TID_ARRAY[$i]}
 done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
 for i in {8..31}; do
-    sudo echo $CPU > /proc/$SYSBENCH_PID/task/${TID_ARRAY[$i]}/cpuset
+    taskset -c $CPU ${TID_ARRAY[$i]}
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))
     fi

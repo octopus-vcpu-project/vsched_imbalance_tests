@@ -85,7 +85,7 @@ ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
 echo "Running Bodytrack with 2*16 threads for 180 seconds...(naive)"
 sleep 3
-ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
+ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i simlarge" > "$OUTPUT_FILE"
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
@@ -94,11 +94,9 @@ sleep 1
 ssh -T ubuntu@$prob_vm <<ENDSSH > "$OUTPUT_FILE"
 sudo su 
 $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
-sleep 15
+sleep 12
 SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"
-
-# Get the list of threads (from /proc filesystem)
 TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 echo "Thread IDs: ${TID_ARRAY[@]}"
 

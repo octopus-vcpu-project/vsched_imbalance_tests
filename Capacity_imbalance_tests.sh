@@ -1,6 +1,6 @@
 
 #!/bin/bash
-
+benchmark_path = "/home/ubuntu/Workloads/parsec-benchmark/bin/"
 
 if [ "$#" -ne 2 ]; then
     echo "VM names not supplied, Assuming default VM specs"
@@ -85,13 +85,13 @@ ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
 echo "Running Bodytrack with 2*16 threads for 180 seconds...(naive)"
 sleep 3
-ssh ubuntu@$prob_vm "parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
+ssh ubuntu@$prob_vm "$benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
-ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
-parsecmgmt -a run -p bodytrack -n 32 -i native &
+ssh -T ubuntu@$prob_vm <<ENDSSH > "$OUTPUT_FILE"
+$benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
 # Sleep briefly and then get its PID
 sleep 3
 SYSBENCH_PID=$(pidof bodytrack)

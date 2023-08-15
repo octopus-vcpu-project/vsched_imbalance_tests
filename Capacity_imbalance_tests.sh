@@ -81,7 +81,7 @@ done
 
 
 #Engage workload in competition
-ssh ubuntu@$compete_vm2 "sudo bash runprober" &
+ssh ubuntu@$compete_vm2 "sudo bash runprober.sh" &
 ssh ubuntu@$compete_vm1 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds

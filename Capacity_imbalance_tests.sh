@@ -90,10 +90,10 @@ ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
+sleep 1
 ssh -T ubuntu@$prob_vm <<ENDSSH > "$OUTPUT_FILE"
 sudo su 
 $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
-# Sleep briefly and then get its PID
 sleep 15
 SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"

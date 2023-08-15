@@ -25,26 +25,7 @@ done
 
 
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
-for vm in $prob_vm $compete_vm1 $compete_vm2; do
-    # Get the current number of vcpus for the VM
-    current_vcpus=$(virsh vcpucount $vm --live | grep "live" | awk '{print $2}')
-    echo "$current_vcpus"
-    if [ "$current_vcpus" -ne "16" ]; then
-        echo "Adjusting core count for $vm..."
-        virsh shutdown $vm
-        while virsh dominfo $vm | grep -q "running"; do
-            sleep 2
-        done
-        virsh setvcpus $vm 16 --config --maximum
-        virsh setvcpus $vm 16 --config --live
-        virsh start $vm
-        while ! virsh dominfo $vm | grep -q "running"; do
-            sleep 2
-        done
-    else
-        echo "$vm has correct number of cores"
-    fi
-done
+
 
 #Check that everything is set up properly
 for vm in $prob_vm $compete_vm1 $compete_vm2; do
@@ -83,7 +64,7 @@ for i in {0..63}; do
 done
 
 #Engage workload in competition
-ssh ubuntu@$compete_vm1 "sysbench --threads=64 --time=100000 cpu run" &
+ssh ubuntu@$compete_vm2 "sysbench --threads=64 --time=100000 cpu run" &
 ssh ubuntu@$compete_vm1 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds

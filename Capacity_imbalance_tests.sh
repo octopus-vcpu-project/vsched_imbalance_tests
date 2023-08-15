@@ -66,7 +66,10 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
 done
 
 ssh ubuntu@$compete_vm1 "sudo killall sysbench" &
+
+ssh ubuntu@$compete_vm1 "sudo killall a.out" &
 ssh ubuntu@$compete_vm2 "sudo killall sysbench" &
+ssh ubuntu@$compete_vm2 "sudo killall a.out" &
 ssh ubuntu@$prob_vm "sudo killall bodytrack" &
 
 # Among 16 cores of measuring VM, set the environment for 8 cores so that they receive 33% of the total capacity of the physical CPUs.

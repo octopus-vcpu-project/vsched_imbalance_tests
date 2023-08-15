@@ -24,7 +24,7 @@ for vm in $prob_vm $compete_vm1 $compete_vm2; do
 done
 
 
-benchmark_path = "/home/ubuntu/Workloads/parsec-benchmark/bin/"
+benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
 for vm in $prob_vm $compete_vm1 $compete_vm2; do
     # Get the current number of vcpus for the VM
     current_vcpus=$(virsh vcpucount $vm --live | grep "live" | awk '{print $2}')

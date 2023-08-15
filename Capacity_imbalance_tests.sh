@@ -93,6 +93,8 @@ echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 sleep 1
 ssh -T ubuntu@$prob_vm <<ENDSSH > "$OUTPUT_FILE"
 sudo su 
+
+benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
 $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
 sleep 12
 SYSBENCH_PID=$(pidof bodytrack)

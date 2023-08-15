@@ -73,7 +73,7 @@ ssh ubuntu@$prob_vm "sudo killall sysbench" &
 for i in {0..15}; do
     virsh vcpupin $prob_vm $i $i
     virsh vcpupin $compete_vm1 $i $((i%8))
-    virsh vcpupin $compete_vm2 $i $((i%8))
+    virsh vcpupin $compete_vm2 $i $i
 done
 
 
@@ -83,52 +83,25 @@ ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
-echo "Running sysbench with 2*16 threads for 180 seconds...(naive)"
+echo "Running Bodytrack with 2*16 threads for 180 seconds...(naive)"
 sleep 3
-ssh ubuntu@$prob_vm "sysbench --time=100 --threads=32 cpu run" > "$OUTPUT_FILE"
-OUTPUT_FILE="cpc_test_1_bad$(date +%Y%m%d%H%M%S).txt"
-echo "Running sysbench with 2*16 threads for 180 seconds...(bad(on purpose))"
-ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
-sysbench --time=100 --threads=32 cpu run &
-
-# Sleep briefly and then get its PID
-sleep 1
-SYSBENCH_PID=$(pidof sysbench)
-echo "Sysbench PID: $SYSBENCH_PID"
-
-# Get the list of threads (from /proc filesystem)
-TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
-echo "Thread IDs: ${TID_ARRAY[@]}"
-
-# Pin the first 8 threads 1-1 to CPUs 0-7
-for i in {0..15}; do
-    taskset -c -p $i ${TID_ARRAY[$i]}
-done
-
-for i in {16..31}; do
-    taskset -c -p $i ${TID_ARRAY[$i]}
-done
-
-# Wait for sysbench to complete
-wait $SYSBENCH_PID
-ENDSSH
+ssh ubuntu@$prob_vm "parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
-sysbench --time=100 --threads=32 cpu run &
-
+parsecmgmt -a run -p bodytrack -n 32 -i native &
 # Sleep briefly and then get its PID
-sleep 1
-SYSBENCH_PID=$(pidof sysbench)
+sleep 3
+SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"
 
 # Get the list of threads (from /proc filesystem)
 TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 echo "Thread IDs: ${TID_ARRAY[@]}"
 
-# Pin the first 8 threads 1-1 to CPUs 0-7
+#Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
     taskset -c -p $i ${TID_ARRAY[$i]}
 done

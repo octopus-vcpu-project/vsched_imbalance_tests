@@ -91,7 +91,7 @@ ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
 echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 sleep 1
-ssh -T ubuntu@$prob_vm <<ENDSSH > "$OUTPUT_FILE"
+ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sudo su 
 
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"

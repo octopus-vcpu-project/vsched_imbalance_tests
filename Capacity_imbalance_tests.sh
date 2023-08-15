@@ -85,7 +85,7 @@ ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
 echo "Running Bodytrack with 2*16 threads for 180 seconds...(naive)"
 sleep 3
-ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
+ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 24 -i native" > "$OUTPUT_FILE"
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
@@ -95,7 +95,7 @@ ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sudo su 
 
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
-$benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
+$benchmark_path/parsecmgmt -a run -p bodytrack -n 24 -i native &
 sleep 10
 SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"
@@ -109,9 +109,9 @@ done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
-for i in {8..31}; do
+for i in {8..23}; do
     taskset -c -p $CPU ${TID_ARRAY[$i]}
-    if [ $(( (i - 7) % 3 )) -eq 0 ]; then
+    if [ $(( (i - 7) % 2 )) -eq 0 ]; then
         ((CPU++))
     fi
 done

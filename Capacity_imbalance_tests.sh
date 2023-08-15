@@ -76,12 +76,14 @@ ssh ubuntu@$prob_vm "sudo killall bodytrack" &
 for i in {0..15}; do
     virsh vcpupin $prob_vm $i $i
     virsh vcpupin $compete_vm1 $i $((i%8))
+done
+
+for i in {0..63}; do
     virsh vcpupin $compete_vm2 $i $i
 done
 
-
 #Engage workload in competition
-ssh ubuntu@$compete_vm2 "sudo ~/cpu_profiler/a.out -p 20 -s 80" &
+ssh ubuntu@$compete_vm1 "sysbench --threads=64 --time=100000 cpu run" &
 ssh ubuntu@$compete_vm1 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds
@@ -112,7 +114,7 @@ done
 
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
-for i in {8..32}; do
+for i in {8..31}; do
     taskset -c -p $CPU ${TID_ARRAY[$i]}
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))

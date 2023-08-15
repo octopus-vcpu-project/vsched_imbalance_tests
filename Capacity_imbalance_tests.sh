@@ -5,8 +5,8 @@
 if [ "$#" -ne 2 ]; then
     echo "VM names not supplied, Assuming default VM specs"
     prob_vm="e-vm1"
-    compete_vm1="e-vm3"
-    compete_vm2="vm1"
+    compete_vm1="vm1"
+    compete_vm2="e-vm3"
 else
     prob_vm=$1
     compete_vm1=$2
@@ -78,14 +78,14 @@ done
 
 
 #Engage workload in competition
+ssh ubuntu@$compete_vm2 "sudo bash runprober" &
 ssh ubuntu@$compete_vm1 "sysbench --threads=16 --time=100000 cpu run" &
-ssh ubuntu@$compete_vm2 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
 echo "Running Bodytrack with 2*16 threads for 180 seconds...(naive)"
 sleep 3
-ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 24 -i native" > "$OUTPUT_FILE"
+ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
@@ -93,6 +93,7 @@ echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 sleep 1
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sudo su 
+
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
 $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
 sleep 10
@@ -101,26 +102,18 @@ echo "Sysbench PID: $SYSBENCH_PID"
 TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 echo "Thread IDs: ${TID_ARRAY[@]}"
 
-# Creating cgroups for our threads
-sudo cgcreate -g cpuset:/group1
-sudo cgcreate -g cpuset:/group2
-
-# Setting CPUs for these groups
-echo "0-7" | sudo tee /sys/fs/cgroup/cpuset/group1/cpuset.cpus
-echo "8-15" | sudo tee /sys/fs/cgroup/cpuset/group2/cpuset.cpus
-
-# Set memory nodes for these groups (assuming node 0)
-echo "0" | sudo tee /sys/fs/cgroup/cpuset/group1/cpuset.mems
-echo "0" | sudo tee /sys/fs/cgroup/cpuset/group2/cpuset.mems
-
-# Add first 8 threads to group1
+#Pin the first 8 threads 1-1 to CPUs 0-7
 for i in {0..7}; do
-    echo ${TID_ARRAY[$i]} | sudo tee /sys/fs/cgroup/cpuset/group1/tasks
+    taskset -c -p $i ${TID_ARRAY[$i]}
 done
 
-# Add next 24 threads to group2
-for i in {8..31}; do
-    echo ${TID_ARRAY[$i]} | sudo tee /sys/fs/cgroup/cpuset/group2/tasks
+# Pin the next 24 threads in groups of 3 to CPUs 8-15
+CPU=8
+for i in {8..32}; do
+    taskset -c -p $CPU ${TID_ARRAY[$i]}
+    if [ $(( (i - 7) % 3 )) -eq 0 ]; then
+        ((CPU++))
+    fi
 done
 
 # Wait for sysbench to complete

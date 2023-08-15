@@ -93,27 +93,34 @@ echo "Running sysbench with 2*16 threads for 180 seconds...(smart)"
 sleep 1
 ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sudo su 
-
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
-$benchmark_path/parsecmgmt -a run -p bodytrack -n 24 -i native &
+$benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
 sleep 10
 SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"
 TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 echo "Thread IDs: ${TID_ARRAY[@]}"
 
-#Pin the first 8 threads 1-1 to CPUs 0-7
+# Creating cgroups for our threads
+sudo cgcreate -g cpuset:/group1
+sudo cgcreate -g cpuset:/group2
+
+# Setting CPUs for these groups
+echo "0-7" | sudo tee /sys/fs/cgroup/cpuset/group1/cpuset.cpus
+echo "8-15" | sudo tee /sys/fs/cgroup/cpuset/group2/cpuset.cpus
+
+# Set memory nodes for these groups (assuming node 0)
+echo "0" | sudo tee /sys/fs/cgroup/cpuset/group1/cpuset.mems
+echo "0" | sudo tee /sys/fs/cgroup/cpuset/group2/cpuset.mems
+
+# Add first 8 threads to group1
 for i in {0..7}; do
-    taskset -c -p $i ${TID_ARRAY[$i]}
+    echo ${TID_ARRAY[$i]} | sudo tee /sys/fs/cgroup/cpuset/group1/tasks
 done
 
-# Pin the next 24 threads in groups of 3 to CPUs 8-15
-CPU=8
-for i in {8..23}; do
-    taskset -c -p $CPU ${TID_ARRAY[$i]}
-    if [ $(( (i - 7) % 2 )) -eq 0 ]; then
-        ((CPU++))
-    fi
+# Add next 24 threads to group2
+for i in {8..31}; do
+    echo ${TID_ARRAY[$i]} | sudo tee /sys/fs/cgroup/cpuset/group2/tasks
 done
 
 # Wait for sysbench to complete

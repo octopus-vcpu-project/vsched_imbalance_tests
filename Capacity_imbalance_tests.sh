@@ -94,7 +94,7 @@ ssh -T ubuntu@$prob_vm <<ENDSSH > "$OUTPUT_FILE"
 sudo su 
 $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
 # Sleep briefly and then get its PID
-sleep 10
+sleep 15
 SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"
 

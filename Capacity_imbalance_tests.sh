@@ -81,7 +81,7 @@ ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sudo su 
 
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
-$benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native &
+$benchmark_path/parsecmgmt -a run -p bodytrack -n 64 -i native &
 sleep 10
 SYSBENCH_PID=$(pidof bodytrack)
 echo "Sysbench PID: $SYSBENCH_PID"
@@ -96,7 +96,7 @@ done
 # Pin the next 24 threads in groups of 3 to CPUs 8-15
 CPU=8
 for i in {8..31}; do
-    taskset -c -p $CPU ${TID_ARRAY[$i]}
+    taskset -c -p $CPU ${TID_ARRAY[$i]t
     if [ $(( (i - 7) % 3 )) -eq 0 ]; then
         ((CPU++))
     fi

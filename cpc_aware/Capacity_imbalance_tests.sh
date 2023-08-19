@@ -51,7 +51,7 @@ ssh ubuntu@$compete_vm1 "sudo killall sysbench" &
 ssh ubuntu@$compete_vm1 "sudo killall a.out" &
 ssh ubuntu@$compete_vm2 "sudo killall sysbench" &
 ssh ubuntu@$compete_vm2 "sudo killall a.out" &
-ssh ubuntu@$prob_vm "sudo killall bodytrack" &
+ssh ubuntu@$prob_vm "sudo killall ferret" &
 
 # Among 16 cores of measuring VM, set the environment for 8 cores so that they receive 33% of the total capacity of the physical CPUs.
 for i in {0..15}; do
@@ -69,9 +69,9 @@ ssh ubuntu@$compete_vm1 "sysbench --threads=16 --time=100000 cpu run" &
 
 # Run sysbench with 2*16 threads for 180 seconds
 OUTPUT_FILE="cpc_test_1_naive$(date +%Y%m%d%H%M%S).txt"
-echo "Running Bodytrack with 2*16 threads for 180 seconds...(naive)"
+echo "Running ferret with 2*16 threads for 180 seconds...(naive)"
 sleep 3
-ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p bodytrack -n 32 -i native" > "$OUTPUT_FILE"
+ssh ubuntu@$prob_vm "sudo $benchmark_path/parsecmgmt -a run -p ferret -n 64 -i simlarge" > "$OUTPUT_FILE"
 
 # Run sysbench with 2*16 threads for 180 seconds, pinned so that the cores that aren't competed for get three threads, and the cores that are competed for get one thread.
 OUTPUT_FILE="cpc_test_1_smart$(date +%Y%m%d%H%M%S).txt"
@@ -81,9 +81,9 @@ ssh -T ubuntu@$prob_vm <<'ENDSSH' > "$OUTPUT_FILE"
 sudo su 
 
 benchmark_path="/home/ubuntu/Workloads/parsec-benchmark/bin/"
-$benchmark_path/parsecmgmt -a run -p bodytrack -n 64 -i native &
+$benchmark_path/parsecmgmt -a run -p ferret -n 32 -i simlarge &
 sleep 10
-SYSBENCH_PID=$(pidof bodytrack)
+SYSBENCH_PID=$(pidof ferret)
 echo "Sysbench PID: $SYSBENCH_PID"
 TID_ARRAY=($(ls /proc/$SYSBENCH_PID/task/))
 echo "Thread IDs: ${TID_ARRAY[@]}"

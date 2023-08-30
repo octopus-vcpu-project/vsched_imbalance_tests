@@ -24,6 +24,7 @@ set_vcpu() {
         virsh setvcpus "$vm" "$target_vcpu_count" --config
         # Start the VM again if it was running before
         virsh start "$vm"
+        sleep 20
     fi
 }
 

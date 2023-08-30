@@ -17,6 +17,6 @@ ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 #topology naive testing
 OUTPUT_FILE="./test/cpc_inaware$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark" > "$OUTPUT_FILE" &
-
+touch $OUTPUT_FILE
 ssh ubuntu@$prob_vm "sudo runqlen.py -c -T 1 60" > "$OUTPUT_FILE"
 echo "test complete"

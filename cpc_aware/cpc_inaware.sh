@@ -15,7 +15,7 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 #topology naive testing
-OUTPUT_FILE="./tests/cpc_inaware$(date +%m%d%H%M).txt"
+OUTPUT_FILE="/tests/cpc_inaware$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark" > "$OUTPUT_FILE" &
 for i in {0..31};do
     ssh ubuntu@$prob_vm "sudo runqlen.py -c -T 1 60" > "$OUTPUT_FILE"

@@ -19,4 +19,5 @@ OUTPUT_FILE="./tests/cpc_inaware$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark" > "$OUTPUT_FILE" &
 for i in {0..31};do
     ssh ubuntu@$prob_vm "sudo runqlen.py -c -T 1 60" > "$OUTPUT_FILE"
+    echo "test complete"
 done

@@ -1,6 +1,6 @@
 prob_vm=$1
 benchmark_command="sysbench --threads=16 --time=5 cpu run"
-sudo bash ../utility/cleanon_startup.sh prob_vm 32
+sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 
 for i in {0..15};do
     sudo virsh vcpupin $prob_vm $i $i

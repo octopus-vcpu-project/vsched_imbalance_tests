@@ -10,10 +10,11 @@ for i in {16..31};do
     sudo virsh vcpupin $prob_vm $i $((i + 64))
 done
 
-for i in {0..41};do 
+OUTPUT_FILE="top_inaware_placement$(date +%m%d%H%M).txt"
+
+for i in {0..5};do 
     ssh ubuntu@$prob_vm "sudo killall sysbench" &
-    OUTPUT_FILE="top_inaware_naive$(date +%m%d%H%M).txt"
-    ssh ubuntu@$prob_vm "sudo $benchmark_command" > "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" > "$OUTPUT_FILE"
     sleep 1

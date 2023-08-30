@@ -12,7 +12,7 @@ done
 
 OUTPUT_FILE="top_inaware_placement$(date +%m%d%H%M).txt"
 
-for i in {0..5};do 
+for i in {0..10};do 
     ssh ubuntu@$prob_vm "sudo killall sysbench" &
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 1

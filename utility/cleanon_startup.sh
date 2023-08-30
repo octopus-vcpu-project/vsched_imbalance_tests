@@ -47,11 +47,3 @@ while [ "$#" -gt 0 ]; do
     # Set the vCPU count for the VM
     set_vcpu "$vm" "$vcpu_count"
 done
-
-# Shutdown VMs that weren't mentioned in the arguments
-for running_vm in $running_vms; do
-    if ! echo "$@" | grep -qw "$running_vm"; then
-        echo "Shutting down VM: $running_vm"
-        virsh shutdown "$running_vm"
-    fi
-done

@@ -16,9 +16,9 @@ for i in {0..10};do
     ssh ubuntu@$prob_vm "sudo killall sysbench" &
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 1
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" > "$OUTPUT_FILE"
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
     sleep 1
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" > "$OUTPUT_FILE"
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
     #topology naive testing
     sleep 3
 done

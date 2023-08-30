@@ -14,10 +14,10 @@ for i in {0..41};do
     ssh ubuntu@$prob_vm "sudo killall sysbench" &
     OUTPUT_FILE="top_inaware_naive$(date +%m%d%H%M).txt"
     ssh ubuntu@$prob_vm "sudo $benchmark_command" > "$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" > "$OUTPUT_FILE"
+    sleep 1
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" > "$OUTPUT_FILE"
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" > "$OUTPUT_FILE"
     #topology naive testing
-    sleep 4
-    
+    sleep 3
 done

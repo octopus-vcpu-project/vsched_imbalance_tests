@@ -1,7 +1,7 @@
 prob_vm = $1
 cpu_benchmark = "sysbench --threads=16 --time=100 cpu run"
 io_benchmark = "sysbench --threads=16 --time=100 cpu run"
-../utility/cleanon_startup.sh prob_vm 32
+sudo bash ../utility/cleanon_startup.sh prob_vm 32
 
 for i in {0..15};do
     sudo virsh vcpupin $i $i

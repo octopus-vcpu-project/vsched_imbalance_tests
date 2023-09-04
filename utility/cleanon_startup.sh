@@ -14,14 +14,17 @@ set_vcpu() {
             virsh shutdown "$vm"
             while virsh list --state-running --name | grep -q "^$vm$"; do
                 sleep 2  # Waiting for the VM to shut down
+                echo "sleeping"
             done
         fi
 
         # Set the vCPU count
-        virsh setvcpus "$vm" "$target_vcpu_count" --config
 
+        virsh setvcpus "$vm" "$target_vcpu_count" --config --maximum
+        virsh setvcpus "$vm" "$target_vcpu_count" --config
         # Start the VM again if it was running before
         virsh start "$vm"
+        sleep 20
     fi
 }
 
@@ -43,12 +46,4 @@ while [ "$#" -gt 0 ]; do
 
     # Set the vCPU count for the VM
     set_vcpu "$vm" "$vcpu_count"
-done
-
-# Shutdown VMs that weren't mentioned in the arguments
-for running_vm in $running_vms; do
-    if ! echo "$@" | grep -qw "$running_vm"; then
-        echo "Shutting down VM: $running_vm"
-        virsh shutdown "$running_vm"
-    fi
 done

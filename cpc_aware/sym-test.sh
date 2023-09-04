@@ -1,7 +1,7 @@
 prob_vm=$1
 compete_vm=$2
 cpu_benchmark="sysbench --threads=8 --time=3 cpu run"
-compete_benchmark="sysbench --threads=16 --time=1000 cpu run"
+compete_benchmark="sysbench --threads=16 --time=1000000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16 $compete_vm 16
 
 for i in {0..15};do

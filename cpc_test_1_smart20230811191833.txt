@@ -1,0 +1,113 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 6.1.36vsched+ x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+136 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+[PARSEC] Benchmarks to run:  parsec.blackscholes
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+in_10M.txt
+[PARSEC] Running 'time /home/ubuntu/Workloads/parsec-benchmark/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes 32 in_10M.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Benchmark PID: 38914
+Thread IDs: 38914 38917 38918 38919 38920 38921 38922 38923 38924 38925 38926 38927 38928 38929 38930 38931 38932 38933 38934 38935 38936 38937 38938 38939 38940 38941 38942 38943 38944 38945 38946 38947 38948
+pid 38914's current affinity list: 0-15
+pid 38914's new affinity list: 0
+pid 38917's current affinity list: 0-15
+pid 38917's new affinity list: 1
+pid 38918's current affinity list: 0-15
+pid 38918's new affinity list: 2
+pid 38919's current affinity list: 0-15
+pid 38919's new affinity list: 3
+pid 38920's current affinity list: 0-15
+pid 38920's new affinity list: 4
+pid 38921's current affinity list: 0-15
+pid 38921's new affinity list: 5
+pid 38922's current affinity list: 0-15
+pid 38922's new affinity list: 6
+pid 38923's current affinity list: 0-15
+pid 38923's new affinity list: 7
+pid 38924's current affinity list: 0-15
+pid 38924's new affinity list: 8
+pid 38925's current affinity list: 0-15
+pid 38925's new affinity list: 8
+pid 38926's current affinity list: 0-15
+pid 38926's new affinity list: 8
+pid 38927's current affinity list: 0-15
+pid 38927's new affinity list: 9
+pid 38928's current affinity list: 0-15
+pid 38928's new affinity list: 9
+pid 38929's current affinity list: 0-15
+pid 38929's new affinity list: 9
+pid 38930's current affinity list: 0-15
+pid 38930's new affinity list: 10
+pid 38931's current affinity list: 0-15
+pid 38931's new affinity list: 10
+pid 38932's current affinity list: 0-15
+pid 38932's new affinity list: 10
+pid 38933's current affinity list: 0-15
+pid 38933's new affinity list: 11
+pid 38934's current affinity list: 0-15
+pid 38934's new affinity list: 11
+pid 38935's current affinity list: 0-15
+pid 38935's new affinity list: 11
+pid 38936's current affinity list: 0-15
+pid 38936's new affinity list: 12
+pid 38937's current affinity list: 0-15
+pid 38937's new affinity list: 12
+pid 38938's current affinity list: 0-15
+pid 38938's new affinity list: 12
+pid 38939's current affinity list: 0-15
+pid 38939's new affinity list: 13
+pid 38940's current affinity list: 0-15
+pid 38940's new affinity list: 13
+pid 38941's current affinity list: 0-15
+pid 38941's new affinity list: 13
+pid 38942's current affinity list: 0-15
+pid 38942's new affinity list: 14
+pid 38943's current affinity list: 0-15
+pid 38943's new affinity list: 14
+pid 38944's current affinity list: 0-15
+pid 38944's new affinity list: 14
+pid 38945's current affinity list: 0-15
+pid 38945's new affinity list: 15
+pid 38946's current affinity list: 0-15
+pid 38946's new affinity list: 15
+pid 38947's current affinity list: 0-15
+pid 38947's new affinity list: 15
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+
+real	0m38.616s
+user	2m51.810s
+sys	0m0.966s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.

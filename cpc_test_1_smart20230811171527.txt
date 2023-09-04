@@ -1,0 +1,167 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 6.1.36vsched+ x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+136 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+[PARSEC] Benchmarks to run:  parsec.bodytrack
+
+[PARSEC] [========== Running benchmark parsec.bodytrack [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+sequenceB_4/
+sequenceB_4/BodyShapeParameters.txt
+sequenceB_4/CALIB/
+sequenceB_4/CALIB/Camera1.cal
+sequenceB_4/CALIB/Camera2.cal
+sequenceB_4/CALIB/Camera3.cal
+sequenceB_4/CALIB/Camera4.cal
+sequenceB_4/CAM1/
+sequenceB_4/CAM1/image0000.bmp
+sequenceB_4/CAM1/image0001.bmp
+sequenceB_4/CAM1/image0002.bmp
+sequenceB_4/CAM1/image0003.bmp
+sequenceB_4/CAM2/
+sequenceB_4/CAM2/image0000.bmp
+sequenceB_4/CAM2/image0001.bmp
+sequenceB_4/CAM2/image0002.bmp
+sequenceB_4/CAM2/image0003.bmp
+sequenceB_4/CAM3/
+sequenceB_4/CAM3/image0000.bmp
+sequenceB_4/CAM3/image0001.bmp
+sequenceB_4/CAM3/image0002.bmp
+sequenceB_4/CAM3/image0003.bmp
+sequenceB_4/CAM4/
+sequenceB_4/CAM4/image0000.bmp
+sequenceB_4/CAM4/image0001.bmp
+sequenceB_4/CAM4/image0002.bmp
+sequenceB_4/CAM4/image0003.bmp
+sequenceB_4/FG1/
+sequenceB_4/FG1/image0000.bmp
+sequenceB_4/FG1/image0001.bmp
+sequenceB_4/FG1/image0002.bmp
+sequenceB_4/FG1/image0003.bmp
+sequenceB_4/FG2/
+sequenceB_4/FG2/image0000.bmp
+sequenceB_4/FG2/image0001.bmp
+sequenceB_4/FG2/image0002.bmp
+sequenceB_4/FG2/image0003.bmp
+sequenceB_4/FG3/
+sequenceB_4/FG3/image0000.bmp
+sequenceB_4/FG3/image0001.bmp
+sequenceB_4/FG3/image0002.bmp
+sequenceB_4/FG3/image0003.bmp
+sequenceB_4/FG4/
+sequenceB_4/FG4/image0000.bmp
+sequenceB_4/FG4/image0001.bmp
+sequenceB_4/FG4/image0002.bmp
+sequenceB_4/FG4/image0003.bmp
+sequenceB_4/InitialPose.txt
+sequenceB_4/PoseParameters.txt
+[PARSEC] Running 'time /home/ubuntu/Workloads/parsec-benchmark/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack sequenceB_4 4 4 4000 5 0 32':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threading with Posix Threads
+Number of threads : 32
+Using dataset : sequenceB_4/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Benchmark PID: 9286
+Thread IDs: 9286 9287 9288 9289 9290 9291 9292 9293 9294 9295 9296 9297 9298 9299 9300 9301 9302 9303 9304 9305 9306 9307 9308 9309 9310 9311 9312 9313 9314 9315 9316 9317 9318
+pid 9286's current affinity list: 0-15
+pid 9286's new affinity list: 0
+pid 9287's current affinity list: 0-15
+pid 9287's new affinity list: 1
+pid 9288's current affinity list: 0-15
+pid 9288's new affinity list: 2
+pid 9289's current affinity list: 0-15
+pid 9289's new affinity list: 3
+pid 9290's current affinity list: 0-15
+pid 9290's new affinity list: 4
+pid 9291's current affinity list: 0-15
+pid 9291's new affinity list: 5
+pid 9292's current affinity list: 0-15
+pid 9292's new affinity list: 6
+pid 9293's current affinity list: 0-15
+pid 9293's new affinity list: 7
+pid 9294's current affinity list: 0-15
+pid 9294's new affinity list: 8
+pid 9295's current affinity list: 0-15
+pid 9295's new affinity list: 8
+pid 9296's current affinity list: 0-15
+pid 9296's new affinity list: 8
+pid 9297's current affinity list: 0-15
+pid 9297's new affinity list: 9
+pid 9298's current affinity list: 0-15
+pid 9298's new affinity list: 9
+pid 9299's current affinity list: 0-15
+pid 9299's new affinity list: 9
+pid 9300's current affinity list: 0-15
+pid 9300's new affinity list: 10
+pid 9301's current affinity list: 0-15
+pid 9301's new affinity list: 10
+pid 9302's current affinity list: 0-15
+pid 9302's new affinity list: 10
+pid 9303's current affinity list: 0-15
+pid 9303's new affinity list: 11
+pid 9304's current affinity list: 0-15
+pid 9304's new affinity list: 11
+pid 9305's current affinity list: 0-15
+pid 9305's new affinity list: 11
+pid 9306's current affinity list: 0-15
+pid 9306's new affinity list: 12
+pid 9307's current affinity list: 0-15
+pid 9307's new affinity list: 12
+pid 9308's current affinity list: 0-15
+pid 9308's new affinity list: 12
+pid 9309's current affinity list: 0-15
+pid 9309's new affinity list: 13
+pid 9310's current affinity list: 0-15
+pid 9310's new affinity list: 13
+pid 9311's current affinity list: 0-15
+pid 9311's new affinity list: 13
+pid 9312's current affinity list: 0-15
+pid 9312's new affinity list: 14
+pid 9313's current affinity list: 0-15
+pid 9313's new affinity list: 14
+pid 9314's current affinity list: 0-15
+pid 9314's new affinity list: 14
+pid 9315's current affinity list: 0-15
+pid 9315's new affinity list: 15
+pid 9316's current affinity list: 0-15
+pid 9316's new affinity list: 15
+pid 9317's current affinity list: 0-15
+pid 9317's new affinity list: 15
+Processing frame 1
+Processing frame 2
+Processing frame 3
+
+real	0m2.651s
+user	0m10.899s
+sys	0m0.174s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.

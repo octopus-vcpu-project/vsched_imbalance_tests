@@ -1,0 +1,121 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 6.1.36vsched+ x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+136 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+*** System restart required ***
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+Sysbench PID: 21816
+Thread IDs: 21816 21818 21819 21820 21821 21822 21823 21824 21825 21826 21827 21828 21829 21830 21831 21832 21833 21834 21835 21836 21837 21838 21839 21840 21841 21842 21843 21844 21845 21846 21847 21848 21849
+pid 21816's current affinity list: 0-15
+pid 21816's new affinity list: 0
+pid 21818's current affinity list: 0-15
+pid 21818's new affinity list: 1
+pid 21819's current affinity list: 0-15
+pid 21819's new affinity list: 2
+pid 21820's current affinity list: 0-15
+pid 21820's new affinity list: 3
+pid 21821's current affinity list: 0-15
+pid 21821's new affinity list: 4
+pid 21822's current affinity list: 0-15
+pid 21822's new affinity list: 5
+pid 21823's current affinity list: 0-15
+pid 21823's new affinity list: 6
+pid 21824's current affinity list: 0-15
+pid 21824's new affinity list: 7
+pid 21825's current affinity list: 0-15
+pid 21825's new affinity list: 8
+pid 21826's current affinity list: 0-15
+pid 21826's new affinity list: 8
+pid 21827's current affinity list: 0-15
+pid 21827's new affinity list: 8
+pid 21828's current affinity list: 0-15
+pid 21828's new affinity list: 9
+pid 21829's current affinity list: 0-15
+pid 21829's new affinity list: 9
+pid 21830's current affinity list: 0-15
+pid 21830's new affinity list: 9
+pid 21831's current affinity list: 0-15
+pid 21831's new affinity list: 10
+pid 21832's current affinity list: 0-15
+pid 21832's new affinity list: 10
+pid 21833's current affinity list: 0-15
+pid 21833's new affinity list: 10
+pid 21834's current affinity list: 0-15
+pid 21834's new affinity list: 11
+pid 21835's current affinity list: 0-15
+pid 21835's new affinity list: 11
+pid 21836's current affinity list: 0-15
+pid 21836's new affinity list: 11
+pid 21837's current affinity list: 0-15
+pid 21837's new affinity list: 12
+pid 21838's current affinity list: 0-15
+pid 21838's new affinity list: 12
+pid 21839's current affinity list: 0-15
+pid 21839's new affinity list: 12
+pid 21840's current affinity list: 0-15
+pid 21840's new affinity list: 13
+pid 21841's current affinity list: 0-15
+pid 21841's new affinity list: 13
+pid 21842's current affinity list: 0-15
+pid 21842's new affinity list: 13
+pid 21843's current affinity list: 0-15
+pid 21843's new affinity list: 14
+pid 21844's current affinity list: 0-15
+pid 21844's new affinity list: 14
+pid 21845's current affinity list: 0-15
+pid 21845's new affinity list: 14
+pid 21846's current affinity list: 0-15
+pid 21846's new affinity list: 15
+pid 21847's current affinity list: 0-15
+pid 21847's new affinity list: 15
+pid 21848's current affinity list: 0-15
+pid 21848's new affinity list: 15
+CPU speed:
+    events per second:  9032.97
+
+General statistics:
+    total time:                          100.0188s
+    total number of events:              903495
+
+Latency (ms):
+         min:                                    0.98
+         avg:                                    3.54
+         max:                                  180.20
+         95th percentile:                       18.95
+         sum:                              3197998.40
+
+Threads fairness:
+    events (avg/stddev):           28234.2188/5369.03
+    execution time (avg/stddev):   99.9374/0.04
+

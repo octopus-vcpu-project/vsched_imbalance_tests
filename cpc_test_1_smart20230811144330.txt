@@ -1,0 +1,84 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 6.1.36vsched+ x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+136 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+*** System restart required ***
+15978
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+pid 1's current affinity list: 0-15
+pid 2's current affinity list: 0-15
+pid 3's current affinity list: 0-15
+pid 4's current affinity list: 0-15
+pid 5's current affinity list: 0-15
+pid 6's current affinity list: 0-15
+pid 7's current affinity list: 0
+pid 8's current affinity list: 0
+pid 8's current affinity list: 0
+pid 8's current affinity list: 0
+pid 10's current affinity list: 0-15
+pid 10's current affinity list: 0-15
+pid 10's current affinity list: 0-15
+pid 11's current affinity list: 0-15
+pid 11's current affinity list: 0-15
+pid 11's current affinity list: 0-15
+pid 12's current affinity list: 0-15
+pid 12's current affinity list: 0-15
+pid 12's current affinity list: 0-15
+pid 13's current affinity list: 0-15
+pid 13's current affinity list: 0-15
+pid 13's current affinity list: 0-15
+pid 14's current affinity list: 0
+pid 14's current affinity list: 0
+pid 14's current affinity list: 0
+pid 15's current affinity list: 0-15
+pid 15's current affinity list: 0-15
+pid 15's current affinity list: 0-15
+CPU speed:
+    events per second:  9993.37
+
+General statistics:
+    total time:                          40.0100s
+    total number of events:              399866
+
+Latency (ms):
+         min:                                    0.98
+         avg:                                    3.20
+         max:                                   99.03
+         95th percentile:                       18.95
+         sum:                              1279097.56
+
+Threads fairness:
+    events (avg/stddev):           12495.8125/213.85
+    execution time (avg/stddev):   39.9718/0.01
+

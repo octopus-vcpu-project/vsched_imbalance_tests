@@ -16,7 +16,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 
 #topology naive testing
-OUTPUT_FILE="./test/sym-naive$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./test/sym-optimal$(date +%m%d%H%M).txt"
 for i in {0..100};do
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE"
 done

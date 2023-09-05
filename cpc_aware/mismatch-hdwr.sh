@@ -7,7 +7,7 @@ for i in {0..7};do
 done
 
 taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
-
+taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &
 echo "Finished Pinning/compeition"
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 

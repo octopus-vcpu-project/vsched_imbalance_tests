@@ -67,7 +67,7 @@ else:
 plt.boxplot([list_sysbench_good, list_sysbench_bad], labels=['Pinned', 'Unpinned'])
 
 # Add title and labels
-plt.title('Performance of 8 threads on symmetric CPU')
+plt.title('Performance of 4 threads on symmetric VM')
 plt.xlabel('Lists')
 plt.ylabel('Value')
 

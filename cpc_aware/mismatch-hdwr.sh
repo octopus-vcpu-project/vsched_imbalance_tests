@@ -13,8 +13,8 @@ echo "Finished Pinning/compeition"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 
 #topology naive testing
-OUTPUT_FILE1="./test/1-dis-hrd$(date +%m%d%H%M).txt"
-OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
+OUTPUT_FILE1="./test/newtest$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./test/newtest$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2"
 touch $OUTPUT_FILE

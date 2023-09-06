@@ -1,4 +1,4 @@
-cpu_benchmark="sysbench --threads=4 --report-interval=3 --time=50 cpu run"
+cpu_benchmark="sysbench --threads=8 --report-interval=3 --time=50 cpu run"
 
 for i in {0..7};do
     sudo virsh vcpupin $prob_vm $i $((i+16))

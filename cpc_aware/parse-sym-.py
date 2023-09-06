@@ -17,9 +17,7 @@ else:
 # Initialize an empty list to hold the counts
 summed_cpu_sysbench = 0
 amount_cpu_sysbench = 0
-lowest_value = 999999999999
-highest_value = 0
-median_value = 0
+
 
 # Read the latest file if one exists
 if files:
@@ -32,14 +30,8 @@ if files:
                 cpu_amount = int(line.split()[-1])
                 amount_cpu_sysbench += 1
                 summed_cpu_sysbench += cpu_amount
-                if(cpu_amount >= highest_value):
-                    highest_value = cpu_amount
-                if(cpu_amount <= lowest_value):
-                    lowest_value = cpu_amount
                 
     print("Amount of cpu sysbench counts:", amount_cpu_sysbench)
     print("Average of cpu sysbench counts:", summed_cpu_sysbench/amount_cpu_sysbench)
-    print("Lowest performance:", lowest_value)
-    print("Highest performance:", highest_value)
 else:
     print("No matching files found.")

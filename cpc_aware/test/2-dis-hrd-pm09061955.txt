@@ -1,0 +1,17 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 5517.36 lat (ms,95%): 1.21
+[ 6s ] thds: 8 eps: 4557.16 lat (ms,95%): 1.23
+[ 9s ] thds: 8 eps: 4490.49 lat (ms,95%): 1.23

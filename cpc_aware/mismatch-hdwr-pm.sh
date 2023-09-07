@@ -1,4 +1,4 @@
-cpu_benchmark="sysbench --threads=4 --report-interval=3 --time=50 cpu run"
+cpu_benchmark="sysbench --threads=4 --report-interval=3 --time=60 cpu run"
 
 taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
 taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &

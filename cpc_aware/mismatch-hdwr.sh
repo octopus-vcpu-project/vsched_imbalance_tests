@@ -3,8 +3,13 @@ cpu_benchmark="sysbench --threads=4 --report-interval=3 --time=60 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 8 
 
 for i in {0..7};do
-    sudo virsh vcpupin $prob_vm $i $((i+16))
+    sudo virsh vcpupin $prob_vm $i $((i+15))
 done
+
+sudo virsh vcpupin $prob_vm 6 40
+sudo virsh vcpupin $prob_vm 7 60
+
+
 killall sysbench
 taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
 taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &

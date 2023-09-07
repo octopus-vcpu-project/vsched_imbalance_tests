@@ -5,7 +5,7 @@ sudo bash ../utility/cleanon_startup.sh $prob_vm 8
 for i in {0..7};do
     sudo virsh vcpupin $prob_vm $i $((i+16))
 done
-
+killall sysbench
 taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
 taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &
 echo "Finished Pinning/compeition"

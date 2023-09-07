@@ -1,8 +1,8 @@
 import glob
 import matplotlib.pyplot as plt
 # Find all files that match the 'sym-plc*' pattern
-instance_1 = glob.glob("./test/newtest*.txt")
-instance_2 = glob.glob("./test/newdtest*.txt")
+instance_1 = glob.glob("./test/2-dis-hrd-pm*.txt")
+instance_2 = glob.glob("./test/1-dis-hrd-pm*.txt")
 
 # Sort the files to get the latest one
 instance_1.sort(reverse=True)

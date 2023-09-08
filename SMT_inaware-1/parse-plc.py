@@ -1,7 +1,7 @@
 import glob
 import matplotlib.pyplot as plt
 # Find all files that match the 'sym-plc*' pattern
-files = glob.glob("./test/asym-plc*.txt")
+files = glob.glob("./top_inaware_placement*.txt")
 
 # Sort the files to get the latest one
 files.sort(reverse=True)

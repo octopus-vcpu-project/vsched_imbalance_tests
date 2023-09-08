@@ -12,7 +12,7 @@ for i in {16..31};do
 done
 
 OUTPUT_FILE="top_inaware_placement$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo killall sysbench" &
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sudo $benchmark_command" &
 for i in {0..500};do 
     sleep 0.5

@@ -1,5 +1,5 @@
 prob_vm=$1
-cpu_benchmark="sysbench --threads=32 --report-interval=3 --time=60 cpu run"
+cpu_benchmark="sysbench --threads=16 --report-interval=3 --time=60 cpu run"
 #sudo bash ../utility/cleanon_startup.sh $prob_vm 32 
 
 for i in {0..32};do

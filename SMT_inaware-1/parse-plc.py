@@ -22,17 +22,29 @@ if files:
     with open(files[0], 'r') as f:
         lines = f.readlines()
         current_cpu = -1
+        check_flags = [0,1]
+        incorrect = 0
+        incorrect_list = []
         for line in lines:
             # Update the current CPU if we see a "cpu#X" line
             if line.startswith("cpu#"):
                 current_cpu = int(line.split('#')[1].split(',')[0])
+           
                 while len(cpu_sysbench_counts) <= current_cpu:
                     cpu_sysbench_counts.append(0)
             # Count 'sysbench' occurrences for the current CPU
             elif "sysbench" in line:
                 if current_cpu != -1:
+                    if(current_cpu<15):
+                        check_flags.append(current_cpu+16)
+                    if(current_cpu in check_flags):
+                        incorrect += 1
+                    if(current_cpu==31):
+                        incorrect_list.append(incorrect)
+                        check_flags = []
+                        incorrect=0
                     cpu_sysbench_counts[current_cpu] += 1
-    print("CPU sysbench counts:", cpu_sysbench_counts)
+    print("Average", incorrect_list)
     plt.bar(range(len(cpu_sysbench_counts)), cpu_sysbench_counts)
     plt.xlabel('CPU Number')
     plt.ylabel('Number of sysbench Occurrences')

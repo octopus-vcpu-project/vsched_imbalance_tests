@@ -17,4 +17,5 @@ for i in {0..40};do
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
+    sleep 2
 done

@@ -1,18 +1,16 @@
 prob_vm=$1
-cpu_benchmark="sysbench --threads=4 --report-interval=3 --time=60 cpu run"
-sudo bash ../utility/cleanon_startup.sh $prob_vm 8 
+cpu_benchmark="sysbench --threads=32 --report-interval=3 --time=60 cpu run"
+#sudo bash ../utility/cleanon_startup.sh $prob_vm 32 
 
-for i in {0..7};do
-    sudo virsh vcpupin $prob_vm $i $((i+15))
+for i in {0..32};do
+    sudo virsh vcpupin $prob_vm $i $i
 done
 
-sudo virsh vcpupin $prob_vm 6 40
-sudo virsh vcpupin $prob_vm 7 60
 
 
 killall sysbench
-taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
-taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &
+#taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
+#taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &
 echo "Finished Pinning/compeition"
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 

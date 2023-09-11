@@ -2,7 +2,7 @@ prob_vm=$1
 cpu_benchmark="sysbench --threads=24 --report-interval=2 --time=21 cpu run"
 #sudo bash ../utility/cleanon_startup.sh $prob_vm 32 
 
-for i in {0..32};do
+for i in {0..31};do
     sudo virsh vcpupin $prob_vm $i $i
 done
 
@@ -15,6 +15,7 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 
 #topology naive testing
 OUTPUT_FILE1="./test/newtest$(date +%m%d%H%M).txt"
+sleep 1
 OUTPUT_FILE2="./test/newdtest$(date +%m%d%H%M).txt"
 for i in {0...30};do 
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
@@ -22,7 +23,8 @@ for i in {0...30};do
     sleep 1
     echo "linebreak" >> $OUTPUT_FILE1
     echo "linebreak" >> $OUTPUT_FILE2
-    echo i
+    echo $i
 done
+
 touch $OUTPUT_FILE
 echo "test complete"

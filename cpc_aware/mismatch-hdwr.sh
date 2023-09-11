@@ -16,12 +16,12 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 #topology naive testing
 OUTPUT_FILE1="./test/newtest$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./test/newdtest$(date +%m%d%H%M).txt"
-for i in {0...30} {
+for i in {0...30};do 
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2"
     sleep 1
     echo "linebreak" >> $OUTPUT_FILE1
     echo "linebreak" >> $OUTPUT_FILE2
-}
+done
 touch $OUTPUT_FILE
 echo "test complete"

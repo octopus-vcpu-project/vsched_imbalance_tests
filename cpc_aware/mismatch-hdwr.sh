@@ -17,7 +17,7 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 OUTPUT_FILE1="./test/newtest$(date +%m%d%H%M).txt"
 sleep 1
 OUTPUT_FILE2="./test/newdtest$(date +%m%d%H%M).txt"
-for i in {0...30};do 
+for i in {0..30};do 
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2"
     sleep 1

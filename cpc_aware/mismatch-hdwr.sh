@@ -1,5 +1,5 @@
 prob_vm=$1
-cpu_benchmark="sysbench --threads=16 --report-interval=3 --time=60 cpu run"
+cpu_benchmark="sysbench --threads=24 --report-interval=2 --time=10 cpu run"
 #sudo bash ../utility/cleanon_startup.sh $prob_vm 32 
 
 for i in {0..32};do
@@ -9,8 +9,6 @@ done
 
 
 killall sysbench
-#taskset -c 0-15 sysbench --threads=16 --time=100000 cpu run &
-#taskset -c 80-95 sysbench --threads=16 --time=100000 cpu run &
 echo "Finished Pinning/compeition"
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
@@ -18,7 +16,12 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 #topology naive testing
 OUTPUT_FILE1="./test/newtest$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./test/newdtest$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2"
+for i in {0...30} {
+    ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
+    ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2"
+    sleep 1
+    echo "linebreak" >> $OUTPUT_FILE1
+    echo "linebreak" >> $OUTPUT_FILE2
+}
 touch $OUTPUT_FILE
 echo "test complete"

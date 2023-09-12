@@ -62,7 +62,7 @@ if instance_1 and instance_2:
                 print(calculation_num)
                 seconds_taken = extract_seconds(line)
                 print(seconds_taken)
-                accum_calculation = interval_values_1[-1] + calculation_num * 3
+                accum_calculation = interval_values_1[-1] + calculation_num * 2
                 interval_values_1.append(accum_calculation)
             elif "total number of events" in line:
                 interval_values_1.append(int(line.split()[-1]))
@@ -72,7 +72,7 @@ if instance_1 and instance_2:
             if "thds" in line:
                 calculation_num = extract_eps(line)
                 seconds_taken = extract_seconds(line)
-                accum_calculation = interval_values_2[-1] + calculation_num * 3
+                accum_calculation = interval_values_2[-1] + calculation_num * 2
                 interval_values_2.append(accum_calculation)
             elif "total number of events" in line:
                 interval_values_2.append(int(line.split()[-1]))
@@ -84,8 +84,8 @@ else:
 # Generate x-values based on the length of y-values
 x_values = list(range(len(interval_values_2)))
 for x in range(0,len(x_values)-1):
-    x_values[x] = x_values[x] *3
-x_values[-1] = x_values[-2] + 2
+    x_values[x] = x_values[x] * 2
+x_values[-1] = x_values[-2] + 1
 # Create the plot
 plt.figure()
 

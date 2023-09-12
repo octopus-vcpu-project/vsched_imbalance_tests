@@ -1,5 +1,5 @@
 prob_vm=$1
-cpu_benchmark="sysbench --threads=24 --report-interval=2 --time=21 cpu run"
+cpu_benchmark="sysbench --threads=24 --report-interval=2 --time=50 cpu run"
 #sudo bash ../utility/cleanon_startup.sh $prob_vm 32 
 
 for i in {0..31};do
@@ -17,7 +17,7 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 OUTPUT_FILE1="./test/newtest$(date +%m%d%H%M).txt"
 sleep 1
 OUTPUT_FILE2="./test/newdtest$(date +%m%d%H%M).txt"
-for i in {0..30};do 
+for i in {0..2};do 
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE1" &
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2"
     sleep 1

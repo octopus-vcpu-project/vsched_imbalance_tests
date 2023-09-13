@@ -33,7 +33,7 @@ output_thread_specific_vruntimes(){
 }
 
 
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=50 cpu run" &
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=100 cpu run" &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 

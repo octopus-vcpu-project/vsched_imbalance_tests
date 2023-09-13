@@ -17,7 +17,7 @@ for i in {0..31};do
 done
 
 output_thread_specific_vruntimes(){
-    local threads= "$1"
+    local threads= ("$@")
     for tids in $threads;do
         echo $tids
         echo $tids >> $OUTPUT_FILE
@@ -39,7 +39,7 @@ done
 
 for i in {0..31};do
     sleep 1
-    output_thread_specific_vruntimes "$thread_ids"
+    output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 
 echo "test complete"

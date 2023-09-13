@@ -1,0 +1,51 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 4
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 4 eps: 3829.89 lat (ms,95%): 1.23
+[ 6s ] thds: 4 eps: 3993.12 lat (ms,95%): 1.23
+[ 9s ] thds: 4 eps: 4001.06 lat (ms,95%): 1.23
+[ 12s ] thds: 4 eps: 3993.75 lat (ms,95%): 1.23
+[ 15s ] thds: 4 eps: 4001.48 lat (ms,95%): 1.23
+[ 18s ] thds: 4 eps: 4001.02 lat (ms,95%): 1.23
+[ 21s ] thds: 4 eps: 3987.06 lat (ms,95%): 1.23
+[ 24s ] thds: 4 eps: 4000.66 lat (ms,95%): 1.23
+[ 27s ] thds: 4 eps: 3999.32 lat (ms,95%): 1.23
+[ 30s ] thds: 4 eps: 3997.33 lat (ms,95%): 1.23
+[ 33s ] thds: 4 eps: 3995.34 lat (ms,95%): 1.23
+[ 36s ] thds: 4 eps: 3993.68 lat (ms,95%): 1.23
+[ 39s ] thds: 4 eps: 3994.34 lat (ms,95%): 1.23
+[ 42s ] thds: 4 eps: 3934.44 lat (ms,95%): 1.23
+[ 45s ] thds: 4 eps: 3982.75 lat (ms,95%): 1.23
+[ 48s ] thds: 4 eps: 3990.41 lat (ms,95%): 1.23
+[ 51s ] thds: 4 eps: 3989.47 lat (ms,95%): 1.23
+[ 54s ] thds: 4 eps: 3982.32 lat (ms,95%): 1.23
+[ 57s ] thds: 4 eps: 3987.74 lat (ms,95%): 1.23
+CPU speed:
+    events per second:  3981.85
+
+General statistics:
+    total time:                          60.0043s
+    total number of events:              238945
+
+Latency (ms):
+         min:                                    0.83
+         avg:                                    1.00
+         max:                                   20.25
+         95th percentile:                        1.23
+         sum:                               239922.16
+
+Threads fairness:
+    events (avg/stddev):           59736.2500/10784.77
+    execution time (avg/stddev):   59.9805/0.00
+

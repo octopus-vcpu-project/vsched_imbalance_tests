@@ -1,0 +1,176 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 24
+Report intermediate results every 2 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 2s ] thds: 24 eps: 7551.63 lat (ms,95%): 5.00
+[ 4s ] thds: 24 eps: 6770.27 lat (ms,95%): 4.91
+[ 6s ] thds: 24 eps: 6917.30 lat (ms,95%): 4.82
+[ 8s ] thds: 24 eps: 6991.95 lat (ms,95%): 4.82
+[ 10s ] thds: 24 eps: 7179.09 lat (ms,95%): 2.52
+[ 12s ] thds: 24 eps: 7190.51 lat (ms,95%): 1.10
+[ 14s ] thds: 24 eps: 6617.03 lat (ms,95%): 4.91
+[ 16s ] thds: 24 eps: 6141.18 lat (ms,95%): 4.91
+[ 18s ] thds: 24 eps: 6240.99 lat (ms,95%): 4.91
+[ 20s ] thds: 24 eps: 6954.97 lat (ms,95%): 4.91
+[ 22s ] thds: 24 eps: 6936.50 lat (ms,95%): 4.91
+[ 24s ] thds: 24 eps: 6276.49 lat (ms,95%): 4.91
+[ 26s ] thds: 24 eps: 6149.51 lat (ms,95%): 4.91
+[ 28s ] thds: 24 eps: 6980.50 lat (ms,95%): 4.82
+[ 31s ] thds: 24 eps: 6510.17 lat (ms,95%): 4.91
+[ 32s ] thds: 24 eps: 7760.15 lat (ms,95%): 4.91
+[ 34s ] thds: 24 eps: 7128.12 lat (ms,95%): 4.91
+[ 36s ] thds: 24 eps: 6872.97 lat (ms,95%): 4.91
+[ 38s ] thds: 24 eps: 6637.42 lat (ms,95%): 4.91
+[ 40s ] thds: 24 eps: 6263.84 lat (ms,95%): 4.91
+[ 42s ] thds: 24 eps: 5995.65 lat (ms,95%): 4.91
+[ 44s ] thds: 24 eps: 6338.06 lat (ms,95%): 4.91
+[ 46s ] thds: 24 eps: 6474.02 lat (ms,95%): 4.91
+[ 48s ] thds: 24 eps: 6388.30 lat (ms,95%): 4.91
+[ 50s ] thds: 24 eps: 6851.52 lat (ms,95%): 4.82
+CPU speed:
+    events per second:  6605.96
+
+General statistics:
+    total time:                          51.7722s
+    total number of events:              342031
+
+Latency (ms):
+         min:                                    0.78
+         avg:                                    3.59
+         max:                                 2564.16
+         95th percentile:                        4.91
+         sum:                              1227403.44
+
+Threads fairness:
+    events (avg/stddev):           14251.2917/3411.23
+    execution time (avg/stddev):   51.1418/0.36
+
+linebreak
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 24
+Report intermediate results every 2 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 24 eps: 7281.83 lat (ms,95%): 4.91
+[ 5s ] thds: 24 eps: 6729.34 lat (ms,95%): 4.91
+[ 7s ] thds: 24 eps: 7068.40 lat (ms,95%): 4.82
+[ 9s ] thds: 24 eps: 6922.18 lat (ms,95%): 4.82
+[ 11s ] thds: 24 eps: 6251.34 lat (ms,95%): 4.91
+[ 13s ] thds: 24 eps: 6736.19 lat (ms,95%): 4.91
+[ 15s ] thds: 24 eps: 7242.01 lat (ms,95%): 4.91
+[ 17s ] thds: 24 eps: 6814.04 lat (ms,95%): 4.91
+[ 19s ] thds: 24 eps: 6728.58 lat (ms,95%): 4.91
+[ 21s ] thds: 24 eps: 7274.08 lat (ms,95%): 4.82
+[ 23s ] thds: 24 eps: 6551.85 lat (ms,95%): 4.91
+[ 25s ] thds: 24 eps: 6739.98 lat (ms,95%): 4.91
+[ 27s ] thds: 24 eps: 6550.06 lat (ms,95%): 4.82
+[ 29s ] thds: 24 eps: 6617.00 lat (ms,95%): 4.91
+[ 31s ] thds: 24 eps: 6646.48 lat (ms,95%): 4.91
+[ 33s ] thds: 24 eps: 6593.47 lat (ms,95%): 4.91
+[ 35s ] thds: 24 eps: 6443.05 lat (ms,95%): 4.91
+[ 37s ] thds: 24 eps: 6049.43 lat (ms,95%): 4.91
+[ 39s ] thds: 24 eps: 5902.29 lat (ms,95%): 4.91
+[ 41s ] thds: 24 eps: 6417.54 lat (ms,95%): 4.91
+[ 43s ] thds: 24 eps: 6121.58 lat (ms,95%): 5.00
+[ 45s ] thds: 24 eps: 6847.68 lat (ms,95%): 4.91
+[ 47s ] thds: 24 eps: 6294.41 lat (ms,95%): 4.91
+[ 49s ] thds: 24 eps: 6050.02 lat (ms,95%): 4.91
+[ 51s ] thds: 24 eps: 5734.98 lat (ms,95%): 4.91
+CPU speed:
+    events per second:  6519.79
+
+General statistics:
+    total time:                          51.7137s
+    total number of events:              337187
+
+Latency (ms):
+         min:                                    0.78
+         avg:                                    3.64
+         max:                                 2757.62
+         95th percentile:                        4.91
+         sum:                              1227032.77
+
+Threads fairness:
+    events (avg/stddev):           14049.4583/1711.65
+    execution time (avg/stddev):   51.1264/0.24
+
+linebreak
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 24
+Report intermediate results every 2 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 24 eps: 7758.06 lat (ms,95%): 4.91
+[ 5s ] thds: 24 eps: 7020.02 lat (ms,95%): 1.89
+[ 7s ] thds: 24 eps: 6232.98 lat (ms,95%): 4.82
+[ 9s ] thds: 24 eps: 6304.18 lat (ms,95%): 4.91
+[ 11s ] thds: 24 eps: 7062.09 lat (ms,95%): 4.82
+[ 13s ] thds: 24 eps: 7055.05 lat (ms,95%): 4.91
+[ 15s ] thds: 24 eps: 7296.12 lat (ms,95%): 4.82
+[ 17s ] thds: 24 eps: 7254.37 lat (ms,95%): 4.82
+[ 19s ] thds: 24 eps: 6705.25 lat (ms,95%): 4.91
+[ 21s ] thds: 24 eps: 6488.44 lat (ms,95%): 4.91
+[ 23s ] thds: 24 eps: 3784.04 lat (ms,95%): 4.91
+[ 24s ] thds: 24 eps: 13105.52 lat (ms,95%): 5.28
+[ 26s ] thds: 24 eps: 6066.92 lat (ms,95%): 4.91
+[ 28s ] thds: 24 eps: 6399.21 lat (ms,95%): 4.91
+[ 30s ] thds: 24 eps: 6481.25 lat (ms,95%): 4.91
+[ 32s ] thds: 24 eps: 6295.18 lat (ms,95%): 4.91
+[ 35s ] thds: 24 eps: 3763.44 lat (ms,95%): 1.04
+[ 37s ] thds: 24 eps: 5893.60 lat (ms,95%): 4.91
+[ 39s ] thds: 24 eps: 6404.50 lat (ms,95%): 4.91
+[ 41s ] thds: 24 eps: 6747.94 lat (ms,95%): 4.91
+[ 43s ] thds: 24 eps: 6187.56 lat (ms,95%): 4.91
+[ 45s ] thds: 24 eps: 6412.06 lat (ms,95%): 4.91
+[ 47s ] thds: 24 eps: 6954.20 lat (ms,95%): 4.91
+[ 49s ] thds: 24 eps: 6421.20 lat (ms,95%): 4.91
+[ 51s ] thds: 24 eps: 6677.58 lat (ms,95%): 4.91
+[ 53s ] thds: 24 eps: 1662.49 lat (ms,95%): 5.00
+[ 55s ] thds: 16 eps: 1.50 lat (ms,95%): 2493.86
+CPU speed:
+    events per second:  5931.86
+
+General statistics:
+    total time:                          54.7810s
+    total number of events:              324976
+
+Latency (ms):
+         min:                                    0.78
+         avg:                                    3.74
+         max:                                 3028.03
+         95th percentile:                        4.91
+         sum:                              1214120.34
+
+Threads fairness:
+    events (avg/stddev):           13540.6667/1971.84
+    execution time (avg/stddev):   50.5883/1.22
+
+linebreak

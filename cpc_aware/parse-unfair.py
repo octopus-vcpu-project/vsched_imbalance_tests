@@ -24,7 +24,7 @@ if instance_1:
             if "ThreadID" in line:
                 current_thread = line.split(': ')[1]
             elif "se.vruntime" in line:
-                vruntime = int(line.split(': ')[1][-2])
+                vruntime = int(line.split(': ')[1][:-1].strip())
                 if current_thread in vruntime_per_thread:
                     vruntime_per_thread[current_thread].append(vruntime)
                 else:

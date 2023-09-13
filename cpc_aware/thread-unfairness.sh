@@ -20,7 +20,7 @@ done
 
 for i in {0..15};do
     sudo virsh vcpupin $prob_vm $i $i
-    sudo echo $((runtime/2)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
 output_thread_specific_vruntimes(){

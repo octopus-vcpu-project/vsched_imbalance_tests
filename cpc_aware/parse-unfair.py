@@ -36,8 +36,10 @@ biggest=-99999999999
 biggest_element=""
 smallest=99999999999
 smallest_element=""
+array_of_lasts=[]
 for element,items in vruntime_per_thread.items():
     print(element)
+    array_of_lasts.append(items[-1])
     if(vruntime_per_thread[element][-1]>biggest):
         biggest =  vruntime_per_thread[element][-1]
         biggest_element=element
@@ -46,9 +48,10 @@ for element,items in vruntime_per_thread.items():
         smallest_element=element
 
 print(biggest_element)
-
+array_of_lasts.sort()
+print(array_of_lasts)
 for k, v in vruntime_per_thread.items():
-    if(k == biggest_element or k == smallest_element)
+    if(v[-1] > array_of_lasts[-5] or v[-1] < array_of_lasts[4]):
         plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend
 plt.show()

@@ -32,7 +32,7 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 
 declare -a thread_ids
 
-for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid");do
+for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/tasks");do
     thread_ids+=($tid)
 done
 

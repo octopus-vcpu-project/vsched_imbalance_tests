@@ -38,7 +38,7 @@ done
 
 for i in {0..31};do
     sleep 1
-    output_thread_specific_vruntimes($thread_ids)
+    output_thread_specific_vruntimes "$thread_ids"
 done
 
 echo "test complete"

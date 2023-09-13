@@ -18,11 +18,11 @@ done
 
 output_thread_specific_vruntimes(){
     local threads=("$@")
-    for tids in "${threads[@]}";do
-        echo $tids
-        echo $tids >> $OUTPUT_FILE
-        ssh ubuntu@$prob_vm "cat /proc/$tid/sched | grep se.vruntime" >> $OUTPUT_FILE
+    local command_str=""
+    for tid in "${threads[@]}"; do
+        command_str+="echo $tid; cat /proc/$tid/sched | grep se.vruntime; "
     done
+    ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
 
 

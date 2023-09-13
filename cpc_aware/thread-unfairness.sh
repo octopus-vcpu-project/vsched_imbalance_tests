@@ -9,7 +9,7 @@ cpu_benchmark="sysbench --threads=64 --report-interval=3 --time=50 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
-vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F ":" '{print $3}')
+vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 #PIN VCPUS and limit CPU usage using CGROUP
 for i in {0..31};do
     sudo virsh vcpupin $prob_vm $i $i

@@ -22,9 +22,9 @@ if instance_1:
         current_thread = "null"
         for line in ln_1:
             if "ThreadID" in line:
-                current_thread = line.split(': ')[1]
+                current_thread = line.split(': ')[1][:-1]
             elif "se.vruntime" in line:
-                vruntime = int(line.split(': ')[1][:-1].strip())
+                vruntime = float(line.split(': ')[1][:-1].strip())
                 if current_thread in vruntime_per_thread:
                     vruntime_per_thread[current_thread].append(vruntime)
                 else:
@@ -32,6 +32,8 @@ if instance_1:
 else:
     print("No matching files found.")
 
-
-print(vruntime_per_thread)
+for k, v in vruntime_per_thread.items():
+    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
+plt.legend()  # To draw legend
+plt.show()
 

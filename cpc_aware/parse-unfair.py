@@ -32,8 +32,24 @@ if instance_1:
 else:
     print("No matching files found.")
 
+biggest=-99999999999
+biggest_element=""
+smallest=99999999999
+smallest_element=""
+for element,items in vruntime_per_thread.items():
+    print(element)
+    if(vruntime_per_thread[element][-1]>biggest):
+        biggest =  vruntime_per_thread[element][-1]
+        biggest_element=element
+    if(vruntime_per_thread[element][-1]<smallest):
+        smallest =  vruntime_per_thread[element][-1]
+        smallest_element=element
+
+print(biggest_element)
+
 for k, v in vruntime_per_thread.items():
-    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
+    if(k == biggest_element or k == smallest_element)
+        plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend
 plt.show()
 

@@ -11,6 +11,8 @@ sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 #PIN VCPUS and limit CPU usage using CGROUP
+
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
 for i in {0..31};do
     sudo virsh vcpupin $prob_vm $i $i
     sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
@@ -26,7 +28,6 @@ output_thread_specific_vruntimes(){
 }
 
 
-ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sysbench --threads=64 --time=50 cpu run" &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")

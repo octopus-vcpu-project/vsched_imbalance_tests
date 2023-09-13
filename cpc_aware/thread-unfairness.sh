@@ -19,6 +19,7 @@ done
 output_thread_specific_vruntimes(){
     local threads= "$1"
     for tid in $threads;do
+        echo $tid
         echo $tid >> $OUTPUT_FILE
         ssh ubuntu@$prob_vm "cat /proc/$tid/sched | grep se.vruntime" >> $OUTPUT_FILE
     done

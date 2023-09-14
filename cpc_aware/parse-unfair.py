@@ -17,13 +17,13 @@ else:
 vruntime_per_thread = {}
 # Read the latest file if one exists
 if instance_1:
-    with open(instance_1[0], 'r') as f:
+    with open(instance_1[3], 'r') as f:
         ln_1 = f.readlines()
         current_thread = "null"
         for line in ln_1:
             if "ThreadID" in line:
                 current_thread = line.split(': ')[1][:-1]
-            elif "se.sum_exec_runtime" in line:
+            else:
                 vruntime = float(line.split(': ')[1][:-1].strip())
                 if current_thread in vruntime_per_thread:
                     vruntime_per_thread[current_thread].append(vruntime)
@@ -51,8 +51,7 @@ print(biggest_element)
 array_of_lasts.sort()
 print(array_of_lasts)
 for k, v in vruntime_per_thread.items():
-    if(v[-1] > array_of_lasts[-3] or v[-1] < array_of_lasts[2]):
-        plt.plot(range(1, len(v) + 1), v, '.-', label=k)
+    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend
 plt.show()
 

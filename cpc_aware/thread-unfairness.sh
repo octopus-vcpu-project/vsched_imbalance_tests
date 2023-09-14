@@ -45,7 +45,7 @@ pin_threads_smartly(){
     local iterator=0
     local pin_location=0
     for tid in "${threads[@]}"; do
-        if [$tid -eq sysbench_pid]; then
+        if [ $tid -eq sysbench_pid ]; then
             continue
         fi 
         if [ $iterator -lt 16 ]; then

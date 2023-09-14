@@ -14,12 +14,11 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 for i in {0..31};do
-    sudo virsh vcpupin $prob_vm $i $i
+    sudo virsh vcpupin $prob_vm $i $((i + 32))
     sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
 for i in {0..15};do
-    sudo virsh vcpupin $prob_vm $i $i
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 

@@ -36,12 +36,18 @@ pin_threads_smartly(){
     local threads=("$@")
     local command_str=""
     local iterator=0
+    local pin_location=0
     for tid in "${threads[@]}"; do
-        if [iterator -lt  16]; then
-            sudo mkdir /sys/fs/cgroup/lw_prgroup
+        if [ $iterator -lt 16 ]; then
+            pin_location=$iterator
+        elif [ $iterator -lt 64 ]; then
+            pin_location=$((iterator % 16 + 16))
+        else
+            echo "Out of CPU pinning range. Skipping thread $tid."
+            continue
         fi
-        command_str+="taskset -c $tid $iterator"
-        iterator+=1
+        command_str+="taskset -c $pin_location -p $tid; "
+        iterator=$((iterator + 1))
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }

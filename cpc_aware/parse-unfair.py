@@ -51,7 +51,8 @@ print(biggest_element)
 array_of_lasts.sort()
 print(array_of_lasts)
 for k, v in vruntime_per_thread.items():
-    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
+    if(v[-1] > array_of_lasts[-5] or v[-1] < array_of_lasts[4]):
+        plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend
 plt.show()
 

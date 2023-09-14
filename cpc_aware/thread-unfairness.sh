@@ -32,19 +32,26 @@ output_thread_specific_vruntimes(){
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
 
+
+
+
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=100 cpu run" &
+sleep 2
+sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
+
 pin_threads_smartly(){
     local threads=("$@")
     local command_str=""
     local iterator=0
     local pin_location=0
     for tid in "${threads[@]}"; do
+        if [$tid -eq sysbench_pid]; then
+            continue
+        fi 
         if [ $iterator -lt 16 ]; then
             pin_location=$iterator
         elif [ $iterator -lt 64 ]; then
             pin_location=$((iterator % 16 + 16))
-        else
-            echo "Out of CPU pinning range. Skipping thread $tid."
-            continue
         fi
         command_str+="taskset -cp $pin_location $tid; "
         iterator=$((iterator + 1))
@@ -52,11 +59,6 @@ pin_threads_smartly(){
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
 
-
-
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=100 cpu run" &
-sleep 2
-sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 
 declare -a thread_ids
 

@@ -23,14 +23,6 @@ for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-output_thread_specific_vruntimes(){
-    local threads=("$@")
-    local command_str=""
-    for tid in "${threads[@]}"; do
-        command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.vruntime; "
-    done
-    ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
-}
 
 
 
@@ -58,6 +50,19 @@ pin_threads_smartly(){
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
+
+output_thread_specific_vruntimes(){
+    local threads=("$@")
+    local command_str=""
+    for tid in "${threads[@]}"; do
+        if [ $tid -eq $sysbench_pid ]; then
+            continue
+        fi 
+        command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.vruntime; "
+    done
+    ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
+}
+
 
 
 declare -a thread_ids

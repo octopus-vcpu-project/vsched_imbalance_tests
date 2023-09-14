@@ -32,6 +32,21 @@ output_thread_specific_vruntimes(){
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
 
+pin_threads_smartly(){
+    local threads=("$@")
+    local command_str=""
+    local iterator=0
+    for tid in "${threads[@]}"; do
+        if [iterator -lt  16]; then
+            sudo mkdir /sys/fs/cgroup/lw_prgroup
+        fi
+        command_str+="taskset -c $tid $iterator"
+        iterator+=1
+    done
+    ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
+}
+
+
 
 ssh ubuntu@$prob_vm "sysbench --threads=64 --time=100 cpu run" &
 sleep 2
@@ -42,6 +57,8 @@ declare -a thread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     thread_ids+=($tid)
 done
+
+
 
 for i in {0..20};do
     sleep 2

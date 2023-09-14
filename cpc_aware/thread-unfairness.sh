@@ -18,15 +18,15 @@ for i in {0..31};do
     sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-#for i in {0..15};do
-#    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-#done
+for i in {0..15};do
+    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+done
 
 
 
 
 
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=100 cpu run" &
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=200 cpu run" &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 
@@ -71,7 +71,7 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
 done
 
 
-for i in {0..20};do
+for i in {0..60};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done

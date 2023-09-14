@@ -46,7 +46,7 @@ pin_threads_smartly(){
             echo "Out of CPU pinning range. Skipping thread $tid."
             continue
         fi
-        command_str+="taskset -c $pin_location -p $tid; "
+        command_str+="taskset -cp $pin_location $tid; "
         iterator=$((iterator + 1))
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"

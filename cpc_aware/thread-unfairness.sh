@@ -70,7 +70,6 @@ declare -a thread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     thread_ids+=($tid)
 done
-pin_threads_smartly "${thread_ids[@]}"
 
 
 for i in {0..20};do

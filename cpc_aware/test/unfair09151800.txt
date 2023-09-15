@@ -1,0 +1,44 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 64
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+happens before here
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 6.1.36vsched+ x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Fri Sep 15 17:58:44 2023 from 192.168.122.1
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ubuntu@e-vm1: ~[01;32mubuntu@e-vm1[00m:[01;34m~[00m$ 

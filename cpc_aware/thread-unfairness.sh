@@ -26,7 +26,7 @@ done
 
 
 
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=220 cpu run"  >> "$OUTPUT_FILE"  &
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=240 cpu run"  >> "$OUTPUT_FILE"  &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 

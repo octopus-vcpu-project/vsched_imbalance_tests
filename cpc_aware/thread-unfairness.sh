@@ -57,15 +57,15 @@ output_thread_specific_vruntimes(){
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
-        command_str+="echo 'ThreadID: $tid'; cat /proc/$sysbench_pid/$tid/sched | grep se.sum_exec_runtime; "
+        command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.sum_exec_runtime; "
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
 
 
-
+echo "happens before here">> "$OUTPUT_FILE"
 declare -a thread_ids
-
+ 
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     thread_ids+=($tid)
 done

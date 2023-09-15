@@ -7,7 +7,7 @@ instance_1 = glob.glob("./test/unfair*.txt")
 instance_1.sort(reverse=True)
 # Read the latest file if one exists
 if instance_1:
-    with open(instance_1[1], 'r') as f:
+    with open(instance_1[0], 'r') as f:
         print(f"Reading {instance_1[0]}")
         
 else:
@@ -17,7 +17,7 @@ else:
 vruntime_per_thread = {}
 # Read the latest file if one exists
 if instance_1:
-    with open(instance_1[1], 'r') as f:
+    with open(instance_1[0], 'r') as f:
         ln_1 = f.readlines()
         current_thread = "null"
         for line in ln_1:

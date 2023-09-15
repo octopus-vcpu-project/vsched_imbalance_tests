@@ -4,7 +4,7 @@ benchmark_command="sysbench --threads=16 --time=3 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 
 for i in {0..31};do
-    sudo virsh vcpupin $prob_vm $i $((i//2))
+    sudo virsh vcpupin $prob_vm $i $((i/2))
     echo "virsh vcpu pinned $i $((i//2))" 
 done
 

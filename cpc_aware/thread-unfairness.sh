@@ -68,10 +68,10 @@ declare -a thread_ids
  
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [$new_iterator -lt 5]; then
+    if [ $new_iterator -lt 5 ]; then
         thread_ids+=($tid)
     fi
-    new_iterator=$((new_iterator+1))
+    new_iterator=$((new_iterator + 1))
 done
 #pin_threads_smartly "${thread_ids[@]}"
 

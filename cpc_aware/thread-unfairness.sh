@@ -18,15 +18,15 @@ for i in {0..31};do
     sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-for i in {0..15};do
-    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-done
+#for i in {0..15};do
+    #sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+#done
 
 
 
 
 
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=240 cpu run"  >> "$OUTPUT_FILE"  &
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=190 cpu run"  >> "$OUTPUT_FILE"  &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 

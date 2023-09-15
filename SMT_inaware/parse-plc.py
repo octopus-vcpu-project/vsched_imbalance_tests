@@ -19,10 +19,10 @@ cpu_sysbench_counts = []
 
 # Read the latest file if one exists
 if files:
-    with open(files[0], 'r') as f:
+    with open(files[1], 'r') as f:
         lines = f.readlines()
         current_cpu = -1
-        check_flags = [0,1]
+        used_phys_cpus = []
         incorrect = 0
         incorrect_list = []
         for line in lines:
@@ -32,19 +32,19 @@ if files:
            
                 while len(cpu_sysbench_counts) <= current_cpu:
                     cpu_sysbench_counts.append(0)
+                
+                if(current_cpu==31):
+                        incorrect_list.append(incorrect)
+                        used_phys_cpus = []
+                        incorrect=0
             # Count 'sysbench' occurrences for the current CPU
             elif "sysbench" in line:
                 if current_cpu != -1:
-                    if(current_cpu<15):
-                        check_flags.append(current_cpu+16)
-                    if(current_cpu in check_flags):
+                    if(not (current_cpu%16) in used_phys_cpus):
                         incorrect += 1
-                    if(current_cpu==31):
-                        incorrect_list.append(incorrect)
-                        check_flags = []
-                        incorrect=0
+                        used_phys_cpus.append(current_cpu%16)
                     cpu_sysbench_counts[current_cpu] += 1
-    print("Incorrect Placements", incorrect_list)
+    print("Physical cores used", incorrect_list)
     plt.bar(range(len(cpu_sysbench_counts)), cpu_sysbench_counts)
     plt.xlabel('CPU Number')
     plt.ylabel('Number of sysbench Occurrences')

@@ -7,7 +7,7 @@ instance_1 = glob.glob("./test/unfair*.txt")
 instance_1.sort(reverse=True)
 # Read the latest file if one exists
 if instance_1:
-    with open(instance_1[0], 'r') as f:
+    with open(instance_1[1], 'r') as f:
         print(f"Reading {instance_1[0]}")
         
 else:
@@ -17,7 +17,7 @@ else:
 vruntime_per_thread = {}
 # Read the latest file if one exists
 if instance_1:
-    with open(instance_1[0], 'r') as f:
+    with open(instance_1[1], 'r') as f:
         ln_1 = f.readlines()
         current_thread = "null"
         for line in ln_1:
@@ -47,11 +47,14 @@ for element,items in vruntime_per_thread.items():
         smallest =  vruntime_per_thread[element][-1]
         smallest_element=element
 
-print(biggest_element)
 array_of_lasts.sort()
+print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_lasts[0]))
+print("big value",array_of_lasts)
 print(array_of_lasts)
 for k, v in vruntime_per_thread.items():
-    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
+    if(v[-1]>array_of_lasts[-4] or v[-1]<array_of_lasts[3] ):
+        plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend
 plt.show()
+print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_lasts[0]))
 

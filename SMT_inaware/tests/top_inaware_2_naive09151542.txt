@@ -1,0 +1,44 @@
+WARNING: --max-time is deprecated, use --time instead
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Extra file open flags: (CPU speed:
+    events per second: 13728.38
+
+General statistics:
+    total time:                          50.0012s
+    total number of events:              686472
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.16
+         max:                                   19.34
+       
+File operations:
+    reads/s:                      11843.33
+    writes/s:                     7895.59
+    fsyncs/s:                     25305.94
+
+Throughput:
+    read, MiB/s:                  185.05
+    written, MiB/s:               123.37
+
+General statistics:
+    total time:                          50.0204s
+    total number of events:              2251231
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    0.35
+         max:                                   18.92
+         95th percentile:                        1.23
+         sum:                               798381.86
+
+Threads fairness:
+    events (avg/stddev):           140701.9375/29008.57
+    execution time (avg/stddev):   49.8989/0.02
+

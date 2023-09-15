@@ -1,0 +1,78 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  3026.21
+
+General statistics:
+    total time:                          100.0174s
+    total number of events:              302685
+
+Latency (ms):
+         min:                                    0.78
+         avg:                                    5.29
+         max:                                  291.17
+         95th percentile:                       81.48
+         sum:                              1599866.16
+
+Threads fairness:
+    events (avg/stddev):           18917.8125/12.82
+    execution time (avg/stddev):   99.9916/0.03
+
+WARNING: --max-time is deprecated, use --time instead
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Extra file open flags: (none)
+128 files, 80MiB each
+10GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...
+
+Threads started!
+
+
+File operations:
+    reads/s:                      11827.18
+    writes/s:                     7884.80
+    fsyncs/s:                     25251.75
+
+Throughput:
+    read, MiB/s:                  184.80
+    written, MiB/s:               123.20
+
+General statistics:
+    total time:                          100.0178s
+    total number of events:              4495243
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    0.35
+         max:                                  145.51
+         95th percentile:                        1.18
+         sum:                              1595541.59
+
+Threads fairness:
+    events (avg/stddev):           280952.6875/6935.76
+    execution time (avg/stddev):   99.7213/0.03
+

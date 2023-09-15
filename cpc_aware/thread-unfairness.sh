@@ -26,7 +26,7 @@ done
 
 
 
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=220 cpu run" &
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=220 cpu run"  >> "$OUTPUT_FILE"  &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 
@@ -69,7 +69,7 @@ declare -a thread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     thread_ids+=($tid)
 done
-pin_threads_smartly "${thread_ids[@]}"
+#pin_threads_smartly "${thread_ids[@]}"
 
 for i in {0..60};do
     sleep 2

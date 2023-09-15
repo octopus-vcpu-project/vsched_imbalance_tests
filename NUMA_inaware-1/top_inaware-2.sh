@@ -10,7 +10,7 @@ for i in {16..31};do
     sudo virsh vcpupin $i $((i + 20))
 done
 
-ssh ubuntu@$prob_vm "sudo killall sysbench" &
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
 
 #topology naive testing
 OUTPUT_FILE="top_inaware_2_cpu_naive$(date +%m%d%H%M).txt"

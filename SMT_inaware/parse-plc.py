@@ -1,7 +1,7 @@
 import glob
 import matplotlib.pyplot as plt
 # Find all files that match the 'sym-plc*' pattern
-files = glob.glob("./top_inaware_placement*.txt")
+files = glob.glob("./tests/top_inaware_placement*.txt")
 
 # Sort the files to get the latest one
 files.sort(reverse=True)
@@ -44,7 +44,7 @@ if files:
                         check_flags = []
                         incorrect=0
                     cpu_sysbench_counts[current_cpu] += 1
-    print("Average", incorrect_list)
+    print("Incorrect Placements", incorrect_list)
     plt.bar(range(len(cpu_sysbench_counts)), cpu_sysbench_counts)
     plt.xlabel('CPU Number')
     plt.ylabel('Number of sysbench Occurrences')

@@ -11,7 +11,7 @@ for i in {16..31};do
     sudo virsh vcpupin $prob_vm $i $((i + 64))
 done
 
-OUTPUT_FILE="top_inaware_placement$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./tests/top_inaware_placement$(date +%m%d%H%M).txt"
 
 for i in {0..40};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &

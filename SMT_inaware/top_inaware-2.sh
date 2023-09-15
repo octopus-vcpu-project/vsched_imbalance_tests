@@ -14,9 +14,9 @@ done
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=20 cpu run" 
 #topology naive testing
-OUTPUT_FILE="top_inaware_2_cpu_naive$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./tests/top_inaware_2_naive$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark;sudo $io_benchmark" >> "$OUTPUT_FILE" 
-sleep 2
+ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=5 cpu run" 
 #topology smart testing
-OUTPUT_FILE2="top_inaware_2_cpu_smart$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./tests/top_inaware_2_smart$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark;sudo taskset -c 16-31 $io_benchmark" >> "$OUTPUT_FILE2" 

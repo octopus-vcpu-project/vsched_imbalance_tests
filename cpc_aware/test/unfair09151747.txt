@@ -1,0 +1,65 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 64
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+happens before here
+ThreadID: 16637
+se.sum_exec_runtime                          :          1126.462142
+ThreadID: 16638
+se.sum_exec_runtime                          :          1290.470948
+ThreadID: 16639
+se.sum_exec_runtime                          :           894.652801
+ThreadID: 16640
+se.sum_exec_runtime                          :           934.666917
+ThreadID: 16641
+se.sum_exec_runtime                          :          1207.534208
+ThreadID: 16642
+se.sum_exec_runtime                          :          1060.910584
+ThreadID: 16643
+se.sum_exec_runtime                          :          1256.095758
+ThreadID: 16644
+se.sum_exec_runtime                          :          1054.076273
+ThreadID: 16645
+se.sum_exec_runtime                          :          1306.803960
+ThreadID: 16646
+se.sum_exec_runtime                          :          1019.038555
+ThreadID: 16647
+se.sum_exec_runtime                          :          1379.111502
+ThreadID: 16648
+se.sum_exec_runtime                          :          1305.226512
+ThreadID: 16649
+se.sum_exec_runtime                          :          1384.604296
+ThreadID: 16650
+se.sum_exec_runtime                          :          1142.544618
+ThreadID: 16651
+se.sum_exec_runtime                          :          1601.098548
+ThreadID: 16652
+se.sum_exec_runtime                          :          1553.302135
+ThreadID: 16653
+se.sum_exec_runtime                          :          1860.325692
+ThreadID: 16654
+se.sum_exec_runtime                          :          1500.269800
+ThreadID: 16655
+se.sum_exec_runtime                          :          1517.650028
+ThreadID: 16656
+se.sum_exec_runtime                          :          1179.181550
+ThreadID: 16657
+se.sum_exec_runtime                          :          1487.104884
+ThreadID: 16658
+se.sum_exec_runtime                          :          1889.956962
+ThreadID: 16659
+se.sum_exec_runtime                          :          1541.860181
+ThreadID: 16660
+se.sum_exec_runtime                          :          1493.626640
+ThreadID: 16661
+se.sum_exec_runtime                          :          1470.856122
+ThreadID: 16662

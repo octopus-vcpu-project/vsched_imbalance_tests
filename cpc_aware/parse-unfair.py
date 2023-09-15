@@ -52,8 +52,7 @@ print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_la
 print("big value",array_of_lasts)
 print(array_of_lasts)
 for k, v in vruntime_per_thread.items():
-    if(v[-1]>array_of_lasts[-4] or v[-1]<array_of_lasts[3] ):
-        plt.plot(range(1, len(v) + 1), v, '.-', label=k)
+    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend
 plt.show()
 print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_lasts[0]))

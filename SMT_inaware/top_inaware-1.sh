@@ -8,7 +8,8 @@ toggle_topological_passthrough(){
     virsh shutdown $prob_vm
     while true; do
         vm_state=$(virsh domstate "$prob_vm")
-        if [[ "$vm_state" != "running" ]]; then
+        echo $vm_state
+        if [ "$vm_state" != "running" ]; then
             echo "VM is shutdown"
             break
         else

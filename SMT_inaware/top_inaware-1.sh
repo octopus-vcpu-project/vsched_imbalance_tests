@@ -6,7 +6,7 @@ naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fa
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='2'/></cpu>"
 toggle_topological_passthrough(){
     virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
-    if [$1 -eq 1 ]; then
+    if [ $1 -eq 1 ]; then
         sed -i "/<cpu /,/<\/cpu>/c\\$smart_topology_string" /tmp/$prob_vm.xml
     else
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml

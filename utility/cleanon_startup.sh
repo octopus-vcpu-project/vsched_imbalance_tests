@@ -12,10 +12,17 @@ set_vcpu() {
     if [ "$max_vcpu_count" -ne "$target_vcpu_count" ]; then
         if virsh list --state-running --name | grep -q "^$vm$"; then
             virsh shutdown "$vm"
-            while virsh list --state-running --name | grep -q "^$vm$"; do
-                sleep 2  # Waiting for the VM to shut down
-                echo "sleeping"
+            vm_state=$(virsh domstate "$vm")
+            while true; do
+            if [[ "$vm_state" -neq "running" ]]; then
+                echo "VM is shutdown"
+                break
+            else
+                echo "Waiting for VM to shutdown"
+                sleep 3 
+            fi
             done
+
         fi
 
         # Set the vCPU count
@@ -35,6 +42,7 @@ set_vcpu() {
             echo "Waiting for VM to start..."
             sleep 3 
         fi
+        done
     fi
 }
 

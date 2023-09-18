@@ -6,6 +6,16 @@ naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fa
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='2'/></cpu>"
 toggle_topological_passthrough(){
     virsh shutdown $prob_vm
+    vm_state=$(virsh domstate "$vm")
+    while true; do
+        if [[ "$vm_state" -neq "running" ]]; then
+            echo "VM is shutdown"
+            break
+        else
+            echo "Waiting for VM to shutdown"
+            sleep 3 
+        fi
+    done
     virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
     if [ $1 -eq 1 ]; then
         sed -i "/<cpu /,/<\/cpu>/c\\$smart_topology_string" /tmp/$prob_vm.xml

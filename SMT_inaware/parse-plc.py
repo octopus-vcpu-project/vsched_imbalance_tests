@@ -19,7 +19,7 @@ cpu_sysbench_counts = []
 
 # Read the latest file if one exists
 if files:
-    with open(files[3], 'r') as f:
+    with open(files[0], 'r') as f:
         lines = f.readlines()
         current_cpu = -1
         used_phys_cpus = []
@@ -40,9 +40,9 @@ if files:
             # Count 'sysbench' occurrences for the current CPU
             elif "sysbench" in line:
                 if current_cpu != -1:
-                    if(not (current_cpu%15) in used_phys_cpus):
+                    if(not (current_cpu//2) in used_phys_cpus):
                         incorrect += 1
-                        used_phys_cpus.append(current_cpu%15)
+                        used_phys_cpus.append(current_cpu//2)
                     cpu_sysbench_counts[current_cpu] += 1
     print("Physical cores used", incorrect_list)
     plt.bar(range(len(cpu_sysbench_counts)), cpu_sysbench_counts)

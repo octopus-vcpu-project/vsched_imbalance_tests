@@ -1,3 +1,10 @@
+declare -a io_benchmarks
+io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
+io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
+io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
+io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
+
+prob_vm=$1
 prob_vm=$1
 cpu_benchmark="sysbench --threads=16 --time=50 cpu run"
 io_benchmark="sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run"

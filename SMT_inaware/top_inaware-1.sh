@@ -5,6 +5,7 @@ sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='2'/></cpu>"
 toggle_topological_passthrough(){
+    virsh shutdown $prob_vm
     virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
     if [ $1 -eq 1 ]; then
         sed -i "/<cpu /,/<\/cpu>/c\\$smart_topology_string" /tmp/$prob_vm.xml
@@ -12,6 +13,7 @@ toggle_topological_passthrough(){
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
     fi
     virsh define /tmp/$prob_vm.xml
+    sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 }
 
 for i in {0..31};do
@@ -22,6 +24,9 @@ done
 
 OUTPUT_FILE="./tests/top_plc_naive$(date +%m%d%H%M).txt"
 toggle_topological_passthrough 0
+
+
+
 for i in {0..40};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2

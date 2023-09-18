@@ -24,7 +24,17 @@ set_vcpu() {
         virsh setvcpus "$vm" "$target_vcpu_count" --config
         # Start the VM again if it was running before
         virsh start "$vm"
-        sleep 20
+        while true; do
+        # Get the state of the specific VM
+        vm_state=$(virsh domstate "$vm")
+        
+        if [[ "$vm_state" == "running" ]]; then
+            echo "VM is now running."
+            break
+        else
+            echo "Waiting for VM to start..."
+            sleep 3 
+        fi
     fi
 }
 
@@ -40,6 +50,19 @@ while [ "$#" -gt 0 ]; do
     if ! echo "$running_vms" | grep -q "^$vm$"; then
         echo "Starting VM: $vm"
         virsh start "$vm"
+        while true; do
+        # Get the state of the specific VM
+        vm_state=$(virsh domstate "$vm")
+        
+        if [[ "$vm_state" == "running" ]]; then
+            echo "VM is now running."
+            break
+        else
+            echo "Waiting for VM to start..."
+            sleep 3 
+        fi
+        done
+        
     else
         echo "VM $vm is already running."
     fi

@@ -8,7 +8,7 @@ toggle_topological_passthrough(){
     virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
     if [$1 -eq 1 ]; then
         sed -i "/<cpu /,/<\/cpu>/c\\$smart_topology_string" /tmp/$prob_vm.xml
-    else; then
+    else
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
     fi
     virsh define /tmp/$prob_vm.xml

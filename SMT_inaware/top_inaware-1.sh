@@ -6,7 +6,7 @@ naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fa
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='2'/></cpu>"
 toggle_topological_passthrough(){
     virsh shutdown $prob_vm
-    vm_state=$(virsh domstate "$vm")
+    vm_state=$(virsh domstate "$prob_vm")
     while true; do
         if [[ "$vm_state" != "running" ]]; then
             echo "VM is shutdown"

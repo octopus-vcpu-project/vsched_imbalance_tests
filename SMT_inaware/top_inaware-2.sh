@@ -1,10 +1,19 @@
 declare -a io_benchmarks
+prob_vm=$1
+sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
 io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
 io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
 io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
 
-prob_vm=$1
+run_phoronix_benchmarks(){
+    local bench=$1
+    local taskset=$2
+    ssh ubuntu@$prob_vm "sudo $bench"
+    scp -r ./test-suites/$bench ubuntu@$prob_vm:~/
+    ssh ubuntu@$prob_vm "$taskset sudo phoronix-test-suite $bench" 
+}
+
 prob_vm=$1
 cpu_benchmark="sysbench --threads=16 --time=50 cpu run"
 io_benchmark="sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run"

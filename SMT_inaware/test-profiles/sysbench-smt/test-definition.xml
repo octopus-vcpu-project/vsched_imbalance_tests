@@ -6,6 +6,7 @@
     <AppVersion>1.0.20</AppVersion>
     <Description>This is a benchmark of Sysbench with the built-in CPU and memory sub-tests. Sysbench is a scriptable multi-threaded benchmark tool based on LuaJIT.</Description>
     <ResultScale>Events Per Second</ResultScale>
+    <Executable>fio-run</Executable>
     <Proportion>HIB</Proportion>
     <TimesToRun>3</TimesToRun>
   </TestInformation>

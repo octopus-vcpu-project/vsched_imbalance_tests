@@ -5,6 +5,7 @@
     <Title>Stress-NG</Title>
     <AppVersion>0.14</AppVersion>
     <Description>Stress-NG is a Linux stress tool developed by Colin King of Canonical.</Description>
+    <Executable>stress-ng</Executable>
     <TimesToRun>3</TimesToRun>
   </TestInformation>
   <TestProfile>

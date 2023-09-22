@@ -1,23 +1,50 @@
 declare -a io_benchmarks
+declare -a cpu_benchmarks
 prob_vm=$1
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
-io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
-io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
-io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
-io_benchmarks=("${io_benchmarks[@]}" "sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run")
+io_benchmarks=("${io_benchmarks[@]}" "nginx-smt")
+io_benchmarks=("${io_benchmarks[@]}" "fio-smt")
+cpu_benchmarks=("${cpu_benchmarks[@]}" "sysbench-smt")
+cpu_benchmarks=("${cpu_benchmarks[@]}" "matmul-smt")
 
-run_phoronix_benchmarks(){
+OUTPUT_FILE="./tests/top_inaware_2_cpu$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./tests/top_inaware_2_io$(date +%m%d%H%M).txt"
+
+setup_phoronix_benchmark(){
     local bench=$1
-    local taskset=$2
-    ssh ubuntu@$prob_vm "sudo $bench"
-    scp -r ./test-suites/$bench ubuntu@$prob_vm:~/
-    ssh ubuntu@$prob_vm "$taskset sudo phoronix-test-suite $bench" 
+    scp -r ./test-profiles/$bench ubuntu@$prob_vm:/tmp/$bench
+    ssh ubuntu@$prob_vm "sudo mv /tmp/$bench /var/lib/phoronix-test-suite/test-profiles/local" 
 }
 
-prob_vm=$1
-cpu_benchmark="sysbench --threads=16 --time=50 cpu run"
-io_benchmark="sysbench --file-test-mode=rndrw --threads=16 --file-total-size=10G --max-time=50 fileio run"
-sudo bash ../utility/cleanon_startup.sh $prob_vm 32
+test_smt_pair(){
+    local cpu_bench=$1
+    local io_bench=$2
+    echo "running $cpu_bench naive">> $OUTPUT_FILE 
+    echo "running $naive_bench naive">> $OUTPUT_FILE2
+    ssh ubuntu@$prob_vm "sudo killall sysbench" 
+    ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run" 
+    #topology naive testing
+    
+
+    ssh ubuntu@$prob_vm "sudo phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" & 
+    ssh ubuntu@$prob_vm "sudo phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2" 
+    sleep 2
+    ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run" 
+    echo "running $cpu_bench smart">> $OUTPUT_FILE 
+    echo "running $naive_bench smart">> $OUTPUT_FILE2
+    #topology smart testing
+    ssh ubuntu@$prob_vm "sudo taskset -c 0-15 phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo taskset -c 16-31 phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2"  
+}
+
+
+for bench in "${io_benchmarks[@]}"; do
+    setup_phoronix_benchmark $bench
+done
+
+for bench in "${cpu_benchmarks[@]}"; do
+    setup_phoronix_benchmark $bench
+done
 
 for i in {0..15};do
     sudo virsh vcpupin $prob_vm  $i $i
@@ -27,15 +54,8 @@ for i in {16..31};do
     sudo virsh vcpupin $prob_vm $i $((i + 64))
 done
 
-ssh ubuntu@$prob_vm "sudo killall sysbench" 
-ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=20 cpu run" 
-#topology naive testing
-OUTPUT_FILE="./tests/top_inaware_2_naive$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark" > "$OUTPUT_FILE" & 
-ssh ubuntu@$prob_vm "sudo $io_benchmark" > "$OUTPUT_FILE" 
-sleep 2
-ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run" 
-#topology smart testing
-OUTPUT_FILE2="./tests/top_inaware_2_smart$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark" >> "$OUTPUT_FILE2" &
-ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $io_benchmark" >> "$OUTPUT_FILE2"  
+for io_bench in "${io_benchmarks[@]}"; do
+    for cpu_bench in "${cpu_benchmarks[@]}"; do
+        test_smt_pair $cpu_bench $io_bench
+    done
+done

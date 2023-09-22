@@ -9,7 +9,7 @@ cpu_benchmarks=("${cpu_benchmarks[@]}" "stressng-smt")
 
 OUTPUT_FILE="./tests/top_inaware_2_cpu$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/top_inaware_2_io$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "touch /tmp/"
+ssh ubuntu@$prob_vm "mkdir /tmp/"
 ssh ubuntu@$prob_vm "touch /tmp/waitingprocesses.tmp"
 setup_phoronix_benchmark(){
     local bench=$1

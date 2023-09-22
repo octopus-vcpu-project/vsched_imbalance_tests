@@ -25,43 +25,8 @@
   </TestProfile>
   <TestSettings>
     <Default>
-      <Arguments>-d 90s </Arguments>
+      <Arguments>-d 90s -c 80 </Arguments>
       <PostArguments> https://127.0.0.1:8089/test.html</PostArguments>
     </Default>
-    <Option>
-      <DisplayName>Connections</DisplayName>
-      <Identifier>concurrent</Identifier>
-      <ArgumentPrefix>-c </ArgumentPrefix>
-      <Menu>
-        <Entry>
-          <Name>1</Name>
-          <Value>1</Value>
-        </Entry>
-        <Entry>
-          <Name>80</Name>
-          <Value>80</Value>
-        </Entry>
-        <Entry>
-          <Name>100</Name>
-          <Value>100</Value>
-        </Entry>
-        <Entry>
-          <Name>200</Name>
-          <Value>200</Value>
-        </Entry>
-        <Entry>
-          <Name>500</Name>
-          <Value>500</Value>
-        </Entry>
-        <Entry>
-          <Name>1000</Name>
-          <Value>1000</Value>
-        </Entry>
-        <Entry>
-          <Name>4000</Name>
-          <Value>4000</Value>
-        </Entry>
-      </Menu>
-    </Option>
   </TestSettings>
 </PhoronixTestSuite>

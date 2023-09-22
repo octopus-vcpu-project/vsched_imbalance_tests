@@ -9,10 +9,10 @@ cpu_benchmarks=("${cpu_benchmarks[@]}" "stressng-smt")
 
 OUTPUT_FILE="./tests/top_inaware_2_cpu$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/top_inaware_2_io$(date +%m%d%H%M).txt"
-
+ssh ubuntu@$prob_vm "touch /tmp/"
 setup_phoronix_benchmark(){
     local bench=$1
-    scp -r ./test-profiles/$bench ubuntu@$prob_vm:/tmp/$bench
+    scp -r ./test-profiles/$bench ubuntu@$prob_vm:/tmp/
     ssh ubuntu@$prob_vm "sudo mv /tmp/$bench /var/lib/phoronix-test-suite/test-profiles/local" 
 }
 
@@ -42,6 +42,7 @@ for bench in "${io_benchmarks[@]}"; do
     setup_phoronix_benchmark $bench
 done
 
+
 for bench in "${cpu_benchmarks[@]}"; do
     setup_phoronix_benchmark $bench
 done
@@ -59,3 +60,4 @@ for io_bench in "${io_benchmarks[@]}"; do
         test_smt_pair $cpu_bench $io_bench
     done
 done
+ssh ubuntu@$prob_vm "sudo rm -rf /tmp/"

@@ -13,6 +13,7 @@ ssh ubuntu@$prob_vm "touch /tmp/"
 setup_phoronix_benchmark(){
     local bench=$1
     scp -r ./test-profiles/$bench ubuntu@$prob_vm:/tmp/
+    ssh ubuntu@$prob_vm "sudo rm -rf /var/lib/phoronix-test-suite/test-profiles/local/$bench" 
     ssh ubuntu@$prob_vm "sudo mv /tmp/$bench /var/lib/phoronix-test-suite/test-profiles/local" 
 }
 

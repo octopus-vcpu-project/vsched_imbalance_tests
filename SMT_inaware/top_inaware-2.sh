@@ -30,13 +30,15 @@ test_smt_pair(){
 
     ssh ubuntu@$prob_vm "sudo phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" & 
     ssh ubuntu@$prob_vm "sudo phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2" 
+    wait
     sleep 2
     echo "running $cpu_bench smart">> $OUTPUT_FILE 
     echo "running $naive_bench smart">> $OUTPUT_FILE2
     #topology smart testing
     ssh ubuntu@$prob_vm "sudo echo '' > /home/ubuntu/tmp/waitingprocesses.tmp" 
     ssh ubuntu@$prob_vm "sudo taskset -c 0-15 phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "sudo taskset -c 16-31 phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2"  
+    ssh ubuntu@$prob_vm "sudo taskset -c 16-31 phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2"
+    wait
 }
 
 

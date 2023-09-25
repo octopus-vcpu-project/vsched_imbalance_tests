@@ -14,7 +14,7 @@ OUTPUT_FILE2="./tests/top_inaware_2_io$(date +%m%d%H%M).txt"
 test_smt_pair() {
     local cpu_bench=$1
     local io_bench=$2
-    
+    echo "first pass"
     # Adding condition for running specific commands for nginx benchmark
     if [[ $io_bench == *nginx* ]]; then
         ssh ubuntu@$prob_vm "sudo killall nginx"
@@ -38,14 +38,15 @@ test_smt_pair() {
         sleep 5
     fi
     sleep 2
+    echo "first second pass"
     echo "running $cpu_bench smart" >> $OUTPUT_FILE 
     echo "running $io_bench smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
-    
-    ssh ubuntu@$prob_vm "sudo echo '' > /home/ubuntu/tmp/waitingprocesses.tmp" 
+
     ssh ubuntu@$prob_vm "sudo taskset -c 0-15 phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo taskset -c 16-31 phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2"
     wait
     ssh ubuntu@$prob_vm "sudo killall nginx"
+    
 }
 
 for io_bench in "${io_benchmarks[@]}"; do

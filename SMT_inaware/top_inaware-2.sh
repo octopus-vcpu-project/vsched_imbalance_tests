@@ -18,7 +18,7 @@ test_smt_pair() {
     # Adding condition for running specific commands for nginx benchmark
     if [[ $io_bench == *nginx* ]]; then
         ssh ubuntu@$prob_vm "sudo killall nginx"
-        ssh ubuntu@$prob_vm "/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/nginx_/sbin/nginx -g 'worker_processes auto;'"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi
     
@@ -34,12 +34,14 @@ test_smt_pair() {
     wait
     if [[ $io_bench == *nginx* ]]; then
         ssh ubuntu@$prob_vm "sudo killall nginx"
-        ssh ubuntu@$prob_vm "taskset -c 16-31 /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/nginx_/sbin/nginx -g 'worker_processes auto;'"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi
     sleep 2
     echo "running $cpu_bench smart" >> $OUTPUT_FILE 
     echo "running $io_bench smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
+    
+    ssh ubuntu@$prob_vm "sudo echo '' > /home/ubuntu/tmp/waitingprocesses.tmp" 
     ssh ubuntu@$prob_vm "sudo taskset -c 0-15 phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo taskset -c 16-31 phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2"
     wait

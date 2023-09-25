@@ -17,7 +17,7 @@ test_smt_pair() {
     
     # Adding condition for running specific commands for nginx benchmark
     if [[ $io_bench == *nginx* ]]; then
-        ssh ubuntu@$prob_vm "killall nginx"
+        ssh ubuntu@$prob_vm "sudo killall nginx"
         ssh ubuntu@$prob_vm "./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi
@@ -33,7 +33,7 @@ test_smt_pair() {
     ssh ubuntu@$prob_vm "sudo $io_bench" >> "$OUTPUT_FILE2"
     wait
     if [[ $io_bench == *nginx* ]]; then
-        ssh ubuntu@$prob_vm "killall nginx"
+        ssh ubuntu@$prob_vm "sudo killall nginx"
         ssh ubuntu@$prob_vm "taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi

@@ -1,0 +1,43 @@
+running /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.05ms   73.32ms   1.36s    93.49%
+    Req/Sec   209.07     90.28   660.00     62.39%
+  261484 requests in 1.50m, 28.81GB read
+  Socket errors: connect 0, read 0, write 0, timeout 94
+Requests/sec:   2902.17
+Transfer/sec:    327.43MB
+running /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html smart
+
+Updated OpenBenchmarking.org Repository Index
+pts: 533 Distinct Tests, 2310 Test Versions, 56 Suites
+Available Changes From 22 September To 25 September
+Updated Test:  pts/openradioss v1.1.1 OpenRadioss 
+Updated OpenBenchmarking.org Repository Index
+system: 42 Distinct Tests, 132 Test Versions
+Updated OpenBenchmarking.org Repository Index
+git: 9 Distinct Tests, 12 Test Versions
+
+    [PROBLEM] Invalid Argument: /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html 
+
+CORRECT SYNTAX:
+phoronix-test-suite default-benchmark [Test | Suite | OpenBenchmarking ID | Test Result]  ...
+
+
+Recently Saved Test Results:
+   test   [4 days old]
+   asdf   [6 days old]
+
+New + Updated Tests:
+   cephfs-rados   selenium       avifenc        openradioss    yugabytedb
+   cassandra      aom-av1        stress-ng      ncnn           pgbench
+   vvenc          build-gcc      tidb           apache-iotdb
+
+Possible Suggestions:
+- dow3  [Test] 
+- coh2  [Test] 
+- csgo  [Test] 
+- tww2  [Test] 
+- tww3  [Test] 
+

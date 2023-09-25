@@ -1,0 +1,132 @@
+running sysbench --threads=16 --time=90 cpu run naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  7304.35
+
+General statistics:
+    total time:                          90.3378s
+    total number of events:              659883
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.18
+         max:                                 4422.88
+         95th percentile:                        5.47
+         sum:                              1440385.78
+
+Threads fairness:
+    events (avg/stddev):           41242.6875/1312.91
+    execution time (avg/stddev):   90.0241/0.33
+
+running sysbench --threads=16 --time=90 cpu run smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  7935.91
+
+General statistics:
+    total time:                          90.0019s
+    total number of events:              714275
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.99
+         max:                                 5381.71
+         95th percentile:                        1.67
+         sum:                              1423380.99
+
+Threads fairness:
+    events (avg/stddev):           44642.1875/1099.89
+    execution time (avg/stddev):   88.9613/0.89
+
+running ~/vsched_tests/matmul.out 16 90 naive
+running ~/vsched_tests/matmul.out 16 90 smart
+running sysbench --threads=16 --time=90 cpu run naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 10863.37
+
+General statistics:
+    total time:                          90.0013s
+    total number of events:              977754
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.46
+         max:                                 1526.07
+         95th percentile:                        1.50
+         sum:                              1423334.98
+
+Threads fairness:
+    events (avg/stddev):           61109.6250/305.84
+    execution time (avg/stddev):   88.9584/0.74
+
+running sysbench --threads=16 --time=90 cpu run smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  9638.32
+
+General statistics:
+    total time:                          90.0015s
+    total number of events:              867502
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.65
+         max:                                 1448.36
+         95th percentile:                        1.44
+         sum:                              1429097.23
+
+Threads fairness:
+    events (avg/stddev):           54218.8750/3499.75
+    execution time (avg/stddev):   89.3186/0.38
+
+running ~/vsched_tests/matmul.out 16 90 naive
+running ~/vsched_tests/matmul.out 16 90 smart

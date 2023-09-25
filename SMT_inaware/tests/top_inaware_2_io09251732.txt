@@ -1,0 +1,28 @@
+running sudo sysbench --threads=16 --time=90 cpu run naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.19ms   54.98ms 934.90ms   98.03%
+    Req/Sec   176.68     48.28   323.00     69.68%
+  248002 requests in 1.50m, 27.32GB read
+Requests/sec:   2753.40
+Transfer/sec:    310.62MB
+running sudo sysbench --threads=16 --time=90 cpu run smart running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html smart
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.32ms   10.13ms 246.33ms   99.39%
+    Req/Sec   176.71     52.89   353.00     67.77%
+  252577 requests in 1.50m, 27.83GB read
+Requests/sec:   2803.60
+Transfer/sec:    316.28MB
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.72ms    1.98ms  64.70ms   73.52%
+    Req/Sec   175.63     46.86   303.00     70.13%
+  251998 requests in 1.50m, 27.76GB read
+Requests/sec:   2797.16
+Transfer/sec:    315.56MB
+running ./vsched_tests/matmul.out 16 90 smart running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html smart

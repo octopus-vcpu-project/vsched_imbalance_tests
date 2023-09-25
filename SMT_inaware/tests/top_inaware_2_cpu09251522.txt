@@ -1,0 +1,300 @@
+running sudo sysbench --threads=16 --time=90 cpu run naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  9270.78
+
+General statistics:
+    total time:                          90.0053s
+    total number of events:              834452
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.69
+         max:                                 1034.97
+         95th percentile:                        4.33
+         sum:                              1409586.24
+
+Threads fairness:
+    events (avg/stddev):           52153.2500/769.86
+    execution time (avg/stddev):   88.0991/0.71
+
+running sudo sysbench --threads=16 --time=90 cpu run smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 11519.99
+
+General statistics:
+    total time:                          90.0011s
+    total number of events:              1036850
+
+Latency (ms):
+         min:                                    1.15
+         avg:                                    1.37
+         max:                                  697.44
+         95th percentile:                        1.42
+         sum:                              1419308.50
+
+Threads fairness:
+    events (avg/stddev):           64803.1250/103.38
+    execution time (avg/stddev):   88.7068/0.33
+
+running ./vsched_tests/matmul.out 16 90 naive
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 3 (from row 187 to 249)
+computing slice 4 (from row 250 to 311)
+computing slice 5 (from row 312 to 374)
+computing slice 6 (from row 375 to 436)
+computing slice 9 (from row 562 to 624)
+computing slice 7 (from row 437 to 499)
+computing slice 8 (from row 500 to 561)
+computing slice 10 (from row 625 to 686)
+computing slice 11 (from row 687 to 749)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 14 (from row 875 to 936)
+computing slice 15 (from row 937 to 999)
+0 9945
+1 10074
+2 10995
+3 10816
+4 11069
+5 10946
+6 10248
+7 10340
+8 10542
+9 10001
+finished slice 12
+finished slice 11
+finished slice 9
+finished slice 8
+finished slice 6
+finished slice 7
+finished slice 14
+finished slice 13
+finished slice 1
+finished slice 3
+finished slice 10
+finished slice 0
+finished slice 2
+finished slice 5
+finished slice 15
+finished slice 4
+running ./vsched_tests/matmul.out 16 90 smart
+computing slice 1 (from row 62 to 124)
+computing slice 0 (from row 0 to 61)
+computing slice 5 (from row 312 to 374)
+computing slice 2 (from row 125 to 186)
+computing slice 4 (from row 250 to 311)
+computing slice 6 (from row 375 to 436)
+computing slice 3 (from row 187 to 249)
+computing slice 7 (from row 437 to 499)
+computing slice 8 (from row 500 to 561)
+computing slice 9 (from row 562 to 624)
+computing slice 10 (from row 625 to 686)
+computing slice 11 (from row 687 to 749)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 14 (from row 875 to 936)
+computing slice 15 (from row 937 to 999)
+0 8699
+1 7487
+2 8191
+3 7579
+4 8631
+5 8613
+6 8610
+7 8588
+8 8599
+9 8555
+finished slice 8
+finished slice 15
+finished slice 12
+finished slice 7
+finished slice 6
+finished slice 3
+finished slice 4
+finished slice 2
+finished slice 5
+finished slice 0
+finished slice 14
+finished slice 11
+finished slice 13
+finished slice 1
+finished slice 10
+finished slice 9
+running sudo sysbench --threads=16 --time=90 cpu run naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 11428.85
+
+General statistics:
+    total time:                          90.0013s
+    total number of events:              1028653
+
+Latency (ms):
+         min:                                    0.91
+         avg:                                    1.38
+         max:                                  640.07
+         95th percentile:                        1.42
+         sum:                              1417495.39
+
+Threads fairness:
+    events (avg/stddev):           64290.8125/1209.99
+    execution time (avg/stddev):   88.5935/0.30
+
+running sudo sysbench --threads=16 --time=90 cpu run smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 11180.85
+
+General statistics:
+    total time:                          90.0014s
+    total number of events:              1006329
+
+Latency (ms):
+         min:                                    1.09
+         avg:                                    1.42
+         max:                                  738.47
+         95th percentile:                        1.42
+         sum:                              1423996.26
+
+Threads fairness:
+    events (avg/stddev):           62895.5625/97.25
+    execution time (avg/stddev):   88.9998/0.50
+
+running ./vsched_tests/matmul.out 16 90 naive
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 4 (from row 250 to 311)
+computing slice 3 (from row 187 to 249)
+computing slice 6 (from row 375 to 436)
+computing slice 5 (from row 312 to 374)
+computing slice 7 (from row 437 to 499)
+computing slice 8 (from row 500 to 561)
+computing slice 9 (from row 562 to 624)
+computing slice 10 (from row 625 to 686)
+computing slice 11 (from row 687 to 749)
+computing slice 14 (from row 875 to 936)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 15 (from row 937 to 999)
+0 11972
+1 11889
+2 11721
+3 10067
+4 10493
+5 11531
+6 11902
+7 11860
+8 11789
+9 11838
+finished slice 9
+finished slice 0
+finished slice 2
+finished slice 14
+finished slice 4
+finished slice 11
+finished slice 5
+finished slice 13
+finished slice 12
+finished slice 15
+finished slice 10
+finished slice 8
+finished slice 6
+finished slice 1
+finished slice 7
+finished slice 3
+running ./vsched_tests/matmul.out 16 90 smart
+computing slice 0 (from row 0 to 61)
+computing slice 3 (from row 187 to 249)
+computing slice 5 (from row 312 to 374)
+computing slice 4 (from row 250 to 311)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 6 (from row 375 to 436)
+computing slice 7 (from row 437 to 499)
+computing slice 8 (from row 500 to 561)
+computing slice 9 (from row 562 to 624)
+computing slice 11 (from row 687 to 749)
+computing slice 10 (from row 625 to 686)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 14 (from row 875 to 936)
+computing slice 15 (from row 937 to 999)
+0 7856
+1 7792
+2 7792
+3 7808
+4 7182
+5 6717
+6 7020
+7 7664
+8 7808
+9 7840
+finished slice 9
+finished slice 11
+finished slice 7
+finished slice 5
+finished slice 13
+finished slice 3
+finished slice 15
+finished slice 1
+finished slice 14
+finished slice 2
+finished slice 4
+finished slice 12
+finished slice 10
+finished slice 0
+finished slice 8
+finished slice 6

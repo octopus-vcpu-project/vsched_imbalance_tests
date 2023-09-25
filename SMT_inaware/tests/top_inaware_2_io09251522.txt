@@ -1,0 +1,176 @@
+running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.35ms   76.52ms   1.50s    96.42%
+    Req/Sec   218.63     80.84   626.00     66.27%
+  304587 requests in 1.50m, 33.56GB read
+Requests/sec:   3380.57
+Transfer/sec:    381.41MB
+running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html smart
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    42.25ms   62.37ms 950.68ms   95.18%
+    Req/Sec   187.27     82.97   450.00     60.58%
+  262117 requests in 1.50m, 28.88GB read
+Requests/sec:   2909.16
+Transfer/sec:    328.21MB
+running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    34.10ms   45.96ms 770.13ms   96.47%
+    Req/Sec   212.63     61.76   464.00     68.52%
+  299614 requests in 1.50m, 33.01GB read
+Requests/sec:   3325.30
+Transfer/sec:    375.16MB
+running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html smart
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    42.30ms   63.64ms   1.72s    96.22%
+    Req/Sec   183.14     60.13   410.00     69.13%
+  256350 requests in 1.50m, 28.24GB read
+Requests/sec:   2845.21
+Transfer/sec:    320.99MB
+running sudo fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+iops-test-job: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=3882: Mon Sep 25 15:30:44 2023
+  read: IOPS=1306k, BW=5102MiB/s (5350MB/s)(448GiB/90001msec)
+    slat (usec): min=2, max=638580, avg= 8.07, stdev=342.30
+    clat (usec): min=7, max=641683, avg=3125.91, stdev=8972.19
+     lat (usec): min=17, max=641690, avg=3134.29, stdev=8979.99
+    clat percentiles (msec):
+     |  1.00th=[    3],  5.00th=[    3], 10.00th=[    3], 20.00th=[    3],
+     | 30.00th=[    3], 40.00th=[    3], 50.00th=[    3], 60.00th=[    3],
+     | 70.00th=[    4], 80.00th=[    4], 90.00th=[    4], 95.00th=[    4],
+     | 99.00th=[    4], 99.50th=[    5], 99.90th=[  207], 99.95th=[  213],
+     | 99.99th=[  388]
+   bw (  MiB/s): min= 1088, max= 5859, per=100.00%, avg=5154.02, stdev=58.85, samples=2832
+   iops        : min=278626, max=1500099, avg=1319427.88, stdev=15065.30, samples=2832
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.59%, 4=98.70%, 10=0.56%, 20=0.03%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.10%, 500=0.01%, 750=0.01%
+  cpu          : usr=30.95%, sys=53.99%, ctx=1060118, majf=1, minf=4390
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=117544047,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=5102MiB/s (5350MB/s), 5102MiB/s-5102MiB/s (5350MB/s-5350MB/s), io=448GiB (481GB), run=90001-90001msec
+
+Disk stats (read/write):
+  vda: ios=849659/271, merge=0/52, ticks=247899/66, in_queue=247973, util=91.76%
+running sudo fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 smart
+iops-test-job: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=4041: Mon Sep 25 15:32:17 2023
+  read: IOPS=1133k, BW=4426MiB/s (4641MB/s)(389GiB/90002msec)
+    slat (usec): min=2, max=750818, avg= 9.39, stdev=444.06
+    clat (usec): min=6, max=753859, avg=3603.06, stdev=9662.07
+     lat (usec): min=12, max=753865, avg=3612.82, stdev=9672.53
+    clat percentiles (msec):
+     |  1.00th=[    3],  5.00th=[    3], 10.00th=[    4], 20.00th=[    4],
+     | 30.00th=[    4], 40.00th=[    4], 50.00th=[    4], 60.00th=[    4],
+     | 70.00th=[    4], 80.00th=[    4], 90.00th=[    4], 95.00th=[    5],
+     | 99.00th=[    5], 99.50th=[    5], 99.90th=[  182], 99.95th=[  182],
+     | 99.99th=[  558]
+   bw (  MiB/s): min=   15, max= 5049, per=100.00%, avg=4452.52, stdev=54.33, samples=2848
+   iops        : min= 3983, max=1292585, avg=1139844.58, stdev=13909.58, samples=2848
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.15%, 4=91.08%, 10=8.60%, 20=0.04%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.10%, 750=0.02%, 1000=0.01%
+  cpu          : usr=33.13%, sys=59.49%, ctx=365924, majf=0, minf=4372
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=101976096,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=4426MiB/s (4641MB/s), 4426MiB/s-4426MiB/s (4641MB/s-4641MB/s), io=389GiB (418GB), run=90002-90002msec
+
+Disk stats (read/write):
+  vda: ios=1925157/198, merge=0/18, ticks=691261/24, in_queue=691288, util=93.09%
+running sudo fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+iops-test-job: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=4385: Mon Sep 25 15:33:59 2023
+  read: IOPS=1248k, BW=4874MiB/s (5111MB/s)(428GiB/90003msec)
+    slat (usec): min=2, max=563396, avg= 8.57, stdev=347.50
+    clat (usec): min=6, max=575910, avg=3269.22, stdev=9450.65
+     lat (usec): min=12, max=575917, avg=3278.09, stdev=9457.08
+    clat percentiles (msec):
+     |  1.00th=[    3],  5.00th=[    3], 10.00th=[    3], 20.00th=[    3],
+     | 30.00th=[    3], 40.00th=[    3], 50.00th=[    3], 60.00th=[    4],
+     | 70.00th=[    4], 80.00th=[    4], 90.00th=[    4], 95.00th=[    4],
+     | 99.00th=[    5], 99.50th=[    5], 99.90th=[  218], 99.95th=[  218],
+     | 99.99th=[  477]
+   bw (  MiB/s): min=  405, max= 5748, per=100.00%, avg=4899.55, stdev=65.09, samples=2848
+   iops        : min=103893, max=1471536, avg=1254284.04, stdev=16663.28, samples=2848
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.78%, 4=96.71%, 10=2.33%, 20=0.05%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.10%, 500=0.01%, 750=0.01%
+  cpu          : usr=29.51%, sys=56.58%, ctx=903069, majf=0, minf=4354
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=112308871,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=4874MiB/s (5111MB/s), 4874MiB/s-4874MiB/s (5111MB/s-5111MB/s), io=428GiB (460GB), run=90003-90003msec
+
+Disk stats (read/write):
+  vda: ios=1088068/269, merge=0/38, ticks=355934/48, in_queue=355990, util=91.67%
+running sudo fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 smart
+iops-test-job: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=4539: Mon Sep 25 15:35:32 2023
+  read: IOPS=1144k, BW=4468MiB/s (4685MB/s)(393GiB/90003msec)
+    slat (usec): min=2, max=713329, avg= 9.24, stdev=341.88
+    clat (usec): min=6, max=725526, avg=3564.00, stdev=9651.32
+     lat (usec): min=13, max=725535, avg=3573.64, stdev=9658.52
+    clat percentiles (msec):
+     |  1.00th=[    3],  5.00th=[    3], 10.00th=[    3], 20.00th=[    3],
+     | 30.00th=[    4], 40.00th=[    4], 50.00th=[    4], 60.00th=[    4],
+     | 70.00th=[    4], 80.00th=[    4], 90.00th=[    4], 95.00th=[    5],
+     | 99.00th=[    5], 99.50th=[    5], 99.90th=[  180], 99.95th=[  182],
+     | 99.99th=[  609]
+   bw (  MiB/s): min=  863, max= 5209, per=100.00%, avg=4509.34, stdev=48.36, samples=2816
+   iops        : min=221148, max=1333747, avg=1154390.61, stdev=12379.49, samples=2816
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.26%, 4=91.54%, 10=8.01%, 20=0.05%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.10%, 500=0.01%, 750=0.01%
+  cpu          : usr=32.44%, sys=59.05%, ctx=404730, majf=0, minf=4364
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=102944447,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=4468MiB/s (4685MB/s), 4468MiB/s-4468MiB/s (4685MB/s-4685MB/s), io=393GiB (422GB), run=90003-90003msec
+
+Disk stats (read/write):
+  vda: ios=1816195/264, merge=0/26, ticks=672787/44, in_queue=672838, util=91.97%

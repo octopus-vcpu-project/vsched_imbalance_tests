@@ -1,0 +1,21 @@
+running sysbench-smt naive
+
+
+    [PROBLEM] Invalid Argument: sysbench-smt 
+
+CORRECT SYNTAX:
+phoronix-test-suite default-benchmark [Test | Suite | OpenBenchmarking ID | Test Result]  ...
+
+
+Recently Saved Test Results:
+   test   [2 days old]
+   asdf   [3 days old]
+
+New + Updated Tests:
+   brl-cad        openradioss    pgbench        vvenc          hadoop
+   avifenc        yugabytedb     apache-iotdb   tidb           stress-ng
+   ncnn           deepsparse     aom-av1        cassandra
+
+Possible Suggestions:
+- sysbench  [Test] 
+

@@ -1,0 +1,300 @@
+running sudo sysbench --threads=16 --time=90 cpu run naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 10144.54
+
+General statistics:
+    total time:                          90.0016s
+    total number of events:              913060
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.53
+         max:                                 1104.94
+         95th percentile:                        1.55
+         sum:                              1399445.19
+
+Threads fairness:
+    events (avg/stddev):           57066.2500/1261.52
+    execution time (avg/stddev):   87.4653/0.85
+
+running sudo sysbench --threads=16 --time=90 cpu run smart running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 10683.41
+
+General statistics:
+    total time:                          90.0015s
+    total number of events:              961562
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.48
+         max:                                  771.84
+         95th percentile:                        1.55
+         sum:                              1421332.62
+
+Threads fairness:
+    events (avg/stddev):           60097.6250/458.47
+    execution time (avg/stddev):   88.8333/0.24
+
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 3 (from row 187 to 249)
+computing slice 4 (from row 250 to 311)
+computing slice 7 (from row 437 to 499)
+computing slice 6 (from row 375 to 436)
+computing slice 10 (from row 625 to 686)
+computing slice 14 (from row 875 to 936)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 11 (from row 687 to 749)
+computing slice 9 (from row 562 to 624)
+computing slice 8 (from row 500 to 561)
+computing slice 5 (from row 312 to 374)
+computing slice 15 (from row 937 to 999)
+0 9212
+1 10743
+2 12255
+3 12704
+4 11560
+5 11530
+6 11382
+7 12397
+8 12257
+9 12361
+finished slice 10
+finished slice 2
+finished slice 3
+finished slice 1
+finished slice 9
+finished slice 11
+finished slice 7
+finished slice 14
+finished slice 6
+finished slice 0
+finished slice 5
+finished slice 13
+finished slice 4
+finished slice 15
+finished slice 8
+finished slice 12
+running ./vsched_tests/matmul.out 16 90 smart running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html smart
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 3 (from row 187 to 249)
+computing slice 2 (from row 125 to 186)
+computing slice 4 (from row 250 to 311)
+computing slice 5 (from row 312 to 374)
+computing slice 6 (from row 375 to 436)
+computing slice 7 (from row 437 to 499)
+computing slice 9 (from row 562 to 624)
+computing slice 8 (from row 500 to 561)
+computing slice 11 (from row 687 to 749)
+computing slice 10 (from row 625 to 686)
+computing slice 13 (from row 812 to 874)
+computing slice 12 (from row 750 to 811)
+computing slice 14 (from row 875 to 936)
+computing slice 15 (from row 937 to 999)
+0 15600
+1 15661
+2 15942
+3 15834
+4 15681
+5 15266
+6 14527
+7 14472
+8 14241
+9 15750
+finished slice 11
+finished slice 1
+finished slice 6
+finished slice 9
+finished slice 0
+finished slice 5
+finished slice 7
+finished slice 10
+finished slice 3
+finished slice 2
+finished slice 14
+finished slice 8
+finished slice 12
+finished slice 4
+finished slice 15
+finished slice 13
+running sudo sysbench --threads=16 --time=90 cpu run naive running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k--ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 10899.25
+
+General statistics:
+    total time:                          90.0014s
+    total number of events:              980981
+
+Latency (ms):
+         min:                                    0.91
+         avg:                                    1.45
+         max:                                  579.13
+         95th percentile:                        1.50
+         sum:                              1418086.43
+
+Threads fairness:
+    events (avg/stddev):           61311.3125/751.83
+    execution time (avg/stddev):   88.6304/0.35
+
+running sudo sysbench --threads=16 --time=90 cpu run smart running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k--ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 11368.19
+
+General statistics:
+    total time:                          90.0010s
+    total number of events:              1023188
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.39
+         max:                                  921.20
+         95th percentile:                        1.52
+         sum:                              1419125.12
+
+Threads fairness:
+    events (avg/stddev):           63949.2500/1726.78
+    execution time (avg/stddev):   88.6953/0.27
+
+running ./vsched_tests/matmul.out 16 90 naive running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k--ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 3 (from row 187 to 249)
+computing slice 4 (from row 250 to 311)
+computing slice 5 (from row 312 to 374)
+computing slice 7 (from row 437 to 499)
+computing slice 6 (from row 375 to 436)
+computing slice 8 (from row 500 to 561)
+computing slice 9 (from row 562 to 624)
+computing slice 10 (from row 625 to 686)
+computing slice 12 (from row 750 to 811)
+computing slice 11 (from row 687 to 749)
+computing slice 13 (from row 812 to 874)
+computing slice 14 (from row 875 to 936)
+computing slice 15 (from row 937 to 999)
+0 13010
+1 13102
+2 12856
+3 11382
+4 10988
+5 11581
+6 13808
+7 14124
+8 14258
+9 13807
+finished slice 6
+finished slice 2
+finished slice 4
+finished slice 7
+finished slice 1
+finished slice 11
+finished slice 14
+finished slice 13
+finished slice 3
+finished slice 9
+finished slice 8
+finished slice 10
+finished slice 15
+finished slice 0
+finished slice 12
+finished slice 5
+running ./vsched_tests/matmul.out 16 90 smart running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k--ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 smart
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 4 (from row 250 to 311)
+computing slice 3 (from row 187 to 249)
+computing slice 6 (from row 375 to 436)
+computing slice 5 (from row 312 to 374)
+computing slice 7 (from row 437 to 499)
+computing slice 8 (from row 500 to 561)
+computing slice 11 (from row 687 to 749)
+computing slice 9 (from row 562 to 624)
+computing slice 10 (from row 625 to 686)
+computing slice 13 (from row 812 to 874)
+computing slice 12 (from row 750 to 811)
+computing slice 15 (from row 937 to 999)
+computing slice 14 (from row 875 to 936)
+0 16389
+1 16600
+2 15609
+3 20236
+4 19840
+5 20049
+6 19845
+7 19058
+8 19090
+9 19104
+finished slice 7
+finished slice 1
+finished slice 15
+finished slice 2
+finished slice 14
+finished slice 4
+finished slice 0
+finished slice 8
+finished slice 10
+finished slice 6
+finished slice 11
+finished slice 9
+finished slice 13
+finished slice 3
+finished slice 5
+finished slice 12

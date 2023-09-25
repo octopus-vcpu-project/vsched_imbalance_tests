@@ -1,0 +1,35 @@
+running /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.49ms   44.77ms 738.03ms   92.49%
+    Req/Sec   206.47     88.03   540.00     63.75%
+  270567 requests in 1.50m, 29.81GB read
+  Socket errors: connect 0, read 0, write 0, timeout 94
+Requests/sec:   3002.98
+Transfer/sec:    338.80MB
+running /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html smart
+
+
+    [PROBLEM] Invalid Argument: /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 100 -t 16 https://127.0.0.1:8089/test.html 
+
+CORRECT SYNTAX:
+phoronix-test-suite default-benchmark [Test | Suite | OpenBenchmarking ID | Test Result]  ...
+
+
+Recently Saved Test Results:
+   test   [4 days old]
+   asdf   [6 days old]
+
+New + Updated Tests:
+   apache-iotdb   svt-av1        hadoop         cephfs-rados   openradioss
+   avifenc        yugabytedb     build-gcc      stress-ng      aom-av1
+   ncnn           cassandra      tidb           vvenc
+
+Possible Suggestions:
+- dow3  [Test] 
+- coh2  [Test] 
+- csgo  [Test] 
+- tww2  [Test] 
+- tww3  [Test] 
+

@@ -1,0 +1,127 @@
+running sudo sysbench --threads=16 --time=90 cpu run naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 10896.41
+
+General statistics:
+    total time:                          90.0015s
+    total number of events:              980725
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.47
+         max:                                  942.34
+         95th percentile:                        1.58
+         sum:                              1438312.78
+
+Threads fairness:
+    events (avg/stddev):           61295.3125/502.91
+    execution time (avg/stddev):   89.8945/0.05
+
+running sudo sysbench --threads=16 --time=90 cpu run smart running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html smart
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 10890.59
+
+General statistics:
+    total time:                          90.0011s
+    total number of events:              980201
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.46
+         max:                                  234.99
+         95th percentile:                        1.58
+         sum:                              1430798.61
+
+Threads fairness:
+    events (avg/stddev):           61262.5625/255.21
+    execution time (avg/stddev):   89.4249/0.12
+
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+computing slice 0 (from row 0 to 61)
+computing slice 1 (from row 62 to 124)
+computing slice 2 (from row 125 to 186)
+computing slice 3 (from row 187 to 249)
+computing slice 5 (from row 312 to 374)
+computing slice 4 (from row 250 to 311)
+computing slice 6 (from row 375 to 436)
+computing slice 8 (from row 500 to 561)
+computing slice 7 (from row 437 to 499)
+computing slice 9 (from row 562 to 624)
+computing slice 10 (from row 625 to 686)
+computing slice 11 (from row 687 to 749)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 15 (from row 937 to 999)
+computing slice 14 (from row 875 to 936)
+0 13053
+1 12548
+2 12473
+3 12568
+4 13159
+5 12776
+6 13011
+7 12023
+8 12145
+9 12844
+finished slice 11
+finished slice 5
+finished slice 7
+finished slice 15
+finished slice 6
+finished slice 8
+finished slice 0
+finished slice 9
+finished slice 4
+finished slice 1
+finished slice 12
+finished slice 10
+finished slice 14
+finished slice 13
+finished slice 3
+finished slice 2
+running ./vsched_tests/matmul.out 16 90 smart running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html smart
+computing slice 0 (from row 0 to 61)
+computing slice 5 (from row 312 to 374)
+computing slice 1 (from row 62 to 124)
+computing slice 3 (from row 187 to 249)
+computing slice 4 (from row 250 to 311)
+computing slice 2 (from row 125 to 186)
+computing slice 6 (from row 375 to 436)
+computing slice 7 (from row 437 to 499)
+computing slice 9 (from row 562 to 624)
+computing slice 8 (from row 500 to 561)
+computing slice 10 (from row 625 to 686)
+computing slice 11 (from row 687 to 749)
+computing slice 12 (from row 750 to 811)
+computing slice 13 (from row 812 to 874)
+computing slice 15 (from row 937 to 999)
+computing slice 14 (from row 875 to 936)
+0 15008
+1 14695
+2 14164

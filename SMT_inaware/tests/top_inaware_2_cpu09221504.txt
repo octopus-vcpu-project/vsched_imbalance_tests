@@ -1,0 +1,47 @@
+running sysbench-smt naive
+
+    Evaluating External Test Dependencies ..................................
+
+Phoronix Test Suite v10.8.4
+
+    Installed:     local/sysbench-smt
+
+        The test executable for local/sysbench-smt could not be located. Looking for sysbench-smt in /var/lib/phoronix-test-suite/installed-tests/local/sysbench-smt/
+
+running sysbench-smt smart
+
+    Evaluating External Test Dependencies ..................................
+
+Phoronix Test Suite v10.8.4
+
+    Installed:     local/sysbench-smt
+
+        The test executable for local/sysbench-smt could not be located. Looking for sysbench-smt in /var/lib/phoronix-test-suite/installed-tests/local/sysbench-smt/
+
+running stressng-smt naive
+
+    Evaluating External Test Dependencies ..................................
+    Evaluating System Dependencies .........................................
+
+Phoronix Test Suite v10.8.4
+
+    To Install:    local/stressng-smt
+
+    Determining File Requirements ..........................................
+    Searching Download Caches ..............................................
+
+    1 Test To Install
+        18MB Of Disk Space Is Needed
+        25 Seconds Estimated Install Time
+
+    local/stressng-smt:
+        Test Installation 1 of 1
+        1 File Needed [1.05 MB / 1 Minute]
+        File Found: stress-ng-0.14.00.tar.gz                        [1.05MB]
+        Approximate Install Size: 18 MB
+        Estimated Install Time: 25 Seconds
+        Installing Test @ 15:05:08
+
+
+        The test executable for local/stressng-smt could not be located. Looking for stressng-smt in /var/lib/phoronix-test-suite/installed-tests/local/stressng-smt/
+

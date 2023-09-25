@@ -1,0 +1,184 @@
+running sysbench --threads=16 --time=90 cpu run naive
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  7973.04
+
+General statistics:
+    total time:                          90.0041s
+    total number of events:              717635
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    1.99
+         max:                                 6336.71
+         95th percentile:                        4.91
+         sum:                              1431165.12
+
+Threads fairness:
+    events (avg/stddev):           44852.1875/1617.41
+    execution time (avg/stddev):   89.4478/0.28
+
+running sysbench --threads=16 --time=90 cpu run smart
+
+    Evaluating External Test Dependencies ..................................
+    Evaluating System Dependencies .........................................
+
+Phoronix Test Suite v10.8.4
+
+    Installed:     pts/sysbench-1.1.0
+    Installed:     pts/rodinia-1.3.2
+    Installed:     pts/namd-1.2.1
+    Installed:     pts/stockfish-1.4.0
+    To Install:    pts/x264-2.7.0
+    To Install:    pts/x265-1.3.0
+    To Install:    pts/kvazaar-1.2.0
+    To Install:    pts/compress-7zip-1.10.0
+    To Install:    pts/blender-3.6.0
+    To Install:    pts/asmfish-1.1.2
+    To Install:    pts/build-linux-kernel-1.15.0
+    To Install:    pts/build-gcc-1.4.0
+    To Install:    pts/radiance-1.0.0
+    To Install:    pts/openssl-3.1.0
+    To Install:    pts/ctx-clock-1.0.0
+    To Install:    pts/povray-1.2.1
+    Unknown:       --threads=16
+    Unknown:       --time=90
+    Unknown:       run
+
+    Determining File Requirements ..........................................
+    Searching Download Caches ..............................................
+
+    12 Tests To Install
+        15 Files To Download [1607MB]
+        4 Files In Cache [6640MB]
+        12540MB Of Disk Space Is Needed
+        31 Minutes, 12 Seconds Estimated Install Time
+
+    pts/x264-2.7.0:
+        Test Installation 1 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/x264-2.7.0/ for the test files.
+
+    pts/x265-1.3.0:
+        Test Installation 2 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/x265-1.3.0/ for the test files.
+
+    pts/kvazaar-1.2.0:
+        Test Installation 3 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/kvazaar-1.2.0/ for the test files.
+
+    pts/compress-7zip-1.10.0:
+        Test Installation 4 of 12
+        1 File Needed [1.23 MB / 1 Minute]
+        Downloading: 7z2201-src.tar.xz                              [1.23MB]
+        Estimated Download Time: 1m ........................................
+        Approximate Install Size: 16 MB
+        Estimated Install Time: 34 Seconds
+        Installing Test @ 14:29:17
+
+    pts/blender-3.6.0:
+        Test Installation 5 of 12
+        4 Files Needed [1312 MB / 3 Minutes]
+        Downloading: blender-3.6.0-linux-x64.tar.xz                  [257MB]
+        Estimated Download Time: 1m ........................................
+        Downloading: cycles_benchmark_20160228.zip                   [507MB]
+        Estimated Download Time: 2m ........................................
+        Downloading: barbershop_interior_cpu.blend                   [275MB]
+        Estimated Download Time: 1m ........................................
+        Downloading: barbershop_interior_gpu.blend                   [275MB]
+        Estimated Download Time: 1m ........................................
+        Approximate Install Size: 1500 MB
+        Estimated Install Time: 26 Seconds
+        Installing Test @ 14:37:37
+
+    [NOTICE] file_put_contents(): Write of 1077302 bytes failed with errno=28 No space left on device in pts_test_installer:903
+
+    pts/asmfish-1.1.2:
+        Test Installation 6 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/asmfish-1.1.2/ for the test files.
+
+    pts/build-linux-kernel-1.15.0:
+        Test Installation 7 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/build-linux-kernel-1.15.0/ for the test files.
+
+    pts/build-gcc-1.4.0:
+        Test Installation 8 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/build-gcc-1.4.0/ for the test files.
+
+    pts/radiance-1.0.0:
+        Test Installation 9 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/radiance-1.0.0/ for the test files.
+
+    pts/openssl-3.1.0:
+        Test Installation 10 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/openssl-3.1.0/ for the test files.
+
+    pts/ctx-clock-1.0.0:
+        Test Installation 11 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/ctx-clock-1.0.0/ for the test files.
+
+    pts/povray-1.2.1:
+        Test Installation 12 of 12
+            There is not enough space at /var/lib/phoronix-test-suite/installed-tests/pts/povray-1.2.1/ for the test files.
+
+
+The following tests failed to install:
+
+  - pts/x264-2.7.0
+  - pts/x265-1.3.0
+  - pts/kvazaar-1.2.0
+  - pts/asmfish-1.1.2
+  - pts/build-linux-kernel-1.15.0
+  - pts/build-gcc-1.4.0
+  - pts/radiance-1.0.0
+  - pts/openssl-3.1.0
+  - pts/ctx-clock-1.0.0
+  - pts/povray-1.2.1
+
+
+Multiple tests are not installed:
+
+- pts/x264-2.7.0
+- pts/x265-1.3.0
+- pts/kvazaar-1.2.0
+- pts/asmfish-1.1.2
+- pts/build-linux-kernel-1.15.0
+- pts/build-gcc-1.4.0
+- pts/radiance-1.0.0
+- pts/openssl-3.1.0
+- pts/ctx-clock-1.0.0
+- pts/povray-1.2.1
+
+        The test executable for pts/x265-1.3.0 could not be located. Looking for x265 in /var/lib/phoronix-test-suite/installed-tests/pts/x265-1.3.0/
+
+        The test executable for pts/kvazaar-1.2.0 could not be located. Looking for kvazaar in /var/lib/phoronix-test-suite/installed-tests/pts/kvazaar-1.2.0/
+
+        The test executable for pts/asmfish-1.1.2 could not be located. Looking for asmfish in /var/lib/phoronix-test-suite/installed-tests/pts/asmfish-1.1.2/
+
+        The test executable for pts/build-linux-kernel-1.15.0 could not be located. Looking for build-linux-kernel in /var/lib/phoronix-test-suite/installed-tests/pts/build-linux-kernel-1.15.0/
+
+        The test executable for pts/build-gcc-1.4.0 could not be located. Looking for build-gcc in /var/lib/phoronix-test-suite/installed-tests/pts/build-gcc-1.4.0/
+
+        The test executable for pts/radiance-1.0.0 could not be located. Looking for radiance in /var/lib/phoronix-test-suite/installed-tests/pts/radiance-1.0.0/
+
+        The test executable for pts/openssl-3.1.0 could not be located. Looking for openssl in /var/lib/phoronix-test-suite/installed-tests/pts/openssl-3.1.0/
+
+        The test executable for pts/ctx-clock-1.0.0 could not be located. Looking for ctx-clock in /var/lib/phoronix-test-suite/installed-tests/pts/ctx-clock-1.0.0/
+
+        The test executable for pts/povray-1.2.1 could not be located. Looking for povray in /var/lib/phoronix-test-suite/installed-tests/pts/povray-1.2.1/
+    Would you like to save these test results (Y/n): 
+    Recently Saved Test Results:
+       test   [4 days old]
+       asdf   [6 days old]
+

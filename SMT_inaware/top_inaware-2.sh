@@ -4,7 +4,7 @@ prob_vm=$1
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 
 io_benchmarks=("sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html")
-io_benchmarks+=("sudo fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1")
+io_benchmarks+=("sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k--ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1")
 cpu_benchmarks=("sudo sysbench --threads=16 --time=90 cpu run")
 cpu_benchmarks+=("./vsched_tests/matmul.out 16 90")
 
@@ -12,11 +12,11 @@ OUTPUT_FILE="./tests/top_inaware_2_cpu$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/top_inaware_2_io$(date +%m%d%H%M).txt"
 
 for i in {0..15};do
-    sudo virsh vcpupin $prob_vm $i $i
+    sudo virsh vcpupin $prob_vm $i $((i+4))
 done
 
 for i in {16..31};do
-    sudo virsh vcpupin $prob_vm $i $((i+64))
+    sudo virsh vcpupin $prob_vm $i $((i+68))
 done
 
 test_smt_pair() {

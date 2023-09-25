@@ -129,13 +129,13 @@ int main(int argc, char* argv[])
   for (i = 0; i < num_thrd; i++)
 	 pthread_join (thread[i], NULL);
  
-//  printf("\n\n");
-//  print_matrix(A);
-//  printf("\n\n\t       * \n");
-//  print_matrix(B);
-//  printf("\n\n\t       = \n");
-//  print_matrix(C);
-//  printf("\n\n");
+  printf("\n\n");
+  print_matrix(A);
+  printf("\n\n\t       * \n");
+  print_matrix(B);
+  printf("\n\n\t       = \n");
+  print_matrix(C);
+  printf("\n\n");
  
   free(thread);
   fclose(f);

@@ -17,7 +17,7 @@
 #include <fcntl.h>
 #include <string.h>
  
-#define SIZE 1000  // Size by SIZE matrices
+#define SIZE 3000  // Size by SIZE matrices
 #define ITER 16
 int num_thrd;   // number of threads
  
@@ -113,7 +113,7 @@ int main(int argc, char* argv[])
 
   for (i = 0; i < ITER; i++)
   {
-	usleep(2000000); //1 second
+	usleep(90000000); //1 second
 	if(argc==3) {
 	        total = 0;
         	for(j = 0; j < num_thrd; j++)
@@ -130,13 +130,6 @@ int main(int argc, char* argv[])
   for (i = 0; i < num_thrd; i++)
 	 pthread_join (thread[i], NULL);
  
-  printf("\n\n");
-  print_matrix(A);
-  printf("\n\n\t       * \n");
-  print_matrix(B);
-  printf("\n\n\t       = \n");
-  print_matrix(C);
-  printf("\n\n");
  
   free(thread);
   fclose(f);

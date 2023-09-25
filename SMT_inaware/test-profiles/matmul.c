@@ -17,7 +17,7 @@
 #include <fcntl.h>
 #include <string.h>
  
-#define SIZE 9000  // Size by SIZE matrices
+#define SIZE 1000  // Size by SIZE matrices
 #define ITER 16
 int num_thrd;   // number of threads
  
@@ -66,12 +66,13 @@ void* multiply(void* param)
      {  
         for (j = 0; j < SIZE; j++)
         {
-          C[i][j] = 0;
+	  C[i][j] = 0;
           for ( k = 0; k < SIZE; k++)
               C[i][j] += A[i][k]*B[k][j];
         }
 	myparam->counter++;
      }
+    printf("what");
   }
   printf("finished slice %d\n", s);
   return 0;

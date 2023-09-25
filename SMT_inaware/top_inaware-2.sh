@@ -24,6 +24,7 @@ test_smt_pair() {
     
     echo "running $cpu_bench naive" >> $OUTPUT_FILE &
     echo "running $io_bench naive" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
+    ssh ubuntu@$prob_vm "sudo killall php"
     
     ssh ubuntu@$prob_vm "sudo killall sysbench" 
     ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run" 
@@ -36,6 +37,7 @@ test_smt_pair() {
         sleep 5
     fi
     sleep 2
+    ssh ubuntu@$prob_vm "sudo killall php"
     echo "first second pass"
     echo "running $cpu_bench smart" >> $OUTPUT_FILE 
     echo "running $io_bench smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
@@ -44,6 +46,7 @@ test_smt_pair() {
     ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $io_bench" >> "$OUTPUT_FILE2"
     wait
     ssh ubuntu@$prob_vm "sudo killall nginx"
+    ssh ubuntu@$prob_vm "sudo killall php"
     
 }
 

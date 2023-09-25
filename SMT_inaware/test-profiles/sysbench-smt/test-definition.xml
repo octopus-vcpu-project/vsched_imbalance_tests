@@ -6,9 +6,9 @@
     <AppVersion>1.0.20</AppVersion>
     <Description>This is a benchmark of Sysbench with the built-in CPU and memory sub-tests. Sysbench is a scriptable multi-threaded benchmark tool based on LuaJIT.</Description>
     <ResultScale>Events Per Second</ResultScale>
-    <Executable>fio-run</Executable>
+    <Executable>sysbench</Executable>
     <Proportion>HIB</Proportion>
-    <TimesToRun>3</TimesToRun>
+    <TimesToRun>1</TimesToRun>
   </TestInformation>
   <TestProfile>
     <Version>1.1.0</Version>
@@ -23,20 +23,8 @@
     <Maintainer>Michael Larabel</Maintainer>
   </TestProfile>
   <TestSettings>
-    <Option>
-      <DisplayName>Test</DisplayName>
-      <Identifier>run-test</Identifier>
-      <ArgumentPostfix> run</ArgumentPostfix>
-      <Menu>
-        <Entry>
-          <Name>CPU</Name>
-          <Value>cpu</Value>
-        </Entry>
-        <Entry>
-          <Name>RAM / Memory</Name>
-          <Value>memory</Value>
-        </Entry>
-      </Menu>
-    </Option>
+    <Default>
+      <Arguments>--time=$((TIME_FOR_BENCHMARK)) --threads=$((THREADS_FOR_BENCHMARK) cpu run </Arguments>
+    </Default>
   </TestSettings>
 </PhoronixTestSuite>

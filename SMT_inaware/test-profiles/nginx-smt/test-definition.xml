@@ -8,7 +8,7 @@
     <ResultScale>Requests Per Second</ResultScale>
     <Executable>nginx</Executable>
     <Proportion>HIB</Proportion>
-    <TimesToRun>3</TimesToRun>
+    <TimesToRun>1</TimesToRun>
   </TestInformation>
   <TestProfile>
     <Version>3.0.0</Version>
@@ -25,7 +25,7 @@
   </TestProfile>
   <TestSettings>
     <Default>
-      <Arguments>-d 90s -c 80 </Arguments>
+      <Arguments>-d $((TIME_FOR_BENCHMARK))s -c 80 </Arguments>
       <PostArguments> https://127.0.0.1:8089/test.html</PostArguments>
     </Default>
   </TestSettings>

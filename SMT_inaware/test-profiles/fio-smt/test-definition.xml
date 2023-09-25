@@ -22,7 +22,11 @@
     <RequiresCoreVersionMin>6921</RequiresCoreVersionMin>
     <Maintainer>Michael Larabel</Maintainer>
   </TestProfile>
+
   <TestSettings>
+    <Default>
+      <Arguments>--runtime=$((TIME_FOR_BENCHMARK)) ----numjobs=$((THREADS_FOR_BENCHMARK))</Arguments>
+    </Default>
     <Option>
       <DisplayName>Type</DisplayName>
       <Identifier>type</Identifier>

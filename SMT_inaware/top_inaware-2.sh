@@ -45,6 +45,7 @@ test_smt_pair() {
     ssh ubuntu@$prob_vm "sudo taskset -c 0-15 phoronix-test-suite default-benchmark $cpu_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo taskset -c 16-31 phoronix-test-suite default-benchmark $io_bench" >> "$OUTPUT_FILE2"
     wait
+    ssh ubuntu@$prob_vm "sudo killall nginx"
 }
 
 for io_bench in "${io_benchmarks[@]}"; do

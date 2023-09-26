@@ -35,14 +35,23 @@ set_vcpu() {
         # Get the state of the specific VM
         vm_state=$(virsh domstate "$vm")
         
-        if [ "$vm_state" == "running" ]; then
+
+        if [[ "$vm_state" == "running" ]]; then
             echo "VM is now running."
-            break
-        else
+            ssh_output=$(ssh -o ConnectTimeout=10 ubuntu@$vm "exit" 2>&1)
+            ssh_status=$?
+        
+            if [ $ssh_status -eq 0 ]; then
+                echo "VM is accessible via SSH."
+                break
+            else
+                echo "VM is running but not accessible via SSH yet. SSH Output: $ssh_output. Retrying..."
+            fi
+                break
+            else
             echo "Waiting for VM to start..."
             sleep 3 
         fi
-        sleep 30
         done
     fi
 }
@@ -63,14 +72,23 @@ while [ "$#" -gt 0 ]; do
         # Get the state of the specific VM
         vm_state=$(virsh domstate "$vm")
         
+
         if [[ "$vm_state" == "running" ]]; then
             echo "VM is now running."
-            break
-        else
+            ssh_output=$(ssh -o ConnectTimeout=10 ubuntu@$vm "exit" 2>&1)
+            ssh_status=$?
+        
+            if [ $ssh_status -eq 0 ]; then
+                echo "VM is accessible via SSH."
+                break
+            else
+                echo "VM is running but not accessible via SSH yet. SSH Output: $ssh_output. Retrying..."
+            fi
+                break
+            else
             echo "Waiting for VM to start..."
             sleep 3 
         fi
-        sleep 30
         done
         
     else

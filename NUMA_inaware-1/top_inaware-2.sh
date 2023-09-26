@@ -38,13 +38,13 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_unpinned$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" > "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 sleep 3
 OUTPUT_FILE2="./tests/numa_pinned$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" > "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" >> "$OUTPUT_FILE2" 
 sleep 3
 toggle_topological_passthrough 1
 #passthrough
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" > "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 sleep 3
-ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" > "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" >> "$OUTPUT_FILE2" 

@@ -1,4 +1,4 @@
-prob_vm = $1
+prob_vm=$1
 comm_benchmark = "sysbench --threads=16 --time=100 cpu run"
 ../utility/cleanon_startup.sh prob_vm 32
 

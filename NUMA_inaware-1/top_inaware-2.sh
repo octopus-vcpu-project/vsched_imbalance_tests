@@ -48,3 +48,4 @@ toggle_topological_passthrough 1
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 sleep 3
 ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" >> "$OUTPUT_FILE2" 
+sudo git add .;sudo git commit -m 'new';sudo git push

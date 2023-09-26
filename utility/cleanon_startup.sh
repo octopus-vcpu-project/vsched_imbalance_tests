@@ -22,7 +22,7 @@ set_vcpu() {
                 sleep 3 
             fi
             done
-
+            
         fi
 
         # Set the vCPU count
@@ -42,7 +42,7 @@ set_vcpu() {
             echo "Waiting for VM to start..."
             sleep 3 
         fi
-        sleep 10
+        sleep 20
         done
     fi
 }
@@ -70,7 +70,7 @@ while [ "$#" -gt 0 ]; do
             echo "Waiting for VM to start..."
             sleep 3 
         fi
-        sleep 10
+        sleep 20
         done
         
     else

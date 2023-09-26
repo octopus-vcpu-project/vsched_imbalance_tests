@@ -1,6 +1,8 @@
 prob_vm=$1
 comm_benchmark="fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=30 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
+naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
+smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='2' cores='16' threads='1'/></cpu>"
 
 
 toggle_topological_passthrough(){

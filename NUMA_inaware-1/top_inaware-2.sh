@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark = "sysbench --threads=16 --time=100 cpu run"
+comm_benchmark="fio --filename=/test --size=1GB --ioengine=libaio --iodepth=256 --runtime=30 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 
 

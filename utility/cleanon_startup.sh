@@ -47,7 +47,7 @@ set_vcpu() {
             else
                 echo "VM is running but not accessible via SSH yet. SSH Output: $ssh_output. Retrying..."
             fi
-                break
+                
             else
             echo "Waiting for VM to start..."
             sleep 3 
@@ -84,7 +84,7 @@ while [ "$#" -gt 0 ]; do
             else
                 echo "VM is running but not accessible via SSH yet. SSH Output: $ssh_output. Retrying..."
             fi
-                break
+                
             else
             echo "Waiting for VM to start..."
             sleep 3 

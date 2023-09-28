@@ -43,18 +43,19 @@ toggle_topological_passthrough(){
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 toggle_topological_passthrough 0
 #blind
-OUTPUT_FILE="./tests/numa_unpinned$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall nginx"
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
 sleep 5
-OUTPUT_FILE2="./tests/numa_pinned$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE2" 
+
+ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 toggle_topological_passthrough 1
 #passthrough
+OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall nginx"
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
 sleep 5
-ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 sudo git add .;sudo git commit -m 'new';sudo git push

@@ -32,6 +32,9 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
+    ssh ubuntu@$prob_vm "sudo killall nginx"
+    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+    sleep 5
 }
 
 
@@ -43,6 +46,9 @@ toggle_topological_passthrough 0
 OUTPUT_FILE="./tests/numa_unpinned$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 sleep 3
+ssh ubuntu@$prob_vm "sudo killall nginx"
+ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 0-16 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+sleep 5
 OUTPUT_FILE2="./tests/numa_pinned$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" >> "$OUTPUT_FILE2" 
 sleep 3
@@ -50,5 +56,8 @@ toggle_topological_passthrough 1
 #passthrough
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 sleep 3
+ssh ubuntu@$prob_vm "sudo killall nginx"
+ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 0-16 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+sleep 5
 ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" >> "$OUTPUT_FILE2" 
 sudo git add .;sudo git commit -m 'new';sudo git push

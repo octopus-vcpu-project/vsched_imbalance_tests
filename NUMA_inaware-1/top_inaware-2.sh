@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 200 -t 16 https://127.0.0.1:8089/test.html"
+comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 200 -t 15 https://127.0.0.1:8089/test.html"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
@@ -45,17 +45,14 @@ toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_unpinned$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-sleep 3
 ssh ubuntu@$prob_vm "sudo killall nginx"
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 0-16 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
 sleep 5
 OUTPUT_FILE2="./tests/numa_pinned$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo taskset -c 0-16 $comm_benchmark" >> "$OUTPUT_FILE2" 
-sleep 3
 toggle_topological_passthrough 1
 #passthrough
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-sleep 3
 ssh ubuntu@$prob_vm "sudo killall nginx"
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 0-16 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
 sleep 5

@@ -39,14 +39,14 @@ toggle_topological_passthrough(){
 
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-toggle_topological_passthrough 0
+toggle_topological_passthrough 1
 #blind
 OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 
 
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
-toggle_topological_passthrough 1
+toggle_topological_passthrough 0
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 

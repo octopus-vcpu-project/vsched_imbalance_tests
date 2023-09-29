@@ -44,16 +44,16 @@ toggle_topological_passthrough(){
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 toggle_topological_passthrough 0
 #blind
-OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
-OUTPUT_FILE2="./tests/numa_blind_topo$(date +%m%d%H%M).txt"
-OUTPUT_FILE3="./tests/numa_smart_topo$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
+
 
 
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 #for i in {0..20};do
 #    sleep 0.5
 #    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
@@ -73,7 +73,7 @@ OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 #for i in {0..20};do
 #    sleep 0.5
 #    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"

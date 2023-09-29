@@ -50,7 +50,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
+ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench"
 echo "test finished"
@@ -64,7 +64,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
+ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 

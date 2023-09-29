@@ -43,13 +43,16 @@ toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-
+echo "test finished"
 
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
+echo "test finished"
+
 toggle_topological_passthrough 1
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
+echo "test finished"
 
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 sudo git add .;sudo git commit -m 'new';sudo git push

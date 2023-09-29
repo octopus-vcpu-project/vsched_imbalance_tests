@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo  /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"
+comm_benchmark="sudo  /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p streamcluster -n 8 -i simsmall"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"

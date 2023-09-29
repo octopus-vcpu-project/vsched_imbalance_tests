@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="hackbench -s 2000 -g 4 -f 1 -l 7200000 -T 8" 
+comm_benchmark="hackbench -s 2000 -g 4 -f 1 -l 9000000 -T 8" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
@@ -43,13 +43,22 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./tests/numa_blind_topo$(date +%m%d%H%M).txt"
+OUTPUT_FILE3="./tests/numa_smart_topo$(date +%m%d%H%M).txt"
 
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+
+#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
+
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
+for i in {0..20};do
+    sleep 0.5
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE2"
+    sleep 0.5
+done
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench"
@@ -58,12 +67,17 @@ sleep 3
 toggle_topological_passthrough 1
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
+for i in {0..20};do
+    sleep 0.5
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
+    sleep 0.5
+done
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 

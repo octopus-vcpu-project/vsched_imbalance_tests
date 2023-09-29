@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo  /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p dedup -t 8 -i native"
+comm_benchmark="sudo  /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
@@ -39,14 +39,14 @@ toggle_topological_passthrough(){
 
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-toggle_topological_passthrough 1
+toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 
 
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
-toggle_topological_passthrough 0
+toggle_topological_passthrough 1
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 

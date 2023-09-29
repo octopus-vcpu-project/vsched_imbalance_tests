@@ -32,8 +32,7 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
-    ssh user@hostname "mysql -u root -p -e \"CREATE DATABASE sysbench; CREATE USER 'sysbench'@'localhost' IDENTIFIED BY 'password'; GRANT ALL PRIVILEGES ON sysbench.* TO 'sysbench'@'localhost'; FLUSH PRIVILEGES;\""
-    sleep 5
+       sleep 5
 }
 
 

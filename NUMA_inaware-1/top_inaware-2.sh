@@ -43,12 +43,12 @@ toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
 
-ssh ubuntu@$prob_vm "sudo bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo /usr/local/bin/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace" 
 
 echo "test finished"
-ssh ubuntu@$prob_vm "sudo bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo /usr/local/bin/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace" 
 echo "test finished"
@@ -56,12 +56,12 @@ echo "test finished"
 toggle_topological_passthrough 1
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo /usr/local/bin/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace" 
 echo "test finished"
-ssh ubuntu@$prob_vm "sudo bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo /usr/local/bin/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace" 

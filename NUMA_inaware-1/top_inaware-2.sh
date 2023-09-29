@@ -54,7 +54,7 @@ ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench"
 echo "test finished"
-
+sleep 3
 toggle_topological_passthrough 1
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
@@ -67,5 +67,5 @@ ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:nat
 ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
-
+sleep 3
 sudo git add .;sudo git commit -m 'new';sudo git push

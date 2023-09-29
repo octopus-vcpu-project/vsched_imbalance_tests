@@ -51,11 +51,11 @@ OUTPUT_FILE3="./tests/numa_smart_topo$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-for i in {0..20};do
-    sleep 0.5
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE2"
-    sleep 0.5
-done
+#for i in {0..20};do
+#    sleep 0.5
+#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
+#    sleep 0.5
+#done
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
@@ -70,11 +70,11 @@ OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-for i in {0..20};do
-    sleep 0.5
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
-    sleep 0.5
-done
+#for i in {0..20};do
+#    sleep 0.5
+#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
+#    sleep 0.5
+#done
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &

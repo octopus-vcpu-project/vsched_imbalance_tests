@@ -69,7 +69,6 @@ echo "test finished"
 sleep 3
 toggle_topological_passthrough 1
 #passthrough
-OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &

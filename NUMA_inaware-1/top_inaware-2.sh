@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 200 -t 4 https://127.0.0.1:8089/test.html"
+comm_benchmark="sudo  /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p dedup -n 5 -i native"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
@@ -32,8 +32,7 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
-    ssh ubuntu@$prob_vm "sudo killall nginx"
-    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+    ssh user@hostname "mysql -u root -p -e \"CREATE DATABASE sysbench; CREATE USER 'sysbench'@'localhost' IDENTIFIED BY 'password'; GRANT ALL PRIVILEGES ON sysbench.* TO 'sysbench'@'localhost'; FLUSH PRIVILEGES;\""
     sleep 5
 }
 
@@ -45,17 +44,13 @@ toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_blind$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo killall nginx"
-ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-sleep 5
+
 
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 toggle_topological_passthrough 1
 #passthrough
 OUTPUT_FILE="./tests/numa_smart$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo killall nginx"
-ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-sleep 5
+
 ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
 sudo git add .;sudo git commit -m 'new';sudo git push

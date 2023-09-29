@@ -1,0 +1,45 @@
+Running in threaded mode with 4 groups using 2 file descriptors each (== 8 tasks)
+Each sender will pass 9000000 messages of 2000 bytes
+Attaching 1 probe...
+Time: 42.768
+
+
+@[27]: 58
+@[8]: 62
+@[5]: 66
+@[28]: 102
+@[6]: 117
+@[16]: 127
+@[9]: 133
+@[4]: 139
+@[21]: 143
+@[30]: 165
+@[15]: 184
+@[24]: 200
+@[1]: 217
+@[18]: 220
+@[20]: 243
+@[7]: 265
+@[17]: 270
+@[26]: 326
+@[13]: 732
+@[23]: 790
+@[29]: 922
+@[10]: 927
+@[19]: 942
+@[2]: 1078
+@[0]: 1114
+@[25]: 1130
+@[22]: 1875
+@[3]: 2105
+@[31]: 5723
+@[14]: 5983
+@[11]: 8349
+@[12]: 59055
+Running in threaded mode with 4 groups using 2 file descriptors each (== 8 tasks)
+Each sender will pass 9000000 messages of 2000 bytes
+Attaching 1 probe...
+Time: 27.881
+Running in threaded mode with 4 groups using 2 file descriptors each (== 8 tasks)
+Each sender will pass 9000000 messages of 2000 bytes
+Time: 47.467

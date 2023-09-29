@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo  /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"
+comm_benchmark="hackbench -s 2000 -g 4 -f 1 -l 7200000 -T 8" 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
@@ -32,7 +32,7 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
-       sleep 5
+       
 }
 
 

@@ -41,12 +41,12 @@ run_numa_test(){
     is_nginx=$2
     trace_bpf=$3
     toggle_topological_passthrough 0
-    if [ $is_nginx != 0]; then
+    if [ $is_nginx != 0 ]; then
         ssh ubuntu@$prob_vm "sudo killall nginx"
         ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi
-    if [ $trace_bpf != 0]; then
+    if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
         perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 5 >> "$OUTPUT_FILE" &
     fi
@@ -55,12 +55,12 @@ run_numa_test(){
     ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall perf"
     sleep 4
     toggle_topological_passthrough 1
-    if [ $is_nginx != 0]; then
+    if [ $is_nginx != 0 ]; then
         ssh ubuntu@$prob_vm "sudo killall nginx"
         ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi
-    if [ $trace_bpf != 0]; then
+    if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
         perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 5 >> "$OUTPUT_FILE" &
     fi

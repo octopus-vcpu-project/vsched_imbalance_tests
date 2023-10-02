@@ -1,0 +1,10 @@
+Attaching 1 probe...
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   137.60ms  336.12ms   2.00s    91.45%
+    Req/Sec   323.97    148.68     0.87k    71.17%
+  127641 requests in 41.04s, 14.06GB read
+  Socket errors: connect 0, read 0, write 0, timeout 584
+Requests/sec:   3110.36
+Transfer/sec:    350.95MB

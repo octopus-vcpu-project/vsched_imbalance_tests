@@ -1,0 +1,15 @@
+# started on Mon Oct  2 17:00:11 2023
+
+
+ Performance counter stats for 'CPU(s) 0-15,20-35':
+
+        49,658,039      cache-references                                                      
+         3,943,785      cache-misses                     #    7.942 % of all cache refs       
+     2,430,510,456      cycles                                                                
+     2,001,375,087      instructions                     #    0.82  insn per cycle            
+       402,939,776      branches                                                              
+                61      faults                                                                
+                32      migrations                                                            
+
+      10.008381763 seconds time elapsed
+

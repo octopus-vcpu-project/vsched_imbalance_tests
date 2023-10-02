@@ -37,7 +37,7 @@ toggle_topological_passthrough(){
 OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
 OUTPUT_FILE3="./tests/perf3$(date +%m%d%H%M).txt"
-OUTPUT_FILE4="./tests/perf3$(date +%m%d%H%M).txt"
+OUTPUT_FILE4="./tests/perf4$(date +%m%d%H%M).txt"
 run_numa_test(){
     comm_bench=$1
     is_nginx=$2

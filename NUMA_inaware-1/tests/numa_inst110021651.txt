@@ -1,0 +1,58 @@
+# started on Mon Oct  2 16:53:15 2023
+
+
+ Performance counter stats for 'CPU(s) 0-15,20-35':
+
+        58,575,681      cache-references                                                      
+         4,455,973      cache-misses                     #    7.607 % of all cache refs       
+     2,799,879,597      cycles                                                                
+     1,970,087,301      instructions                     #    0.70  insn per cycle            
+       401,573,118      branches                                                              
+               132      faults                                                                
+                32      migrations                                                            
+
+      10.007963056 seconds time elapsed
+
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.71ms  119.68ms   1.19s    96.48%
+    Req/Sec   321.99     91.53   767.00     78.37%
+  137183 requests in 41.04s, 15.12GB read
+  Socket errors: connect 0, read 0, write 0, timeout 759
+Requests/sec:   3342.86
+Transfer/sec:    377.17MB
+
+
+@[21]: 1339
+@[18]: 1364
+@[27]: 1407
+@[25]: 1443
+@[31]: 1457
+@[10]: 1517
+@[17]: 1525
+@[26]: 1529
+@[14]: 1540
+@[16]: 1549
+@[30]: 1555
+@[19]: 1589
+@[20]: 1626
+@[29]: 1626
+@[3]: 1632
+@[4]: 1658
+@[12]: 1684
+@[23]: 1698
+@[8]: 1699
+@[11]: 1706
+@[28]: 1748
+@[5]: 1752
+@[13]: 1753
+@[24]: 1775
+@[1]: 1806
+@[7]: 1901
+@[0]: 1930
+@[15]: 1935
+@[22]: 1976
+@[9]: 2067
+@[2]: 2152
+@[6]: 2575

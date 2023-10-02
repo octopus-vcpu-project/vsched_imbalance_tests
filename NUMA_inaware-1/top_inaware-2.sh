@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo /home/ubuntu/Workloads/parsec-benchmark/bin/parsecmgmt -a run -p dedup -n 32 -i native" 
+comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 3m -c 200 -t 16 https://127.0.0.1:8089/test.html" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"

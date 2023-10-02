@@ -40,7 +40,7 @@ toggle_topological_passthrough 0
 
 
 
-for i in {0..40};do 
+for i in {0..80};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
@@ -50,7 +50,7 @@ done
 toggle_topological_passthrough 1
 
 OUTPUT_FILE="./tests/top_plc_smart$(date +%m%d%H%M).txt"
-for i in {0..40};do 
+for i in {0..80};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"

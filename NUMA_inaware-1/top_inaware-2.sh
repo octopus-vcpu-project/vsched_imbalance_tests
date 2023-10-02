@@ -1,6 +1,5 @@
 prob_vm=$1
 comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 
-cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
@@ -33,56 +32,48 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
-    ssh ubuntu@$prob_vm "sudo killall nginx"
-    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-    sleep 5
+    
+}
+OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
+run_numa_test(){
+    comm_bench=$1
+    is_nginx=$2
+    trace_bpf=$3
+    toggle_topological_passthrough 0
+    if [ $is_nginx != 0]; then
+        ssh ubuntu@$prob_vm "sudo killall nginx"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+        sleep 5
+    done
+    if [ $trace_bpf != 0]; then
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+        perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 5 >> "$OUTPUT_FILE" &
+    done
+    ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 
+    ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall perf"
+    sleep 4
+    toggle_topological_passthrough 1
+    if [ $is_nginx != 0]; then
+        ssh ubuntu@$prob_vm "sudo killall nginx"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+        sleep 5
+    done
+    if [ $trace_bpf != 0]; then
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
+        perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 5 >> "$OUTPUT_FILE" &
+    done
+    ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 
+    ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall perf"
+    sleep 4
 }
 
 
-
-
-ssh ubuntu@$prob_vm "sudo killall sysbench" 
-toggle_topological_passthrough 0
-#blind
-OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
-OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
+run_numa_test "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 1 0
+run_numa_test "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 1 1
 
 
 
-#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
-
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
-#for i in {0..20};do
-#    sleep 0.5
-#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
-#    sleep 0.5
-#done
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
-echo "test finished"
-#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench"
-echo "test finished"
-sleep 3
-toggle_topological_passthrough 1
-#passthrough
-#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
-#for i in {0..20};do
-#    sleep 0.5
-#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
-#    sleep 0.5
-#done
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
-echo "test finished"
-#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
-sleep 3
 sudo git add .;sudo git commit -m 'new';sudo git push

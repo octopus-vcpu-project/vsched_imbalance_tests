@@ -48,7 +48,7 @@ run_numa_test(){
     fi
     if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-        sudo perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 30 & >> $OUTPUT_FILE 
+        sudo perf stat -B -C 0-15,20-35 -o "$OUTPUT_FILE"  -e  cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
     fi
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 
@@ -63,7 +63,7 @@ run_numa_test(){
     fi
     if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-        sudo perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 30 & >> $OUTPUT_FILE 
+        sudo perf stat -B -C 0-15,20-35 -o "$OUTPUT_FILE"  -e  cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
     fi
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 
@@ -72,7 +72,7 @@ run_numa_test(){
 }
 
 
-run_numa_test "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 1 0
+run_numa_test "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 1 1
 
 
 

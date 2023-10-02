@@ -72,7 +72,7 @@ run_numa_test(){
 }
 
 
-run_numa_test "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 1 1
+run_numa_test "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 16 https://127.0.0.1:8089/test.html" 0 0
 
 
 

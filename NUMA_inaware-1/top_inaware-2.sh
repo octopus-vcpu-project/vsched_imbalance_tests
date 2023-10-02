@@ -48,7 +48,8 @@ run_numa_test(){
     fi
     if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-        s
+        sudo perf stat -B -C 0-15,20-35 -e cache-references,cache-misses,cycles,instructions,branches,faults,migrations & >> $OUTPUT_FILE 
+
     fi
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 

@@ -1,0 +1,106 @@
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   121.48ms  251.97ms   1.73s    90.66%
+    Req/Sec   292.95    122.30     0.92k    73.19%
+  143253 requests in 40.44s, 15.78GB read
+  Socket errors: connect 0, read 0, write 0, timeout 242
+Requests/sec:   3542.54
+Transfer/sec:    399.66MB
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    69.32ms  179.61ms   1.81s    95.93%
+    Req/Sec   330.13     98.95   838.00     74.68%
+  159402 requests in 40.09s, 17.56GB read
+  Socket errors: connect 0, read 0, write 0, timeout 517
+Requests/sec:   3975.61
+Transfer/sec:    448.56MB
+Attaching 1 probe...
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.83ms   56.05ms   1.19s    95.32%
+    Req/Sec   300.04    111.35   780.00     71.91%
+  131097 requests in 40.84s, 14.44GB read
+  Socket errors: connect 0, read 0, write 0, timeout 192
+Requests/sec:   3210.15
+Transfer/sec:    362.20MB
+
+
+@[31]: 3507
+@[9]: 4045
+@[4]: 5111
+@[17]: 5410
+@[6]: 5524
+@[2]: 6019
+@[22]: 6284
+@[14]: 6827
+@[10]: 7040
+@[19]: 8313
+@[24]: 10469
+@[8]: 10474
+@[27]: 10507
+@[15]: 10914
+@[1]: 11089
+@[18]: 11599
+@[0]: 13117
+@[29]: 15150
+@[21]: 15227
+@[16]: 15813
+@[5]: 16636
+@[20]: 16997
+@[26]: 17395
+@[30]: 17501
+@[7]: 17615
+@[23]: 17724
+@[28]: 18095
+@[11]: 19786
+@[13]: 20688
+@[3]: 22199
+@[12]: 24746
+@[25]: 27388
+Attaching 1 probe...
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.44ms   37.28ms 567.11ms   95.33%
+    Req/Sec   345.25     95.29   810.00     72.39%
+  151509 requests in 40.10s, 16.69GB read
+  Socket errors: connect 0, read 0, write 0, timeout 192
+Requests/sec:   3778.66
+Transfer/sec:    426.35MB
+
+
+@[9]: 1281
+@[10]: 1387
+@[15]: 1396
+@[1]: 1401
+@[22]: 1402
+@[0]: 1406
+@[6]: 1455
+@[26]: 1466
+@[16]: 1504
+@[30]: 1516
+@[27]: 1519
+@[24]: 1525
+@[19]: 1526
+@[14]: 1540
+@[21]: 1542
+@[18]: 1543
+@[3]: 1543
+@[31]: 1581
+@[7]: 1586
+@[8]: 1627
+@[20]: 1672
+@[2]: 1717
+@[12]: 1733
+@[17]: 1742
+@[28]: 1749
+@[11]: 1771
+@[25]: 1808
+@[13]: 1887
+@[29]: 1955
+@[23]: 1955
+@[5]: 2117
+@[4]: 2287

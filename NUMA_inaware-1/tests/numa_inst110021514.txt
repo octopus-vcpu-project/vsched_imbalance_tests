@@ -1,0 +1,97 @@
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   105.88ms  223.22ms   1.96s    91.72%
+    Req/Sec   286.03    117.05   848.00     70.37%
+  136020 requests in 40.10s, 14.99GB read
+  Socket errors: connect 0, read 0, write 0, timeout 548
+Requests/sec:   3392.04
+Transfer/sec:    382.67MB
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    97.91ms  234.46ms   1.55s    92.94%
+    Req/Sec   330.47    106.39   810.00     75.01%
+  152318 requests in 40.10s, 16.79GB read
+  Socket errors: connect 0, read 0, write 0, timeout 565
+Requests/sec:   3798.05
+Transfer/sec:    428.58MB
+Attaching 1 probe...
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   103.96ms  265.44ms   2.00s    94.14%
+    Req/Sec   291.11    138.14   848.00     68.59%
+  123905 requests in 41.14s, 13.65GB read
+  Socket errors: connect 0, read 0, write 0, timeout 550
+Requests/sec:   3011.69
+Transfer/sec:    339.77MB
+
+
+@[5]: 3917
+@[1]: 4413
+@[6]: 4979
+@[20]: 7564
+@[0]: 7867
+@[30]: 7989
+@[3]: 8682
+@[11]: 9320
+@[4]: 9421
+@[9]: 9982
+@[18]: 11058
+@[14]: 11187
+@[16]: 11899
+@[19]: 12593
+@[21]: 12627
+@[22]: 13363
+@[27]: 13391
+@[7]: 14001
+@[10]: 14397
+@[8]: 15009
+@[31]: 15076
+@[15]: 16634
+@[29]: 16823
+@[28]: 16942
+@[25]: 17237
+@[17]: 17610
+@[12]: 17709
+@[24]: 18288
+@[26]: 20167
+@[23]: 20360
+@[13]: 22602
+@[2]: 22627
+Attaching 1 probe...
+
+
+@[12]: 531
+@[9]: 555
+@[23]: 716
+@[31]: 738
+@[20]: 739
+@[28]: 745
+@[24]: 760
+@[16]: 763
+@[18]: 767
+@[3]: 773
+@[1]: 810
+@[29]: 811
+@[19]: 812
+@[7]: 813
+@[15]: 836
+@[21]: 843
+@[14]: 879
+@[30]: 880
+@[10]: 904
+@[0]: 927
+@[6]: 937
+@[27]: 950
+@[25]: 956
+@[26]: 984
+@[11]: 1016
+@[2]: 1046
+@[13]: 1088
+@[17]: 1097
+@[8]: 1115
+@[4]: 1123
+@[22]: 1200
+@[5]: 1234

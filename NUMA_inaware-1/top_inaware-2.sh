@@ -36,6 +36,8 @@ toggle_topological_passthrough(){
 }
 OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
+OUTPUT_FILE3="./tests/perf3$(date +%m%d%H%M).txt"
+OUTPUT_FILE4="./tests/perf3$(date +%m%d%H%M).txt"
 run_numa_test(){
     comm_bench=$1
     is_nginx=$2
@@ -48,7 +50,7 @@ run_numa_test(){
     fi
     if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-        sudo perf stat -B -C 0-15,20-35 -o "$OUTPUT_FILE"  -e  cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
+        sudo perf stat -B -C 0-15,20-35 -o "$OUTPUT_FILE3"  -e  cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
     fi
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 
@@ -63,7 +65,7 @@ run_numa_test(){
     fi
     if [ $trace_bpf != 0 ]; then
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-        sudo perf stat -B -C 0-15,20-35 -o "$OUTPUT_FILE"  -e  cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
+        sudo perf stat -B -C 0-15,20-35 -o "$OUTPUT_FILE4"  -e  cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
     fi
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo $comm_bench" >> "$OUTPUT_FILE2" 

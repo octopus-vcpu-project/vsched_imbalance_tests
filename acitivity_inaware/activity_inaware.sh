@@ -3,7 +3,7 @@ prob_vm=$1
 compete_vm1=$2
 compete_vm2=$3
 compete_vm3=$4
-wake_and_pin_vm $prob_vm
+
 main_command="sysbench --threads=32 --time=30000 cpu run"
 
 OUTPUT_FILE="./tests/acitivity_inaware-1$(date +%m%d%H%M).txt"
@@ -16,6 +16,7 @@ wake_and_pin_vm(){
     done
     sleep 2
 }
+wake_and_pin_vm $prob_vm
 
 ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bpftrace/bcc/tools/runqlat.py ">> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $main_command" &
@@ -43,5 +44,6 @@ sleep 3
 
 
 
+sudo git add .;sudo git commit -m 'new';sudo git push
 
 

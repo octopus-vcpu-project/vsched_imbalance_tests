@@ -1,10 +1,10 @@
 prob_vm=$1
-comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 100 -t 1 https://127.0.0.1:8089/test.html" 
+comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 300 -t 1 https://127.0.0.1:8089/test.html" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
-comm_benchmark_threaded="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 16 https://127.0.0.1:8089/test.html" 
+comm_benchmark_1="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 300 -t 16 https://127.0.0.1:4054/test.html" 
 
 
 toggle_topological_passthrough(){
@@ -36,6 +36,7 @@ toggle_topological_passthrough(){
     done
     ssh ubuntu@$prob_vm "sudo killall nginx"
     ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 14;'"
+    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx -g 'worker_processes 14;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
     sleep 5
 }
 
@@ -54,7 +55,7 @@ PERF_OUTPUT="./tests/perf_out$(date +%m%d%H%M).txt"
 PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 
@@ -64,12 +65,12 @@ sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.ref
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
@@ -77,7 +78,7 @@ done
 
 toggle_topological_passthrough 1
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 
@@ -87,12 +88,12 @@ sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e l2_rqsts.miss,l2_rqsts.re
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"

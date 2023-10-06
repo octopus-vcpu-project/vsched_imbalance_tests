@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="hackbench -s 2000 -g 4 -f 2 -l 3000000 -T 8" 
+comm_benchmark="hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"

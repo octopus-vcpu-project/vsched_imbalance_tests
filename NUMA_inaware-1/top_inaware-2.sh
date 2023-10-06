@@ -46,43 +46,58 @@ toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
-
-
+BPF_OUTPUT="./tests/bpf_out$(date +%m%d%H%M).txt"
+PERF_OUTPUT="./tests/perf_out$(date +%m%d%H%M).txt"
 
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 #ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
-
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
-#for i in {0..20};do
-#    sleep 0.5
-#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
-#    sleep 0.5
-#done
+
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
+
 echo "test finished"
-#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench"
-echo "test finished"
-sleep 3
+sleep 8
+
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
+sleep 8
+
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
+sleep 8
+sudo perf stat -B -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_bench & sudo $comm_bench"
+
 toggle_topological_passthrough 1
-#passthrough
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo $cpu_benchmark &" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
-#for i in {0..20};do
-#    sleep 0.5
-#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE3"
-#    sleep 0.5
-#done
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "test finished"
-#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 0-15 $cpu_benchmark &" &
-#ssh ubuntu@$prob_vm "sudo taskset -c 16-31 $comm_benchmark" >> "$OUTPUT_FILE" 
+sleep 8
+
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
+sleep 8
+
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
+sleep 8
+sudo perf stat -B -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_bench & sudo $comm_bench"
+
+#ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 sleep 3
+
+
+
+
+
 sudo git add .;sudo git commit -m 'new';sudo git push

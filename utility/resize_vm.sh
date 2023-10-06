@@ -24,7 +24,7 @@ sudo qemu-img create -f qcow2 outdisk $new_size
 sudo virt-resize --expand $partition /var/lib/libvirt/images/$vm_name.qcow2 outdisk
 mv /var/lib/libvirt/images/$vm_name.qcow2 /var/lib/libvirt/images/backup$vm_name.qcow2
 mv outdisk /var/lib/libvirt/images/$vm_name.qcow2
-if [ $backup -eq "n"]; then
+if [ $backup -eq "n" ]; then
     rm -rf  /var/lib/libvirt/images/backup$vm_name.qcow2
 fi
 

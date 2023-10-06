@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 # Find all files that match the 'sym-plc*' pattern
-files = glob.glob("../SMT_inaware/tests/numa_inst110061719.txt")
+files = glob.glob("../NUMA_inaware-1/tests/numa_inst210061729.txt")
 
 # Sort the files to get the latest one
 files.sort(reverse=True)
@@ -40,21 +40,15 @@ if files:
                         used_phys_cpus = []
                         incorrect=0
             # Count 'sysbench' occurrences for the current CPU
-            elif "sysbench" in line:
+            elif "nginx" in line or "wrk" in line:
                 if current_cpu != -1:
                     if(not (current_cpu//2) in used_phys_cpus):
                         incorrect += 1
                         used_phys_cpus.append(current_cpu//2)
                     cpu_sysbench_counts[current_cpu] += 1
     print("Physical cores used", incorrect_list)
-    counter = Counter(cpu_sysbench_counts)
-    values = list(counter.keys())
-    counts = list(counter.values())
-    sorted_indices = sorted(range(len(values)), key=lambda k: values[k])
-    values = [values[i] for i in sorted_indices]
-    counts = [counts[i] for i in sorted_indices]
     # Plot
-    plt.bar(values, counts)
+    plt.bar(range(len(cpu_sysbench_counts)), cpu_sysbench_counts)
     plt.xlabel('Value')
     plt.ylabel('Number of Occurrences')
     plt.title('Value vs. Number of Occurrences')

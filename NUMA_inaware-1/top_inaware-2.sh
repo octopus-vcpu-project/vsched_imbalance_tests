@@ -73,7 +73,7 @@ PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo killall sysbench"
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
@@ -82,7 +82,7 @@ done
 toggle_topological_passthrough 1
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE2"

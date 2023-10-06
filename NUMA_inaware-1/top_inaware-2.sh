@@ -1,5 +1,5 @@
 prob_vm=$1
-comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 100 -t 3 https://127.0.0.1:8089/test.html" 
+comm_benchmark="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 100 -t 5 https://127.0.0.1:8089/test.html" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
@@ -35,8 +35,8 @@ toggle_topological_passthrough(){
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
     ssh ubuntu@$prob_vm "sudo killall nginx"
-    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 14;'"
-    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 14;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 11;'"
+    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 11;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
     sleep 5
 }
 

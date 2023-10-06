@@ -1,0 +1,32 @@
+# started on Fri Oct  6 13:00:29 2023
+
+
+ Performance counter stats for 'ssh ubuntu@e-vm1 sudo  & sudo ':
+
+           484,201      l2_rqsts.miss                                                           (7.48%)
+         1,679,664      l2_rqsts.references                                                     (27.23%)
+           602,907      L1-dcache-load-misses            #    3.03% of all L1-dcache accesses   (35.68%)
+        19,910,426      L1-dcache-loads                                                         (42.93%)
+        10,340,472      L1-dcache-stores                                                        (54.71%)
+           404,144      L1-icache-load-misses                                                   (72.77%)
+            45,873      LLC-loads                                                               (64.32%)
+             6,590      LLC-load-misses                  #   14.37% of all LL-cache accesses    (57.07%)
+     <not counted>      LLC-stores                                                              (0.00%)
+     <not counted>      cache-references                                                        (0.00%)
+     <not counted>      cache-misses                                                            (0.00%)
+     <not counted>      cycles                                                                  (0.00%)
+     <not counted>      instructions                                                            (0.00%)
+     <not counted>      branches                                                                (0.00%)
+               578      faults                                                                
+                 0      migrations                                                            
+
+       0.214575981 seconds time elapsed
+
+       0.013229000 seconds user
+       0.008819000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

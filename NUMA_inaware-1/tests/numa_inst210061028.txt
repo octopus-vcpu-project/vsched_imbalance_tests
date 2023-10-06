@@ -1,0 +1,18 @@
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.73ms   76.41ms 708.89ms   95.55%
+    Req/Sec   286.33     94.13   626.00     70.76%
+  159125 requests in 40.10s, 17.53GB read
+  Socket errors: connect 0, read 0, write 0, timeout 48
+Requests/sec:   3968.54
+Transfer/sec:    447.74MB
+Running 40s test @ https://127.0.0.1:8089/test.html
+  16 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    44.13ms  162.91ms   1.39s    95.07%
+    Req/Sec   313.41     91.47   707.00     78.69%
+  148219 requests in 40.53s, 16.33GB read
+  Socket errors: connect 0, read 0, write 0, timeout 144
+Requests/sec:   3656.57
+Transfer/sec:    412.53MB

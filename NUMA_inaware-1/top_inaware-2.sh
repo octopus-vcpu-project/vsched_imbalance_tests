@@ -70,7 +70,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
 done
 
 toggle_topological_passthrough 1
@@ -93,7 +93,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
+    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"
 done
 sleep 3
 

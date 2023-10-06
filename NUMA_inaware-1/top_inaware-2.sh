@@ -4,6 +4,7 @@ cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
+comm_benchmark_threaded="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 16 https://127.0.0.1:8089/test.html" 
 
 
 toggle_topological_passthrough(){
@@ -65,13 +66,13 @@ PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
 #ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 #sleep 8
 ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bpftrace/bcc/tools/runqlen.py ">> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_threaded" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_threaded"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof python)"
 sleep 3
 ssh ubuntu@$prob_vm "sudo killall sysbench"
 
-sudo perf stat -B -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_bench &; sudo $comm_bench"
+sudo perf stat -C 0-15,20-35 -B -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_bench &; sudo $comm_bench"
 
 toggle_topological_passthrough 1
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
@@ -88,14 +89,14 @@ toggle_topological_passthrough 1
 
 #sleep 8
 ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bpftrace/bcc/tools/runqlen.py ">> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_threaded" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_threaded"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof python)"
 sleep 3
 ssh ubuntu@$prob_vm "sudo killall sysbench"
 
 
-sudo perf stat -B -o "$PERF_OUTPUT2"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_bench &; sudo $comm_bench"
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_bench &; sudo $comm_bench"
 
 #ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$OUTPUT_FILE" &
 sleep 3

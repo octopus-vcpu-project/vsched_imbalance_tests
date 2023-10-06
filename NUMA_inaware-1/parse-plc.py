@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 # Find all files that match the 'sym-plc*' pattern
-files = glob.glob("../NUMA_inaware-1/tests/numa_inst210061729.txt")
+files = glob.glob("../NUMA_inaware-1/tests/plc_out10061756.txt")
 
 # Sort the files to get the latest one
 files.sort(reverse=True)
@@ -40,7 +40,7 @@ if files:
                         used_phys_cpus = []
                         incorrect=0
             # Count 'sysbench' occurrences for the current CPU
-            elif "nginx" in line or "wrk" in line:
+            elif "dedup" in line or "wrk" in line:
                 if current_cpu != -1:
                     if(not (current_cpu//2) in used_phys_cpus):
                         incorrect += 1

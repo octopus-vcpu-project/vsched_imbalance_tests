@@ -36,7 +36,6 @@ toggle_topological_passthrough(){
     done
     ssh ubuntu@$prob_vm "sudo killall nginx"
     ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 11;'"
-    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 11;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
     sleep 5
 }
 
@@ -65,12 +64,12 @@ sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.ref
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
@@ -78,7 +77,7 @@ done
 
 toggle_topological_passthrough 1
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 
@@ -88,12 +87,12 @@ sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e l2_rqsts.miss,l2_rqsts.re
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"

@@ -54,6 +54,7 @@ PERF_OUTPUT="./tests/perf_out$(date +%m%d%H%M).txt"
 PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
 
 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE1" 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
@@ -69,7 +70,7 @@ ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 for i in {0..40};do 
     sleep 1
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
@@ -77,6 +78,7 @@ done
 
 toggle_topological_passthrough 1
 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE1" 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
@@ -91,7 +93,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
-
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 for i in {0..40};do 
     sleep 1

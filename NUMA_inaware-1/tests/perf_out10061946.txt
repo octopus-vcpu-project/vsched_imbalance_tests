@@ -1,0 +1,24 @@
+# started on Fri Oct  6 19:46:36 2023
+
+
+ Performance counter stats for 'CPU(s) 0-15,20-35':
+
+       838,788,548      l2_rqsts.miss                                                           (35.60%)
+     5,729,890,997      l2_rqsts.references                                                     (35.63%)
+     2,944,370,592      L1-dcache-load-misses            #    0.68% of all L1-dcache accesses   (35.67%)
+   432,864,749,408      L1-dcache-loads                                                         (28.60%)
+    56,535,216,029      L1-dcache-stores                                                        (28.63%)
+     2,833,784,979      L1-icache-load-misses                                                   (28.63%)
+       248,406,211      LLC-loads                                                               (28.63%)
+        60,634,104      LLC-load-misses                  #   24.41% of all LL-cache accesses    (28.63%)
+       217,337,712      LLC-stores                                                              (14.31%)
+       833,293,588      cache-references                                                        (21.47%)
+       131,377,071      cache-misses                     #   15.766 % of all cache refs         (28.59%)
+   515,938,094,393      cycles                                                                  (28.55%)
+ 1,635,974,479,611      instructions                     #    3.17  insn per cycle              (35.66%)
+    29,529,418,373      branches                                                                (35.62%)
+                 1      faults                                                                
+                32      migrations                                                            
+
+       9.220436394 seconds time elapsed
+

@@ -54,7 +54,7 @@ PERF_OUTPUT="./tests/perf_out$(date +%m%d%H%M).txt"
 PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 

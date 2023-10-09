@@ -100,7 +100,6 @@ ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:nat
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
-sleep 10
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"
 
 #ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
@@ -109,7 +108,7 @@ sleep 10
     #sleep 1
     #ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"
 #done
-wait
+
 
 
 

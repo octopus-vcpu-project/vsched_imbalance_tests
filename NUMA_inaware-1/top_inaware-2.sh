@@ -4,7 +4,7 @@ cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
-comm_benchmark_1="sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 3 https://127.0.0.1:4054/test.html" 
+comm_benchmark_1="/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native" 
 
 
 toggle_topological_passthrough(){
@@ -63,7 +63,7 @@ echo "raw performance test complete"
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" &
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e  L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
 wait
 echo "cache test complete"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
@@ -91,7 +91,7 @@ echo "test finished"
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" &
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
 wait
 ssh ubuntu@$prob_vm "sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10"
 

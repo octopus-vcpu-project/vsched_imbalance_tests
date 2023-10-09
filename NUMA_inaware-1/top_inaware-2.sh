@@ -5,7 +5,7 @@ virsh shutdown $prob_vm
 sudo bash ../utility/cleanon_startup.sh $prob_vm 40
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='20' threads='1'/></cpu>"
-comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 40s -c 200 -t 10 https://127.0.0.1:4054/test.html" 
+comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 40s -c 200 -t 10 https://127.0.0.1:8089/test.html" 
 
 
 toggle_topological_passthrough(){
@@ -37,8 +37,8 @@ toggle_topological_passthrough(){
     done
     echo "Pinning Complete"
    ssh ubuntu@$prob_vm "sudo killall nginx"
-   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 40;'"
-   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 40;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+   #ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 40;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
    sleep 10
    ssh ubuntu@$prob_vm "sudo killall mysqld"
 } 
@@ -53,7 +53,7 @@ OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
 PLC_OUTPUT="./tests/plc_out$(date +%m%d%H%M).txt"
 PLC_OUTPUT2="./tests/plc_out2$(date +%m%d%H%M).txt"
-BPF_OUTPUT="./tests/bpf_out$(date +%m%d%H%M).txt"
+BPF_OUTPUT="./tests/bpf_out23.txt"
 PERF_OUTPUT="./tests/perf_out_first$(date +%m%d%H%M).txt"
 PERF_OUTPUT2="./tests/perf_out_second$(date +%m%d%H%M).txt"
 

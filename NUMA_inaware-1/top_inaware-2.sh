@@ -63,7 +63,7 @@ sleep 10
 
 echo "raw performance test complete"
 
-sudo perf stat -B -o "$PERF_OUTPUT"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1"
+sudo perf stat -B -o "$PERF_OUTPUT"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark &; sudo $comm_benchmark_1"
 
 
 

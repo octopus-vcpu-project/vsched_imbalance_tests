@@ -1,11 +1,11 @@
 prob_vm=$1
-comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 20 -i native" 
+comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 3 https://127.0.0.1:8089/test.html" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 virsh shutdown $prob_vm
 sudo bash ../utility/cleanon_startup.sh $prob_vm 40
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='20' threads='1'/></cpu>"
-comm_benchmark_1="/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 20 -i native" 
+comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 40s -c 200 -t 3 https://127.0.0.1:4054/test.html" 
 
 
 toggle_topological_passthrough(){
@@ -38,7 +38,7 @@ toggle_topological_passthrough(){
     echo "Pinning Complete"
    ssh ubuntu@$prob_vm "sudo killall nginx"
    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 10;'"
-   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 10; -c'"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 10;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx/conf/nginx.conf"
    sleep 5
    ssh ubuntu@$prob_vm "sudo killall mysqld"
 } 

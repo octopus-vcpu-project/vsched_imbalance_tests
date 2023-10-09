@@ -42,6 +42,7 @@ toggle_topological_passthrough(){
    # ssh ubuntu@$prob_vm "sudo killall nginx"
    # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;'"
    #sleep 5
+   ssh ubuntu@$prob_vm "sudo $comm_benchmarch"
 } 
 
 
@@ -63,18 +64,17 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
 
 echo "raw performance test complete"
-sleep 20
+
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
-sleep 20
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
+
 echo "cache test complete"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
-sleep 3
-wait
+
 echo "ipi test complete"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" &
@@ -87,20 +87,17 @@ toggle_topological_passthrough 1
 echo "starting smart test suite"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
-
-
 echo "test finished"
-sleep 20
+ssh ubuntu@$prob_vm "wait"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
-sleep 20
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
+ssh ubuntu@$prob_vm "wait"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
-sleep 3
-wait
+ssh ubuntu@$prob_vm "wait"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
 for i in {0..20};do 

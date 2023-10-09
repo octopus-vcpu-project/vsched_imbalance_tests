@@ -58,10 +58,11 @@ PERF_OUTPUT2="./tests/perf_out_second$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
 
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 echo "raw performance test complete"
 sleep 10
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1 "
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
 sleep 20
 echo "cache test complete"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
@@ -83,11 +84,12 @@ echo "starting smart test suite"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
 
-ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
 
 echo "test finished"
 sleep 10
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1 "
+ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
+ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
 sleep 20
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&

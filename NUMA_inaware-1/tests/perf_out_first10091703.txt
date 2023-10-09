@@ -1,0 +1,19 @@
+# started on Mon Oct  9 17:04:08 2023
+
+
+ Performance counter stats for 'ssh ubuntu@e-vm1 sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 20 -i native & sudo /home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 20 -i native':
+
+           133,333      LLC-loads                                                               (39.97%)
+            76,441      LLC-load-misses                  #   57.33% of all LL-cache accesses    (63.73%)
+            13,913      LLC-stores                                                              (60.03%)
+           224,432      cache-references                                                        (75.31%)
+            89,752      cache-misses                     #   39.991 % of all cache refs         (82.78%)
+        66,811,687      cycles                                                                  (53.79%)
+       134,932,800      instructions                     #    2.02  insn per cycle              (53.79%)
+
+      16.186248024 seconds time elapsed
+
+       0.015398000 seconds user
+       0.010265000 seconds sys
+
+

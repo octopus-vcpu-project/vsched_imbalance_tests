@@ -3,7 +3,7 @@ comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
-smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='4' dies='1' cores='8' threads='1'/></cpu>"
+smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
 comm_benchmark_1="/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native" 
 
 
@@ -27,17 +27,12 @@ toggle_topological_passthrough(){
     fi
     virsh define /tmp/$prob_vm.xml
     sudo bash ../utility/cleanon_startup.sh $prob_vm 32
-    for i in {0..7};do
+    for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $i
     done
-    for i in {8..15};do
-        sudo virsh vcpupin $prob_vm $i $((20 + i - 8))
-    done
-    for i in {16..23};do
-        sudo virsh vcpupin $prob_vm $i $((40 + i - 16 ))
-    done
-    for i in {24..31};do
-        sudo virsh vcpupin $prob_vm $i $((60 + i - 24))
+
+    for i in {16..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
     echo "Pinning Complete"
    # ssh ubuntu@$prob_vm "sudo killall nginx"
@@ -67,7 +62,7 @@ echo "raw performance test complete"
 sleep 20
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 10
 sleep 20
 echo "cache test complete"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &

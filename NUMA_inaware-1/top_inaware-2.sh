@@ -1,11 +1,11 @@
 prob_vm=$1
-comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 12 -i native" 
+comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 20 -i native" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 virsh shutdown $prob_vm
-sudo bash ../utility/cleanon_startup.sh $prob_vm 24
+sudo bash ../utility/cleanon_startup.sh $prob_vm 40
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
-smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='3' dies='1' cores='8' threads='1'/></cpu>"
-comm_benchmark_1="/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 12 -i native" 
+smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='20' threads='1'/></cpu>"
+comm_benchmark_1="/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 20 -i native" 
 
 
 toggle_topological_passthrough(){
@@ -28,15 +28,12 @@ toggle_topological_passthrough(){
     fi
     virsh define /tmp/$prob_vm.xml
     sudo bash ../utility/cleanon_startup.sh $prob_vm 24
-    for i in {0..7};do
-        sudo virsh vcpupin $prob_vm $i $i
-    done
-    for i in {8..15};do
-        sudo virsh vcpupin $prob_vm $i $((i + 20 - 8))
+    for i in {0..19};do
+        sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
 
-    for i in {16..23};do
-        sudo virsh vcpupin $prob_vm $i $((i -16 + 40))
+    for i in {20..39};do
+        sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
     echo "Pinning Complete"
    # ssh ubuntu@$prob_vm "sudo killall nginx"

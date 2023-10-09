@@ -1,11 +1,11 @@
 prob_vm=$1
-comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 200 -t 10 https://127.0.0.1:8089/test.html" 
+comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 40s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
 virsh shutdown $prob_vm
-sudo bash ../utility/cleanon_startup.sh $prob_vm 40
+sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='20' threads='1'/></cpu>"
-comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 40s -c 200 -t 10 https://127.0.0.1:8089/test.html" 
+comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 40s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
 
 
 toggle_topological_passthrough(){
@@ -27,13 +27,13 @@ toggle_topological_passthrough(){
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
     fi
     virsh define /tmp/$prob_vm.xml
-    sudo bash ../utility/cleanon_startup.sh $prob_vm 40
-    for i in {0..19};do
+    sudo bash ../utility/cleanon_startup.sh $prob_vm 32
+    for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
 
-    for i in {20..39};do
-        sudo virsh vcpupin $prob_vm $i $((i + 20))
+    for i in {16..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 24))
     done
     echo "Pinning Complete"
    ssh ubuntu@$prob_vm "sudo killall nginx"

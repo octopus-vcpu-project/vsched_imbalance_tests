@@ -100,11 +100,6 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 10
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
-ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
-sleep 10
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&

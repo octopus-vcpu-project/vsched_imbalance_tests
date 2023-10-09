@@ -34,10 +34,10 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
-    ssh ubuntu@$prob_vm "sudo killall nginx"
-    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;'"
-    sleep 5
-}
+   # ssh ubuntu@$prob_vm "sudo killall nginx"
+   # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;'"
+   #sleep 5
+} 
 
 
 
@@ -54,7 +54,7 @@ PERF_OUTPUT="./tests/perf_out$(date +%m%d%H%M).txt"
 PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
 
 
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE1" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
@@ -78,7 +78,7 @@ done
 
 toggle_topological_passthrough 1
 
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE1" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 

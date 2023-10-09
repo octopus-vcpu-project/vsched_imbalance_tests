@@ -36,9 +36,10 @@ toggle_topological_passthrough(){
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
     echo "Pinning Complete"
-   # ssh ubuntu@$prob_vm "sudo killall nginx"
-   # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;'"
-   #sleep 5
+   ssh ubuntu@$prob_vm "sudo killall nginx"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 10;'"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 10; -c'"
+   sleep 5
    ssh ubuntu@$prob_vm "sudo killall mysqld"
 } 
 
@@ -63,7 +64,7 @@ sleep 10
 
 echo "raw performance test complete"
 
-sudo perf stat -B -o "$PERF_OUTPUT" -C 20-60 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions sleep 4000000000 &
+sudo perf stat -B -o "$PERF_OUTPUT" -C 20-60 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
 sudo kill -s SIGINT $(pidof perf)
 
@@ -78,10 +79,10 @@ sleep 10
 echo "ipi test complete"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" &
-for i in {0..20};do 
-    sleep 1
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
-done
+#for i in {0..20};do 
+#   sleep 1
+#    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
+#done
 wait
 toggle_topological_passthrough 1
 echo "starting smart test suite"
@@ -102,12 +103,12 @@ ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 10
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"
 
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
-for i in {0..20};do 
-    sleep 1
-    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"
-done
+#ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
+#ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
+#for i in {0..20};do 
+    #sleep 1
+    #ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"
+#done
 wait
 
 

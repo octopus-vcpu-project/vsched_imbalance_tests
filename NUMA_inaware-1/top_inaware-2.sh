@@ -63,7 +63,7 @@ sleep 10
 
 echo "raw performance test complete"
 
-sudo perf stat -B -o "$PERF_OUTPUT"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & ; sudo $comm_benchmark_1"
+sudo perf stat -B -o "$PERF_OUTPUT"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1; wait"
 
 
 
@@ -90,7 +90,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2"
 echo "test finished"
 sleep 10
 
-sudo perf stat -B -o "$PERF_OUTPUT2"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & ; sudo $comm_benchmark_1"
+sudo perf stat -B -o "$PERF_OUTPUT2"  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1;wait"
 
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &

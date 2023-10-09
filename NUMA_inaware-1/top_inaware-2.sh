@@ -34,6 +34,7 @@ toggle_topological_passthrough(){
     for i in {16..31};do
         sudo virsh vcpupin $prob_vm $i $((i + 4))
     done
+    echo "Pinning Complete"
    # ssh ubuntu@$prob_vm "sudo killall nginx"
    # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;'"
    #sleep 5
@@ -50,19 +51,20 @@ OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"
 PLC_OUTPUT="./tests/plc_out$(date +%m%d%H%M).txt"
 PLC_OUTPUT2="./tests/plc_out2$(date +%m%d%H%M).txt"
 BPF_OUTPUT="./tests/bpf_out$(date +%m%d%H%M).txt"
-PERF_OUTPUT="./tests/perf_out$(date +%m%d%H%M).txt"
-PERF_OUTPUT2="./tests/perf_out2$(date +%m%d%H%M).txt"
+PERF_OUTPUT="./tests/perf_out_first$(date +%m%d%H%M).txt"
+PERF_OUTPUT2="./tests/perf_out_second$(date +%m%d%H%M).txt"
 
 
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
-
 echo "test finished"
 wait
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark" 
-
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" &
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
+wait
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"
@@ -85,7 +87,10 @@ ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench"
 
 echo "test finished"
 wait
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e l2_rqsts.miss,l2_rqsts.references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark" 
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" &
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
+wait
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&

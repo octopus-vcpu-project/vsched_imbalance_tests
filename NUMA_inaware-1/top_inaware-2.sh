@@ -30,18 +30,14 @@ toggle_topological_passthrough(){
     for i in {0..7};do
         sudo virsh vcpupin $prob_vm $i $i
     done
-
-    for i in {7..14};do
-        sudo virsh vcpupin $prob_vm $i $((20 + i - 7))
+    for i in {8..15};do
+        sudo virsh vcpupin $prob_vm $i $((20 + i - 8))
     done
-    for i in {14..21};do
-        sudo virsh vcpupin $prob_vm $i $((40 + i - 14 ))
+    for i in {16..23};do
+        sudo virsh vcpupin $prob_vm $i $((40 + i - 16 ))
     done
-    for i in {21..28};do
-        sudo virsh vcpupin $prob_vm $i $((60 + i - 21))
-    done
-    for i in {28..35};do
-        sudo virsh vcpupin $prob_vm $i $((80 + i - 28))
+    for i in {24..31};do
+        sudo virsh vcpupin $prob_vm $i $((60 + i - 24))
     done
     echo "Pinning Complete"
    # ssh ubuntu@$prob_vm "sudo killall nginx"

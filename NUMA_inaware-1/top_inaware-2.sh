@@ -59,18 +59,20 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
 ssh ubuntu@$prob_vm "sudo killall bpftrace;sudo killall sysbench" 
-echo "test finished"
+echo "raw performance test complete"
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" &
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 12 
 wait
+echo "cache test complete"
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
 ssh ubuntu@$prob_vm "sudo $comm_benchmark"
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 sleep 3
 wait
+echo "ipi test complete"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" &
 for i in {0..40};do 
@@ -79,7 +81,7 @@ for i in {0..40};do
 done
 
 toggle_topological_passthrough 1
-
+echo "starting smart test suite"
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" 
 
@@ -89,7 +91,7 @@ echo "test finished"
 wait
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE2" &
-sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 10 
+sudo perf stat -B -C 0-15,20-35 -o "$PERF_OUTPUT2"  -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions,branches,faults,migrations sleep 12
 wait
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &

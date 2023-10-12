@@ -65,7 +65,7 @@ sleep 10
 
 echo "raw performance test complete"
 
-sudo perf stat -B -o "$PERF_OUTPUT" -C 20-60 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+sudo perf stat -B -o "$PERF_OUTPUT" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
 sudo kill -s SIGINT $(pidof perf)
 
@@ -92,7 +92,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2"
 echo "test finished"
 sleep 20
 
-sudo perf stat -B -o "$PERF_OUTPUT2" -C 20-60 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions  &
+sudo perf stat -B -o "$PERF_OUTPUT2" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions  &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
 sudo kill -s SIGINT $(pidof perf)
 

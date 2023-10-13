@@ -2,7 +2,7 @@
 prob_vm=$1
 compete_vm=$2
 benchmark_time=20
-latency_bench="cd /home/ubuntu/Workloads/TailBench/img-dnn;sudo bash run.sh"
+latency_bench="cd /home/ubuntu/Workloads/TailBench/img-dnn;time sudo bash run.sh"
 compete_bench="sleep 50"
 OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
 

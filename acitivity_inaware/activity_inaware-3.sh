@@ -24,8 +24,9 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
-
-ssh ubuntu@$compete_vm "sudo $compete_bench"
+ssh ubuntu@$compete_vm "sudo killall sysbench"
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
+ssh ubuntu@$compete_vm "sudo $compete_bench"&
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 for i in {0..31};do

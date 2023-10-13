@@ -1,0 +1,40 @@
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+
+real	0m7.555s
+user	0m10.842s
+sys	0m0.412s
+99th percentile latency 2096.62166335  ms |95th percentile latency 2061.8488383  ms |90th percentile latency 2023.7973511  ms |85th percentile latency 1990.52197315  ms |50th percentile latency 1367.598054  ms |Max Latency: 2141.615159
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+
+real	0m8.614s
+user	0m10.935s
+sys	0m0.257s
+99th percentile latency 3326.17885466  ms |95th percentile latency 3236.339469  ms |90th percentile latency 3175.0092640000003  ms |85th percentile latency 3032.4953738  ms |50th percentile latency 2414.4751189999997  ms |Max Latency: 3348.21241
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+
+real	0m6.473s
+user	0m11.120s
+sys	0m0.332s
+99th percentile latency 771.62186298  ms |95th percentile latency 727.938866  ms |90th percentile latency 709.7027905000001  ms |85th percentile latency 700.38259955  ms |50th percentile latency 590.183005  ms |Max Latency: 798.206553
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+
+real	0m8.827s
+user	0m10.957s
+sys	0m0.281s
+99th percentile latency 3022.41798155  ms |95th percentile latency 2994.6601839  ms |90th percentile latency 2976.7638514  ms |85th percentile latency 2944.28202305  ms |50th percentile latency 2240.804507  ms |Max Latency: 3032.158636
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+
+real	0m9.269s
+user	0m10.846s
+sys	0m0.378s
+99th percentile latency 3347.73871826  ms |95th percentile latency 3277.21463255  ms |90th percentile latency 3197.1358969999997  ms |85th percentile latency 3104.17553365  ms |50th percentile latency 2290.6353065  ms |Max Latency: 3371.236858

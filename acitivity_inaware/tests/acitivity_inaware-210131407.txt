@@ -1,0 +1,51 @@
+/home/ubuntu/Workloads/TailBench/img-dnn/run.sh: line 9: ./img-dnn_integrated: No such file or directory
+
+real	0m0.055s
+user	0m0.016s
+sys	0m0.021s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 1.5378984499999997 2.762357
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248
+/home/ubuntu/Workloads/TailBench/img-dnn/run.sh: line 9: ./img-dnn_integrated: No such file or directory
+
+real	0m0.032s
+user	0m0.007s
+sys	0m0.021s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 1.5378984499999997 2.762357
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248
+/home/ubuntu/Workloads/TailBench/img-dnn/run.sh: line 9: ./img-dnn_integrated: No such file or directory
+
+real	0m0.025s
+user	0m0.012s
+sys	0m0.013s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 1.5378984499999997 2.762357
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248

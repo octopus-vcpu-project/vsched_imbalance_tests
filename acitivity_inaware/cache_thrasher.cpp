@@ -35,7 +35,8 @@ void stressCore() {
     while (true) {
         for (size_t i = 0; i < ARRAY_SIZE; ++i) {
             size_t index = distribution(generator);
-            largeArray[index] = computePi(10);
+            size_t index2 = distribution(generator);
+            largeArray[index] = largeArray[index2];
         }
     }
 }

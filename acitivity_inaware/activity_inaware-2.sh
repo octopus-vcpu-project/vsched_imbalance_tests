@@ -18,7 +18,7 @@ wake_and_pin_vm(){
 }
 
 wake_and_pin_vm $prob_vm
-wake_and_pin_vm $compete_vm
+#wake_and_pin_vm $compete_vm
 
 
 #Fetch VM PID and use that to fetch Cgroup title
@@ -30,7 +30,7 @@ c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 
 ssh ubuntu@$compete_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-ssh ubuntu@$compete_vm "sudo $compete_bench" &
+#ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "$idler_bench" &
 sleep 10
 

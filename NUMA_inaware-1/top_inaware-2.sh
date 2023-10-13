@@ -7,7 +7,7 @@ sudo bash ../utility/cleanon_startup.sh $prob_vm 20
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='20' threads='1'/></cpu>"
 #comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
-comm_benchmark_1="sleep 120"
+comm_benchmark_1="sleep 20"
 
 toggle_topological_passthrough(){
     virsh shutdown $prob_vm

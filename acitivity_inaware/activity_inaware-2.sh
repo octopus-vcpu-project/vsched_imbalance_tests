@@ -20,11 +20,6 @@ wake_and_pin_vm $prob_vm
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
-for i in {0..31};do
-    sudo echo 500 1000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-done
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 for i in {0..31};do
     sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max

@@ -1,0 +1,69 @@
+TBENCH_MAXREQS = 200000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+TBENCH_RANDSEED = 13639
+TBENCH_QPS = 20000
+Read testX successfully, including 784 features and 10000 samples.
+Read testY successfully, including 10000 samples
+
+real	0m44.277s
+user	2m15.806s
+sys	0m3.370s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 29351.567742 30851.93407
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248
+TBENCH_MAXREQS = 200000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+TBENCH_RANDSEED = 24952
+TBENCH_QPS = 20000
+Read testX successfully, including 784 features and 10000 samples.
+Read testY successfully, including 10000 samples
+
+real	0m44.983s
+user	2m7.067s
+sys	0m2.435s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 30303.66726975 31993.979072
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248
+TBENCH_MAXREQS = 200000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 0
+TBENCH_RANDSEED = 29222
+TBENCH_QPS = 20000
+Read testX successfully, including 784 features and 10000 samples.
+Read testY successfully, including 10000 samples
+
+real	0m49.287s
+user	2m6.598s
+sys	0m2.432s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 34541.30073555 36317.555263
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248

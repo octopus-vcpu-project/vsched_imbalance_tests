@@ -16,16 +16,16 @@ wake_and_pin_vm(){
 }
 
 wake_and_pin_vm $prob_vm
-wake_and_pin_vm $compete_bench
+wake_and_pin_vm $compete_vm
 
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
-c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
-c_vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
+c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{print $6}' | head -n 1)
+c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 
-ssh ubuntu@$compete_bench "sudo $compete_bench"
+ssh ubuntu@$compete_vm "sudo $compete_bench"
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 for i in {0..31};do

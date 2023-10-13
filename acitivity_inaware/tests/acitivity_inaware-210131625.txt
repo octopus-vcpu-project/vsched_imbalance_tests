@@ -1,0 +1,27 @@
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 10000
+
+real	0m23.986s
+user	0m11.758s
+sys	0m0.247s
+bash: line 1: cd: /home/ubuntu/Workloads/TailBench/utilities/: No such file or directory
+python: can't open file '/home/ubuntu/parseLatencies.py': [Errno 2] No such file or directory
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 10000
+
+real	0m19.885s
+user	0m9.720s
+sys	0m0.236s
+bash: line 1: cd: /home/ubuntu/Workloads/TailBench/utilities/: No such file or directory
+python: can't open file '/home/ubuntu/parseLatencies.py': [Errno 2] No such file or directory
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 10000
+
+real	0m21.279s
+user	0m10.414s
+sys	0m0.249s
+bash: line 1: cd: /home/ubuntu/Workloads/TailBench/utilities/: No such file or directory
+python: can't open file '/home/ubuntu/parseLatencies.py': [Errno 2] No such file or directory

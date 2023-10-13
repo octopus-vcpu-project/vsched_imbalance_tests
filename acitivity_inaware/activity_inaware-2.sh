@@ -30,7 +30,8 @@ c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-ssh ubuntu@$prob_vm "$idler_bench"
+ssh ubuntu@$prob_vm "$idler_bench" &
+sleep 10
 
 
 for i in {0..31};do

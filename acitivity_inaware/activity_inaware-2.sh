@@ -29,7 +29,7 @@ c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-ssh ubuntu@$prob_vm "sudo $latency_bench"
+ssh ubuntu@$prob_vm "$latency_bench"
 
 
 for i in {0..31};do
@@ -37,7 +37,7 @@ for i in {0..31};do
     sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
 
 for i in {0..31};do
@@ -45,7 +45,7 @@ for i in {0..31};do
     sudo echo 50000 100000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
 
 for i in {0..31};do
@@ -53,7 +53,7 @@ for i in {0..31};do
     sudo echo 500000 1000000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
 
 

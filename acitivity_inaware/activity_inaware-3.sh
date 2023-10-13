@@ -29,26 +29,28 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 echo "finished warming up"
-for i in {0..31};do
-    sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
-done
+
+
+
+sudo echo 32000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
-for i in {0..31};do
-    sudo echo 50000 100000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    sudo echo 50000 100000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
-
-done
+sudo echo 16000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
-for i in {0..31};do
-    sudo echo 500000 1000000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    sudo echo 500000 1000000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 
-done
+sudo echo 8000000 > /sys/kernel/debug/sched/min_granularity_ns
+
+ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+
+sudo echo 4000000 > /sys/kernel/debug/sched/min_granularity_ns
+
+
+ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+
+sudo echo 2000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 

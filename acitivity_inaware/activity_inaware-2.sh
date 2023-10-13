@@ -64,6 +64,10 @@ ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 
 
+sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 sudo git add .;sudo git commit -m 'new';sudo git push
 
 

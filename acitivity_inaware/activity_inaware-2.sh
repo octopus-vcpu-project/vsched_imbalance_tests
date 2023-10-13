@@ -28,7 +28,7 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 
-ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
+ssh ubuntu@$compete_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "$idler_bench" &
@@ -63,6 +63,10 @@ for i in {0..31};do
     sudo echo max 40000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     sudo echo max 40000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
+
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
+
 
 
 sudo git add .;sudo git commit -m 'new';sudo git push

@@ -41,7 +41,7 @@ for i in {0..31};do
 done
 
 ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
-ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 
 for i in {0..31};do
     sudo echo 10000 20000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
@@ -49,16 +49,14 @@ for i in {0..31};do
 done
 
 ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
-ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
-
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 for i in {0..31};do
     sudo echo 20000 40000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     sudo echo 20000 40000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
 ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
-ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
-
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 
 
 for i in {0..31};do

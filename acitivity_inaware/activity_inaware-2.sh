@@ -2,9 +2,10 @@
 prob_vm=$1
 compete_vm=$2
 benchmark_time=20
-latency_bench="cd /home/ubuntu/Workloads/TailBench/img-dnn;time sudo bash run.sh"
+latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sleep 50"
+get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python parselats.py ../img-dnn/lats.bin"
 OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
 
 wake_and_pin_vm(){

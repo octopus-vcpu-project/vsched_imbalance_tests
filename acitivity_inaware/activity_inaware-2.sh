@@ -34,30 +34,35 @@ ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "$idler_bench" &
 sleep 10
 
+sudo echo 32000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 
-sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
 
-
-
-ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
-ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
-
-sudo echo 9000000 > /sys/kernel/debug/sched/min_granularity_ns
-
+sudo echo 16000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 
-sudo echo 6000000 > /sys/kernel/debug/sched/min_granularity_ns
+
+sudo echo 8000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 
 ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
 
-sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 4000000 > /sys/kernel/debug/sched/min_granularity_ns
+
+
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
+
+sudo echo 2000000 > /sys/kernel/debug/sched/min_granularity_ns
+
+ssh ubuntu@$prob_vm "$latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$get_lat_val"  >> "$OUTPUT_FILE" 2>&1
+
 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

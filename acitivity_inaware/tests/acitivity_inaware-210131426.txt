@@ -1,0 +1,69 @@
+TBENCH_MAXREQS = 200000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 10000
+TBENCH_RANDSEED = 15225
+TBENCH_QPS = 20000
+Read testX successfully, including 784 features and 10000 samples.
+Read testY successfully, including 10000 samples
+
+real	0m50.485s
+user	2m36.802s
+sys	0m6.416s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 36187.418975 37660.805246
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248
+TBENCH_MAXREQS = 200000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 10000
+TBENCH_RANDSEED = 9214
+TBENCH_QPS = 20000
+Read testX successfully, including 784 features and 10000 samples.
+Read testY successfully, including 10000 samples
+
+real	0m52.975s
+user	2m40.355s
+sys	0m6.810s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 38367.2081233 40261.60455
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248
+TBENCH_MAXREQS = 200000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 10000
+TBENCH_RANDSEED = 17074
+TBENCH_QPS = 20000
+Read testX successfully, including 784 features and 10000 samples.
+Read testY successfully, including 10000 samples
+
+real	0m54.489s
+user	2m41.889s
+sys	0m7.042s
+32 cores and 31 memory
+Generating Output Files...
+../img-dnn/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 39770.47450314999 41736.998996
+../masstree/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.9587930499999999 3.120837
+../silo/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.31790355 2.085241
+../specjbb/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 0.3372528499999999 1.093296
+../sphinx/lats.bin
+95th percentile latency %.3f ms | max latency %.3f ms 2824.5960999 2846.542248

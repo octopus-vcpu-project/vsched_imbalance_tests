@@ -3,9 +3,10 @@
 #include <random>
 #include <chrono>
 #include <cmath>
+#include <thread>
 
 const size_t ARRAY_SIZE = 50000000; 
-const size_t NUM_ITERATIONS = 100000000;  
+const size_t NUM_ITERATIONS = 1000000000; 
 
 double computePi(size_t iterations) {
     std::default_random_engine generator;
@@ -22,11 +23,11 @@ double computePi(size_t iterations) {
     return 4.0 * insideCircle / iterations;
 }
 
-int main() {
+void stressCore() {
     std::vector<double> largeArray(ARRAY_SIZE);
     std::default_random_engine generator;
     std::uniform_int_distribution<size_t> distribution(0, ARRAY_SIZE - 1);
-    
+
     for (size_t i = 0; i < ARRAY_SIZE; ++i) {
         largeArray[i] = i;
     }
@@ -37,5 +38,21 @@ int main() {
             largeArray[index] = computePi(10);
         }
     }
+}
+
+int main() {
+    unsigned int numCores = std::thread::hardware_concurrency();
+    std::cout << "Launching stress tasks on " << numCores << " cores." << std::endl;
+
+    std::vector<std::thread> threads;
+
+    for(unsigned int i = 0; i < numCores; ++i) {
+        threads.push_back(std::thread(stressCore));
+    }
+
+    for(auto &t : threads) {
+        t.join();
+    }
+
     return 0;
 }

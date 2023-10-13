@@ -1,0 +1,16 @@
+TBENCH_MAXREQS = 100000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 5000
+
+real	1m2.384s
+user	1m15.183s
+sys	0m0.648s
+99th percentile latency 56035.13751757  ms |95th percentile latency 53894.342138  ms |90th percentile latency 51155.978402400004  ms |85th percentile latency 48503.9577533  ms |50th percentile latency 30232.031229  ms |Max Latency: 56614.010722
+TBENCH_MAXREQS = 100000
+TBENCH_WARMUPREQS = 5000
+TBENCH_MINSLEEPNS = 5000
+
+real	0m59.004s
+user	1m11.511s
+sys	0m0.595s
+99th percentile latency 52737.92286211  ms |95th percentile latency 50570.536153149995  ms |90th percentile latency 48011.827001800004  ms |85th percentile latency 45589.04506530001  ms |50th percentile latency 28148.744790999997  ms |Max Latency: 53273.567365

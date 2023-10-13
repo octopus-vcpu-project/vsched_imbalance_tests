@@ -37,24 +37,24 @@ for i in {0..31};do
     sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo python /home/ubuntu/Workloads/TailBench/utilities/parseLatencies.py -o"  >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
 
 for i in {0..31};do
     sudo echo 50000 100000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     sudo echo 50000 100000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo python /home/ubuntu/Workloads/TailBench/utilities/parseLatencies.py -o"  >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
 
 for i in {0..31};do
     sudo echo 500000 1000000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     sudo echo 500000 1000000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
-ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 
-ssh ubuntu@$prob_vm "sudo python /home/ubuntu/Workloads/TailBench/utilities/parseLatencies.py -o"  >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "time sudo $latency_bench"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python parseLatencies.py -o"  >> "$OUTPUT_FILE" 2>&1
 
 
 

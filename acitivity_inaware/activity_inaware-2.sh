@@ -58,6 +58,11 @@ ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/TailBench/utilities/;sudo python 
 
 
 
+for i in {0..31};do
+    sudo echo max 40000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    sudo echo max 40000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max
+done
+
 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

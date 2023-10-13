@@ -26,9 +26,9 @@ c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{pr
 c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-ssh ubuntu@$compete_vm "sudo $compete_bench"&
+ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
+echo "finished warming up"
 for i in {0..31};do
     sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     sudo echo 5000 10000 > /sys/fs/cgroup/machine.slice/$c_vm_cgroup_title/libvirt/vcpu$i/cpu.max

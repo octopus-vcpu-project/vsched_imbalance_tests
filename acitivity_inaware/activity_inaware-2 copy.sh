@@ -1,7 +1,7 @@
 
 prob_vm=$1
 benchmark_time=20
-latency_bench="sysbench --threads=32 --time=30000 cpu run"
+latency_bench="sysbench --threads=32 --time=30 cpu run"
 OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
 
 wake_and_pin_vm(){

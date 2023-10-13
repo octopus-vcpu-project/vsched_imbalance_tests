@@ -3,6 +3,7 @@ prob_vm=$1
 compete_vm=$2
 benchmark_time=20
 latency_bench="cd /home/ubuntu/Workloads/TailBench/img-dnn;time sudo bash run.sh"
+idler_bench="sudh bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sleep 50"
 OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
 
@@ -29,7 +30,7 @@ c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-ssh ubuntu@$prob_vm "$latency_bench"
+ssh ubuntu@$prob_vm "$idler_bench"
 
 
 for i in {0..31};do

@@ -60,10 +60,6 @@ wake_and_pin_vm(){
 
 toggle_topological_passthrough 1
 
-ssh ubuntu@$prob_vm "sudo killall nginx"
-ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-sleep 4
-ssh ubuntu@$prob_vm "sudo killall mysqld"
 
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm

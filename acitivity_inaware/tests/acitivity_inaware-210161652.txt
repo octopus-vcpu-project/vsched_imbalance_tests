@@ -1,0 +1,45 @@
+Running 1m test @ https://127.0.0.1:8089/test.html
+  48 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    77.99ms   42.22ms 689.70ms   83.16%
+    Req/Sec    79.98     25.71   570.00     75.39%
+  228971 requests in 1.00m, 25.23GB read
+Requests/sec:   3809.34
+Transfer/sec:    429.77MB
+ 1 ms :
+Running 1m test @ https://127.0.0.1:8089/test.html
+  48 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    90.77ms   80.46ms   1.60s    86.16%
+    Req/Sec    77.08     35.53   330.00     69.22%
+  210739 requests in 1.00m, 23.22GB read
+Requests/sec:   3504.35
+Transfer/sec:    395.39MB
+ 0.0 ms :
+Running 1m test @ https://127.0.0.1:8089/test.html
+  48 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    89.09ms   71.62ms   1.46s    80.91%
+    Req/Sec    77.40     35.81   343.00     68.20%
+  214433 requests in 1.00m, 23.63GB read
+Requests/sec:   3562.22
+Transfer/sec:    401.92MB
+ Cache Cold Test Begins :
+ 1 ms :
+Running 1m test @ https://127.0.0.1:8089/test.html
+  48 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    79.57ms   33.82ms 489.25ms   70.04%
+    Req/Sec    75.58     21.48   290.00     73.76%
+  219030 requests in 1.00m, 24.13GB read
+Requests/sec:   3644.34
+Transfer/sec:    411.14MB
+ 0.0 ms :
+Running 1m test @ https://127.0.0.1:8089/test.html
+  48 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    76.13ms   29.51ms 502.36ms   70.73%
+    Req/Sec    78.91     21.45   320.00     73.85%
+  228344 requests in 1.00m, 25.16GB read
+Requests/sec:   3798.92
+Transfer/sec:    428.59MB

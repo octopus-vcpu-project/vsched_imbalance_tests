@@ -47,12 +47,12 @@ toggle_topological_passthrough(){
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 32
-    for i in {0..15};do
-        sudo virsh vcpupin $select_vm $i $i
+    for i in {0..20};do
+        sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
 
     for i in {16..31};do
-        sudo virsh vcpupin $select_vm $i $(( i+4 ))
+        sudo virsh vcpupin $prob_vm $i $((i + 24))
     done
     
     sleep 2

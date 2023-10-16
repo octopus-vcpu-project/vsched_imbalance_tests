@@ -28,7 +28,7 @@ toggle_topological_passthrough(){
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
     fi
     virsh define /tmp/$prob_vm.xml
-    sudo bash ../utility/cleanon_startup.sh $prob_vm 20
+    sudo bash ../utility/cleanon_startup.sh $prob_vm 32
     for i in {0..20};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done

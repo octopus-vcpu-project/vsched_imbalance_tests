@@ -2,18 +2,63 @@
 prob_vm=$1
 compete_vm=$2
 benchmark_time=20
-latency_bench="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 300 -t 16 https://127.0.0.1:8089/test.html" 
+latency_bench="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 48 https://127.0.0.1:8089/test.html" 
 compete_bench="./cache_thr.out"
 OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
+naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
+smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
+
+
+toggle_topological_passthrough(){
+    virsh shutdown $prob_vm
+    while true; do
+        vm_state=$(virsh domstate "$prob_vm")
+        if [ "$vm_state" != "running" ]; then
+            echo "VM is shutdown"
+            break
+        else
+            echo "Waiting for VM to shutdown"
+            sleep 3 
+        fi
+    done
+    virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
+    if [ $1 -eq 1 ]; then
+        sed -i "/<cpu /,/<\/cpu>/c\\$smart_topology_string" /tmp/$prob_vm.xml
+    else
+        sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
+    fi
+    virsh define /tmp/$prob_vm.xml
+    sudo bash ../utility/cleanon_startup.sh $prob_vm 20
+    for i in {0..20};do
+        sudo virsh vcpupin $prob_vm $i $((i + 20))
+    done
+
+    for i in {16..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 24))
+    done
+    echo "Pinning Complete"
+   ssh ubuntu@$prob_vm "sudo killall nginx"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+  # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+  # sleep 10
+   ssh ubuntu@$prob_vm "sudo killall mysqld"
+} 
 
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 32
-    for i in {0..31};do
+    for i in {0..15};do
         sudo virsh vcpupin $select_vm $i $i
     done
+
+    for i in {16..31};do
+        sudo virsh vcpupin $select_vm $i $(( i+4 ))
+    done
+    
     sleep 2
 }
+
+toggle_topological_passthrough 1
 
 ssh ubuntu@$prob_vm "sudo killall nginx"
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
@@ -42,35 +87,12 @@ echo "finished warming up"
 
 sudo echo 32000000 > /sys/kernel/debug/sched/min_granularity_ns
 
-sudo echo 500000 > /sys/kernel/debug/sched/migration_cost_ns
+sudo echo 1000000 > /sys/kernel/debug/sched/migration_cost_ns
 
-sudo echo " 0.5 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 400000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.4 ms :"   >> "$OUTPUT_FILE" 
+sudo echo " 1 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
-sudo echo 300000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.3 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 200000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.2 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 100000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.1 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 0 > /sys/kernel/debug/sched/migration_cost_ns
 
@@ -85,33 +107,9 @@ sudo echo " Cache Cold Test Begins :"   >> "$OUTPUT_FILE"
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 
-sudo echo 500000 > /sys/kernel/debug/sched/migration_cost_ns
+sudo echo 1000000 > /sys/kernel/debug/sched/migration_cost_ns
 
-sudo echo " 0.5 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 400000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.4 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 300000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.3 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 200000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.2 ms :"   >> "$OUTPUT_FILE" 
-
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
-
-sudo echo 100000 > /sys/kernel/debug/sched/migration_cost_ns
-
-sudo echo " 0.1 ms :"   >> "$OUTPUT_FILE" 
+sudo echo " 1 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
@@ -124,6 +122,7 @@ ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE"
 
 
 
+sudo echo 500000 > /sys/kernel/debug/sched/migration_cost_ns
 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

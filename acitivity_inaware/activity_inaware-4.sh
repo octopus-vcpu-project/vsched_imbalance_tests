@@ -44,52 +44,80 @@ sudo echo 32000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 sudo echo 500000 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.5 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 400000 > /sys/kernel/debug/sched/migration_cost_ns
+
+sudo echo " 0.4 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 300000 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.3 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 200000 > /sys/kernel/debug/sched/migration_cost_ns
+
+sudo echo " 0.2 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 100000 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.1 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 0 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.0 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+
+
+
+sudo echo " Cache Cold Test Begins :"   >> "$OUTPUT_FILE" 
 
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 sudo echo 500000 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.5 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 400000 > /sys/kernel/debug/sched/migration_cost_ns
+
+sudo echo " 0.4 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 300000 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.3 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 200000 > /sys/kernel/debug/sched/migration_cost_ns
+
+sudo echo " 0.2 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 100000 > /sys/kernel/debug/sched/migration_cost_ns
 
+sudo echo " 0.1 ms :"   >> "$OUTPUT_FILE" 
+
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 
 sudo echo 0 > /sys/kernel/debug/sched/migration_cost_ns
+
+sudo echo " 0.0 ms :"   >> "$OUTPUT_FILE" 
 
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 

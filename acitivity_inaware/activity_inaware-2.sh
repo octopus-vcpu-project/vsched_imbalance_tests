@@ -81,7 +81,7 @@ runAllTests(){
 }
 
 
-toggle_topological_passthrough 1
+toggle_topological_passthrough 0
 wake_and_pin_vm $compete_vm
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)

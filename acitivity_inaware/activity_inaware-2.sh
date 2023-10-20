@@ -11,8 +11,12 @@ OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 32
-    for i in {0..31};do
-        sudo virsh vcpupin $select_vm $i $i
+    for i in {0..20};do
+        sudo virsh vcpupin $select_vm $i $((i + 20))
+    done
+
+    for i in {16..31};do
+        sudo virsh vcpupin $select_vm $i $((i + 24))
     done
     sleep 2
 }
@@ -32,6 +36,39 @@ setLatency(){
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
 
+toggle_topological_passthrough(){
+    naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
+    smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
+    virsh shutdown $prob_vm
+    while true; do
+        vm_state=$(virsh domstate "$prob_vm")
+        if [ "$vm_state" != "running" ]; then
+            echo "VM is shutdown"
+            break
+        else
+            echo "Waiting for VM to shutdown"
+            sleep 3 
+        fi
+    done
+    virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
+    if [ $1 -eq 1 ]; then
+        sed -i "/<cpu /,/<\/cpu>/c\\$smart_topology_string" /tmp/$prob_vm.xml
+    else
+        sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
+    fi
+    virsh define /tmp/$prob_vm.xml
+    sudo bash ../utility/cleanon_startup.sh $prob_vm 32
+    for i in {0..20};do
+        sudo virsh vcpupin $prob_vm $i $((i + 20))
+    done
+
+    for i in {16..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 24))
+    done
+    echo "Pinning Complete"
+    ssh ubuntu@$prob_vm "sudo killall mysqld"
+} 
+
 runAllTests(){
     runLatencyTest "img-dnn"
     runLatencyTest "moses"
@@ -44,10 +81,8 @@ runAllTests(){
 }
 
 
-wake_and_pin_vm $prob_vm
+toggle_topological_passthrough 1
 wake_and_pin_vm $compete_vm
-
-
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')

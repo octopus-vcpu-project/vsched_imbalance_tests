@@ -4,7 +4,7 @@ compete_vm=$2
 benchmark_time=20
 latency_bench="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 48 https://127.0.0.1:8089/test.html" 
 compete_bench="./cache_thr.out"
-OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./tests/acitivity_inaware-4$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
 
@@ -37,10 +37,6 @@ toggle_topological_passthrough(){
         sudo virsh vcpupin $prob_vm $i $((i + 24))
     done
     echo "Pinning Complete"
-   ssh ubuntu@$prob_vm "sudo killall nginx"
-   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-  # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
-  # sleep 10
    ssh ubuntu@$prob_vm "sudo killall mysqld"
 } 
 
@@ -57,6 +53,24 @@ wake_and_pin_vm(){
     
     sleep 2
 }
+
+setMigrationCost(){
+    migraction_cost=$1
+    sudo echo $1 > /sys/kernel/debug/sched/min_granularity_ns
+    echo "Set Migration Cost to $1" 
+    echo "Set Migration Cost to $1" >> "$OUTPUT_FILE" 
+}
+
+runAllTests(){
+    ssh ubuntu@$prob_vm "sudo killall nginx"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+  # ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes 32;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+  # sleep 10
+   
+
+}
+
+
 
 toggle_topological_passthrough 1
 
@@ -82,43 +96,84 @@ echo "finished warming up"
 
 
 sudo echo 32000000 > /sys/kernel/debug/sched/min_granularity_ns
+echo "Cache-Hot 32ms tests"
+echo "Cache-Hot 32ms tests" >> $OUTPUT_FILE 
+setMigrationCost 1000000
+runAllTests
 
-sudo echo 1000000 > /sys/kernel/debug/sched/migration_cost_ns
+setMigrationCost 900000
+runAllTests
 
-sudo echo " 1 ms :"   >> "$OUTPUT_FILE" 
+setMigrationCost 800000
+runAllTests
 
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+setMigrationCost 700000
+runAllTests
 
+setMigrationCost 600000
+runAllTests
 
-sudo echo 0 > /sys/kernel/debug/sched/migration_cost_ns
+setMigrationCost 500000
+runAllTests
 
-sudo echo " 0.0 ms :"   >> "$OUTPUT_FILE" 
+setMigrationCost 500000
+runAllTests
 
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+setMigrationCost 400000
+runAllTests
 
+setMigrationCost 300000
+runAllTests
 
+setMigrationCost 200000
+runAllTests
 
-sudo echo " Cache Cold Test Begins :"   >> "$OUTPUT_FILE" 
+setMigrationCost 100000
+runAllTests
 
+setMigrationCost 0
+runAllTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+echo "Cache-Cold 3ms tests"
+echo "Cache-Cold 3ms tests" >> $OUTPUT_FILE 
 
-sudo echo 1000000 > /sys/kernel/debug/sched/migration_cost_ns
+setMigrationCost 1000000
+runAllTests
 
-sudo echo " 1 ms :"   >> "$OUTPUT_FILE" 
+setMigrationCost 900000
+runAllTests
 
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+setMigrationCost 800000
+runAllTests
 
-sudo echo 0 > /sys/kernel/debug/sched/migration_cost_ns
+setMigrationCost 700000
+runAllTests
 
-sudo echo " 0.0 ms :"   >> "$OUTPUT_FILE" 
+setMigrationCost 600000
+runAllTests
 
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+setMigrationCost 500000
+runAllTests
 
+setMigrationCost 500000
+runAllTests
 
+setMigrationCost 400000
+runAllTests
 
+setMigrationCost 300000
+runAllTests
 
-sudo echo 500000 > /sys/kernel/debug/sched/migration_cost_ns
+setMigrationCost 200000
+runAllTests
+
+setMigrationCost 100000
+runAllTests
+
+setMigrationCost 0
+runAllTests
+
 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

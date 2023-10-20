@@ -11,7 +11,7 @@ OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 32
-    for i in {0..20};do
+    for i in {0..15};do
         sudo virsh vcpupin $select_vm $i $((i + 20))
     done
 
@@ -58,7 +58,7 @@ toggle_topological_passthrough(){
     fi
     virsh define /tmp/$prob_vm.xml
     sudo bash ../utility/cleanon_startup.sh $prob_vm 32
-    for i in {0..20};do
+    for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
 

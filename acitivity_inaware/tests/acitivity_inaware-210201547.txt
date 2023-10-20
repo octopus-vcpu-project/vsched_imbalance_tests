@@ -1,0 +1,1079 @@
+Set latency to 32000000
+Running Latency benchmark img-dnn
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+
+real	0m27.715s
+user	0m13.070s
+sys	0m0.936s
+Matplotlib is building the font cache; this may take a moment.
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+svc: mean 1.143 ms | p95 0.788 ms | p99 36.724 ms | max 39.727 ms
+end2end: mean 12.654 ms | p95 36.827 ms | p99 76.141 ms | max 211.403 ms
+Running Latency benchmark moses
+./bin
+Creating lexical reordering...
+weights: 0.000 0.000 0.000 0.000 0.000 0.000 
+binary file loaded, default OFF_T: -1
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+
+real	1m0.415s
+user	1m35.221s
+sys	0m7.644s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+svc: mean 46.874 ms | p95 44.257 ms | p99 73.361 ms | max 39035.925 ms
+end2end: mean 151.934 ms | p95 115.559 ms | p99 195.207 ms | max 41955.902 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark masstree
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+1/1 mycsba/masstree
+13: now getting
+17: now getting
+3: now getting
+30: now getting
+27: now getting
+31: now getting
+5: now getting
+20: now getting
+6: now getting
+10: now getting
+25: now getting
+18: now getting
+19: now getting
+1: now getting
+22: now getting
+0: now getting
+11: now getting
+2: now getting
+28: now getting
+4: now getting
+9: now getting
+24: now getting
+29: now getting
+12: now getting
+21: now getting
+16: now getting
+15: now getting
+23: now getting
+8: now getting
+14: now getting
+26: now getting
+7: now getting
+
+real	0m39.955s
+user	2m10.073s
+sys	0m2.833s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+svc: mean 0.574 ms | p95 0.479 ms | p99 1.647 ms | max 61.178 ms
+end2end: mean 11.514 ms | p95 36.084 ms | p99 76.287 ms | max 173.081 ms
+Running Latency benchmark silo
+Database Benchmark:
+  pid: 100052
+settings:
+  par-loading : 0
+  pin-cpus    : TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+0
+  slow-exit   : 0
+  retry-txns  : 1
+  backoff-txns: 0
+  bench       : tpcc
+  scale       : 4
+  num-cpus    : 20
+  num-threads : 32
+  db-type     : ndb-proto2
+  basedir     : /home/ubuntu/Workloads/Tailbench/tailbench/silo
+  txn-flags   : 0
+  ops/worker  : 10000000
+  var-encode  : yes
+  allocator   : jemalloc
+  numa-memory : disabled
+  logfiles : []
+  assignments : []
+  disable-gc : 0
+  disable-snapshots : 0
+  stats-server-sockfile: 
+system properties:
+  btree_internal_node_size: 264
+  btree_leaf_node_size    : 312
+  tuple_prefetch          : no
+  btree_node_prefetch     : yes
+tpcc settings:
+  cross_partition_transactions : 1
+  read_only_snapshots          : 1
+  partition_locks              : 0
+  separate_tree_per_partition  : 0
+  new_order_remote_item_pct    : 1
+  new_order_fast_id_gen        : 0
+  uniform_item_dist            : 0
+  order_status_scan_hack       : 0
+  workload_mix                 : [45, 43, 4, 4, 4]
+num batches: 30
+[INFO] finished loading district
+[INFO]   * average district record length: 99 bytes
+[INFO] finished loading warehouse
+[INFO]   * average warehouse record length: 97 bytes
+[INFO] finished loading item
+[INFO]   * average item record length: 84.1739 bytes
+[INFO] finished loading order
+[INFO]   * average order_line record length: 11.2189 bytes
+[INFO]   * average oorder record length: 7.8414 bytes
+[INFO]   * average new_order record length: 12 bytes
+[INFO] finished loading customer
+[INFO]   * average customer record length: 656.931 bytes 
+[INFO] finished loading stock
+[INFO]   * average stock record length: 8 bytes
+timed region dataloading took 6657.47 ms
+DB size: 405.914 MB
+wait_an_epoch(): consistent reads happening in e-1: 4
+[0, 0, 0] txns persisted in loading phase
+table customer_0 size 120000
+table customer_name_idx_0 size 120000
+table district_0 size 40
+table history_0 size 120000
+table item_0 size 100000
+table new_order_0 size 36000
+table oorder_0 size 120000
+table oorder_c_id_idx_0 size 120000
+table order_line_0 size 1200493
+table stock_0 size 400000
+table stock_data_0 size 400000
+table warehouse_0 size 4
+starting benchmark...
+tpcc: worker id 20 => warehouses [1, 2)
+tpcc: worker id 21 => warehouses [2, 3)
+tpcc: worker id 22 => warehouses [3, 4)
+tpcc: worker id 23 => warehouses [4, 5)
+tpcc: worker id 24 => warehouses [1, 2)
+tpcc: worker id 25 => warehouses [2, 3)
+tpcc: worker id 26 => warehouses [3, 4)
+tpcc: worker id 27 => warehouses [4, 5)
+tpcc: worker id 28 => warehouses [1, 2)
+tpcc: worker id 29 => warehouses [2, 3)
+tpcc: worker id 30 => warehouses [3, 4)
+tpcc: worker id 31 => warehouses [4, 5)
+tpcc: worker id 32 => warehouses [1, 2)
+tpcc: worker id 33 => warehouses [2, 3)
+tpcc: worker id 34 => warehouses [3, 4)
+tpcc: worker id 35 => warehouses [4, 5)
+tpcc: worker id 36 => warehouses [1, 2)
+tpcc: worker id 37 => warehouses [2, 3)
+tpcc: worker id 38 => warehouses [3, 4)
+tpcc: worker id 39 => warehouses [4, 5)
+tpcc: worker id 40 => warehouses [1, 2)
+tpcc: worker id 41 => warehouses [2, 3)
+tpcc: worker id 42 => warehouses [3, 4)
+tpcc: worker id 43 => warehouses [4, 5)
+tpcc: worker id 44 => warehouses [1, 2)
+tpcc: worker id 45 => warehouses [2, 3)
+tpcc: worker id 46 => warehouses [3, 4)
+tpcc: worker id 47 => warehouses [4, 5)
+tpcc: worker id 48 => warehouses [1, 2)
+tpcc: worker id 49 => warehouses [2, 3)
+tpcc: worker id 50 => warehouses [3, 4)
+tpcc: worker id 51 => warehouses [4, 5)
+
+real	0m33.761s
+user	0m24.404s
+sys	0m1.755s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+svc: mean 0.429 ms | p95 0.481 ms | p99 0.596 ms | max 37.282 ms
+end2end: mean 11.060 ms | p95 35.922 ms | p99 65.241 ms | max 155.898 ms
+Running Latency benchmark shore
+mkdir: cannot create directory ‘scratch/log’: File exists
+mkdir: cannot create directory ‘scratch/diskrw’: File exists
+ln: failed to create symbolic link 'db-tpcc-1': File exists
+cpu_info sees 2 sockets and 14 cores
+Starting root-thread (tid = 100236)
+root-thread: ./src/tests/shore_kits.cpp:692:main: INPUTFILE (cmdfile)
+root-thread: ./src/tests/shore_kits.cpp:724:main: Starting (tpcc-normal-baseline) kit
+Creating kit @line: 738
+root-thread: ./src/tests/shore_kits.cpp:879:main: Starting Shore Environment
+SLI= disabled
+Starting linux-mon (tid = 100237)
+init: ./src/sm/shore/shore_env.cpp:1050:readconfig: Reading config file (shore.conf)
+init: ./src/sm/shore/shore_env.cpp:1060:readconfig: Reading configuration (tpcc-1)
+init: ./src/sm/shore/shore_env.cpp:1015:print_cpus: MaxCPU=(20) - ActiveCPU=(20)
+Starting init (tid = 100238)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+(db-clobberdev) (0)
+(shore-fakeiodelay) (0)
+(shore-fakeiodelay-enable) (1)
+(sys-activecpucount) (1024)
+(sys-maxcpucount) (1024)
+(-sm_bufpoolsize) (2048000)
+(-sm_diskrw) (./diskrw)
+(-sm_errlog) (info)
+(-sm_logbufsize) (81920)
+(-sm_logcount) (10)
+(-sm_logdir) (./log)
+(-sm_logging) (yes)
+(-sm_logisraw) (no)
+(-sm_logsize) (2048000)
+(-sm_num_page_writers) (1)
+(device) (./db-tpcc-1)
+(devicequota) (2048000)
+(loadatadir) (databases)
+(sf) (1)
+(system) (baseline)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+Starting bf_core_m::init_thread (tid = 100239)
+Starting bf_core_m::init_thread (tid = 100240)
+Starting bf_core_m::init_thread (tid = 100241)
+Starting bf_core_m::init_thread (tid = 100242)
+Starting flush_daemon (tid = 100243)
+Starting bf_cleaner (tid = 100245)
+Starting page_writer (tid = 100246)
+Starting chkpt_thread (tid = 100244)
+(db-clobberdev) (0)
+(shore-fakeiodelay) (0)
+(shore-fakeiodelay-enable) (1)
+(sys-activecpucount) (1024)
+(sys-maxcpucount) (1024)
+(-sm_bufpoolsize) (2048000)
+(-sm_diskrw) (./diskrw)
+(-sm_errlog) (info)
+(-sm_logbufsize) (81920)
+(-sm_logcount) (10)
+(-sm_logdir) (./log)
+(-sm_logging) (yes)
+(-sm_logisraw) (no)
+(-sm_logsize) (2048000)
+(-sm_num_page_writers) (1)
+(device) (./db-tpcc-1)
+(devicequota) (2048000)
+(loadatadir) (databases)
+(sf) (1)
+(system) (baseline)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:206:set_qf: Invalid queried factor input: 0.0
+root-thread: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:493:start: Starting ()
+root-thread: ./src/workload/tpcc/shore_tpcc_env.cpp:401:info: SF      = (1.0)
+root-thread: ./src/workload/tpcc/shore_tpcc_env.cpp:402:info: Workers = (32)
+Starting Starting work-14 (tid = Starting 100261Starting work-8 (tid = Starting work-7 (tid = Starting work-9 (tid = Starting work-1work-10 (tid = work-17Starting 100255)Starting 
+work-3100248 (tid = Starting 100250work-11) (tid =  (tid = Starting  (tid = 100254)Starting 
+work-2100256)100257)
+ (tid = 
+100264)100249)100258
+
+work-15
+ (tid = )100262))work-21
+
+
+ (tid = 100268)
+Starting work-22 (tid = 100269)
+)
+Starting work-16 (tid = 100263)
+Starting work-18 (tid = 100265)
+Starting work-23 (tid = 100270)
+Starting work-24 (tid = 100271)
+Starting root-thread: ./src/tests/shore_kits.cpp:894:main: Preparing for the next run
+work-27Starting  (tid = Starting Starting work-28Starting Starting 100274work-29work-30 (tid = )Starting root-thread: ./src/tests/shore_kits.cpp:906:main: Starting processing commands
+work-25work-26
+work-19 (tid =  (tid =  (tid = 100273100275)100277)
+100276))
+
+
+ (tid = 100272 (tid = )
+100266)
+Starting work-31 (tid = 100278)
+FILECMD: test 1 0 32 1000000 0 1 0Starting work-0 (tid = 100247)
+Starting work-13 (tid = 100260)
+root-thread: ./src/sm/shore/shore_shell.cpp:463:process_cmd_TEST: Updated SF (1.0)
+root-thread: ./src/sm/shore/shore_shell.cpp:222:print_TEST_info: 
+QueriedSF:      (1.0)
+Spread Threads: (No)
+Binding:        (NoBinding)
+NumOfThreads:   (32)
+NumOfTrxs:      (1000000)
+Trx:            (TPCC-Mix)
+Iterations:     (1)
+root-thread: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:202:set_qf: New Queried Factor: 1.0
+root-thread: ./src/tests/shore_kits.cpp:331:_cmd_TEST_impl: Iteration [1 of 1]
+root-thread: ./src/tests/shore_kits.cpp:344:_cmd_TEST_impl: begin measurement
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting CL-1Starting CL-0 (tid = 100279)
+ (tid = 100280)
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting CL-8Starting  (tid = Starting Starting CL-6CL-3 (tid =  (tid = 100282100285)CL-7 (tid = 100287))
+
+100286)
+
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting Starting CL-4 (tid = CL-9Starting Starting CL-5CL-14 (tid =  (tid =  (tid = 100293)100288
+Starting )100284)
+CL-16 (tid = 100295)
+
+100283)
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting Starting Starting CL-12Starting Starting  (tid = Starting CL-20CL-10 (tid =  (tid = CL-11CL-15 (tid = 100291100290100299CL-19)100289 (tid =  (tid = )100298))
+100294))
+
+
+
+
+Starting CL-30 (tid = 100309)
+Starting work-6 (tid = 100253)
+Starting CL-28 (tid = 100307)
+Starting CL-31 (tid = 100310)
+Starting CL-2 (tid = 100281)
+Starting CL-21 (tid = 100300)
+Starting CL-24 (tid = 100303)
+Starting CL-27 (tid = 100306)
+Starting work-12 (tid = 100259)
+Starting CL-13 (tid = 100292)
+Starting CL-17 (tid = 100296)
+Starting CL-22 (tid = 100301)
+Starting CL-25 (tid = 100304)
+Starting CL-29 (tid = 100308)
+Starting work-4 (tid = 100251)
+Starting work-20 (tid = 100267)
+Starting CL-18 (tid = 100297)
+Starting CL-23 (tid = 100302)
+Starting CL-26 (tid = 100305)
+Starting work-5 (tid = 100252)
+TBENCH_RANDSEED = linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.7) (84.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (28.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (22.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (22.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (10.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (20.0) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.9) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (14.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (3.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (42.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (9.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (28.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (13.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (23.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (14.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (10.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (9.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (37.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (21.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (39.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (15.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (10.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (38.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (53.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (45.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (18.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (5.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (40.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (7.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (20.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (4.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (47.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (42.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (10.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (3.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (43.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (46.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (23.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (22.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (42.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (28.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (12.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (50.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (22.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (7.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (38.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (22.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (43.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (48.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (16.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (54.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (50.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (23.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (3.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (63.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (15.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (21.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (16.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (9.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (9.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (40.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (20.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (47.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (13.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (15.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (9.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (43.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (14.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (41.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (18.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (5.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (3.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (56.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (4.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (16.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (23.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (41.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (5.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (16.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (60.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (14.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (12.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (55.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (10.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (5.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (39.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (51.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (57.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (38.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (52.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (40.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (53.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (45.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (39.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (50.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (40.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (44.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (44.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (52.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (36.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (63.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (44.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (47.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (20.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (28.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (46.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (46.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (23.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (20.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (21.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (36.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (14.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (12.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (36.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (47.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (17.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (4.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (23.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (47.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (26.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (18.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (6.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (13.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (18.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (20.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (55.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (19.8) (0.0)

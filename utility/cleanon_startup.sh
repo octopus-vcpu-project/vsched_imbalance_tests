@@ -63,6 +63,7 @@ running_vms=$(virsh list --state-running --name)
 while [ "$#" -gt 0 ]; do
     vm="$1"
     vcpu_count="$2"
+    set_vcpu "$vm" "$vcpu_count"
     shift 2  # Shift past the VM and its vCPU count
 
     if ! echo "$running_vms" | grep -q "^$vm$"; then
@@ -96,5 +97,5 @@ while [ "$#" -gt 0 ]; do
     fi
 
     # Set the vCPU count for the VM
-    set_vcpu "$vm" "$vcpu_count"
+    
 done

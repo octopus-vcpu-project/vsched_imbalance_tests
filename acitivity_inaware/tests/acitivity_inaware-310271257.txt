@@ -1,0 +1,847 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15718.84
+
+General statistics:
+    total time:                          30.0111s
+    total number of events:              471793
+
+Latency (ms):
+         min:                                    0.92
+         avg:                                    2.03
+         max:                                   55.69
+         95th percentile:                        5.28
+         sum:                               959408.97
+
+Threads fairness:
+    events (avg/stddev):           14743.5312/54.42
+    execution time (avg/stddev):   29.9815/0.01
+
+Set latency to 32000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 14830.49
+
+General statistics:
+    total time:                          30.1797s
+    total number of events:              447638
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.09
+         max:                                  874.12
+         95th percentile:                        1.06
+         sum:                               935615.30
+
+Threads fairness:
+    events (avg/stddev):           13988.6875/108.46
+    execution time (avg/stddev):   29.2380/0.11
+
+# started on Fri Oct 27 12:59:39 2023
+
+
+ Performance counter stats for process id '106186':
+
+        37,726,653      LLC-loads                                                               (71.41%)
+        13,074,547      LLC-load-misses                  #   34.66% of all LL-cache accesses    (71.45%)
+        19,801,475      LLC-stores                                                              (28.59%)
+       119,225,282      cache-references                                                        (42.86%)
+        22,437,949      cache-misses                     #   18.820 % of all cache refs         (57.14%)
+ 1,374,750,611,619      cycles                                                                  (57.09%)
+   613,596,887,558      instructions                     #    0.45  insn per cycle              (71.35%)
+
+      35.015408121 seconds time elapsed
+
+computing slice 16 (from row 1600 to 1699)
+computing slice 24 (from row 2400 to 2499)
+computing slice 8 (from row 800 to 899)
+computing slice 10 (from row 1000 to 1099)
+computing slice 20 (from row 2000 to 2099)
+computing slice 18 (from row 1800 to 1899)
+computing slice 12 (from row 1200 to 1299)
+computing slice 9 (from row 900 to 999)
+computing slice 13 (from row 1300 to 1399)
+computing slice 11 (from row 1100 to 1199)
+computing slice 19 (from row 1900 to 1999)
+computing slice 25 (from row 2500 to 2599)
+computing slice 22 (from row 2200 to 2299)
+computing slice 1 (from row 100 to 199)
+computing slice 21 (from row 2100 to 2199)
+computing slice 27 (from row 2700 to 2799)
+computing slice 23 (from row 2300 to 2399)
+computing slice 15 (from row 1500 to 1599)
+computing slice 17 (from row 1700 to 1799)
+computing slice 31 (from row 3100 to 3199)
+computing slice 30 (from row 3000 to 3099)
+computing slice 7 (from row 700 to 799)
+computing slice 5 (from row 500 to 599)
+computing slice 14 (from row 1400 to 1499)
+computing slice 28 (from row 2800 to 2899)
+computing slice 0 (from row 0 to 99)
+computing slice 29 (from row 2900 to 2999)
+computing slice 26 (from row 2600 to 2699)
+computing slice 3 (from row 300 to 399)
+computing slice 6 (from row 600 to 699)
+computing slice 2 (from row 200 to 299)
+computing slice 4 (from row 400 to 499)
+test 0 240
+test 1 189
+test 2 195
+test 3 148
+test 4 241
+test 5 254
+test 6 247
+test 7 253
+test 8 244
+test 9 246
+finished slice 23
+finished slice 9
+finished slice 31
+finished slice 17
+finished slice 5
+finished slice 13
+finished slice 0
+finished slice 11
+finished slice 1
+finished slice 15
+finished slice 8
+finished slice 3
+finished slice 14
+finished slice 22
+finished slice 24
+finished slice 30
+finished slice 27
+finished slice 26
+finished slice 10
+finished slice 16
+finished slice 28
+finished slice 6
+finished slice 7
+finished slice 21
+finished slice 29
+finished slice 19
+finished slice 2
+finished slice 18
+finished slice 12
+finished slice 20
+finished slice 4
+finished slice 25
+# started on Fri Oct 27 13:01:03 2023
+
+
+ Performance counter stats for process id '106186':
+
+    35,796,505,429      LLC-loads                                                               (71.44%)
+       606,924,961      LLC-load-misses                  #    1.70% of all LL-cache accesses    (71.44%)
+        70,214,968      LLC-stores                                                              (28.56%)
+    36,150,193,315      cache-references                                                        (42.85%)
+       641,869,657      cache-misses                     #    1.776 % of all cache refs         (57.12%)
+ 1,959,623,433,604      cycles                                                                  (57.12%)
+ 2,041,345,640,751      instructions                     #    1.04  insn per cycle              (71.38%)
+
+      49.634426912 seconds time elapsed
+
+Set latency to 16000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15571.48
+
+General statistics:
+    total time:                          30.0395s
+    total number of events:              467817
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.05
+         max:                                  100.14
+         95th percentile:                       21.11
+         sum:                               959548.68
+
+Threads fairness:
+    events (avg/stddev):           14619.2812/169.85
+    execution time (avg/stddev):   29.9859/0.02
+
+# started on Fri Oct 27 13:02:26 2023
+
+
+ Performance counter stats for process id '106186':
+
+        37,794,600      LLC-loads                                                               (71.43%)
+         8,939,689      LLC-load-misses                  #   23.65% of all LL-cache accesses    (71.44%)
+        14,297,743      LLC-stores                                                              (28.57%)
+       143,274,737      cache-references                                                        (42.85%)
+        15,670,950      cache-misses                     #   10.938 % of all cache refs         (57.12%)
+ 1,372,629,985,701      cycles                                                                  (57.09%)
+   618,495,471,890      instructions                     #    0.45  insn per cycle              (71.36%)
+
+      32.647323808 seconds time elapsed
+
+computing slice 0 (from row 0 to 99)
+computing slice 5 (from row 500 to 599)
+computing slice 26 (from row 2600 to 2699)
+computing slice 20 (from row 2000 to 2099)
+computing slice 10 (from row 1000 to 1099)
+computing slice 14 (from row 1400 to 1499)
+computing slice 18 (from row 1800 to 1899)
+computing slice 24 (from row 2400 to 2499)
+computing slice 16 (from row 1600 to 1699)
+computing slice 7 (from row 700 to 799)
+computing slice 21 (from row 2100 to 2199)
+computing slice 17 (from row 1700 to 1799)
+computing slice 23 (from row 2300 to 2399)
+computing slice 27 (from row 2700 to 2799)
+computing slice 25 (from row 2500 to 2599)
+computing slice 31 (from row 3100 to 3199)
+computing slice 2 (from row 200 to 299)
+computing slice 4 (from row 400 to 499)
+computing slice 1 (from row 100 to 199)
+computing slice 19 (from row 1900 to 1999)
+computing slice 29 (from row 2900 to 2999)
+computing slice 13 (from row 1300 to 1399)
+computing slice 3 (from row 300 to 399)
+computing slice 8 (from row 800 to 899)
+computing slice 9 (from row 900 to 999)
+computing slice 11 (from row 1100 to 1199)
+computing slice 15 (from row 1500 to 1599)
+computing slice 12 (from row 1200 to 1299)
+computing slice 28 (from row 2800 to 2899)
+computing slice 30 (from row 3000 to 3099)
+computing slice 6 (from row 600 to 699)
+computing slice 22 (from row 2200 to 2299)
+test 0 126
+test 1 215
+test 2 240
+test 3 219
+test 4 256
+test 5 246
+test 6 250
+test 7 242
+test 8 256
+test 9 239
+finished slice 6
+finished slice 18
+finished slice 14
+finished slice 28
+finished slice 1
+finished slice 22
+finished slice 26
+finished slice 30
+finished slice 3
+finished slice 17
+finished slice 19
+finished slice 11
+finished slice 29
+finished slice 9
+finished slice 0
+finished slice 12
+finished slice 21
+finished slice 13
+finished slice 27
+finished slice 24
+finished slice 23
+finished slice 2
+finished slice 10
+finished slice 15
+finished slice 4
+finished slice 31
+finished slice 20
+finished slice 7
+finished slice 8
+finished slice 5
+finished slice 16
+finished slice 25
+# started on Fri Oct 27 13:03:43 2023
+
+
+ Performance counter stats for process id '106186':
+
+    35,893,779,302      LLC-loads                                                               (71.43%)
+       386,279,552      LLC-load-misses                  #    1.08% of all LL-cache accesses    (71.44%)
+        17,408,023      LLC-stores                                                              (28.57%)
+    36,219,394,580      cache-references                                                        (42.84%)
+       398,618,791      cache-misses                     #    1.101 % of all cache refs         (57.11%)
+ 1,803,385,938,455      cycles                                                                  (57.10%)
+ 2,009,000,624,112      instructions                     #    1.11  insn per cycle              (71.37%)
+
+      43.291459041 seconds time elapsed
+
+Set latency to 8000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15558.49
+
+General statistics:
+    total time:                          30.0199s
+    total number of events:              467123
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.05
+         max:                                   62.01
+         95th percentile:                       12.98
+         sum:                               959646.95
+
+Threads fairness:
+    events (avg/stddev):           14597.5938/158.33
+    execution time (avg/stddev):   29.9890/0.01
+
+# started on Fri Oct 27 13:04:57 2023
+
+
+ Performance counter stats for process id '106186':
+
+        49,535,954      LLC-loads                                                               (71.43%)
+        10,462,817      LLC-load-misses                  #   21.12% of all LL-cache accesses    (71.44%)
+        31,984,455      LLC-stores                                                              (28.57%)
+       223,633,111      cache-references                                                        (42.85%)
+        23,685,765      cache-misses                     #   10.591 % of all cache refs         (57.13%)
+ 1,372,049,383,955      cycles                                                                  (57.11%)
+   611,701,820,858      instructions                     #    0.45  insn per cycle              (71.37%)
+
+      31.807019452 seconds time elapsed
+
+computing slice 8 (from row 800 to 899)
+computing slice 10 (from row 1000 to 1099)
+computing slice 19 (from row 1900 to 1999)
+computing slice 14 (from row 1400 to 1499)
+computing slice 16 (from row 1600 to 1699)
+computing slice 6 (from row 600 to 699)
+computing slice 4 (from row 400 to 499)
+computing slice 18 (from row 1800 to 1899)
+computing slice 22 (from row 2200 to 2299)
+computing slice 2 (from row 200 to 299)
+computing slice 26 (from row 2600 to 2699)
+computing slice 20 (from row 2000 to 2099)
+computing slice 28 (from row 2800 to 2899)
+computing slice 0 (from row 0 to 99)
+computing slice 29 (from row 2900 to 2999)
+computing slice 23 (from row 2300 to 2399)
+computing slice 15 (from row 1500 to 1599)
+computing slice 13 (from row 1300 to 1399)
+computing slice 3 (from row 300 to 399)
+computing slice 9 (from row 900 to 999)
+computing slice 7 (from row 700 to 799)
+computing slice 27 (from row 2700 to 2799)
+computing slice 5 (from row 500 to 599)
+computing slice 21 (from row 2100 to 2199)
+computing slice 30 (from row 3000 to 3099)
+computing slice 17 (from row 1700 to 1799)
+computing slice 11 (from row 1100 to 1199)
+computing slice 1 (from row 100 to 199)
+computing slice 25 (from row 2500 to 2599)
+computing slice 24 (from row 2400 to 2499)
+computing slice 12 (from row 1200 to 1299)
+computing slice 31 (from row 3100 to 3199)
+test 0 220
+test 1 251
+test 2 252
+test 3 246
+test 4 251
+test 5 252
+test 6 241
+test 7 256
+test 8 250
+test 9 249
+finished slice 18
+finished slice 4
+finished slice 19
+finished slice 10
+finished slice 16
+finished slice 14
+finished slice 28
+finished slice 2
+finished slice 31
+finished slice 8
+finished slice 12
+finished slice 6
+finished slice 25
+finished slice 1
+finished slice 13
+finished slice 27
+finished slice 3
+finished slice 26
+finished slice 11
+finished slice 22
+finished slice 21
+finished slice 24
+finished slice 20
+finished slice 0
+finished slice 30
+finished slice 29
+finished slice 7
+finished slice 5
+finished slice 15
+finished slice 17
+finished slice 23
+finished slice 9
+# started on Fri Oct 27 13:06:11 2023
+
+
+ Performance counter stats for process id '106186':
+
+    35,490,051,556      LLC-loads                                                               (71.43%)
+       294,215,649      LLC-load-misses                  #    0.83% of all LL-cache accesses    (71.44%)
+        17,908,328      LLC-stores                                                              (28.57%)
+    35,873,003,850      cache-references                                                        (42.85%)
+       305,206,695      cache-misses                     #    0.851 % of all cache refs         (57.13%)
+ 1,778,901,728,065      cycles                                                                  (57.11%)
+ 2,008,928,529,037      instructions                     #    1.13  insn per cycle              (71.38%)
+
+      41.747906267 seconds time elapsed
+
+Set latency to 4000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15571.74
+
+General statistics:
+    total time:                          30.0164s
+    total number of events:              467468
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.05
+         max:                                   30.04
+         95th percentile:                        9.06
+         sum:                               959415.10
+
+Threads fairness:
+    events (avg/stddev):           14608.3750/170.10
+    execution time (avg/stddev):   29.9817/0.01
+
+# started on Fri Oct 27 13:07:24 2023
+
+
+ Performance counter stats for process id '106186':
+
+        45,354,242      LLC-loads                                                               (71.43%)
+         3,285,099      LLC-load-misses                  #    7.24% of all LL-cache accesses    (71.44%)
+         5,369,355      LLC-stores                                                              (28.57%)
+       247,048,278      cache-references                                                        (42.84%)
+         5,648,223      cache-misses                     #    2.286 % of all cache refs         (57.12%)
+ 1,369,377,746,561      cycles                                                                  (57.10%)
+   622,060,421,359      instructions                     #    0.45  insn per cycle              (71.38%)
+
+      31.206707569 seconds time elapsed
+
+computing slice 5 (from row 500 to 599)
+computing slice 1 (from row 100 to 199)
+computing slice 27 (from row 2700 to 2799)
+computing slice 15 (from row 1500 to 1599)
+computing slice 7 (from row 700 to 799)
+computing slice 19 (from row 1900 to 1999)
+computing slice 0 (from row 0 to 99)
+computing slice 21 (from row 2100 to 2199)
+computing slice 24 (from row 2400 to 2499)
+computing slice 18 (from row 1800 to 1899)
+computing slice 16 (from row 1600 to 1699)
+computing slice 22 (from row 2200 to 2299)
+computing slice 2 (from row 200 to 299)
+computing slice 12 (from row 1200 to 1299)
+computing slice 25 (from row 2500 to 2599)
+computing slice 3 (from row 300 to 399)
+computing slice 11 (from row 1100 to 1199)
+computing slice 10 (from row 1000 to 1099)
+computing slice 26 (from row 2600 to 2699)
+computing slice 23 (from row 2300 to 2399)
+computing slice 17 (from row 1700 to 1799)
+computing slice 13 (from row 1300 to 1399)
+computing slice 4 (from row 400 to 499)
+computing slice 6 (from row 600 to 699)
+computing slice 14 (from row 1400 to 1499)
+computing slice 8 (from row 800 to 899)
+computing slice 9 (from row 900 to 999)
+computing slice 20 (from row 2000 to 2099)
+computing slice 28 (from row 2800 to 2899)
+computing slice 30 (from row 3000 to 3099)
+computing slice 29 (from row 2900 to 2999)
+computing slice 31 (from row 3100 to 3199)
+test 0 235
+test 1 242
+test 2 250
+test 3 255
+test 4 248
+test 5 241
+test 6 253
+test 7 255
+test 8 250
+test 9 246
+finished slice 3
+finished slice 15
+finished slice 1
+finished slice 23
+finished slice 9
+finished slice 21
+finished slice 19
+finished slice 27
+finished slice 11
+finished slice 13
+finished slice 17
+finished slice 0
+finished slice 4
+finished slice 5
+finished slice 8
+finished slice 20
+finished slice 10
+finished slice 16
+finished slice 31
+finished slice 22
+finished slice 24
+finished slice 29
+finished slice 26
+finished slice 7
+finished slice 14
+finished slice 18
+finished slice 30
+finished slice 6
+finished slice 12
+finished slice 28
+finished slice 2
+finished slice 25
+# started on Fri Oct 27 13:08:36 2023
+
+
+ Performance counter stats for process id '106186':
+
+    35,317,275,656      LLC-loads                                                               (71.42%)
+       293,357,103      LLC-load-misses                  #    0.83% of all LL-cache accesses    (71.43%)
+        18,504,970      LLC-stores                                                              (28.58%)
+    35,781,786,099      cache-references                                                        (42.86%)
+       304,298,580      cache-misses                     #    0.850 % of all cache refs         (57.13%)
+ 1,775,566,081,403      cycles                                                                  (57.11%)
+ 2,009,505,644,048      instructions                     #    1.13  insn per cycle              (71.38%)
+
+      41.035492922 seconds time elapsed
+
+Set latency to 2000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15322.73
+
+General statistics:
+    total time:                          30.0125s
+    total number of events:              459965
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.07
+         max:                                  240.56
+         95th percentile:                        9.06
+         sum:                               954177.14
+
+Threads fairness:
+    events (avg/stddev):           14373.9062/174.79
+    execution time (avg/stddev):   29.8180/0.03
+
+# started on Fri Oct 27 13:09:49 2023
+
+
+ Performance counter stats for process id '106186':
+
+        60,317,495      LLC-loads                                                               (71.43%)
+         4,714,813      LLC-load-misses                  #    7.82% of all LL-cache accesses    (71.44%)
+         6,984,411      LLC-stores                                                              (28.57%)
+       314,696,081      cache-references                                                        (42.85%)
+         7,092,632      cache-misses                     #    2.254 % of all cache refs         (57.13%)
+ 1,369,714,262,445      cycles                                                                  (57.11%)
+   621,140,358,994      instructions                     #    0.45  insn per cycle              (71.38%)
+
+      30.946784671 seconds time elapsed
+
+computing slice 28 (from row 2800 to 2899)
+computing slice 21 (from row 2100 to 2199)
+computing slice 5 (from row 500 to 599)
+computing slice 15 (from row 1500 to 1599)
+computing slice 7 (from row 700 to 799)
+computing slice 29 (from row 2900 to 2999)
+computing slice 17 (from row 1700 to 1799)
+computing slice 23 (from row 2300 to 2399)
+computing slice 27 (from row 2700 to 2799)
+computing slice 0 (from row 0 to 99)
+computing slice 18 (from row 1800 to 1899)
+computing slice 26 (from row 2600 to 2699)
+computing slice 2 (from row 200 to 299)
+computing slice 4 (from row 400 to 499)
+computing slice 8 (from row 800 to 899)
+computing slice 1 (from row 100 to 199)
+computing slice 22 (from row 2200 to 2299)
+computing slice 30 (from row 3000 to 3099)
+computing slice 16 (from row 1600 to 1699)
+computing slice 6 (from row 600 to 699)
+computing slice 31 (from row 3100 to 3199)
+computing slice 25 (from row 2500 to 2599)
+computing slice 19 (from row 1900 to 1999)
+computing slice 11 (from row 1100 to 1199)
+computing slice 20 (from row 2000 to 2099)
+computing slice 3 (from row 300 to 399)
+computing slice 9 (from row 900 to 999)
+computing slice 13 (from row 1300 to 1399)
+computing slice 14 (from row 1400 to 1499)
+computing slice 24 (from row 2400 to 2499)
+computing slice 12 (from row 1200 to 1299)
+computing slice 10 (from row 1000 to 1099)
+test 0 221
+test 1 192
+test 2 246
+test 3 246
+test 4 230
+test 5 255
+test 6 252
+test 7 239
+test 8 240
+test 9 248
+finished slice 24
+finished slice 0
+finished slice 26
+finished slice 28
+finished slice 18
+finished slice 16
+finished slice 12
+finished slice 6
+finished slice 31
+finished slice 4
+finished slice 2
+finished slice 5
+finished slice 25
+finished slice 27
+finished slice 13
+finished slice 17
+finished slice 15
+finished slice 19
+finished slice 7
+finished slice 30
+finished slice 14
+finished slice 20
+finished slice 9
+finished slice 3
+finished slice 21
+finished slice 1
+finished slice 22
+finished slice 23
+finished slice 10
+finished slice 8
+finished slice 29
+finished slice 11
+# started on Fri Oct 27 13:11:03 2023
+
+
+ Performance counter stats for process id '106186':
+
+    35,692,235,730      LLC-loads                                                               (71.42%)
+       230,480,010      LLC-load-misses                  #    0.65% of all LL-cache accesses    (71.44%)
+        21,745,561      LLC-stores                                                              (28.58%)
+    36,290,814,646      cache-references                                                        (42.86%)
+       238,525,738      cache-misses                     #    0.657 % of all cache refs         (57.13%)
+ 1,810,999,385,594      cycles                                                                  (57.11%)
+ 2,010,888,271,673      instructions                     #    1.11  insn per cycle              (71.38%)
+
+      41.647819385 seconds time elapsed
+
+Set latency to 3000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15535.00
+
+General statistics:
+    total time:                          30.0127s
+    total number of events:              466298
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.06
+         max:                                   42.87
+         95th percentile:                        7.17
+         sum:                               959374.64
+
+Threads fairness:
+    events (avg/stddev):           14571.8125/171.31
+    execution time (avg/stddev):   29.9805/0.01
+
+# started on Fri Oct 27 13:12:16 2023
+
+
+ Performance counter stats for process id '106186':
+
+        60,336,327      LLC-loads                                                               (71.43%)
+         3,815,872      LLC-load-misses                  #    6.32% of all LL-cache accesses    (71.43%)
+         6,254,283      LLC-stores                                                              (28.57%)
+       310,801,997      cache-references                                                        (42.85%)
+         5,914,198      cache-misses                     #    1.903 % of all cache refs         (57.14%)
+ 1,369,822,651,702      cycles                                                                  (57.12%)
+   621,873,859,723      instructions                     #    0.45  insn per cycle              (71.39%)
+
+      30.935785874 seconds time elapsed
+
+computing slice 11 (from row 1100 to 1199)
+computing slice 9 (from row 900 to 999)
+computing slice 21 (from row 2100 to 2199)
+computing slice 5 (from row 500 to 599)
+computing slice 3 (from row 300 to 399)
+computing slice 13 (from row 1300 to 1399)
+computing slice 23 (from row 2300 to 2399)
+computing slice 25 (from row 2500 to 2599)
+computing slice 7 (from row 700 to 799)
+computing slice 17 (from row 1700 to 1799)
+computing slice 29 (from row 2900 to 2999)
+computing slice 15 (from row 1500 to 1599)
+computing slice 12 (from row 1200 to 1299)
+computing slice 8 (from row 800 to 899)
+computing slice 14 (from row 1400 to 1499)
+computing slice 10 (from row 1000 to 1099)
+computing slice 27 (from row 2700 to 2799)
+computing slice 18 (from row 1800 to 1899)
+computing slice 28 (from row 2800 to 2899)
+computing slice 16 (from row 1600 to 1699)
+computing slice 22 (from row 2200 to 2299)
+computing slice 2 (from row 200 to 299)
+computing slice 0 (from row 0 to 99)
+computing slice 24 (from row 2400 to 2499)
+computing slice 4 (from row 400 to 499)
+computing slice 20 (from row 2000 to 2099)
+computing slice 26 (from row 2600 to 2699)
+computing slice 1 (from row 100 to 199)
+computing slice 6 (from row 600 to 699)
+computing slice 30 (from row 3000 to 3099)
+computing slice 19 (from row 1900 to 1999)
+computing slice 31 (from row 3100 to 3199)
+test 0 222
+test 1 252
+test 2 241
+test 3 241
+test 4 238
+test 5 255
+test 6 232
+test 7 248
+test 8 248
+test 9 252
+finished slice 8
+finished slice 21
+finished slice 17
+finished slice 10
+finished slice 5
+finished slice 13
+finished slice 16
+finished slice 23
+finished slice 25
+finished slice 7
+finished slice 18
+finished slice 12
+finished slice 20
+finished slice 27
+finished slice 30
+finished slice 11
+finished slice 15
+finished slice 0
+finished slice 1
+finished slice 19
+finished slice 29
+finished slice 6
+finished slice 14
+finished slice 2
+finished slice 24
+finished slice 26
+finished slice 3
+finished slice 22
+finished slice 9
+finished slice 31
+finished slice 4
+finished slice 28
+# started on Fri Oct 27 13:13:29 2023
+
+
+ Performance counter stats for process id '106186':
+
+    35,853,588,431      LLC-loads                                                               (71.41%)
+       217,752,392      LLC-load-misses                  #    0.61% of all LL-cache accesses    (71.42%)
+        18,444,130      LLC-stores                                                              (28.59%)
+    36,423,034,321      cache-references                                                        (42.88%)
+       225,551,829      cache-misses                     #    0.619 % of all cache refs         (57.16%)
+ 1,807,081,547,206      cycles                                                                  (57.14%)
+ 2,008,308,519,508      instructions                     #    1.11  insn per cycle              (71.42%)
+
+      40.736785862 seconds time elapsed
+

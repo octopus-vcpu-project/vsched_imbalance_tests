@@ -66,11 +66,11 @@ void* multiply(void* param)
      {  
         for (j = 0; j < SIZE; j++)
         {
-	  C[i][j] = 0;
+	          C[i][j] = 0;
           for ( k = 0; k < SIZE; k++)
               C[i][j] += A[i][k]*B[k][j];
         }
-	myparam->counter++;
+	      myparam->counter++;
      }
   }
   printf("finished slice %d\n", s);
@@ -114,9 +114,10 @@ int main(int argc, char* argv[])
   {
 	usleep(atoi(argv[2]) * 100000); //1 second
 	if(argc==3) {
-	        total = 0;
-        	for(j = 0; j < num_thrd; j++)
-			total = total + params[j].counter;
+	    total = 0;
+    for(j = 0; j < num_thrd; j++){
+		total = total + params[j].counter;
+    }
 		printf("%d %lu\n", i, total - last_total);
 		fprintf(f, "%d %lu\n", i, total - last_total);
 		fflush(stdout);

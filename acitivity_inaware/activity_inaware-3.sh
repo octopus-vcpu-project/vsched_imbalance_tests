@@ -64,10 +64,10 @@ runTest(){
     test_to_run=$1
     ssh ubuntu@$prob_vm "$test_to_run"  >> "$OUTPUT_FILE" 2>&1
     perf_output="perf.txt"
-    sudo perf stat -B -o "perf.txt" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+    ssh ubuntu@$prob_vm "sudo perf stat -B -o perf.txt -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions" &
     ssh ubuntu@$prob_vm "$test_to_run"  
     sudo kill -s SIGINT $(pidof perf)
-    cat "perf.txt" >> $OUTPUT_FILE
+    ssh ubuntu@$prob_vm "cat perf.txt" >> $OUTPUT_FILE
 }
 
 

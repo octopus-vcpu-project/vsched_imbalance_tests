@@ -66,7 +66,7 @@ runTest(){
     perf_output="perf.txt"
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -B -o perf.txt -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions" &
     ssh ubuntu@$prob_vm "$test_to_run"  
-    ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
+    ssh ubuntu@$prob_vm "sudo pkill -s SIGINT \$(pidof perf)"
     ssh ubuntu@$prob_vm "cat perf.txt" >> $OUTPUT_FILE
 }
 

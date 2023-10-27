@@ -70,7 +70,7 @@ runAllTests(){
    ssh ubuntu@$prob_vm "sysbench --threads=48 --time=30 cpu run" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sysbench --threads=48 --time=30 cpu run" >> "$OUTPUT_FILE"
+   ssh ubuntu@$prob_vm "./vsched_tests/matmul.out 32 30" >> "$OUTPUT_FILE"
 }
 
 

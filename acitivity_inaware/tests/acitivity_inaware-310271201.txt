@@ -1,0 +1,847 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 14227.29
+
+General statistics:
+    total time:                          30.0254s
+    total number of events:              427233
+
+Latency (ms):
+         min:                                    0.92
+         avg:                                    2.09
+         max:                                 1995.47
+         95th percentile:                       12.98
+         sum:                               894670.89
+
+Threads fairness:
+    events (avg/stddev):           13351.0312/67.97
+    execution time (avg/stddev):   27.9585/0.37
+
+Set latency to 32000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15754.27
+
+General statistics:
+    total time:                          30.1440s
+    total number of events:              474958
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.02
+         max:                                  125.68
+         95th percentile:                        1.04
+         sum:                               958143.01
+
+Threads fairness:
+    events (avg/stddev):           14842.4375/58.33
+    execution time (avg/stddev):   29.9420/0.06
+
+# started on Fri Oct 27 12:04:06 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      34.764935025 seconds time elapsed
+
+computing slice 1 (from row 31 to 61)
+finished slice 1
+computing slice 10 (from row 312 to 342)
+finished slice 10
+computing slice 18 (from row 562 to 592)
+finished slice 18
+computing slice 20 (from row 625 to 655)
+finished slice 20
+computing slice 12 (from row 375 to 405)
+finished slice 12
+computing slice 8 (from row 250 to 280)
+finished slice 8
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 0 (from row 0 to 30)
+finished slice 0
+computing slice 22 (from row 687 to 717)
+finished slice 22
+computing slice 4 (from row 125 to 155)
+finished slice 4
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 19 (from row 593 to 624)
+finished slice 19
+computing slice 23 (from row 718 to 749)
+finished slice 23
+computing slice 25 (from row 781 to 811)
+finished slice 25
+computing slice 9 (from row 281 to 311)
+finished slice 9
+computing slice 21 (from row 656 to 686)
+finished slice 21
+computing slice 11 (from row 343 to 374)
+finished slice 11
+computing slice 17 (from row 531 to 561)
+finished slice 17
+computing slice 31 (from row 968 to 999)
+finished slice 31
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 7 (from row 218 to 249)
+finished slice 7
+computing slice 28 (from row 875 to 905)
+finished slice 28
+computing slice 2 (from row 62 to 92)
+computing slice 15 (from row 468 to 499)
+finished slice 15
+computing slice 14 (from row 437 to 467)
+finished slice 14
+finished slice 2
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 26 (from row 812 to 842)
+finished slice 26
+computing slice 13 (from row 406 to 436)
+finished slice 13
+computing slice 27 (from row 843 to 874)
+finished slice 27
+computing slice 16 (from row 500 to 530)
+finished slice 16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+# started on Fri Oct 27 12:05:26 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      36.240104763 seconds time elapsed
+
+Set latency to 16000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 14862.41
+
+General statistics:
+    total time:                          30.0428s
+    total number of events:              446611
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.05
+         max:                                  917.04
+         95th percentile:                       17.01
+         sum:                               916401.48
+
+Threads fairness:
+    events (avg/stddev):           13956.5938/148.84
+    execution time (avg/stddev):   28.6375/0.29
+
+# started on Fri Oct 27 12:06:44 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      34.035692016 seconds time elapsed
+
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 9 (from row 281 to 311)
+computing slice 17 (from row 531 to 561)
+finished slice 17
+computing slice 15 (from row 468 to 499)
+finished slice 15
+computing slice 25 (from row 781 to 811)
+computing slice 27 (from row 843 to 874)
+finished slice 27
+finished slice 9
+finished slice 25
+computing slice 14 (from row 437 to 467)
+computing slice 10 (from row 312 to 342)
+computing slice 0 (from row 0 to 30)
+finished slice 0
+computing slice 2 (from row 62 to 92)
+finished slice 2
+computing slice 4 (from row 125 to 155)
+computing slice 11 (from row 343 to 374)
+computing slice 23 (from row 718 to 749)
+computing slice 8 (from row 250 to 280)
+finished slice 8
+computing slice 1 (from row 31 to 61)
+finished slice 1
+computing slice 18 (from row 562 to 592)
+finished slice 10
+computing slice 21 (from row 656 to 686)
+finished slice 4
+finished slice 11
+finished slice 14
+finished slice 21
+finished slice 18
+computing slice 20 (from row 625 to 655)
+finished slice 20
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 26 (from row 812 to 842)
+finished slice 26
+computing slice 12 (from row 375 to 405)
+finished slice 12
+computing slice 22 (from row 687 to 717)
+finished slice 22
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 19 (from row 593 to 624)
+finished slice 19
+computing slice 13 (from row 406 to 436)
+finished slice 13
+computing slice 7 (from row 218 to 249)
+finished slice 7
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 28 (from row 875 to 905)
+finished slice 28
+computing slice 31 (from row 968 to 999)
+finished slice 31
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 16 (from row 500 to 530)
+finished slice 16
+finished slice 23
+computing slice 30 (from row 937 to 967)
+finished slice 30
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+# started on Fri Oct 27 12:07:55 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      30.144816954 seconds time elapsed
+
+Set latency to 8000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15061.20
+
+General statistics:
+    total time:                          30.0159s
+    total number of events:              452136
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.12
+         max:                                  501.04
+         95th percentile:                       12.98
+         sum:                               958968.72
+
+Threads fairness:
+    events (avg/stddev):           14129.2500/180.99
+    execution time (avg/stddev):   29.9678/0.01
+
+# started on Fri Oct 27 12:09:02 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      31.644116310 seconds time elapsed
+
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 4 (from row 125 to 155)
+finished slice 4
+computing slice 16 (from row 500 to 530)
+computing slice 8 (from row 250 to 280)
+computing slice 28 (from row 875 to 905)
+computing slice 12 (from row 375 to 405)
+finished slice 8
+computing slice 26 (from row 812 to 842)
+finished slice 16
+finished slice 26
+finished slice 28
+computing slice 14 (from row 437 to 467)
+computing slice 10 (from row 312 to 342)
+finished slice 14
+finished slice 10
+computing slice 22 (from row 687 to 717)
+finished slice 22
+computing slice 21 (from row 656 to 686)
+finished slice 21
+computing slice 9 (from row 281 to 311)
+finished slice 9
+finished slice 12
+computing slice 30 (from row 937 to 967)
+computing slice 13 (from row 406 to 436)
+computing slice 17 (from row 531 to 561)
+finished slice 17
+finished slice 30
+computing slice 5 (from row 156 to 186)
+computing slice 31 (from row 968 to 999)
+finished slice 5
+finished slice 31
+computing slice 7 (from row 218 to 249)
+finished slice 7
+computing slice 23 (from row 718 to 749)
+finished slice 23
+computing slice 11 (from row 343 to 374)
+computing slice 19 (from row 593 to 624)
+finished slice 19
+finished slice 11
+finished slice 13
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 27 (from row 843 to 874)
+finished slice 27
+computing slice 20 (from row 625 to 655)
+finished slice 20
+computing slice 2 (from row 62 to 92)
+computing slice 25 (from row 781 to 811)
+finished slice 25
+finished slice 2
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 15 (from row 468 to 499)
+finished slice 15
+computing slice 18 (from row 562 to 592)
+finished slice 18
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 0 (from row 0 to 30)
+finished slice 0
+computing slice 1 (from row 31 to 61)
+finished slice 1
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+# started on Fri Oct 27 12:10:08 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      30.129809581 seconds time elapsed
+
+Set latency to 4000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15555.25
+
+General statistics:
+    total time:                          30.0159s
+    total number of events:              466963
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.05
+         max:                                   68.64
+         95th percentile:                        9.06
+         sum:                               959319.62
+
+Threads fairness:
+    events (avg/stddev):           14592.5938/170.85
+    execution time (avg/stddev):   29.9787/0.01
+
+# started on Fri Oct 27 12:11:14 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      31.703927983 seconds time elapsed
+
+computing slice 8 (from row 250 to 280)
+computing slice 26 (from row 812 to 842)
+finished slice 26
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 28 (from row 875 to 905)
+finished slice 28
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 10 (from row 312 to 342)
+computing slice 31 (from row 968 to 999)
+finished slice 31
+computing slice 29 (from row 906 to 936)
+computing slice 17 (from row 531 to 561)
+computing slice 15 (from row 468 to 499)
+computing slice 21 (from row 656 to 686)
+finished slice 10
+computing slice 27 (from row 843 to 874)
+computing slice 25 (from row 781 to 811)
+computing slice 19 (from row 593 to 624)
+finished slice 17
+finished slice 15
+finished slice 25
+finished slice 19
+finished slice 27
+computing slice 23 (from row 718 to 749)
+finished slice 23
+computing slice 13 (from row 406 to 436)
+finished slice 13
+computing slice 20 (from row 625 to 655)
+finished slice 20
+computing slice 16 (from row 500 to 530)
+computing slice 12 (from row 375 to 405)
+finished slice 16
+finished slice 12
+finished slice 29
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 1 (from row 31 to 61)
+computing slice 11 (from row 343 to 374)
+finished slice 11
+computing slice 9 (from row 281 to 311)
+computing slice 2 (from row 62 to 92)
+finished slice 9
+finished slice 2
+computing slice 4 (from row 125 to 155)
+computing slice 0 (from row 0 to 30)
+finished slice 4
+finished slice 0
+finished slice 1
+computing slice 22 (from row 687 to 717)
+finished slice 22
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 18 (from row 562 to 592)
+finished slice 18
+computing slice 14 (from row 437 to 467)
+finished slice 14
+computing slice 7 (from row 218 to 249)
+finished slice 7
+finished slice 21
+computing slice 6 (from row 187 to 217)
+finished slice 6
+finished slice 8
+0 31
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+# started on Fri Oct 27 12:12:19 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      30.275492096 seconds time elapsed
+
+Set latency to 2000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15506.68
+
+General statistics:
+    total time:                          30.0118s
+    total number of events:              465436
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.06
+         max:                                   80.75
+         95th percentile:                        5.09
+         sum:                               959339.12
+
+Threads fairness:
+    events (avg/stddev):           14544.8750/174.97
+    execution time (avg/stddev):   29.9793/0.01
+
+# started on Fri Oct 27 12:13:23 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      31.512022241 seconds time elapsed
+
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 28 (from row 875 to 905)
+computing slice 24 (from row 750 to 780)
+computing slice 26 (from row 812 to 842)
+computing slice 10 (from row 312 to 342)
+computing slice 4 (from row 125 to 155)
+computing slice 20 (from row 625 to 655)
+finished slice 26
+computing slice 8 (from row 250 to 280)
+computing slice 2 (from row 62 to 92)
+finished slice 4
+finished slice 8
+finished slice 28
+computing slice 18 (from row 562 to 592)
+computing slice 16 (from row 500 to 530)
+finished slice 18
+finished slice 2
+finished slice 24
+finished slice 10
+finished slice 16
+computing slice 12 (from row 375 to 405)
+computing slice 31 (from row 968 to 999)
+finished slice 20
+computing slice 22 (from row 687 to 717)
+finished slice 12
+finished slice 22
+finished slice 31
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 15 (from row 468 to 499)
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 7 (from row 218 to 249)
+computing slice 23 (from row 718 to 749)
+computing slice 0 (from row 0 to 30)
+computing slice 1 (from row 31 to 61)
+computing slice 11 (from row 343 to 374)
+computing slice 13 (from row 406 to 436)
+finished slice 23
+finished slice 13
+computing slice 21 (from row 656 to 686)
+finished slice 11
+computing slice 14 (from row 437 to 467)
+computing slice 29 (from row 906 to 936)
+computing slice 17 (from row 531 to 561)
+finished slice 14
+finished slice 29
+finished slice 1
+computing slice 27 (from row 843 to 874)
+finished slice 17
+finished slice 27
+computing slice 19 (from row 593 to 624)
+computing slice 25 (from row 781 to 811)
+finished slice 19
+finished slice 25
+finished slice 0
+computing slice 3 (from row 93 to 124)
+finished slice 3
+finished slice 21
+finished slice 15
+finished slice 7
+computing slice 9 (from row 281 to 311)
+finished slice 9
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+# started on Fri Oct 27 12:14:28 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      30.179748010 seconds time elapsed
+
+Set latency to 3000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 14765.66
+
+General statistics:
+    total time:                          30.0119s
+    total number of events:              443200
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.07
+         max:                                  655.74
+         95th percentile:                        9.06
+         sum:                               919380.38
+
+Threads fairness:
+    events (avg/stddev):           13850.0000/174.00
+    execution time (avg/stddev):   28.7306/0.24
+
+# started on Fri Oct 27 12:15:31 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      31.496120258 seconds time elapsed
+
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 6 (from row 187 to 217)
+computing slice 1 (from row 31 to 61)
+computing slice 18 (from row 562 to 592)
+computing slice 16 (from row 500 to 530)
+computing slice 20 (from row 625 to 655)
+computing slice 8 (from row 250 to 280)
+computing slice 14 (from row 437 to 467)
+computing slice 24 (from row 750 to 780)
+finished slice 20
+finished slice 18
+computing slice 0 (from row 0 to 30)
+computing slice 28 (from row 875 to 905)
+finished slice 0
+computing slice 26 (from row 812 to 842)
+finished slice 24
+computing slice 4 (from row 125 to 155)
+finished slice 6
+computing slice 10 (from row 312 to 342)
+finished slice 10
+finished slice 4
+finished slice 1
+computing slice 22 (from row 687 to 717)
+finished slice 8
+finished slice 22
+finished slice 28
+computing slice 25 (from row 781 to 811)
+finished slice 25
+computing slice 27 (from row 843 to 874)
+computing slice 31 (from row 968 to 999)
+computing slice 13 (from row 406 to 436)
+computing slice 15 (from row 468 to 499)
+computing slice 19 (from row 593 to 624)
+finished slice 13
+computing slice 11 (from row 343 to 374)
+finished slice 19
+finished slice 31
+finished slice 15
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 9 (from row 281 to 311)
+finished slice 9
+computing slice 17 (from row 531 to 561)
+computing slice 21 (from row 656 to 686)
+finished slice 21
+computing slice 7 (from row 218 to 249)
+finished slice 7
+finished slice 17
+finished slice 16
+finished slice 11
+finished slice 14
+computing slice 3 (from row 93 to 124)
+computing slice 2 (from row 62 to 92)
+finished slice 2
+finished slice 3
+finished slice 27
+computing slice 23 (from row 718 to 749)
+finished slice 23
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 12 (from row 375 to 405)
+finished slice 12
+finished slice 26
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+# started on Fri Oct 27 12:16:36 2023
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+   <not supported>      LLC-loads                                                   
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-stores                                                  
+   <not supported>      cache-references                                            
+   <not supported>      cache-misses                                                
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+
+      30.228676108 seconds time elapsed
+

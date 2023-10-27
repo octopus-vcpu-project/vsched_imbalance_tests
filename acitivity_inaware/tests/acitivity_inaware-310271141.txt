@@ -1,0 +1,469 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 15565.98
+
+General statistics:
+    total time:                          30.0478s
+    total number of events:              467778
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.05
+         max:                                  377.06
+         95th percentile:                        9.06
+         sum:                               959235.41
+
+Threads fairness:
+    events (avg/stddev):           14618.0625/64.02
+    execution time (avg/stddev):   29.9761/0.03
+
+Set latency to 32000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 13913.55
+
+General statistics:
+    total time:                          30.1640s
+    total number of events:              419754
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.19
+         max:                                 1561.04
+         95th percentile:                        1.08
+         sum:                               920987.62
+
+Threads fairness:
+    events (avg/stddev):           13117.3125/93.07
+    execution time (avg/stddev):   28.7809/0.42
+
+computing slice 2 (from row 62 to 92)
+finished slice 2
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 4 (from row 125 to 155)
+finished slice 4
+computing slice 27 (from row 843 to 874)
+finished slice 27
+computing slice 25 (from row 781 to 811)
+finished slice 25
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 23 (from row 718 to 749)
+finished slice 23
+computing slice 19 (from row 593 to 624)
+finished slice 19
+computing slice 17 (from row 531 to 561)
+finished slice 17
+computing slice 26 (from row 812 to 842)
+finished slice 26
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 15 (from row 468 to 499)
+finished slice 15
+computing slice 0 (from row 0 to 30)
+finished slice 0
+computing slice 7 (from row 218 to 249)
+finished slice 7
+computing slice 21 (from row 656 to 686)
+finished slice 21
+computing slice 1 (from row 31 to 61)
+finished slice 1
+computing slice 8 (from row 250 to 280)
+finished slice 8
+computing slice 28 (from row 875 to 905)
+finished slice 28
+computing slice 18 (from row 562 to 592)
+finished slice 18
+computing slice 13 (from row 406 to 436)
+finished slice 13
+computing slice 16 (from row 500 to 530)
+finished slice 16
+computing slice 12 (from row 375 to 405)
+finished slice 12
+computing slice 20 (from row 625 to 655)
+finished slice 20
+computing slice 11 (from row 343 to 374)
+finished slice 11
+computing slice 10 (from row 312 to 342)
+finished slice 10
+computing slice 31 (from row 968 to 999)
+finished slice 31
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 9 (from row 281 to 311)
+finished slice 9
+computing slice 14 (from row 437 to 467)
+finished slice 14
+computing slice 22 (from row 687 to 717)
+finished slice 22
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+Set latency to 16000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 13866.46
+
+General statistics:
+    total time:                          30.0415s
+    total number of events:              416639
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.17
+         max:                                 1656.47
+         95th percentile:                       17.01
+         sum:                               905865.69
+
+Threads fairness:
+    events (avg/stddev):           13019.9688/115.70
+    execution time (avg/stddev):   28.3083/0.71
+
+computing slice 31 (from row 968 to 999)
+finished slice 31
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 2 (from row 62 to 92)
+computing slice 8 (from row 250 to 280)
+finished slice 8
+computing slice 10 (from row 312 to 342)
+computing slice 16 (from row 500 to 530)
+computing slice 18 (from row 562 to 592)
+finished slice 2
+computing slice 26 (from row 812 to 842)
+finished slice 18
+computing slice 4 (from row 125 to 155)
+finished slice 26
+computing slice 6 (from row 187 to 217)
+finished slice 10
+finished slice 4
+computing slice 21 (from row 656 to 686)
+computing slice 12 (from row 375 to 405)
+computing slice 15 (from row 468 to 499)
+computing slice 29 (from row 906 to 936)
+finished slice 12
+computing slice 17 (from row 531 to 561)
+finished slice 21
+computing slice 19 (from row 593 to 624)
+computing slice 3 (from row 93 to 124)
+finished slice 15
+computing slice 27 (from row 843 to 874)
+finished slice 16
+finished slice 19
+finished slice 27
+finished slice 3
+finished slice 29
+finished slice 6
+computing slice 0 (from row 0 to 30)
+finished slice 0
+computing slice 14 (from row 437 to 467)
+finished slice 14
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 20 (from row 625 to 655)
+finished slice 20
+computing slice 25 (from row 781 to 811)
+computing slice 28 (from row 875 to 905)
+computing slice 23 (from row 718 to 749)
+finished slice 25
+finished slice 28
+finished slice 23
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 22 (from row 687 to 717)
+finished slice 22
+computing slice 13 (from row 406 to 436)
+finished slice 13
+computing slice 11 (from row 343 to 374)
+finished slice 11
+computing slice 9 (from row 281 to 311)
+finished slice 9
+computing slice 1 (from row 31 to 61)
+finished slice 1
+computing slice 7 (from row 218 to 249)
+finished slice 17
+finished slice 7
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+Set latency to 8000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 13554.88
+
+General statistics:
+    total time:                          30.0179s
+    total number of events:              406944
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.22
+         max:                                 1552.05
+         95th percentile:                       12.98
+         sum:                               901957.75
+
+Threads fairness:
+    events (avg/stddev):           12717.0000/114.09
+    execution time (avg/stddev):   28.1862/0.56
+
+computing slice 17 (from row 531 to 561)
+computing slice 4 (from row 125 to 155)
+finished slice 4
+finished slice 17
+computing slice 21 (from row 656 to 686)
+finished slice 21
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 1 (from row 31 to 61)
+finished slice 1
+computing slice 2 (from row 62 to 92)
+finished slice 2
+computing slice 25 (from row 781 to 811)
+finished slice 25
+computing slice 30 (from row 937 to 967)
+finished slice 30
+computing slice 23 (from row 718 to 749)
+finished slice 23
+computing slice 7 (from row 218 to 249)
+finished slice 7
+computing slice 9 (from row 281 to 311)
+finished slice 9
+computing slice 11 (from row 343 to 374)
+finished slice 11
+computing slice 13 (from row 406 to 436)
+finished slice 13
+computing slice 19 (from row 593 to 624)
+finished slice 19
+computing slice 15 (from row 468 to 499)
+finished slice 15
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 16 (from row 500 to 530)
+finished slice 16
+computing slice 18 (from row 562 to 592)
+finished slice 18
+computing slice 12 (from row 375 to 405)
+finished slice 12
+computing slice 31 (from row 968 to 999)
+finished slice 31
+computing slice 14 (from row 437 to 467)
+finished slice 14
+computing slice 24 (from row 750 to 780)
+finished slice 24
+computing slice 10 (from row 312 to 342)
+finished slice 10
+computing slice 8 (from row 250 to 280)
+finished slice 8
+computing slice 20 (from row 625 to 655)
+computing slice 0 (from row 0 to 30)
+finished slice 20
+computing slice 22 (from row 687 to 717)
+finished slice 0
+finished slice 22
+computing slice 26 (from row 812 to 842)
+finished slice 26
+computing slice 5 (from row 156 to 186)
+finished slice 5
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 28 (from row 875 to 905)
+finished slice 28
+computing slice 27 (from row 843 to 874)
+finished slice 27
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+Set latency to 4000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second: 14459.95
+
+General statistics:
+    total time:                          30.0175s
+    total number of events:              434103
+
+Latency (ms):
+         min:                                    1.01
+         avg:                                    2.14
+         max:                                  636.17
+         95th percentile:                        9.06
+         sum:                               928476.08
+
+Threads fairness:
+    events (avg/stddev):           13565.7188/116.60
+    execution time (avg/stddev):   29.0149/0.15
+
+computing slice 29 (from row 906 to 936)
+finished slice 29
+computing slice 0 (from row 0 to 30)
+finished slice 0
+computing slice 14 (from row 437 to 467)
+computing slice 24 (from row 750 to 780)
+finished slice 14
+computing slice 26 (from row 812 to 842)
+computing slice 28 (from row 875 to 905)
+finished slice 28
+computing slice 16 (from row 500 to 530)
+finished slice 24
+finished slice 26
+computing slice 15 (from row 468 to 499)
+computing slice 22 (from row 687 to 717)
+computing slice 7 (from row 218 to 249)
+computing slice 27 (from row 843 to 874)
+computing slice 23 (from row 718 to 749)
+computing slice 13 (from row 406 to 436)
+computing slice 30 (from row 937 to 967)
+finished slice 16
+finished slice 22
+computing slice 31 (from row 968 to 999)
+computing slice 19 (from row 593 to 624)
+computing slice 20 (from row 625 to 655)
+finished slice 27
+finished slice 30
+finished slice 13
+finished slice 20
+finished slice 23
+computing slice 11 (from row 343 to 374)
+finished slice 7
+finished slice 11
+computing slice 3 (from row 93 to 124)
+finished slice 3
+computing slice 5 (from row 156 to 186)
+computing slice 1 (from row 31 to 61)
+finished slice 1
+finished slice 5
+computing slice 10 (from row 312 to 342)
+finished slice 10
+computing slice 8 (from row 250 to 280)
+finished slice 8
+finished slice 31
+computing slice 6 (from row 187 to 217)
+finished slice 6
+computing slice 17 (from row 531 to 561)
+finished slice 19
+computing slice 21 (from row 656 to 686)
+finished slice 21
+finished slice 17
+finished slice 15
+computing slice 9 (from row 281 to 311)
+finished slice 9
+computing slice 2 (from row 62 to 92)
+finished slice 2
+computing slice 12 (from row 375 to 405)
+computing slice 4 (from row 125 to 155)
+finished slice 4
+finished slice 12
+computing slice 25 (from row 781 to 811)
+computing slice 18 (from row 562 to 592)
+finished slice 18
+finished slice 25
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+Set latency to 2000000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+

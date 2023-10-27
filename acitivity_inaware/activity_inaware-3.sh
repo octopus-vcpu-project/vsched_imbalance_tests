@@ -64,18 +64,17 @@ runTest(){
     test_to_run=$1
     ssh ubuntu@$prob_vm "$test_to_run"  >> "$OUTPUT_FILE" 2>&1
     perf_output="perf.txt"
-    sudo perf stat -B -o "$perf_output" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions  &
+    sudo perf stat -B -o "perf.txt" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
     ssh ubuntu@$prob_vm "$test_to_run"  
     sudo kill -s SIGINT $(pidof perf)
-    cat $perf_output >> $OUTPUT_FILE
+    cat "perf.txt" >> $OUTPUT_FILE
 }
 
 
 runAllTests(){
     runTest "sysbench --threads=32 --time=30 cpu run" 
     runTest "./vsched_tests/matmul.out 32 30"
-    runTest "cd /home/ubuntu/vsched;sudo bash /home/ubuntu/Workloads/kernbench/kernbench.sh"
-    runTest ""
+    #runTest "cd /home/ubuntu/vsched;sudo bash /home/ubuntu/Workloads/kernbench/kernbench.sh"
 }
 
 virsh shutdown $compete_vm

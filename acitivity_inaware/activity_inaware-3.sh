@@ -60,25 +60,14 @@ setLatency(){
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
 
-runTest(){
-    test_to_run=$1
-    ssh ubuntu@$prob_vm "$test_to_run"  >> "$OUTPUT_FILE" 2>&1
-    perf_output="perf.txt"
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -B -o perf.txt -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions" &
-    ssh ubuntu@$prob_vm "$test_to_run"  
-    ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof perf)"
-    ssh ubuntu@$prob_vm "cat perf.txt" >> $OUTPUT_FILE
-}
 
 
-runAllTests(){
-    runTest "sysbench --threads=32 --time=30 cpu run" 
-    runTest "./vsched_tests/matmul.out 32 30"
-    #runTest "cd /home/ubuntu/vsched;sudo bash /home/ubuntu/Workloads/kernbench/kernbench.sh"
-}
+
+
 
 virsh shutdown $compete_vm
 toggle_topological_passthrough 1
+
 wake_and_pin_vm $compete_vm
 
 #Fetch VM PID and use that to fetch Cgroup title
@@ -87,8 +76,24 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
-ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
 
+runTest(){
+    test_to_run=$1
+    ssh ubuntu@$prob_vm "$test_to_run"  >> "$OUTPUT_FILE" 2>&1
+    perf_output="perf.txt"
+    sudo perf stat -o perf.txt -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions -p $vm_pid  &
+    ssh ubuntu@$prob_vm "$test_to_run"  
+    sudo kill -s SIGINT $(pidof perf)
+    sudo cat perf.txt >> $OUTPUT_FILE
+}
+
+runAllTests(){
+    runTest "sysbench --threads=32 --time=30 cpu run" 
+    runTest "./vsched_tests/matmul.out 32 30"
+    #runTest "cd /home/ubuntu/vsched;sudo bash /home/ubuntu/Workloads/kernbench/kernbench.sh"
+}
+
+ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sudo killall a.out" 

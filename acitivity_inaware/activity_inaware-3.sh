@@ -88,9 +88,9 @@ runTest(){
 }
 
 runAllTests(){
-    runTest "sysbench --threads=32 --time=30 cpu run" 
-    runTest "./vsched_tests/matmul.out 32 30"
-    #runTest "cd /home/ubuntu/vsched;sudo bash /home/ubuntu/Workloads/kernbench/kernbench.sh"
+    #runTest "sysbench --threads=32 --time=30 cpu run" 
+    #runTest "./vsched_tests/matmul.out 32 30"
+    runTest "cd /home/ubuntu/vsched;sudo /home/ubuntu/Workloads/kernbench/kernbench"
 }
 
 ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
@@ -98,7 +98,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sudo killall a.out" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-ssh ubuntu@$prob_vm "sudo $cache_bench"  >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "sudo $cache_bench"
 echo "finished warming up"
 
 

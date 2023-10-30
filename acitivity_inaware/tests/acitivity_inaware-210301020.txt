@@ -1,0 +1,804 @@
+Set latency to 32000000
+Running Latency benchmark img-dnn
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+
+real	0m28.456s
+user	0m11.273s
+sys	0m0.523s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 22.996 ms | p95 79.820 ms | p99 151.360 ms | max 410.863 ms
+svc: mean 0.973 ms | p95 0.778 ms | p99 0.929 ms | max 165.171 ms
+end2end: mean 23.970 ms | p95 81.255 ms | p99 153.439 ms | max 411.638 ms
+Running Latency benchmark moses
+./bin
+Creating lexical reordering...
+weights: 0.000 0.000 0.000 0.000 0.000 0.000 
+binary file loaded, default OFF_T: -1
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+reading bin ttable
+size of OFF_T 8
+binary phrasefile loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+binary file loaded, default OFF_T: -1
+
+real	0m57.361s
+user	1m16.733s
+sys	0m18.307s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 72.807 ms | p95 86.681 ms | p99 164.896 ms | max 29973.490 ms
+svc: mean 53.063 ms | p95 19.812 ms | p99 65.686 ms | max 38151.635 ms
+end2end: mean 125.870 ms | p95 97.622 ms | p99 179.591 ms | max 38656.609 ms
+Running Latency benchmark masstree
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+1/1 mycsba/masstree
+7: now getting
+9: now getting
+14: now getting
+17: now getting
+19: now getting
+25: now getting
+16: now getting
+10: now getting
+28: now getting
+24: now getting
+13: now getting
+15: now getting
+26: now getting
+18: now getting
+29: now getting
+11: now getting
+22: now getting
+31: now getting
+3: now getting
+20: now getting
+2: now getting
+23: now getting
+5: now getting
+4: now getting
+27: now getting
+30: now getting
+1: now getting
+12: now getting
+6: now getting
+0: now getting
+8: now getting
+21: now getting
+
+real	0m50.196s
+user	3m41.634s
+sys	0m3.385s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 25.021 ms | p95 97.646 ms | p99 192.206 ms | max 533.036 ms
+svc: mean 1.210 ms | p95 0.569 ms | p99 36.353 ms | max 189.129 ms
+end2end: mean 26.230 ms | p95 100.220 ms | p99 198.569 ms | max 533.472 ms
+Running Latency benchmark silo
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+Database Benchmark:
+  pid: 2924
+settings:
+  par-loading : 0
+  pin-cpus    : 0
+  slow-exit   : 0
+  retry-txns  : 1
+  backoff-txns: 0
+  bench       : tpcc
+  scale       : 4
+  num-cpus    : 32
+  num-threads : 32
+  db-type     : ndb-proto2
+  basedir     : /home/ubuntu/Workloads/Tailbench/tailbench/silo
+  txn-flags   : 0
+  ops/worker  : 10000000
+  var-encode  : yes
+  allocator   : jemalloc
+  numa-memory : disabled
+  logfiles : []
+  assignments : []
+  disable-gc : 0
+  disable-snapshots : 0
+  stats-server-sockfile: 
+system properties:
+  btree_internal_node_size: 264
+  btree_leaf_node_size    : 312
+  tuple_prefetch          : no
+  btree_node_prefetch     : yes
+tpcc settings:
+  cross_partition_transactions : 1
+  read_only_snapshots          : 1
+  partition_locks              : 0
+  separate_tree_per_partition  : 0
+  new_order_remote_item_pct    : 1
+  new_order_fast_id_gen        : 0
+  uniform_item_dist            : 0
+  order_status_scan_hack       : 0
+  workload_mix                 : [45, 43, 4, 4, 4]
+num batches: 30
+[INFO] finished loading warehouse
+[INFO] finished loading district
+[INFO]   * average district record length: [INFO]   * average warehouse record length: 99 bytes
+97 bytes
+[INFO] finished loading item
+[INFO]   * average item record length: 84.1739 bytes
+[INFO] finished loading order
+[INFO]   * average order_line record length: 11.2189 bytes
+[INFO]   * average oorder record length: 7.8414 bytes
+[INFO]   * average new_order record length: 12 bytes
+[INFO] finished loading customer
+[INFO]   * average customer record length: 656.931 bytes 
+[INFO] finished loading stock
+[INFO]   * average stock record length: 8 bytes
+timed region dataloading took 8406.11 ms
+DB size: 405.316 MB
+wait_an_epoch(): consistent reads happening in e-1: 3
+[0, 0, 0] txns persisted in loading phase
+table customer_0 size 120000
+table customer_name_idx_0 size 120000
+table district_0 size 40
+table history_0 size 120000
+table item_0 size 100000
+table new_order_0 size 36000
+table oorder_0 size 120000
+table oorder_c_id_idx_0 size 120000
+table order_line_0 size 1200493
+table stock_0 size 400000
+table stock_data_0 size 400000
+table warehouse_0 size 4
+starting benchmark...
+tpcc: worker id 32 => warehouses [1, 2)
+tpcc: worker id 33 => warehouses [2, 3)
+tpcc: worker id 34 => warehouses [3, 4)
+tpcc: worker id 35 => warehouses [4, 5)
+tpcc: worker id 36 => warehouses [1, 2)
+tpcc: worker id 37 => warehouses [2, 3)
+tpcc: worker id 38 => warehouses [3, 4)
+tpcc: worker id 39 => warehouses [4, 5)
+tpcc: worker id 40 => warehouses [1, 2)
+tpcc: worker id 41 => warehouses [2, 3)
+tpcc: worker id 42 => warehouses [3, 4)
+tpcc: worker id 43 => warehouses [4, 5)
+tpcc: worker id 44 => warehouses [1, 2)
+tpcc: worker id 45 => warehouses [2, 3)
+tpcc: worker id 46 => warehouses [3, 4)
+tpcc: worker id 47 => warehouses [4, 5)
+tpcc: worker id 48 => warehouses [1, 2)
+tpcc: worker id 49 => warehouses [2, 3)
+tpcc: worker id 50 => warehouses [3, 4)
+tpcc: worker id 51 => warehouses [4, 5)
+tpcc: worker id 52 => warehouses [1, 2)
+tpcc: worker id 53 => warehouses [2, 3)
+tpcc: worker id 54 => warehouses [3, 4)
+tpcc: worker id 55 => warehouses [4, 5)
+tpcc: worker id 56 => warehouses [1, 2)
+tpcc: worker id 57 => warehouses [2, 3)
+tpcc: worker id 58 => warehouses [3, 4)
+tpcc: worker id 59 => warehouses [4, 5)
+tpcc: worker id 60 => warehouses [1, 2)
+tpcc: worker id 61 => warehouses [2, 3)
+tpcc: worker id 62 => warehouses [3, 4)
+tpcc: worker id 63 => warehouses [4, 5)
+
+real	0m38.535s
+user	1m4.567s
+sys	0m4.120s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 19.731 ms | p95 59.223 ms | p99 124.284 ms | max 336.922 ms
+svc: mean 0.286 ms | p95 0.370 ms | p99 0.511 ms | max 66.809 ms
+end2end: mean 20.017 ms | p95 59.929 ms | p99 124.464 ms | max 337.078 ms
+Running Latency benchmark shore
+cpu_info sees 32 sockets and 32 cores
+root-thread: ./src/tests/shore_kits.cpp:692:main: INPUTFILE (cmdfile)
+root-thread: ./src/tests/shore_kits.cpp:724:main: Starting (tpcc-normal-baseline) kit
+Creating kit @line: 738
+Starting root-thread (tid = 3129)
+root-thread: ./src/tests/shore_kits.cpp:879:main: Starting Shore Environment
+Starting linux-mon (tid = 3130)
+SLI= disabled
+Starting init (tid = 3131)
+init: ./src/sm/shore/shore_env.cpp:1050:readconfig: Reading config file (shore.conf)
+init: ./src/sm/shore/shore_env.cpp:1060:readconfig: Reading configuration (tpcc-1)
+init: ./src/sm/shore/shore_env.cpp:1015:print_cpus: MaxCPU=(32) - ActiveCPU=(32)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+(db-clobberdev) (0)
+(shore-fakeiodelay) (0)
+(shore-fakeiodelay-enable) (1)
+(sys-activecpucount) (1024)
+(sys-maxcpucount) (1024)
+(-sm_bufpoolsize) (2048000)
+(-sm_diskrw) (./diskrw)
+(-sm_errlog) (info)
+(-sm_logbufsize) (81920)
+(-sm_logcount) (10)
+(-sm_logdir) (./log)
+(-sm_logging) (yes)
+(-sm_logisraw) (no)
+(-sm_logsize) (2048000)
+(-sm_num_page_writers) (1)
+(device) (./db-tpcc-1)
+(devicequota) (2048000)
+(loadatadir) (databases)
+(sf) (1)
+(system) (baseline)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+Starting bf_core_m::init_thread (tid = 3133)
+Starting bf_core_m::init_thread (tid = 3134)
+Starting bf_core_m::init_thread (tid = 3135)
+Starting bf_core_m::init_thread (tid = 3132)
+Starting flush_daemon (tid = 3136)
+Starting chkpt_thread (tid = 3137)
+Starting bf_cleaner (tid = 3138)
+Starting page_writer (tid = 3139)
+(db-clobberdev) (0)
+(shore-fakeiodelay) (0)
+(shore-fakeiodelay-enable) (1)
+(sys-activecpucount) (1024)
+(sys-maxcpucount) (1024)
+(-sm_bufpoolsize) (2048000)
+(-sm_diskrw) (./diskrw)
+(-sm_errlog) (info)
+(-sm_logbufsize) (81920)
+(-sm_logcount) (10)
+(-sm_logdir) (./log)
+(-sm_logging) (yes)
+(-sm_logisraw) (no)
+(-sm_logsize) (2048000)
+(-sm_num_page_writers) (1)
+(device) (./db-tpcc-1)
+(devicequota) (2048000)
+(loadatadir) (databases)
+(sf) (1)
+(system) (baseline)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:206:set_qf: Invalid queried factor input: 0.0
+root-thread: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:493:start: Starting ()
+root-thread: ./src/workload/tpcc/shore_tpcc_env.cpp:401:info: SF      = (1.0)
+root-thread: ./src/workload/tpcc/shore_tpcc_env.cpp:402:info: Workers = (32)
+Starting Starting Starting work-15 (tid = 3155)Starting Starting work-16 (tid = 3156work-10Starting )Starting work-14work-12 (tid = work-93154)work-5 (tid = 3145) (tid = 
+ (tid = 3152
+3150
+ (tid = )
+)3149
+)
+
+Starting work-6 (tid = 3146)
+Starting work-4 (tid = 3144)
+Starting work-1 (tid = 3141)
+Starting work-3 (tid = 3143)
+Starting work-25 (tid = 3165)
+Starting Starting work-17work-20Starting Starting work-19work-18 (tid =  (tid = 3158)3157
+ (tid =  (tid = )3159)Starting 
+3160
+)work-22
+ (tid = 3162)
+Starting work-27 (tid = 3167)
+root-thread: ./src/tests/shore_kits.cpp:894:main: Preparing for the next run
+root-thread: ./src/tests/shore_kits.cpp:906:main: Starting processing commands
+Starting work-13 (tid = 3153)
+Starting work-28 (tid = 3168)Starting Starting work-30Starting work-29 (tid = 
+work-31 (tid = 3171)3170)
+ (tid = 3169)
+
+FILECMD: test 1 0 32 1000000 0 1 0root-thread: ./src/sm/shore/shore_shell.cpp:463:process_cmd_TEST: Updated SF (1.0)
+root-thread: ./src/sm/shore/shore_shell.cpp:222:print_TEST_info: 
+QueriedSF:      (1.0)
+Spread Threads: (No)
+Binding:        (NoBinding)
+NumOfThreads:   (32)
+NumOfTrxs:      (1000000)
+Trx:            (TPCC-Mix)
+Iterations:     (1)
+root-thread: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:202:set_qf: New Queried Factor: 1.0
+root-thread: ./src/tests/shore_kits.cpp:331:_cmd_TEST_impl: Iteration [1 of 1]
+root-thread: ./src/tests/shore_kits.cpp:344:_cmd_TEST_impl: begin measurement
+TBENCH_MAXREQS = 600
+TBENCH_WARMUPREQS = 100
+TBENCH_MINSLEEPNS = 1000
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting Starting Starting Starting Starting Starting Starting work-26CL-6 (tid = CL-10Starting 3178CL-4CL-2 (tid = CL-9Creating client thread (tid =  (tid = Starting Starting )CL-7 (tid = CL-11 (tid = 31763181)) (tid = 3182 (tid = 3166
+)CL-5
+3183)
+
+3174) (tid = 3177)
+)
+3179)Starting 
+CL-8 (tid = 3180
+
+
+)
+Starting CL-0 (tid = 3172)
+CL-12 (tid = 3184)
+Starting work-7 (tid = Starting CL-1 (tid = 3147)
+3173)
+Starting work-8 (tid = 3148)
+Starting work-11 (tid = 3151)
+Starting work-21 (tid = 3161)
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting CL-17 (tid = 3189)
+Starting CL-16 (tid = 3188)
+Starting CL-18 (tid = 3190)
+Starting work-0 (tid = 3140)
+Starting CL-3 (tid = 3175)
+Starting CL-13 (tid = 3185)
+Starting CL-14 (tid = 3186)
+Starting work-23 (tid = Starting work-2 (tid = 3142)3163)
+
+Starting work-24 (tid = 3164)
+Starting CL-15 (tid = 3187)
+Starting CL-19 (tid = 3191)
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting CL-23 (tid = 3195)
+Starting CL-25 (tid = 3197)
+Starting CL-21 (tid = 3193)
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Creating client thread
+Starting CL-20 (tid = 3192)
+Starting CL-28 (tid = 3200)
+Starting CL-30 (tid = 3202)
+Starting CL-27 (tid = 3199)
+Starting CL-31 (tid = 3203)
+Starting CL-29 (tid = 3201)
+Starting CL-22 (tid = 3194)
+Starting CL-26 (tid = 3198)
+Starting CL-24 (tid = 3196)
+TBENCH_RANDSEED = linux-mon: ./src/util/procstat.cpp:254:print_interval: (25.2) (5.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (25.1) (14.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (25.5) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (26.4) (56.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (27.2) (28.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (27.6) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (6.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.7) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.1) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.3) (11.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.4) (3.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.5) (18.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.3) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (29.0) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.9) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.7) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.6) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.7) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.6) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.5) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.5) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.5) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.5) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (46.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (37.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.4) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.3) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (21.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (1.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (2.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (27.9) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.0) (9.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (25.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (12.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.2) (8.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (18.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (12.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (19.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (0.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (28.1) (1.0)
+
+real	1m40.395s
+user	21m18.917s
+sys	0m4.847s
+queue: mean 32887.953 ms | p95 58306.687 ms | p99 58981.272 ms | max 64277.355 ms
+svc: mean 4347.422 ms | p95 23669.612 ms | p99 25929.577 ms | max 28272.482 ms
+end2end: mean 37235.376 ms | p95 64555.636 ms | p99 65293.251 ms | max 67392.175 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark specjbb
+
+Checking JVM
+
+1st bounds test:	OK
+Super: Class Super, public=34, protected=33, private=32
+Sub: Class Super, public=804, protected=803, private=802
+Super: prot=33, priv=32
+Sub:  prot=111, priv=105
+Subclass test OK
+XML StrictErrorChecking test: OK
+1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 
+1 1 2 3 5 8 666 666 13 13 21 21 
+2nd bounds test:	OK
+testIf:     OK
+testArray:  OK
+testBitOps: OK
+testFor:    OK
+testDiv:    OK
+testTableSwitch:  OK
+testLookupSwitch: OK
+testHiddenField:  OK
+checkRemainders:  long double OK
+checkMathFcts: OK
+Primes less than 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+testExc1(simple throw/catch):  OK
+testExc2(skip catch clauses):  OK
+testExc3(catch in inner):      OK
+testExc4(catch in outer):      OK
+testExc5(rethrow):             OK
+testExc6(throw accross call):  OK
+testExc7(throw accr. 2 calls): OK
+loopExitContinueInExceptionHandler: OK
+testStringHash:  OK
+testClone:       OK
+testObjectArray: OK
+checkInstanceOf: OK
+checkInterfaceInstanceOf: OK
+testWaitNull: OK
+testVarAndMethodNameClash: OK
+testMisk: OK
+testGC: OK
+testRandom : OK
+PepTest: OK
+
+JVM Check OK
+Constructing the company now   Hang....on
+
+Loading Warehouse 1...
+
+
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 7 should be:  |     1    12117   rk9rIQP9q52FiN4FWuihzNT    5     61    G    $61.73   $308.65 |
+    Line 7 is:  |     1    12117   rk9rIQP9q52FiN4FWuihzNT    5     59    G    $61.73   $308.65 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 8 should be:  |     1    19072   0VOgv21kW1ZS3pv1IzirxrmH   5     91    G    $26.62   $133.10 |
+    Line 8 is:  |     1    19072   0VOgv21kW1ZS3pv1IzirxrmH   5     79    G    $26.62   $133.10 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 9 should be:  |     1     4260   clRd7h9zm9eGwqtvKblk1q     5     81    G    $85.08   $425.40 |
+    Line 9 is:  |     1     4260   clRd7h9zm9eGwqtvKblk1q     5     53    G    $85.08   $425.40 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 10 should be:  |     1     5772   b96nAb1I7qPaOA             5     85    G    $50.24   $251.20 |
+    Line 10 is:  |     1     5772   b96nAb1I7qPaOA             5     73    G    $50.24   $251.20 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 12 should be:  |     1     2790   yrZXzgfPRKxNQW             5     96    G    $33.70   $168.50 |
+    Line 12 is:  |     1     2790   yrZXzgfPRKxNQW             5     71    G    $33.70   $168.50 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 13 should be:  |     1      687   G1GcZl0h1P7gJ4GxZhnuT      5     88    G    $46.26   $231.30 |
+    Line 13 is:  |     1      687   G1GcZl0h1P7gJ4GxZhnuT      5     57    G    $46.26   $231.30 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 14 should be:  |     1     5258   b9PfVfw5TcKQe0iEZaPEWkt    5     57    G    $45.62   $228.10 |
+    Line 14 is:  |     1     5258   b9PfVfw5TcKQe0iEZaPEWkt    5     14    G    $45.62   $228.10 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 15 should be:  |     1    12238   w0Tu7bleXb7XXY03           5     42    G    $70.20   $351.00 |
+    Line 15 is:  |     1    12238   w0Tu7bleXb7XXY03           5     33    G    $70.20   $351.00 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 16 should be:  |     1     4933   TvoMqL3eITHLzearKdECH      5     41    G    $93.19   $465.95 |
+    Line 16 is:  |     1     4933   TvoMqL3eITHLzearKdECH      5     89    G    $93.19   $465.95 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 17 should be:  |     1     4186   LNDK2oajzLA29ICevp8eBx     5     76    G    $49.22   $246.10 |
+    Line 17 is:  |     1     4186   LNDK2oajzLA29ICevp8eBx     5     34    G    $49.22   $246.10 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 19 should be:  |     1     9925   Vh0KacEuowjiT8ey           5     30    G    $72.28   $361.40 |
+    Line 19 is:  |     1     9925   Vh0KacEuowjiT8ey           5     10    G    $72.28   $361.40 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 20 should be:  |     1    12042   m7ryJMNGNEaOaKEG           5     90    G    $65.31   $326.55 |
+    Line 20 is:  |     1    12042   m7ryJMNGNEaOaKEG           5     19    G    $65.31   $326.55 |
+Oct 30, 2023 10:27:44 AM spec.jbb.NewOrderTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for NewOrderTransaction
+    Line 21 should be:  |     1     9471   hAdDzcbhMhlOQTUecrfFCym    5     78    G    $68.54   $342.70 |
+    Line 21 is:  |     1     9471   hAdDzcbhMhlOQTUecrfFCym    5    100    G    $68.54   $342.70 |
+
+Loading properties from SPECjbb_mt.props
+Oct 30, 2023 10:27:44 AM spec.jbb.StockLevelTransaction processTransactionLog
+WARNING: VALIDATION ERROR:  incorrect output for StockLevelTransaction
+    Line 6 should be:  |low stock:  14|
+    Line 6 is:  |low stock:  15|
+
+Input Properties:
+  per_jvm_warehouse_rampup = 3.0
+  per_jvm_warehouse_rampdown = 20.0
+  jvm_instances = 1
+  deterministic_random_seed = true
+  ramp_up_seconds = 10
+  measurement_seconds = 1000000000
+  sequence_of_number_of_warehouses =  4  expected_peak_warehouse = 4
+
+The results will be in: results/SPECjbbSingleJVM/SPECjbb.001.raw
+Opened results/SPECjbbSingleJVM/SPECjbb.001.results
+Opened results/SPECjbbSingleJVM/SPECjbb.001.raw
+
+Licensed Materials - Property of SPEC
+SPECjbb2005
+Copyright (c) 2005 Standard Performance Evaluation Corporation (SPEC),All rights reserved,
+
+Benchmark SPECjbb2005 1.04 now Opening
+
+jar validity is false
+
+
+Checking whether run will be valid
+INVALID:  deterministic_random_seed = true, must be false
+INVALID:  ramp_up_seconds = 10, must be 30
+INVALID:  measurement_seconds = 1000000000, must be 240
+
+INVALID:  Run will NOT be compliant
+
+Constructing the company now   Hang....on
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 1...
+
+
+Loading Warehouse 2...
+
+
+Loading Warehouse 3...
+
+
+Loading Warehouse 4...
+
+
+Start User Threads
+TBENCH_MAXREQS = 10000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+  started user thread for Warehouse 3
+  started user thread for Warehouse 4
+Timing Measurement began Mon Oct 30 10:27:50 EDT 2023 for 16666666.67 minutes
+
+real	0m52.076s
+user	0m6.548s
+sys	0m0.962s
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 17.681 ms | p95 67.299 ms | p99 318.421 ms | max 445.877 ms
+svc: mean 0.630 ms | p95 0.154 ms | p99 0.369 ms | max 360.104 ms
+end2end: mean 18.311 ms | p95 69.187 ms | p99 324.233 ms | max 481.842 ms
+Running Latency benchmark sphinx
+TBENCH_MAXREQS = 10
+TBENCH_WARMUPREQS = 3
+TBENCH_MINSLEEPNS = 10000

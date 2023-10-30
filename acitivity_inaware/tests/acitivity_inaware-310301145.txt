@@ -1,0 +1,114 @@
+Set latency to 32000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 128
+
+All data logged to kernbench.log
+Optimal load -j 128 run number 1...
+Average Optimal load -j 128 Run (std deviation):
+Elapsed Time 2265.430000
+User Time 24276.070000
+System Time 4977.530000
+Percent CPU 1291.000000
+Context Switches 8076563.000000
+Sleeps 5281363.000000
+
+Set latency to 16000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 128
+
+All data logged to kernbench.log
+Optimal load -j 128 run number 1...
+Average Optimal load -j 128 Run (std deviation):
+Elapsed Time 2027.700000
+User Time 24347.180000
+System Time 4639.810000
+Percent CPU 1429.000000
+Context Switches 8497614.000000
+Sleeps 5409317.000000
+
+Set latency to 8000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 128
+
+All data logged to kernbench.log
+Optimal load -j 128 run number 1...
+Average Optimal load -j 128 Run (std deviation):
+Elapsed Time 2005.540000
+User Time 24883.550000
+System Time 4698.040000
+Percent CPU 1474.000000
+Context Switches 8958864.000000
+Sleeps 5572306.000000
+
+Set latency to 4000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 128
+
+All data logged to kernbench.log
+Optimal load -j 128 run number 1...
+Average Optimal load -j 128 Run (std deviation):
+Elapsed Time 1974.630000
+User Time 24874.200000
+System Time 4594.040000
+Percent CPU 1492.000000
+Context Switches 9181192.000000
+Sleeps 5623820.000000
+
+Set latency to 2000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 128
+
+All data logged to kernbench.log
+Optimal load -j 128 run number 1...
+Average Optimal load -j 128 Run (std deviation):
+Elapsed Time 1997.280000
+User Time 25372.350000
+System Time 4648.100000
+Percent CPU 1503.000000
+Context Switches 9349529.000000
+Sleeps 5663559.000000
+
+Set latency to 3000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 128
+
+All data logged to kernbench.log
+Optimal load -j 128 run number 1...
+Average Optimal load -j 128 Run (std deviation):
+Elapsed Time 2012.530000
+User Time 25352.730000
+System Time 4865.400000
+Percent CPU 1501.000000
+Context Switches 9314769.000000
+Sleeps 5666851.000000
+

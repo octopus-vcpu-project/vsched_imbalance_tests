@@ -1,15 +1,15 @@
-# started on Mon Oct 30 18:18:41 2023
+# started on Tue Oct 31 08:59:50 2023
 
 
- Performance counter stats for process id '162605':
+ Performance counter stats for process id '172345':
 
-   190,226,898,881      LLC-loads                                                               (71.42%)
-   121,150,410,043      LLC-load-misses                  #   63.69% of all LL-cache accesses    (71.43%)
-    77,048,654,698      LLC-stores                                                              (28.58%)
-   533,620,913,191      cache-references                                                        (42.86%)
-   204,761,061,353      cache-misses                     #   38.372 % of all cache refs         (57.15%)
-87,956,534,978,859      cycles                                                                  (57.14%)
-72,864,445,910,715      instructions                     #    0.83  insn per cycle              (71.43%)
+   181,191,860,451      LLC-loads                                                               (71.40%)
+    92,998,791,211      LLC-load-misses                  #   51.33% of all LL-cache accesses    (71.39%)
+    76,061,828,204      LLC-stores                                                              (28.60%)
+   503,954,487,208      cache-references                                                        (42.86%)
+   170,058,464,311      cache-misses                     #   33.745 % of all cache refs         (57.19%)
+80,471,449,863,112      cycles                                                                  (57.20%)
+73,304,038,362,502      instructions                     #    0.91  insn per cycle              (71.45%)
 
-    2049.525804217 seconds time elapsed
+    2729.819410104 seconds time elapsed
 

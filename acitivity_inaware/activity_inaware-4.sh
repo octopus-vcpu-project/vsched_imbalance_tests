@@ -133,7 +133,7 @@ runAllTests
 setMigrationCost 0
 runAllTests
 
-sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 1000000 > /sys/kernel/debug/sched/min_granularity_ns
 echo "Cache-Cold 3ms tests"
 echo "Cache-Cold 3ms tests" >> $OUTPUT_FILE 
 

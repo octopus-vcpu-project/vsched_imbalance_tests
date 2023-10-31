@@ -84,7 +84,7 @@ runTest(){
     sudo perf stat -o perf.txt -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions -p $vm_pid  &
     ssh ubuntu@$prob_vm "$test_to_run"  
     sudo kill -s SIGINT $(pidof perf)
-    sudo cat perf.txt >> $OUTPUT_FILE
+    sudo cat perf.txt >> $OUTPUT_FILE 2>&1
 }
 
 runAllTests(){

@@ -142,6 +142,8 @@ runAllTests
 setLatency 3000000
 runAllTests
 
+sudo virsh shutdown $compete_vm
+
 setLatencyCFS 32000000 64000000
 runAllTests
 

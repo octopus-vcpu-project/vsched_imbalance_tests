@@ -3,7 +3,7 @@ prob_vm=$1
 compete_vm=$2
 benchmark_time=20
 cache_bench="sysbench --threads=32 --time=30 cpu run"
-compete_bench="./cache_thr.out"
+compete_bench="./Workloads/non-cache.o"
 OUTPUT_FILE="./tests/acitivity_inaware-3$(date +%m%d%H%M).txt"
 
 toggle_topological_passthrough(){
@@ -143,25 +143,6 @@ setLatency 3000000
 runAllTests
 
 sudo virsh shutdown $compete_vm
-
-setLatencyCFS 32000000 64000000
-runAllTests
-
-setLatencyCFS 16000000 32000000
-runAllTests
-
-setLatencyCFS 8000000 16000000
-runAllTests
-
-setLatencyCFS 4000000 8000000
-runAllTests
-
-setLatencyCFS 2000000 4000000
-runAllTests
-
-setLatencyCFS 3000000 6000000
-runAllTests
-
 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

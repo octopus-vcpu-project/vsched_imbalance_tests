@@ -43,8 +43,8 @@ void stressCore() {
     }
 }
 
-int main() {
-    unsigned int numCores = std::thread::hardware_concurrency(); // Get number of available cores
+int main(int argc,char *argv[]) {
+    unsigned int numCores = std::stoi(argv[1]); // Get number of available cores
     std::cout << "Launching stress tasks on " << numCores << " cores." << std::endl;
 
     std::vector<std::thread> threads;

@@ -80,11 +80,11 @@ c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
 runTest(){
     test_to_run=$1
     ssh ubuntu@$prob_vm "$test_to_run"  >> "$OUTPUT_FILE" 2>&1
-    perf_output="perf.txt"
-    sudo perf stat -o perf.txt -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions -p $vm_pid  &
+    perf_output="./tests/perf-3$(date +%m%d%H%M).txt"
+    sudo perf stat -o $perf_output -C 20-35,40-55 -e l1d_pend_miss.pending,l2_rqsts.miss,l2_rqsts.pf_hit,l2_rqsts.pf_miss,l2_rqsts.references,LLC-loads,LLC-load-misses,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions -p $vm_pid  &
     ssh ubuntu@$prob_vm "$test_to_run"  
     sudo kill -s SIGINT $(pidof perf)
-    sudo cat perf.txt >> $OUTPUT_FILE 2>&1
+    sudo cat $perf_output >> $OUTPUT_FILE 
 }
 
 runAllTests(){

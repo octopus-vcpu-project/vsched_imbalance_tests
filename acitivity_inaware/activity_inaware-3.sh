@@ -61,6 +61,16 @@ setLatency(){
 }
 
 
+setLatencyCFS(){
+    set_latency=$1
+    ssh ubuntu@$prob_vm "sudo killall sysbench" 
+    for i in {0..31};do
+        sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
+    echo "Set latency cfs to $1" 
+    echo "Set latency cfs to $1" >> "$OUTPUT_FILE" 
+}
+
 
 
 
@@ -76,6 +86,17 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 c_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 c_vm_cgroup_title=$(sudo cat /proc/$c_vm_pid/cgroup | awk -F "/" '{print $3}')
+
+setLatencyCFS(){
+    set_latency=$1
+    total_period=$2
+    ssh ubuntu@$prob_vm "sudo killall sysbench" 
+    for i in {0..31};do
+        sudo echo $1 $2 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
+    echo "Set latency cfs to $1" 
+    echo "Set latency cfs to $1" >> "$OUTPUT_FILE" 
+}
 
 runTest(){
     test_to_run=$1
@@ -119,6 +140,24 @@ setLatency 2000000
 runAllTests
 
 setLatency 3000000
+runAllTests
+
+setLatencyCFS 32000000 64000000
+runAllTests
+
+setLatencyCFS 16000000 32000000
+runAllTests
+
+setLatencyCFS 8000000 16000000
+runAllTests
+
+setLatencyCFS 4000000 8000000
+runAllTests
+
+setLatencyCFS 2000000 4000000
+runAllTests
+
+setLatencyCFS 3000000 6000000
 runAllTests
 
 

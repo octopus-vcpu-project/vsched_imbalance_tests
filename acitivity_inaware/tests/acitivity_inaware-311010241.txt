@@ -1,0 +1,66 @@
+Set latency to 32000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+# started on Wed Nov  1 02:49:20 2023
+
+
+ Performance counter stats for process id '237090':
+
+       222,517,199      l1d_pend_miss.pending                                                   (98.13%)
+         5,002,184      l2_rqsts.miss                                                         
+             9,243      l2_rqsts.pf_hit                                                       
+            32,820      l2_rqsts.pf_miss                                                      
+         1,702,643      l2_rqsts.references                                                     (3.44%)
+           308,092      LLC-loads                                                               (0.29%)
+               609      LLC-load-misses                  #    0.20% of all LL-cache accesses    (0.29%)
+           377,655      L1-dcache-load-misses            #   12.87% of all L1-dcache accesses   (0.29%)
+         2,933,741      L1-dcache-loads                                                         (0.19%)
+     <not counted>      L1-dcache-stores                                                        (0.00%)
+     <not counted>      L1-icache-load-misses                                                   (0.00%)
+     <not counted>      LLC-stores                                                              (0.00%)
+     <not counted>      cache-references                                                        (0.00%)
+     <not counted>      cache-misses                                                            (0.00%)
+     <not counted>      cycles                                                                  (0.00%)
+     <not counted>      instructions                                                            (0.00%)
+
+       0.739548183 seconds time elapsed
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog
+Set latency to 16000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+# started on Wed Nov  1 02:49:53 2023
+
+
+ Performance counter stats for process id '237090':
+
+        10,088,011      l1d_pend_miss.pending                                                 
+           190,087      l2_rqsts.miss                                                         
+               387      l2_rqsts.pf_hit                                                       
+             2,288      l2_rqsts.pf_miss                                                      
+            16,521      l2_rqsts.references                                                     (3.34%)
+             1,593      LLC-loads                                                               (3.34%)
+               277      LLC-load-misses                  #   17.39% of all LL-cache accesses    (3.34%)
+             2,903      L1-dcache-load-misses            #    0.00% of all L1-dcache accesses   (3.34%)
+     <not counted>      L1-dcache-loads                                                         (0.00%)
+     <not counted>      L1-dcache-stores                                                        (0.00%)
+     <not counted>      L1-icache-load-misses                                                   (0.00%)
+     <not counted>      LLC-stores                                                              (0.00%)
+     <not counted>      cache-references                                                        (0.00%)
+     <not counted>      cache-misses                                                            (0.00%)
+     <not counted>      cycles                                                                  (0.00%)
+     <not counted>      instructions                                                            (0.00%)
+
+       0.006782445 seconds time elapsed
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog
+Set latency to 8000000

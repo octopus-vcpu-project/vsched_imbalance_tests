@@ -1,0 +1,28 @@
+# started on Wed Nov  1 02:49:53 2023
+
+
+ Performance counter stats for process id '237090':
+
+        10,088,011      l1d_pend_miss.pending                                                 
+           190,087      l2_rqsts.miss                                                         
+               387      l2_rqsts.pf_hit                                                       
+             2,288      l2_rqsts.pf_miss                                                      
+            16,521      l2_rqsts.references                                                     (3.34%)
+             1,593      LLC-loads                                                               (3.34%)
+               277      LLC-load-misses                  #   17.39% of all LL-cache accesses    (3.34%)
+             2,903      L1-dcache-load-misses            #    0.00% of all L1-dcache accesses   (3.34%)
+     <not counted>      L1-dcache-loads                                                         (0.00%)
+     <not counted>      L1-dcache-stores                                                        (0.00%)
+     <not counted>      L1-icache-load-misses                                                   (0.00%)
+     <not counted>      LLC-stores                                                              (0.00%)
+     <not counted>      cache-references                                                        (0.00%)
+     <not counted>      cache-misses                                                            (0.00%)
+     <not counted>      cycles                                                                  (0.00%)
+     <not counted>      instructions                                                            (0.00%)
+
+       0.006782445 seconds time elapsed
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

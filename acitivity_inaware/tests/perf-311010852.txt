@@ -1,0 +1,24 @@
+# started on Wed Nov  1 08:52:31 2023
+
+
+ Performance counter stats for process id '240281':
+
+54,226,720,327,474      l1d_pend_miss.pending                                                   (31.22%)
+   469,894,266,763      l2_rqsts.miss                                                           (31.23%)
+     4,530,191,308      l2_rqsts.pf_hit                                                         (31.24%)
+     7,905,024,596      l2_rqsts.pf_miss                                                        (31.26%)
+ 2,660,852,188,298      l2_rqsts.references                                                     (24.99%)
+   169,690,069,940      LLC-loads                                                               (24.99%)
+    87,911,534,558      LLC-load-misses                  #   51.81% of all LL-cache accesses    (24.99%)
+ 1,175,076,491,790      L1-dcache-load-misses            #    6.15% of all L1-dcache accesses   (25.01%)
+19,091,754,613,742      L1-dcache-loads                                                         (25.02%)
+10,361,590,835,842      L1-dcache-stores                                                        (25.04%)
+ 1,507,898,001,931      L1-icache-load-misses                                                   (25.05%)
+    75,016,805,238      LLC-stores                                                              (25.02%)
+   468,873,354,374      cache-references                                                        (25.01%)
+   164,577,164,582      cache-misses                     #   35.101 % of all cache refs         (24.99%)
+79,179,560,092,146      cycles                                                                  (24.96%)
+73,394,744,659,296      instructions                     #    0.93  insn per cycle              (31.20%)
+
+    2744.951693590 seconds time elapsed
+

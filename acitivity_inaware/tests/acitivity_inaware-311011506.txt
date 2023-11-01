@@ -1,0 +1,20 @@
+Set latency to 32000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 2146.390000
+User Time 19653.720000
+System Time 4015.040000
+Percent CPU 1102.000000
+Context Switches 4182731.000000
+Sleeps 3887242.000000
+

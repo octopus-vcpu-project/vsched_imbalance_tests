@@ -1,0 +1,37 @@
+Set latency to 32000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+# started on Wed Nov  1 03:02:39 2023
+
+
+ Performance counter stats for process id '238737':
+
+     8,904,676,336      l1d_pend_miss.pending                                                   (31.08%)
+        96,645,258      l2_rqsts.miss                                                           (32.19%)
+           939,020      l2_rqsts.pf_hit                                                         (33.11%)
+         1,899,517      l2_rqsts.pf_miss                                                        (33.77%)
+       489,528,232      l2_rqsts.references                                                     (28.32%)
+        28,086,408      LLC-loads                                                               (27.81%)
+        13,821,920      LLC-load-misses                  #   49.21% of all LL-cache accesses    (27.28%)
+       228,441,801      L1-dcache-load-misses            #    5.45% of all L1-dcache accesses   (27.38%)
+     4,192,924,596      L1-dcache-loads                                                         (26.88%)
+     2,215,767,527      L1-dcache-stores                                                        (26.37%)
+       307,610,337      L1-icache-load-misses                                                   (25.72%)
+        13,728,221      LLC-stores                                                              (24.71%)
+        86,485,091      cache-references                                                        (24.12%)
+        26,664,435      cache-misses                     #   30.831 % of all cache refs         (23.21%)
+    15,231,118,499      cycles                                                                  (23.15%)
+    15,934,941,642      instructions                     #    1.05  insn per cycle              (28.59%)
+
+       0.406602135 seconds time elapsed
+
+Set latency to 16000000

@@ -56,7 +56,7 @@ wake_and_pin_vm(){
 }
 
 setMigrationCost(){
-    sudo echo $1 > /sys/kernel/debug/sched/migration_cost_ns
+    ssh ubuntu@$prob_vm "sudo echo $1 > /sys/kernel/debug/sched/migration_cost_ns"
     echo "Set Migration Cost to $1" 
     echo "Set Migration Cost to $1" >> "$OUTPUT_FILE" 
 }

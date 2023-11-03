@@ -1,59 +1,40 @@
 #include <iostream>
-#include <vector>
-#include <random>
-#include <chrono>
-#include <cmath>
-#include <thread>
-
-const size_t ARRAY_SIZE = 50000000; 
-const size_t NUM_ITERATIONS = 1000000000; 
-
-double computePi(size_t iterations) {
-    std::default_random_engine generator;
-    std::uniform_real_distribution<double> distribution(0.0, 1.0);
-    size_t insideCircle = 0;
-
-    for (size_t i = 0; i < iterations; ++i) {
-        double x = distribution(generator);
-        double y = distribution(generator);
-        if (x*x + y*y <= 1.0)
-            insideCircle++;
-    }
-
-    return 4.0 * insideCircle / iterations;
-}
-
-void stressCore() {
-    std::vector<double> largeArray(ARRAY_SIZE);
-    std::default_random_engine generator;
-    std::uniform_int_distribution<size_t> distribution(0, ARRAY_SIZE - 1);
-
-    for (size_t i = 0; i < ARRAY_SIZE; ++i) {
-        largeArray[i] = i;
-    }
-
-    while (true) {
-        for (size_t i = 0; i < ARRAY_SIZE; ++i) {
-            size_t index = distribution(generator);
-            size_t index2 = distribution(generator);
-            largeArray[index] = largeArray[index2] + computePi(3);
-        }
-    }
-}
+#include <cstdlib>
+#include <ctime>
+#include <new> // For std::nothrow
 
 int main() {
-    unsigned int numCores = std::thread::hardware_concurrency();
-    std::cout << "Launching stress tasks on " << numCores << " cores." << std::endl;
+    // Size of the memory buffer to allocate (100 MB for example).
+    const size_t BUFFER_SIZE = 100 * 1024 * 1024; // Adjust as needed
+    const size_t CACHE_LINE_SIZE = 64; // Size of cache line
 
-    std::vector<std::thread> threads;
-
-    for(unsigned int i = 0; i < numCores; ++i) {
-        threads.push_back(std::thread(stressCore));
+    // Allocate the buffer.
+    char *buffer = new (std::nothrow) char[BUFFER_SIZE];
+    if (!buffer) {
+        std::cerr << "Memory allocation failed." << std::endl;
+        return 1;
     }
 
-    for(auto &t : threads) {
-        t.join();
+    // Seed the random number generator.
+    std::srand(static_cast<unsigned>(std::time(nullptr)));
+
+    // Endless loop to continuously access random cache lines.
+    while (true) {
+        // Generate a random index aligned to cache line size.
+        size_t random_index = (std::rand() % (BUFFER_SIZE / CACHE_LINE_SIZE)) * CACHE_LINE_SIZE;
+
+        // Access a random cache line in the buffer to "pollute" the cache.
+        // The volatile keyword is used to prevent compiler optimizations that may skip the access.
+        volatile char data = buffer[random_index];
+
+        // Optionally perform a write operation.
+        buffer[random_index] = data;
+
+        // You could add a small delay here if you want to control the rate of access.
     }
+
+    // Normally we would free the buffer, but this code will never reach here due to the infinite loop.
+    // delete[] buffer;
 
     return 0;
 }

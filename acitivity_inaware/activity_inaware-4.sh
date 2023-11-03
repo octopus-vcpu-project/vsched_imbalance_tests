@@ -75,7 +75,7 @@ runAllTests(){
 
 
 
-toggle_topological_passthrough 0
+toggle_topological_passthrough 1
 
 
 wake_and_pin_vm $prob_vm

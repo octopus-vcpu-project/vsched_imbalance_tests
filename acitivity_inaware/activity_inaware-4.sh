@@ -4,6 +4,7 @@ compete_vm=$2
 benchmark_time=20
 latency_bench="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 48 https://127.0.0.1:8089/test.html" 
 compete_bench="./cache_thr.out"
+non_cache_compete_bench="./Workloads/non-cache.o"
 OUTPUT_FILE="./tests/acitivity_inaware-4$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
@@ -97,9 +98,9 @@ echo "finished warming up"
 
 
 
-sudo echo 32000000 > /sys/kernel/debug/sched/min_granularity_ns
-echo "Cache-Hot 32ms tests"
-echo "Cache-Hot 32ms tests" >> $OUTPUT_FILE 
+sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+echo "Cache-Hot  tests"
+echo "Cache-Hot  tests" >> $OUTPUT_FILE 
 setMigrationCost 1000000
 runAllTests
 
@@ -133,7 +134,9 @@ runAllTests
 setMigrationCost 0
 runAllTests
 
-sudo echo 1000000 > /sys/kernel/debug/sched/min_granularity_ns
+ssh ubuntu@$compete_vm "sudo killall cache_thr.out" 
+ssh ubuntu@$compete_vm "sudo $non_cache_compete_bench" &
+sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 echo "Cache-Cold 3ms tests"
 echo "Cache-Cold 3ms tests" >> $OUTPUT_FILE 
 

@@ -8,7 +8,7 @@ non_cache_compete_bench="./Workloads/non-cache.o"
 OUTPUT_FILE="./tests/acitivity_inaware-4$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
-
+idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 
 toggle_topological_passthrough(){
     virsh shutdown $prob_vm
@@ -94,6 +94,7 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 ssh ubuntu@$prob_vm "sudo killall a.out" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "sudo $idler_bench"  &
 echo "finished warming up"
 
 

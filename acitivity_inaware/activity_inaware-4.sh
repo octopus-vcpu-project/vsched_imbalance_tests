@@ -66,7 +66,7 @@ runAllTests(){
    ssh ubuntu@$prob_vm "sudo killall nginx"
    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
    sleep 10
-   ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 16 https://127.0.0.1:8089/test.html"  >> "$OUTPUT_FILE"  
+   ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html"  >> "$OUTPUT_FILE"  
    ssh ubuntu@$prob_vm "sudo killall nginx"
  #  ssh ubuntu@$prob_vm "sysbench --threads=32 --time=30 cpu run" >> "$OUTPUT_FILE"
   # ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native" >> "$OUTPUT_FILE"

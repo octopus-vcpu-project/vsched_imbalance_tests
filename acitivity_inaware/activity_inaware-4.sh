@@ -95,7 +95,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 ssh ubuntu@$prob_vm "sudo killall a.out" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
+#ssh ubuntu@$prob_vm "sudo $latency_bench"  >> "$OUTPUT_FILE" 
 #ssh ubuntu@$prob_vm "sudo $idler_bench"  &
 echo "finished warming up"
 

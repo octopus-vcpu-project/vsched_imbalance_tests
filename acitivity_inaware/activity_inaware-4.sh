@@ -102,19 +102,19 @@ echo "Cache-Cold  tests" >> $OUTPUT_FILE
 runAllTests
 
 
-setMigrationCost 500
+setMigrationCost 
 runAllTests
 
-setMigrationCost 400
+setMigrationCost 40
 runAllTests
 
-setMigrationCost 300
+setMigrationCost 30
 runAllTests
 
-setMigrationCost 200
+setMigrationCost 20
 runAllTests
 
-setMigrationCost 100
+setMigrationCost 10
 runAllTests
 
 setMigrationCost 0

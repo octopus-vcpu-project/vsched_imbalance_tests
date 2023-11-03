@@ -1,0 +1,120 @@
+Set latency to 32000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 2109.660000
+User Time 19796.770000
+System Time 4010.420000
+Percent CPU 1128.000000
+Context Switches 3203208.000000
+Sleeps 3121056.000000
+
+Set latency to 16000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1871.480000
+User Time 20291.830000
+System Time 4053.630000
+Percent CPU 1300.000000
+Context Switches 3603448.000000
+Sleeps 3257676.000000
+
+Set latency to 8000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1789.470000
+User Time 20497.900000
+System Time 4181.500000
+Percent CPU 1379.000000
+Context Switches 3861454.000000
+Sleeps 3377987.000000
+
+Set latency to 4000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1758.340000
+User Time 20764.850000
+System Time 4188.580000
+Percent CPU 1419.000000
+Context Switches 4097101.000000
+Sleeps 3440712.000000
+
+Set latency to 2000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1749.500000
+User Time 20977.060000
+System Time 4274.410000
+Percent CPU 1443.000000
+Context Switches 4194826.000000
+Sleeps 3497982.000000
+
+Set latency to 3000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1743.990000
+User Time 20859.100000
+System Time 4203.210000
+Percent CPU 1437.000000
+Context Switches 4181372.000000
+Sleeps 3494386.000000
+

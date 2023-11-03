@@ -9,7 +9,7 @@ OUTPUT_FILE="./tests/acitivity_inaware-4$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
-
+sudo virsh shutdown $compete_vm
 toggle_topological_passthrough(){
     virsh shutdown $prob_vm
     while true; do

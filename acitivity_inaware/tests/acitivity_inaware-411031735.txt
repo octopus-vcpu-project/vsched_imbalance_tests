@@ -1,0 +1,20 @@
+Cache-Cold  tests
+Set Migration Cost to 1000000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    93.54ms  170.46ms   1.76s    94.98%
+    Req/Sec   303.38     91.76   525.00     68.38%
+  264513 requests in 1.00m, 29.15GB read
+  Socket errors: connect 0, read 0, write 0, timeout 2
+Requests/sec:   4391.23
+Transfer/sec:    495.59MB
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]

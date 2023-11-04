@@ -1,0 +1,112 @@
+Set Migration Cost to 1000000
+Cache-Cold  tests
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   149.48ms  124.12ms   1.12s    89.20%
+    Req/Sec   132.46     56.36   484.00     74.90%
+  51278 requests in 1.00m, 5.65GB read
+  Socket errors: connect 2446727, read 215, write 0, timeout 0
+Requests/sec:    853.11
+Transfer/sec:     96.24MB
+Set Migration Cost to 900000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    78.16ms  108.79ms   1.37s    96.41%
+    Req/Sec   285.11     81.15   505.00     68.87%
+  263041 requests in 1.00m, 28.99GB read
+Requests/sec:   4374.66
+Transfer/sec:    493.63MB
+Set Migration Cost to 800000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.30ms   39.12ms 413.58ms   73.12%
+    Req/Sec   304.64     86.65   525.00     66.17%
+  290344 requests in 1.00m, 31.99GB read
+Requests/sec:   4830.27
+Transfer/sec:    544.99MB
+Set Migration Cost to 700000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    65.81ms   61.94ms 840.74ms   92.45%
+    Req/Sec   304.87     82.81   515.00     67.52%
+  284502 requests in 1.00m, 31.35GB read
+Requests/sec:   4733.37
+Transfer/sec:    534.05MB
+Set Migration Cost to 600000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.31ms   39.20ms 484.68ms   78.22%
+    Req/Sec   307.14     74.60   525.00     67.64%
+  291256 requests in 1.00m, 32.09GB read
+Requests/sec:   4845.31
+Transfer/sec:    546.69MB
+Set Migration Cost to 500000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    59.85ms   39.40ms 420.11ms   76.21%
+    Req/Sec   308.24     79.93   529.00     65.36%
+  293870 requests in 1.00m, 32.38GB read
+Requests/sec:   4888.29
+Transfer/sec:    551.55MB
+Set Migration Cost to 400000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    68.02ms   68.68ms 830.31ms   93.56%
+    Req/Sec   305.73     82.24   515.00     69.14%
+  281760 requests in 1.00m, 31.05GB read
+Requests/sec:   4686.78
+Transfer/sec:    528.83MB
+Set Migration Cost to 300000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.51ms   41.77ms 464.59ms   80.30%
+    Req/Sec   309.00     96.48   545.00     66.71%
+  294426 requests in 1.00m, 32.44GB read
+Requests/sec:   4898.45
+Transfer/sec:    552.62MB
+Set Migration Cost to 200000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.51ms   45.31ms 698.77ms   85.74%
+    Req/Sec   309.92     77.68   515.00     68.33%
+  293634 requests in 1.00m, 32.36GB read
+Requests/sec:   4883.96
+Transfer/sec:    551.09MB
+Set Migration Cost to 100000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    65.27ms   64.47ms   1.03s    93.17%
+    Req/Sec   308.34     84.71   520.00     71.25%
+  287620 requests in 1.00m, 31.69GB read
+Requests/sec:   4784.34
+Transfer/sec:    539.86MB
+Set Migration Cost to 0
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    61.62ms   50.14ms 727.89ms   89.68%
+    Req/Sec   311.28     74.55   505.00     68.46%
+  293048 requests in 1.00m, 32.29GB read
+Requests/sec:   4875.46
+Transfer/sec:    550.11MB
+Cache-Hot 3ms tests
+Set Migration Cost to 1000000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.70ms   34.33ms 334.58ms   75.57%
+    Req/Sec   320.03     80.61   540.00     67.46%
+  306342 requests in 1.00m, 33.76GB read
+Requests/sec:   5094.18
+Transfer/sec:    574.82MB
+Set Migration Cost to 900000

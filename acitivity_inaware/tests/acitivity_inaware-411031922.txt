@@ -1,0 +1,50 @@
+Set Migration Cost to 1000000
+Cache-Cold  tests
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    94.41ms  237.91ms   2.00s    94.26%
+    Req/Sec   843.11    160.78     1.05k    92.82%
+  300875 requests in 1.08m, 33.16GB read
+  Socket errors: connect 0, read 0, write 0, timeout 331
+Requests/sec:   4637.22
+Transfer/sec:    523.34MB
+Set Migration Cost to 900000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    52.49ms   86.80ms   1.08s    96.27%
+    Req/Sec     0.86k   124.48     1.05k    95.38%
+  376729 requests in 1.00m, 41.52GB read
+  Socket errors: connect 0, read 0, write 0, timeout 266
+Requests/sec:   6270.13
+Transfer/sec:    707.58MB
+Set Migration Cost to 800000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    82.14ms  223.15ms   1.94s    95.80%
+    Req/Sec     0.87k   100.88     1.03k    96.65%
+  392944 requests in 1.00m, 43.30GB read
+Requests/sec:   6540.14
+Transfer/sec:    738.04MB
+Set Migration Cost to 700000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.90ms    9.91ms 289.56ms   99.40%
+    Req/Sec     0.89k    53.52     1.02k    86.14%
+  422375 requests in 1.00m, 46.54GB read
+Requests/sec:   7030.40
+Transfer/sec:    793.33MB
+Set Migration Cost to 600000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    67.78ms  164.79ms   1.75s    95.98%
+    Req/Sec     0.87k   110.38     1.01k    96.78%
+  375446 requests in 1.00m, 41.38GB read
+  Socket errors: connect 0, read 0, write 0, timeout 268
+Requests/sec:   6247.33
+Transfer/sec:    705.00MB
+Set Migration Cost to 500000

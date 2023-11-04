@@ -1,5 +1,5 @@
-Cache-Cold  tests
 Set Migration Cost to 1000000
+Cache-Cold  tests
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -20,9 +20,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	0m10.264s
-user	0m59.993s
-sys	0m29.395s
+real	1m12.513s
+user	1m2.301s
+sys	0m43.208s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -30,8 +30,7 @@ sys	0m29.395s
 [PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
 [PARSEC]
 [PARSEC] Done.
-Set Migration Cost to 900000
-Set Migration Cost to 800000
+Set Migration Cost to 
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -52,9 +51,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	0m9.962s
-user	0m59.091s
-sys	0m27.013s
+real	1m6.792s
+user	1m4.115s
+sys	0m37.483s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -62,83 +61,7 @@ sys	0m27.013s
 [PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
 [PARSEC]
 [PARSEC] Done.
-Set Migration Cost to 700000
-Set Migration Cost to 600000
-Running 1m test @ https://127.0.0.1:8089/test.html
-  16 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    66.18ms   93.76ms   1.07s    93.21%
-    Req/Sec   355.75    242.73     0.96k    69.57%
-  291304 requests in 1.02m, 32.09GB read
-  Socket errors: connect 48236, read 215, write 0, timeout 570
-Requests/sec:   4768.65
-Transfer/sec:    537.99MB
-[PARSEC] Benchmarks to run:  parsec.dedup
-
-[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
-[PARSEC] Deleting old run directory.
-[PARSEC] Setting up run directory.
-[PARSEC] Unpacking benchmark input 'native'.
-FC-6-x86_64-disc1.iso
-[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
-[PARSEC] [---------- Beginning of output ----------]
-[Encode] stat() output.dat.ddp failed: No such file or directory
-PARSEC Benchmark Suite Version 3.0-beta-20150206
-
-real	1m22.299s
-user	1m4.547s
-sys	0m37.063s
-[PARSEC] [----------    End of output    ----------]
-[PARSEC]
-[PARSEC] BIBLIOGRAPHY
-[PARSEC]
-[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
-[PARSEC]
-[PARSEC] Done.
-Set Migration Cost to 500000
-Set Migration Cost to 400000
-Running 1m test @ https://127.0.0.1:8089/test.html
-  16 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    84.58ms  158.32ms   1.73s    94.27%
-    Req/Sec   382.37    235.58     0.96k    62.44%
-  316904 requests in 1.00m, 34.91GB read
-  Socket errors: connect 29654, read 215, write 0, timeout 286
-Requests/sec:   5273.74
-Transfer/sec:    594.96MB
-[PARSEC] Benchmarks to run:  parsec.dedup
-
-[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
-[PARSEC] Deleting old run directory.
-[PARSEC] Setting up run directory.
-[PARSEC] Unpacking benchmark input 'native'.
-FC-6-x86_64-disc1.iso
-[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
-[PARSEC] [---------- Beginning of output ----------]
-[Encode] stat() output.dat.ddp failed: No such file or directory
-PARSEC Benchmark Suite Version 3.0-beta-20150206
-
-real	1m17.625s
-user	1m2.218s
-sys	0m34.693s
-[PARSEC] [----------    End of output    ----------]
-[PARSEC]
-[PARSEC] BIBLIOGRAPHY
-[PARSEC]
-[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
-[PARSEC]
-[PARSEC] Done.
-Set Migration Cost to 300000
-Set Migration Cost to 200000
-Running 1m test @ https://127.0.0.1:8089/test.html
-  16 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    93.59ms  161.18ms   1.44s    92.87%
-    Req/Sec   357.26    244.43     0.95k    68.26%
-  298325 requests in 1.00m, 32.87GB read
-  Socket errors: connect 87691, read 235, write 0, timeout 1
-Requests/sec:   4963.63
-Transfer/sec:    559.98MB
+Set Migration Cost to 40
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -159,9 +82,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	1m34.590s
-user	1m6.292s
-sys	0m26.145s
+real	1m10.303s
+user	1m11.374s
+sys	0m43.193s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -169,16 +92,100 @@ sys	0m26.145s
 [PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
 [PARSEC]
 [PARSEC] Done.
-Set Migration Cost to 100000
+Set Migration Cost to 30
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	1m8.868s
+user	1m2.530s
+sys	0m31.727s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Set Migration Cost to 20
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	1m13.743s
+user	1m10.086s
+sys	0m38.304s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Set Migration Cost to 10
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	1m8.383s
+user	1m14.243s
+sys	0m44.273s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
 Set Migration Cost to 0
-Running 1m test @ https://127.0.0.1:8089/test.html
-  16 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   127.24ms  271.90ms   1.87s    91.74%
-    Req/Sec   381.18    133.75     0.94k    81.88%
-  317307 requests in 1.00m, 34.96GB read
-Requests/sec:   5280.01
-Transfer/sec:    595.67MB
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -199,9 +206,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	0m10.457s
-user	0m59.635s
-sys	0m24.709s
+real	1m11.100s
+user	1m0.321s
+sys	0m34.481s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -210,7 +217,7 @@ sys	0m24.709s
 [PARSEC]
 [PARSEC] Done.
 Cache-Hot 3ms tests
-Set Migration Cost to 1000000
+Set Migration Cost to 500
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -231,9 +238,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	0m9.920s
-user	0m58.597s
-sys	0m28.609s
+real	1m21.591s
+user	0m55.927s
+sys	0m44.076s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -241,7 +248,7 @@ sys	0m28.609s
 [PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
 [PARSEC]
 [PARSEC] Done.
-Set Migration Cost to 900000
+Set Migration Cost to 400
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -262,9 +269,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	0m9.956s
-user	0m58.336s
-sys	0m27.461s
+real	1m7.736s
+user	1m19.538s
+sys	0m41.564s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -272,7 +279,7 @@ sys	0m27.461s
 [PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
 [PARSEC]
 [PARSEC] Done.
-Set Migration Cost to 800000
+Set Migration Cost to 300
 [PARSEC] Benchmarks to run:  parsec.dedup
 
 [PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
@@ -293,9 +300,9 @@ Data size after deduplication:         658.95 MB (compression factor: 1.02x)
 Data size after compression:           630.26 MB (compression factor: 1.05x)
 Output overhead:                         1.10%
 
-real	0m9.831s
-user	1m2.294s
-sys	0m28.353s
+real	1m4.953s
+user	0m57.065s
+sys	0m36.594s
 [PARSEC] [----------    End of output    ----------]
 [PARSEC]
 [PARSEC] BIBLIOGRAPHY
@@ -303,3 +310,97 @@ sys	0m28.353s
 [PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
 [PARSEC]
 [PARSEC] Done.
+Set Migration Cost to 200
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	1m15.663s
+user	0m54.068s
+sys	0m43.187s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Set Migration Cost to 100
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	1m14.571s
+user	0m53.568s
+sys	0m42.471s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Set Migration Cost to 0
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	1m20.911s
+user	0m56.398s
+sys	0m43.430s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Set Migration Cost to 500000

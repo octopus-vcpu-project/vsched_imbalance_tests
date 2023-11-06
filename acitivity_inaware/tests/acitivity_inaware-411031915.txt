@@ -1,0 +1,51 @@
+Set Migration Cost to 1000000
+Cache-Cold  tests
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   147.92ms  282.26ms   1.98s    91.52%
+    Req/Sec   571.38    160.15     0.99k    71.89%
+  208558 requests in 1.00m, 22.98GB read
+  Socket errors: connect 533683, read 256, write 0, timeout 0
+Requests/sec:   3470.26
+Transfer/sec:    391.48MB
+Set Migration Cost to 900000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.29ms   42.65ms 963.60ms   97.60%
+    Req/Sec     0.88k    95.76     1.02k    96.65%
+  385580 requests in 1.00m, 42.49GB read
+  Socket errors: connect 0, read 0, write 0, timeout 269
+Requests/sec:   6416.11
+Transfer/sec:    724.03MB
+Set Migration Cost to 800000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    65.20ms  138.86ms   1.35s    95.64%
+    Req/Sec     0.87k   121.69     1.03k    96.35%
+  355401 requests in 1.03m, 39.17GB read
+  Socket errors: connect 0, read 0, write 0, timeout 15
+Requests/sec:   5758.05
+Transfer/sec:    649.80MB
+Set Migration Cost to 700000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.38ms    2.90ms 216.63ms   80.51%
+    Req/Sec     0.89k    51.27     1.01k    86.41%
+  423551 requests in 1.00m, 46.67GB read
+Requests/sec:   7049.04
+Transfer/sec:    795.43MB
+Set Migration Cost to 600000
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.10ms  131.33ms   1.46s    96.45%
+    Req/Sec     0.87k    97.30     1.05k    96.77%
+  399807 requests in 1.00m, 44.06GB read
+Requests/sec:   6653.91
+Transfer/sec:    750.86MB
+Set Migration Cost to 500000
+Set Migration Cost to 400000

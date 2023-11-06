@@ -31,10 +31,11 @@ for i in {0..0};do
    echo "naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
    ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
-   sleep 2
+   sleep 3
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
+   sleep 4
 done
 sudo git add .;sudo git commit -m 'new';sudo git push
 

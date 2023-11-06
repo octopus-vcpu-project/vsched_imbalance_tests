@@ -1,0 +1,195 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 32':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points
+[ 3s ] thds: 8 eps: 920.51 lat (ms,95%): 33.12
+[ 6s ] thds: 8 eps: 890.45 lat (ms,95%): 33.72
+[ 9s ] thds: 8 eps: 878.10 lat (ms,95%): 33.72
+[ 12s ] thds: 8 eps: 837.02 lat (ms,95%): 33.72
+[ 15s ] thds: 8 eps: 958.41 lat (ms,95%): 33.12
+[ 18s ] thds: 8 eps: 973.62 lat (ms,95%): 33.12
+[ 21s ] thds: 8 eps: 955.90 lat (ms,95%): 33.12
+[ 24s ] thds: 8 eps: 953.07 lat (ms,95%): 33.12
+[ 27s ] thds: 8 eps: 971.86 lat (ms,95%): 33.12
+[ 30s ] thds: 8 eps: 929.99 lat (ms,95%): 33.12
+[ 33s ] thds: 8 eps: 960.64 lat (ms,95%): 33.12
+[ 36s ] thds: 8 eps: 941.94 lat (ms,95%): 33.12
+[ 39s ] thds: 8 eps: 965.63 lat (ms,95%): 33.12
+read 200000 points
+[ 42s ] thds: 8 eps: 1042.65 lat (ms,95%): 33.12
+[ 45s ] thds: 8 eps: 976.89 lat (ms,95%): 33.12
+[ 48s ] thds: 8 eps: 964.56 lat (ms,95%): 33.12
+[ 51s ] thds: 8 eps: 966.50 lat (ms,95%): 33.12
+[ 54s ] thds: 8 eps: 960.42 lat (ms,95%): 33.12
+[ 57s ] thds: 8 eps: 967.40 lat (ms,95%): 33.12
+[ 60s ] thds: 8 eps: 968.56 lat (ms,95%): 33.12
+[ 63s ] thds: 8 eps: 964.32 lat (ms,95%): 33.12
+[ 66s ] thds: 8 eps: 972.93 lat (ms,95%): 33.12
+[ 69s ] thds: 8 eps: 1009.35 lat (ms,95%): 33.12
+read 200000 points
+[ 72s ] thds: 8 eps: 1010.11 lat (ms,95%): 33.12
+[ 75s ] thds: 8 eps: 963.74 lat (ms,95%): 33.12
+[ 78s ] thds: 8 eps: 971.64 lat (ms,95%): 33.12
+[ 81s ] thds: 8 eps: 979.95 lat (ms,95%): 33.12
+[ 84s ] thds: 8 eps: 963.47 lat (ms,95%): 33.12
+[ 87s ] thds: 8 eps: 967.90 lat (ms,95%): 33.12
+[ 90s ] thds: 8 eps: 956.25 lat (ms,95%): 33.12
+[ 93s ] thds: 8 eps: 960.35 lat (ms,95%): 33.12
+[ 96s ] thds: 8 eps: 971.42 lat (ms,95%): 33.12
+[ 99s ] thds: 8 eps: 965.18 lat (ms,95%): 33.12
+[ 102s ] thds: 8 eps: 915.09 lat (ms,95%): 33.12
+read 200000 points
+[ 105s ] thds: 8 eps: 1096.84 lat (ms,95%): 33.12
+[ 108s ] thds: 8 eps: 974.29 lat (ms,95%): 33.12
+[ 111s ] thds: 8 eps: 908.43 lat (ms,95%): 33.12
+[ 114s ] thds: 8 eps: 1023.13 lat (ms,95%): 33.12
+[ 117s ] thds: 8 eps: 957.18 lat (ms,95%): 33.12
+[ 120s ] thds: 8 eps: 958.69 lat (ms,95%): 33.12
+[ 123s ] thds: 8 eps: 933.61 lat (ms,95%): 33.12
+[ 126s ] thds: 8 eps: 960.19 lat (ms,95%): 33.12
+[ 129s ] thds: 8 eps: 955.04 lat (ms,95%): 33.12
+[ 132s ] thds: 8 eps: 936.15 lat (ms,95%): 33.12
+[ 135s ] thds: 8 eps: 952.98 lat (ms,95%): 33.12
+[ 138s ] thds: 8 eps: 950.12 lat (ms,95%): 33.12
+[ 141s ] thds: 8 eps: 965.62 lat (ms,95%): 33.12
+[ 144s ] thds: 8 eps: 986.31 lat (ms,95%): 33.12
+read 200000 points
+[ 147s ] thds: 8 eps: 1004.92 lat (ms,95%): 33.12
+[ 150s ] thds: 8 eps: 954.86 lat (ms,95%): 33.12
+[ 153s ] thds: 8 eps: 954.03 lat (ms,95%): 33.12
+[ 156s ] thds: 8 eps: 959.06 lat (ms,95%): 33.12
+[ 159s ] thds: 8 eps: 961.15 lat (ms,95%): 33.12
+[ 162s ] thds: 8 eps: 962.98 lat (ms,95%): 33.12
+[ 165s ] thds: 8 eps: 949.63 lat (ms,95%): 33.12
+[ 168s ] thds: 8 eps: 961.38 lat (ms,95%): 33.12
+[ 171s ] thds: 8 eps: 970.93 lat (ms,95%): 33.12
+[ 174s ] thds: 8 eps: 963.41 lat (ms,95%): 33.12
+[ 177s ] thds: 8 eps: 952.21 lat (ms,95%): 33.12
+[ 180s ] thds: 8 eps: 948.71 lat (ms,95%): 33.12
+
+real	3m0.834s
+user	48m48.133s
+sys	1m16.005s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 183s ] thds: 8 eps: 1073.67 lat (ms,95%): 29.72
+non-naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 32':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points
+[ 3s ] thds: 8 eps: 951.65 lat (ms,95%): 33.12
+[ 6s ] thds: 8 eps: 970.79 lat (ms,95%): 33.12
+[ 9s ] thds: 8 eps: 896.09 lat (ms,95%): 33.12
+[ 12s ] thds: 8 eps: 986.22 lat (ms,95%): 33.12
+[ 15s ] thds: 8 eps: 963.23 lat (ms,95%): 33.12
+[ 18s ] thds: 8 eps: 944.99 lat (ms,95%): 33.12
+[ 21s ] thds: 8 eps: 951.59 lat (ms,95%): 33.12
+[ 24s ] thds: 8 eps: 949.63 lat (ms,95%): 33.12
+[ 27s ] thds: 8 eps: 955.50 lat (ms,95%): 33.12
+[ 30s ] thds: 8 eps: 950.63 lat (ms,95%): 33.12
+read 200000 points
+[ 33s ] thds: 8 eps: 1046.02 lat (ms,95%): 33.12
+[ 36s ] thds: 8 eps: 958.43 lat (ms,95%): 33.12
+[ 39s ] thds: 8 eps: 952.27 lat (ms,95%): 33.12
+[ 42s ] thds: 8 eps: 953.58 lat (ms,95%): 33.12
+[ 45s ] thds: 8 eps: 956.03 lat (ms,95%): 33.12
+[ 48s ] thds: 8 eps: 956.49 lat (ms,95%): 33.12
+[ 51s ] thds: 8 eps: 950.33 lat (ms,95%): 33.12
+[ 54s ] thds: 8 eps: 949.05 lat (ms,95%): 33.12
+read 200000 points
+[ 57s ] thds: 8 eps: 933.66 lat (ms,95%): 33.12
+[ 60s ] thds: 8 eps: 1084.80 lat (ms,95%): 33.12
+[ 63s ] thds: 8 eps: 952.18 lat (ms,95%): 33.12
+[ 66s ] thds: 8 eps: 952.12 lat (ms,95%): 33.12
+[ 69s ] thds: 8 eps: 948.16 lat (ms,95%): 33.12
+[ 72s ] thds: 8 eps: 946.25 lat (ms,95%): 33.12
+[ 75s ] thds: 8 eps: 947.76 lat (ms,95%): 33.12
+[ 78s ] thds: 8 eps: 958.02 lat (ms,95%): 33.12
+[ 81s ] thds: 8 eps: 958.12 lat (ms,95%): 33.12
+[ 84s ] thds: 8 eps: 928.56 lat (ms,95%): 33.12
+[ 87s ] thds: 8 eps: 950.59 lat (ms,95%): 33.12
+read 200000 points
+[ 90s ] thds: 8 eps: 1046.79 lat (ms,95%): 33.12
+[ 93s ] thds: 8 eps: 958.25 lat (ms,95%): 33.12
+[ 96s ] thds: 8 eps: 956.84 lat (ms,95%): 33.12
+[ 99s ] thds: 8 eps: 952.98 lat (ms,95%): 33.12
+[ 102s ] thds: 8 eps: 951.09 lat (ms,95%): 33.12
+[ 105s ] thds: 8 eps: 944.03 lat (ms,95%): 33.12
+[ 108s ] thds: 8 eps: 957.54 lat (ms,95%): 33.12
+[ 111s ] thds: 8 eps: 963.44 lat (ms,95%): 33.12
+[ 114s ] thds: 8 eps: 955.55 lat (ms,95%): 33.12
+[ 117s ] thds: 8 eps: 944.18 lat (ms,95%): 33.12
+[ 120s ] thds: 8 eps: 951.55 lat (ms,95%): 33.12
+[ 123s ] thds: 8 eps: 999.76 lat (ms,95%): 33.12
+read 200000 points
+[ 126s ] thds: 8 eps: 924.06 lat (ms,95%): 33.12
+[ 129s ] thds: 8 eps: 1060.51 lat (ms,95%): 33.12
+[ 132s ] thds: 8 eps: 959.31 lat (ms,95%): 33.12
+[ 135s ] thds: 8 eps: 960.86 lat (ms,95%): 33.12
+[ 138s ] thds: 8 eps: 946.33 lat (ms,95%): 33.12
+[ 141s ] thds: 8 eps: 957.88 lat (ms,95%): 33.12
+[ 144s ] thds: 8 eps: 952.39 lat (ms,95%): 33.12
+[ 147s ] thds: 8 eps: 964.84 lat (ms,95%): 33.12
+[ 150s ] thds: 8 eps: 969.55 lat (ms,95%): 33.12
+[ 153s ] thds: 8 eps: 970.91 lat (ms,95%): 33.12
+[ 156s ] thds: 8 eps: 958.01 lat (ms,95%): 33.12
+[ 159s ] thds: 8 eps: 988.84 lat (ms,95%): 32.53
+
+real	2m39.567s
+user	44m35.655s
+sys	1m18.349s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 162s ] thds: 8 eps: 1085.47 lat (ms,95%): 29.19

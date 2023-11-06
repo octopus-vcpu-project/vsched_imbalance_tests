@@ -27,12 +27,12 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 wake_and_pin_prob $prob_vm
 #Fetch VM PID and use that to fetch Cgroup title
 for i in {0..4};do
-    echo "naive test">> >> "$OUTPUT_FILE"
-    ssh ubuntu@$prob_vm "sudo sysbench cpu --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "sudo sysbench cpu --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
+   echo "naive test" >> "$OUTPUT_FILE"
+   ssh ubuntu@$prob_vm "sudo sysbench cpu --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
+   ssh ubuntu@$prob_vm "sudo sysbench cpu --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
 
-    echo "non-naive test">> >> "$OUTPUT_FILE"
-    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench cpu --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
+   echo "non-naive test" >> "$OUTPUT_FILE"
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench cpu --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench cpu --time=30 --threads=8 cpu run" 
 done
 sudo git add .;sudo git commit -m 'new';sudo git push

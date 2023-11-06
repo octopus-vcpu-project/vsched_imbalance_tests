@@ -39,17 +39,11 @@ ssh ubuntu@$compete_vm "sudo sysbench --threads=1 --time=999999999 cpu run"
 for i in {0..4};do
     echo "naive test">> >> "$OUTPUT_FILE"
     ssh ubuntu@$prob_vm "sudo sysbench cpu --time=30 --threads=16 cpu run" >> "$OUTPUT_FILE" 
-    sudo perf stat -o perf.txt -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,cs,instructions -p $vm_pid  &
     ssh ubuntu@$prob_vm "sudo sysbench cpu --time=30 --threads=16 cpu run" 
-    sudo kill -s SIGINT $(pidof perf)
-    sudo cat perf.txt >> $OUTPUT_FILE
 
     echo "non-naive test">> >> "$OUTPUT_FILE"
     ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench cpu --time=30 --threads=16 cpu run" >> "$OUTPUT_FILE" 
-    sudo perf stat -o perf.txt -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,cs,instructions -p $vm_pid  &
-    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench cpu --time=30 --threads=16 cpu run" 
-    sudo kill -s SIGINT $(pidof perf)
-    sudo cat perf.txt >> $OUTPUT_FILE
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench cpu --time=30 --threads=16 cpu run" 
 done
 sudo git add .;sudo git commit -m 'new';sudo git push
 

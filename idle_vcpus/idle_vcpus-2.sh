@@ -33,7 +33,7 @@ for i in {0..0};do
    sleep 2
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" 
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
 done
 sudo git add .;sudo git commit -m 'new';sudo git push
 

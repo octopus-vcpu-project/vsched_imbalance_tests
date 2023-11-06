@@ -45,5 +45,3 @@ for i in {0..4};do
     ssh ubuntu@$prob_vm "taskset -c 1-15 sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 
 
 sudo git add .;sudo git commit -m 'new';sudo git push
-
-

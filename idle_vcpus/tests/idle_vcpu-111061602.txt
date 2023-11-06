@@ -1,0 +1,95 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  4519.61
+
+General statistics:
+    total time:                          30.0151s
+    total number of events:              135669
+
+Latency (ms):
+         min:                                    0.85
+         avg:                                    1.77
+         max:                                   51.52
+         95th percentile:                       17.01
+         sum:                               239720.35
+
+Threads fairness:
+    events (avg/stddev):           16958.6250/19.22
+    execution time (avg/stddev):   29.9650/0.02
+
+CPU speed:
+    events per second:  4526.13
+
+General statistics:
+    total time:                          30.0074s
+    total number of events:              135831
+
+Latency (ms):
+         min:                                    0.85
+         avg:                                    1.76
+         max:                                   48.83
+         95th percentile:                       17.01
+         sum:                               239659.98
+
+Threads fairness:
+    events (avg/stddev):           16978.8750/38.60
+    execution time (avg/stddev):   29.9575/0.01
+
+non-naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  5095.14
+
+General statistics:
+    total time:                          30.0027s
+    total number of events:              152882
+
+Latency (ms):
+         min:                                    0.85
+         avg:                                    1.57
+         max:                                   41.88
+         95th percentile:                        4.91
+         sum:                               239935.48
+
+Threads fairness:
+    events (avg/stddev):           19110.2500/5605.83
+    execution time (avg/stddev):   29.9919/0.00
+

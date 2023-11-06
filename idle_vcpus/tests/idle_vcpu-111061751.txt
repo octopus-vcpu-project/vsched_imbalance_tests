@@ -1,0 +1,132 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[PARSEC] Benchmarks to run:  parsec.bodytrack
+
+[PARSEC] [========== Running benchmark parsec.bodytrack [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+sequenceB_261/
+sequenceB_261/BodyShapeParameters.txt
+sequenceB_261/CALIB/
+sequenceB_261/CALIB/Camera1.cal
+sequenceB_261/CALIB/Camera2.cal
+sequenceB_261/CALIB/Camera3.cal
+sequenceB_261/CALIB/Camera4.cal
+sequenceB_261/CAM1/
+sequenceB_261/CAM1/image0000.bmp
+sequenceB_261/CAM1/image0001.bmp
+sequenceB_261/CAM1/image0002.bmp
+sequenceB_261/CAM1/image0003.bmp
+sequenceB_261/CAM1/image0004.bmp
+sequenceB_261/CAM1/image0005.bmp
+sequenceB_261/CAM1/image0006.bmp
+sequenceB_261/CAM1/image0007.bmp
+sequenceB_261/CAM1/image0008.bmp
+sequenceB_261/CAM1/image0009.bmp
+sequenceB_261/CAM1/image0010.bmp
+sequenceB_261/CAM1/image0011.bmp
+sequenceB_261/CAM1/image0012.bmp
+sequenceB_261/CAM1/image0013.bmp
+sequenceB_261/CAM1/image0014.bmp
+sequenceB_261/CAM1/image0015.bmp
+sequenceB_261/CAM1/image0016.bmp
+sequenceB_261/CAM1/image0017.bmp
+sequenceB_261/CAM1/image0018.bmp
+sequenceB_261/CAM1/image0019.bmp
+sequenceB_261/CAM1/image0020.bmp
+sequenceB_261/CAM1/image0021.bmp
+sequenceB_261/CAM1/image0022.bmp
+sequenceB_261/CAM1/image0023.bmp
+sequenceB_261/CAM1/image0024.bmp
+sequenceB_261/CAM1/image0025.bmp
+sequenceB_261/CAM1/image0026.bmp
+sequenceB_261/CAM1/image0027.bmp
+sequenceB_261/CAM1/image0028.bmp
+sequenceB_261/CAM1/image0029.bmp
+sequenceB_261/CAM1/image0030.bmp
+sequenceB_261/CAM1/image0031.bmp
+sequenceB_261/CAM1/image0032.bmp
+sequenceB_261/CAM1/image0033.bmp
+sequenceB_261/CAM1/image0034.bmp
+sequenceB_261/CAM1/image0035.bmp
+sequenceB_261/CAM1/image0036.bmp
+sequenceB_261/CAM1/image0037.bmp
+sequenceB_261/CAM1/image0038.bmp
+sequenceB_261/CAM1/image0039.bmp
+sequenceB_261/CAM1/image0040.bmp
+sequenceB_261/CAM1/image0041.bmp
+sequenceB_261/CAM1/image0042.bmp
+sequenceB_261/CAM1/image0043.bmp
+sequenceB_261/CAM1/image0044.bmp
+sequenceB_261/CAM1/image0045.bmp
+sequenceB_261/CAM1/image0046.bmp
+sequenceB_261/CAM1/image0047.bmp
+sequenceB_261/CAM1/image0048.bmp
+sequenceB_261/CAM1/image0049.bmp
+sequenceB_261/CAM1/image0050.bmp
+sequenceB_261/CAM1/image0051.bmp
+sequenceB_261/CAM1/image0052.bmp
+sequenceB_261/CAM1/image0053.bmp
+sequenceB_261/CAM1/image0054.bmp
+sequenceB_261/CAM1/image0055.bmp
+sequenceB_261/CAM1/image0056.bmp
+sequenceB_261/CAM1/image0057.bmp
+sequenceB_261/CAM1/image0058.bmp
+sequenceB_261/CAM1/image0059.bmp
+sequenceB_261/CAM1/image0060.bmp
+sequenceB_261/CAM1/image0061.bmp
+sequenceB_261/CAM1/image0062.bmp
+sequenceB_261/CAM1/image0063.bmp
+sequenceB_261/CAM1/image0064.bmp
+sequenceB_261/CAM1/image0065.bmp
+non-naive test
+[ 3s ] thds: 8 eps: 980.74 lat (ms,95%): 30.81
+[ 6s ] thds: 8 eps: 1125.64 lat (ms,95%): 29.72
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 9s ] thds: 8 eps: 587.85 lat (ms,95%): 62.19
+[ 3s ] thds: 8 eps: 477.36 lat (ms,95%): 94.10
+[ 12s ] thds: 8 eps: 587.50 lat (ms,95%): 62.19
+[ 6s ] thds: 8 eps: 531.37 lat (ms,95%): 64.47
+[ 15s ] thds: 8 eps: 638.86 lat (ms,95%): 61.08
+[ 9s ] thds: 8 eps: 527.83 lat (ms,95%): 64.47
+[ 18s ] thds: 8 eps: 649.66 lat (ms,95%): 61.08
+[ 12s ] thds: 8 eps: 562.64 lat (ms,95%): 64.47
+[ 21s ] thds: 8 eps: 574.33 lat (ms,95%): 61.08
+[ 15s ] thds: 8 eps: 637.98 lat (ms,95%): 61.08
+[ 24s ] thds: 8 eps: 644.64 lat (ms,95%): 61.08
+[ 18s ] thds: 8 eps: 554.11 lat (ms,95%): 62.19
+[ 27s ] thds: 8 eps: 613.83 lat (ms,95%): 61.08
+[ 21s ] thds: 8 eps: 591.54 lat (ms,95%): 61.08
+[ 30s ] thds: 8 eps: 591.92 lat (ms,95%): 61.08
+[ 24s ] thds: 8 eps: 628.74 lat (ms,95%): 61.08
+[ 33s ] thds: 8 eps: 614.78 lat (ms,95%): 61.08
+[ 27s ] thds: 8 eps: 612.98 lat (ms,95%): 61.08
+[ 36s ] thds: 8 eps: 650.73 lat (ms,95%): 61.08
+[ 30s ] thds: 8 eps: 580.87 lat (ms,95%): 61.08

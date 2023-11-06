@@ -38,12 +38,12 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 for i in {0..0};do
     echo "naive test" >> "$OUTPUT_FILE"
     ssh ubuntu@$compete_vm "sudo sysbench --threads=8 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native" >> "$OUTPUT_FILE" 
     ssh ubuntu@$compete_vm "sudo killall sysbench"
     echo "non-naive test" >> "$OUTPUT_FILE"
     #use progressive, interrutpible sysbench
     ssh ubuntu@$compete_vm "sudo sysbench --threads=8 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "taskset -c 1-31 sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "taskset -c 1-31 sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native" >> "$OUTPUT_FILE" 
     ssh ubuntu@$compete_vm "sudo killall sysbench"
 done
 sudo git add .;sudo git commit -m 'new';sudo git push

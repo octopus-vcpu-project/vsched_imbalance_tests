@@ -39,7 +39,7 @@ for i in {0..4};do
     ssh ubuntu@$compete_vm "sudo sysbench --threads=1 --time=30 cpu run" >>"$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 
 
-    echo "non-naive test">> >> "$OUTPUT_FILE"
+    echo "non-naive test">> "$OUTPUT_FILE"
     #use progressive, interrutpible sysbench
     ssh ubuntu@$compete_vm "sudo sysbench --threads=1 --time=30 cpu run" >>"$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "taskset -c 1-15 sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 

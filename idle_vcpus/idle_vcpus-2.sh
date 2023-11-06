@@ -29,10 +29,10 @@ ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=16 cpu run"
 #Fetch VM PID and use that to fetch Cgroup title
 for i in {0..0};do
    echo "naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sudo $latency_bench" >> "$OUTPUT_FILE" &
+   ssh ubuntu@$prob_vm "sudo $latency_bench" >> "$OUTPUT_FILE" 
    sleep 3
    echo "non-naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $latency_bench" >> "$OUTPUT_FILE" &
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $latency_bench" >> "$OUTPUT_FILE" 
    sleep 4
 done
 sudo git add .;sudo git commit -m 'new';sudo git push

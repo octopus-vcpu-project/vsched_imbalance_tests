@@ -13,3 +13,4 @@ sudo taskset -c 15-20,40,60 sysbench --threads=12 --report-interval=3 --time=50 
 sudo taskset -c 15-20,40,60 sysbench --threads=12 --report-interval=3 --time=50 cpu run >> $OUTPUT_FILE2 
 touch $OUTPUT_FILE
 echo "test complete"
+sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native

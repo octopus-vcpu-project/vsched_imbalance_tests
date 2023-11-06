@@ -34,7 +34,7 @@ wake_and_pin_vm $compete_vm
 wake_and_pin_prob $prob_vm
 #Fetch VM PID and use that to fetch Cgroup title
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
-for i in {0..1};do
+for i in {0..0};do
     echo "naive test" >> "$OUTPUT_FILE"
     ssh ubuntu@$compete_vm "sudo sysbench --threads=1 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 

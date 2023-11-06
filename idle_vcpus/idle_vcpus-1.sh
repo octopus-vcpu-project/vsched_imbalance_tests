@@ -10,7 +10,7 @@ OUTPUT_FILE="./tests/idle_vcpu-1$(date +%m%d%H%M).txt"
 
 wake_and_pin_vm(){
     select_vm=$1
-    sudo bash ../utility/cleanon_startup.sh $select_vm 1
+    sudo bash ../utility/cleanon_startup.sh $select_vm 8
     for i in {0..1};do
         sudo virsh vcpupin $select_vm $i 20
     done

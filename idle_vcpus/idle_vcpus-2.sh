@@ -30,7 +30,7 @@ for i in {0..4};do
    echo "naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
    ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
-
+   sleep 2
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" 

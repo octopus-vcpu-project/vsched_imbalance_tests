@@ -1,0 +1,101 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+[ 3s ] thds: 8 eps: 1001.56 lat (ms,95%): 33.12
+[ 6s ] thds: 8 eps: 781.04 lat (ms,95%): 27.17
+[ 9s ] thds: 8 eps: 799.31 lat (ms,95%): 27.66
+[ 12s ] thds: 8 eps: 853.78 lat (ms,95%): 32.53
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m11.993s
+user	0m57.666s
+sys	0m26.357s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 15s ] thds: 8 eps: 1196.41 lat (ms,95%): 31.94
+[ 18s ] thds: 8 eps: 1184.79 lat (ms,95%): 29.19
+non-naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 32 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+[ 3s ] thds: 8 eps: 1080.00 lat (ms,95%): 32.53
+[ 6s ] thds: 8 eps: 887.29 lat (ms,95%): 21.11
+[ 9s ] thds: 8 eps: 890.68 lat (ms,95%): 23.52
+[ 12s ] thds: 8 eps: 1036.59 lat (ms,95%): 29.19
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m11.622s
+user	0m58.050s
+sys	0m26.208s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 15s ] thds: 8 eps: 1216.26 lat (ms,95%): 29.19

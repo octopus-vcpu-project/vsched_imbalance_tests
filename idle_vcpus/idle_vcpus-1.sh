@@ -1,6 +1,7 @@
 
 prob_vm=$1
 compete_vm=$2
+compete_vm_2=$3
 benchmark_time=20
 latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
@@ -36,12 +37,12 @@ wake_and_pin_prob $prob_vm
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 for i in {0..0};do
     echo "naive test" >> "$OUTPUT_FILE"
-    ssh ubuntu@$compete_vm "sudo sysbench --threads=1 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
+    ssh ubuntu@$compete_vm "sudo sysbench --threads=8 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native" >> "$OUTPUT_FILE" 
     ssh ubuntu@$compete_vm "sudo killall sysbench"
     echo "non-naive test" >> "$OUTPUT_FILE"
     #use progressive, interrutpible sysbench
-    ssh ubuntu@$compete_vm "sudo sysbench --threads=1 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
+    ssh ubuntu@$compete_vm "sudo sysbench --threads=8 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
     ssh ubuntu@$prob_vm "taskset -c 1-15 sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 16 -i native" >> "$OUTPUT_FILE" 
     ssh ubuntu@$compete_vm "sudo killall sysbench"
 done

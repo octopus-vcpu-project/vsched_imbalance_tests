@@ -37,7 +37,7 @@ for i in {0..0};do
    scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE
    sleep 3
 done
-sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 2000000
+sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
 ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json"
 scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE1
 sleep 3

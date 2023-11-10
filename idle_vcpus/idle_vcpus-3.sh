@@ -28,17 +28,20 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 wake_and_pin_prob $prob_vm
 wake_and_pin_prob $compete_vm
 ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run"  &
-#Fetch VM PID and use that to fetch Cgroup title
+sudo tee /sys/module/kvm/parameters <<< 0
 for i in {0..0};do
+       
+
    echo "naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest.json" >> "$OUTPUT_FILE" 
-   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-smrt-thread0-0.log $OUTPUT_FILE1
-   sleep 3
-   echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json" >> "$OUTPUT_FILE" 
    scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE
-   sleep 4
+   sleep 3
 done
+sudo tee /sys/module/kvm/parameters <<< 2000000
+ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json"
+scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE2
+sleep 3
+sudo tee /sys/module/kvm/parameters <<< 200000
 ssh ubuntu@$compete_vm "killall sysbench" 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

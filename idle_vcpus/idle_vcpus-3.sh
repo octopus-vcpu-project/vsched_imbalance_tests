@@ -12,7 +12,7 @@ OUTPUT_FILE1="./tests/idle_vcpu-4-SMRT-$(date +%m%d%H%M).log"
 
 wake_and_pin_prob(){
     select_vm=$1
-    sudo bash ../utility/cleanon_startup.sh $select_vm 16
+    sudo bash ../utility/cleanon_startup.sh $select_vm 32
     for i in {0..15};do
         sudo virsh vcpupin $select_vm $i $((i+20))
     done
@@ -32,11 +32,11 @@ ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run"  &
 for i in {0..0};do
    echo "naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest.json" >> "$OUTPUT_FILE" 
-   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-smrt-thread0-0.log $OUTPUT_FILE
+   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-smrt-thread0-0.log $OUTPUT_FILE1
    sleep 3
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json" >> "$OUTPUT_FILE" 
-   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE1
+   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE
    sleep 4
 done
 ssh ubuntu@$compete_vm "killall sysbench" 

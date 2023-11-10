@@ -13,7 +13,7 @@ wake_and_pin_prob(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 16
     for i in {0..15};do
-        sudo virsh vcpupin $select_vm $i $(((i % 8) + 10))
+        sudo virsh vcpupin $select_vm $i $((i+20))
     done
     sleep 2
 }
@@ -25,16 +25,17 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 
 
 wake_and_pin_prob $prob_vm
-ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=16 cpu run" 
+wake_and_pin_prob $compete_vm
+ssh ubuntu@$compete_vm "sudo sysbench --time=30 --threads=16 cpu run" 
 #Fetch VM PID and use that to fetch Cgroup title
 for i in {0..0};do
    echo "naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
-   ssh ubuntu@$prob_vm "sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
+   ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest.json" >> "$OUTPUT_FILE" 
+   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/rt-app-smrt-thread0-0.log ./tests/
    sleep 3
    echo "non-naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE" &
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo sysbench --time=30 --threads=8 cpu run" >> "$OUTPUT_FILE"
+   ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json" >> "$OUTPUT_FILE" 
+   scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/rt-app3-naive-thread0-0.log ./tests/
    sleep 4
 done
 sudo git add .;sudo git commit -m 'new';sudo git push

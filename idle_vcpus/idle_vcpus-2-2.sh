@@ -45,11 +45,10 @@ for i in {0..0};do
    sleep 4
 done
 sudo tee /sys/module/kvm/parameters <<< 2000000
-echo "naive test" >> "$OUTPUT_FILE"
-ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest.json" >> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest.json"
 scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-smrt-thread0-0.log $OUTPUT_FILE2
 sleep 3
-echo "non-naive test" >> "$OUTPUT_FILE"
+
 ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json" >> "$OUTPUT_FILE" 
 scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE3
 sudo tee /sys/module/kvm/parameters <<< 200000

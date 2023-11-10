@@ -27,7 +27,7 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 
 wake_and_pin_prob $prob_vm
 wake_and_pin_prob $compete_vm
-ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run" 
+ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run"  &
 #Fetch VM PID and use that to fetch Cgroup title
 for i in {0..0};do
    echo "naive test" >> "$OUTPUT_FILE"

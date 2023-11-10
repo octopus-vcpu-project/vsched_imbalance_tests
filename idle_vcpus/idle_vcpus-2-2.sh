@@ -9,8 +9,8 @@ get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python pars
 OUTPUT_FILE="./tests/idle_vcpu-4-naive-$(date +%m%d%H%M).log"
 OUTPUT_FILE1="./tests/idle_vcpu-4-SMRT-$(date +%m%d%H%M).log"
 
-OUTPUT_FILE2="./tests/idle_vcpu-4-naive-$(date +%m%d%H%M).log"
-OUTPUT_FILE3="./tests/idle_vcpu-4-SMRT-$(date +%m%d%H%M).log"
+OUTPUT_FILE2="./tests/idle_vcpu-4-naive-slo-$(date +%m%d%H%M).log"
+OUTPUT_FILE3="./tests/idle_vcpu-4-SMRT-slo-$(date +%m%d%H%M).log"
 wake_and_pin_prob(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 32

@@ -9,7 +9,8 @@ get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python pars
 OUTPUT_FILE="./tests/idle_vcpu-4-naive-$(date +%m%d%H%M).log"
 OUTPUT_FILE1="./tests/idle_vcpu-4-SMRT-$(date +%m%d%H%M).log"
 
-
+OUTPUT_FILE2="./tests/idle_vcpu-4-naive-$(date +%m%d%H%M).log"
+OUTPUT_FILE3="./tests/idle_vcpu-4-SMRT-$(date +%m%d%H%M).log"
 wake_and_pin_prob(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 32
@@ -46,11 +47,11 @@ done
 sudo tee /sys/module/kvm/parameters <<< 2000000
 echo "naive test" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest.json" >> "$OUTPUT_FILE" 
-scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-smrt-thread0-0.log $OUTPUT_FILE1
+scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-smrt-thread0-0.log $OUTPUT_FILE2
 sleep 3
 echo "non-naive test" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json" >> "$OUTPUT_FILE" 
-scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE
+scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE3
 sudo tee /sys/module/kvm/parameters <<< 200000
 ssh ubuntu@$compete_vm "killall sysbench" 
 sudo git add .;sudo git commit -m 'new';sudo git push

@@ -61,15 +61,6 @@ setLatency(){
 }
 
 
-setLatencyCFS(){
-    set_latency=$1
-    ssh ubuntu@$prob_vm "sudo killall sysbench" 
-    for i in {0..31};do
-        sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    done
-    echo "Set latency cfs to $1" 
-    echo "Set latency cfs to $1" >> "$OUTPUT_FILE" 
-}
 
 
 
@@ -106,12 +97,13 @@ runTest(){
     ssh ubuntu@$prob_vm "$test_to_run"  
     sudo kill -s SIGINT $(pidof perf)
     sudo cat $perf_output >> $OUTPUT_FILE 
+
 }
 
 runAllTests(){
     #runTest "sysbench --threads=32 --time=30 cpu run" 
     #runTest "./vsched_tests/matmul.out 32 30"
-  #  runTest "cd /home/ubuntu/vsched;sudo /home/ubuntu/Workloads/kernbench/kernbench"
+runTest "cd /home/ubuntu/vsched;sudo /home/ubuntu/Workloads/kernbench/kernbench"
    ssh ubuntu@$prob_vm "sudo killall nginx"
    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
    sleep 10
@@ -142,8 +134,10 @@ runAllTests
 setLatency 4000000
 runAllTests
 
-setLatency 2000000
+setLatencyCFS 1000000 2000000
+setLatency 1000000
 runAllTests
+setLatencyCFS 50000000 50000000
 
 setLatency 3000000
 runAllTests
@@ -164,8 +158,11 @@ runAllTests
 setLatency 4000000
 runAllTests
 
-setLatency 2000000
+setLatencyCFS 1000000 2000000
+setLatency 1000000
 runAllTests
+
+setLatencyCFS 50000000 50000000
 
 setLatency 3000000
 runAllTests

@@ -8,6 +8,7 @@ compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python parselats-1.py ../img-dnn/lats.bin"
 OUTPUT_FILE="./tests/idle_vcpu-4-naive-$(date +%m%d%H%M).log"
 OUTPUT_FILE1="./tests/idle_vcpu-4-SMRT-$(date +%m%d%H%M).log"
+OUTPUT_FILE2="./tests/idle_vcpu-4-dflt-$(date +%m%d%H%M).log"
 
 
 wake_and_pin_prob(){
@@ -42,6 +43,9 @@ ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json"
 scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE1
 sleep 3
 sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
+ssh ubuntu@$prob_vm "cd Workloads;cd rt-app;sudo rt-app rtest1.json"
+scp ubuntu@$prob_vm:/home/ubuntu/Workloads/rt-app/test_logs/rt-app-naive-thread0-0.log $OUTPUT_FILE2
+sleep 3
 ssh ubuntu@$compete_vm "killall sysbench" 
 sudo git add .;sudo git commit -m 'new';sudo git push
 

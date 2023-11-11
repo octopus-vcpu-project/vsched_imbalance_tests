@@ -27,8 +27,8 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 
 
 wake_and_pin_prob $prob_vm
-wake_and_pin_prob $compete_vm
-ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=32 cpu run"  &
+#wake_and_pin_prob $compete_vm
+#ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=32 cpu run"  &
 sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 0
 for i in {0..0};do
        

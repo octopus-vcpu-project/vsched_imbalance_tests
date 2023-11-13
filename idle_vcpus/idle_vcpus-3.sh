@@ -27,26 +27,26 @@ run_test_series(){
     sudo tee /sys/module/kvm/parameters <<< 2000000
     echo "2000000(high) halt polling" >> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo bash run.sh"
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
     sudo tee /sys/module/kvm/parameters <<< 0
     
     echo "0(no) halt polling">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo bash run.sh"
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 
     sudo tee /sys/module/kvm/parameters <<< 200000
     echo "200000(standard) halt polling">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo bash run.sh"
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 
     ssh ubuntu@$prob_vm "$idler_bench"
     echo "W/ Idle Workload(naive)">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo bash run.sh"
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 
     echo "W/ Idle Workload(smart)">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-16 bash run.sh"
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 }
 
 

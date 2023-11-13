@@ -54,6 +54,8 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 
 virsh shutdown $prob_vm
 virsh shutdown $compete_vm
+virsh start $prob_vm
+virsh start $compete_vm
 wake_and_pin_prob $prob_vm
 wake_and_pin_prob $compete_vm
 sleep 10 

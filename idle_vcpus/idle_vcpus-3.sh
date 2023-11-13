@@ -56,6 +56,7 @@ virsh shutdown $prob_vm
 virsh shutdown $compete_vm
 wake_and_pin_prob $prob_vm
 wake_and_pin_prob $compete_vm
+sleep 10 
 ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=32 cpu run"  &
 run_test_series "img-dnn"
 sudo git add .;sudo git commit -m 'new';sudo git push

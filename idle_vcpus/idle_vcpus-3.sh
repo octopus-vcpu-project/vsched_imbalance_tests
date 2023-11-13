@@ -42,7 +42,7 @@ run_test_series(){
     ssh ubuntu@$prob_vm "$idler_bench" &
     echo "W/ Idle Workload(naive)">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo bash run.sh"
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 
     echo "W/ Idle Workload(smart)">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-16 bash run.sh"

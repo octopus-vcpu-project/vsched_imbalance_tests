@@ -146,8 +146,8 @@ ssh ubuntu@$compete_vm "sudo killall cache-thr.out"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
 
-setLatency 32000000
-runAllTests
+#setLatency 32000000
+#runAllTests
 
 setLatency 16000000
 runAllTests

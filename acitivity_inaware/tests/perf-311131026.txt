@@ -1,0 +1,24 @@
+# started on Mon Nov 13 10:26:08 2023
+
+
+ Performance counter stats for process id '561437':
+
+47,700,902,534,905      l1d_pend_miss.pending                                                   (31.19%)
+   446,193,663,409      l2_rqsts.miss                                                           (31.22%)
+     4,575,510,295      l2_rqsts.pf_hit                                                         (31.25%)
+     7,861,362,439      l2_rqsts.pf_miss                                                        (31.27%)
+ 2,623,643,878,410      l2_rqsts.references                                                     (25.05%)
+   163,532,572,403      LLC-loads                                                               (25.05%)
+    78,270,237,143      LLC-load-misses                  #   47.86% of all LL-cache accesses    (25.05%)
+ 1,146,056,625,408      L1-dcache-load-misses            #    6.00% of all L1-dcache accesses   (25.04%)
+19,086,309,957,713      L1-dcache-loads                                                         (25.02%)
+10,364,077,353,243      L1-dcache-stores                                                        (25.01%)
+ 1,495,251,031,527      L1-icache-load-misses                                                   (25.01%)
+    74,736,934,559      LLC-stores                                                              (24.99%)
+   445,253,556,746      cache-references                                                        (24.98%)
+   150,802,771,268      cache-misses                     #   33.869 % of all cache refs         (24.94%)
+75,228,588,218,791      cycles                                                                  (24.94%)
+73,437,319,438,826      instructions                     #    0.98  insn per cycle              (31.18%)
+
+    3042.177385108 seconds time elapsed
+

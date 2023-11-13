@@ -119,28 +119,28 @@ ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo $cache_bench"
 echo "finished warming up"
 
-ssh ubuntu@$compete_vm "sudo ./cache_thr.out" &
+#ssh ubuntu@$compete_vm "sudo ./cache_thr.out" &
 
 
-setLatency 32000000
-runAllTests
+#setLatency 32000000
+#runAllTests
 
-setLatency 16000000
-runAllTests
+#setLatency 16000000
+#runAllTests
 
-setLatency 8000000
-runAllTests
+#setLatency 8000000
+#runAllTests
 
-setLatency 4000000
-runAllTests
+#setLatency 4000000
+#runAllTests
 
-setLatencyCFS 1000000 2000000
-setLatency 1000000
-runAllTests
-setLatencyCFS 50000000 50000000
+#setLatencyCFS 1000000 2000000
+#setLatency 1000000
+#runAllTests
+#setLatencyCFS 50000000 50000000
 
-setLatency 3000000
-runAllTests
+#setLatency 3000000
+#runAllTests
 
 ssh ubuntu@$compete_vm "sudo killall cache-thr.out"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &

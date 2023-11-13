@@ -58,6 +58,7 @@ wake_and_pin_prob $compete_vm
 sleep 10 
 ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=32 cpu run"  &
+sleep 10 
 run_test_series "img-dnn"
 sudo git add .;sudo git commit -m 'new';sudo git push
 

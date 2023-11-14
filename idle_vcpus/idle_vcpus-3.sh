@@ -15,11 +15,15 @@ wake_and_pin_prob(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 8
     for i in {0..3};do
-        sudo virsh vcpupin $select_vm $i $((i*20))
+       sudo virsh vcpupin $select_vm $i $((i*20))
     done
     for i in {4..7};do
         sudo virsh vcpupin $select_vm $i $(((i-4)*20+1))
     done
+
+    #for i in {0..7};do
+    #   sudo virsh vcpupin $select_vm $i $((i))
+    #done
     sleep 2
 }
 
@@ -43,7 +47,7 @@ run_test_series(){
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
     sleep 4
     sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
-    echo "Clumped(0-4)">> "$OUTPUT_FILE" 
+    echo "Clumped(0-3)">> "$OUTPUT_FILE" 
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-3 bash run.sh"
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 

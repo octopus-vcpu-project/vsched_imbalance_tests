@@ -69,7 +69,11 @@ sleep 10
 #ssh ubuntu@$compete_vm "sudo killall sysbench"
 #ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run"  &
 sleep 10 
-run_test_series "img-dnn"
+for i in {0..3};do
+    echo "Run $i">> "$OUTPUT_FILE" 
+    run_test_series "img-dnn"
+done
+
 #run_test_series "moses"
 #run_test_series "masstree"
 #run_test_series "silo"

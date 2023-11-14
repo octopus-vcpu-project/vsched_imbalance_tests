@@ -40,8 +40,8 @@ run_test_series(){
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
     sleep 4
     sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
-    echo "Clumped(0-7)">> "$OUTPUT_FILE" 
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-7 bash run.sh"
+    echo "Clumped(0-4)">> "$OUTPUT_FILE" 
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-4 bash run.sh"
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 
     ssh ubuntu@$prob_vm "$idler_bench" &

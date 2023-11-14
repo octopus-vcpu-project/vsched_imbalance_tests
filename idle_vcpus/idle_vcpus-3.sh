@@ -14,11 +14,11 @@ OUTPUT_FILE2="./tests/idle_vcpu-4-dflt-$(date +%m%d%H%M).log"
 wake_and_pin_prob(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 8
-    for i in {0..4};do
+    for i in {0..3};do
         sudo virsh vcpupin $select_vm $i $((i*20))
     done
-    for i in {5..7};do
-        sudo virsh vcpupin $select_vm $i $((i*20+1))
+    for i in {4..7};do
+        sudo virsh vcpupin $select_vm $i $(((i-4)*20+1))
     done
     sleep 2
 }

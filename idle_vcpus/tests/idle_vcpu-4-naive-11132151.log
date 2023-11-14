@@ -1,0 +1,8 @@
+0(no) halt polling
+queue: mean 0.256 ms | p95 0.567 ms | p99 0.938 ms | max 3.064 ms
+svc: mean 0.761 ms | p95 1.184 ms | p99 1.303 ms | max 1.399 ms
+end2end: mean 1.017 ms | p95 1.499 ms | p99 1.793 ms | max 3.756 ms
+200000(standard) halt polling
+queue: mean 0.244 ms | p95 0.520 ms | p99 0.869 ms | max 2.286 ms
+svc: mean 0.767 ms | p95 1.199 ms | p99 1.306 ms | max 1.934 ms
+end2end: mean 1.011 ms | p95 1.483 ms | p99 1.755 ms | max 3.192 ms

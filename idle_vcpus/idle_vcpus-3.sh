@@ -13,9 +13,12 @@ OUTPUT_FILE2="./tests/idle_vcpu-4-dflt-$(date +%m%d%H%M).log"
 
 wake_and_pin_prob(){
     select_vm=$1
-    sudo bash ../utility/cleanon_startup.sh $select_vm 16
-    for i in {0..15};do
-        sudo virsh vcpupin $select_vm $i $((i+20))
+    sudo bash ../utility/cleanon_startup.sh $select_vm 8
+    for i in {0..4};do
+        sudo virsh vcpupin $select_vm $i $((i*20))
+    done
+    for i in {5..7};do
+        sudo virsh vcpupin $select_vm $i $((i*20+1))
     done
     sleep 2
 }
@@ -41,7 +44,7 @@ run_test_series(){
     sleep 4
     sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
     echo "Clumped(0-4)">> "$OUTPUT_FILE" 
-    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-4 bash run.sh"
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$benchmark;sudo taskset -c 0-3 bash run.sh"
     ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$benchmark/lats.bin" >> "$OUTPUT_FILE" 
 
     ssh ubuntu@$prob_vm "$idler_bench" &

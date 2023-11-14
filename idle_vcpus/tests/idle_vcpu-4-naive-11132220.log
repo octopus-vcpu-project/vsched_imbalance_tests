@@ -1,0 +1,4 @@
+W/ Idle Workload(naive)
+queue: mean 1.644 ms | p95 0.889 ms | p99 58.115 ms | max 193.582 ms
+svc: mean 1.026 ms | p95 1.187 ms | p99 1.366 ms | max 196.875 ms
+end2end: mean 2.669 ms | p95 1.740 ms | p99 87.951 ms | max 211.286 ms

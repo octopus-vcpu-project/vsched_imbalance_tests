@@ -1,0 +1,24 @@
+0(no) halt polling
+queue: mean 0.216 ms | p95 0.406 ms | p99 0.571 ms | max 2.306 ms
+svc: mean 0.838 ms | p95 1.245 ms | p99 1.327 ms | max 3.241 ms
+end2end: mean 1.054 ms | p95 1.478 ms | p99 1.608 ms | max 3.395 ms
+200000(standard) halt polling
+queue: mean 0.214 ms | p95 0.395 ms | p99 0.558 ms | max 1.545 ms
+svc: mean 0.827 ms | p95 1.235 ms | p99 1.317 ms | max 2.304 ms
+end2end: mean 1.041 ms | p95 1.466 ms | p99 1.581 ms | max 2.925 ms
+20000000(mega high) halt polling
+queue: mean 22.393 ms | p95 33.319 ms | p99 729.517 ms | max 1004.755 ms
+svc: mean 2.511 ms | p95 0.863 ms | p99 1.233 ms | max 1023.340 ms
+end2end: mean 24.904 ms | p95 53.675 ms | p99 766.810 ms | max 1058.068 ms
+Clumped(0-7)
+queue: mean 0.206 ms | p95 0.434 ms | p99 0.794 ms | max 1.630 ms
+svc: mean 0.796 ms | p95 1.237 ms | p99 1.332 ms | max 2.243 ms
+end2end: mean 1.002 ms | p95 1.478 ms | p99 1.706 ms | max 2.823 ms
+W/ Idle Workload(naive)
+queue: mean 0.226 ms | p95 0.410 ms | p99 0.725 ms | max 40.715 ms
+svc: mean 0.776 ms | p95 1.220 ms | p99 1.332 ms | max 33.258 ms
+end2end: mean 1.002 ms | p95 1.471 ms | p99 1.679 ms | max 41.606 ms
+W/ Idle Workload(smart)
+queue: mean 0.762 ms | p95 0.274 ms | p99 1.159 ms | max 178.339 ms
+svc: mean 0.683 ms | p95 0.731 ms | p99 0.756 ms | max 149.683 ms
+end2end: mean 1.444 ms | p95 0.956 ms | p99 1.857 ms | max 181.170 ms

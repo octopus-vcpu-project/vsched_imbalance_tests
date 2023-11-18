@@ -1,0 +1,17 @@
+Run 0
+W/ Idle Workload(naive)
+queue: mean 88.994 ms | p95 678.033 ms | p99 1102.249 ms | max 1259.692 ms
+svc: mean 1.476 ms | p95 1.133 ms | p99 1.359 ms | max 823.763 ms
+end2end: mean 90.471 ms | p95 685.720 ms | p99 1104.771 ms | max 1261.129 ms
+Run 1
+W/ Idle Workload(naive)
+queue: mean 155.158 ms | p95 1003.249 ms | p99 1482.631 ms | max 1652.636 ms
+svc: mean 2.739 ms | p95 1.120 ms | p99 1.339 ms | max 1557.506 ms
+end2end: mean 157.897 ms | p95 1012.211 ms | p99 1496.345 ms | max 1653.871 ms
+Run 2
+W/ Idle Workload(naive)
+queue: mean 0.236 ms | p95 0.562 ms | p99 1.141 ms | max 3.481 ms
+svc: mean 0.731 ms | p95 1.150 ms | p99 1.307 ms | max 2.186 ms
+end2end: mean 0.967 ms | p95 1.491 ms | p99 1.944 ms | max 4.168 ms
+Run 3
+W/ Idle Workload(naive)

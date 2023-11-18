@@ -1,0 +1,210 @@
+Set latency to 8000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1795.080000
+User Time 20961.550000
+System Time 4148.690000
+Percent CPU 1398.000000
+Context Switches 4825279.000000
+Sleeps 4030899.000000
+
+Running 30s test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    58.46ms   40.49ms 638.50ms   83.13%
+    Req/Sec   318.23     92.07   571.00     69.82%
+  149871 requests in 30.21s, 16.52GB read
+Requests/sec:   4960.16
+Transfer/sec:    559.77MB
+# started on Sat Nov 18 02:21:51 2023
+
+
+ Performance counter stats for process id '668422':
+
+   132,037,966,685      l1d_pend_miss.pending                                                   (31.20%)
+     2,268,083,484      l2_rqsts.miss                                                           (31.23%)
+        25,879,813      l2_rqsts.pf_hit                                                         (31.21%)
+        11,205,422      l2_rqsts.pf_miss                                                        (31.29%)
+    12,712,720,274      l2_rqsts.references                                                     (25.03%)
+       682,903,926      LLC-loads                                                               (25.00%)
+       172,831,241      LLC-load-misses                  #   25.31% of all LL-cache accesses    (25.01%)
+     6,935,921,241      L1-dcache-load-misses            #    0.66% of all L1-dcache accesses   (25.00%)
+ 1,051,545,221,281      L1-dcache-loads                                                         (25.02%)
+   131,665,443,775      L1-dcache-stores                                                        (25.06%)
+     5,892,455,805      L1-icache-load-misses                                                   (25.06%)
+       534,136,056      LLC-stores                                                              (25.01%)
+     2,219,570,521      cache-references                                                        (24.97%)
+       387,808,804      cache-misses                     #   17.472 % of all cache refs         (24.98%)
+ 1,207,796,598,053      cycles                                                                  (24.92%)
+ 3,944,588,298,543      instructions                     #    3.27  insn per cycle              (31.11%)
+
+      32.050683264 seconds time elapsed
+
+Set latency to 4000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1735.700000
+User Time 20790.560000
+System Time 4170.360000
+Percent CPU 1438.000000
+Context Switches 5164290.000000
+Sleeps 4234474.000000
+
+Running 30s test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    58.64ms   36.31ms 364.68ms   74.92%
+    Req/Sec   311.42     85.03   530.00     69.63%
+  147333 requests in 30.15s, 16.24GB read
+Requests/sec:   4887.13
+Transfer/sec:    551.51MB
+# started on Sat Nov 18 03:36:33 2023
+
+
+ Performance counter stats for process id '668422':
+
+   140,748,803,668      l1d_pend_miss.pending                                                   (31.27%)
+     2,592,045,532      l2_rqsts.miss                                                           (31.30%)
+        28,180,334      l2_rqsts.pf_hit                                                         (31.26%)
+        12,221,646      l2_rqsts.pf_miss                                                        (31.30%)
+    13,798,722,739      l2_rqsts.references                                                     (25.00%)
+       752,546,365      LLC-loads                                                               (25.02%)
+       175,763,158      LLC-load-misses                  #   23.36% of all LL-cache accesses    (25.04%)
+     7,487,058,443      L1-dcache-load-misses            #    0.66% of all L1-dcache accesses   (25.02%)
+ 1,129,481,837,742      L1-dcache-loads                                                         (25.04%)
+   141,848,417,737      L1-dcache-stores                                                        (25.00%)
+     6,468,677,009      L1-icache-load-misses                                                   (24.97%)
+       590,213,054      LLC-stores                                                              (24.96%)
+     2,537,794,853      cache-references                                                        (24.93%)
+       393,489,309      cache-misses                     #   15.505 % of all cache refs         (24.96%)
+ 1,301,764,413,164      cycles                                                                  (24.95%)
+ 4,245,478,292,800      instructions                     #    3.26  insn per cycle              (31.17%)
+
+      31.830944268 seconds time elapsed
+
+Set latency cfs to 1000000
+Set latency to 1000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1727.380000
+User Time 21049.310000
+System Time 4244.160000
+Percent CPU 1464.000000
+Context Switches 5426523.000000
+Sleeps 4422739.000000
+
+Running 30s test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    57.35ms   34.80ms 341.95ms   75.77%
+    Req/Sec   315.92     86.44   525.00     68.57%
+  150518 requests in 30.11s, 16.59GB read
+Requests/sec:   4999.41
+Transfer/sec:    564.20MB
+# started on Sat Nov 18 04:46:08 2023
+
+
+ Performance counter stats for process id '668422':
+
+   147,411,325,265      l1d_pend_miss.pending                                                   (31.23%)
+     2,839,525,504      l2_rqsts.miss                                                           (31.30%)
+        27,383,553      l2_rqsts.pf_hit                                                         (31.36%)
+        12,062,238      l2_rqsts.pf_miss                                                        (31.36%)
+    14,419,200,232      l2_rqsts.references                                                     (25.06%)
+       796,188,534      LLC-loads                                                               (25.00%)
+       187,320,518      LLC-load-misses                  #   23.53% of all LL-cache accesses    (25.01%)
+     7,708,113,430      L1-dcache-load-misses            #    0.69% of all L1-dcache accesses   (25.03%)
+ 1,124,048,127,855      L1-dcache-loads                                                         (25.01%)
+   140,881,725,742      L1-dcache-stores                                                        (25.03%)
+     6,881,125,931      L1-icache-load-misses                                                   (24.98%)
+       592,236,311      LLC-stores                                                              (24.94%)
+     2,783,606,739      cache-references                                                        (24.92%)
+       412,996,516      cache-misses                     #   14.837 % of all cache refs         (24.87%)
+ 1,299,029,588,593      cycles                                                                  (24.90%)
+ 4,221,513,461,938      instructions                     #    3.25  insn per cycle              (31.10%)
+
+      31.162468833 seconds time elapsed
+
+Set latency cfs to 50000000
+Set latency to 3000000
+Dropping to 3 runs for fast run
+32 cpus found
+Cleaning source tree...
+Caching kernel source in ram...
+Making oldconfig...
+Kernel 6.1.36vsched+
+Performing 1 runs of
+make -j 32
+
+All data logged to kernbench.log
+Optimal load -j 32 run number 1...
+Average Optimal load -j 32 Run (std deviation):
+Elapsed Time 1743.020000
+User Time 21092.370000
+System Time 4276.960000
+Percent CPU 1455.000000
+Context Switches 5323580.000000
+Sleeps 4354249.000000
+
+Running 30s test @ https://127.0.0.1:8089/test.html
+  16 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.97ms   35.75ms 330.00ms   74.14%
+    Req/Sec   319.46     78.72   514.00     67.86%
+  152202 requests in 30.11s, 16.77GB read
+Requests/sec:   5054.67
+Transfer/sec:    570.47MB
+# started on Sat Nov 18 05:58:52 2023
+
+
+ Performance counter stats for process id '668422':
+
+   145,580,761,992      l1d_pend_miss.pending                                                   (31.26%)
+     2,772,600,495      l2_rqsts.miss                                                           (31.26%)
+        26,277,604      l2_rqsts.pf_hit                                                         (31.35%)
+        11,902,104      l2_rqsts.pf_miss                                                        (31.32%)
+    14,190,535,094      l2_rqsts.references                                                     (24.95%)
+       785,971,870      LLC-loads                                                               (24.95%)
+       182,136,971      LLC-load-misses                  #   23.17% of all LL-cache accesses    (24.95%)
+     7,599,033,822      L1-dcache-load-misses            #    0.68% of all L1-dcache accesses   (25.02%)
+ 1,115,853,561,212      L1-dcache-loads                                                         (25.02%)
+   139,668,712,927      L1-dcache-stores                                                        (25.04%)
+     6,766,358,469      L1-icache-load-misses                                                   (25.01%)
+       570,819,437      LLC-stores                                                              (24.98%)
+     2,714,402,877      cache-references                                                        (25.01%)
+       396,613,688      cache-misses                     #   14.611 % of all cache refs         (24.96%)
+ 1,288,852,455,427      cycles                                                                  (24.94%)
+ 4,181,316,052,736      instructions                     #    3.24  insn per cycle              (31.21%)
+
+      31.102262697 seconds time elapsed
+

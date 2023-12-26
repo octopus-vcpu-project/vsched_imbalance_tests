@@ -23,7 +23,7 @@ ssh ubuntu@$prob_vm "sudo taskset -c 2 sysbench --time=900000 --threads=2 cpu ru
 for i in {0..$num_trials};do
     ssh ubuntu@$prob_vm "sudo echo 1 > /proc/check_preempts" 
 done
-count=$(ssh ubuntu@$prob_vm "dmesg | tail -n $num_trials | grep -c 'Preempt Registered'")
+count=$(ssh ubuntu@$prob_vm "sudo dmesg | tail -n $num_trials | grep -c 'Preempt Registered'")
 preempt_ratio=$(echo "$count / $num_trials" | bc -l)
 set_ratio=$(echo "$runtime / ($period+$runtime)" | bc -l)
 

@@ -16,7 +16,7 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 
 sudo virsh vcpupin $prob_vm 2 2
-sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu2/cpu.max
 
 
 ssh ubuntu@$prob_vm "sudo taskset -c 2 sysbench --time=900000 --threads=2 cpu run" &

@@ -21,9 +21,10 @@ sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvi
 
 ssh ubuntu@$prob_vm "sudo taskset -c 2 sysbench --time=900000 --threads=2 cpu run" &
 
-for i in {0..$num_trials};do
+for (( i=1; i<=num_trials; i++ ))
+do
     ssh ubuntu@$prob_vm "sudo echo 1 > /proc/check_preempt"
-    sleep 1
+    sleep 0.1
     echo "what"
 done
 

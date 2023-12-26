@@ -30,5 +30,5 @@ set_ratio=$(echo "$runtime / ($period+$runtime)" | bc -l)
 
 echo "Number of preempts: $count"
 echo "Ratio of preempts: $preempt_ratio"
-echo "Ratio of CFS bandwith limiting: $preempt_ratio"
+echo "Ratio of CFS bandwith limiting: $set_ratio"
 echo "test complete"

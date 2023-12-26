@@ -22,8 +22,9 @@ sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvi
 ssh ubuntu@$prob_vm "sudo taskset -c 2 sysbench --time=900000 --threads=2 cpu run" &
 for i in {0..$num_trials};do
     ssh ubuntu@$prob_vm "sudo echo 1 > /proc/check_preempt"
-    sleep 0.1 
+    sleep 0.5 
 done
+
 count=$(ssh ubuntu@$prob_vm "sudo dmesg | tail -n $num_trials | grep -c 'Preempt Registered'")
 preempt_ratio=$(echo "($num_trials-$count) / $num_trials" | bc -l)
 set_ratio=$(echo "$runtime / ($period+$runtime)" | bc -l)

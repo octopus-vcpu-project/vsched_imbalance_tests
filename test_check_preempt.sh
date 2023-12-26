@@ -7,7 +7,7 @@ runtime=$2
 period=$3
 total_preempt=0
 total_nonpreempts=0
-num_trials=30
+num_trials=400
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
 

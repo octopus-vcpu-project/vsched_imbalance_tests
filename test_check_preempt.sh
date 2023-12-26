@@ -25,7 +25,7 @@ for i in {0..$num_trials};do
     sleep 0.1 
 done
 count=$(ssh ubuntu@$prob_vm "sudo dmesg | tail -n $num_trials | grep -c 'Preempt Registered'")
-preempt_ratio=$(echo "$count / $num_trials" | bc -l)
+preempt_ratio=$(echo "($num_trials-$count) / $num_trials" | bc -l)
 set_ratio=$(echo "$runtime / ($period+$runtime)" | bc -l)
 
 echo "Number of preempts: $count"

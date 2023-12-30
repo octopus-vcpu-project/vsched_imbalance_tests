@@ -1,4 +1,7 @@
 
+
+
+
 prob_vm=$1
 compete_vm1=$2
 compete_vm2=$3

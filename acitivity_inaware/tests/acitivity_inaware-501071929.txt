@@ -1,0 +1,32 @@
+Set latency cfs to 400000
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   489.57
+
+General statistics:
+    total time:                          30.0008s
+    total number of events:              14689
+
+Latency (ms):
+         min:                                    1.00
+         avg:                                    2.04
+         max:                                  381.08
+         95th percentile:                        1.12
+         sum:                                29966.35
+
+Threads fairness:
+    events (avg/stddev):           14689.0000/0.00
+    execution time (avg/stddev):   29.9663/0.00
+

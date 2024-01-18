@@ -17,13 +17,11 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 #sudo virsh vcpupin $prob_vm 2 2
 
-for (( i=0; i<=31
+for (( i=0; i<=15
 ; i++ ))
 do
 	sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
-sudo echo $4 $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu1/cpu.max
-
 
 #ssh ubuntu@$prob_vm "sudo taskset -c 2 sysbench --time=900000 --threads=1 cpu run" &
 #sleep 3

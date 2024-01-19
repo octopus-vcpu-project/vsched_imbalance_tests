@@ -22,9 +22,15 @@ echo "Finished Pinning"
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 
 #topology naive testing
-OUTPUT_FILE="./test/sym-smart$(date +%m%d%H%M).txt"
-for i in {0..50};do
+OUTPUT_FILE="./test/sym-naive$(date +%m%d%H%M).txt"
+for i in {0..25};do
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE"
+done
+touch $OUTPUT_FILE
+
+OUTPUT_FILE="./test/sym-opt$(date +%m%d%H%M).txt"
+for i in {0..25};do
+    ssh ubuntu@$prob_vm "sudo $cpu_benchmark_pinned" >> "$OUTPUT_FILE"
 done
 touch $OUTPUT_FILE
 

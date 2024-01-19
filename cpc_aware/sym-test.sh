@@ -17,21 +17,36 @@ done
 
 echo "Finished Pinning"
 
-#ssh ubuntu@$prob_vm "sudo killall sysbench" 
-#ssh ubuntu@$compete_vm "sudo killall sysbench"
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
+ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 
 #topology naive testing
-OUTPUT_FILE="./test/sym-naive$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./test/bym-naive$(date +%m%d%H%M).txt"
 for i in {0..25};do
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE"
 done
 touch $OUTPUT_FILE
 
-OUTPUT_FILE="./test/sym-opt$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./test/bym-opt$(date +%m%d%H%M).txt"
 for i in {0..25};do
     ssh ubuntu@$prob_vm "sudo $cpu_benchmark_pinned" >> "$OUTPUT_FILE"
 done
+touch $OUTPUT_FILE
+
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
+ssh ubuntu@$compete_vm "sudo killall sysbench"
+ssh ubuntu@$compete_vm "sudo killall joe.out"
+
+ssh ubuntu@$prob_vm "sudo $compete_benchmark" &
+#ssh ubuntu@$compete_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
+ssh ubuntu@$compete_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 
+
+OUTPUT_FILE="./test/bym-smrt$(date +%m%d%H%M).txt"
+for i in {0..25};do
+    ssh ubuntu@$compete_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE"
+done
+
 touch $OUTPUT_FILE
 
 #topology naive testing

@@ -53,17 +53,15 @@ ssh ubuntu@$compete_vm3 "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 ssh ubuntu@$compete_vm2 "sudo $compete_benchmark" &
 ssh ubuntu@$compete_vm3 "sudo $compete_benchmark" &
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark" &
 
-OUTPUT_FILE="./tests/1-asym-perf-naive-$(date +%m%d%H%M).txt"
-for i in {0..50};do
+OUTPUT_FILE="./tests/1-asym-perf-smart-$(date +%m%d%H%M).txt"
+
+ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
+ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 
+
+sleep 4
+for i in {0..25};do
 	ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE"
-done
-touch $OUTPUT_FILE
-cpu_benchmark="taskset -c 12-15 sysbench --threads=4 --time=10 cpu run"
-OUTPUT_FILE="./tests/1-asym-perf-opt-$(date +%m%d%H%M).txt"
-for i in {0..50};do
-        ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE"
 done
 touch $OUTPUT_FILE
 

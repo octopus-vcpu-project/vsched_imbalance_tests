@@ -1,6 +1,8 @@
 import glob
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib import pyplot as plt
+
 # Find all files that match the 'sym-plc*' pattern
 def get_average(list):
     return sum(list)/len(list)
@@ -44,7 +46,8 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     width = 0.08  # the width of the bars
     multiplier = 0
     hatches = ['/', 'x', 'o']  # List of patterns
-
+    colors=['red','green','blue']
+    other_colors=['none','none','blue']
     fig, ax = plt.subplots(layout='constrained')
 
     for i, (attribute, measurement) in enumerate(data_dict.items()):
@@ -52,19 +55,20 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
         # Apply a different hatch pattern to each group
         print(x+offset)
         hatch = hatches[i % len(hatches)]
-        rects = ax.bar(x + offset, measurement, width, label=attribute,hatch=hatch)
+
+        rects = ax.bar(x + offset, measurement, width, edgecolor=colors[i],color=other_colors[i],lw=2.,label=attribute,hatch=hatch)
         multiplier += 1
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_ylabel('Sysbench Score')
     ax.set_xticks(x + width, name_parameters)
-    ax.legend(loc='upper left',prop = { "size": 11 },ncols=3)
+    plt.ylim(20000, 37000)
+    ax.legend(loc='upper left',framealpha=1,prop = { "size": 10 },ncols=3)
     plt.show()
 # Initialize an empty list to hold the counts
 list_sysbench_opt = process_file(1,"./test/bym-opt*.txt")
 list_sysbench_smart = process_file(1,"./test/bym-smrt*.txt")
 list_sysbench_naive = process_file(1,"./test/bym-naive*.txt")
-
 asym_opt = process_file(1,"./tests/1-asym-perf-opt-*.txt")
 asym_smart = process_file(1,"./tests/1-asym-perf-smart-*.txt")
 asym_naive = process_file(1,"./tests/1-asym-perf-naive-*.txt")

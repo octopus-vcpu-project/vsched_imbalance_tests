@@ -7,8 +7,8 @@ def percentage_normalize(values):
         return [0 for _ in values]
     return [(value / total) * 100 for value in values]
 
-def process_file(n):
-    files = glob.glob("./test/sym-plc*.txt")
+def process_file(n,s):
+    files = glob.glob(s)
     files.sort(reverse=True)
 
     if len(files) >= n:
@@ -31,9 +31,10 @@ def process_file(n):
         return []
 
 def plot_data(index1, index2):
-    dataset1 = process_file(index1)
-    dataset2 = process_file(index2)
-
+    dataset1 = process_file(index1,"./test/sym-plc012*.txt")
+    dataset2 = process_file(index2,"./test/sym-plc-smrt*.txt")
+    print(sum(dataset2))
+    print(sum(dataset1))
     plt.figure(figsize=(10, 6))
     max_length = max(len(dataset1), len(dataset2))
     # Iterate over each pair of bars and plot the shorter one in front
@@ -60,5 +61,5 @@ def plot_data(index1, index2):
 
 # Example usage
 #def plot_data(index1, index2):
-plot_data(1, 2)
+plot_data(1, 1)
 

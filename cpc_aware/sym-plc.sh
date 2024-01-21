@@ -20,7 +20,7 @@ ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 ssh ubuntu@$prob_vm "sudo killall sysbench"
 #topology naive testing
 OUTPUT_FILE="./test/sym-plc$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bpftrace/bcc/tools/runqlen.py -C">> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bcc/tools/runqlen.py -C">> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" &
 sleep $benchmark_time
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof python)"
@@ -31,7 +31,7 @@ ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 
 OUTPUT_FILE="./test/sym-plc-smrt$(date +%m%d%H%M).txt"
-ssh ubuntu@$prob_vm "sudo python3 /home/ubuntu/bpftrace/bcc/tools/runqlen.py -C">> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bcc/tools/runqlen.py -C">> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" &
 sleep $benchmark_time
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof python)"

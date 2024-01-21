@@ -1,77 +1,80 @@
 import glob
 import matplotlib.pyplot as plt
+import numpy as np
 # Find all files that match the 'sym-plc*' pattern
-files = glob.glob("./test/sym-optimal*.txt")
-badfiles = glob.glob("./test/sym-naive*.txt")
+def get_average(list):
+    return sum(list)/len(list)
+def process_file(n,s):
+    files = glob.glob(s)
+    files.sort(reverse=True)
 
-# Sort the files to get the latest one
-files.sort(reverse=True)
-badfiles.sort(reverse=True)
-# Read the latest file if one exists
-if files and badfiles:
-    with open(files[0], 'r') as f:
-        print(f"Reading {files[0]}")
-        print(f.read())
-    with open(badfiles[0], 'r') as f:
-        print(f"Reading {files[0]}")
-        print(f.read())
-else:
-    print("No matching files found.")
+    if len(files) >= n:
+        file_to_read = files[n-1]
+        cpu_sysbench_counts = []
+        with open(file_to_read, 'r') as f:
+            lines = f.readlines()
+            current_cpu = -1
+            for line in lines:
+                if "total number of events" in line:
+                    cpu_amount = int(line.split()[-1])
+                    cpu_sysbench_counts.append(cpu_amount)
+                    print(cpu_amount)
+
+        return get_average(cpu_sysbench_counts)
+    else:
+        print(f"No matching file found for index {n}")
+        return []
 
 
+
+
+def plot_grouped_data_with_legends(data_dict, name_parameters):
+    """
+    Plots a grouped bar chart for each group in the data dictionary with 
+    separate bars for each category in name_parameters, using different patterns for each group.
+
+    :param data_dict: Dictionary with groups as keys and lists of numbers as values.
+    :param name_parameters: List of strings representing the categories for the bars in each group.
+    """
+    x = np.arange(len(name_parameters))# the label locations
+    x=x*0.35
+    print(x*0.3)
+    print(x)
+    
+    width = 0.08  # the width of the bars
+    multiplier = 0
+    hatches = ['/', 'x', 'o']  # List of patterns
+
+    fig, ax = plt.subplots(layout='constrained')
+
+    for i, (attribute, measurement) in enumerate(data_dict.items()):
+        offset = width * multiplier
+        # Apply a different hatch pattern to each group
+        print(x+offset)
+        hatch = hatches[i % len(hatches)]
+        rects = ax.bar(x + offset, measurement, width, label=attribute,hatch=hatch)
+        multiplier += 1
+
+    # Add some text for labels, title and custom x-axis tick labels, etc.
+    ax.set_ylabel('Sysbench Score')
+    ax.set_xticks(x + width, name_parameters)
+    ax.legend(loc='upper left',prop = { "size": 11 },ncols=3)
+    plt.show()
 # Initialize an empty list to hold the counts
-summed_cpu_sysbench = 0
-amount_cpu_sysbench = 0
-list_sysbench_good = []
-list_sysbench_bad = []
-lowest_value = 999999999999
-highest_value = 0
-median_value = 0
+list_sysbench_opt = process_file(1,"./test/bym-opt*.txt")
+list_sysbench_smart = process_file(1,"./test/bym-smrt*.txt")
+list_sysbench_naive = process_file(1,"./test/bym-naive*.txt")
 
-# Read the latest file if one exists
-if files and badfiles:
-    with open(files[0], 'r') as f,open(badfiles[0], 'r') as w:
-        lines = f.readlines()
-        badlines = w.readlines()
-        current_cpu = -1
-        for line in lines:
-            # Update the current CPU if we see a "cpu#X" line
-            if "total number of events" in line:
-                cpu_amount = int(line.split()[-1])
-                amount_cpu_sysbench += 1
-                summed_cpu_sysbench += cpu_amount
-                list_sysbench_good.append(cpu_amount)
-                if(cpu_amount >= highest_value):
-                    highest_value = cpu_amount
-                if(cpu_amount <= lowest_value):
-                    lowest_value = cpu_amount
-        
-        for line in badlines:
-            # Update the current CPU if we see a "cpu#X" line
-            if "total number of events" in line:
-                cpu_amount = int(line.split()[-1])
-                amount_cpu_sysbench += 1
-                summed_cpu_sysbench += cpu_amount
-                list_sysbench_bad.append(cpu_amount)
-                if(cpu_amount >= highest_value):
-                    highest_value = cpu_amount
-                if(cpu_amount <= lowest_value):
-                    lowest_value = cpu_amount
-  
-    print("Amount of cpu sysbench counts:", amount_cpu_sysbench)
-    print("Average of cpu sysbench counts:", summed_cpu_sysbench/amount_cpu_sysbench)
-    print("Lowest performance:", lowest_value)
-    print("Highest performance:", highest_value)
-else:
-    print("No matching files found.")
-plt.boxplot([list_sysbench_good, list_sysbench_bad], labels=['Pinned', 'Unpinned'])
+asym_opt = process_file(1,"./tests/1-asym-perf-opt-*.txt")
+asym_smart = process_file(1,"./tests/1-asym-perf-smart-*.txt")
+asym_naive = process_file(1,"./tests/1-asym-perf-naive-*.txt")
 
-# Add title and labels
-plt.title('Performance of 4 threads on symmetric VM')
-plt.xlabel('Lists')
-plt.ylabel('Value')
+data = {
+    "CFS":[list_sysbench_naive,asym_naive],
+    "CFS+vProber":[list_sysbench_smart,asym_smart],
+    "CFS+Pinned":[list_sysbench_opt,asym_opt]
+}
 
-# Show the plot
-plt.show()
-plt.show()
+
+plot_grouped_data_with_legends(data,["Symmetric","Assymetric"])
 

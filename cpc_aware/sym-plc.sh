@@ -16,11 +16,10 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 ssh ubuntu@$prob_vm "sudo killall joe.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark" &
 #topology naive testing
 OUTPUT_FILE="./test/sym-plc$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bpftrace/bcc/tools/runqlen.py -C">> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $main_command" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" &
 sleep $benchmark_time
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof python)"
 ssh ubuntu@$prob_vm "sudo killall sysbench"
@@ -31,7 +30,7 @@ OUTPUT_FILE="./test/sym-plc-smrt$(date +%m%d%H%M).txt"
 
 
 ssh ubuntu@$prob_vm "sudo python /home/ubuntu/bpftrace/bcc/tools/runqlen.py -C">> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $main_command" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" &
 sleep $benchmark_time
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof python)"
 sleep 4

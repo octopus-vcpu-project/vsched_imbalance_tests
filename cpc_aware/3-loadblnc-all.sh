@@ -102,26 +102,24 @@ wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-declare -a thread_ids
+declare -a mread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    thread_ids+=($tid)
+    mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
 
 echo "unf-asym-nve test complete"
 
-pin_threads_smartly "${thread_ids[@]}"
+pin_threads_smartly "${mread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 for i in {0..30};do
     sleep 2
-    output_thread_specific_vruntimes "${thread_ids[@]}"
+    output_thread_specific_vruntimes "${mread_ids[@]}"
 done
 echo "unf-asym-pin test complete"
 
-for i in {0..15};do
-    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-done
+
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &

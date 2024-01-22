@@ -24,8 +24,14 @@ for i in {0..31};do
 done
 
 
+wipe_clean(){
+    local local_prob_vm=$1
+    ssh ubuntu@"$local_prob_vm" "sudo killall sysbench"
+    ssh ubuntu@"$local_prob_vm" "sudo killall joe.out"
+}
 
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=190 cpu run"  >> "$OUTPUT_FILE"  &
+wipe_clean $prob_vm
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 
@@ -62,8 +68,8 @@ output_thread_specific_vruntimes(){
 }
 
 
+
 declare -a thread_ids
- 
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     if [ $new_iterator -lt 5 ]; then
@@ -73,6 +79,7 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
 done
 
 #this test is symmetric, no frills,symmetrically competed for
+OUTPUT_FILE="./test/unf-sym-nve-$(date +%m%d%H%M).txt"
 for i in {0..60};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
@@ -83,15 +90,42 @@ done
 for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
-
-pin_threads_smartly "${thread_ids[@]}"
-
+OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 for i in {0..60};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 
 
+pin_threads_smartly "${thread_ids[@]}"
+OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
+for i in {0..60};do
+    sleep 2
+    output_thread_specific_vruntimes "${thread_ids[@]}"
+done
+
+OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
+wipe_clean $prob_vm
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
+sleep 2
+ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
+ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 
+sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
+declare -a smrt_thread_ids
+new_iterator=0
+for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    if [ $new_iterator -lt 5 ]; then
+        smrt_thread_ids+=($tid)
+    fi
+    new_iterator=$((new_iterator + 1))
+done
+
+
+
+for i in {0..60};do
+    sleep 2
+    output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
+done
 
 
 

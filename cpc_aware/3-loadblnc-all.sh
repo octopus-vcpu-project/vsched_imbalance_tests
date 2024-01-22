@@ -34,7 +34,12 @@ wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-
+declare -a thread_ids
+new_iterator=0
+for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    thread_ids+=($tid)
+    new_iterator=$((new_iterator + 1))
+done
 pin_threads_smartly(){
     local threads=("$@")
     local command_str=""
@@ -69,12 +74,7 @@ output_thread_specific_vruntimes(){
 
 
 
-declare -a thread_ids
-new_iterator=0
-for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    thread_ids+=($tid)
-    new_iterator=$((new_iterator + 1))
-done
+
 
 #this test is symmetric, no frills,symmetrically competed for
 <<comm
@@ -96,6 +96,19 @@ for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
+
+
+wipe_clean $prob_vm
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
+sleep 2
+sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
+declare -a thread_ids
+new_iterator=0
+for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    thread_ids+=($tid)
+    new_iterator=$((new_iterator + 1))
+done
+
 echo "unf-asym-nve test complete"
 
 pin_threads_smartly "${thread_ids[@]}"

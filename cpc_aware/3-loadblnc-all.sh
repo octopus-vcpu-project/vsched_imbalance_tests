@@ -79,7 +79,7 @@ done
 #this test is symmetric, no frills,symmetrically competed for
 echo "unf-sym-nve test started"
 OUTPUT_FILE="./test/unf-sym-nve-$(date +%m%d%H%M).txt"
-for i in {0..60};do
+for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done

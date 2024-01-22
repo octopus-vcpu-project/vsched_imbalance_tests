@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=64 --time=180 cpu run"
+cpu_benchmark="sysbench --threads=64 --time=80 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
@@ -122,7 +122,7 @@ echo "unf-asym-pin test complete"
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
+ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run" &
 sleep 3
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 
@@ -140,7 +140,7 @@ for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done
-
+wipe_clean $prob_vm
 
 
 echo "test complete"

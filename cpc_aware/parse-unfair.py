@@ -1,57 +1,50 @@
 import glob
 import matplotlib.pyplot as plt
-# Find all files that match the 'sym-plc*' pattern
-instance_1 = glob.glob("./test/unf-asym-nve-*.txt")
+def try_test(s):
+    # Find all files that match the 'sym-plc*' pattern
+    instance_1 = glob.glob(s)
+    # Sort the files to get the latest one
+    instance_1.sort(reverse=True)
+    # Read the latest file if one exists
+    if instance_1:
+        with open(instance_1[0], 'r') as f:
+            print(f"Reading {instance_1[0]}")
+    else:
+        print("No matching files found.")
+    vruntime_per_thread = {}
+    # Read the latest file if one exists
+    if instance_1:
+        with open(instance_1[0], 'r') as f:
+            ln_1 = f.readlines()
+            current_thread = "null"
+            for line in ln_1:
+                if "ThreadID" in line:
+                    current_thread = line.split(': ')[1][:-1]
+                elif "se.sum_exec_runtime" in line:
+                    vruntime = float(line.split(': ')[1][:-1].strip())
+                    if current_thread in vruntime_per_thread:
+                        vruntime_per_thread[current_thread].append(vruntime)
+                    else:
+                        vruntime_per_thread[current_thread] = [vruntime]
+            return vruntime_per_thread
+    else:
+        print("No matching files found.")
 
-# Sort the files to get the latest one
-instance_1.sort(reverse=True)
-# Read the latest file if one exists
-if instance_1:
-    with open(instance_1[0], 'r') as f:
-        print(f"Reading {instance_1[0]}")
-        
-else:
-    print("No matching files found.")
+def graph_lst(lst,lst2,lst3):
+    
+    for k, v in lst3.items():
+        plt.plot(range(1, len(v) + 1), v, '.-',color='green', label="dduh")
+    for k, v in lst2.items():
+        plt.plot(range(1, len(v) + 1), v, '.-',color='red',label="dsuh")
+    for k, v in lst.items():
+        plt.plot(range(1, len(v) + 1), v, '.-',color='blue', label="duh")
 
+    plt.legend()  # To draw legend
+    plt.show()
 
-vruntime_per_thread = {}
-# Read the latest file if one exists
-if instance_1:
-    with open(instance_1[0], 'r') as f:
-        ln_1 = f.readlines()
-        current_thread = "null"
-        for line in ln_1:
-            if "ThreadID" in line:
-                current_thread = line.split(': ')[1][:-1]
-            elif "se.sum_exec_runtime" in line:
-                vruntime = float(line.split(': ')[1][:-1].strip())
-                if current_thread in vruntime_per_thread:
-                    vruntime_per_thread[current_thread].append(vruntime)
-                else:
-                    vruntime_per_thread[current_thread] = [vruntime]
-else:
-    print("No matching files found.")
 
 biggest=-99999999999
-biggest_element=""
-smallest=99999999999
-smallest_element=""
-array_of_lasts=[]
-for element,items in vruntime_per_thread.items():
-    array_of_lasts.append(items[-1])
-    if(vruntime_per_thread[element][-1]>biggest):
-        biggest =  vruntime_per_thread[element][-1]
-        biggest_element=element
-    if(vruntime_per_thread[element][-1]<smallest):
-        smallest =  vruntime_per_thread[element][-1]
-        smallest_element=element
-
-array_of_lasts.sort()
-print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_lasts[0]))
-
-for k, v in vruntime_per_thread.items():
-    plt.plot(range(1, len(v) + 1), v, '.-', label=k)
-plt.legend()  # To draw legend
-plt.show()
-print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_lasts[0]))
-
+vruntime_per_thread = try_test("./test/unf-asym-pin-*.txt")
+vruntime_per_thread1 = try_test("./test/unf-asym-smrt-*.txt")
+vruntime_per_thread2 = try_test("./test/unf-asym-nve-*.txt")
+graph_lst(vruntime_per_thread,vruntime_per_thread1,vruntime_per_thread2)

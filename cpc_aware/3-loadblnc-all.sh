@@ -84,7 +84,7 @@ for i in {0..60};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
-
+echo "unf-sym-nve test complete"
 #this test is where half the cores are much weaker, assymetrically competed for.
 
 for i in {0..15};do
@@ -95,7 +95,7 @@ for i in {0..60};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
-
+echo "unf-asym-nve test complete"
 
 pin_threads_smartly "${thread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
@@ -103,6 +103,7 @@ for i in {0..60};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
+echo "unf-asym-pin test complete"
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm

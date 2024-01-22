@@ -24,7 +24,6 @@ if instance_1:
             if "ThreadID" in line:
                 current_thread = line.split(': ')[1][:-1]
             elif "se.sum_exec_runtime" in line:
-                print(line)
                 vruntime = float(line.split(': ')[1][:-1].strip())
                 if current_thread in vruntime_per_thread:
                     vruntime_per_thread[current_thread].append(vruntime)
@@ -39,7 +38,6 @@ smallest=99999999999
 smallest_element=""
 array_of_lasts=[]
 for element,items in vruntime_per_thread.items():
-    print(element)
     array_of_lasts.append(items[-1])
     if(vruntime_per_thread[element][-1]>biggest):
         biggest =  vruntime_per_thread[element][-1]
@@ -50,8 +48,7 @@ for element,items in vruntime_per_thread.items():
 
 array_of_lasts.sort()
 print("difference is",float((array_of_lasts[-1] - array_of_lasts[0])/array_of_lasts[0]))
-print("big value",array_of_lasts)
-print(array_of_lasts)
+
 for k, v in vruntime_per_thread.items():
     plt.plot(range(1, len(v) + 1), v, '.-', label=k)
 plt.legend()  # To draw legend

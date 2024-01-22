@@ -37,6 +37,9 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    if [ $new_iterator -gt 12 ]; then
+            break
+    fi 
     thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
@@ -93,6 +96,7 @@ for i in {0..15};do
 done
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 for i in {0..30};do
+    
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
@@ -105,6 +109,9 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    if [ $new_iterator -gt 12 ]; then
+            break
+    fi 
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
@@ -130,6 +137,9 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    if [ $new_iterator -gt 12 ]; then
+            break
+    fi 
     smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done

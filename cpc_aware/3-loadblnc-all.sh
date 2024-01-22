@@ -80,7 +80,7 @@ done
 
 #this test is symmetric, no frills,symmetrically competed for
 echo "unf-sym-nve test started"
-
+<<comm
 OUTPUT_FILE="./test/unf-sym-nve-$(date +%m%d%H%M).txt"
 for i in {0..60};do
     sleep 2
@@ -106,7 +106,7 @@ for i in {0..60};do
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 echo "unf-asym-pin test complete"
-
+comm
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &

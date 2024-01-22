@@ -1,0 +1,3981 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 64
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+ThreadID: 13637
+se.sum_exec_runtime                          :          2458.851601
+ThreadID: 13638
+se.sum_exec_runtime                          :          2108.400214
+ThreadID: 13639
+se.sum_exec_runtime                          :          2751.912934
+ThreadID: 13640
+se.sum_exec_runtime                          :          2519.292062
+ThreadID: 13641
+se.sum_exec_runtime                          :          3010.120839
+ThreadID: 13642
+se.sum_exec_runtime                          :          2926.871995
+ThreadID: 13643
+se.sum_exec_runtime                          :          2792.870657
+ThreadID: 13644
+se.sum_exec_runtime                          :          2134.407777
+ThreadID: 13645
+se.sum_exec_runtime                          :          2328.533830
+ThreadID: 13646
+se.sum_exec_runtime                          :          2399.279973
+ThreadID: 13647
+se.sum_exec_runtime                          :          2760.789390
+ThreadID: 13648
+se.sum_exec_runtime                          :          2442.754326
+ThreadID: 13649
+se.sum_exec_runtime                          :          2741.358132
+ThreadID: 13650
+se.sum_exec_runtime                          :          2258.641773
+ThreadID: 13651
+se.sum_exec_runtime                          :          2548.950215
+ThreadID: 13652
+se.sum_exec_runtime                          :          2190.919989
+ThreadID: 13653
+se.sum_exec_runtime                          :          2125.708478
+ThreadID: 13654
+se.sum_exec_runtime                          :          2627.635202
+ThreadID: 13655
+se.sum_exec_runtime                          :          2360.492419
+ThreadID: 13656
+se.sum_exec_runtime                          :          2489.125694
+ThreadID: 13657
+se.sum_exec_runtime                          :          2871.647452
+ThreadID: 13658
+se.sum_exec_runtime                          :          2451.156098
+ThreadID: 13659
+se.sum_exec_runtime                          :          2962.062708
+ThreadID: 13660
+se.sum_exec_runtime                          :          2650.347733
+ThreadID: 13661
+se.sum_exec_runtime                          :          2433.171220
+ThreadID: 13662
+se.sum_exec_runtime                          :          2828.890576
+ThreadID: 13663
+se.sum_exec_runtime                          :          4498.335716
+ThreadID: 13664
+se.sum_exec_runtime                          :          2734.119585
+ThreadID: 13665
+se.sum_exec_runtime                          :          3905.875297
+ThreadID: 13666
+se.sum_exec_runtime                          :          2736.351422
+ThreadID: 13667
+se.sum_exec_runtime                          :          2944.706121
+ThreadID: 13668
+se.sum_exec_runtime                          :          3579.791900
+ThreadID: 13669
+se.sum_exec_runtime                          :          3545.274260
+ThreadID: 13670
+se.sum_exec_runtime                          :          2991.138764
+ThreadID: 13671
+se.sum_exec_runtime                          :          3480.655768
+ThreadID: 13672
+se.sum_exec_runtime                          :          2574.235534
+ThreadID: 13673
+se.sum_exec_runtime                          :          2412.928106
+ThreadID: 13674
+se.sum_exec_runtime                          :          2523.066380
+ThreadID: 13675
+se.sum_exec_runtime                          :          2853.396485
+ThreadID: 13676
+se.sum_exec_runtime                          :          2431.795499
+ThreadID: 13677
+se.sum_exec_runtime                          :          2907.833006
+ThreadID: 13678
+se.sum_exec_runtime                          :          2902.873007
+ThreadID: 13679
+se.sum_exec_runtime                          :          3151.504109
+ThreadID: 13680
+se.sum_exec_runtime                          :          3157.371761
+ThreadID: 13681
+se.sum_exec_runtime                          :          3362.951240
+ThreadID: 13682
+se.sum_exec_runtime                          :          2965.279167
+ThreadID: 13683
+se.sum_exec_runtime                          :          2699.640902
+ThreadID: 13684
+se.sum_exec_runtime                          :          2808.707030
+ThreadID: 13685
+se.sum_exec_runtime                          :          2803.543071
+ThreadID: 13686
+se.sum_exec_runtime                          :          3764.333608
+ThreadID: 13687
+se.sum_exec_runtime                          :          3270.611981
+ThreadID: 13688
+se.sum_exec_runtime                          :          3391.728306
+ThreadID: 13689
+se.sum_exec_runtime                          :          4829.229555
+ThreadID: 13690
+se.sum_exec_runtime                          :          2657.186110
+ThreadID: 13691
+se.sum_exec_runtime                          :          2863.722504
+ThreadID: 13692
+se.sum_exec_runtime                          :          4887.099028
+ThreadID: 13693
+se.sum_exec_runtime                          :          2846.173791
+ThreadID: 13694
+se.sum_exec_runtime                          :          2840.271681
+ThreadID: 13695
+se.sum_exec_runtime                          :          2469.726838
+ThreadID: 13696
+se.sum_exec_runtime                          :          3089.776566
+ThreadID: 13697
+se.sum_exec_runtime                          :          2838.307906
+ThreadID: 13698
+se.sum_exec_runtime                          :          2963.219380
+ThreadID: 13699
+se.sum_exec_runtime                          :          3308.614598
+ThreadID: 13700
+se.sum_exec_runtime                          :          3658.552823
+ThreadID: 13637
+se.sum_exec_runtime                          :          4327.609966
+ThreadID: 13638
+se.sum_exec_runtime                          :          3651.064902
+ThreadID: 13639
+se.sum_exec_runtime                          :          4490.399729
+ThreadID: 13640
+se.sum_exec_runtime                          :          4135.899369
+ThreadID: 13641
+se.sum_exec_runtime                          :          4542.215751
+ThreadID: 13642
+se.sum_exec_runtime                          :          4396.081296
+ThreadID: 13643
+se.sum_exec_runtime                          :          4397.034677
+ThreadID: 13644
+se.sum_exec_runtime                          :          3742.281458
+ThreadID: 13645
+se.sum_exec_runtime                          :          4085.518460
+ThreadID: 13646
+se.sum_exec_runtime                          :          4158.034820
+ThreadID: 13647
+se.sum_exec_runtime                          :          4302.509143
+ThreadID: 13648
+se.sum_exec_runtime                          :          4252.972078
+ThreadID: 13649
+se.sum_exec_runtime                          :          4830.511106
+ThreadID: 13650
+se.sum_exec_runtime                          :          3929.656524
+ThreadID: 13651
+se.sum_exec_runtime                          :          4298.885577
+ThreadID: 13652
+se.sum_exec_runtime                          :          3597.958110
+ThreadID: 13653
+se.sum_exec_runtime                          :          3589.326997
+ThreadID: 13654
+se.sum_exec_runtime                          :          4306.756775
+ThreadID: 13655
+se.sum_exec_runtime                          :          3951.246519
+ThreadID: 13656
+se.sum_exec_runtime                          :          4151.331436
+ThreadID: 13657
+se.sum_exec_runtime                          :          4672.526636
+ThreadID: 13658
+se.sum_exec_runtime                          :          4012.359735
+ThreadID: 13659
+se.sum_exec_runtime                          :          4693.132597
+ThreadID: 13660
+se.sum_exec_runtime                          :          4450.602910
+ThreadID: 13661
+se.sum_exec_runtime                          :          4655.556402
+ThreadID: 13662
+se.sum_exec_runtime                          :          4606.687215
+ThreadID: 13663
+se.sum_exec_runtime                          :          6419.641436
+ThreadID: 13664
+se.sum_exec_runtime                          :          4526.301462
+ThreadID: 13665
+se.sum_exec_runtime                          :          5505.689071
+ThreadID: 13666
+se.sum_exec_runtime                          :          4642.457059
+ThreadID: 13667
+se.sum_exec_runtime                          :          4624.926942
+ThreadID: 13668
+se.sum_exec_runtime                          :          5524.835151
+ThreadID: 13669
+se.sum_exec_runtime                          :          5272.025865
+ThreadID: 13670
+se.sum_exec_runtime                          :          4896.398264
+ThreadID: 13671
+se.sum_exec_runtime                          :          5415.684228
+ThreadID: 13672
+se.sum_exec_runtime                          :          4368.967616
+ThreadID: 13673
+se.sum_exec_runtime                          :          4049.741267
+ThreadID: 13674
+se.sum_exec_runtime                          :          4466.756925
+ThreadID: 13675
+se.sum_exec_runtime                          :          4607.669471
+ThreadID: 13676
+se.sum_exec_runtime                          :          4473.562650
+ThreadID: 13677
+se.sum_exec_runtime                          :          4521.204710
+ThreadID: 13678
+se.sum_exec_runtime                          :          4461.664040
+ThreadID: 13679
+se.sum_exec_runtime                          :          4968.076006
+ThreadID: 13680
+se.sum_exec_runtime                          :          5776.352216
+ThreadID: 13681
+se.sum_exec_runtime                          :          5138.379854
+ThreadID: 13682
+se.sum_exec_runtime                          :          4769.925145
+ThreadID: 13683
+se.sum_exec_runtime                          :          4483.659302
+ThreadID: 13684
+se.sum_exec_runtime                          :          4710.277014
+ThreadID: 13685
+se.sum_exec_runtime                          :          4653.082848
+ThreadID: 13686
+se.sum_exec_runtime                          :          5620.576600
+ThreadID: 13687
+se.sum_exec_runtime                          :          5466.955099
+ThreadID: 13688
+se.sum_exec_runtime                          :          5328.199440
+ThreadID: 13689
+se.sum_exec_runtime                          :          7292.427285
+ThreadID: 13690
+se.sum_exec_runtime                          :          4565.011009
+ThreadID: 13691
+se.sum_exec_runtime                          :          4329.449061
+ThreadID: 13692
+se.sum_exec_runtime                          :          6829.075771
+ThreadID: 13693
+se.sum_exec_runtime                          :          4856.219310
+ThreadID: 13694
+se.sum_exec_runtime                          :          4554.225137
+ThreadID: 13695
+se.sum_exec_runtime                          :          4177.115061
+ThreadID: 13696
+se.sum_exec_runtime                          :          7357.292893
+ThreadID: 13697
+se.sum_exec_runtime                          :          4547.996593
+ThreadID: 13698
+se.sum_exec_runtime                          :          4743.739484
+ThreadID: 13699
+se.sum_exec_runtime                          :          5094.376553
+ThreadID: 13700
+se.sum_exec_runtime                          :          5058.892145
+ThreadID: 13637
+se.sum_exec_runtime                          :          6010.983842
+ThreadID: 13638
+se.sum_exec_runtime                          :          5116.388790
+ThreadID: 13639
+se.sum_exec_runtime                          :          6116.135619
+ThreadID: 13640
+se.sum_exec_runtime                          :          5917.991794
+ThreadID: 13641
+se.sum_exec_runtime                          :          6302.882149
+ThreadID: 13642
+se.sum_exec_runtime                          :          6262.805654
+ThreadID: 13643
+se.sum_exec_runtime                          :          6130.265226
+ThreadID: 13644
+se.sum_exec_runtime                          :          5542.249151
+ThreadID: 13645
+se.sum_exec_runtime                          :          5956.561312
+ThreadID: 13646
+se.sum_exec_runtime                          :          6058.421323
+ThreadID: 13647
+se.sum_exec_runtime                          :          6647.907987
+ThreadID: 13648
+se.sum_exec_runtime                          :          6228.128180
+ThreadID: 13649
+se.sum_exec_runtime                          :          6597.366349
+ThreadID: 13650
+se.sum_exec_runtime                          :          5741.659804
+ThreadID: 13651
+se.sum_exec_runtime                          :          6157.169052
+ThreadID: 13652
+se.sum_exec_runtime                          :          5369.147585
+ThreadID: 13653
+se.sum_exec_runtime                          :          5200.706512
+ThreadID: 13654
+se.sum_exec_runtime                          :          6227.145900
+ThreadID: 13655
+se.sum_exec_runtime                          :          5596.107159
+ThreadID: 13656
+se.sum_exec_runtime                          :          5913.340831
+ThreadID: 13657
+se.sum_exec_runtime                          :          6426.567987
+ThreadID: 13658
+se.sum_exec_runtime                          :          5945.879666
+ThreadID: 13659
+se.sum_exec_runtime                          :          6421.332207
+ThreadID: 13660
+se.sum_exec_runtime                          :          6272.468296
+ThreadID: 13661
+se.sum_exec_runtime                          :          6576.325117
+ThreadID: 13662
+se.sum_exec_runtime                          :          6324.338031
+ThreadID: 13663
+se.sum_exec_runtime                          :          8109.877069
+ThreadID: 13664
+se.sum_exec_runtime                          :          6423.450179
+ThreadID: 13665
+se.sum_exec_runtime                          :          8183.236651
+ThreadID: 13666
+se.sum_exec_runtime                          :          6650.104633
+ThreadID: 13667
+se.sum_exec_runtime                          :          6333.290326
+ThreadID: 13668
+se.sum_exec_runtime                          :          7413.091151
+ThreadID: 13669
+se.sum_exec_runtime                          :          6943.865955
+ThreadID: 13670
+se.sum_exec_runtime                          :          6766.112621
+ThreadID: 13671
+se.sum_exec_runtime                          :          7195.532345
+ThreadID: 13672
+se.sum_exec_runtime                          :          6206.935324
+ThreadID: 13673
+se.sum_exec_runtime                          :          5899.775480
+ThreadID: 13674
+se.sum_exec_runtime                          :          6683.707166
+ThreadID: 13675
+se.sum_exec_runtime                          :          6506.613195
+ThreadID: 13676
+se.sum_exec_runtime                          :          6350.324783
+ThreadID: 13677
+se.sum_exec_runtime                          :          6393.498643
+ThreadID: 13678
+se.sum_exec_runtime                          :          6304.288868
+ThreadID: 13679
+se.sum_exec_runtime                          :          6872.905317
+ThreadID: 13680
+se.sum_exec_runtime                          :          7970.857042
+ThreadID: 13681
+se.sum_exec_runtime                          :          6990.500097
+ThreadID: 13682
+se.sum_exec_runtime                          :          6627.898187
+ThreadID: 13683
+se.sum_exec_runtime                          :          5924.507829
+ThreadID: 13684
+se.sum_exec_runtime                          :          6786.432803
+ThreadID: 13685
+se.sum_exec_runtime                          :          7076.202846
+ThreadID: 13686
+se.sum_exec_runtime                          :          6995.776127
+ThreadID: 13687
+se.sum_exec_runtime                          :          7431.686917
+ThreadID: 13688
+se.sum_exec_runtime                          :          7423.224802
+ThreadID: 13689
+se.sum_exec_runtime                          :          9306.339606
+ThreadID: 13690
+se.sum_exec_runtime                          :          6078.931026
+ThreadID: 13691
+se.sum_exec_runtime                          :          6592.655689
+ThreadID: 13692
+se.sum_exec_runtime                          :          8718.229775
+ThreadID: 13693
+se.sum_exec_runtime                          :          6415.983906
+ThreadID: 13694
+se.sum_exec_runtime                          :          6448.116654
+ThreadID: 13695
+se.sum_exec_runtime                          :          6068.296626
+ThreadID: 13696
+se.sum_exec_runtime                          :          9320.657888
+ThreadID: 13697
+se.sum_exec_runtime                          :          6649.046406
+ThreadID: 13698
+se.sum_exec_runtime                          :          6687.924153
+ThreadID: 13699
+se.sum_exec_runtime                          :          6775.994594
+ThreadID: 13700
+se.sum_exec_runtime                          :          6939.204631
+ThreadID: 13637
+se.sum_exec_runtime                          :          7982.443070
+ThreadID: 13638
+se.sum_exec_runtime                          :          7250.943773
+ThreadID: 13639
+se.sum_exec_runtime                          :          7790.760755
+ThreadID: 13640
+se.sum_exec_runtime                          :          8497.226359
+ThreadID: 13641
+se.sum_exec_runtime                          :          7896.825909
+ThreadID: 13642
+se.sum_exec_runtime                          :          8352.975480
+ThreadID: 13643
+se.sum_exec_runtime                          :          8236.983482
+ThreadID: 13644
+se.sum_exec_runtime                          :          8739.645287
+ThreadID: 13645
+se.sum_exec_runtime                          :          8074.164770
+ThreadID: 13646
+se.sum_exec_runtime                          :          8170.298306
+ThreadID: 13647
+se.sum_exec_runtime                          :          8939.505766
+ThreadID: 13648
+se.sum_exec_runtime                          :          8351.223695
+ThreadID: 13649
+se.sum_exec_runtime                          :          8201.569345
+ThreadID: 13650
+se.sum_exec_runtime                          :          7771.046693
+ThreadID: 13651
+se.sum_exec_runtime                          :          8594.092000
+ThreadID: 13652
+se.sum_exec_runtime                          :          7464.097281
+ThreadID: 13653
+se.sum_exec_runtime                          :          7252.084181
+ThreadID: 13654
+se.sum_exec_runtime                          :          8183.065037
+ThreadID: 13655
+se.sum_exec_runtime                          :          7677.413682
+ThreadID: 13656
+se.sum_exec_runtime                          :          8031.378411
+ThreadID: 13657
+se.sum_exec_runtime                          :          8436.455589
+ThreadID: 13658
+se.sum_exec_runtime                          :          8077.366822
+ThreadID: 13659
+se.sum_exec_runtime                          :          8493.894007
+ThreadID: 13660
+se.sum_exec_runtime                          :          8238.589964
+ThreadID: 13661
+se.sum_exec_runtime                          :          8668.501054
+ThreadID: 13662
+se.sum_exec_runtime                          :          8444.177027
+ThreadID: 13663
+se.sum_exec_runtime                          :          9699.186827
+ThreadID: 13664
+se.sum_exec_runtime                          :          8450.152197
+ThreadID: 13665
+se.sum_exec_runtime                          :         10565.800106
+ThreadID: 13666
+se.sum_exec_runtime                          :          8771.049400
+ThreadID: 13667
+se.sum_exec_runtime                          :          8490.374392
+ThreadID: 13668
+se.sum_exec_runtime                          :          9553.978105
+ThreadID: 13669
+se.sum_exec_runtime                          :          8981.915458
+ThreadID: 13670
+se.sum_exec_runtime                          :          8945.248632
+ThreadID: 13671
+se.sum_exec_runtime                          :          9466.228992
+ThreadID: 13672
+se.sum_exec_runtime                          :          8428.360314
+ThreadID: 13673
+se.sum_exec_runtime                          :          7948.806878
+ThreadID: 13674
+se.sum_exec_runtime                          :          8830.527198
+ThreadID: 13675
+se.sum_exec_runtime                          :          8662.560132
+ThreadID: 13676
+se.sum_exec_runtime                          :          8790.530746
+ThreadID: 13677
+se.sum_exec_runtime                          :          8468.324855
+ThreadID: 13678
+se.sum_exec_runtime                          :          8445.685043
+ThreadID: 13679
+se.sum_exec_runtime                          :          8904.194214
+ThreadID: 13680
+se.sum_exec_runtime                          :         10128.769287
+ThreadID: 13681
+se.sum_exec_runtime                          :          9143.596796
+ThreadID: 13682
+se.sum_exec_runtime                          :          8763.239659
+ThreadID: 13683
+se.sum_exec_runtime                          :          7645.609452
+ThreadID: 13684
+se.sum_exec_runtime                          :          8922.957299
+ThreadID: 13685
+se.sum_exec_runtime                          :          9223.089277
+ThreadID: 13686
+se.sum_exec_runtime                          :          9014.843528
+ThreadID: 13687
+se.sum_exec_runtime                          :          9637.160981
+ThreadID: 13688
+se.sum_exec_runtime                          :          9560.574817
+ThreadID: 13689
+se.sum_exec_runtime                          :         12140.231133
+ThreadID: 13690
+se.sum_exec_runtime                          :          8046.313552
+ThreadID: 13691
+se.sum_exec_runtime                          :          9054.928891
+ThreadID: 13692
+se.sum_exec_runtime                          :         10865.248482
+ThreadID: 13693
+se.sum_exec_runtime                          :          8034.854922
+ThreadID: 13694
+se.sum_exec_runtime                          :          8532.237001
+ThreadID: 13695
+se.sum_exec_runtime                          :          8230.466582
+ThreadID: 13696
+se.sum_exec_runtime                          :         11455.815894
+ThreadID: 13697
+se.sum_exec_runtime                          :         10692.035101
+ThreadID: 13698
+se.sum_exec_runtime                          :          8859.266675
+ThreadID: 13699
+se.sum_exec_runtime                          :          8949.292685
+ThreadID: 13700
+se.sum_exec_runtime                          :          9003.393053
+ThreadID: 13637
+se.sum_exec_runtime                          :         10344.738809
+ThreadID: 13638
+se.sum_exec_runtime                          :         12073.864903
+ThreadID: 13639
+se.sum_exec_runtime                          :          9984.100934
+ThreadID: 13640
+se.sum_exec_runtime                          :         10658.532701
+ThreadID: 13641
+se.sum_exec_runtime                          :          9546.322358
+ThreadID: 13642
+se.sum_exec_runtime                          :         13231.835755
+ThreadID: 13643
+se.sum_exec_runtime                          :         10496.195557
+ThreadID: 13644
+se.sum_exec_runtime                          :         13529.233810
+ThreadID: 13645
+se.sum_exec_runtime                          :         10229.476842
+ThreadID: 13646
+se.sum_exec_runtime                          :         12906.073343
+ThreadID: 13647
+se.sum_exec_runtime                          :         11898.081386
+ThreadID: 13648
+se.sum_exec_runtime                          :         11254.983487
+ThreadID: 13649
+se.sum_exec_runtime                          :          9851.129075
+ThreadID: 13650
+se.sum_exec_runtime                          :          9759.241357
+ThreadID: 13651
+se.sum_exec_runtime                          :         11065.670994
+ThreadID: 13652
+se.sum_exec_runtime                          :          9130.887920
+ThreadID: 13653
+se.sum_exec_runtime                          :          9481.880488
+ThreadID: 13654
+se.sum_exec_runtime                          :         11045.963582
+ThreadID: 13655
+se.sum_exec_runtime                          :         10533.173303
+ThreadID: 13656
+se.sum_exec_runtime                          :          9531.590993
+ThreadID: 13657
+se.sum_exec_runtime                          :         13190.779440
+ThreadID: 13658
+se.sum_exec_runtime                          :         10092.330778
+ThreadID: 13659
+se.sum_exec_runtime                          :         10483.125512
+ThreadID: 13660
+se.sum_exec_runtime                          :         10220.843243
+ThreadID: 13661
+se.sum_exec_runtime                          :         10671.264809
+ThreadID: 13662
+se.sum_exec_runtime                          :         11171.689041
+ThreadID: 13663
+se.sum_exec_runtime                          :         11248.285558
+ThreadID: 13664
+se.sum_exec_runtime                          :         11290.620316
+ThreadID: 13665
+se.sum_exec_runtime                          :         12743.761106
+ThreadID: 13666
+se.sum_exec_runtime                          :         13122.360149
+ThreadID: 13667
+se.sum_exec_runtime                          :         10325.635647
+ThreadID: 13668
+se.sum_exec_runtime                          :         11022.046286
+ThreadID: 13669
+se.sum_exec_runtime                          :         13224.906703
+ThreadID: 13670
+se.sum_exec_runtime                          :         10567.106471
+ThreadID: 13671
+se.sum_exec_runtime                          :         11204.115768
+ThreadID: 13672
+se.sum_exec_runtime                          :         12610.873888
+ThreadID: 13673
+se.sum_exec_runtime                          :         10455.404580
+ThreadID: 13674
+se.sum_exec_runtime                          :         10593.557485
+ThreadID: 13675
+se.sum_exec_runtime                          :         11195.845869
+ThreadID: 13676
+se.sum_exec_runtime                          :         10349.346400
+ThreadID: 13677
+se.sum_exec_runtime                          :         10347.132179
+ThreadID: 13678
+se.sum_exec_runtime                          :          9649.076285
+ThreadID: 13679
+se.sum_exec_runtime                          :         13007.802506
+ThreadID: 13680
+se.sum_exec_runtime                          :         11807.014525
+ThreadID: 13681
+se.sum_exec_runtime                          :         13189.229413
+ThreadID: 13682
+se.sum_exec_runtime                          :         10465.083706
+ThreadID: 13683
+se.sum_exec_runtime                          :          9218.036534
+ThreadID: 13684
+se.sum_exec_runtime                          :         10621.438099
+ThreadID: 13685
+se.sum_exec_runtime                          :         13204.059497
+ThreadID: 13686
+se.sum_exec_runtime                          :         10675.100748
+ThreadID: 13687
+se.sum_exec_runtime                          :         11858.235982
+ThreadID: 13688
+se.sum_exec_runtime                          :         11859.818424
+ThreadID: 13689
+se.sum_exec_runtime                          :         15977.512548
+ThreadID: 13690
+se.sum_exec_runtime                          :         10450.317950
+ThreadID: 13691
+se.sum_exec_runtime                          :         11467.314282
+ThreadID: 13692
+se.sum_exec_runtime                          :         12682.719077
+ThreadID: 13693
+se.sum_exec_runtime                          :         11599.697009
+ThreadID: 13694
+se.sum_exec_runtime                          :          9890.608150
+ThreadID: 13695
+se.sum_exec_runtime                          :         10517.157089
+ThreadID: 13696
+se.sum_exec_runtime                          :         12984.191051
+ThreadID: 13697
+se.sum_exec_runtime                          :         12063.321151
+ThreadID: 13698
+se.sum_exec_runtime                          :         10500.489886
+ThreadID: 13699
+se.sum_exec_runtime                          :         10208.986590
+ThreadID: 13700
+se.sum_exec_runtime                          :         10490.393074
+ThreadID: 13637
+se.sum_exec_runtime                          :         11822.036750
+ThreadID: 13638
+se.sum_exec_runtime                          :         12440.518694
+ThreadID: 13639
+se.sum_exec_runtime                          :         11538.671667
+ThreadID: 13640
+se.sum_exec_runtime                          :         12132.018421
+ThreadID: 13641
+se.sum_exec_runtime                          :         11308.035560
+ThreadID: 13642
+se.sum_exec_runtime                          :         13231.835755
+ThreadID: 13643
+se.sum_exec_runtime                          :         12258.711065
+ThreadID: 13644
+se.sum_exec_runtime                          :         14845.206918
+ThreadID: 13645
+se.sum_exec_runtime                          :         11800.792894
+ThreadID: 13646
+se.sum_exec_runtime                          :         13769.591501
+ThreadID: 13647
+se.sum_exec_runtime                          :         13422.169364
+ThreadID: 13648
+se.sum_exec_runtime                          :         13907.528098
+ThreadID: 13649
+se.sum_exec_runtime                          :         12631.892931
+ThreadID: 13650
+se.sum_exec_runtime                          :         11074.002363
+ThreadID: 13651
+se.sum_exec_runtime                          :         13496.355175
+ThreadID: 13652
+se.sum_exec_runtime                          :         10578.676859
+ThreadID: 13653
+se.sum_exec_runtime                          :         12090.022614
+ThreadID: 13654
+se.sum_exec_runtime                          :         12942.391892
+ThreadID: 13655
+se.sum_exec_runtime                          :         13489.138563
+ThreadID: 13656
+se.sum_exec_runtime                          :         11581.885112
+ThreadID: 13657
+se.sum_exec_runtime                          :         13190.779440
+ThreadID: 13658
+se.sum_exec_runtime                          :         12175.207415
+ThreadID: 13659
+se.sum_exec_runtime                          :         12105.646970
+ThreadID: 13660
+se.sum_exec_runtime                          :         12086.264419
+ThreadID: 13661
+se.sum_exec_runtime                          :         12751.994071
+ThreadID: 13662
+se.sum_exec_runtime                          :         12767.566934
+ThreadID: 13663
+se.sum_exec_runtime                          :         12863.129436
+ThreadID: 13664
+se.sum_exec_runtime                          :         13655.971622
+ThreadID: 13665
+se.sum_exec_runtime                          :         14604.638922
+ThreadID: 13666
+se.sum_exec_runtime                          :         13122.360149
+ThreadID: 13667
+se.sum_exec_runtime                          :         11941.542260
+ThreadID: 13668
+se.sum_exec_runtime                          :         12399.156622
+ThreadID: 13669
+se.sum_exec_runtime                          :         13224.906703
+ThreadID: 13670
+se.sum_exec_runtime                          :         13013.199983
+ThreadID: 13671
+se.sum_exec_runtime                          :         12606.928153
+ThreadID: 13672
+se.sum_exec_runtime                          :         12637.805130
+ThreadID: 13673
+se.sum_exec_runtime                          :         12006.791123
+ThreadID: 13674
+se.sum_exec_runtime                          :         12391.888988
+ThreadID: 13675
+se.sum_exec_runtime                          :         12670.552502
+ThreadID: 13676
+se.sum_exec_runtime                          :         11888.786206
+ThreadID: 13677
+se.sum_exec_runtime                          :         12681.928397
+ThreadID: 13678
+se.sum_exec_runtime                          :         11300.260675
+ThreadID: 13679
+se.sum_exec_runtime                          :         13309.412642
+ThreadID: 13680
+se.sum_exec_runtime                          :         13385.047056
+ThreadID: 13681
+se.sum_exec_runtime                          :         13189.229413
+ThreadID: 13682
+se.sum_exec_runtime                          :         12930.095183
+ThreadID: 13683
+se.sum_exec_runtime                          :         10823.103417
+ThreadID: 13684
+se.sum_exec_runtime                          :         12510.193498
+ThreadID: 13685
+se.sum_exec_runtime                          :         13484.553807
+ThreadID: 13686
+se.sum_exec_runtime                          :         13152.083496
+ThreadID: 13687
+se.sum_exec_runtime                          :         13602.547047
+ThreadID: 13688
+se.sum_exec_runtime                          :         14041.347073
+ThreadID: 13689
+se.sum_exec_runtime                          :         17156.677378
+ThreadID: 13690
+se.sum_exec_runtime                          :         12220.467931
+ThreadID: 13691
+se.sum_exec_runtime                          :         13487.077191
+ThreadID: 13692
+se.sum_exec_runtime                          :         14865.795293
+ThreadID: 13693
+se.sum_exec_runtime                          :         13431.571241
+ThreadID: 13694
+se.sum_exec_runtime                          :         11582.811904
+ThreadID: 13695
+se.sum_exec_runtime                          :         12299.360294
+ThreadID: 13696
+se.sum_exec_runtime                          :         15205.972179
+ThreadID: 13697
+se.sum_exec_runtime                          :         13855.399898
+ThreadID: 13698
+se.sum_exec_runtime                          :         12577.763680
+ThreadID: 13699
+se.sum_exec_runtime                          :         12900.187994
+ThreadID: 13700
+se.sum_exec_runtime                          :         12906.323363
+ThreadID: 13637
+se.sum_exec_runtime                          :         13679.094143
+ThreadID: 13638
+se.sum_exec_runtime                          :         14103.449493
+ThreadID: 13639
+se.sum_exec_runtime                          :         13302.732507
+ThreadID: 13640
+se.sum_exec_runtime                          :         13964.230475
+ThreadID: 13641
+se.sum_exec_runtime                          :         13305.030896
+ThreadID: 13642
+se.sum_exec_runtime                          :         14478.542697
+ThreadID: 13643
+se.sum_exec_runtime                          :         13924.799095
+ThreadID: 13644
+se.sum_exec_runtime                          :         16720.555442
+ThreadID: 13645
+se.sum_exec_runtime                          :         13414.288956
+ThreadID: 13646
+se.sum_exec_runtime                          :         15639.058566
+ThreadID: 13647
+se.sum_exec_runtime                          :         15499.393946
+ThreadID: 13648
+se.sum_exec_runtime                          :         15845.181050
+ThreadID: 13649
+se.sum_exec_runtime                          :         14677.966623
+ThreadID: 13650
+se.sum_exec_runtime                          :         13037.345258
+ThreadID: 13651
+se.sum_exec_runtime                          :         15697.190149
+ThreadID: 13652
+se.sum_exec_runtime                          :         12291.092783
+ThreadID: 13653
+se.sum_exec_runtime                          :         14083.662911
+ThreadID: 13654
+se.sum_exec_runtime                          :         14816.611255
+ThreadID: 13655
+se.sum_exec_runtime                          :         16037.615032
+ThreadID: 13656
+se.sum_exec_runtime                          :         13759.574735
+ThreadID: 13657
+se.sum_exec_runtime                          :         15935.450301
+ThreadID: 13658
+se.sum_exec_runtime                          :         14081.644036
+ThreadID: 13659
+se.sum_exec_runtime                          :         14048.759292
+ThreadID: 13660
+se.sum_exec_runtime                          :         14234.638593
+ThreadID: 13661
+se.sum_exec_runtime                          :         14595.107238
+ThreadID: 13662
+se.sum_exec_runtime                          :         14583.831927
+ThreadID: 13663
+se.sum_exec_runtime                          :         14797.768670
+ThreadID: 13664
+se.sum_exec_runtime                          :         16136.245985
+ThreadID: 13665
+se.sum_exec_runtime                          :         16585.552035
+ThreadID: 13666
+se.sum_exec_runtime                          :         14193.277241
+ThreadID: 13667
+se.sum_exec_runtime                          :         13859.854934
+ThreadID: 13668
+se.sum_exec_runtime                          :         14281.397356
+ThreadID: 13669
+se.sum_exec_runtime                          :         14464.281384
+ThreadID: 13670
+se.sum_exec_runtime                          :         14940.864107
+ThreadID: 13671
+se.sum_exec_runtime                          :         14689.835263
+ThreadID: 13672
+se.sum_exec_runtime                          :         14309.988341
+ThreadID: 13673
+se.sum_exec_runtime                          :         13864.900892
+ThreadID: 13674
+se.sum_exec_runtime                          :         14028.883176
+ThreadID: 13675
+se.sum_exec_runtime                          :         14441.156403
+ThreadID: 13676
+se.sum_exec_runtime                          :         13726.626817
+ThreadID: 13677
+se.sum_exec_runtime                          :         15081.730118
+ThreadID: 13678
+se.sum_exec_runtime                          :         12934.358676
+ThreadID: 13679
+se.sum_exec_runtime                          :         15042.584400
+ThreadID: 13680
+se.sum_exec_runtime                          :         15195.582387
+ThreadID: 13681
+se.sum_exec_runtime                          :         14931.490417
+ThreadID: 13682
+se.sum_exec_runtime                          :         14277.080245
+ThreadID: 13683
+se.sum_exec_runtime                          :         12566.205820
+ThreadID: 13684
+se.sum_exec_runtime                          :         14322.961226
+ThreadID: 13685
+se.sum_exec_runtime                          :         15010.188282
+ThreadID: 13686
+se.sum_exec_runtime                          :         14470.793532
+ThreadID: 13687
+se.sum_exec_runtime                          :         15255.916026
+ThreadID: 13688
+se.sum_exec_runtime                          :         15658.615162
+ThreadID: 13689
+se.sum_exec_runtime                          :         18805.840288
+ThreadID: 13690
+se.sum_exec_runtime                          :         13870.740907
+ThreadID: 13691
+se.sum_exec_runtime                          :         16157.074253
+ThreadID: 13692
+se.sum_exec_runtime                          :         16400.230950
+ThreadID: 13693
+se.sum_exec_runtime                          :         15093.820632
+ThreadID: 13694
+se.sum_exec_runtime                          :         13079.769075
+ThreadID: 13695
+se.sum_exec_runtime                          :         13894.497022
+ThreadID: 13696
+se.sum_exec_runtime                          :         16724.077196
+ThreadID: 13697
+se.sum_exec_runtime                          :         15422.607624
+ThreadID: 13698
+se.sum_exec_runtime                          :         14159.107577
+ThreadID: 13699
+se.sum_exec_runtime                          :         14193.760989
+ThreadID: 13700
+se.sum_exec_runtime                          :         14421.464453
+ThreadID: 13637
+se.sum_exec_runtime                          :         15016.386306
+ThreadID: 13638
+se.sum_exec_runtime                          :         15554.928165
+ThreadID: 13639
+se.sum_exec_runtime                          :         14676.691103
+ThreadID: 13640
+se.sum_exec_runtime                          :         15396.712136
+ThreadID: 13641
+se.sum_exec_runtime                          :         14734.573495
+ThreadID: 13642
+se.sum_exec_runtime                          :         15553.169131
+ThreadID: 13643
+se.sum_exec_runtime                          :         15566.859489
+ThreadID: 13644
+se.sum_exec_runtime                          :         18149.013926
+ThreadID: 13645
+se.sum_exec_runtime                          :         14869.614055
+ThreadID: 13646
+se.sum_exec_runtime                          :         17091.545733
+ThreadID: 13647
+se.sum_exec_runtime                          :         16743.999478
+ThreadID: 13648
+se.sum_exec_runtime                          :         17261.063331
+ThreadID: 13649
+se.sum_exec_runtime                          :         16019.494629
+ThreadID: 13650
+se.sum_exec_runtime                          :         14445.560682
+ThreadID: 13651
+se.sum_exec_runtime                          :         16937.894753
+ThreadID: 13652
+se.sum_exec_runtime                          :         13750.642631
+ThreadID: 13653
+se.sum_exec_runtime                          :         15434.663846
+ThreadID: 13654
+se.sum_exec_runtime                          :         16189.796203
+ThreadID: 13655
+se.sum_exec_runtime                          :         17953.341373
+ThreadID: 13656
+se.sum_exec_runtime                          :         15286.519097
+ThreadID: 13657
+se.sum_exec_runtime                          :         17308.865182
+ThreadID: 13658
+se.sum_exec_runtime                          :         15635.408180
+ThreadID: 13659
+se.sum_exec_runtime                          :         15622.835278
+ThreadID: 13660
+se.sum_exec_runtime                          :         15804.952561
+ThreadID: 13661
+se.sum_exec_runtime                          :         15789.146438
+ThreadID: 13662
+se.sum_exec_runtime                          :         16199.387681
+ThreadID: 13663
+se.sum_exec_runtime                          :         16389.253916
+ThreadID: 13664
+se.sum_exec_runtime                          :         17787.039911
+ThreadID: 13665
+se.sum_exec_runtime                          :         18172.540075
+ThreadID: 13666
+se.sum_exec_runtime                          :         15860.218125
+ThreadID: 13667
+se.sum_exec_runtime                          :         15542.758992
+ThreadID: 13668
+se.sum_exec_runtime                          :         15952.374949
+ThreadID: 13669
+se.sum_exec_runtime                          :         16201.500785
+ThreadID: 13670
+se.sum_exec_runtime                          :         16700.975780
+ThreadID: 13671
+se.sum_exec_runtime                          :         16997.209731
+ThreadID: 13672
+se.sum_exec_runtime                          :         16084.593774
+ThreadID: 13673
+se.sum_exec_runtime                          :         15578.697622
+ThreadID: 13674
+se.sum_exec_runtime                          :         15730.910835
+ThreadID: 13675
+se.sum_exec_runtime                          :         15964.424220
+ThreadID: 13676
+se.sum_exec_runtime                          :         15508.779015
+ThreadID: 13677
+se.sum_exec_runtime                          :         16952.969934
+ThreadID: 13678
+se.sum_exec_runtime                          :         14824.647100
+ThreadID: 13679
+se.sum_exec_runtime                          :         16930.891701
+ThreadID: 13680
+se.sum_exec_runtime                          :         18000.776068
+ThreadID: 13681
+se.sum_exec_runtime                          :         16806.828354
+ThreadID: 13682
+se.sum_exec_runtime                          :         15681.851808
+ThreadID: 13683
+se.sum_exec_runtime                          :         14230.773672
+ThreadID: 13684
+se.sum_exec_runtime                          :         16359.262842
+ThreadID: 13685
+se.sum_exec_runtime                          :         16769.227584
+ThreadID: 13686
+se.sum_exec_runtime                          :         15863.212326
+ThreadID: 13687
+se.sum_exec_runtime                          :         17081.830516
+ThreadID: 13688
+se.sum_exec_runtime                          :         17517.976132
+ThreadID: 13689
+se.sum_exec_runtime                          :         20635.913777
+ThreadID: 13690
+se.sum_exec_runtime                          :         15718.943531
+ThreadID: 13691
+se.sum_exec_runtime                          :         18729.633684
+ThreadID: 13692
+se.sum_exec_runtime                          :         18330.529469
+ThreadID: 13693
+se.sum_exec_runtime                          :         16840.018831
+ThreadID: 13694
+se.sum_exec_runtime                          :         14906.573202
+ThreadID: 13695
+se.sum_exec_runtime                          :         15764.439339
+ThreadID: 13696
+se.sum_exec_runtime                          :         18472.158431
+ThreadID: 13697
+se.sum_exec_runtime                          :         17148.774591
+ThreadID: 13698
+se.sum_exec_runtime                          :         16481.299283
+ThreadID: 13699
+se.sum_exec_runtime                          :         15880.341405
+ThreadID: 13700
+se.sum_exec_runtime                          :         16223.131278
+ThreadID: 13637
+se.sum_exec_runtime                          :         16614.679834
+ThreadID: 13638
+se.sum_exec_runtime                          :         16987.400025
+ThreadID: 13639
+se.sum_exec_runtime                          :         16160.851149
+ThreadID: 13640
+se.sum_exec_runtime                          :         16893.160590
+ThreadID: 13641
+se.sum_exec_runtime                          :         16076.357917
+ThreadID: 13642
+se.sum_exec_runtime                          :         16661.185901
+ThreadID: 13643
+se.sum_exec_runtime                          :         16978.704610
+ThreadID: 13644
+se.sum_exec_runtime                          :         19604.258244
+ThreadID: 13645
+se.sum_exec_runtime                          :         16252.024171
+ThreadID: 13646
+se.sum_exec_runtime                          :         18434.902269
+ThreadID: 13647
+se.sum_exec_runtime                          :         17928.726643
+ThreadID: 13648
+se.sum_exec_runtime                          :         18695.874961
+ThreadID: 13649
+se.sum_exec_runtime                          :         17433.613656
+ThreadID: 13650
+se.sum_exec_runtime                          :         15719.313641
+ThreadID: 13651
+se.sum_exec_runtime                          :         18122.097013
+ThreadID: 13652
+se.sum_exec_runtime                          :         15109.636765
+ThreadID: 13653
+se.sum_exec_runtime                          :         17325.664150
+ThreadID: 13654
+se.sum_exec_runtime                          :         17477.756782
+ThreadID: 13655
+se.sum_exec_runtime                          :         19573.468718
+ThreadID: 13656
+se.sum_exec_runtime                          :         16883.534625
+ThreadID: 13657
+se.sum_exec_runtime                          :         18496.687478
+ThreadID: 13658
+se.sum_exec_runtime                          :         16979.619343
+ThreadID: 13659
+se.sum_exec_runtime                          :         16959.052593
+ThreadID: 13660
+se.sum_exec_runtime                          :         17140.138419
+ThreadID: 13661
+se.sum_exec_runtime                          :         16855.966652
+ThreadID: 13662
+se.sum_exec_runtime                          :         17660.245427
+ThreadID: 13663
+se.sum_exec_runtime                          :         17813.124557
+ThreadID: 13664
+se.sum_exec_runtime                          :         19199.818626
+ThreadID: 13665
+se.sum_exec_runtime                          :         19553.325481
+ThreadID: 13666
+se.sum_exec_runtime                          :         17179.983850
+ThreadID: 13667
+se.sum_exec_runtime                          :         16866.308746
+ThreadID: 13668
+se.sum_exec_runtime                          :         17297.129803
+ThreadID: 13669
+se.sum_exec_runtime                          :         17343.726059
+ThreadID: 13670
+se.sum_exec_runtime                          :         17987.467798
+ThreadID: 13671
+se.sum_exec_runtime                          :         18973.610415
+ThreadID: 13672
+se.sum_exec_runtime                          :         17698.257861
+ThreadID: 13673
+se.sum_exec_runtime                          :         17567.620513
+ThreadID: 13674
+se.sum_exec_runtime                          :         17132.192161
+ThreadID: 13675
+se.sum_exec_runtime                          :         17794.449503
+ThreadID: 13676
+se.sum_exec_runtime                          :         16836.825130
+ThreadID: 13677
+se.sum_exec_runtime                          :         18182.518434
+ThreadID: 13678
+se.sum_exec_runtime                          :         15970.768906
+ThreadID: 13679
+se.sum_exec_runtime                          :         17995.068427
+ThreadID: 13680
+se.sum_exec_runtime                          :         19298.528975
+ThreadID: 13681
+se.sum_exec_runtime                          :         18283.324439
+ThreadID: 13682
+se.sum_exec_runtime                          :         16733.415589
+ThreadID: 13683
+se.sum_exec_runtime                          :         15553.969692
+ThreadID: 13684
+se.sum_exec_runtime                          :         17772.321552
+ThreadID: 13685
+se.sum_exec_runtime                          :         18219.681337
+ThreadID: 13686
+se.sum_exec_runtime                          :         16935.196398
+ThreadID: 13687
+se.sum_exec_runtime                          :         18777.018459
+ThreadID: 13688
+se.sum_exec_runtime                          :         18663.879056
+ThreadID: 13689
+se.sum_exec_runtime                          :         22097.462714
+ThreadID: 13690
+se.sum_exec_runtime                          :         17005.132038
+ThreadID: 13691
+se.sum_exec_runtime                          :         20191.939973
+ThreadID: 13692
+se.sum_exec_runtime                          :         19793.164844
+ThreadID: 13693
+se.sum_exec_runtime                          :         18232.502050
+ThreadID: 13694
+se.sum_exec_runtime                          :         16192.214838
+ThreadID: 13695
+se.sum_exec_runtime                          :         17257.557805
+ThreadID: 13696
+se.sum_exec_runtime                          :         20148.260042
+ThreadID: 13697
+se.sum_exec_runtime                          :         18581.467989
+ThreadID: 13698
+se.sum_exec_runtime                          :         17949.477098
+ThreadID: 13699
+se.sum_exec_runtime                          :         17430.070670
+ThreadID: 13700
+se.sum_exec_runtime                          :         17653.121194
+ThreadID: 13637
+se.sum_exec_runtime                          :         18796.381611
+ThreadID: 13638
+se.sum_exec_runtime                          :         19284.795709
+ThreadID: 13639
+se.sum_exec_runtime                          :         18080.673188
+ThreadID: 13640
+se.sum_exec_runtime                          :         19266.958203
+ThreadID: 13641
+se.sum_exec_runtime                          :         17742.533831
+ThreadID: 13642
+se.sum_exec_runtime                          :         18353.846929
+ThreadID: 13643
+se.sum_exec_runtime                          :         19172.791224
+ThreadID: 13644
+se.sum_exec_runtime                          :         21521.640194
+ThreadID: 13645
+se.sum_exec_runtime                          :         18004.263581
+ThreadID: 13646
+se.sum_exec_runtime                          :         20667.231882
+ThreadID: 13647
+se.sum_exec_runtime                          :         20423.787305
+ThreadID: 13648
+se.sum_exec_runtime                          :         20524.935589
+ThreadID: 13649
+se.sum_exec_runtime                          :         19397.873387
+ThreadID: 13650
+se.sum_exec_runtime                          :         17676.298795
+ThreadID: 13651
+se.sum_exec_runtime                          :         19906.475069
+ThreadID: 13652
+se.sum_exec_runtime                          :         17108.699755
+ThreadID: 13653
+se.sum_exec_runtime                          :         19502.321551
+ThreadID: 13654
+se.sum_exec_runtime                          :         19629.997614
+ThreadID: 13655
+se.sum_exec_runtime                          :         21567.784720
+ThreadID: 13656
+se.sum_exec_runtime                          :         18906.892164
+ThreadID: 13657
+se.sum_exec_runtime                          :         20530.135851
+ThreadID: 13658
+se.sum_exec_runtime                          :         18914.064148
+ThreadID: 13659
+se.sum_exec_runtime                          :         18935.622807
+ThreadID: 13660
+se.sum_exec_runtime                          :         19152.461323
+ThreadID: 13661
+se.sum_exec_runtime                          :         18722.020542
+ThreadID: 13662
+se.sum_exec_runtime                          :         19596.681139
+ThreadID: 13663
+se.sum_exec_runtime                          :         19832.192504
+ThreadID: 13664
+se.sum_exec_runtime                          :         21186.704194
+ThreadID: 13665
+se.sum_exec_runtime                          :         21591.788225
+ThreadID: 13666
+se.sum_exec_runtime                          :         19169.156186
+ThreadID: 13667
+se.sum_exec_runtime                          :         18865.686409
+ThreadID: 13668
+se.sum_exec_runtime                          :         19333.535536
+ThreadID: 13669
+se.sum_exec_runtime                          :         18995.712972
+ThreadID: 13670
+se.sum_exec_runtime                          :         20023.322166
+ThreadID: 13671
+se.sum_exec_runtime                          :         20904.954724
+ThreadID: 13672
+se.sum_exec_runtime                          :         19719.649033
+ThreadID: 13673
+se.sum_exec_runtime                          :         19746.472364
+ThreadID: 13674
+se.sum_exec_runtime                          :         19170.672656
+ThreadID: 13675
+se.sum_exec_runtime                          :         19823.620292
+ThreadID: 13676
+se.sum_exec_runtime                          :         18894.040496
+ThreadID: 13677
+se.sum_exec_runtime                          :         20242.050680
+ThreadID: 13678
+se.sum_exec_runtime                          :         17916.026537
+ThreadID: 13679
+se.sum_exec_runtime                          :         19664.485214
+ThreadID: 13680
+se.sum_exec_runtime                          :         21356.292369
+ThreadID: 13681
+se.sum_exec_runtime                          :         21438.087698
+ThreadID: 13682
+se.sum_exec_runtime                          :         18708.869085
+ThreadID: 13683
+se.sum_exec_runtime                          :         17672.536626
+ThreadID: 13684
+se.sum_exec_runtime                          :         19898.587954
+ThreadID: 13685
+se.sum_exec_runtime                          :         20356.847433
+ThreadID: 13686
+se.sum_exec_runtime                          :         18980.779937
+ThreadID: 13687
+se.sum_exec_runtime                          :         20899.860670
+ThreadID: 13688
+se.sum_exec_runtime                          :         20378.095355
+ThreadID: 13689
+se.sum_exec_runtime                          :         24363.852153
+ThreadID: 13690
+se.sum_exec_runtime                          :         19138.740233
+ThreadID: 13691
+se.sum_exec_runtime                          :         22332.452296
+ThreadID: 13692
+se.sum_exec_runtime                          :         21950.859904
+ThreadID: 13693
+se.sum_exec_runtime                          :         20362.297463
+ThreadID: 13694
+se.sum_exec_runtime                          :         18312.863811
+ThreadID: 13695
+se.sum_exec_runtime                          :         19312.489868
+ThreadID: 13696
+se.sum_exec_runtime                          :         22981.800468
+ThreadID: 13697
+se.sum_exec_runtime                          :         20934.452307
+ThreadID: 13698
+se.sum_exec_runtime                          :         20170.567992
+ThreadID: 13699
+se.sum_exec_runtime                          :         19648.214117
+ThreadID: 13700
+se.sum_exec_runtime                          :         19921.492157
+ThreadID: 13637
+se.sum_exec_runtime                          :         21493.939240
+ThreadID: 13638
+se.sum_exec_runtime                          :         21614.359373
+ThreadID: 13639
+se.sum_exec_runtime                          :         19958.570948
+ThreadID: 13640
+se.sum_exec_runtime                          :         21593.599898
+ThreadID: 13641
+se.sum_exec_runtime                          :         20199.485057
+ThreadID: 13642
+se.sum_exec_runtime                          :         20681.231834
+ThreadID: 13643
+se.sum_exec_runtime                          :         21367.930253
+ThreadID: 13644
+se.sum_exec_runtime                          :         23655.487511
+ThreadID: 13645
+se.sum_exec_runtime                          :         20336.371818
+ThreadID: 13646
+se.sum_exec_runtime                          :         22883.915459
+ThreadID: 13647
+se.sum_exec_runtime                          :         22719.760403
+ThreadID: 13648
+se.sum_exec_runtime                          :         22722.280131
+ThreadID: 13649
+se.sum_exec_runtime                          :         21516.614991
+ThreadID: 13650
+se.sum_exec_runtime                          :         19957.195251
+ThreadID: 13651
+se.sum_exec_runtime                          :         22223.827489
+ThreadID: 13652
+se.sum_exec_runtime                          :         19356.006990
+ThreadID: 13653
+se.sum_exec_runtime                          :         22256.879604
+ThreadID: 13654
+se.sum_exec_runtime                          :         21812.174831
+ThreadID: 13655
+se.sum_exec_runtime                          :         23851.796194
+ThreadID: 13656
+se.sum_exec_runtime                          :         21216.575009
+ThreadID: 13657
+se.sum_exec_runtime                          :         22794.975938
+ThreadID: 13658
+se.sum_exec_runtime                          :         21148.225594
+ThreadID: 13659
+se.sum_exec_runtime                          :         21342.312561
+ThreadID: 13660
+se.sum_exec_runtime                          :         21507.326119
+ThreadID: 13661
+se.sum_exec_runtime                          :         21055.939176
+ThreadID: 13662
+se.sum_exec_runtime                          :         21912.802475
+ThreadID: 13663
+se.sum_exec_runtime                          :         22146.590234
+ThreadID: 13664
+se.sum_exec_runtime                          :         23379.648033
+ThreadID: 13665
+se.sum_exec_runtime                          :         23915.272606
+ThreadID: 13666
+se.sum_exec_runtime                          :         21319.260542
+ThreadID: 13667
+se.sum_exec_runtime                          :         21225.695710
+ThreadID: 13668
+se.sum_exec_runtime                          :         21647.230997
+ThreadID: 13669
+se.sum_exec_runtime                          :         21064.236966
+ThreadID: 13670
+se.sum_exec_runtime                          :         22384.585307
+ThreadID: 13671
+se.sum_exec_runtime                          :         23295.279709
+ThreadID: 13672
+se.sum_exec_runtime                          :         21884.523137
+ThreadID: 13673
+se.sum_exec_runtime                          :         22096.498433
+ThreadID: 13674
+se.sum_exec_runtime                          :         21500.325605
+ThreadID: 13675
+se.sum_exec_runtime                          :         22190.579253
+ThreadID: 13676
+se.sum_exec_runtime                          :         21096.926869
+ThreadID: 13677
+se.sum_exec_runtime                          :         22640.286341
+ThreadID: 13678
+se.sum_exec_runtime                          :         20280.492690
+ThreadID: 13679
+se.sum_exec_runtime                          :         21810.163324
+ThreadID: 13680
+se.sum_exec_runtime                          :         23692.313821
+ThreadID: 13681
+se.sum_exec_runtime                          :         23910.065140
+ThreadID: 13682
+se.sum_exec_runtime                          :         21492.850807
+ThreadID: 13683
+se.sum_exec_runtime                          :         20008.926156
+ThreadID: 13684
+se.sum_exec_runtime                          :         22234.556889
+ThreadID: 13685
+se.sum_exec_runtime                          :         22653.424844
+ThreadID: 13686
+se.sum_exec_runtime                          :         21223.075540
+ThreadID: 13687
+se.sum_exec_runtime                          :         23030.811967
+ThreadID: 13688
+se.sum_exec_runtime                          :         22535.818012
+ThreadID: 13689
+se.sum_exec_runtime                          :         26667.652939
+ThreadID: 13690
+se.sum_exec_runtime                          :         22374.021472
+ThreadID: 13691
+se.sum_exec_runtime                          :         24705.674927
+ThreadID: 13692
+se.sum_exec_runtime                          :         24224.297982
+ThreadID: 13693
+se.sum_exec_runtime                          :         22603.668529
+ThreadID: 13694
+se.sum_exec_runtime                          :         20588.574014
+ThreadID: 13695
+se.sum_exec_runtime                          :         21483.991290
+ThreadID: 13696
+se.sum_exec_runtime                          :         25164.442931
+ThreadID: 13697
+se.sum_exec_runtime                          :         23564.956429
+ThreadID: 13698
+se.sum_exec_runtime                          :         22383.620316
+ThreadID: 13699
+se.sum_exec_runtime                          :         21455.109773
+ThreadID: 13700
+se.sum_exec_runtime                          :         22469.234230
+ThreadID: 13637
+se.sum_exec_runtime                          :         23350.092302
+ThreadID: 13638
+se.sum_exec_runtime                          :         23498.604943
+ThreadID: 13639
+se.sum_exec_runtime                          :         21765.387877
+ThreadID: 13640
+se.sum_exec_runtime                          :         23504.808338
+ThreadID: 13641
+se.sum_exec_runtime                          :         22069.862179
+ThreadID: 13642
+se.sum_exec_runtime                          :         22556.568005
+ThreadID: 13643
+se.sum_exec_runtime                          :         23210.069908
+ThreadID: 13644
+se.sum_exec_runtime                          :         25495.213425
+ThreadID: 13645
+se.sum_exec_runtime                          :         22211.484789
+ThreadID: 13646
+se.sum_exec_runtime                          :         25231.770822
+ThreadID: 13647
+se.sum_exec_runtime                          :         24571.238008
+ThreadID: 13648
+se.sum_exec_runtime                          :         24671.742980
+ThreadID: 13649
+se.sum_exec_runtime                          :         23389.705403
+ThreadID: 13650
+se.sum_exec_runtime                          :         21960.686001
+ThreadID: 13651
+se.sum_exec_runtime                          :         24141.388349
+ThreadID: 13652
+se.sum_exec_runtime                          :         21009.742113
+ThreadID: 13653
+se.sum_exec_runtime                          :         24489.527592
+ThreadID: 13654
+se.sum_exec_runtime                          :         23575.764383
+ThreadID: 13655
+se.sum_exec_runtime                          :         25767.619382
+ThreadID: 13656
+se.sum_exec_runtime                          :         23122.309699
+ThreadID: 13657
+se.sum_exec_runtime                          :         24689.318956
+ThreadID: 13658
+se.sum_exec_runtime                          :         22816.819171
+ThreadID: 13659
+se.sum_exec_runtime                          :         22966.249131
+ThreadID: 13660
+se.sum_exec_runtime                          :         23359.870203
+ThreadID: 13661
+se.sum_exec_runtime                          :         22764.876946
+ThreadID: 13662
+se.sum_exec_runtime                          :         23742.015664
+ThreadID: 13663
+se.sum_exec_runtime                          :         23902.374449
+ThreadID: 13664
+se.sum_exec_runtime                          :         25145.182331
+ThreadID: 13665
+se.sum_exec_runtime                          :         25615.874079
+ThreadID: 13666
+se.sum_exec_runtime                          :         23071.646862
+ThreadID: 13667
+se.sum_exec_runtime                          :         22952.951566
+ThreadID: 13668
+se.sum_exec_runtime                          :         23250.160296
+ThreadID: 13669
+se.sum_exec_runtime                          :         22856.162900
+ThreadID: 13670
+se.sum_exec_runtime                          :         24032.682675
+ThreadID: 13671
+se.sum_exec_runtime                          :         24716.339108
+ThreadID: 13672
+se.sum_exec_runtime                          :         23623.406956
+ThreadID: 13673
+se.sum_exec_runtime                          :         23941.070845
+ThreadID: 13674
+se.sum_exec_runtime                          :         23133.301304
+ThreadID: 13675
+se.sum_exec_runtime                          :         23960.965094
+ThreadID: 13676
+se.sum_exec_runtime                          :         22619.115938
+ThreadID: 13677
+se.sum_exec_runtime                          :         24563.615884
+ThreadID: 13678
+se.sum_exec_runtime                          :         21963.416289
+ThreadID: 13679
+se.sum_exec_runtime                          :         23384.217735
+ThreadID: 13680
+se.sum_exec_runtime                          :         25465.635044
+ThreadID: 13681
+se.sum_exec_runtime                          :         25600.813196
+ThreadID: 13682
+se.sum_exec_runtime                          :         23645.183045
+ThreadID: 13683
+se.sum_exec_runtime                          :         21585.049662
+ThreadID: 13684
+se.sum_exec_runtime                          :         23872.269585
+ThreadID: 13685
+se.sum_exec_runtime                          :         24174.171106
+ThreadID: 13686
+se.sum_exec_runtime                          :         22921.202188
+ThreadID: 13687
+se.sum_exec_runtime                          :         24706.920056
+ThreadID: 13688
+se.sum_exec_runtime                          :         24085.616161
+ThreadID: 13689
+se.sum_exec_runtime                          :         28445.746949
+ThreadID: 13690
+se.sum_exec_runtime                          :         24180.426143
+ThreadID: 13691
+se.sum_exec_runtime                          :         26648.528213
+ThreadID: 13692
+se.sum_exec_runtime                          :         25984.724688
+ThreadID: 13693
+se.sum_exec_runtime                          :         24943.841170
+ThreadID: 13694
+se.sum_exec_runtime                          :         22140.723390
+ThreadID: 13695
+se.sum_exec_runtime                          :         24241.503233
+ThreadID: 13696
+se.sum_exec_runtime                          :         26956.156430
+ThreadID: 13697
+se.sum_exec_runtime                          :         26206.159019
+ThreadID: 13698
+se.sum_exec_runtime                          :         24044.729334
+ThreadID: 13699
+se.sum_exec_runtime                          :         23173.155441
+ThreadID: 13700
+se.sum_exec_runtime                          :         24244.657845
+ThreadID: 13637
+se.sum_exec_runtime                          :         26913.520260
+ThreadID: 13638
+se.sum_exec_runtime                          :         25800.194379
+ThreadID: 13639
+se.sum_exec_runtime                          :         23851.612517
+ThreadID: 13640
+se.sum_exec_runtime                          :         26541.728105
+ThreadID: 13641
+se.sum_exec_runtime                          :         24175.372079
+ThreadID: 13642
+se.sum_exec_runtime                          :         24728.576200
+ThreadID: 13643
+se.sum_exec_runtime                          :         25319.568868
+ThreadID: 13644
+se.sum_exec_runtime                          :         27579.282949
+ThreadID: 13645
+se.sum_exec_runtime                          :         24308.264954
+ThreadID: 13646
+se.sum_exec_runtime                          :         28085.585064
+ThreadID: 13647
+se.sum_exec_runtime                          :         26594.393525
+ThreadID: 13648
+se.sum_exec_runtime                          :         26583.777291
+ThreadID: 13649
+se.sum_exec_runtime                          :         25336.924468
+ThreadID: 13650
+se.sum_exec_runtime                          :         23824.759497
+ThreadID: 13651
+se.sum_exec_runtime                          :         25790.172345
+ThreadID: 13652
+se.sum_exec_runtime                          :         23140.193277
+ThreadID: 13653
+se.sum_exec_runtime                          :         26628.082883
+ThreadID: 13654
+se.sum_exec_runtime                          :         25307.528856
+ThreadID: 13655
+se.sum_exec_runtime                          :         27662.616357
+ThreadID: 13656
+se.sum_exec_runtime                          :         25041.711475
+ThreadID: 13657
+se.sum_exec_runtime                          :         26763.663793
+ThreadID: 13658
+se.sum_exec_runtime                          :         25410.274073
+ThreadID: 13659
+se.sum_exec_runtime                          :         24933.292861
+ThreadID: 13660
+se.sum_exec_runtime                          :         25411.549277
+ThreadID: 13661
+se.sum_exec_runtime                          :         24661.593180
+ThreadID: 13662
+se.sum_exec_runtime                          :         25788.667011
+ThreadID: 13663
+se.sum_exec_runtime                          :         26069.604834
+ThreadID: 13664
+se.sum_exec_runtime                          :         27034.536954
+ThreadID: 13665
+se.sum_exec_runtime                          :         27768.522383
+ThreadID: 13666
+se.sum_exec_runtime                          :         25580.513958
+ThreadID: 13667
+se.sum_exec_runtime                          :         25139.683003
+ThreadID: 13668
+se.sum_exec_runtime                          :         25189.378081
+ThreadID: 13669
+se.sum_exec_runtime                          :         25296.351011
+ThreadID: 13670
+se.sum_exec_runtime                          :         26199.791933
+ThreadID: 13671
+se.sum_exec_runtime                          :         26876.088596
+ThreadID: 13672
+se.sum_exec_runtime                          :         25771.140681
+ThreadID: 13673
+se.sum_exec_runtime                          :         26092.168986
+ThreadID: 13674
+se.sum_exec_runtime                          :         25422.723828
+ThreadID: 13675
+se.sum_exec_runtime                          :         26161.337310
+ThreadID: 13676
+se.sum_exec_runtime                          :         24757.144174
+ThreadID: 13677
+se.sum_exec_runtime                          :         26751.798935
+ThreadID: 13678
+se.sum_exec_runtime                          :         23982.845409
+ThreadID: 13679
+se.sum_exec_runtime                          :         25147.511967
+ThreadID: 13680
+se.sum_exec_runtime                          :         27772.344264
+ThreadID: 13681
+se.sum_exec_runtime                          :         27786.549197
+ThreadID: 13682
+se.sum_exec_runtime                          :         25876.982323
+ThreadID: 13683
+se.sum_exec_runtime                          :         23569.086171
+ThreadID: 13684
+se.sum_exec_runtime                          :         25881.996405
+ThreadID: 13685
+se.sum_exec_runtime                          :         26168.041118
+ThreadID: 13686
+se.sum_exec_runtime                          :         25034.585431
+ThreadID: 13687
+se.sum_exec_runtime                          :         26488.945361
+ThreadID: 13688
+se.sum_exec_runtime                          :         25804.934826
+ThreadID: 13689
+se.sum_exec_runtime                          :         30962.330691
+ThreadID: 13690
+se.sum_exec_runtime                          :         26329.146733
+ThreadID: 13691
+se.sum_exec_runtime                          :         28780.237846
+ThreadID: 13692
+se.sum_exec_runtime                          :         28120.746678
+ThreadID: 13693
+se.sum_exec_runtime                          :         27570.960204
+ThreadID: 13694
+se.sum_exec_runtime                          :         23952.913451
+ThreadID: 13695
+se.sum_exec_runtime                          :         26414.836971
+ThreadID: 13696
+se.sum_exec_runtime                          :         29129.699845
+ThreadID: 13697
+se.sum_exec_runtime                          :         28087.397500
+ThreadID: 13698
+se.sum_exec_runtime                          :         26204.484667
+ThreadID: 13699
+se.sum_exec_runtime                          :         25296.265846
+ThreadID: 13700
+se.sum_exec_runtime                          :         26435.995938
+ThreadID: 13637
+se.sum_exec_runtime                          :         29420.518203
+ThreadID: 13638
+se.sum_exec_runtime                          :         27523.789491
+ThreadID: 13639
+se.sum_exec_runtime                          :         25579.244270
+ThreadID: 13640
+se.sum_exec_runtime                          :         29669.336499
+ThreadID: 13641
+se.sum_exec_runtime                          :         26153.594127
+ThreadID: 13642
+se.sum_exec_runtime                          :         26508.278290
+ThreadID: 13643
+se.sum_exec_runtime                          :         27280.636954
+ThreadID: 13644
+se.sum_exec_runtime                          :         29608.350260
+ThreadID: 13645
+se.sum_exec_runtime                          :         26171.915322
+ThreadID: 13646
+se.sum_exec_runtime                          :         30061.929193
+ThreadID: 13647
+se.sum_exec_runtime                          :         28550.768714
+ThreadID: 13648
+se.sum_exec_runtime                          :         28579.826249
+ThreadID: 13649
+se.sum_exec_runtime                          :         27053.831040
+ThreadID: 13650
+se.sum_exec_runtime                          :         26284.239530
+ThreadID: 13651
+se.sum_exec_runtime                          :         27787.290758
+ThreadID: 13652
+se.sum_exec_runtime                          :         25132.724247
+ThreadID: 13653
+se.sum_exec_runtime                          :         28689.895144
+ThreadID: 13654
+se.sum_exec_runtime                          :         27029.312323
+ThreadID: 13655
+se.sum_exec_runtime                          :         29381.505225
+ThreadID: 13656
+se.sum_exec_runtime                          :         27128.591117
+ThreadID: 13657
+se.sum_exec_runtime                          :         28833.657778
+ThreadID: 13658
+se.sum_exec_runtime                          :         27367.489676
+ThreadID: 13659
+se.sum_exec_runtime                          :         27184.990264
+ThreadID: 13660
+se.sum_exec_runtime                          :         27696.918796
+ThreadID: 13661
+se.sum_exec_runtime                          :         26704.467928
+ThreadID: 13662
+se.sum_exec_runtime                          :         27609.667815
+ThreadID: 13663
+se.sum_exec_runtime                          :         28138.945231
+ThreadID: 13664
+se.sum_exec_runtime                          :         28868.494687
+ThreadID: 13665
+se.sum_exec_runtime                          :         29465.879851
+ThreadID: 13666
+se.sum_exec_runtime                          :         27594.743316
+ThreadID: 13667
+se.sum_exec_runtime                          :         27163.917493
+ThreadID: 13668
+se.sum_exec_runtime                          :         27203.382695
+ThreadID: 13669
+se.sum_exec_runtime                          :         27280.844520
+ThreadID: 13670
+se.sum_exec_runtime                          :         27875.525983
+ThreadID: 13671
+se.sum_exec_runtime                          :         29931.486826
+ThreadID: 13672
+se.sum_exec_runtime                          :         28724.262755
+ThreadID: 13673
+se.sum_exec_runtime                          :         28083.872438
+ThreadID: 13674
+se.sum_exec_runtime                          :         27104.217267
+ThreadID: 13675
+se.sum_exec_runtime                          :         28135.211833
+ThreadID: 13676
+se.sum_exec_runtime                          :         26771.689745
+ThreadID: 13677
+se.sum_exec_runtime                          :         28709.955138
+ThreadID: 13678
+se.sum_exec_runtime                          :         26000.529112
+ThreadID: 13679
+se.sum_exec_runtime                          :         26853.517128
+ThreadID: 13680
+se.sum_exec_runtime                          :         30119.860829
+ThreadID: 13681
+se.sum_exec_runtime                          :         29814.563033
+ThreadID: 13682
+se.sum_exec_runtime                          :         27854.224200
+ThreadID: 13683
+se.sum_exec_runtime                          :         25643.603489
+ThreadID: 13684
+se.sum_exec_runtime                          :         27941.982092
+ThreadID: 13685
+se.sum_exec_runtime                          :         28222.395070
+ThreadID: 13686
+se.sum_exec_runtime                          :         27067.507768
+ThreadID: 13687
+se.sum_exec_runtime                          :         28416.228714
+ThreadID: 13688
+se.sum_exec_runtime                          :         27527.809092
+ThreadID: 13689
+se.sum_exec_runtime                          :         32950.276993
+ThreadID: 13690
+se.sum_exec_runtime                          :         28323.007960
+ThreadID: 13691
+se.sum_exec_runtime                          :         30497.383769
+ThreadID: 13692
+se.sum_exec_runtime                          :         30109.952288
+ThreadID: 13693
+se.sum_exec_runtime                          :         29765.962715
+ThreadID: 13694
+se.sum_exec_runtime                          :         25864.941747
+ThreadID: 13695
+se.sum_exec_runtime                          :         28311.286839
+ThreadID: 13696
+se.sum_exec_runtime                          :         30989.165559
+ThreadID: 13697
+se.sum_exec_runtime                          :         29942.245529
+ThreadID: 13698
+se.sum_exec_runtime                          :         27692.896428
+ThreadID: 13699
+se.sum_exec_runtime                          :         26973.969292
+ThreadID: 13700
+se.sum_exec_runtime                          :         28224.672785
+ThreadID: 13637
+se.sum_exec_runtime                          :         31154.774546
+ThreadID: 13638
+se.sum_exec_runtime                          :         29159.058132
+ThreadID: 13639
+se.sum_exec_runtime                          :         27216.482598
+ThreadID: 13640
+se.sum_exec_runtime                          :         31399.017639
+ThreadID: 13641
+se.sum_exec_runtime                          :         27840.699459
+ThreadID: 13642
+se.sum_exec_runtime                          :         28102.263134
+ThreadID: 13643
+se.sum_exec_runtime                          :         28972.045703
+ThreadID: 13644
+se.sum_exec_runtime                          :         31184.368931
+ThreadID: 13645
+se.sum_exec_runtime                          :         27835.753212
+ThreadID: 13646
+se.sum_exec_runtime                          :         32802.508597
+ThreadID: 13647
+se.sum_exec_runtime                          :         30247.234656
+ThreadID: 13648
+se.sum_exec_runtime                          :         30176.743783
+ThreadID: 13649
+se.sum_exec_runtime                          :         28591.377464
+ThreadID: 13650
+se.sum_exec_runtime                          :         29423.737515
+ThreadID: 13651
+se.sum_exec_runtime                          :         29438.946597
+ThreadID: 13652
+se.sum_exec_runtime                          :         26768.631451
+ThreadID: 13653
+se.sum_exec_runtime                          :         30277.104740
+ThreadID: 13654
+se.sum_exec_runtime                          :         28454.340255
+ThreadID: 13655
+se.sum_exec_runtime                          :         31031.938224
+ThreadID: 13656
+se.sum_exec_runtime                          :         28651.768319
+ThreadID: 13657
+se.sum_exec_runtime                          :         30447.381527
+ThreadID: 13658
+se.sum_exec_runtime                          :         29236.786243
+ThreadID: 13659
+se.sum_exec_runtime                          :         28850.457709
+ThreadID: 13660
+se.sum_exec_runtime                          :         29363.119803
+ThreadID: 13661
+se.sum_exec_runtime                          :         28342.904547
+ThreadID: 13662
+se.sum_exec_runtime                          :         29190.937518
+ThreadID: 13663
+se.sum_exec_runtime                          :         29759.397680
+ThreadID: 13664
+se.sum_exec_runtime                          :         30309.380458
+ThreadID: 13665
+se.sum_exec_runtime                          :         30782.611798
+ThreadID: 13666
+se.sum_exec_runtime                          :         29378.649527
+ThreadID: 13667
+se.sum_exec_runtime                          :         28872.059398
+ThreadID: 13668
+se.sum_exec_runtime                          :         28789.181076
+ThreadID: 13669
+se.sum_exec_runtime                          :         28853.099259
+ThreadID: 13670
+se.sum_exec_runtime                          :         29186.740449
+ThreadID: 13671
+se.sum_exec_runtime                          :         31387.798616
+ThreadID: 13672
+se.sum_exec_runtime                          :         30281.739481
+ThreadID: 13673
+se.sum_exec_runtime                          :         30369.694800
+ThreadID: 13674
+se.sum_exec_runtime                          :         28554.591921
+ThreadID: 13675
+se.sum_exec_runtime                          :         29722.129763
+ThreadID: 13676
+se.sum_exec_runtime                          :         28341.267922
+ThreadID: 13677
+se.sum_exec_runtime                          :         30547.902939
+ThreadID: 13678
+se.sum_exec_runtime                          :         27485.473113
+ThreadID: 13679
+se.sum_exec_runtime                          :         28292.126731
+ThreadID: 13680
+se.sum_exec_runtime                          :         31579.846570
+ThreadID: 13681
+se.sum_exec_runtime                          :         31387.300686
+ThreadID: 13682
+se.sum_exec_runtime                          :         29342.041242
+ThreadID: 13683
+se.sum_exec_runtime                          :         27098.119223
+ThreadID: 13684
+se.sum_exec_runtime                          :         29583.572015
+ThreadID: 13685
+se.sum_exec_runtime                          :         29610.116958
+ThreadID: 13686
+se.sum_exec_runtime                          :         28806.211618
+ThreadID: 13687
+se.sum_exec_runtime                          :         29476.415476
+ThreadID: 13688
+se.sum_exec_runtime                          :         28826.439194
+ThreadID: 13689
+se.sum_exec_runtime                          :         34350.856119
+ThreadID: 13690
+se.sum_exec_runtime                          :         29597.153603
+ThreadID: 13691
+se.sum_exec_runtime                          :         31891.060186
+ThreadID: 13692
+se.sum_exec_runtime                          :         31465.710057
+ThreadID: 13693
+se.sum_exec_runtime                          :         30926.804590
+ThreadID: 13694
+se.sum_exec_runtime                          :         27281.323814
+ThreadID: 13695
+se.sum_exec_runtime                          :         29511.286249
+ThreadID: 13696
+se.sum_exec_runtime                          :         32317.063036
+ThreadID: 13697
+se.sum_exec_runtime                          :         31304.553566
+ThreadID: 13698
+se.sum_exec_runtime                          :         28816.539439
+ThreadID: 13699
+se.sum_exec_runtime                          :         28130.608563
+ThreadID: 13700
+se.sum_exec_runtime                          :         29653.375879
+ThreadID: 13637
+se.sum_exec_runtime                          :         32376.365609
+ThreadID: 13638
+se.sum_exec_runtime                          :         31014.627749
+ThreadID: 13639
+se.sum_exec_runtime                          :         28911.119746
+ThreadID: 13640
+se.sum_exec_runtime                          :         32746.004904
+ThreadID: 13641
+se.sum_exec_runtime                          :         29202.005958
+ThreadID: 13642
+se.sum_exec_runtime                          :         29426.301633
+ThreadID: 13643
+se.sum_exec_runtime                          :         30210.323011
+ThreadID: 13644
+se.sum_exec_runtime                          :         32368.868826
+ThreadID: 13645
+se.sum_exec_runtime                          :         29157.805707
+ThreadID: 13646
+se.sum_exec_runtime                          :         34015.968357
+ThreadID: 13647
+se.sum_exec_runtime                          :         31588.026676
+ThreadID: 13648
+se.sum_exec_runtime                          :         31248.655984
+ThreadID: 13649
+se.sum_exec_runtime                          :         29822.030839
+ThreadID: 13650
+se.sum_exec_runtime                          :         30930.670973
+ThreadID: 13651
+se.sum_exec_runtime                          :         31166.920806
+ThreadID: 13652
+se.sum_exec_runtime                          :         28013.135313
+ThreadID: 13653
+se.sum_exec_runtime                          :         31566.543464
+ThreadID: 13654
+se.sum_exec_runtime                          :         29824.417911
+ThreadID: 13655
+se.sum_exec_runtime                          :         32277.536064
+ThreadID: 13656
+se.sum_exec_runtime                          :         29752.115447
+ThreadID: 13657
+se.sum_exec_runtime                          :         31817.010618
+ThreadID: 13658
+se.sum_exec_runtime                          :         30467.561791
+ThreadID: 13659
+se.sum_exec_runtime                          :         30301.072958
+ThreadID: 13660
+se.sum_exec_runtime                          :         30639.016430
+ThreadID: 13661
+se.sum_exec_runtime                          :         29733.043703
+ThreadID: 13662
+se.sum_exec_runtime                          :         30579.218323
+ThreadID: 13663
+se.sum_exec_runtime                          :         31147.468377
+ThreadID: 13664
+se.sum_exec_runtime                          :         31666.323265
+ThreadID: 13665
+se.sum_exec_runtime                          :         32739.639231
+ThreadID: 13666
+se.sum_exec_runtime                          :         30654.289881
+ThreadID: 13667
+se.sum_exec_runtime                          :         30225.550945
+ThreadID: 13668
+se.sum_exec_runtime                          :         29981.064161
+ThreadID: 13669
+se.sum_exec_runtime                          :         30138.081829
+ThreadID: 13670
+se.sum_exec_runtime                          :         31371.650789
+ThreadID: 13671
+se.sum_exec_runtime                          :         32760.697337
+ThreadID: 13672
+se.sum_exec_runtime                          :         31679.385215
+ThreadID: 13673
+se.sum_exec_runtime                          :         31874.190419
+ThreadID: 13674
+se.sum_exec_runtime                          :         29892.248077
+ThreadID: 13675
+se.sum_exec_runtime                          :         31490.747707
+ThreadID: 13676
+se.sum_exec_runtime                          :         29810.572300
+ThreadID: 13677
+se.sum_exec_runtime                          :         32079.945686
+ThreadID: 13678
+se.sum_exec_runtime                          :         28782.837554
+ThreadID: 13679
+se.sum_exec_runtime                          :         29918.577784
+ThreadID: 13680
+se.sum_exec_runtime                          :         33049.855610
+ThreadID: 13681
+se.sum_exec_runtime                          :         32995.735488
+ThreadID: 13682
+se.sum_exec_runtime                          :         30927.853195
+ThreadID: 13683
+se.sum_exec_runtime                          :         28434.229053
+ThreadID: 13684
+se.sum_exec_runtime                          :         31726.954356
+ThreadID: 13685
+se.sum_exec_runtime                          :         31009.539222
+ThreadID: 13686
+se.sum_exec_runtime                          :         30324.963283
+ThreadID: 13687
+se.sum_exec_runtime                          :         31147.731437
+ThreadID: 13688
+se.sum_exec_runtime                          :         30491.039554
+ThreadID: 13689
+se.sum_exec_runtime                          :         35950.096137
+ThreadID: 13690
+se.sum_exec_runtime                          :         30936.304761
+ThreadID: 13691
+se.sum_exec_runtime                          :         33679.766132
+ThreadID: 13692
+se.sum_exec_runtime                          :         33187.503037
+ThreadID: 13693
+se.sum_exec_runtime                          :         32672.824340
+ThreadID: 13694
+se.sum_exec_runtime                          :         28771.442670
+ThreadID: 13695
+se.sum_exec_runtime                          :         31298.414805
+ThreadID: 13696
+se.sum_exec_runtime                          :         34047.936050
+ThreadID: 13697
+se.sum_exec_runtime                          :         32834.525352
+ThreadID: 13698
+se.sum_exec_runtime                          :         30581.829405
+ThreadID: 13699
+se.sum_exec_runtime                          :         29913.639610
+ThreadID: 13700
+se.sum_exec_runtime                          :         31238.300078
+ThreadID: 13637
+se.sum_exec_runtime                          :         34480.582809
+ThreadID: 13638
+se.sum_exec_runtime                          :         33285.203499
+ThreadID: 13639
+se.sum_exec_runtime                          :         31190.686541
+ThreadID: 13640
+se.sum_exec_runtime                          :         34863.988578
+ThreadID: 13641
+se.sum_exec_runtime                          :         31374.034194
+ThreadID: 13642
+se.sum_exec_runtime                          :         33321.354263
+ThreadID: 13643
+se.sum_exec_runtime                          :         32353.020197
+ThreadID: 13644
+se.sum_exec_runtime                          :         34507.672479
+ThreadID: 13645
+se.sum_exec_runtime                          :         31199.229370
+ThreadID: 13646
+se.sum_exec_runtime                          :         36114.447574
+ThreadID: 13647
+se.sum_exec_runtime                          :         33721.377549
+ThreadID: 13648
+se.sum_exec_runtime                          :         33377.874819
+ThreadID: 13649
+se.sum_exec_runtime                          :         31920.692725
+ThreadID: 13650
+se.sum_exec_runtime                          :         32890.682995
+ThreadID: 13651
+se.sum_exec_runtime                          :         33083.944046
+ThreadID: 13652
+se.sum_exec_runtime                          :         30123.040697
+ThreadID: 13653
+se.sum_exec_runtime                          :         33480.858472
+ThreadID: 13654
+se.sum_exec_runtime                          :         31943.463143
+ThreadID: 13655
+se.sum_exec_runtime                          :         34411.076760
+ThreadID: 13656
+se.sum_exec_runtime                          :         31879.236858
+ThreadID: 13657
+se.sum_exec_runtime                          :         33874.453065
+ThreadID: 13658
+se.sum_exec_runtime                          :         32568.743397
+ThreadID: 13659
+se.sum_exec_runtime                          :         32223.435823
+ThreadID: 13660
+se.sum_exec_runtime                          :         32747.435953
+ThreadID: 13661
+se.sum_exec_runtime                          :         31826.138068
+ThreadID: 13662
+se.sum_exec_runtime                          :         32694.037916
+ThreadID: 13663
+se.sum_exec_runtime                          :         33263.143924
+ThreadID: 13664
+se.sum_exec_runtime                          :         33768.223458
+ThreadID: 13665
+se.sum_exec_runtime                          :         35180.974950
+ThreadID: 13666
+se.sum_exec_runtime                          :         32754.016044
+ThreadID: 13667
+se.sum_exec_runtime                          :         32722.555355
+ThreadID: 13668
+se.sum_exec_runtime                          :         31854.070683
+ThreadID: 13669
+se.sum_exec_runtime                          :         32198.235936
+ThreadID: 13670
+se.sum_exec_runtime                          :         34376.494063
+ThreadID: 13671
+se.sum_exec_runtime                          :         35323.284031
+ThreadID: 13672
+se.sum_exec_runtime                          :         33818.573173
+ThreadID: 13673
+se.sum_exec_runtime                          :         33942.349898
+ThreadID: 13674
+se.sum_exec_runtime                          :         31972.626969
+ThreadID: 13675
+se.sum_exec_runtime                          :         33871.428878
+ThreadID: 13676
+se.sum_exec_runtime                          :         31907.506599
+ThreadID: 13677
+se.sum_exec_runtime                          :         34654.920803
+ThreadID: 13678
+se.sum_exec_runtime                          :         30698.715090
+ThreadID: 13679
+se.sum_exec_runtime                          :         31830.115406
+ThreadID: 13680
+se.sum_exec_runtime                          :         35170.830371
+ThreadID: 13681
+se.sum_exec_runtime                          :         34918.288053
+ThreadID: 13682
+se.sum_exec_runtime                          :         33048.040425
+ThreadID: 13683
+se.sum_exec_runtime                          :         29960.019469
+ThreadID: 13684
+se.sum_exec_runtime                          :         33804.789422
+ThreadID: 13685
+se.sum_exec_runtime                          :         32890.672957
+ThreadID: 13686
+se.sum_exec_runtime                          :         32241.314864
+ThreadID: 13687
+se.sum_exec_runtime                          :         33208.445031
+ThreadID: 13688
+se.sum_exec_runtime                          :         32454.918032
+ThreadID: 13689
+se.sum_exec_runtime                          :         37913.840986
+ThreadID: 13690
+se.sum_exec_runtime                          :         32984.542555
+ThreadID: 13691
+se.sum_exec_runtime                          :         35718.905971
+ThreadID: 13692
+se.sum_exec_runtime                          :         35213.456600
+ThreadID: 13693
+se.sum_exec_runtime                          :         34713.544928
+ThreadID: 13694
+se.sum_exec_runtime                          :         30802.411038
+ThreadID: 13695
+se.sum_exec_runtime                          :         33365.128364
+ThreadID: 13696
+se.sum_exec_runtime                          :         36077.349764
+ThreadID: 13697
+se.sum_exec_runtime                          :         34711.940933
+ThreadID: 13698
+se.sum_exec_runtime                          :         32342.160173
+ThreadID: 13699
+se.sum_exec_runtime                          :         31928.350552
+ThreadID: 13700
+se.sum_exec_runtime                          :         32941.993586
+ThreadID: 13637
+se.sum_exec_runtime                          :         36583.504159
+ThreadID: 13638
+se.sum_exec_runtime                          :         35480.930098
+ThreadID: 13639
+se.sum_exec_runtime                          :         33216.912449
+ThreadID: 13640
+se.sum_exec_runtime                          :         37091.128793
+ThreadID: 13641
+se.sum_exec_runtime                          :         33627.337679
+ThreadID: 13642
+se.sum_exec_runtime                          :         35609.738587
+ThreadID: 13643
+se.sum_exec_runtime                          :         34378.797191
+ThreadID: 13644
+se.sum_exec_runtime                          :         36458.251023
+ThreadID: 13645
+se.sum_exec_runtime                          :         33201.067317
+ThreadID: 13646
+se.sum_exec_runtime                          :         38432.681398
+ThreadID: 13647
+se.sum_exec_runtime                          :         35818.184989
+ThreadID: 13648
+se.sum_exec_runtime                          :         35501.473477
+ThreadID: 13649
+se.sum_exec_runtime                          :         33877.461935
+ThreadID: 13650
+se.sum_exec_runtime                          :         34791.198933
+ThreadID: 13651
+se.sum_exec_runtime                          :         35085.959849
+ThreadID: 13652
+se.sum_exec_runtime                          :         32218.329037
+ThreadID: 13653
+se.sum_exec_runtime                          :         35398.268206
+ThreadID: 13654
+se.sum_exec_runtime                          :         33963.326301
+ThreadID: 13655
+se.sum_exec_runtime                          :         36504.011347
+ThreadID: 13656
+se.sum_exec_runtime                          :         33957.406231
+ThreadID: 13657
+se.sum_exec_runtime                          :         35876.017890
+ThreadID: 13658
+se.sum_exec_runtime                          :         34686.639055
+ThreadID: 13659
+se.sum_exec_runtime                          :         34322.636637
+ThreadID: 13660
+se.sum_exec_runtime                          :         34845.953722
+ThreadID: 13661
+se.sum_exec_runtime                          :         33692.386283
+ThreadID: 13662
+se.sum_exec_runtime                          :         34702.268828
+ThreadID: 13663
+se.sum_exec_runtime                          :         35346.020331
+ThreadID: 13664
+se.sum_exec_runtime                          :         35797.570444
+ThreadID: 13665
+se.sum_exec_runtime                          :         37090.360772
+ThreadID: 13666
+se.sum_exec_runtime                          :         34831.791218
+ThreadID: 13667
+se.sum_exec_runtime                          :         34829.442800
+ThreadID: 13668
+se.sum_exec_runtime                          :         33841.030942
+ThreadID: 13669
+se.sum_exec_runtime                          :         33962.739156
+ThreadID: 13670
+se.sum_exec_runtime                          :         36317.044202
+ThreadID: 13671
+se.sum_exec_runtime                          :         37382.013414
+ThreadID: 13672
+se.sum_exec_runtime                          :         35838.082295
+ThreadID: 13673
+se.sum_exec_runtime                          :         35942.876409
+ThreadID: 13674
+se.sum_exec_runtime                          :         34028.101404
+ThreadID: 13675
+se.sum_exec_runtime                          :         35716.818869
+ThreadID: 13676
+se.sum_exec_runtime                          :         33881.871331
+ThreadID: 13677
+se.sum_exec_runtime                          :         36578.764164
+ThreadID: 13678
+se.sum_exec_runtime                          :         32660.131172
+ThreadID: 13679
+se.sum_exec_runtime                          :         33825.393180
+ThreadID: 13680
+se.sum_exec_runtime                          :         37182.092785
+ThreadID: 13681
+se.sum_exec_runtime                          :         37324.943481
+ThreadID: 13682
+se.sum_exec_runtime                          :         35049.448316
+ThreadID: 13683
+se.sum_exec_runtime                          :         31902.966198
+ThreadID: 13684
+se.sum_exec_runtime                          :         37174.243702
+ThreadID: 13685
+se.sum_exec_runtime                          :         34787.048411
+ThreadID: 13686
+se.sum_exec_runtime                          :         34154.199496
+ThreadID: 13687
+se.sum_exec_runtime                          :         35068.627149
+ThreadID: 13688
+se.sum_exec_runtime                          :         34365.093989
+ThreadID: 13689
+se.sum_exec_runtime                          :         39817.628580
+ThreadID: 13690
+se.sum_exec_runtime                          :         35230.462158
+ThreadID: 13691
+se.sum_exec_runtime                          :         37612.508452
+ThreadID: 13692
+se.sum_exec_runtime                          :         37055.879921
+ThreadID: 13693
+se.sum_exec_runtime                          :         36738.571859
+ThreadID: 13694
+se.sum_exec_runtime                          :         32581.679717
+ThreadID: 13695
+se.sum_exec_runtime                          :         35308.261881
+ThreadID: 13696
+se.sum_exec_runtime                          :         37844.716233
+ThreadID: 13697
+se.sum_exec_runtime                          :         36528.641457
+ThreadID: 13698
+se.sum_exec_runtime                          :         33999.712375
+ThreadID: 13699
+se.sum_exec_runtime                          :         33708.813541
+ThreadID: 13700
+se.sum_exec_runtime                          :         34793.401180
+ThreadID: 13637
+se.sum_exec_runtime                          :         38293.386257
+ThreadID: 13638
+se.sum_exec_runtime                          :         36916.840265
+ThreadID: 13639
+se.sum_exec_runtime                          :         35457.768816
+ThreadID: 13640
+se.sum_exec_runtime                          :         38974.729205
+ThreadID: 13641
+se.sum_exec_runtime                          :         35139.810172
+ThreadID: 13642
+se.sum_exec_runtime                          :         37360.880456
+ThreadID: 13643
+se.sum_exec_runtime                          :         36404.817628
+ThreadID: 13644
+se.sum_exec_runtime                          :         37867.705509
+ThreadID: 13645
+se.sum_exec_runtime                          :         34904.574190
+ThreadID: 13646
+se.sum_exec_runtime                          :         40120.725962
+ThreadID: 13647
+se.sum_exec_runtime                          :         37517.369066
+ThreadID: 13648
+se.sum_exec_runtime                          :         37214.737054
+ThreadID: 13649
+se.sum_exec_runtime                          :         35344.022791
+ThreadID: 13650
+se.sum_exec_runtime                          :         36486.668315
+ThreadID: 13651
+se.sum_exec_runtime                          :         36770.473074
+ThreadID: 13652
+se.sum_exec_runtime                          :         33959.768252
+ThreadID: 13653
+se.sum_exec_runtime                          :         37140.142290
+ThreadID: 13654
+se.sum_exec_runtime                          :         36786.989521
+ThreadID: 13655
+se.sum_exec_runtime                          :         38229.560464
+ThreadID: 13656
+se.sum_exec_runtime                          :         35686.559058
+ThreadID: 13657
+se.sum_exec_runtime                          :         37522.874884
+ThreadID: 13658
+se.sum_exec_runtime                          :         36371.531617
+ThreadID: 13659
+se.sum_exec_runtime                          :         35826.702239
+ThreadID: 13660
+se.sum_exec_runtime                          :         36585.094113
+ThreadID: 13661
+se.sum_exec_runtime                          :         35221.531985
+ThreadID: 13662
+se.sum_exec_runtime                          :         36344.984386
+ThreadID: 13663
+se.sum_exec_runtime                          :         37091.369730
+ThreadID: 13664
+se.sum_exec_runtime                          :         37432.302570
+ThreadID: 13665
+se.sum_exec_runtime                          :         38939.016119
+ThreadID: 13666
+se.sum_exec_runtime                          :         36480.097511
+ThreadID: 13667
+se.sum_exec_runtime                          :         36630.599132
+ThreadID: 13668
+se.sum_exec_runtime                          :         35572.600418
+ThreadID: 13669
+se.sum_exec_runtime                          :         35697.758099
+ThreadID: 13670
+se.sum_exec_runtime                          :         38029.381528
+ThreadID: 13671
+se.sum_exec_runtime                          :         39197.173243
+ThreadID: 13672
+se.sum_exec_runtime                          :         37524.872027
+ThreadID: 13673
+se.sum_exec_runtime                          :         37606.999749
+ThreadID: 13674
+se.sum_exec_runtime                          :         35565.646006
+ThreadID: 13675
+se.sum_exec_runtime                          :         37296.359206
+ThreadID: 13676
+se.sum_exec_runtime                          :         35746.879617
+ThreadID: 13677
+se.sum_exec_runtime                          :         38382.309433
+ThreadID: 13678
+se.sum_exec_runtime                          :         34456.494148
+ThreadID: 13679
+se.sum_exec_runtime                          :         35681.837396
+ThreadID: 13680
+se.sum_exec_runtime                          :         39067.941677
+ThreadID: 13681
+se.sum_exec_runtime                          :         39150.265364
+ThreadID: 13682
+se.sum_exec_runtime                          :         36960.279766
+ThreadID: 13683
+se.sum_exec_runtime                          :         33794.589464
+ThreadID: 13684
+se.sum_exec_runtime                          :         39109.253356
+ThreadID: 13685
+se.sum_exec_runtime                          :         36609.788785
+ThreadID: 13686
+se.sum_exec_runtime                          :         36086.619582
+ThreadID: 13687
+se.sum_exec_runtime                          :         36676.520982
+ThreadID: 13688
+se.sum_exec_runtime                          :         36197.827580
+ThreadID: 13689
+se.sum_exec_runtime                          :         41640.407919
+ThreadID: 13690
+se.sum_exec_runtime                          :         37478.272583
+ThreadID: 13691
+se.sum_exec_runtime                          :         39368.239412
+ThreadID: 13692
+se.sum_exec_runtime                          :         38960.558288
+ThreadID: 13693
+se.sum_exec_runtime                          :         38697.550210
+ThreadID: 13694
+se.sum_exec_runtime                          :         34472.905368
+ThreadID: 13695
+se.sum_exec_runtime                          :         37199.080038
+ThreadID: 13696
+se.sum_exec_runtime                          :         39677.710310
+ThreadID: 13697
+se.sum_exec_runtime                          :         38594.838751
+ThreadID: 13698
+se.sum_exec_runtime                          :         36133.130015
+ThreadID: 13699
+se.sum_exec_runtime                          :         35740.727280
+ThreadID: 13700
+se.sum_exec_runtime                          :         37027.215207
+ThreadID: 13637
+se.sum_exec_runtime                          :         40263.769482
+ThreadID: 13638
+se.sum_exec_runtime                          :         39974.718040
+ThreadID: 13639
+se.sum_exec_runtime                          :         37396.359953
+ThreadID: 13640
+se.sum_exec_runtime                          :         40496.621749
+ThreadID: 13641
+se.sum_exec_runtime                          :         36950.718028
+ThreadID: 13642
+se.sum_exec_runtime                          :         39580.010667
+ThreadID: 13643
+se.sum_exec_runtime                          :         38340.275222
+ThreadID: 13644
+se.sum_exec_runtime                          :         39680.926930
+ThreadID: 13645
+se.sum_exec_runtime                          :         37330.969093
+ThreadID: 13646
+se.sum_exec_runtime                          :         42092.098460
+ThreadID: 13647
+se.sum_exec_runtime                          :         39430.948425
+ThreadID: 13648
+se.sum_exec_runtime                          :         39154.917011
+ThreadID: 13649
+se.sum_exec_runtime                          :         37197.286026
+ThreadID: 13650
+se.sum_exec_runtime                          :         38496.010131
+ThreadID: 13651
+se.sum_exec_runtime                          :         38949.576923
+ThreadID: 13652
+se.sum_exec_runtime                          :         35866.904152
+ThreadID: 13653
+se.sum_exec_runtime                          :         39047.711357
+ThreadID: 13654
+se.sum_exec_runtime                          :         38767.695561
+ThreadID: 13655
+se.sum_exec_runtime                          :         40135.858318
+ThreadID: 13656
+se.sum_exec_runtime                          :         37658.074484
+ThreadID: 13657
+se.sum_exec_runtime                          :         39821.817984
+ThreadID: 13658
+se.sum_exec_runtime                          :         38294.471436
+ThreadID: 13659
+se.sum_exec_runtime                          :         37357.884222
+ThreadID: 13660
+se.sum_exec_runtime                          :         38482.746774
+ThreadID: 13661
+se.sum_exec_runtime                          :         37084.217542
+ThreadID: 13662
+se.sum_exec_runtime                          :         38211.329780
+ThreadID: 13663
+se.sum_exec_runtime                          :         39001.283583
+ThreadID: 13664
+se.sum_exec_runtime                          :         39437.797863
+ThreadID: 13665
+se.sum_exec_runtime                          :         40992.502634
+ThreadID: 13666
+se.sum_exec_runtime                          :         38382.268232
+ThreadID: 13667
+se.sum_exec_runtime                          :         38690.018660
+ThreadID: 13668
+se.sum_exec_runtime                          :         37240.806009
+ThreadID: 13669
+se.sum_exec_runtime                          :         37768.374407
+ThreadID: 13670
+se.sum_exec_runtime                          :         39757.147329
+ThreadID: 13671
+se.sum_exec_runtime                          :         41150.563994
+ThreadID: 13672
+se.sum_exec_runtime                          :         39328.010274
+ThreadID: 13673
+se.sum_exec_runtime                          :         39875.414674
+ThreadID: 13674
+se.sum_exec_runtime                          :         37055.119362
+ThreadID: 13675
+se.sum_exec_runtime                          :         39085.036911
+ThreadID: 13676
+se.sum_exec_runtime                          :         37958.308144
+ThreadID: 13677
+se.sum_exec_runtime                          :         40379.018640
+ThreadID: 13678
+se.sum_exec_runtime                          :         36097.100172
+ThreadID: 13679
+se.sum_exec_runtime                          :         37408.579533
+ThreadID: 13680
+se.sum_exec_runtime                          :         40819.740664
+ThreadID: 13681
+se.sum_exec_runtime                          :         41097.926640
+ThreadID: 13682
+se.sum_exec_runtime                          :         38487.397910
+ThreadID: 13683
+se.sum_exec_runtime                          :         35479.777613
+ThreadID: 13684
+se.sum_exec_runtime                          :         40803.226564
+ThreadID: 13685
+se.sum_exec_runtime                          :         38058.099468
+ThreadID: 13686
+se.sum_exec_runtime                          :         37645.075256
+ThreadID: 13687
+se.sum_exec_runtime                          :         38325.907573
+ThreadID: 13688
+se.sum_exec_runtime                          :         37607.196482
+ThreadID: 13689
+se.sum_exec_runtime                          :         43088.184847
+ThreadID: 13690
+se.sum_exec_runtime                          :         39093.732005
+ThreadID: 13691
+se.sum_exec_runtime                          :         40983.705260
+ThreadID: 13692
+se.sum_exec_runtime                          :         40537.357776
+ThreadID: 13693
+se.sum_exec_runtime                          :         40294.916795
+ThreadID: 13694
+se.sum_exec_runtime                          :         36204.798383
+ThreadID: 13695
+se.sum_exec_runtime                          :         38812.777697
+ThreadID: 13696
+se.sum_exec_runtime                          :         41262.821714
+ThreadID: 13697
+se.sum_exec_runtime                          :         40038.349798
+ThreadID: 13698
+se.sum_exec_runtime                          :         37579.113249
+ThreadID: 13699
+se.sum_exec_runtime                          :         37287.538816
+ThreadID: 13700
+se.sum_exec_runtime                          :         38669.350431
+ThreadID: 13637
+se.sum_exec_runtime                          :         41697.024694
+ThreadID: 13638
+se.sum_exec_runtime                          :         42285.116597
+ThreadID: 13639
+se.sum_exec_runtime                          :         38862.076665
+ThreadID: 13640
+se.sum_exec_runtime                          :         41963.577655
+ThreadID: 13641
+se.sum_exec_runtime                          :         38446.165973
+ThreadID: 13642
+se.sum_exec_runtime                          :         41093.506521
+ThreadID: 13643
+se.sum_exec_runtime                          :         39803.871387
+ThreadID: 13644
+se.sum_exec_runtime                          :         40959.779069
+ThreadID: 13645
+se.sum_exec_runtime                          :         38841.140156
+ThreadID: 13646
+se.sum_exec_runtime                          :         44352.534216
+ThreadID: 13647
+se.sum_exec_runtime                          :         40872.054779
+ThreadID: 13648
+se.sum_exec_runtime                          :         40664.812023
+ThreadID: 13649
+se.sum_exec_runtime                          :         38527.738375
+ThreadID: 13650
+se.sum_exec_runtime                          :         39986.970791
+ThreadID: 13651
+se.sum_exec_runtime                          :         40273.200739
+ThreadID: 13652
+se.sum_exec_runtime                          :         37317.135811
+ThreadID: 13653
+se.sum_exec_runtime                          :         40441.645143
+ThreadID: 13654
+se.sum_exec_runtime                          :         40128.810324
+ThreadID: 13655
+se.sum_exec_runtime                          :         42637.455280
+ThreadID: 13656
+se.sum_exec_runtime                          :         39032.022468
+ThreadID: 13657
+se.sum_exec_runtime                          :         41381.456706
+ThreadID: 13658
+se.sum_exec_runtime                          :         39797.963723
+ThreadID: 13659
+se.sum_exec_runtime                          :         38790.760143
+ThreadID: 13660
+se.sum_exec_runtime                          :         39857.442867
+ThreadID: 13661
+se.sum_exec_runtime                          :         38645.811342
+ThreadID: 13662
+se.sum_exec_runtime                          :         39744.093976
+ThreadID: 13663
+se.sum_exec_runtime                          :         40533.456700
+ThreadID: 13664
+se.sum_exec_runtime                          :         41033.624945
+ThreadID: 13665
+se.sum_exec_runtime                          :         42587.211730
+ThreadID: 13666
+se.sum_exec_runtime                          :         40026.186968
+ThreadID: 13667
+se.sum_exec_runtime                          :         40403.016187
+ThreadID: 13668
+se.sum_exec_runtime                          :         39094.334342
+ThreadID: 13669
+se.sum_exec_runtime                          :         39296.702648
+ThreadID: 13670
+se.sum_exec_runtime                          :         41427.559631
+ThreadID: 13671
+se.sum_exec_runtime                          :         42681.379397
+ThreadID: 13672
+se.sum_exec_runtime                          :         41285.825314
+ThreadID: 13673
+se.sum_exec_runtime                          :         41732.087238
+ThreadID: 13674
+se.sum_exec_runtime                          :         38844.713063
+ThreadID: 13675
+se.sum_exec_runtime                          :         40790.848182
+ThreadID: 13676
+se.sum_exec_runtime                          :         39600.749912
+ThreadID: 13677
+se.sum_exec_runtime                          :         42106.822050
+ThreadID: 13678
+se.sum_exec_runtime                          :         37800.624616
+ThreadID: 13679
+se.sum_exec_runtime                          :         39160.242630
+ThreadID: 13680
+se.sum_exec_runtime                          :         42387.596034
+ThreadID: 13681
+se.sum_exec_runtime                          :         42782.072220
+ThreadID: 13682
+se.sum_exec_runtime                          :         40164.261533
+ThreadID: 13683
+se.sum_exec_runtime                          :         37249.179788
+ThreadID: 13684
+se.sum_exec_runtime                          :         42401.115364
+ThreadID: 13685
+se.sum_exec_runtime                          :         39797.989340
+ThreadID: 13686
+se.sum_exec_runtime                          :         39199.365847
+ThreadID: 13687
+se.sum_exec_runtime                          :         40143.743343
+ThreadID: 13688
+se.sum_exec_runtime                          :         39493.624011
+ThreadID: 13689
+se.sum_exec_runtime                          :         44916.121828
+ThreadID: 13690
+se.sum_exec_runtime                          :         40955.433621
+ThreadID: 13691
+se.sum_exec_runtime                          :         42810.859293
+ThreadID: 13692
+se.sum_exec_runtime                          :         42627.803161
+ThreadID: 13693
+se.sum_exec_runtime                          :         42177.950268
+ThreadID: 13694
+se.sum_exec_runtime                          :         38100.729319
+ThreadID: 13695
+se.sum_exec_runtime                          :         40569.640672
+ThreadID: 13696
+se.sum_exec_runtime                          :         43141.537039
+ThreadID: 13697
+se.sum_exec_runtime                          :         41877.492541
+ThreadID: 13698
+se.sum_exec_runtime                          :         39476.656955
+ThreadID: 13699
+se.sum_exec_runtime                          :         38916.818122
+ThreadID: 13700
+se.sum_exec_runtime                          :         40350.492166
+ThreadID: 13637
+se.sum_exec_runtime                          :         43664.223930
+ThreadID: 13638
+se.sum_exec_runtime                          :         44227.996446
+ThreadID: 13639
+se.sum_exec_runtime                          :         40954.802012
+ThreadID: 13640
+se.sum_exec_runtime                          :         43803.188079
+ThreadID: 13641
+se.sum_exec_runtime                          :         40487.345166
+ThreadID: 13642
+se.sum_exec_runtime                          :         43271.427948
+ThreadID: 13643
+se.sum_exec_runtime                          :         41759.403462
+ThreadID: 13644
+se.sum_exec_runtime                          :         42756.109163
+ThreadID: 13645
+se.sum_exec_runtime                          :         40550.599439
+ThreadID: 13646
+se.sum_exec_runtime                          :         47583.428824
+ThreadID: 13647
+se.sum_exec_runtime                          :         42778.723367
+ThreadID: 13648
+se.sum_exec_runtime                          :         42733.099516
+ThreadID: 13649
+se.sum_exec_runtime                          :         40437.635213
+ThreadID: 13650
+se.sum_exec_runtime                          :         42056.347891
+ThreadID: 13651
+se.sum_exec_runtime                          :         42190.887797
+ThreadID: 13652
+se.sum_exec_runtime                          :         39435.039707
+ThreadID: 13653
+se.sum_exec_runtime                          :         42320.546744
+ThreadID: 13654
+se.sum_exec_runtime                          :         41921.837603
+ThreadID: 13655
+se.sum_exec_runtime                          :         45178.609300
+ThreadID: 13656
+se.sum_exec_runtime                          :         40998.397669
+ThreadID: 13657
+se.sum_exec_runtime                          :         43471.825111
+ThreadID: 13658
+se.sum_exec_runtime                          :         41821.351678
+ThreadID: 13659
+se.sum_exec_runtime                          :         40828.914502
+ThreadID: 13660
+se.sum_exec_runtime                          :         41594.668539
+ThreadID: 13661
+se.sum_exec_runtime                          :         41185.643032
+ThreadID: 13662
+se.sum_exec_runtime                          :         41771.278779
+ThreadID: 13663
+se.sum_exec_runtime                          :         42322.364921
+ThreadID: 13664
+se.sum_exec_runtime                          :         43196.342510
+ThreadID: 13665
+se.sum_exec_runtime                          :         44587.006831
+ThreadID: 13666
+se.sum_exec_runtime                          :         42097.791588
+ThreadID: 13667
+se.sum_exec_runtime                          :         42511.037576
+ThreadID: 13668
+se.sum_exec_runtime                          :         41169.908251
+ThreadID: 13669
+se.sum_exec_runtime                          :         41115.113933
+ThreadID: 13670
+se.sum_exec_runtime                          :         43485.496661
+ThreadID: 13671
+se.sum_exec_runtime                          :         44509.506240
+ThreadID: 13672
+se.sum_exec_runtime                          :         44403.055491
+ThreadID: 13673
+se.sum_exec_runtime                          :         43539.186917
+ThreadID: 13674
+se.sum_exec_runtime                          :         40932.046001
+ThreadID: 13675
+se.sum_exec_runtime                          :         42802.800077
+ThreadID: 13676
+se.sum_exec_runtime                          :         42252.283160
+ThreadID: 13677
+se.sum_exec_runtime                          :         43907.434153
+ThreadID: 13678
+se.sum_exec_runtime                          :         39892.647487
+ThreadID: 13679
+se.sum_exec_runtime                          :         41285.106215
+ThreadID: 13680
+se.sum_exec_runtime                          :         44550.371347
+ThreadID: 13681
+se.sum_exec_runtime                          :         44899.580708
+ThreadID: 13682
+se.sum_exec_runtime                          :         42078.078801
+ThreadID: 13683
+se.sum_exec_runtime                          :         39404.545623
+ThreadID: 13684
+se.sum_exec_runtime                          :         44619.468459
+ThreadID: 13685
+se.sum_exec_runtime                          :         41971.376445
+ThreadID: 13686
+se.sum_exec_runtime                          :         41977.767729
+ThreadID: 13687
+se.sum_exec_runtime                          :         41817.804249
+ThreadID: 13688
+se.sum_exec_runtime                          :         41557.959987
+ThreadID: 13689
+se.sum_exec_runtime                          :         47054.936914
+ThreadID: 13690
+se.sum_exec_runtime                          :         43492.768020
+ThreadID: 13691
+se.sum_exec_runtime                          :         45473.135833
+ThreadID: 13692
+se.sum_exec_runtime                          :         44912.366173
+ThreadID: 13693
+se.sum_exec_runtime                          :         45133.251173
+ThreadID: 13694
+se.sum_exec_runtime                          :         39686.020662
+ThreadID: 13695
+se.sum_exec_runtime                          :         42624.272974
+ThreadID: 13696
+se.sum_exec_runtime                          :         45026.472120
+ThreadID: 13697
+se.sum_exec_runtime                          :         44582.457903
+ThreadID: 13698
+se.sum_exec_runtime                          :         41493.087582
+ThreadID: 13699
+se.sum_exec_runtime                          :         40847.995637
+ThreadID: 13700
+se.sum_exec_runtime                          :         42363.282012
+ThreadID: 13637
+se.sum_exec_runtime                          :         45370.381795
+ThreadID: 13638
+se.sum_exec_runtime                          :         45688.416396
+ThreadID: 13639
+se.sum_exec_runtime                          :         42733.652500
+ThreadID: 13640
+se.sum_exec_runtime                          :         45278.609049
+ThreadID: 13641
+se.sum_exec_runtime                          :         42260.619895
+ThreadID: 13642
+se.sum_exec_runtime                          :         45465.167135
+ThreadID: 13643
+se.sum_exec_runtime                          :         43524.395170
+ThreadID: 13644
+se.sum_exec_runtime                          :         44290.727873
+ThreadID: 13645
+se.sum_exec_runtime                          :         42279.941540
+ThreadID: 13646
+se.sum_exec_runtime                          :         49100.086321
+ThreadID: 13647
+se.sum_exec_runtime                          :         44517.814411
+ThreadID: 13648
+se.sum_exec_runtime                          :         44402.257095
+ThreadID: 13649
+se.sum_exec_runtime                          :         42094.218938
+ThreadID: 13650
+se.sum_exec_runtime                          :         43666.295103
+ThreadID: 13651
+se.sum_exec_runtime                          :         43811.089401
+ThreadID: 13652
+se.sum_exec_runtime                          :         41011.324069
+ThreadID: 13653
+se.sum_exec_runtime                          :         44049.892650
+ThreadID: 13654
+se.sum_exec_runtime                          :         43522.218558
+ThreadID: 13655
+se.sum_exec_runtime                          :         46549.653188
+ThreadID: 13656
+se.sum_exec_runtime                          :         42515.464016
+ThreadID: 13657
+se.sum_exec_runtime                          :         44939.074180
+ThreadID: 13658
+se.sum_exec_runtime                          :         43306.304125
+ThreadID: 13659
+se.sum_exec_runtime                          :         41965.074123
+ThreadID: 13660
+se.sum_exec_runtime                          :         42823.856677
+ThreadID: 13661
+se.sum_exec_runtime                          :         42553.660627
+ThreadID: 13662
+se.sum_exec_runtime                          :         43127.550269
+ThreadID: 13663
+se.sum_exec_runtime                          :         43548.773011
+ThreadID: 13664
+se.sum_exec_runtime                          :         44853.017184
+ThreadID: 13665
+se.sum_exec_runtime                          :         45940.167886
+ThreadID: 13666
+se.sum_exec_runtime                          :         43301.627738
+ThreadID: 13667
+se.sum_exec_runtime                          :         43769.476508
+ThreadID: 13668
+se.sum_exec_runtime                          :         42481.565173
+ThreadID: 13669
+se.sum_exec_runtime                          :         42234.510919
+ThreadID: 13670
+se.sum_exec_runtime                          :         44732.281991
+ThreadID: 13671
+se.sum_exec_runtime                          :         45627.845325
+ThreadID: 13672
+se.sum_exec_runtime                          :         45568.039706
+ThreadID: 13673
+se.sum_exec_runtime                          :         44631.763882
+ThreadID: 13674
+se.sum_exec_runtime                          :         42119.382396
+ThreadID: 13675
+se.sum_exec_runtime                          :         44014.472996
+ThreadID: 13676
+se.sum_exec_runtime                          :         43585.699407
+ThreadID: 13677
+se.sum_exec_runtime                          :         45239.099830
+ThreadID: 13678
+se.sum_exec_runtime                          :         41156.292449
+ThreadID: 13679
+se.sum_exec_runtime                          :         42349.446970
+ThreadID: 13680
+se.sum_exec_runtime                          :         45630.702834
+ThreadID: 13681
+se.sum_exec_runtime                          :         45882.339203
+ThreadID: 13682
+se.sum_exec_runtime                          :         42807.678661
+ThreadID: 13683
+se.sum_exec_runtime                          :         40465.687048
+ThreadID: 13684
+se.sum_exec_runtime                          :         45658.830330
+ThreadID: 13685
+se.sum_exec_runtime                          :         42992.205884
+ThreadID: 13686
+se.sum_exec_runtime                          :         43173.230393
+ThreadID: 13687
+se.sum_exec_runtime                          :         42729.565235
+ThreadID: 13688
+se.sum_exec_runtime                          :         42546.556829
+ThreadID: 13689
+se.sum_exec_runtime                          :         48052.246221
+ThreadID: 13690
+se.sum_exec_runtime                          :         44099.419383
+ThreadID: 13691
+se.sum_exec_runtime                          :         46469.925990
+ThreadID: 13692
+se.sum_exec_runtime                          :         45945.212299
+ThreadID: 13693
+se.sum_exec_runtime                          :         46425.124209
+ThreadID: 13694
+se.sum_exec_runtime                          :         40598.760211
+ThreadID: 13695
+se.sum_exec_runtime                          :         43603.490368
+ThreadID: 13696
+se.sum_exec_runtime                          :         45905.185165
+ThreadID: 13697
+se.sum_exec_runtime                          :         45601.466494
+ThreadID: 13698
+se.sum_exec_runtime                          :         42488.322186
+ThreadID: 13699
+se.sum_exec_runtime                          :         41832.881522
+ThreadID: 13700
+se.sum_exec_runtime                          :         43326.543788
+ThreadID: 13637
+se.sum_exec_runtime                          :         46351.025762
+ThreadID: 13638
+se.sum_exec_runtime                          :         46617.434319
+ThreadID: 13639
+se.sum_exec_runtime                          :         43700.558302
+ThreadID: 13640
+se.sum_exec_runtime                          :         46082.525336
+ThreadID: 13641
+se.sum_exec_runtime                          :         43194.181720
+ThreadID: 13642
+se.sum_exec_runtime                          :         46398.464559
+ThreadID: 13643
+se.sum_exec_runtime                          :         44498.087347
+ThreadID: 13644
+se.sum_exec_runtime                          :         45289.165783
+ThreadID: 13645
+se.sum_exec_runtime                          :         43301.450816
+ThreadID: 13646
+se.sum_exec_runtime                          :         50111.065415
+ThreadID: 13647
+se.sum_exec_runtime                          :         45800.574643
+ThreadID: 13648
+se.sum_exec_runtime                          :         45424.690814
+ThreadID: 13649
+se.sum_exec_runtime                          :         43127.007832
+ThreadID: 13650
+se.sum_exec_runtime                          :         44582.096457
+ThreadID: 13651
+se.sum_exec_runtime                          :         44768.583172
+ThreadID: 13652
+se.sum_exec_runtime                          :         42039.233462
+ThreadID: 13653
+se.sum_exec_runtime                          :         45180.623136
+ThreadID: 13654
+se.sum_exec_runtime                          :         44627.623359
+ThreadID: 13655
+se.sum_exec_runtime                          :         48490.969157
+ThreadID: 13656
+se.sum_exec_runtime                          :         43477.633932
+ThreadID: 13657
+se.sum_exec_runtime                          :         46102.216532
+ThreadID: 13658
+se.sum_exec_runtime                          :         44492.847131
+ThreadID: 13659
+se.sum_exec_runtime                          :         42355.232613
+ThreadID: 13660
+se.sum_exec_runtime                          :         44128.884404
+ThreadID: 13661
+se.sum_exec_runtime                          :         44028.580318
+ThreadID: 13662
+se.sum_exec_runtime                          :         44403.667096
+ThreadID: 13663
+se.sum_exec_runtime                          :         44859.154213
+ThreadID: 13664
+se.sum_exec_runtime                          :         46191.062084
+ThreadID: 13665
+se.sum_exec_runtime                          :         47219.263812
+ThreadID: 13666
+se.sum_exec_runtime                          :         44650.977194
+ThreadID: 13667
+se.sum_exec_runtime                          :         45251.422387
+ThreadID: 13668
+se.sum_exec_runtime                          :         43606.624005
+ThreadID: 13669
+se.sum_exec_runtime                          :         43561.758265
+ThreadID: 13670
+se.sum_exec_runtime                          :         46574.156885
+ThreadID: 13671
+se.sum_exec_runtime                          :         47078.812091
+ThreadID: 13672
+se.sum_exec_runtime                          :         47101.444544
+ThreadID: 13673
+se.sum_exec_runtime                          :         46075.228590
+ThreadID: 13674
+se.sum_exec_runtime                          :         43573.380395
+ThreadID: 13675
+se.sum_exec_runtime                          :         45309.232308
+ThreadID: 13676
+se.sum_exec_runtime                          :         44914.366653
+ThreadID: 13677
+se.sum_exec_runtime                          :         46632.655320
+ThreadID: 13678
+se.sum_exec_runtime                          :         43283.225578
+ThreadID: 13679
+se.sum_exec_runtime                          :         43797.431465
+ThreadID: 13680
+se.sum_exec_runtime                          :         47698.393607
+ThreadID: 13681
+se.sum_exec_runtime                          :         47241.248682
+ThreadID: 13682
+se.sum_exec_runtime                          :         43428.220189
+ThreadID: 13683
+se.sum_exec_runtime                          :         42025.938903
+ThreadID: 13684
+se.sum_exec_runtime                          :         47293.084705
+ThreadID: 13685
+se.sum_exec_runtime                          :         44440.631032
+ThreadID: 13686
+se.sum_exec_runtime                          :         44711.314470
+ThreadID: 13687
+se.sum_exec_runtime                          :         44470.435653
+ThreadID: 13688
+se.sum_exec_runtime                          :         44092.786188
+ThreadID: 13689
+se.sum_exec_runtime                          :         49488.643371
+ThreadID: 13690
+se.sum_exec_runtime                          :         44755.098668
+ThreadID: 13691
+se.sum_exec_runtime                          :         47834.490249
+ThreadID: 13692
+se.sum_exec_runtime                          :         47472.932041
+ThreadID: 13693
+se.sum_exec_runtime                          :         48070.808864
+ThreadID: 13694
+se.sum_exec_runtime                          :         43078.842559
+ThreadID: 13695
+se.sum_exec_runtime                          :         45346.236227
+ThreadID: 13696
+se.sum_exec_runtime                          :         47483.292049
+ThreadID: 13697
+se.sum_exec_runtime                          :         47576.457190
+ThreadID: 13698
+se.sum_exec_runtime                          :         43925.425132
+ThreadID: 13699
+se.sum_exec_runtime                          :         43579.764792
+ThreadID: 13700
+se.sum_exec_runtime                          :         44877.113606
+ThreadID: 13637
+se.sum_exec_runtime                          :         47881.020241
+ThreadID: 13638
+se.sum_exec_runtime                          :         47958.530902
+ThreadID: 13639
+se.sum_exec_runtime                          :         45114.633735
+ThreadID: 13640
+se.sum_exec_runtime                          :         47562.328218
+ThreadID: 13641
+se.sum_exec_runtime                          :         44678.069032
+ThreadID: 13642
+se.sum_exec_runtime                          :         47691.600610
+ThreadID: 13643
+se.sum_exec_runtime                          :         45640.760656
+ThreadID: 13644
+se.sum_exec_runtime                          :         47045.899674
+ThreadID: 13645
+se.sum_exec_runtime                          :         45041.175977
+ThreadID: 13646
+se.sum_exec_runtime                          :         52258.338288
+ThreadID: 13647
+se.sum_exec_runtime                          :         47213.730258
+ThreadID: 13648
+se.sum_exec_runtime                          :         46894.112690
+ThreadID: 13649
+se.sum_exec_runtime                          :         44742.516667
+ThreadID: 13650
+se.sum_exec_runtime                          :         46124.571970
+ThreadID: 13651
+se.sum_exec_runtime                          :         46279.616454
+ThreadID: 13652
+se.sum_exec_runtime                          :         43192.485660
+ThreadID: 13653
+se.sum_exec_runtime                          :         46797.891351
+ThreadID: 13654
+se.sum_exec_runtime                          :         45911.778095
+ThreadID: 13655
+se.sum_exec_runtime                          :         50123.435670
+ThreadID: 13656
+se.sum_exec_runtime                          :         44636.596384
+ThreadID: 13657
+se.sum_exec_runtime                          :         47605.580054
+ThreadID: 13658
+se.sum_exec_runtime                          :         46023.111185
+ThreadID: 13659
+se.sum_exec_runtime                          :         43731.052931
+ThreadID: 13660
+se.sum_exec_runtime                          :         45664.227433
+ThreadID: 13661
+se.sum_exec_runtime                          :         45570.459946
+ThreadID: 13662
+se.sum_exec_runtime                          :         45798.920548
+ThreadID: 13663
+se.sum_exec_runtime                          :         46296.900591
+ThreadID: 13664
+se.sum_exec_runtime                          :         47607.662900
+ThreadID: 13665
+se.sum_exec_runtime                          :         48778.505288
+ThreadID: 13666
+se.sum_exec_runtime                          :         46399.179532
+ThreadID: 13667
+se.sum_exec_runtime                          :         46731.188564
+ThreadID: 13668
+se.sum_exec_runtime                          :         44900.006393
+ThreadID: 13669
+se.sum_exec_runtime                          :         45068.561283
+ThreadID: 13670
+se.sum_exec_runtime                          :         48077.312661
+ThreadID: 13671
+se.sum_exec_runtime                          :         48566.311619
+ThreadID: 13672
+se.sum_exec_runtime                          :         48984.475540
+ThreadID: 13673
+se.sum_exec_runtime                          :         47422.551182
+ThreadID: 13674
+se.sum_exec_runtime                          :         44807.868076
+ThreadID: 13675
+se.sum_exec_runtime                          :         46684.906662
+ThreadID: 13676
+se.sum_exec_runtime                          :         46084.858264
+ThreadID: 13677
+se.sum_exec_runtime                          :         47743.376502
+ThreadID: 13678
+se.sum_exec_runtime                          :         45675.435424
+ThreadID: 13679
+se.sum_exec_runtime                          :         45989.224959
+ThreadID: 13680
+se.sum_exec_runtime                          :         49442.583366
+ThreadID: 13681
+se.sum_exec_runtime                          :         48575.725210
+ThreadID: 13682
+se.sum_exec_runtime                          :         44935.001286
+ThreadID: 13683
+se.sum_exec_runtime                          :         43474.040517
+ThreadID: 13684
+se.sum_exec_runtime                          :         48678.309820
+ThreadID: 13685
+se.sum_exec_runtime                          :         45879.511369
+ThreadID: 13686
+se.sum_exec_runtime                          :         46511.512132
+ThreadID: 13687
+se.sum_exec_runtime                          :         45841.782533
+ThreadID: 13688
+se.sum_exec_runtime                          :         45788.997987
+ThreadID: 13689
+se.sum_exec_runtime                          :         51189.244682
+ThreadID: 13690
+se.sum_exec_runtime                          :         46406.172125
+ThreadID: 13691
+se.sum_exec_runtime                          :         49548.141079
+ThreadID: 13692
+se.sum_exec_runtime                          :         49188.526930
+ThreadID: 13693
+se.sum_exec_runtime                          :         49811.631095
+ThreadID: 13694
+se.sum_exec_runtime                          :         44812.211205
+ThreadID: 13695
+se.sum_exec_runtime                          :         47057.865906
+ThreadID: 13696
+se.sum_exec_runtime                          :         48944.518456
+ThreadID: 13697
+se.sum_exec_runtime                          :         49359.779410
+ThreadID: 13698
+se.sum_exec_runtime                          :         45705.406039
+ThreadID: 13699
+se.sum_exec_runtime                          :         45541.265958
+ThreadID: 13700
+se.sum_exec_runtime                          :         46814.843000
+ThreadID: 13637
+se.sum_exec_runtime                          :         49880.852474
+ThreadID: 13638
+se.sum_exec_runtime                          :         49723.860368
+ThreadID: 13639
+se.sum_exec_runtime                          :         46715.306983
+ThreadID: 13640
+se.sum_exec_runtime                          :         49335.661300
+ThreadID: 13641
+se.sum_exec_runtime                          :         46165.496582
+ThreadID: 13642
+se.sum_exec_runtime                          :         49469.315665
+ThreadID: 13643
+se.sum_exec_runtime                          :         47289.915958
+ThreadID: 13644
+se.sum_exec_runtime                          :         48597.841476
+ThreadID: 13645
+se.sum_exec_runtime                          :         46640.815689
+ThreadID: 13646
+se.sum_exec_runtime                          :         55462.781831
+ThreadID: 13647
+se.sum_exec_runtime                          :         50743.729034
+ThreadID: 13648
+se.sum_exec_runtime                          :         48630.783494
+ThreadID: 13649
+se.sum_exec_runtime                          :         46329.975077
+ThreadID: 13650
+se.sum_exec_runtime                          :         47744.442102
+ThreadID: 13651
+se.sum_exec_runtime                          :         47750.742390
+ThreadID: 13652
+se.sum_exec_runtime                          :         44556.829904
+ThreadID: 13653
+se.sum_exec_runtime                          :         48356.610535
+ThreadID: 13654
+se.sum_exec_runtime                          :         47226.125895
+ThreadID: 13655
+se.sum_exec_runtime                          :         51544.003675
+ThreadID: 13656
+se.sum_exec_runtime                          :         46087.568311
+ThreadID: 13657
+se.sum_exec_runtime                          :         49034.565464
+ThreadID: 13658
+se.sum_exec_runtime                          :         47511.523904
+ThreadID: 13659
+se.sum_exec_runtime                          :         45034.499851
+ThreadID: 13660
+se.sum_exec_runtime                          :         47223.931716
+ThreadID: 13661
+se.sum_exec_runtime                          :         46976.125708
+ThreadID: 13662
+se.sum_exec_runtime                          :         47313.645447
+ThreadID: 13663
+se.sum_exec_runtime                          :         48169.191008
+ThreadID: 13664
+se.sum_exec_runtime                          :         49055.717265
+ThreadID: 13665
+se.sum_exec_runtime                          :         50257.969669
+ThreadID: 13666
+se.sum_exec_runtime                          :         47748.604705
+ThreadID: 13667
+se.sum_exec_runtime                          :         48184.595496
+ThreadID: 13668
+se.sum_exec_runtime                          :         46111.765886
+ThreadID: 13669
+se.sum_exec_runtime                          :         46505.342279
+ThreadID: 13670
+se.sum_exec_runtime                          :         49475.448432
+ThreadID: 13671
+se.sum_exec_runtime                          :         50705.341702
+ThreadID: 13672
+se.sum_exec_runtime                          :         50160.864018
+ThreadID: 13673
+se.sum_exec_runtime                          :         48766.272938
+ThreadID: 13674
+se.sum_exec_runtime                          :         45836.067281
+ThreadID: 13675
+se.sum_exec_runtime                          :         48049.510329
+ThreadID: 13676
+se.sum_exec_runtime                          :         48737.933993
+ThreadID: 13677
+se.sum_exec_runtime                          :         48886.935318
+ThreadID: 13678
+se.sum_exec_runtime                          :         46893.593163
+ThreadID: 13679
+se.sum_exec_runtime                          :         47345.254136
+ThreadID: 13680
+se.sum_exec_runtime                          :         50502.207245
+ThreadID: 13681
+se.sum_exec_runtime                          :         49870.530876
+ThreadID: 13682
+se.sum_exec_runtime                          :         45910.003923
+ThreadID: 13683
+se.sum_exec_runtime                          :         44570.375679
+ThreadID: 13684
+se.sum_exec_runtime                          :         49721.944886
+ThreadID: 13685
+se.sum_exec_runtime                          :         47102.591306
+ThreadID: 13686
+se.sum_exec_runtime                          :         47665.086603
+ThreadID: 13687
+se.sum_exec_runtime                          :         46785.506811
+ThreadID: 13688
+se.sum_exec_runtime                          :         47049.381955
+ThreadID: 13689
+se.sum_exec_runtime                          :         52162.423848
+ThreadID: 13690
+se.sum_exec_runtime                          :         47463.696687
+ThreadID: 13691
+se.sum_exec_runtime                          :         50701.247868
+ThreadID: 13692
+se.sum_exec_runtime                          :         50238.144753
+ThreadID: 13693
+se.sum_exec_runtime                          :         50912.887612
+ThreadID: 13694
+se.sum_exec_runtime                          :         45669.408523
+ThreadID: 13695
+se.sum_exec_runtime                          :         47925.840537
+ThreadID: 13696
+se.sum_exec_runtime                          :         49808.125853
+ThreadID: 13697
+se.sum_exec_runtime                          :         50276.081327
+ThreadID: 13698
+se.sum_exec_runtime                          :         46725.895566
+ThreadID: 13699
+se.sum_exec_runtime                          :         46562.471992
+ThreadID: 13700
+se.sum_exec_runtime                          :         47611.544314
+ThreadID: 13637
+se.sum_exec_runtime                          :         50928.693421
+ThreadID: 13638
+se.sum_exec_runtime                          :         50556.271855
+ThreadID: 13639
+se.sum_exec_runtime                          :         47709.697372
+ThreadID: 13640
+se.sum_exec_runtime                          :         50366.851115
+ThreadID: 13641
+se.sum_exec_runtime                          :         47144.862738
+ThreadID: 13642
+se.sum_exec_runtime                          :         50655.853414
+ThreadID: 13643
+se.sum_exec_runtime                          :         48327.650323
+ThreadID: 13644
+se.sum_exec_runtime                          :         49479.244117
+ThreadID: 13645
+se.sum_exec_runtime                          :         47489.156157
+ThreadID: 13646
+se.sum_exec_runtime                          :         56518.677171
+ThreadID: 13647
+se.sum_exec_runtime                          :         52663.953646
+ThreadID: 13648
+se.sum_exec_runtime                          :         49586.271588
+ThreadID: 13649
+se.sum_exec_runtime                          :         47208.729949
+ThreadID: 13650
+se.sum_exec_runtime                          :         48915.116602
+ThreadID: 13651
+se.sum_exec_runtime                          :         49658.620477
+ThreadID: 13652
+se.sum_exec_runtime                          :         45581.348876
+ThreadID: 13653
+se.sum_exec_runtime                          :         49752.083619
+ThreadID: 13654
+se.sum_exec_runtime                          :         48239.314791
+ThreadID: 13655
+se.sum_exec_runtime                          :         52827.923209
+ThreadID: 13656
+se.sum_exec_runtime                          :         47297.601678
+ThreadID: 13657
+se.sum_exec_runtime                          :         50472.830595
+ThreadID: 13658
+se.sum_exec_runtime                          :         48660.113071
+ThreadID: 13659
+se.sum_exec_runtime                          :         46504.353914
+ThreadID: 13660
+se.sum_exec_runtime                          :         48669.496126
+ThreadID: 13661
+se.sum_exec_runtime                          :         47974.771809
+ThreadID: 13662
+se.sum_exec_runtime                          :         48624.267243
+ThreadID: 13663
+se.sum_exec_runtime                          :         50423.442851
+ThreadID: 13664
+se.sum_exec_runtime                          :         50357.415103
+ThreadID: 13665
+se.sum_exec_runtime                          :         51843.559059
+ThreadID: 13666
+se.sum_exec_runtime                          :         49111.177385
+ThreadID: 13667
+se.sum_exec_runtime                          :         49448.517168
+ThreadID: 13668
+se.sum_exec_runtime                          :         47293.131775
+ThreadID: 13669
+se.sum_exec_runtime                          :         47722.654000
+ThreadID: 13670
+se.sum_exec_runtime                          :         50916.574131
+ThreadID: 13671
+se.sum_exec_runtime                          :         53362.497819
+ThreadID: 13672
+se.sum_exec_runtime                          :         51384.381326
+ThreadID: 13673
+se.sum_exec_runtime                          :         50188.260622
+ThreadID: 13674
+se.sum_exec_runtime                          :         47172.363064
+ThreadID: 13675
+se.sum_exec_runtime                          :         49312.380462
+ThreadID: 13676
+se.sum_exec_runtime                          :         50275.256786
+ThreadID: 13677
+se.sum_exec_runtime                          :         50146.672845
+ThreadID: 13678
+se.sum_exec_runtime                          :         48448.689002
+ThreadID: 13679
+se.sum_exec_runtime                          :         48648.011770
+ThreadID: 13680
+se.sum_exec_runtime                          :         51937.099969
+ThreadID: 13681
+se.sum_exec_runtime                          :         51278.189641
+ThreadID: 13682
+se.sum_exec_runtime                          :         47334.876566
+ThreadID: 13683
+se.sum_exec_runtime                          :         45909.668553
+ThreadID: 13684
+se.sum_exec_runtime                          :         51243.350018
+ThreadID: 13685
+se.sum_exec_runtime                          :         48633.814093
+ThreadID: 13686
+se.sum_exec_runtime                          :         49060.418683
+ThreadID: 13687
+se.sum_exec_runtime                          :         48141.694291
+ThreadID: 13688
+se.sum_exec_runtime                          :         48664.832723
+ThreadID: 13689
+se.sum_exec_runtime                          :         53525.117744
+ThreadID: 13690
+se.sum_exec_runtime                          :         49025.938276
+ThreadID: 13691
+se.sum_exec_runtime                          :         53152.761985
+ThreadID: 13692
+se.sum_exec_runtime                          :         51795.535879
+ThreadID: 13693
+se.sum_exec_runtime                          :         52417.984141
+ThreadID: 13694
+se.sum_exec_runtime                          :         47072.715276
+ThreadID: 13695
+se.sum_exec_runtime                          :         49446.001495
+ThreadID: 13696
+se.sum_exec_runtime                          :         50979.308152
+ThreadID: 13697
+se.sum_exec_runtime                          :         51724.532054
+ThreadID: 13698
+se.sum_exec_runtime                          :         48181.827403
+ThreadID: 13699
+se.sum_exec_runtime                          :         47983.341937
+ThreadID: 13700
+se.sum_exec_runtime                          :         48997.992189
+ThreadID: 13637
+se.sum_exec_runtime                          :         52468.079562
+ThreadID: 13638
+se.sum_exec_runtime                          :         52075.841540
+ThreadID: 13639
+se.sum_exec_runtime                          :         49224.168608
+ThreadID: 13640
+se.sum_exec_runtime                          :         51867.158946
+ThreadID: 13641
+se.sum_exec_runtime                          :         48634.293061
+ThreadID: 13642
+se.sum_exec_runtime                          :         52101.169594
+ThreadID: 13643
+se.sum_exec_runtime                          :         49510.818099
+ThreadID: 13644
+se.sum_exec_runtime                          :         50961.261181
+ThreadID: 13645
+se.sum_exec_runtime                          :         48636.896193
+ThreadID: 13646
+se.sum_exec_runtime                          :         57805.183418
+ThreadID: 13647
+se.sum_exec_runtime                          :         53796.547148
+ThreadID: 13648
+se.sum_exec_runtime                          :         51531.230635
+ThreadID: 13649
+se.sum_exec_runtime                          :         48553.714065
+ThreadID: 13650
+se.sum_exec_runtime                          :         50373.729397
+ThreadID: 13651
+se.sum_exec_runtime                          :         52423.967287
+ThreadID: 13652
+se.sum_exec_runtime                          :         46900.869234
+ThreadID: 13653
+se.sum_exec_runtime                          :         51041.841013
+ThreadID: 13654
+se.sum_exec_runtime                          :         49491.211528
+ThreadID: 13655
+se.sum_exec_runtime                          :         54141.038186
+ThreadID: 13656
+se.sum_exec_runtime                          :         48567.552834
+ThreadID: 13657
+se.sum_exec_runtime                          :         51698.860836
+ThreadID: 13658
+se.sum_exec_runtime                          :         49873.096566
+ThreadID: 13659
+se.sum_exec_runtime                          :         47735.959871
+ThreadID: 13660
+se.sum_exec_runtime                          :         49865.940479
+ThreadID: 13661
+se.sum_exec_runtime                          :         48913.081452
+ThreadID: 13662
+se.sum_exec_runtime                          :         49781.897625
+ThreadID: 13663
+se.sum_exec_runtime                          :         51713.718940
+ThreadID: 13664
+se.sum_exec_runtime                          :         51532.079597
+ThreadID: 13665
+se.sum_exec_runtime                          :         52877.640386
+ThreadID: 13666
+se.sum_exec_runtime                          :         50192.148326
+ThreadID: 13667
+se.sum_exec_runtime                          :         50557.408577
+ThreadID: 13668
+se.sum_exec_runtime                          :         48531.634996
+ThreadID: 13669
+se.sum_exec_runtime                          :         48605.345976
+ThreadID: 13670
+se.sum_exec_runtime                          :         51964.722061
+ThreadID: 13671
+se.sum_exec_runtime                          :         54474.617576
+ThreadID: 13672
+se.sum_exec_runtime                          :         52446.966536
+ThreadID: 13673
+se.sum_exec_runtime                          :         51155.318838
+ThreadID: 13674
+se.sum_exec_runtime                          :         48553.205012
+ThreadID: 13675
+se.sum_exec_runtime                          :         50128.102653
+ThreadID: 13676
+se.sum_exec_runtime                          :         51277.938889
+ThreadID: 13677
+se.sum_exec_runtime                          :         51157.872453
+ThreadID: 13678
+se.sum_exec_runtime                          :         49339.981079
+ThreadID: 13679
+se.sum_exec_runtime                          :         49844.826495
+ThreadID: 13680
+se.sum_exec_runtime                          :         53126.270643
+ThreadID: 13681
+se.sum_exec_runtime                          :         52242.168807
+ThreadID: 13682
+se.sum_exec_runtime                          :         48427.726606
+ThreadID: 13683
+se.sum_exec_runtime                          :         46821.005445
+ThreadID: 13684
+se.sum_exec_runtime                          :         52848.953918
+ThreadID: 13685
+se.sum_exec_runtime                          :         49483.525972
+ThreadID: 13686
+se.sum_exec_runtime                          :         49953.753030
+ThreadID: 13687
+se.sum_exec_runtime                          :         49027.729114
+ThreadID: 13688
+se.sum_exec_runtime                          :         49541.153748
+ThreadID: 13689
+se.sum_exec_runtime                          :         54316.556090
+ThreadID: 13690
+se.sum_exec_runtime                          :         49615.830565
+ThreadID: 13691
+se.sum_exec_runtime                          :         53936.113705
+ThreadID: 13692
+se.sum_exec_runtime                          :         52654.083753
+ThreadID: 13693
+se.sum_exec_runtime                          :         53306.380838
+ThreadID: 13694
+se.sum_exec_runtime                          :         47935.100772
+ThreadID: 13695
+se.sum_exec_runtime                          :         50316.777763
+ThreadID: 13696
+se.sum_exec_runtime                          :         51669.895890
+ThreadID: 13697
+se.sum_exec_runtime                          :         52478.870477
+ThreadID: 13698
+se.sum_exec_runtime                          :         48834.839356
+ThreadID: 13699
+se.sum_exec_runtime                          :         48733.580835
+ThreadID: 13700
+se.sum_exec_runtime                          :         50654.710917
+ThreadID: 13637
+se.sum_exec_runtime                          :         53166.036613
+ThreadID: 13638
+se.sum_exec_runtime                          :         52780.092819
+ThreadID: 13639
+se.sum_exec_runtime                          :         50071.515693
+ThreadID: 13640
+se.sum_exec_runtime                          :         52715.514971
+ThreadID: 13641
+se.sum_exec_runtime                          :         49481.037327
+ThreadID: 13642
+se.sum_exec_runtime                          :         52941.611835
+ThreadID: 13643
+se.sum_exec_runtime                          :         50620.724308
+ThreadID: 13644
+se.sum_exec_runtime                          :         51808.186988
+ThreadID: 13645
+se.sum_exec_runtime                          :         49385.700787
+ThreadID: 13646
+se.sum_exec_runtime                          :         58873.525238
+ThreadID: 13647
+se.sum_exec_runtime                          :         54566.707919
+ThreadID: 13648
+se.sum_exec_runtime                          :         52378.119456
+ThreadID: 13649
+se.sum_exec_runtime                          :         49502.406969
+ThreadID: 13650
+se.sum_exec_runtime                          :         51291.608760
+ThreadID: 13651
+se.sum_exec_runtime                          :         53675.083824
+ThreadID: 13652
+se.sum_exec_runtime                          :         47633.869708
+ThreadID: 13653
+se.sum_exec_runtime                          :         51861.490479
+ThreadID: 13654
+se.sum_exec_runtime                          :         50346.175007
+ThreadID: 13655
+se.sum_exec_runtime                          :         55106.554629
+ThreadID: 13656
+se.sum_exec_runtime                          :         49606.408706
+ThreadID: 13657
+se.sum_exec_runtime                          :         52487.505467
+ThreadID: 13658
+se.sum_exec_runtime                          :         50917.274825
+ThreadID: 13659
+se.sum_exec_runtime                          :         48713.424546
+ThreadID: 13660
+se.sum_exec_runtime                          :         50883.981495
+ThreadID: 13661
+se.sum_exec_runtime                          :         49935.015043
+ThreadID: 13662
+se.sum_exec_runtime                          :         50850.557707
+ThreadID: 13663
+se.sum_exec_runtime                          :         52778.252939
+ThreadID: 13664
+se.sum_exec_runtime                          :         52621.743050
+ThreadID: 13665
+se.sum_exec_runtime                          :         53886.198336
+ThreadID: 13666
+se.sum_exec_runtime                          :         51252.959871
+ThreadID: 13667
+se.sum_exec_runtime                          :         51629.624372
+ThreadID: 13668
+se.sum_exec_runtime                          :         49627.061774
+ThreadID: 13669
+se.sum_exec_runtime                          :         49695.619004
+ThreadID: 13670
+se.sum_exec_runtime                          :         53202.376111
+ThreadID: 13671
+se.sum_exec_runtime                          :         56565.037988
+ThreadID: 13672
+se.sum_exec_runtime                          :         53321.548883
+ThreadID: 13673
+se.sum_exec_runtime                          :         52186.899165
+ThreadID: 13674
+se.sum_exec_runtime                          :         49657.434950
+ThreadID: 13675
+se.sum_exec_runtime                          :         51461.939267
+ThreadID: 13676
+se.sum_exec_runtime                          :         52372.798545
+ThreadID: 13677
+se.sum_exec_runtime                          :         52088.681128
+ThreadID: 13678
+se.sum_exec_runtime                          :         50376.610927
+ThreadID: 13679
+se.sum_exec_runtime                          :         51898.556678
+ThreadID: 13680
+se.sum_exec_runtime                          :         54748.255807
+ThreadID: 13681
+se.sum_exec_runtime                          :         54295.907381
+ThreadID: 13682
+se.sum_exec_runtime                          :         49715.625528
+ThreadID: 13683
+se.sum_exec_runtime                          :         47841.810430
+ThreadID: 13684
+se.sum_exec_runtime                          :         54504.641517
+ThreadID: 13685
+se.sum_exec_runtime                          :         51763.083628
+ThreadID: 13686
+se.sum_exec_runtime                          :         51370.094334
+ThreadID: 13687
+se.sum_exec_runtime                          :         50102.218263
+ThreadID: 13688
+se.sum_exec_runtime                          :         50628.848926
+ThreadID: 13689
+se.sum_exec_runtime                          :         55642.643636
+ThreadID: 13690
+se.sum_exec_runtime                          :         51092.284262
+ThreadID: 13691
+se.sum_exec_runtime                          :         55212.488655
+ThreadID: 13692
+se.sum_exec_runtime                          :         53798.646787
+ThreadID: 13693
+se.sum_exec_runtime                          :         54804.288789
+ThreadID: 13694
+se.sum_exec_runtime                          :         49444.245177
+ThreadID: 13695
+se.sum_exec_runtime                          :         51867.707973
+ThreadID: 13696
+se.sum_exec_runtime                          :         53215.853761
+ThreadID: 13697
+se.sum_exec_runtime                          :         53857.979132
+ThreadID: 13698
+se.sum_exec_runtime                          :         50837.864782
+ThreadID: 13699
+se.sum_exec_runtime                          :         50203.214542
+ThreadID: 13700
+se.sum_exec_runtime                          :         52251.237914
+ThreadID: 13637
+se.sum_exec_runtime                          :         54938.566067
+ThreadID: 13638
+se.sum_exec_runtime                          :         54585.452500
+ThreadID: 13639
+se.sum_exec_runtime                          :         51535.935808
+ThreadID: 13640
+se.sum_exec_runtime                          :         54377.373906
+ThreadID: 13641
+se.sum_exec_runtime                          :         51305.204654
+ThreadID: 13642
+se.sum_exec_runtime                          :         54662.582128
+ThreadID: 13643
+se.sum_exec_runtime                          :         52422.534698
+ThreadID: 13644
+se.sum_exec_runtime                          :         53301.328242
+ThreadID: 13645
+se.sum_exec_runtime                          :         50928.901745
+ThreadID: 13646
+se.sum_exec_runtime                          :         60424.413783
+ThreadID: 13647
+se.sum_exec_runtime                          :         56055.585134
+ThreadID: 13648
+se.sum_exec_runtime                          :         54203.572400
+ThreadID: 13649
+se.sum_exec_runtime                          :         51011.999509
+ThreadID: 13650
+se.sum_exec_runtime                          :         53135.955516
+ThreadID: 13651
+se.sum_exec_runtime                          :         55290.026657
+ThreadID: 13652
+se.sum_exec_runtime                          :         49973.749171
+ThreadID: 13653
+se.sum_exec_runtime                          :         53710.161109
+ThreadID: 13654
+se.sum_exec_runtime                          :         52019.118462
+ThreadID: 13655
+se.sum_exec_runtime                          :         57311.027753
+ThreadID: 13656
+se.sum_exec_runtime                          :         51684.629457
+ThreadID: 13657
+se.sum_exec_runtime                          :         54272.102106
+ThreadID: 13658
+se.sum_exec_runtime                          :         52815.950157
+ThreadID: 13659
+se.sum_exec_runtime                          :         50411.495280
+ThreadID: 13660
+se.sum_exec_runtime                          :         52827.025418
+ThreadID: 13661
+se.sum_exec_runtime                          :         51866.953378
+ThreadID: 13662
+se.sum_exec_runtime                          :         52897.788869
+ThreadID: 13663
+se.sum_exec_runtime                          :         54733.082942
+ThreadID: 13664
+se.sum_exec_runtime                          :         54599.993250
+ThreadID: 13665
+se.sum_exec_runtime                          :         56191.397479
+ThreadID: 13666
+se.sum_exec_runtime                          :         53459.904778
+ThreadID: 13667
+se.sum_exec_runtime                          :         53493.038069
+ThreadID: 13668
+se.sum_exec_runtime                          :         51652.559246
+ThreadID: 13669
+se.sum_exec_runtime                          :         52454.730595
+ThreadID: 13670
+se.sum_exec_runtime                          :         56584.272329
+ThreadID: 13671
+se.sum_exec_runtime                          :         58560.052267
+ThreadID: 13672
+se.sum_exec_runtime                          :         55306.451964
+ThreadID: 13673
+se.sum_exec_runtime                          :         54200.200779
+ThreadID: 13674
+se.sum_exec_runtime                          :         51438.016204
+ThreadID: 13675
+se.sum_exec_runtime                          :         53398.607237
+ThreadID: 13676
+se.sum_exec_runtime                          :         54393.363624
+ThreadID: 13677
+se.sum_exec_runtime                          :         54138.749047
+ThreadID: 13678
+se.sum_exec_runtime                          :         52355.294276
+ThreadID: 13679
+se.sum_exec_runtime                          :         54338.524553
+ThreadID: 13680
+se.sum_exec_runtime                          :         56587.561557
+ThreadID: 13681
+se.sum_exec_runtime                          :         56386.047276
+ThreadID: 13682
+se.sum_exec_runtime                          :         51702.188437
+ThreadID: 13683
+se.sum_exec_runtime                          :         49991.932267
+ThreadID: 13684
+se.sum_exec_runtime                          :         56242.544316
+ThreadID: 13685
+se.sum_exec_runtime                          :         53491.868966
+ThreadID: 13686
+se.sum_exec_runtime                          :         53236.336309
+ThreadID: 13687
+se.sum_exec_runtime                          :         52195.049156
+ThreadID: 13688
+se.sum_exec_runtime                          :         52481.055893
+ThreadID: 13689
+se.sum_exec_runtime                          :         57560.340870
+ThreadID: 13690
+se.sum_exec_runtime                          :         52889.528469
+ThreadID: 13691
+se.sum_exec_runtime                          :         57030.339516
+ThreadID: 13692
+se.sum_exec_runtime                          :         55860.143511
+ThreadID: 13693
+se.sum_exec_runtime                          :         56665.286276
+ThreadID: 13694
+se.sum_exec_runtime                          :         51206.122568
+ThreadID: 13695
+se.sum_exec_runtime                          :         53690.118909
+ThreadID: 13696
+se.sum_exec_runtime                          :         55142.250173
+ThreadID: 13697
+se.sum_exec_runtime                          :         55589.582277
+ThreadID: 13698
+se.sum_exec_runtime                          :         52861.572553
+ThreadID: 13699
+se.sum_exec_runtime                          :         51688.183212
+ThreadID: 13700
+se.sum_exec_runtime                          :         53958.650998
+ThreadID: 13637
+se.sum_exec_runtime                          :         57964.359502
+ThreadID: 13638
+se.sum_exec_runtime                          :         56793.942377
+ThreadID: 13639
+se.sum_exec_runtime                          :         54099.175461
+ThreadID: 13640
+se.sum_exec_runtime                          :         56359.768201
+ThreadID: 13641
+se.sum_exec_runtime                          :         54333.488401
+ThreadID: 13642
+se.sum_exec_runtime                          :         56590.011593
+ThreadID: 13643
+se.sum_exec_runtime                          :         54873.069520
+ThreadID: 13644
+se.sum_exec_runtime                          :         56096.261137
+ThreadID: 13645
+se.sum_exec_runtime                          :         53257.423671
+ThreadID: 13646
+se.sum_exec_runtime                          :         63063.293538
+ThreadID: 13647
+se.sum_exec_runtime                          :         58979.076830
+ThreadID: 13648
+se.sum_exec_runtime                          :         55903.546824
+ThreadID: 13649
+se.sum_exec_runtime                          :         53755.099093
+ThreadID: 13650
+se.sum_exec_runtime                          :         55049.836565
+ThreadID: 13651
+se.sum_exec_runtime                          :         57411.059308
+ThreadID: 13652
+se.sum_exec_runtime                          :         52247.816548
+ThreadID: 13653
+se.sum_exec_runtime                          :         55765.486478
+ThreadID: 13654
+se.sum_exec_runtime                          :         54041.041879
+ThreadID: 13655
+se.sum_exec_runtime                          :         61388.609109
+ThreadID: 13656
+se.sum_exec_runtime                          :         53426.360354
+ThreadID: 13657
+se.sum_exec_runtime                          :         56371.787152
+ThreadID: 13658
+se.sum_exec_runtime                          :         54840.144141
+ThreadID: 13659
+se.sum_exec_runtime                          :         52769.000223
+ThreadID: 13660
+se.sum_exec_runtime                          :         55106.560154
+ThreadID: 13661
+se.sum_exec_runtime                          :         54383.892408
+ThreadID: 13662
+se.sum_exec_runtime                          :         54990.976300
+ThreadID: 13663
+se.sum_exec_runtime                          :         57097.873178
+ThreadID: 13664
+se.sum_exec_runtime                          :         58295.118588
+ThreadID: 13665
+se.sum_exec_runtime                          :         58386.324591
+ThreadID: 13666
+se.sum_exec_runtime                          :         57053.418386
+ThreadID: 13667
+se.sum_exec_runtime                          :         55735.089017
+ThreadID: 13668
+se.sum_exec_runtime                          :         53510.066023
+ThreadID: 13669
+se.sum_exec_runtime                          :         54914.510582
+ThreadID: 13670
+se.sum_exec_runtime                          :         58793.136308
+ThreadID: 13671
+se.sum_exec_runtime                          :         60580.453192
+ThreadID: 13672
+se.sum_exec_runtime                          :         58261.502923
+ThreadID: 13673
+se.sum_exec_runtime                          :         56170.290892
+ThreadID: 13674
+se.sum_exec_runtime                          :         53787.916038
+ThreadID: 13675
+se.sum_exec_runtime                          :         55979.881145
+ThreadID: 13676
+se.sum_exec_runtime                          :         61402.268720
+ThreadID: 13677
+se.sum_exec_runtime                          :         56652.285815
+ThreadID: 13678
+se.sum_exec_runtime                          :         54556.702316
+ThreadID: 13679
+se.sum_exec_runtime                          :         57337.280134
+ThreadID: 13680
+se.sum_exec_runtime                          :         58854.231116
+ThreadID: 13681
+se.sum_exec_runtime                          :         58325.088825
+ThreadID: 13682
+se.sum_exec_runtime                          :         53852.630995
+ThreadID: 13683
+se.sum_exec_runtime                          :         52263.683367
+ThreadID: 13684
+se.sum_exec_runtime                          :         57966.254492
+ThreadID: 13685
+se.sum_exec_runtime                          :         59765.429488
+ThreadID: 13686
+se.sum_exec_runtime                          :         55125.107324
+ThreadID: 13687
+se.sum_exec_runtime                          :         54583.361717
+ThreadID: 13688
+se.sum_exec_runtime                          :         55306.765681
+ThreadID: 13689
+se.sum_exec_runtime                          :         59882.754295
+ThreadID: 13690
+se.sum_exec_runtime                          :         55612.210829
+ThreadID: 13691
+se.sum_exec_runtime                          :         59241.216799
+ThreadID: 13692
+se.sum_exec_runtime                          :         58305.940601
+ThreadID: 13693
+se.sum_exec_runtime                          :         58561.059990
+ThreadID: 13694
+se.sum_exec_runtime                          :         52933.553584
+ThreadID: 13695
+se.sum_exec_runtime                          :         55944.005243
+ThreadID: 13696
+se.sum_exec_runtime                          :         61622.680639
+ThreadID: 13697
+se.sum_exec_runtime                          :         57825.523491
+ThreadID: 13698
+se.sum_exec_runtime                          :         55783.477903
+ThreadID: 13699
+se.sum_exec_runtime                          :         53818.430187
+ThreadID: 13700
+se.sum_exec_runtime                          :         56023.416511

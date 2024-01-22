@@ -3979,3 +3979,21 @@ ThreadID: 13340
 se.sum_exec_runtime                          :         62718.552729
 ThreadID: 13341
 se.sum_exec_runtime                          :         63723.226379
+CPU speed:
+    events per second: 12605.01
+
+General statistics:
+    total time:                          3000.0391s
+    total number of events:              37815575
+
+Latency (ms):
+         min:                                    0.78
+         avg:                                    5.03
+         max:                                33417.26
+         95th percentile:                       22.69
+         sum:                            190301861.19
+
+Threads fairness:
+    events (avg/stddev):           590868.3594/29241.40
+    execution time (avg/stddev):   2973.4666/7.25
+

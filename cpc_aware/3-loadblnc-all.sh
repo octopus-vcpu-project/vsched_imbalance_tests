@@ -79,6 +79,8 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
 done
 
 #this test is symmetric, no frills,symmetrically competed for
+echo "unf-sym-nve test started"
+
 OUTPUT_FILE="./test/unf-sym-nve-$(date +%m%d%H%M).txt"
 for i in {0..60};do
     sleep 2

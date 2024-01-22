@@ -31,7 +31,7 @@ wipe_clean(){
 }
 
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"    &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a thread_ids
@@ -99,7 +99,7 @@ done
 
 
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run"  >> "$OUTPUT_FILE"  &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
@@ -122,7 +122,7 @@ echo "unf-asym-pin test complete"
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "sysbench --threads=64 --time=3000 cpu run" &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 

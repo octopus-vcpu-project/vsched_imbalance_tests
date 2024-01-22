@@ -124,7 +124,7 @@ done
 
 
 
-for i in {0..60};do
+for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done

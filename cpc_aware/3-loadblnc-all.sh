@@ -77,6 +77,7 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
 done
 
 #this test is symmetric, no frills,symmetrically competed for
+<<comm
 echo "unf-sym-nve test started"
 OUTPUT_FILE="./test/unf-sym-nve-$(date +%m%d%H%M).txt"
 for i in {0..30};do
@@ -84,6 +85,7 @@ for i in {0..30};do
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 echo "unf-sym-nve test complete"
+comm
 #this test is where half the cores are much weaker, assymetrically competed for.
 
 for i in {0..15};do

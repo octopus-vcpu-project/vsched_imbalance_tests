@@ -1,0 +1,61 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 64
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+ThreadID: 2422
+se.sum_exec_runtime                          :          3192.042386
+ThreadID: 2423
+se.sum_exec_runtime                          :          2921.682588
+ThreadID: 2424
+se.sum_exec_runtime                          :          3284.177864
+ThreadID: 2425
+se.sum_exec_runtime                          :          3312.870385
+ThreadID: 2422
+se.sum_exec_runtime                          :          4712.991596
+ThreadID: 2423
+se.sum_exec_runtime                          :          4473.157735
+ThreadID: 2424
+se.sum_exec_runtime                          :          4640.771210
+ThreadID: 2425
+se.sum_exec_runtime                          :          4749.091757
+ThreadID: 2422
+se.sum_exec_runtime                          :         10251.183011
+ThreadID: 2423
+se.sum_exec_runtime                          :         10223.028540
+ThreadID: 2424
+se.sum_exec_runtime                          :          8796.861679
+ThreadID: 2425
+se.sum_exec_runtime                          :         10627.785206
+ThreadID: 2422
+se.sum_exec_runtime                          :         11712.249610
+ThreadID: 2423
+se.sum_exec_runtime                          :         11680.549880
+ThreadID: 2424
+se.sum_exec_runtime                          :         10251.866237
+ThreadID: 2425
+se.sum_exec_runtime                          :         12072.783687
+ThreadID: 2422
+se.sum_exec_runtime                          :         13492.741731
+ThreadID: 2423
+se.sum_exec_runtime                          :         13464.980370
+ThreadID: 2424
+se.sum_exec_runtime                          :         12046.398582
+ThreadID: 2425
+se.sum_exec_runtime                          :         13863.830025
+ThreadID: 2422
+se.sum_exec_runtime                          :         14965.943124
+ThreadID: 2423
+se.sum_exec_runtime                          :         14922.517516
+ThreadID: 2424
+se.sum_exec_runtime                          :         13329.933826
+ThreadID: 2425
+se.sum_exec_runtime                          :         15314.047846

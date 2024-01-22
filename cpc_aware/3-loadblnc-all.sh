@@ -72,9 +72,7 @@ output_thread_specific_vruntimes(){
 declare -a thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -lt 5 ]; then
-        thread_ids+=($tid)
-    fi
+    thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
 
@@ -120,9 +118,7 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -lt 5 ]; then
-        smrt_thread_ids+=($tid)
-    fi
+    smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
 

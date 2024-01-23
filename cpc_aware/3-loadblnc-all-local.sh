@@ -111,6 +111,7 @@ done
 echo "unf-asym-nve test complete"
 
 wipe_clean $prob_vm
+<<comm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
@@ -127,7 +128,7 @@ for i in {0..25};do
     output_thread_specific_vruntimes "${mread_ids[@]}"
 done
 echo "unf-asym-pin test complete"
-
+comm
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm

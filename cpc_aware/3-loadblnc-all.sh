@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=40 --time=100 cpu run"
+cpu_benchmark="sysbench --threads=40 --time=30 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
 #Fetch VM PID and use that to fetch Cgroup title

@@ -20,7 +20,7 @@ def try_test(s):
             for line in ln_1:
                 if "ThreadID" in line:
                     current_thread = line.split(': ')[1][:-1]
-                elif "se.sum_exec_runtime" in line:
+                elif "se.vruntime" in line:
                     vruntime = float(line.split(': ')[1][:-1].strip())
                     if current_thread in vruntime_per_thread:
                         vruntime_per_thread[current_thread].append(vruntime)

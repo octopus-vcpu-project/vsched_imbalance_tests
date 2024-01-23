@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=64 --time=100 cpu run"
+cpu_benchmark="sysbench --threads=64 --time=40 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
@@ -30,16 +30,7 @@ wipe_clean(){
     ssh ubuntu@"$local_prob_vm" "sudo killall joe.out"
 }
 
-wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 1
-sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-declare -a thread_ids
-new_iterator=0
-for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    thread_ids+=($tid)
-    new_iterator=$((new_iterator + 1))
-done
+
 pin_threads_smartly(){
     local threads=("$@")
     local command_str=""
@@ -68,8 +59,11 @@ output_thread_specific_vruntimes(){
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
+        if [ $dew_iterator -gt 8 ]; then
+            continue
+        fi 
         dew_iterator=$((dew_iterator + 1))
-        command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.vruntime; "
+        command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.sum_exec_runtime; "
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
 }
@@ -93,10 +87,19 @@ comm
 for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
-
+wipe_clean $prob_vm
+ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+sleep 1
+sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
+declare -a thread_ids
+new_iterator=0
+for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    thread_ids+=($tid)
+    new_iterator=$((new_iterator + 1))
+done
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 for i in {0..25};do
-    sleep 3
+    sleep 4
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 

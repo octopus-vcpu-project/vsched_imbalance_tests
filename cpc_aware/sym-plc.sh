@@ -1,7 +1,6 @@
 prob_vm=$1
 compete_vm=$2
 benchmark_time=100
-sudo virsh shutdown e-vm3
 sleep 10
 cpu_benchmark="sysbench --threads=4 --time=50 cpu run"
 compete_benchmark="sysbench --threads=16 --time=200000 cpu run"

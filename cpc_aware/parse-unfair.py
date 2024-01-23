@@ -42,18 +42,13 @@ def get_correct_range(v):
 def graph_lst(lst,lst2,lst3):
     
     for k, v in lst3.items():
-        plt.plot(get_correct_range(v), v, '.-',color='green', label="dduh")
-    for k, v in lst2.items():
-        plt.plot(get_correct_range(v), v, '.-',color='red',label="dsuh")
-    for k, v in lst.items():
-        plt.plot(get_correct_range(v), v, '.-',color='blue', label="duh")
+        plt.plot(range(1, len(v) + 1), v, '.-',label="dsuh")
 
     plt.legend()  # To draw legend
     plt.show()
 
-
 biggest=-99999999999
 vruntime_per_thread = try_test("./test/unf-asym-pin-*.txt")
 vruntime_per_thread1 = try_test("./test/unf-asym-smrt-*.txt")
-vruntime_per_thread2 = try_test("./test/unf-asym-nve-*.txt")
+vruntime_per_thread2 = try_test("./test/unf-asym-nve-01221905.txt")
 graph_lst(vruntime_per_thread,vruntime_per_thread1,vruntime_per_thread2)

@@ -37,9 +37,6 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -gt 12 ]; then
-            break
-    fi 
     thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done

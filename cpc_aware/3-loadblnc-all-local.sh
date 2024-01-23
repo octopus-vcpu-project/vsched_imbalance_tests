@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 compete_vm=$2
 compete_vm1=$3
-cpu_benchmark="sysbench --threads=27 --time=150 cpu run"
+cpu_benchmark="sysbench --threads=30 --time=150 cpu run"
 compete_benchmark="sysbench --threads=32 --time=10000 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16

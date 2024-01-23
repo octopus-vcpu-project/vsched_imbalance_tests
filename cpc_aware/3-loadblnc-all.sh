@@ -66,10 +66,15 @@ pin_threads_smartly(){
 output_thread_specific_vruntimes(){
     local threads=("$@")
     local command_str=""
+    local dew_iterator=0
     for tid in "${threads[@]}"; do
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
+        if [ $dew_iterator -gt 8 ]; then
+            break
+        fi
+        dew_iterator=$((dew_iterator + 1))
         command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.sum_exec_runtime; "
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
@@ -108,11 +113,7 @@ ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
-new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -gt 8 ]; then
-        break
-    fi
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
@@ -137,9 +138,6 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -gt 8 ]; then
-        break
-    fi
     smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done

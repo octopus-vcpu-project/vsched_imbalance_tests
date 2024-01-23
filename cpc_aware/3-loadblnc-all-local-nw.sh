@@ -9,17 +9,17 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=32 --time=100 cpu run"
+cpu_benchmark="sysbench --threads=64 --time=40 cpu run"
 
-sudo bash ../utility/cleanon_startup.sh $prob_vm 16
+sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 #PIN VCPUS and limit CPU usage using CGROUP
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-for i in {0..15};do
-    sudo virsh vcpupin $prob_vm $i $((i + 20))
+for i in {0..31};do
+    sudo virsh vcpupin $prob_vm $i $((i + 32))
     sudo echo $runtime $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
@@ -30,7 +30,16 @@ wipe_clean(){
     ssh ubuntu@"$local_prob_vm" "sudo killall joe.out"
 }
 
-
+wipe_clean $prob_vm
+ssh ubuntu@$prob_vm "$cpu_benchmark"    
+sleep 1
+sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
+declare -a thread_ids
+new_iterator=0
+for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    thread_ids+=($tid)
+    new_iterator=$((new_iterator + 1))
+done
 pin_threads_smartly(){
     local threads=("$@")
     local command_str=""
@@ -41,9 +50,11 @@ pin_threads_smartly(){
             continue
         fi 
         if [ $iterator -lt 16 ]; then
-            pin_location=$((iterator % 15))
+            pin_location=$iterator
+        elif [ $iterator -lt 64 ]; then
+            pin_location=$((iterator % 16 + 16))
         fi
-        command_str+="taskset -cp $pin_location $tid;"
+        command_str+="taskset -cp $pin_location $tid; "
         iterator=$((iterator + 1))
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
@@ -79,55 +90,46 @@ echo "unf-sym-nve test complete"
 comm
 #this test is where half the cores are much weaker, assymetrically competed for.
 
-
-#for i in {0..15};do
-#    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-#done
-
-
-wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 1
-sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-declare -a thread_ids
-new_iterator=0
-for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    thread_ids+=($tid)
-    new_iterator=$((new_iterator + 1))
+for i in {0..15};do
+    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
+<<comm
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
-for i in {0..25};do
-    sleep 4
+for i in {0..30};do
+    sleep 3
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 
 echo "unf-asym-nve test complete"
-
+comm
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+ssh ubuntu@$prob_vm "$cpu_benchmark" &   
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
+
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
+sleep 40
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 
 pin_threads_smartly "${mread_ids[@]}"
-for i in {0..25};do
+<<comm
+for i in {0..30};do
     sleep 3
     output_thread_specific_vruntimes "${mread_ids[@]}"
 done
 echo "unf-asym-pin test complete"
-
+comm
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
 
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
@@ -136,10 +138,12 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
-for i in {0..25};do
+<<comm
+for i in {0..30};do
     sleep 3
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done
+comm
 wipe_clean $prob_vm
 
 

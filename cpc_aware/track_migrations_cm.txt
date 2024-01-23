@@ -1,0 +1,4 @@
+sudo bpftrace -e kfunc:move_queued_task /args->p->comm=='sysbench'/{@[args->new_cpu]=count();}
+
+
+sudo bpftrace -e 'kfunc:move_queued_task /args->p->comm=="sysbench"/ {  @[args->new_cpu] = count(); }'

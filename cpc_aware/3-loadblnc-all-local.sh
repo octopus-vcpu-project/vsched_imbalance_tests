@@ -30,16 +30,8 @@ wipe_clean(){
     ssh ubuntu@"$local_prob_vm" "sudo killall joe.out"
 }
 
-wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    
-sleep 1
-sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-declare -a thread_ids
-new_iterator=0
-for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    thread_ids+=($tid)
-    new_iterator=$((new_iterator + 1))
-done
+
+
 pin_threads_smartly(){
     local threads=("$@")
     local command_str=""
@@ -93,51 +85,43 @@ comm
 for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
-<<comm
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
-for i in {0..30};do
-    sleep 3
-    output_thread_specific_vruntimes "${thread_ids[@]}"
-done
+
+wipe_clean $prob_vm
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o /home/ubuntu/testout.txt -e task-clock -p 8374 -I 1000"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "$cpu_benchmark"    
+ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
+scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE
+
 
 echo "unf-asym-nve test complete"
-comm
 wipe_clean $prob_vm
+OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p 8374 -I 1000"  >> "$OUTPUT_FILE" 2>&1
 ssh ubuntu@$prob_vm "$cpu_benchmark" &   
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
-
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
-sleep 40
-OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
-
 pin_threads_smartly "${mread_ids[@]}"
-<<comm
-for i in {0..30};do
-    sleep 3
-    output_thread_specific_vruntimes "${mread_ids[@]}"
-done
-echo "unf-asym-pin test complete"
-comm
+sleep 38
+ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
+scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p 8374 -I 1000"  >> "$OUTPUT_FILE" 2>&1
 
 ssh ubuntu@$prob_vm "$cpu_benchmark"    
 sleep 1
-sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-declare -a smrt_thread_ids
-new_iterator=0
-for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    smrt_thread_ids+=($tid)
-    new_iterator=$((new_iterator + 1))
-done
+ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
+scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE
+
 <<comm
 for i in {0..30};do
     sleep 3

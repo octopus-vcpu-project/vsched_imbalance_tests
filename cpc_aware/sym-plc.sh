@@ -12,6 +12,19 @@ for i in {0..15};do
     sudo virsh vcpupin $compete_vm $i $i
 done
 
+
+output_thread_specific_vruntimes(){
+    local threads=("$@")
+    local command_str=""
+    for tid in "${threads[@]}"; do
+        if [ $tid -eq $sysbench_pid ]; then
+            continue
+        fi 
+        command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.sum_exec_runtime; "
+    done
+    ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
+}
+
 echo "Finished Pinning"
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 

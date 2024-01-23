@@ -104,7 +104,7 @@ echo "unf-asym-nve test complete"
 comm
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    
-sleep 1
+sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
 

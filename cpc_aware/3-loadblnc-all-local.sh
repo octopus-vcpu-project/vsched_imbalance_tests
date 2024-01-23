@@ -96,6 +96,8 @@ wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
+
+<<comm
 declare -a thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
@@ -107,7 +109,7 @@ for i in {0..35};do
     output_thread_specific_vruntimes "${thread_ids[@]}"
     sleep 4
 done
-
+comm
 echo "unf-asym-nve test complete"
 
 wipe_clean $prob_vm

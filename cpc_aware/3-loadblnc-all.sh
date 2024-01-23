@@ -32,7 +32,7 @@ wipe_clean(){
 
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 3
+sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a thread_ids
 new_iterator=0
@@ -104,7 +104,7 @@ echo "unf-asym-nve test complete"
 
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 3
+sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
@@ -127,7 +127,7 @@ ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
 
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 3
+sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0
@@ -135,9 +135,6 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
-
-
-
 for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"

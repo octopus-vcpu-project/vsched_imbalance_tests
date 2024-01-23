@@ -40,12 +40,11 @@ def get_correct_range(v):
     return g
 
 def graph_lst(pin_cs,smrt_cs,nve_cs):
-    
-    for k, v in smrt_cs.items():
-        plt.plot(get_correct_range(v), v, '.-',color='red',label="smrt")
     for k, v in nve_cs.items():
         plt.plot(get_correct_range(v), v, '.-',color='yellow',label="naive")
-    
+    for k, v in smrt_cs.items():
+        plt.plot(get_correct_range(v), v, '.-',color='red',label="smrt")
+   
     for k, v in pin_cs.items():
         plt.plot(get_correct_range(v), v, '.-',color='green', label="pinned")
     plt.legend()  # To draw legend

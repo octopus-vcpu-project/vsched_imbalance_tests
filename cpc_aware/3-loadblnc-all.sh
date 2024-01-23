@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=64 --time=80 cpu run"
+cpu_benchmark="sysbench --threads=64 --time=40 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
@@ -124,10 +124,11 @@ comm
 
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 3
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 2000 &  " & 
+
+ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+sleep 3
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0
@@ -139,7 +140,7 @@ done
 
 
 for i in {0..20};do
-    sleep 3
+    sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done
 wipe_clean $prob_vm

@@ -82,9 +82,9 @@ comm
 #this test is where half the cores are much weaker, assymetrically competed for.
 
 
-#for i in {0..15};do
-#    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-#done
+for i in {0..15};do
+    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+done
 
 
 wipe_clean $prob_vm

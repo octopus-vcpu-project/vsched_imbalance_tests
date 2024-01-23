@@ -32,6 +32,7 @@ def try_test(s):
 def get_correct_range(v):
     normal_len=40
     correction_factor=300
+    print(len(v))
     corrective_factor = normal_len/(len(v)-1)
     g=[]
     for x in range(0,len(v)):
@@ -44,7 +45,6 @@ def graph_lst(pin_cs,smrt_cs,nve_cs):
         plt.plot(get_correct_range(v), v, '.-',color='blue',label="naive")
     for k, v in smrt_cs.items():
         plt.plot(get_correct_range(v), v, '.-',color='red',label="smrt")
-   
     for k, v in pin_cs.items():
         plt.plot(get_correct_range(v), v, '.-',color='green', label="pinned")
     plt.legend()  # To draw legend
@@ -55,4 +55,5 @@ biggest=-99999999999
 pin_cs = try_test("./test/unf-asym-pin-*.txt")
 smrt_cs = try_test("./test/unf-asym-smrt-*.txt")
 nve_cs = try_test("./test/unf-asym-nve-*.txt")
+print(nve_cs)
 graph_lst(pin_cs,smrt_cs,nve_cs)

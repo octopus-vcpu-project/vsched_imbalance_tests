@@ -83,7 +83,7 @@ comm
 
 
 for i in {0..8};do
-    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    sudo echo $((runtime*3))  $((period*3)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
 

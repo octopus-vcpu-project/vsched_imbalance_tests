@@ -40,7 +40,6 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     if [ $new_iterator -gt 8 ]; then
         break
     fi
-    mread_ids+=($tid)
     thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
@@ -117,9 +116,9 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
+OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 
 pin_threads_smartly "${mread_ids[@]}"
-OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${mread_ids[@]}"

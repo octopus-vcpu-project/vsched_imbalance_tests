@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 compete_vm=$2
 compete_vm1=$3
-cpu_benchmark="sysbench --threads=30 --time=100 cpu run"
+cpu_benchmark="sysbench --threads=35 --time=150 cpu run"
 compete_benchmark="sysbench --threads=32 --time=10000 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
@@ -103,9 +103,9 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     new_iterator=$((new_iterator + 1))
 done
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
-for i in {0..25};do
-    sleep 4
+for i in {0..35};do
     output_thread_specific_vruntimes "${thread_ids[@]}"
+    sleep 4
 done
 
 echo "unf-asym-nve test complete"
@@ -143,9 +143,9 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
-for i in {0..25};do
-    sleep 3
+for i in {0..40};do
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
+    sleep 3
 done
 wipe_clean $prob_vm
 

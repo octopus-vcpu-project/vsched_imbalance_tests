@@ -41,7 +41,7 @@ pin_threads_smartly(){
             continue
         fi 
         if [ $iterator -lt 64 ]; then
-            pin_location=$iterator
+            pin_location=$((iterator % 32))
         fi
         command_str+="taskset -cp $pin_location $tid;"
         iterator=$((iterator + 1))

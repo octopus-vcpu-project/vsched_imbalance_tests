@@ -89,6 +89,7 @@ OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o /home/ubuntu/testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" 2>&1
 sleep 40
@@ -99,9 +100,9 @@ echo "unf-asym-nve test complete"
 wipe_clean $prob_vm
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "$cpu_benchmark" &   
+sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" 2>&1
-sleep 1
 declare -a mread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)

@@ -8,11 +8,13 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 
 prob_vm=$1
 compete_vm=$2
+compete_vm1=$3
 cpu_benchmark="sysbench --threads=32 --time=100 cpu run"
 compete_benchmark="sysbench --threads=32 --time=10000 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
 sudo bash ../utility/cleanon_startup.sh $compete_vm 32
+sudo bash ../utility/cleanon_startup.sh $compete_vm1 16
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
@@ -27,7 +29,12 @@ for i in {0..31};do
     sudo virsh vcpupin $compete_vm $i $(((i%16) + 20))
 done
 
+for i in {0..15};do
+    sudo virsh vcpupin $compete_vm $i $(((i%8) + 20))
+done
+
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
+ssh ubuntu@$compete_vm1 "sudo $compete_benchmark" &
 wipe_clean(){
     local local_prob_vm=$1
     ssh ubuntu@"$local_prob_vm" "sudo killall sysbench"
@@ -44,10 +51,8 @@ pin_threads_smartly(){
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
-        if [ $iterator -lt 8 ]; then
-            pin_location=$((iterator))
-        elif [ $iterator -lt 32 ]; then
-            pin_location=$((iterator % 8 + 8))
+        if [ $iterator -lt 32 ]; then
+            pin_location=$((iterator % 16))
         fi
         command_str+="taskset -cp $pin_location $tid;"
         iterator=$((iterator + 1))

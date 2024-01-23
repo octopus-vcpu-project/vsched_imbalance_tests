@@ -30,7 +30,7 @@ for i in {0..31};do
 done
 
 for i in {0..15};do
-    sudo virsh vcpupin $compete_vm $i $(((i%8) + 20))
+    sudo virsh vcpupin $compete_vm1 $i $(((i%8) + 20))
 done
 
 ssh ubuntu@$compete_vm "sudo $compete_benchmark" &

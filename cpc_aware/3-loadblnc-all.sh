@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=32 --time=32 cpu run"
+cpu_benchmark="sysbench --threads=32 --time=60 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
 #Fetch VM PID and use that to fetch Cgroup title
@@ -130,7 +130,7 @@ comm
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
-
+sleep 10 
 ssh ubuntu@$prob_vm "$cpu_benchmark"    
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")

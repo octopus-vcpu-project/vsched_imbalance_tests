@@ -41,7 +41,7 @@ def get_correct_range(v):
 
 def graph_lst(pin_cs,smrt_cs,nve_cs):
     for k, v in nve_cs.items():
-        plt.plot(get_correct_range(v), v, '.-',color='yellow',label="naive")
+        plt.plot(get_correct_range(v), v, '.-',color='blue',label="naive")
     for k, v in smrt_cs.items():
         plt.plot(get_correct_range(v), v, '.-',color='red',label="smrt")
    

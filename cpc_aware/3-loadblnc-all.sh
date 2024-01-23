@@ -92,7 +92,7 @@ for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
-for i in {0..80};do
+for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
@@ -113,7 +113,7 @@ echo "unf-asym-nve test complete"
 
 pin_threads_smartly "${mread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
-for i in {0..80};do
+for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${mread_ids[@]}"
 done
@@ -136,7 +136,7 @@ done
 
 
 
-for i in {0..80};do
+for i in {0..30};do
     sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done

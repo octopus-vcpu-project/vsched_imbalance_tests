@@ -98,9 +98,11 @@ done
 
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 for i in {0..30};do
-    sleep 3
+    sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
+
+echo "unf-asym-nve test complete"
 
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
@@ -116,8 +118,6 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     new_iterator=$((new_iterator + 1))
 done
 
-echo "unf-asym-nve test complete"
-
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3
@@ -125,7 +125,7 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 pin_threads_smartly "${mread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 for i in {0..30};do
-    sleep 3
+    sleep 2
     output_thread_specific_vruntimes "${mread_ids[@]}"
 done
 echo "unf-asym-pin test complete"
@@ -152,7 +152,7 @@ done
 
 
 for i in {0..30};do
-    sleep 3
+    sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done
 wipe_clean $prob_vm

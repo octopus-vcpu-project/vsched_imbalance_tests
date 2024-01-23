@@ -42,7 +42,8 @@ pin_threads_smartly(){
         fi 
         if [ $iterator -lt 64 ]; then
             pin_location=$iterator
-        command_str+="taskset -cp $pin_location $tid; "
+        fi
+        command_str+="taskset -cp $pin_location $tid;"
         iterator=$((iterator + 1))
     done
     ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"

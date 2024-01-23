@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 compete_vm=$2
 compete_vm1=$3
-cpu_benchmark="sysbench --threads=30 --time=150 cpu run"
+cpu_benchmark="sysbench --threads=30 --time=40 cpu run"
 compete_benchmark="sysbench --threads=32 --time=10000 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
@@ -93,7 +93,7 @@ comm
 
 
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a thread_ids
@@ -135,7 +135,7 @@ wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
 
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    
 sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids

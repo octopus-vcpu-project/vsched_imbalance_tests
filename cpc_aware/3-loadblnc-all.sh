@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=32 --time=100 cpu run"
+cpu_benchmark="sysbench --threads=40 --time=100 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
 #Fetch VM PID and use that to fetch Cgroup title
@@ -41,8 +41,8 @@ pin_threads_smartly(){
             continue
         fi 
         if [ $iterator -lt 8 ]; then
-            pin_location=$((iterator % 8))
-        elif [ $iterator -lt 32 ]; then
+            pin_location=$((iterator))
+        elif [ $iterator -lt 40 ]; then
             pin_location=$((iterator % 8 + 8))
         fi
         command_str+="taskset -cp $pin_location $tid;"
@@ -83,7 +83,7 @@ comm
 
 
 for i in {0..8};do
-    sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    sudo echo $((runtime/4)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 
 

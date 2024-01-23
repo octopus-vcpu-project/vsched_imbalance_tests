@@ -125,7 +125,7 @@ wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 10000 &  " & 
+ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 30000 &  " & 
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0

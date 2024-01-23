@@ -52,7 +52,7 @@ pin_threads_smartly(){
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
-        elif [ $iterator -lt 64 ]; then
+        if [ $iterator -lt 64 ]; then
             pin_location=$((iterator % 32))
         fi
         command_str+="taskset -cp $pin_location $tid; "

@@ -71,9 +71,6 @@ output_thread_specific_vruntimes(){
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
-        if [ $dew_iterator -gt 8 ]; then
-            break
-        fi
         dew_iterator=$((dew_iterator + 1))
         command_str+="echo 'ThreadID: $tid'; cat /proc/$tid/sched | grep se.sum_exec_runtime; "
     done

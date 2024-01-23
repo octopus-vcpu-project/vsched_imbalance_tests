@@ -120,6 +120,7 @@ ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 1
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p 8374 -I 1000"  >> "$OUTPUT_FILE" 2>&1
 
 ssh ubuntu@$prob_vm "$cpu_benchmark"   &
+sleep 2
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" 2>&1
 sleep 40
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"

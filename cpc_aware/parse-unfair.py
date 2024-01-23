@@ -30,21 +30,21 @@ def try_test(s):
     else:
         print("No matching files found.")
 def get_correct_range(v):
-    normal_len=200
+    normal_len=40
     correction_factor=300
-    corrective_factor = normal_len/len(v)
+    corrective_factor = normal_len/(len(v)-1)
     g=[]
-    print(range(1, len(v) + 1))
     for x in range(0,len(v)):
         g.append(x*corrective_factor)
+    print(g[len(v)-1])
     return g
 
-def graph_lst(lst,lst2,lst3):
+def graph_lst(lst,smrt_cs,nve_cs):
     
-    for k, v in lst3.items():
-        plt.plot(get_correct_range(v), v, '.-',color='green', label="dduh")
-    for k, v in lst2.items():
-        plt.plot(get_correct_range(v), v, '.-',color='red',label="dsuh")
+    for k, v in smrt_cs.items():
+        plt.plot(get_correct_range(v), v, '.-',color='green', label="smrt")
+    for k, v in nve_cs.items():
+        plt.plot(get_correct_range(v), v, '.-',color='red',label="naive")
 
     plt.legend()  # To draw legend
     plt.show()
@@ -52,6 +52,6 @@ def graph_lst(lst,lst2,lst3):
 
 biggest=-99999999999
 vruntime_per_thread = try_test("./test/unf-asym-pin-*.txt")
-vruntime_per_thread1 = try_test("./test/unf-asym-smrt-*.txt")
-vruntime_per_thread2 = try_test("./test/unf-asym-nve-*.txt")
-graph_lst(vruntime_per_thread,vruntime_per_thread1,vruntime_per_thread2)
+smrt_cs = try_test("./test/unf-asym-smrt-*.txt")
+nve_cs = try_test("./test/unf-asym-nve-*.txt")
+graph_lst(vruntime_per_thread,smrt_cs,nve_cs)

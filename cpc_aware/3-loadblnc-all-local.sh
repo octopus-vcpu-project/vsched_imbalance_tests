@@ -102,14 +102,13 @@ OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "$cpu_benchmark" &   
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" 2>&1 &
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" &
 declare -a mread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
 pin_threads_smartly "${mread_ids[@]}"
-
 echo "Finished pinning!"
 sleep 38
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"

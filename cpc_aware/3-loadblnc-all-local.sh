@@ -103,8 +103,8 @@ done
 echo "unf-asym-nve test complete"
 comm
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    
-sleep 2
+ssh ubuntu@$prob_vm "$cpu_benchmark" &   
+sleep 1
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
 
@@ -112,6 +112,7 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
+sleep 40
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 
 pin_threads_smartly "${mread_ids[@]}"

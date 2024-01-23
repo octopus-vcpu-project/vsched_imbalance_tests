@@ -52,6 +52,23 @@ pin_threads_smartly(){
         if [ $tid -eq $sysbench_pid ]; then
             continue
         fi 
+        elif [ $iterator -lt 64 ]; then
+            pin_location=$((iterator % 32))
+        fi
+        command_str+="taskset -cp $pin_location $tid; "
+        iterator=$((iterator + 1))
+    done
+    ssh ubuntu@"$prob_vm" "$command_str" >> "$OUTPUT_FILE"
+}
+1pin_threads_smartly(){
+    local threads=("$@")
+    local command_str=""
+    local iterator=0
+    local pin_location=0
+    for tid in "${threads[@]}"; do
+        if [ $tid -eq $sysbench_pid ]; then
+            continue
+        fi 
         if [ $iterator -lt 16 ]; then
             pin_location=$iterator
         elif [ $iterator -lt 64 ]; then
@@ -90,13 +107,13 @@ for i in {0..30};do
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
 echo "unf-sym-nve test complete"
-comm
+
 #this test is where half the cores are much weaker, assymetrically competed for.
 
 for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
-
+comm
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 for i in {0..30};do
     sleep 2
@@ -127,7 +144,7 @@ echo "unf-asym-pin test complete"
 OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
+ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 25000 &  " & 
 
 ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 3

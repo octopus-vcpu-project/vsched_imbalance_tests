@@ -92,7 +92,7 @@ ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o /home/ubuntu/testout.txt -e task-clock -p $sysbench_pid -I 1000"  &
-
+sleep 38
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
 scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE
 

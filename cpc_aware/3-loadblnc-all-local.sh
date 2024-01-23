@@ -109,6 +109,8 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     new_iterator=$((new_iterator + 1))
 done
 pin_threads_smartly "${mread_ids[@]}"
+
+echo "Finished pinning!"
 sleep 38
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
 scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE

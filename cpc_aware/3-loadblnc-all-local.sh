@@ -27,7 +27,7 @@ for i in {0..31};do
     sudo virsh vcpupin $compete_vm $i $(((i%16) + 20))
 done
 
-ssh ubuntu@$compete_vm "sudo $compete_benchmark" 
+ssh ubuntu@$compete_vm "sudo $compete_benchmark" &
 wipe_clean(){
     local local_prob_vm=$1
     ssh ubuntu@"$local_prob_vm" "sudo killall sysbench"

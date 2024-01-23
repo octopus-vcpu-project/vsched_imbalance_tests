@@ -88,10 +88,10 @@ done
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
 
 wipe_clean $prob_vm
-#ssh ubuntu@$prob_vm "$cpu_benchmark"    &
+ssh ubuntu@$prob_vm "$cpu_benchmark"    &
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o /home/ubuntu/testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" 2>&1 
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o /home/ubuntu/testout.txt -e task-clock -p $sysbench_pid -I 1000"  &
 
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
 scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE
@@ -102,7 +102,7 @@ OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 ssh ubuntu@$prob_vm "$cpu_benchmark" &   
 sleep 2
 sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  &
 declare -a mread_ids
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     mread_ids+=($tid)
@@ -118,11 +118,9 @@ OUTPUT_FILE="./test/unf-asym-smrt-$(date +%m%d%H%M).txt"
 wipe_clean $prob_vm
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/joe.out -v -i 500 -s 15000 &  " & 
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p 8374 -I 1000"  >> "$OUTPUT_FILE" 2>&1
-
 ssh ubuntu@$prob_vm "$cpu_benchmark"   &
 sleep 2
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000"  >> "$OUTPUT_FILE" 2>&1
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/perf/perf stat -a --per-thread -o testout.txt -e task-clock -p $sysbench_pid -I 1000" &
 sleep 40
 ssh ubuntu@$prob_vm "sudo kill -s SIGINT $(pidof perf)"
 scp ubuntu@$prob_vm:/home/ubuntu/testout.txt ./$OUTPUT_FILE

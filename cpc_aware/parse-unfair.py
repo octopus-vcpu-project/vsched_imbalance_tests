@@ -29,15 +29,24 @@ def try_test(s):
             return vruntime_per_thread
     else:
         print("No matching files found.")
+def get_correct_range(v):
+    normal_len=200
+    correction_factor=300
+    corrective_factor = normal_len/len(v)
+    g=[]
+    print(range(1, len(v) + 1))
+    for x in range(0,len(v)):
+        g.append(x*corrective_factor)
+    return g
 
 def graph_lst(lst,lst2,lst3):
     
     for k, v in lst3.items():
-        plt.plot(range(1, len(v) + 1), v, '.-',color='green', label="dduh")
+        plt.plot(get_correct_range(v), v, '.-',color='green', label="dduh")
     for k, v in lst2.items():
-        plt.plot(range(1, len(v) + 1), v, '.-',color='red',label="dsuh")
+        plt.plot(get_correct_range(v), v, '.-',color='red',label="dsuh")
     for k, v in lst.items():
-        plt.plot(range(1, len(v) + 1), v, '.-',color='blue', label="duh")
+        plt.plot(get_correct_range(v), v, '.-',color='blue', label="duh")
 
     plt.legend()  # To draw legend
     plt.show()

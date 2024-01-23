@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=64 --time=80 cpu run"
+cpu_benchmark="sysbench --threads=64 --time=160 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
@@ -95,8 +95,7 @@ for i in {0..15};do
     sudo echo $((runtime/3)) $period > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
 done
 OUTPUT_FILE="./test/unf-asym-nve-$(date +%m%d%H%M).txt"
-for i in {0..30};do
-    
+for i in {0..35};do
     sleep 2
     output_thread_specific_vruntimes "${thread_ids[@]}"
 done
@@ -109,9 +108,6 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a mread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -gt 12 ]; then
-            break
-    fi 
     mread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
@@ -120,7 +116,7 @@ echo "unf-asym-nve test complete"
 
 pin_threads_smartly "${mread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
-for i in {0..30};do
+for i in {0..35};do
     sleep 2
     output_thread_specific_vruntimes "${mread_ids[@]}"
 done
@@ -137,16 +133,13 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a smrt_thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
-    if [ $new_iterator -gt 12 ]; then
-            break
-    fi 
     smrt_thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
 
 
 
-for i in {0..30};do
+for i in {0..35};do
     sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done

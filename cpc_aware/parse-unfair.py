@@ -39,17 +39,19 @@ def get_correct_range(v):
     print(g[len(v)-1])
     return g
 
-def graph_lst(lst,smrt_cs,nve_cs):
+def graph_lst(pin_cs,smrt_cs,nve_cs):
     
-    for k, v in nve_cs.items():
-        plt.plot(get_correct_range(v), v, '.-',color='red',label="naive")
+    for k, v in pin_cs.items():
+        plt.plot(get_correct_range(v), v, '.-',color='green', label="pinned")
+    for k, v in smrt_cs.items():
+        plt.plot(get_correct_range(v), v, '.-',color='red',label="smrt")
 
     plt.legend()  # To draw legend
     plt.show()
 
 
 biggest=-99999999999
-vruntime_per_thread = try_test("./test/unf-asym-pin-*.txt")
+pin_cs = try_test("./test/unf-asym-pin-*.txt")
 smrt_cs = try_test("./test/unf-asym-smrt-*.txt")
 nve_cs = try_test("./test/unf-asym-nve-*.txt")
-graph_lst(vruntime_per_thread,smrt_cs,nve_cs)
+graph_lst(pin_cs,smrt_cs,nve_cs)

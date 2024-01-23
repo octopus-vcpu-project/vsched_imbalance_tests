@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-dis-hrd$(date +%m%d%H%M).txt"
 prob_vm=$1
 runtime=$2
 period=$3
-cpu_benchmark="sysbench --threads=64 --time=60 cpu run"
+cpu_benchmark="sysbench --threads=64 --time=90 cpu run"
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 #Fetch VM PID and use that to fetch Cgroup title
@@ -37,6 +37,10 @@ sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 declare -a thread_ids
 new_iterator=0
 for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
+    if [ $new_iterator -gt 8 ]; then
+        break
+    fi
+    mread_ids+=($tid)
     thread_ids+=($tid)
     new_iterator=$((new_iterator + 1))
 done
@@ -118,8 +122,8 @@ echo "unf-asym-nve test complete"
 
 pin_threads_smartly "${mread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
-for i in {0..20};do
-    sleep 3
+for i in {0..30};do
+    sleep 2
     output_thread_specific_vruntimes "${mread_ids[@]}"
 done
 echo "unf-asym-pin test complete"
@@ -145,8 +149,8 @@ done
 
 
 
-for i in {0..20};do
-    sleep 3
+for i in {0..30};do
+    sleep 2
     output_thread_specific_vruntimes "${smrt_thread_ids[@]}"
 done
 wipe_clean $prob_vm

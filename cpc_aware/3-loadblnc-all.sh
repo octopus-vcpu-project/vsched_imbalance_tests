@@ -118,10 +118,6 @@ for tid in $(ssh ubuntu@$prob_vm "ls /proc/$sysbench_pid/task");do
     new_iterator=$((new_iterator + 1))
 done
 
-wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "$cpu_benchmark"    &
-sleep 3
-sysbench_pid=$(ssh ubuntu@$prob_vm "pidof sysbench")
 pin_threads_smartly "${mread_ids[@]}"
 OUTPUT_FILE="./test/unf-asym-pin-$(date +%m%d%H%M).txt"
 for i in {0..30};do

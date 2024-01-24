@@ -1,12 +1,12 @@
 prob_vm=$1
-bench_1_=("/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" )
-bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
-bench_1_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
+#bench_1_=("/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" )
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_1_=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
 
 
-bench_2_=("/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:4054/test.html" )
-bench_2_+=("/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
-bench_2_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
+#bench_2_=("/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:4054/test.html" )
+#bench_2_+=("/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_2_=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
 
 comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
 #comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native"

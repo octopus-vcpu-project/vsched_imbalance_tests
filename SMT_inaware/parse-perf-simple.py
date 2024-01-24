@@ -81,5 +81,5 @@ nginx_matmul1 = {
 
 
 
-plot_grouped_data_with_legends(nginx_matmul1,["NGNIX+Matmul"])
+plot_grouped_data_with_legends(nginx_matmul1,["NGNIX+Matmul","NGINX+FIO"])
 

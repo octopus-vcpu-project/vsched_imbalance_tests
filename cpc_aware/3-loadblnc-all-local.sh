@@ -33,11 +33,12 @@ done
 
 
 wipe_clean $prob_vm
-
-ssh ubuntu@$compete_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$compete_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
+sleep 5
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_profiler.out -v -i 5 -s 15000 &  " & 
 sleep 10 
-ssh ubuntu@$compete_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$compete_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE2" 
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 

@@ -66,9 +66,10 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
 # Initialize an empty list to hold the counts
 
 data = {
-    "CFS":[1,3],
-    "CFS+vProber":[4,5],
-    "CFS+Pinned":[2,3]
+    "Matmul":[25642],
+    "Nginx":[2549.80],
+    "Matmul+vProber":[29205],
+    "Nginx+vProber":[2675.44]
 }
 
 

@@ -54,7 +54,7 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
         # Apply a different hatch pattern to each group
 
         hatch = hatches[i % len(hatches)]
-        print(i)
+        print(measurement)
         rects = ax.bar(x + offset, measurement, width, edgecolor=colors[i],color=other_colors[i],lw=2.,label=attribute,hatch=hatch)
         if(i==3):
             colors[3] = 'yellow'

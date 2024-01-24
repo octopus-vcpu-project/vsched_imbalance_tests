@@ -47,7 +47,7 @@ sleep 10
 
 echo "raw performance test complete"
 
-sudo perf stat -B -o "$PERF_OUTPUT" -C 20-40 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+sudo /home/ubuntu/vsched/tools/perf stat -B -o "$PERF_OUTPUT" -C 20-40 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
 sudo kill -s SIGINT $(pidof perf)
 
@@ -66,7 +66,6 @@ echo "ipi test complete"
 #   sleep 1
 #    ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT"
 #done
-wait
 ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 
@@ -76,7 +75,7 @@ ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2"
 echo "test finished"
 sleep 20
 
-sudo perf stat -B -o "$PERF_OUTPUT2" -C 20-40 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions  &
+sudo /home/ubuntu/vsched/tools/perf stat -B -o "$PERF_OUTPUT2" -C 20-40 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions  &
 ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
 sudo kill -s SIGINT $(pidof perf)
 

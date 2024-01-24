@@ -70,6 +70,9 @@ def process_file(n,s,t):
                     accum_calculation = interval_values_1[-1] + calculation_num * 3
                     interval_values_1.append(accum_calculation)
                 elif "total number of events" in line:
+                    if(len(interval_values_1)==21):
+                        interval_values_1.pop()
+                    print("blah",len(interval_values_1))
                     interval_values_1.append(int(line.split()[-1]))
                     if(t==1):
                         interval_values_1 = [0]
@@ -82,6 +85,8 @@ def plot_len(new_test,len1,color):
     x_values = list(range(len(new_test)))
     for x in range(0,len(x_values)-1):
         x_values[x] = x_values[x] * 3
+    x_values[-1] = x_values[-2] + 3
+    print(x_values)
     # Create the plot
     # Plot the first line
     plt.plot(x_values, new_test, color=color,label=len1, marker='o')

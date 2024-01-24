@@ -39,7 +39,6 @@ OUTPUT_FILE="./tests/top_plc_naive$(date +%m%d%H%M).txt"
 toggle_topological_passthrough 0
 
 
-
 for i in {0..80};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2
@@ -47,7 +46,8 @@ for i in {0..80};do
     sleep 2
 done
 
-toggle_topological_passthrough 1
+
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 
 OUTPUT_FILE="./tests/top_plc_smart$(date +%m%d%H%M).txt"
 for i in {0..80};do 

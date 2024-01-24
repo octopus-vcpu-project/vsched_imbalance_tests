@@ -63,4 +63,11 @@ for io_bench in "${io_benchmarks[@]}"; do
     done
 done
 
+for io_bench in "${io_benchmarks[@]}"; do
+    for cpu_bench in "${cpu_benchmarks[@]}"; do
+        test_smt_pair "$cpu_bench" "$io_bench"
+    done
+done
+
+
 ssh ubuntu@$prob_vm "sudo rm -rf /home/ubuntu/tmp"

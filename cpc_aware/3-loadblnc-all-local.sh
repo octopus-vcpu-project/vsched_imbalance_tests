@@ -9,7 +9,7 @@ OUTPUT_FILE2="./test/2-freq-unfair$(date +%m%d%H%M).txt"
 prob_vm=$1
 compete_vm=$2
 
-cpu_benchmark="sysbench --threads=32 --time=40 cpu run"
+cpu_benchmark="sysbench --threads=8 --time=40 cpu run"
 compete_benchmark="sysbench --threads=8 --time=10000 cpu run"
 
 wipe_clean(){

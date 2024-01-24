@@ -22,7 +22,6 @@ done
 
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"

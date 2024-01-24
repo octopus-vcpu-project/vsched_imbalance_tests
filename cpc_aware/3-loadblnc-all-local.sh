@@ -42,3 +42,4 @@ ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -v -i 5
 sleep 10 
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 
+sleep 10

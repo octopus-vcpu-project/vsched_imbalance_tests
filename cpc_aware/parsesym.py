@@ -27,7 +27,19 @@ def process_file(n,s):
         print(f"No matching file found for index {n}")
         return []
 
+nginx_matmul = {
+    "Matmul":[25642,35887],
+    "Nginx":[2549.80,55.4],
+    "Matmul+vProber":[29205,42442],
+    "Nginx+vProber":[2675.44,54.9]
+}
 
+nginx_matmul1 = {
+    "Matmul":[100,100],
+    "Nginx":[100,100],
+    "Matmul+vProber":[113.89,118.26],
+    "Nginx+vProber":[104.927,99.097]
+}
 
 
 def plot_grouped_data_with_legends(data_dict, name_parameters):

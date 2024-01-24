@@ -7,6 +7,15 @@ idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python parselats-1.py ../img-dnn/lats.bin"
 OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
+sudo bash ../utility/cleanon_startup.sh $prob_vm 32
+sleep 2
+vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
+vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
+#PIN VCPUS and limit CPU usage using CGROUP
+
+ssh ubuntu@$prob_vm "sudo killall sysbench" 
+
+
 
 wake_and_pin_vm(){
     select_vm=$1
@@ -32,6 +41,9 @@ runLatencyTest(){
 setLatency(){
     set_latency=$1
     sudo echo $1 > /sys/kernel/debug/sched/min_granularity_ns
+    for i in {0..31};do
+        sudo echo $1 $((i * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
     echo "Set latency to $1" 
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
@@ -81,7 +93,6 @@ runAllTests(){
 }
 
 
-toggle_topological_passthrough 0
 wake_and_pin_vm $compete_vm
 #Fetch VM PID and use that to fetch Cgroup title
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)

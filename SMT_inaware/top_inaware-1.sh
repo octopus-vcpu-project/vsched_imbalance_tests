@@ -36,7 +36,6 @@ done
 
 
 OUTPUT_FILE="./tests/top_plc_naive$(date +%m%d%H%M).txt"
-toggle_topological_passthrough 0
 
 
 for i in {0..80};do 

@@ -75,19 +75,23 @@ def process_file(n,s):
                     return interval_values_1
     else:
         print("No matching files found.")
+def plot_len(x_values):
+    x_values = list(range(len(interval_values_1)))
+    for x in range(0,len(x_values)-1):
+        x_values[x] = x_values[x] * 2
+    x_values[-1] = x_values[-2] + 1
+    # Create the plot
+    
+    plt.plot(x_values, interval_values_1, label='instance 2', marker='x')
 
-interval_values_1 = process_file(1,"./test/1-freq-unfair*.txt")
-# Generate x-values based on the length of y-values
-x_values = list(range(len(interval_values_1)))
-for x in range(0,len(x_values)-1):
-    x_values[x] = x_values[x] * 2
-x_values[-1] = x_values[-2] + 1
-# Create the plot
+
 plt.figure()
+intvl2 = process_file(1,"./test/2-freq-unfair*.txt")
+plot_len(intvl2)
+# Generate x-values based on the length of y-values
 
 
 # Plot the second line
-plt.plot(x_values, interval_values_2, label='instance 2', marker='x')
 
 # Add titles and labels
 plt.xlabel('Index')

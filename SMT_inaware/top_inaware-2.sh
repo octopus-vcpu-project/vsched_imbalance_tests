@@ -42,8 +42,6 @@ test_smt_pair() {
     fi
     sleep 2
     ssh ubuntu@$prob_vm "sudo killall php"
-    
-    wait
     ssh ubuntu@$prob_vm "sudo killall nginx"
     ssh ubuntu@$prob_vm "sudo killall php"
     

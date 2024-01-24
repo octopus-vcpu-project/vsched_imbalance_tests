@@ -65,7 +65,7 @@ run_cpu_bench_output() {
     ssh ubuntu@$prob_vm "sudo $cpu_bench_1" >> "$OUTPUT_FILE2" 
     sleep 5
 }
-ssh ubuntu@$prob_vm "sudo sysbench cpu run --time=10 --threads=64 cpu run"
+ssh ubuntu@$prob_vm "sudo sysbench cpu run --time=10 --threads=64  "
 length=${#bench_1_[@]}
 for ((i=0; i<length; i++)); do
     if [ $i -eq 0 ]; then

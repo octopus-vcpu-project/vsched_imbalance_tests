@@ -94,7 +94,7 @@ for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     bench_2=${bench_2_[$i]}
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
-    run_cpu_bench_output "$bench_1" "$bench_2"
+    run_cpu_bench "$bench_1" "$bench_2"
     ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 done
 sleep 3
@@ -137,7 +137,7 @@ for ((i=0; i<length; i++)); do
     bench_2=${bench_2_[$i]}
 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
-    run_cpu_bench_output "$bench_1" "$bench_2"
+    run_cpu_bench "$bench_1" "$bench_2"
     ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
 done
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"

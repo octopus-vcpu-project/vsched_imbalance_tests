@@ -11,7 +11,7 @@ prob_vm=$1
 compete_vm=$2
 
 cpu_benchmark="sysbench --threads=8 --time=40 cpu run"
-compete_benchmark="sysbench --threads=8 --time=10000 cpu run"
+compete_benchmark="sysbench --threads=64 --time=10000 cpu run"
 
 wipe_clean(){
     local local_prob_vm=$1
@@ -21,13 +21,17 @@ wipe_clean(){
 
 
 sudo bash ../utility/cleanon_startup.sh $prob_vm 16
-sudo bash ../utility/cleanon_startup.sh $compete_vm 8
+sudo bash ../utility/cleanon_startup.sh $compete_vm 28
 
 
 for i in {0..7};do
     sudo virsh vcpupin $compete_vm $i $((i))
 done
 
+for i in {8..27};do
+    sudo virsh vcpupin $compete_vm $i $((i+72))
+done
+ 
 for i in {0..15};do
     sudo virsh vcpupin $prob_vm $i $((i + 8))
 done

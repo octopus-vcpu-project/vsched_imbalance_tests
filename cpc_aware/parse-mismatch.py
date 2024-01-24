@@ -73,6 +73,7 @@ def process_file(n,s,t):
                     interval_values_1.append(int(line.split()[-1]))
                     if(t==1):
                         interval_values_1 = [0]
+                        t=0
                     else:
                         return interval_values_1
     else:

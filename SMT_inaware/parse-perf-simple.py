@@ -44,9 +44,9 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     
     width = 0.08  # the width of the bars
     multiplier = 0
-    hatches = ['/', 'x', 'o']  # List of patterns
-    colors=['red','green','blue']
-    other_colors=['none','none','blue']
+    hatches = ['/', 'x', 'o','+']  # List of patterns
+    colors=['red','green','blue','yellow']
+    other_colors=['none','none','blue','none']
     fig, ax = plt.subplots(layout='constrained')
 
     for i, (attribute, measurement) in enumerate(data_dict.items()):
@@ -66,12 +66,12 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
 # Initialize an empty list to hold the counts
 
 data = {
-    "Matmul":[25642,3],
-    "Nginx":[2549.80,3],
-    "Matmul+vProber":[29205,3],
-    "Nginx+vProber":[2675.44,3]
+    "Matmul":[25642],
+    "Nginx":[2549.80],
+    "Matmul+vProber":[29205],
+    "Nginx+vProber":[2675.44]
 }
 
 
-plot_grouped_data_with_legends(data,["NGNIX+Matmul","new"])
+plot_grouped_data_with_legends(data,["NGNIX+Matmul"])
 

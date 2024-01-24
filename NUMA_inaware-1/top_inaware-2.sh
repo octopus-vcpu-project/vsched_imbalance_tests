@@ -1,12 +1,12 @@
 prob_vm=$1
-#bench_1_=("/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" )
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
-bench_1_=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
+bench_1_=("/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" )
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_1_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
 
 
-#bench_2_=("/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:4054/test.html" )
-#bench_2_+=("/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
-bench_2_=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
+bench_2_=("/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:4054/test.html" )
+bench_2_+=("/home/ubuntu/Workloads/parsec-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_2_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
 
 comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
 #comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native"
@@ -46,7 +46,7 @@ PLC_OUTPUT="./tests/plc_out$(date +%m%d%H%M).txt"
 PLC_OUTPUT2="./tests/plc_out2$(date +%m%d%H%M).txt"
 BPF_OUTPUT="./tests/bpf_out23.txt"
 PERF_OUTPUT="./tests/perf_out_first$(date +%m%d%H%M).txt"
-PERF_OUTPUT2="./tests/perf_out_second$(date +%m%d%H%M).txt"
+PERF_OUTPUTa2="./tests/perf_out_second$(date +%m%d%H%M).txt"
 
 run_cpu_bench() {
     local cpu_bench=$1
@@ -81,7 +81,7 @@ length=${#bench_1_[@]}
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     bench_2=${bench_2_[$i]}
-    sudo /home/vsched/tools/perf/perf stat -B -o "$PERF_OUTPUT" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+    sudo /home/vsched/tools/perf/perf stat -B -o "${PERF_OUTPUT}_$i" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
     ssh ubuntu@$prob_vm "sudo $bench_1 & sudo $bench_2" 
     sudo kill -s SIGINT $(pidof perf)
     sleep 3
@@ -109,7 +109,7 @@ echo "ipi test complete"
 #done
 ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
-
+sleep 5
 echo "starting smart test suite"
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
@@ -122,7 +122,7 @@ echo "raw performance test complete"
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     bench_2=${bench_2_[$i]}
-    sudo /home/vsched/tools/perf/perf stat -B -o "$PERF_OUTPUT" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+    sudo /home/vsched/tools/perf/perf stat -B -o "${PERF_OUTPUTa2}_$i" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
     ssh ubuntu@$prob_vm "sudo $bench_1 & sudo $bench_2" 
     sudo kill -s SIGINT $(pidof perf)
     sleep 3

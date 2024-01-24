@@ -34,7 +34,7 @@ test_smt_pair() {
     ssh ubuntu@$prob_vm "sudo killall sysbench" 
     ssh ubuntu@$prob_vm "$cpu_bench" >> "$OUTPUT_FILE" & 
     ssh ubuntu@$prob_vm "$io_bench" >> "$OUTPUT_FILE2"
-    wait
+    sleep 10
     if [[ $io_bench == *nginx* ]]; then
         ssh ubuntu@$prob_vm "sudo killall nginx"
         ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
@@ -57,7 +57,7 @@ for io_bench in "${io_benchmarks[@]}"; do
 done
 
 ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-ssh ubuntu@$prob_vm "sudo nohup /home/ubuntu/vtop/a.out -f 1000 &" &
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000 &" & 
 echo "running  smart" >> $OUTPUT_FILE 
 echo "running smart  smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
 

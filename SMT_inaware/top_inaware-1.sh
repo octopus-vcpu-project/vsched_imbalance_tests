@@ -45,7 +45,7 @@ for i in {0..80};do
     sleep 2
 done
 
-
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/setup_vtop.sh" 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 
 OUTPUT_FILE="./tests/top_plc_smart$(date +%m%d%H%M).txt"

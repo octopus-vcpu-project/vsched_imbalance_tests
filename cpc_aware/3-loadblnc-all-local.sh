@@ -35,7 +35,7 @@ done
 wipe_clean $prob_vm
 ssh ubuntu@$compete_vm "$compete_benchmark" &
 sleep 5
-ssh ubuntu@$prob_vm "sudo $cpu_benchmark"
+ssh ubuntu@$prob_vm "sudo sysbench --threads=16 --time=20 cpu run"
 
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 

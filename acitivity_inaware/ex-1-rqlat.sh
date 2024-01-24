@@ -7,7 +7,7 @@ compete_vm1=$2
 compete_vm2=$3
 compete_vm3=$4
 benchmark_time=20
-main_command="sysbench --threads=32 --time=30000 cpu run"
+main_command="sysbench --threads=64 --time=30000 cpu run"
 
 OUTPUT_FILE="./tests/acitivity_inaware-1$(date +%m%d%H%M).txt"
 

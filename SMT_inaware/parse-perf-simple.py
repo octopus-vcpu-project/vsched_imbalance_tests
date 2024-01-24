@@ -48,7 +48,7 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     colors=['blue','green','blue','green']
     other_colors=['blue','none','blue','none']
     fig, ax = plt.subplots(layout='constrained')
-
+    iterate=False
     for i, (attribute, measurement) in enumerate(data_dict.items()):
         offset = width * multiplier
         # Apply a different hatch pattern to each group
@@ -56,6 +56,9 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
         hatch = hatches[i % len(hatches)]
         print(i)
         rects = ax.bar(x + offset, measurement, width, edgecolor=colors[i],color=other_colors[i],lw=2.,label=attribute,hatch=hatch)
+        if(i==3):
+            colors[3] = 'yellow'
+            colors[1] = 'yellow'
         multiplier += 1
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
@@ -80,5 +83,5 @@ nginx_matmul1 = {
 
 
 
-plot_grouped_data_with_legends(nginx_matmul1,["NGNIX+Matmul","NGINX+FIO"])
+plot_grouped_data_with_legends(nginx_matmul1,["Matmul+NGNIX","Matmul+FIO"])
 

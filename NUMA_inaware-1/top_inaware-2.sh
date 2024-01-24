@@ -134,6 +134,7 @@ ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 sleep 5
 echo "starting smart test suite"
+ssh ubuntu@$prob_vm "sudo sysbench cpu run --time=10 --threads=64  "
 for ((i=0; i<length; i++)); do
     if [ $i -eq 0 ]; then
         ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"

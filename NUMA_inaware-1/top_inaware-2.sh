@@ -1,4 +1,13 @@
 prob_vm=$1
+bench_1_=("/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" )
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_1_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
+
+
+bench_2_=("/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" )
+bench_2_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_2_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
+
 comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
 #comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native"
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
@@ -40,23 +49,52 @@ BPF_OUTPUT="./tests/bpf_out23.txt"
 PERF_OUTPUT="./tests/perf_out_first$(date +%m%d%H%M).txt"
 PERF_OUTPUT2="./tests/perf_out_second$(date +%m%d%H%M).txt"
 
+run_cpu_bench() {
+    local cpu_bench=$1
+    local cpu_bench_1=$2
+    echo "first pass"
+    ssh ubuntu@$prob_vm "sudo $cpu_bench"&
+    ssh ubuntu@$prob_vm "sudo $cpu_bench_1"
+    sleep 5
+}
 
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
+run_cpu_bench_output() {
+    local cpu_bench=$1
+    local cpu_bench_1=$2
+    echo "first pass"
+    ssh ubuntu@$prob_vm "sudo $cpu_bench" >> "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo $cpu_bench_1" >> "$OUTPUT_FILE2" 
+    sleep 5
+}
+
+for bench_1 in "${bench_1_[@]}"; do
+    for bench_2 in "${bench_2_[@]}"; do
+        run_cpu_bench_output "$bench_1" "$bench_2"
+    done
+done
 sleep 10
 
 echo "raw performance test complete"
 
-sudo /home/vsched/tools/perf/perf stat -B -o "$PERF_OUTPUT" -C 20-40 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
-sudo kill -s SIGINT $(pidof perf)
+for bench_1 in "${bench_1_[@]}"; do
+    for bench_2 in "${bench_2_[@]}"; do
+        sudo /home/vsched/tools/perf/perf stat -B -o "$PERF_OUTPUT" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+        ssh ubuntu@$prob_vm "sudo $bench_1 & sudo $bench_2" 
+        sudo kill -s SIGINT $(pidof perf)
+        sleep 3
+    done
+done
+
 
 echo "cache test complete"
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
-ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
-sleep 20
+for bench_1 in "${bench_1_[@]}"; do
+    for bench_2 in "${bench_2_[@]}"; do
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
+        run_cpu_bench_output "$bench_1" "$bench_2"
+        ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
+    done
+done
+sleep 3
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"
 
 echo "ipi test complete"
@@ -70,30 +108,37 @@ ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 
 echo "starting smart test suite"
-ssh ubuntu@$prob_vm "sudo $comm_benchmark" >> "$OUTPUT_FILE" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1" >> "$OUTPUT_FILE2" 
-echo "test finished"
-sleep 20
-
-sudo /home/vsched/tools/perf/perf stat -B -o "$PERF_OUTPUT2" -C 20-40 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions  &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark & sudo $comm_benchmark_1" 
-sudo kill -s SIGINT $(pidof perf)
-
+for bench_1 in "${bench_1_[@]}"; do
+    for bench_2 in "${bench_2_[@]}"; do
+        run_cpu_bench_output "$bench_1" "$bench_2"
+    done
+done
 sleep 10
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
-ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
-ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"
-ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
-sleep 20
+
+echo "raw performance test complete"
+
+for bench_1 in "${bench_1_[@]}"; do
+    for bench_2 in "${bench_2_[@]}"; do
+        sudo /home/vsched/tools/perf/perf stat -B -o "$PERF_OUTPUT" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
+        ssh ubuntu@$prob_vm "sudo $bench_1 & sudo $bench_2" 
+        sudo kill -s SIGINT $(pidof perf)
+        sleep 3
+    done
+done
+
+
+echo "cache test complete"
+for bench_1 in "${bench_1_[@]}"; do
+    for bench_2 in "${bench_2_[@]}"; do
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
+        run_cpu_bench_output "$bench_1" "$bench_2"
+        ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
+    done
+done
+sleep 3
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"
 
-#ssh ubuntu@$prob_vm "sudo $comm_benchmark"&
-#ssh ubuntu@$prob_vm "sudo $comm_benchmark_1"&
-#for i in {0..20};do 
-    #sleep 1
-    #ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$PLC_OUTPUT2"
-#done
-
+echo "ipi test complete"
 
 
 

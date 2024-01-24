@@ -44,7 +44,6 @@ def extract_seconds(input_string):
 # Initialize an empty list to hold the counts
 summed_cpu_sysbench = 0
 amount_cpu_sysbench = 0
-interval_values_1 = [0]
 interval_values_2 = [0]
 
 
@@ -53,8 +52,9 @@ interval_values_2 = [0]
 
 
 
-def process_file(n,s):
+def process_file(n,s,t):
 # Read the latest file if one exists
+    interval_values_1 = [0]
     files = glob.glob(s)
     files.sort(reverse=True)
     if len(files) >= n:
@@ -71,23 +71,40 @@ def process_file(n,s):
                     interval_values_1.append(accum_calculation)
                 elif "total number of events" in line:
                     interval_values_1.append(int(line.split()[-1]))
-                    print(interval_values_1)
-                    return interval_values_1
+                    if(t==1):
+                        interval_values_1 = [0]
+                    else:
+                        return interval_values_1
     else:
         print("No matching files found.")
-def plot_len(x_values):
-    x_values = list(range(len(interval_values_1)))
+def plot_len(new_test,len1):
+    x_values = list(range(len(new_test)))
     for x in range(0,len(x_values)-1):
         x_values[x] = x_values[x] * 2
     x_values[-1] = x_values[-2] + 1
     # Create the plot
-    
-    plt.plot(x_values, interval_values_1, label='instance 2', marker='x')
+    # Plot the first line
+    plt.plot(x_values, new_test, label=len1, marker='o')
 
 
 plt.figure()
-intvl2 = process_file(1,"./test/2-freq-unfair*.txt")
-plot_len(intvl2)
+intvl2 = process_file(1,"./test/2-freq-unfair*.txt",0)
+plot_len(intvl2,"len1")
+intvl2 = process_file(1,"./test/1-freq-unfair*.txt",0)
+plot_len(intvl2,"len2")
+intvl2 = process_file(1,"./test/3-freq-unfair*.txt",0)
+plot_len(intvl2,"len3")
+intvl2 = process_file(1,"./test/4-freq-unfair*.txt",0)
+plot_len(intvl2,"len4")
+
+intvl2 = process_file(1,"./test/2-freq-unfair*.txt",1)
+plot_len(intvl2,"len1")
+intvl2 = process_file(1,"./test/1-freq-unfair*.txt",1)
+plot_len(intvl2,"len2")
+intvl2 = process_file(1,"./test/3-freq-unfair*.txt",1)
+plot_len(intvl2,"len3")
+intvl2 = process_file(1,"./test/4-freq-unfair*.txt",1)
+plot_len(intvl2,"len4")
 # Generate x-values based on the length of y-values
 
 

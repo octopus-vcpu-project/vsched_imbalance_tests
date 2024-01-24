@@ -33,7 +33,7 @@ done
 
 
 wipe_clean $prob_vm
-ssh ubuntu@$prob_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$compete_benchmark "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
 sleep 5
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 

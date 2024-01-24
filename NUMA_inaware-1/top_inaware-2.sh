@@ -6,22 +6,31 @@ virsh shutdown $prob_vm
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"
-#comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
-comm_benchmark_1="sleep 65"
+comm_benchmark_1="/var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:4054/test.html" 
+#comm_benchmark_1="sleep 65"
 
 for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
 done
 
 for i in {16..31};do
-        sudo virsh vcpupin $prob_vm $i $((i + 40))
+        sudo virsh vcpupin $prob_vm $i $((i + 40 ))
 done
 
+toggle_topological_passthrough(){
+   echo "Pinning Complete"
+   ssh ubuntu@$prob_vm "sudo killall nginx"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+   sleep 10
+   ssh ubuntu@$prob_vm "sudo killall mysqld"
+} 
 
 
 
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
+toggle_topological_passthrough 0
 #blind
 OUTPUT_FILE="./tests/numa_inst1$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./tests/numa_inst2$(date +%m%d%H%M).txt"

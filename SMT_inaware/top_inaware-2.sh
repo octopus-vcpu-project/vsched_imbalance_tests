@@ -55,7 +55,7 @@ for io_bench in "${io_benchmarks[@]}"; do
     done
 done
 
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/setup_vtop.sh" 
+ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 echo "running  smart" >> $OUTPUT_FILE 
 echo "running smart  smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench

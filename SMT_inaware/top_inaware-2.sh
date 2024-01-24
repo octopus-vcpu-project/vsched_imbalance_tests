@@ -49,6 +49,7 @@ test_smt_pair() {
     
 }
 
+
 for io_bench in "${io_benchmarks[@]}"; do
     for cpu_bench in "${cpu_benchmarks[@]}"; do
         test_smt_pair "$cpu_bench" "$io_bench"
@@ -56,7 +57,7 @@ for io_bench in "${io_benchmarks[@]}"; do
 done
 
 ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
+ssh ubuntu@$prob_vm "sudo nohup /home/ubuntu/vtop/a.out -f 1000 &" &
 echo "running  smart" >> $OUTPUT_FILE 
 echo "running smart  smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
 

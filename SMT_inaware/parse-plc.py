@@ -4,7 +4,7 @@ from collections import Counter
 
 # Find all files that match the 'sym-plc*' pattern
 files = glob.glob("../SMT_inaware/tests/top_plc_naive012*.txt")
-files2 = glob.glob("../SMT_inaware/tests/top_plc_smart012*.txt")
+files2 = glob.glob("../SMT_inaware/tests/top_plc_smart0124032*.txt")
 
 # Sort the files to get the latest one
 files.sort(reverse=True)

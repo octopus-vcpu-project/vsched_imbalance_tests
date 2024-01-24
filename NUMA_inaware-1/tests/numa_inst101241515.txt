@@ -1,0 +1,84 @@
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    74.53ms  141.07ms   1.99s    96.60%
+    Req/Sec   634.49    193.92     1.07k    65.67%
+  228817 requests in 1.00m, 25.21GB read
+  Socket errors: connect 0, read 0, write 0, timeout 598
+Requests/sec:   3810.58
+Transfer/sec:    429.91MB
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 16 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m13.732s
+user	1m18.394s
+sys	0m12.647s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Running in threaded mode with 4 groups using 4 file descriptors each (== 16 tasks)
+Each sender will pass 4000000 messages of 2000 bytes
+Time: 44.305
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   112.13ms  252.83ms   1.80s    93.92%
+    Req/Sec   680.17    169.25     1.07k    78.47%
+  210413 requests in 1.00m, 23.18GB read
+  Socket errors: connect 0, read 0, write 0, timeout 1709
+Requests/sec:   3500.75
+Transfer/sec:    394.99MB
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 16 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m11.703s
+user	0m57.087s
+sys	0m16.909s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Running in threaded mode with 4 groups using 4 file descriptors each (== 16 tasks)
+Each sender will pass 4000000 messages of 2000 bytes
+Time: 35.625

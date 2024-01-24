@@ -3,12 +3,12 @@
 competed for VCPUS. Note that the linux scheduler actually does do a fine job of intra process fairness.'
 
 
-OUTPUT_FILE="./test/freq-unfair$(date +%m%d%H%M).txt"
-OUTPUT_FILE2="./test/freq-unfair$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./test/1-freq-unfair$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./test/2-freq-unfair$(date +%m%d%H%M).txt"
 
 prob_vm=$1
 compete_vm=$2
-compete_vm1=$3
+
 cpu_benchmark="sysbench --threads=32 --time=40 cpu run"
 compete_benchmark="sysbench --threads=8 --time=10000 cpu run"
 
@@ -33,7 +33,7 @@ done
 
 
 wipe_clean $prob_vm
-ssh ubuntu@$compete_benchmark "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$compete_vm "sudo $compete_benchmark" >> "$OUTPUT_FILE" &
 sleep 5
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 

@@ -99,8 +99,8 @@ def graph_chunk(x,y,color):
     plot_len(intvl2,y,color)
 
 plt.figure()
-graph_chunk(1,"Naive","blue")
-graph_chunk(0,"Smart","red")
+graph_chunk(1,"Smart","blue")
+graph_chunk(0,"Naive","red")
 
 # Generate x-values based on the length of y-values
 

@@ -135,20 +135,36 @@ ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 sleep 5
 echo "starting smart test suite"
 for ((i=0; i<length; i++)); do
+    if [ $i -eq 0 ]; then
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+        sleep 5
+    fi
     bench_1=${bench_1_[$i]}
     bench_2=${bench_2_[$i]}
     run_cpu_bench_output "$bench_1" "$bench_2"
+    if [ $i -eq 0 ]; then
+        ssh ubuntu@$prob_vm "sudo killall nginx"
+    fi
 done
 sleep 10
 
 echo "raw performance test complete"
 for ((i=0; i<length; i++)); do
+    if [ $i -eq 0 ]; then
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+        sleep 5
+    fi
     bench_1=${bench_1_[$i]}
     bench_2=${bench_2_[$i]}
     sudo /home/vsched/tools/perf/perf stat -B -o "${PERF_OUTPUTa2}_$i" -C 20-35,40-55 -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions &
     ssh ubuntu@$prob_vm "sudo $bench_1 & sudo $bench_2" 
     sudo kill -s SIGINT $(pidof perf)
     sleep 3
+    if [ $i -eq 0 ]; then
+        ssh ubuntu@$prob_vm "sudo killall nginx"
+    fi
 done
 
 
@@ -156,12 +172,21 @@ echo "cache test complete"
 
 
 for ((i=0; i<length; i++)); do
+    if [ $i -eq 0 ]; then
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+        ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;' -c /var/lib/phoronix-test-suite/installed-tests/pts/new-nginx-3/nginx_/conf/nginx.conf"
+        sleep 5
+    fi
     bench_1=${bench_1_[$i]}
     bench_2=${bench_2_[$i]}
 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/bpftrace/build/src/bpftrace -e 'kfunc:native_send_call_func_single_ipi { @[cpu] = count(); }' &" >> "$BPF_OUTPUT" &
     run_cpu_bench "$bench_1" "$bench_2"
     ssh ubuntu@$prob_vm "sudo kill -s SIGINT \$(pidof bpftrace)"
+    sleep 3
+    if [ $i -eq 0 ]; then
+        ssh ubuntu@$prob_vm "sudo killall nginx"
+    fi
 done
 #ssh ubuntu@$prob_vm "sudo su;sudo perf stat -B  -e LLC-loads,LLC-load-misses,LLC-stores,cache-references,cache-misses,cycles,instructions 'sudo $comm_benchmark & sudo $comm_benchmark_1'" >> "test.txt"
 

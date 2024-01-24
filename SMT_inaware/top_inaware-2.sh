@@ -29,7 +29,7 @@ test_smt_pair() {
         ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
         sleep 5
     fi
-    
+    ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run" 
     echo "running $cpu_bench naive running $io_bench naive" >> $OUTPUT_FILE &
     echo "running $cpu_bench naive running $io_bench naive" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
     ssh ubuntu@$prob_vm "sudo killall php"
@@ -44,13 +44,7 @@ test_smt_pair() {
     fi
     sleep 2
     ssh ubuntu@$prob_vm "sudo killall php"
-    ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run" 
-    echo "first second pass"
-    echo "running $cpu_bench smart running $io_bench smart" >> $OUTPUT_FILE 
-    echo "running $cpu_bench smart running $io_bench smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
-
-    ssh ubuntu@$prob_vm "taskset -c 0-15 $cpu_bench" >> "$OUTPUT_FILE" & 
-    ssh ubuntu@$prob_vm "taskset -c 16-31 $io_bench" >> "$OUTPUT_FILE2"
+    
     wait
     ssh ubuntu@$prob_vm "sudo killall nginx"
     ssh ubuntu@$prob_vm "sudo killall php"
@@ -62,6 +56,12 @@ for io_bench in "${io_benchmarks[@]}"; do
         test_smt_pair "$cpu_bench" "$io_bench"
     done
 done
+
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/setup_vtop.sh" 
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
+echo "running  smart" >> $OUTPUT_FILE 
+echo "running smart  smart" >> $OUTPUT_FILE2 # changed $naive_bench to $io_bench
+
 
 for io_bench in "${io_benchmarks[@]}"; do
     for cpu_bench in "${cpu_benchmarks[@]}"; do

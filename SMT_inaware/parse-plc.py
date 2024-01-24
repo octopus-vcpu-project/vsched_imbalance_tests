@@ -3,19 +3,13 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 # Find all files that match the 'sym-plc*' pattern
-files = glob.glob("../SMT_inaware/tests/top_plc_naive*.txt")
-files2 = glob.glob("../SMT_inaware/tests/top_plc_smart*.txt")
+files = glob.glob("../SMT_inaware/tests/top_plc_naive012*.txt")
+files2 = glob.glob("../SMT_inaware/tests/top_plc_smart012*.txt")
 
 # Sort the files to get the latest one
 files.sort(reverse=True)
 
 # Read the latest file if one exists
-if files:
-    with open(files[0], 'r') as f:
-        print(f"Reading {files[0]}")
-        print(f.read())
-else:
-    print("No matching files found.")
 
 # Initialize an empty list to hold the counts
 cpu_sysbench_counts = []
@@ -23,6 +17,7 @@ cpu_sysbench_counts = []
 # Read the latest file if one exists
 if files:
     with open(files[0], 'r') as f:
+        print(f"Reading {files[0]}")
         lines = f.readlines()
         current_cpu = -1
         used_phys_cpus = []
@@ -35,7 +30,6 @@ if files:
            
                 while len(cpu_sysbench_counts) <= current_cpu:
                     cpu_sysbench_counts.append(0)
-                print(current_cpu)
                 if(current_cpu==31):
                         incorrect_list.append(incorrect)
                         used_phys_cpus = []
@@ -47,7 +41,6 @@ if files:
                         incorrect += 1
                         used_phys_cpus.append(current_cpu//2)
                     cpu_sysbench_counts[current_cpu] += 1
-    print("Physical cores used", incorrect_list)
     counter = Counter(incorrect_list)
     values = list(counter.keys())
     counts = list(counter.values())
@@ -57,6 +50,7 @@ if files:
     # Plot
     plt.plot(values, counts,marker='o')
     with open(files2[0], 'r') as f:
+        print(f"Reading {files2[0]}")
         lines = f.readlines()
         current_cpu = -1
         used_phys_cpus = []
@@ -69,7 +63,6 @@ if files:
            
                 while len(cpu_sysbench_counts) <= current_cpu:
                     cpu_sysbench_counts.append(0)
-                print(current_cpu)
                 if(current_cpu==31):
                         incorrect_list.append(incorrect)
                         used_phys_cpus = []
@@ -81,7 +74,6 @@ if files:
                         incorrect += 1
                         used_phys_cpus.append(current_cpu//2)
                     cpu_sysbench_counts[current_cpu] += 1
-    print("Physical cores used", incorrect_list)
     counter = Counter(incorrect_list)
     values = list(counter.keys())
     counts = list(counter.values())

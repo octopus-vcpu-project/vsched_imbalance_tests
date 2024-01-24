@@ -38,18 +38,18 @@ done
 OUTPUT_FILE="./tests/top_plc_naive$(date +%m%d%H%M).txt"
 
 
-for i in {0..80};do 
+for i in {0..20};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"
     sleep 2
 done
 
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/setup_vtop.sh" 
+ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 1000" &
 
 OUTPUT_FILE="./tests/top_plc_smart$(date +%m%d%H%M).txt"
-for i in {0..80};do 
+for i in {0..20};do 
     ssh ubuntu@$prob_vm "sudo $benchmark_command" &
     sleep 2
     ssh ubuntu@$prob_vm "sudo cat /sys/kernel/debug/sched/debug | grep -E 'cpu#|>R '" >> "$OUTPUT_FILE"

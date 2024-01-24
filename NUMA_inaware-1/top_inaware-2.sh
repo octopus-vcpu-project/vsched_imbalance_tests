@@ -11,7 +11,6 @@ bench_2_+=("sudo hackbench -s 2000 -g 4 -f 2 -l 4000000 -T 8")
 comm_benchmark="/var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html" 
 #comm_benchmark="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native"
 cpu_benchmark="sysbench --threads=16 --time=10000 cpu run"
-virsh shutdown $prob_vm
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='2' dies='1' cores='16' threads='1'/></cpu>"

@@ -1,0 +1,15 @@
+# started on Wed Jan 24 16:00:23 2024
+
+
+ Performance counter stats for 'CPU(s) 20-35,40-55':
+
+       619,063,098      LLC-loads                                                            (71.43%)
+       233,618,169      LLC-load-misses                  #   37.74% of all LL-cache accesses  (71.43%)
+       757,531,537      LLC-stores                                                           (28.57%)
+     2,128,712,436      cache-references                                                     (42.86%)
+       495,505,933      cache-misses                     #   23.277 % of all cache refs      (57.14%)
+ 1,282,399,538,655      cycles                                                               (57.14%)
+ 3,113,487,630,811      instructions                     #    2.43  insn per cycle           (71.43%)
+
+      30.408147114 seconds time elapsed
+

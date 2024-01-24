@@ -44,9 +44,9 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     
     width = 0.08  # the width of the bars
     multiplier = 0
-    hatches = ['/', 'x', 'o','+']  # List of patterns
-    colors=['red','green','blue','yellow']
-    other_colors=['none','none','blue','none']
+    hatches = ['/', 'x', 'o','x']  # List of patterns
+    colors=['blue','green','blue','green']
+    other_colors=['blue','none','blue','none']
     fig, ax = plt.subplots(layout='constrained')
 
     for i, (attribute, measurement) in enumerate(data_dict.items()):

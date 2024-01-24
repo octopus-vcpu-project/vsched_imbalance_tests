@@ -10,7 +10,7 @@ OUTPUT_FILE4="./test/4-freq-unfair$(date +%m%d%H%M).txt"
 prob_vm=$1
 compete_vm=$2
 
-cpu_benchmark="sysbench --threads=32 --report-interval=3 --time=120 cpu run"
+cpu_benchmark="sysbench --threads=8 --report-interval=3 --time=120 cpu run"
 compete_benchmark="sysbench --threads=64 --time=10000 cpu run"
 
 wipe_clean(){
@@ -43,11 +43,15 @@ sleep 5
 ssh ubuntu@$prob_vm "sudo sysbench --threads=16 --time=20 cpu run"
 
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE4" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE3" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 
 ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
 ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -v -i 5 -s 10000 &  " & 
 sleep 10 
 
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE4" &
+ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE3" &
 ssh ubuntu@$prob_vm "sudo $cpu_benchmark" >> "$OUTPUT_FILE2" 
 sleep 10

@@ -47,50 +47,44 @@ amount_cpu_sysbench = 0
 interval_values_1 = [0]
 interval_values_2 = [0]
 
+
+
+
+
+
+
+def process_file(n,s):
 # Read the latest file if one exists
-if instance_1 and instance_2:
-    with open(instance_1[0], 'r') as f,open(instance_2[0], 'r') as w:
-        ln_1 = f.readlines()
-        ln_2 = w.readlines()
-        current_cpu = -1
-        for line in ln_1:
-            # Update the current CPU if we see a "cpu#X" line
-            if "thds" in line:
-                print(line)
+    files = glob.glob(s)
+    files.sort(reverse=True)
+    if len(files) >= n:
+        file_to_read = files[n-1]
+        with open(file_to_read, 'r') as f:
+            ln_1 = f.readlines()
+            current_cpu = -1
+            for line in ln_1:
+                # Update the current CPU if we see a "cpu#X" line
+                if "thds" in line:
+                    calculation_num = extract_eps(line)
+                    seconds_taken = extract_seconds(line)
+                    accum_calculation = interval_values_1[-1] + calculation_num * 3
+                    interval_values_1.append(accum_calculation)
+                elif "total number of events" in line:
+                    interval_values_1.append(int(line.split()[-1]))
+                    print(interval_values_1)
+                    return interval_values_1
+    else:
+        print("No matching files found.")
 
-                calculation_num = extract_eps(line)
-                print(calculation_num)
-                seconds_taken = extract_seconds(line)
-                print(seconds_taken)
-                accum_calculation = interval_values_1[-1] + calculation_num * 2
-                interval_values_1.append(accum_calculation)
-            elif "total number of events" in line:
-                interval_values_1.append(int(line.split()[-1]))
-  
-        for line in ln_2:
-            # Update the current CPU if we see a "cpu#X" line
-            if "thds" in line:
-                calculation_num = extract_eps(line)
-                seconds_taken = extract_seconds(line)
-                accum_calculation = interval_values_2[-1] + calculation_num * 2
-                interval_values_2.append(accum_calculation)
-            elif "total number of events" in line:
-                interval_values_2.append(int(line.split()[-1]))
-
-else:
-    print("No matching files found.")
-
-
+interval_values_1 = process_file(1,"./test/1-freq-unfair*.txt")
 # Generate x-values based on the length of y-values
-x_values = list(range(len(interval_values_2)))
+x_values = list(range(len(interval_values_1)))
 for x in range(0,len(x_values)-1):
     x_values[x] = x_values[x] * 2
 x_values[-1] = x_values[-2] + 1
 # Create the plot
 plt.figure()
 
-# Plot the first line
-plt.plot(x_values, interval_values_1, label='instance 1', marker='o')
 
 # Plot the second line
 plt.plot(x_values, interval_values_2, label='instance 2', marker='x')

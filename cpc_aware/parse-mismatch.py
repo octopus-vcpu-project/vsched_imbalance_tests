@@ -81,8 +81,7 @@ def process_file(n,s,t):
 def plot_len(new_test,len1,color):
     x_values = list(range(len(new_test)))
     for x in range(0,len(x_values)-1):
-        x_values[x] = x_values[x] * 2
-    x_values[-1] = x_values[-2] + 1
+        x_values[x] = x_values[x] * 3
     # Create the plot
     # Plot the first line
     plt.plot(x_values, new_test, color=color,label=len1, marker='o')

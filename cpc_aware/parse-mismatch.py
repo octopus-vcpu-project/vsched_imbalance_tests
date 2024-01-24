@@ -78,34 +78,30 @@ def process_file(n,s,t):
                         return interval_values_1
     else:
         print("No matching files found.")
-def plot_len(new_test,len1):
+def plot_len(new_test,len1,color):
     x_values = list(range(len(new_test)))
     for x in range(0,len(x_values)-1):
         x_values[x] = x_values[x] * 2
     x_values[-1] = x_values[-2] + 1
     # Create the plot
     # Plot the first line
-    plt.plot(x_values, new_test, label=len1, marker='o')
+    plt.plot(x_values, new_test, color=color,label=len1, marker='o')
 
+
+def graph_chunk(x,y,color):
+    intvl2 = process_file(1,"./test/2-freq-unfair*.txt",x)
+    plot_len(intvl2,y,color)
+    intvl2 = process_file(1,"./test/1-freq-unfair*.txt",x)
+    plot_len(intvl2,y,color)
+    intvl2 = process_file(1,"./test/3-freq-unfair*.txt",x)
+    plot_len(intvl2,y,color)
+    intvl2 = process_file(1,"./test/4-freq-unfair*.txt",x)
+    plot_len(intvl2,y,color)
 
 plt.figure()
-intvl2 = process_file(1,"./test/2-freq-unfair*.txt",0)
-plot_len(intvl2,"len1")
-intvl2 = process_file(1,"./test/1-freq-unfair*.txt",0)
-plot_len(intvl2,"len2")
-intvl2 = process_file(1,"./test/3-freq-unfair*.txt",0)
-plot_len(intvl2,"len3")
-intvl2 = process_file(1,"./test/4-freq-unfair*.txt",0)
-plot_len(intvl2,"len4")
+graph_chunk(1,"Naive","blue")
+graph_chunk(0,"Smart","red")
 
-intvl2 = process_file(1,"./test/2-freq-unfair*.txt",1)
-plot_len(intvl2,"len1")
-intvl2 = process_file(1,"./test/1-freq-unfair*.txt",1)
-plot_len(intvl2,"len2")
-intvl2 = process_file(1,"./test/3-freq-unfair*.txt",1)
-plot_len(intvl2,"len3")
-intvl2 = process_file(1,"./test/4-freq-unfair*.txt",1)
-plot_len(intvl2,"len4")
 # Generate x-values based on the length of y-values
 
 

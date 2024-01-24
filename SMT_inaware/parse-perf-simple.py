@@ -73,5 +73,5 @@ data = {
 }
 
 
-plot_grouped_data_with_legends(data,["NGNIX+Matmul"])
+plot_grouped_data_with_legends(data,["NGNIX+Matmul","new"])
 

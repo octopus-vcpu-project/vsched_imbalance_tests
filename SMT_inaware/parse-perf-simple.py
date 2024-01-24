@@ -65,13 +65,18 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     plt.show()
 # Initialize an empty list to hold the counts
 
-data = {
+nginx_matmul = {
     "Matmul":[25642],
     "Nginx":[2549.80],
     "Matmul+vProber":[29205],
     "Nginx+vProber":[2675.44]
 }
 
+for i, (attribute, measurement) in enumerate(nginx_matmul.items()):
+    print(i)
+    print(attribute)
+    print(measurement)
+    print("blah")
 
-plot_grouped_data_with_legends(data,["NGNIX+Matmul"])
+plot_grouped_data_with_legends(nginx_matmul,["NGNIX+Matmul"])
 

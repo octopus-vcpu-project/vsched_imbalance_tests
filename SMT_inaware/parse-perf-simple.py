@@ -59,7 +59,7 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
         multiplier += 1
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
-    ax.set_ylabel('Sysbench Score')
+    ax.set_ylabel('Normalized Value')
     ax.set_xticks(x + width, name_parameters)
     plt.show()
 # Initialize an empty list to hold the counts

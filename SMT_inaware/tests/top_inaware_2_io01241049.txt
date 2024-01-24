@@ -1,0 +1,66 @@
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.66ms   81.57ms   1.16s    96.78%
+    Req/Sec   168.54     50.22   323.00     67.54%
+  234760 requests in 1.52m, 25.86GB read
+Requests/sec:   2574.66
+Transfer/sec:    290.46MB
+running ./vsched_tests/matmul.out 16 90 naive running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+iops-test-job: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=2846: Wed Jan 24 10:53:04 2024
+  read: IOPS=14.1k, BW=55.2MiB/s (57.9MB/s)(4972MiB/90071msec)
+    slat (usec): min=3, max=1531.9k, avg=265.78, stdev=5626.63
+    clat (usec): min=1813, max=5463.7k, avg=143589.83, stdev=124063.92
+     lat (usec): min=1846, max=5463.7k, avg=143856.42, stdev=124558.34
+    clat percentiles (msec):
+     |  1.00th=[   63],  5.00th=[   68], 10.00th=[   71], 20.00th=[   82],
+     | 30.00th=[   90], 40.00th=[  100], 50.00th=[  114], 60.00th=[  129],
+     | 70.00th=[  138], 80.00th=[  153], 90.00th=[  262], 95.00th=[  359],
+     | 99.00th=[  567], 99.50th=[  659], 99.90th=[ 1284], 99.95th=[ 1586],
+     | 99.99th=[ 3004]
+   bw (  KiB/s): min=11587, max=111365, per=100.00%, avg=57195.21, stdev=1452.35, samples=2808
+   iops        : min= 2896, max=27840, avg=14297.08, stdev=363.09, samples=2808
+  write: IOPS=14.1k, BW=55.3MiB/s (58.0MB/s)(4978MiB/90071msec); 0 zone resets
+    slat (usec): min=3, max=1531.6k, avg=282.34, stdev=5889.89
+    clat (usec): min=1878, max=5465.9k, avg=145462.61, stdev=130809.45
+     lat (usec): min=1884, max=5466.0k, avg=145745.77, stdev=131314.78
+    clat percentiles (msec):
+     |  1.00th=[   63],  5.00th=[   69], 10.00th=[   71], 20.00th=[   82],
+     | 30.00th=[   90], 40.00th=[  101], 50.00th=[  115], 60.00th=[  130],
+     | 70.00th=[  140], 80.00th=[  157], 90.00th=[  266], 95.00th=[  368],
+     | 99.00th=[  584], 99.50th=[  693], 99.90th=[ 1301], 99.95th=[ 1720],
+     | 99.99th=[ 5470]
+   bw (  KiB/s): min=10307, max=111436, per=100.00%, avg=57284.07, stdev=1458.69, samples=2807
+   iops        : min= 2575, max=27861, avg=14319.25, stdev=364.68, samples=2807
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.03%, 20=0.04%, 50=0.28%
+  lat (msec)   : 100=39.84%, 250=49.29%, 500=8.66%, 750=1.54%, 1000=0.18%
+  lat (msec)   : 2000=0.10%, >=2000=0.03%
+  cpu          : usr=1.15%, sys=2.07%, ctx=1091896, majf=1, minf=307
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=1272900,1274471,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=55.2MiB/s (57.9MB/s), 55.2MiB/s-55.2MiB/s (57.9MB/s-57.9MB/s), io=4972MiB (5214MB), run=90071-90071msec
+  WRITE: bw=55.3MiB/s (58.0MB/s), 55.3MiB/s-55.3MiB/s (58.0MB/s-58.0MB/s), io=4978MiB (5220MB), run=90071-90071msec
+
+Disk stats (read/write):
+  vda: ios=1269762/1272628, merge=0/58, ticks=125823081/126246514, in_queue=252091895, util=100.00%
+running smart  smart
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.93ms    4.13ms 174.38ms   98.49%
+    Req/Sec   172.52     42.48   300.00     68.40%
+  247388 requests in 1.50m, 27.25GB read
+Requests/sec:   2746.77
+Transfer/sec:    309.87MB

@@ -1,0 +1,114 @@
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.39ms   20.39ms 690.83ms   99.06%
+    Req/Sec   171.75     43.96   383.00     71.93%
+  229731 requests in 1.50m, 25.31GB read
+  Socket errors: connect 0, read 0, write 0, timeout 31
+Requests/sec:   2549.80
+Transfer/sec:    287.65MB
+running ./vsched_tests/matmul.out 16 90 naive running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+iops-test-job: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=2610: Wed Jan 24 11:00:19 2024
+  read: IOPS=13.5k, BW=52.9MiB/s (55.4MB/s)(4762MiB/90096msec)
+    slat (usec): min=3, max=14015k, avg=234.56, stdev=24022.55
+    clat (usec): min=1961, max=15282k, avg=150771.58, stdev=394227.86
+     lat (msec): min=2, max=15282, avg=151.01, stdev=395.08
+    clat percentiles (msec):
+     |  1.00th=[   77],  5.00th=[   81], 10.00th=[   85], 20.00th=[   92],
+     | 30.00th=[  100], 40.00th=[  105], 50.00th=[  111], 60.00th=[  120],
+     | 70.00th=[  128], 80.00th=[  153], 90.00th=[  228], 95.00th=[  275],
+     | 99.00th=[  518], 99.50th=[  911], 99.90th=[ 4799], 99.95th=[14160],
+     | 99.99th=[15234]
+   bw (  KiB/s): min= 7779, max=96660, per=100.00%, avg=58432.71, stdev=1169.49, samples=2586
+   iops        : min= 1941, max=24163, avg=14605.86, stdev=292.36, samples=2586
+  write: IOPS=13.5k, BW=52.9MiB/s (55.5MB/s)(4769MiB/90096msec); 0 zone resets
+    slat (usec): min=3, max=13995k, avg=213.39, stdev=19681.73
+    clat (msec): min=2, max=15283, avg=151.20, stdev=391.07
+     lat (msec): min=2, max=15283, avg=151.41, stdev=391.68
+    clat percentiles (msec):
+     |  1.00th=[   77],  5.00th=[   82], 10.00th=[   85], 20.00th=[   92],
+     | 30.00th=[  100], 40.00th=[  105], 50.00th=[  111], 60.00th=[  121],
+     | 70.00th=[  128], 80.00th=[  153], 90.00th=[  228], 95.00th=[  275],
+     | 99.00th=[  518], 99.50th=[  919], 99.90th=[ 4799], 99.95th=[14160],
+     | 99.99th=[15234]
+   bw (  KiB/s): min= 7444, max=97045, per=100.00%, avg=58514.33, stdev=1182.55, samples=2586
+   iops        : min= 1859, max=24259, avg=14626.42, stdev=295.63, samples=2586
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.02%, 20=0.02%, 50=0.32%
+  lat (msec)   : 100=31.65%, 250=61.69%, 500=4.96%, 750=0.78%, 1000=0.13%
+  lat (msec)   : 2000=0.28%, >=2000=0.15%
+  cpu          : usr=1.11%, sys=1.97%, ctx=1061486, majf=1, minf=309
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=1219082,1220751,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=52.9MiB/s (55.4MB/s), 52.9MiB/s-52.9MiB/s (55.4MB/s-55.4MB/s), io=4762MiB (4993MB), run=90096-90096msec
+  WRITE: bw=52.9MiB/s (55.5MB/s), 52.9MiB/s-52.9MiB/s (55.5MB/s-55.5MB/s), io=4769MiB (5000MB), run=90096-90096msec
+
+Disk stats (read/write):
+  vda: ios=1215708/1218184, merge=0/46, ticks=138294327/138744056, in_queue=277059460, util=99.99%
+running smart  smart
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.76ms   36.34ms 660.35ms   98.46%
+    Req/Sec   170.66     39.90   300.00     72.57%
+  241023 requests in 1.50m, 26.55GB read
+Requests/sec:   2675.44
+Transfer/sec:    301.83MB
+running ./vsched_tests/matmul.out 16 90 naive running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+iops-test-job: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=4707: Wed Jan 24 11:04:18 2024
+  read: IOPS=13.4k, BW=52.3MiB/s (54.9MB/s)(4714MiB/90092msec)
+    slat (usec): min=3, max=14350k, avg=187.90, stdev=16370.19
+    clat (usec): min=1693, max=14358k, avg=151416.28, stdev=204243.40
+     lat (usec): min=1703, max=14624k, avg=151604.79, stdev=204923.15
+    clat percentiles (msec):
+     |  1.00th=[   66],  5.00th=[   92], 10.00th=[  102], 20.00th=[  109],
+     | 30.00th=[  114], 40.00th=[  120], 50.00th=[  124], 60.00th=[  128],
+     | 70.00th=[  133], 80.00th=[  142], 90.00th=[  224], 95.00th=[  296],
+     | 99.00th=[  651], 99.50th=[  844], 99.90th=[ 1469], 99.95th=[ 1787],
+     | 99.99th=[14295]
+   bw (  KiB/s): min= 2312, max=89042, per=100.00%, avg=55603.94, stdev=1135.37, samples=2765
+   iops        : min=  580, max=22256, avg=13899.33, stdev=283.86, samples=2765
+  write: IOPS=13.4k, BW=52.4MiB/s (54.9MB/s)(4718MiB/90092msec); 0 zone resets
+    slat (usec): min=3, max=2311.8k, avg=165.47, stdev=6934.37
+    clat (msec): min=2, max=14359, avg=153.69, stdev=196.38
+     lat (msec): min=2, max=14359, avg=153.86, stdev=196.52
+    clat percentiles (msec):
+     |  1.00th=[   67],  5.00th=[   93], 10.00th=[  102], 20.00th=[  110],
+     | 30.00th=[  115], 40.00th=[  120], 50.00th=[  124], 60.00th=[  128],
+     | 70.00th=[  134], 80.00th=[  146], 90.00th=[  230], 95.00th=[  313],
+     | 99.00th=[  667], 99.50th=[  844], 99.90th=[ 1469], 99.95th=[ 1787],
+     | 99.99th=[ 7013]
+   bw (  KiB/s): min= 7640, max=89805, per=100.00%, avg=56164.66, stdev=1100.86, samples=2740
+   iops        : min= 1909, max=22450, avg=14039.37, stdev=275.24, samples=2740
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.04%, 20=0.06%, 50=0.19%
+  lat (msec)   : 100=8.82%, 250=83.35%, 500=5.70%, 750=1.13%, 1000=0.39%
+  lat (msec)   : 2000=0.28%, >=2000=0.04%
+  cpu          : usr=1.26%, sys=2.08%, ctx=612302, majf=0, minf=283
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=1206745,1207876,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=52.3MiB/s (54.9MB/s), 52.3MiB/s-52.3MiB/s (54.9MB/s-54.9MB/s), io=4714MiB (4943MB), run=90092-90092msec
+  WRITE: bw=52.4MiB/s (54.9MB/s), 52.4MiB/s-52.4MiB/s (54.9MB/s-54.9MB/s), io=4718MiB (4947MB), run=90092-90092msec
+
+Disk stats (read/write):
+  vda: ios=1204175/1205866, merge=0/54, ticks=142428890/142286357, in_queue=284749194, util=99.44%

@@ -1,0 +1,67 @@
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.89ms   38.02ms   1.12s    98.38%
+    Req/Sec   169.04     45.18   353.00     69.95%
+  216299 requests in 1.50m, 23.83GB read
+  Socket errors: connect 0, read 0, write 0, timeout 32
+Requests/sec:   2400.70
+Transfer/sec:    270.83MB
+running ./vsched_tests/matmul.out 16 90 naive running sudo fio --filename=/test --size=1GB  --direct=1 --rw=randrw --bs=4k --ioengine=libaio --iodepth=256 --runtime=90 --numjobs=16 --time_based --group_reporting --name=iops-test-job --eta-newline=1 naive
+iops-test-job: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=256
+...
+fio-3.28
+Starting 16 processes
+
+iops-test-job: (groupid=0, jobs=16): err= 0: pid=2688: Wed Jan 24 10:38:33 2024
+  read: IOPS=13.5k, BW=52.9MiB/s (55.5MB/s)(4767MiB/90076msec)
+    slat (usec): min=3, max=2983.1k, avg=212.10, stdev=5659.66
+    clat (usec): min=1536, max=3956.4k, avg=150584.33, stdev=149848.18
+     lat (usec): min=1541, max=5257.7k, avg=150797.06, stdev=150453.87
+    clat percentiles (msec):
+     |  1.00th=[   78],  5.00th=[   89], 10.00th=[   92], 20.00th=[   97],
+     | 30.00th=[  102], 40.00th=[  107], 50.00th=[  112], 60.00th=[  116],
+     | 70.00th=[  127], 80.00th=[  142], 90.00th=[  199], 95.00th=[  506],
+     | 99.00th=[  642], 99.50th=[  701], 99.90th=[ 2140], 99.95th=[ 3138],
+     | 99.99th=[ 3943]
+   bw (  KiB/s): min=13432, max=94482, per=100.00%, avg=54876.72, stdev=1065.15, samples=2816
+   iops        : min= 3358, max=23620, avg=13718.74, stdev=266.29, samples=2816
+  write: IOPS=13.6k, BW=53.0MiB/s (55.6MB/s)(4774MiB/90076msec); 0 zone resets
+    slat (usec): min=3, max=2983.0k, avg=215.27, stdev=6688.95
+    clat (usec): min=1891, max=5262.2k, avg=151046.85, stdev=152608.35
+     lat (usec): min=1896, max=5392.0k, avg=151262.75, stdev=153269.24
+    clat percentiles (msec):
+     |  1.00th=[   79],  5.00th=[   90], 10.00th=[   93], 20.00th=[   99],
+     | 30.00th=[  102], 40.00th=[  107], 50.00th=[  112], 60.00th=[  116],
+     | 70.00th=[  127], 80.00th=[  144], 90.00th=[  199], 95.00th=[  506],
+     | 99.00th=[  642], 99.50th=[  709], 99.90th=[ 2165], 99.95th=[ 3239],
+     | 99.99th=[ 3943]
+   bw (  KiB/s): min=13512, max=94501, per=100.00%, avg=54962.13, stdev=1065.50, samples=2815
+   iops        : min= 3378, max=23624, avg=13740.08, stdev=266.37, samples=2815
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.04%, 20=0.03%, 50=0.27%
+  lat (msec)   : 100=25.75%, 250=65.59%, 500=3.00%, 750=4.92%, 1000=0.22%
+  lat (msec)   : 2000=0.06%, >=2000=0.11%
+  cpu          : usr=1.02%, sys=1.76%, ctx=1115261, majf=1, minf=299
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=1220302,1222088,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=256
+
+Run status group 0 (all jobs):
+   READ: bw=52.9MiB/s (55.5MB/s), 52.9MiB/s-52.9MiB/s (55.5MB/s-55.5MB/s), io=4767MiB (4998MB), run=90076-90076msec
+  WRITE: bw=53.0MiB/s (55.6MB/s), 53.0MiB/s-53.0MiB/s (55.6MB/s-55.6MB/s), io=4774MiB (5006MB), run=90076-90076msec
+
+Disk stats (read/write):
+  vda: ios=1219050/1221385, merge=0/50, ticks=137169712/137464160, in_queue=274654582, util=99.98%
+running smart  smart
+running ./vsched_tests/matmul.out 16 90 naive running sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 90s -c 20 -t 16 https://127.0.0.1:8089/test.html naive
+Running 2m test @ https://127.0.0.1:8089/test.html
+  16 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.70ms   27.21ms 636.61ms   99.37%
+    Req/Sec   170.62     44.69   404.00     69.93%
+  243320 requests in 1.50m, 26.81GB read
+Requests/sec:   2701.71
+Transfer/sec:    304.79MB

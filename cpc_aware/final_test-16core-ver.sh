@@ -88,20 +88,19 @@ reset_prob_vm(){
     virsh shutdown $prob_vm
     sleep 50
     sudo bash ../utility/cleanon_startup.sh $prob_vm 16
-    for i in {0..7};do
+    for i in {0..3};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
-    for i in {8..15};do
-        sudo virsh vcpupin $prob_vm $i $((i + 92))
-        printf "what is happening man"
+    for i in {4..7};do
+        sudo virsh vcpupin $prob_vm $i $((i + 36))
     done
-    for i in {16..23};do
-        sudo virsh vcpupin $prob_vm $i $((i + 24 ))
+    for i in {8..11};do
+        sudo virsh vcpupin $prob_vm $i $((i + 72))
     done
-    for i in {24..31};do
-        sudo virsh vcpupin $prob_vm $i $((i + 96 ))
+    for i in {12..15};do
+        sudo virsh vcpupin $prob_vm $i $((i + 108))
     done
-    ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
+    donebuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 }
 
 

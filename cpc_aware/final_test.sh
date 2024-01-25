@@ -1,15 +1,28 @@
-bench_1_=("sysbench --threads=16 --time=40 cpu run")
-#bench_1_=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
 
+
+bench_1_=("sysbench --threads=16 --time=40 cpu run")
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
+
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
 
 prob_vm="e-vm3"
 compete_vm_1="e-vm1"
 compete_vm_2="vsched-1"
 OUTPUT_FILE="./tests/output$(date +%m%d%H%M)naive.txt"
 OUTPUT_FILE_PROBE="./tests/output$(date +%m%d%H%M)smrt.txt"
+
+
 windup_compete_vms(){
     sudo bash ../utility/cleanon_startup.sh $compete_vm_2 8
     sudo bash ../utility/cleanon_startup.sh $compete_vm_1 32
@@ -143,7 +156,7 @@ for ((i=0; i<length; i++)); do
     ) &
     mode_pid=$!
     ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE}_$i"
-    kill $mode_pid
+    sudo kill $mode_pid
 done
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
@@ -160,5 +173,5 @@ for ((i=0; i<length; i++)); do
     ) &
     mode_pid=$!
     ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
-    kill $mode_pid
+    sudo kill $mode_pid
 done

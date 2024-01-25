@@ -149,21 +149,12 @@ set_normal_mode(){
 }
 
 set_interference_mode(){
-    for i in {0..3};do
+    for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
-    done
-    for i in {4..7};do
-        sudo virsh vcpupin $prob_vm $i $((i + 36))
-    done
-    for i in {8..11};do
-        sudo virsh vcpupin $prob_vm $i $((i + 72))
-    done
-    for i in {12..15};do
-        sudo virsh vcpupin $prob_vm $i $((i + 108))
     done
 
     for i in {0..3};do
-        sudo virsh vcpupin $compete_vm_2 $i $((i + 80))
+        sudo virsh vcpupin $compete_vm_2 $i $((i + 26))
     done
 
     sudo virsh vcpupin $prob_vm 0 1

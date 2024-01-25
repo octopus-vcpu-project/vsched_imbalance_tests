@@ -9,11 +9,17 @@ OUTPUT_FILE_PROBE="./tests/output$(date +%m%d%H%M)smrt.txt"
 windup_compete_vms(){
     sudo bash ../utility/cleanon_startup.sh $compete_vm_2 8
     sudo bash ../utility/cleanon_startup.sh $compete_vm_1 32
-    for i in {0..15};do
+    for i in {0..7};do
         sudo virsh vcpupin $compete_vm_1 $i $((i + 20))
     done
-    for i in {16..31};do
-        sudo virsh vcpupin $compete_vm_1 $i $((i + 40 ))
+    for i in {8..15};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 92))
+    done
+    for i in {16..23};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 24 ))
+    done
+    for i in {24..31};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 96 ))
     done
     for i in {0..7};do
         sudo virsh vcpupin $compete_vm_2 $i $i
@@ -26,11 +32,17 @@ reset_prob_vm(){
     virsh shutdown $prob_vm
     sleep 50
     sudo bash ../utility/cleanon_startup.sh $prob_vm 32
-    for i in {0..15};do
+       for i in {0..7};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
-    for i in {16..31};do
-        sudo virsh vcpupin $prob_vm $i $((i + 40 ))
+    for i in {8..15};do
+        sudo virsh vcpupin $prob_vm $i $((i + 92))
+    done
+    for i in {16..23};do
+        sudo virsh vcpupin $prob_vm $i $((i + 24 ))
+    done
+    for i in {24..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 96 ))
     done
     ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 }
@@ -49,34 +61,56 @@ set_normal_mode(){
     for i in {0..7};do
         sudo virsh vcpupin $compete_vm_2 $i $i
     done
-    for i in {0..15};do
+    for i in {0..7};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
-    for i in {16..31};do
-        sudo virsh vcpupin $prob_vm $i $((i + 40 ))
+    for i in {8..15};do
+        sudo virsh vcpupin $prob_vm $i $((i + 92))
     done
-    for i in {0..15};do
+    for i in {16..23};do
+        sudo virsh vcpupin $prob_vm $i $((i + 24 ))
+    done
+    for i in {24..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 96 ))
+    done
+    
+    for i in {0..7};do
         sudo virsh vcpupin $compete_vm_1 $i $((i + 20))
     done
-    for i in {16..31};do
-        sudo virsh vcpupin $compete_vm_1 $i $((i + 40 ))
+    for i in {8..15};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 92))
+    done
+    for i in {16..23};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 24 ))
+    done
+    for i in {24..31};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 96 ))
+    done
+
+    for i in {0..7};do
+        sudo virsh vcpupin $compete_vm_2 $i $i
     done
 }
 
 set_interference_mode(){
-    for i in {0..15};do
-        sudo virsh vcpupin $prob_vm $i $(( (i%10) + 20))
+    for i in {0..7};do
+        sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
-    for i in {0..15};do
-        sudo virsh vcpupin $compete_vm_1 $i $(( (i%10) + 20))
+    for i in {8..15};do
+        sudo virsh vcpupin $prob_vm $i $((i + 92))
     done
-    for i in {16..31};do
-        sudo virsh vcpupin $prob_vm $i $((i + 40 ))
+    for i in {16..23};do
+        sudo virsh vcpupin $prob_vm $i $((i + 24 ))
+    done
+    for i in {24..31};do
+        sudo virsh vcpupin $prob_vm $i $((i + 96 ))
     done
 
     for i in {0..7};do
-        sudo virsh vcpupin $compete_vm_2 $i $((40))
+        sudo virsh vcpupin $compete_vm_2 $i $i
     done
+    sudo virsh vcpupin $prob_vm 20 38
+    sudo virsh vcpupin $prob_vm 21 38
 }
 
 

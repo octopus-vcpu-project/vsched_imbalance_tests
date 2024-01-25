@@ -31,8 +31,8 @@ def process_file(n,s):
         return []
 
 def plot_data(index1, index2):
-    dataset1 = process_file(index1,"./test/sym-plc012*.txt")
-    dataset2 = process_file(index2,"./test/sym-plc-smrt*.txt")
+    dataset1 = process_file(index1,"./tests/1-asym-plc-01181714.txt")
+    dataset2 = process_file(index2,"./tests/1-asym-plc-01181832.txt")
     print(sum(dataset2))
     print(sum(dataset1))
     plt.figure(figsize=(10, 6))

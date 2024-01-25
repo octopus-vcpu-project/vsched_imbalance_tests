@@ -101,14 +101,14 @@ runTest(){
 }
 
 runAllTests(){
-    #runTest "sysbench --threads=32 --time=30 cpu run" 
-    #runTest "./vsched_tests/matmul.out 32 30"
-runTest "cd /home/ubuntu/vsched;sudo /home/ubuntu/Workloads/kernbench/kernbench"
-   ssh ubuntu@$prob_vm "sudo killall nginx"
-   ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+   runTest "sysbench --threads=32 --time=30 cpu run" 
+   runTest "./vsched_tests/matmul.out 32 30"
+   #runTest "cd /home/ubuntu/vsched;sudo /home/ubuntu/Workloads/kernbench/kernbench"
+   #xssh ubuntu@$prob_vm "sudo killall nginx"
+   #ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
    sleep 10
-   runTest "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 300 -t 16 https://127.0.0.1:8089/test.html" 
-   ssh ubuntu@$prob_vm "sudo killall nginx"
+   #runTest "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 300 -t 16 https://127.0.0.1:8089/test.html" 
+   #ssh ubuntu@$prob_vm "sudo killall nginx"
 }
 
 ssh ubuntu@$compete_vm "sudo killall ./cache_thr.out"
@@ -119,38 +119,38 @@ ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo $cache_bench"
 echo "finished warming up"
 
-#ssh ubuntu@$compete_vm "sudo ./cache_thr.out" &
+ssh ubuntu@$compete_vm "sudo ./cache_thr.out" &
 
 
-#setLatency 32000000
-#runAllTests
+setLatency 32000000
+runAllTests
 
-#setLatency 16000000
-#runAllTests
+setLatency 16000000
+runAllTests
 
-#setLatency 8000000
-#runAllTests
+setLatency 8000000
+runAllTests
 
-#setLatency 4000000
-#runAllTests
+setLatency 4000000
+runAllTests
 
-#setLatencyCFS 1000000 2000000
-#setLatency 1000000
-#runAllTests
-#setLatencyCFS 50000000 50000000
+setLatencyCFS 1000000 2000000
+setLatency 1000000
+runAllTests
+setLatencyCFS 50000000 50000000
 
-#setLatency 3000000
-#runAllTests
+setLatency 3000000
+runAllTests
 
 ssh ubuntu@$compete_vm "sudo killall cache-thr.out"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
 
-#setLatency 32000000
-#runAllTests
+setLatency 32000000
+runAllTests
 
-#setLatency 16000000
-#runAllTests
+setLatency 16000000
+runAllTests
 
 setLatency 8000000
 runAllTests

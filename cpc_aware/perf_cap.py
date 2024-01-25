@@ -43,35 +43,41 @@ nginx_matmul1 = {
 
 
 def plot_grouped_data_with_legends(data_dict, name_parameters):
-    x = np.arange(len(name_parameters))  # the label locations
-    plt.figure(figsize=(12, 8))
+    """
+    Plots a grouped bar chart for each group in the data dictionary with 
+    separate bars for each category in name_parameters, using different patterns for each group.
 
-    width = 0.02  # Reduced width of the bars
+    :param data_dict: Dictionary with groups as keys and lists of numbers as values.
+    :param name_parameters: List of strings representing the categories for the bars in each group.
+    """
+    x = np.arange(len(name_parameters))# the label locations
+    x=x*0.35
+    print(x*0.3)
+    print(x)
+    
+    plt.rc('font', size=22)
+    width = 0.08  # the width of the bars
     multiplier = 0
     hatches = ['/', 'x', 'o']  # List of patterns
-    colors = ['red', 'green', 'blue']
-    other_colors = ['none', 'none', 'blue']
-    fig, ax = plt.subplots()
+    colors=['red','green','blue']
+    other_colors=['none','none','blue']
+    fig, ax = plt.subplots(layout='constrained')
 
     for i, (attribute, measurement) in enumerate(data_dict.items()):
         offset = width * multiplier
+        # Apply a different hatch pattern to each group
+        print(x+offset)
         hatch = hatches[i % len(hatches)]
-        rects = ax.bar(x + offset, measurement, width, edgecolor=colors[i], color=other_colors[i], label=attribute, hatch=hatch)
+
+        rects = ax.bar(x + offset, measurement, width, edgecolor=colors[i],color=other_colors[i],lw=2.,label=attribute,hatch=hatch)
         multiplier += 1
 
-    # Set axis labels and tick labels font size
-    ax.set_ylabel('Sysbench Throughput\n(events per second)', fontsize=12)
-    ax.set_xticks(x, name_parameters)
-    ax.tick_params(axis='both', which='major', labelsize=10)
-
-    # Set larger X and Y limits
-    plt.xlim(-0.5, 1000000)  # Adjust as needed
-    plt.ylim(0, max([max(values) for values in data_dict.values()]) * 1.2)  # Adjust Y limit to be 20% higher than the highest value
-
-    ax.legend(framealpha=1, fontsize=12)
-
+    # Add some text for labels, title and custom x-axis tick labels, etc.
+    ax.set_ylabel('Sysbench Throughput\n(events per second)')
+    ax.set_xticks(x + width, name_parameters)
+    plt.ylim(1000, 3500)
+    ax.legend(framealpha=0.1,fontsize=16,prop = { "size": 21 },ncols=2)
     plt.show()
-
 # Initialize an empty list to hold the counts
 list_sysbench_opt = process_file(1,"./test/bym-opt*.txt")
 list_sysbench_smart = process_file(1,"./test/bym-smrt*.txt")

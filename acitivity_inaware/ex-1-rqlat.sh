@@ -14,7 +14,7 @@ OUTPUT_FILE="./tests/acitivity_inaware-1$(date +%m%d%H%M).txt"
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 16
-    for i in {0..31};do
+    for i in {0..15};do
         sudo virsh vcpupin $select_vm $i $i
     done
     sleep 2

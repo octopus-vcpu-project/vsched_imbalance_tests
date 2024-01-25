@@ -1,4 +1,4 @@
-bench_1_=("sysbench --threads=32 --time=60 cpu run")
+bench_1_=("sysbench --threads=16 --time=60 cpu run")
 
 
 prob_vm="e-vm3"
@@ -19,7 +19,7 @@ windup_compete_vms(){
         sudo virsh vcpupin $compete_vm_2 $i $i
     done
     ssh ubuntu@$compete_vm_1 "sudo sysbench --threads=32 --time=10000000 cpu run"&
-    ssh ubuntu@$compete_vm_2 "sudo sysbench --threads=32 --time=100000000 cpu run"&
+    ssh ubuntu@$compete_vm_2 "sudo sysbench --threads=32 --time=10000000 cpu run"&
 }
 
 reset_prob_vm(){

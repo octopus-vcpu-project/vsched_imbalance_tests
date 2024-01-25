@@ -18,8 +18,8 @@ windup_compete_vms(){
     for i in {0..7};do
         sudo virsh vcpupin $compete_vm_2 $i $i
     done
-    ssh ubuntu@$compete_vm_1 "sudo sysbench --threads=32 --time=10 cpu run"
-    ssh ubuntu@$compete_vm_2 "sudo sysbench --threads=32 --time=10 cpu run"
+    ssh ubuntu@$compete_vm_1 "sudo sysbench --threads=32 --time=10000000 cpu run"&
+    ssh ubuntu@$compete_vm_2 "sudo sysbench --threads=32 --time=100000000 cpu run"&
 }
 
 reset_prob_vm(){

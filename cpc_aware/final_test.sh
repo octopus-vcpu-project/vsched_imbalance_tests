@@ -80,9 +80,9 @@ for ((i=0; i<length; i++)); do
     (
         while true; do
             set_normal_mode
-            sleep 20
+            sleep 30
             set_interference_mode
-            sleep 20
+            sleep 30
         done
     ) &
     mode_pid=$!
@@ -96,9 +96,9 @@ for ((i=0; i<length; i++)); do
     (
         while true; do
             set_normal_mode
-            sleep 20
+            sleep 30
             set_interference_mode
-            sleep 20
+            sleep 30
         done
     ) &
     mode_pid=$!

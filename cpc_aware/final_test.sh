@@ -5,7 +5,7 @@ prob_vm="e-vm3"
 compete_vm_1="e-vm1"
 compete_vm_2="vsched-1"
 OUTPUT_FILE="./tests/output$(date +%m%d%H%M)naive.txt"
-OUTPUT_FILE_PROBE="./tests/output$(date +%m%d%H%M).txt"
+OUTPUT_FILE_PROBE="./tests/output$(date +%m%d%H%M)smrt.txt"
 windup_compete_vms(){
     sudo bash ../utility/cleanon_startup.sh $compete_vm_2 8
     sudo bash ../utility/cleanon_startup.sh $compete_vm_1 32
@@ -40,7 +40,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 5" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -v -i 20 -s 2000 &  " & 
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 20 -s 2000 &  " & 
     sleep 10
 }
 
@@ -90,8 +90,8 @@ done
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 length=${#bench_1_[@]}
-for ((g=0; g<length; g++)); do
-    bench_1=${bench_1_[$g]}
+for ((i=0; i<length; i++)); do
+    bench_1=${bench_1_[$i]}
     (
         while true; do
             set_normal_mode
@@ -100,7 +100,6 @@ for ((g=0; g<length; g++)); do
             sleep 20
         done
     ) &
-    dode_pid=$!
-    ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE_PROBE}_$g" &
-    kill $dode_pid
+    mode_pid=$!
+    ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
 done

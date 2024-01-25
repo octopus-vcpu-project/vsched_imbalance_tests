@@ -71,8 +71,8 @@ set_interference_mode(){
 }
 
 
-windup_compete_vms
 reset_prob_vm
+windup_compete_vms
 length=${#bench_1_[@]}
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}

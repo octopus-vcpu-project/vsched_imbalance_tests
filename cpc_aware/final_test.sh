@@ -1,4 +1,8 @@
-bench_1_=("sysbench --threads=32 --time=40 cpu run")
+#bench_1_=("sysbench --threads=32 --time=40 cpu run")
+bench_1_=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
+#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
 
 
 prob_vm="e-vm3"

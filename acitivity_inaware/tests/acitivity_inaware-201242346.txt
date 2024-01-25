@@ -1,0 +1,31 @@
+Set latency to 24000000
+Running Latency benchmark img-dnn
+queue: mean 42.127 ms | p95 344.564 ms | p99 971.810 ms | max 1130.449 ms
+svc: mean 0.615 ms | p95 0.569 ms | p99 0.589 ms | max 407.761 ms
+end2end: mean 42.742 ms | p95 346.061 ms | p99 972.294 ms | max 1133.209 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Set latency to 20000000
+Running Latency benchmark img-dnn
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 156.471 ms | p95 1194.714 ms | p99 1539.069 ms | max 1694.879 ms
+svc: mean 1.040 ms | p95 0.576 ms | p99 0.670 ms | max 1679.008 ms
+end2end: mean 157.510 ms | p95 1197.706 ms | p99 1541.233 ms | max 1695.554 ms
+Set latency to 16000000
+Running Latency benchmark img-dnn
+Set latency to 12000000
+Running Latency benchmark img-dnn
+Set latency to 8000000
+Running Latency benchmark img-dnn
+Set latency to 4000000
+Running Latency benchmark img-dnn
+Set latency to 3000000

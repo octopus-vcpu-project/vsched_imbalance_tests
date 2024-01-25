@@ -156,7 +156,7 @@ for ((i=0; i<length; i++)); do
     #) &
    #mode_pid=$!
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
-    sudo kill $mode_pid
+    #sudo kill $mode_pid
 done
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
@@ -174,5 +174,5 @@ for ((i=0; i<length; i++)); do
     #) &
    #mode_pid=$!
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE_PROBE}_$i"
-    sudo kill $mode_pid
+    #sudo kill $mode_pid
 done

@@ -14,7 +14,7 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 #PIN VCPUS and limit CPU usage using CGROUP
 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
-wake_and_pin_vm $prob_vm
+
 
 
 wake_and_pin_vm(){
@@ -60,7 +60,7 @@ runAllTests(){
     #runLatencyTest "xapian"
 }
 
-
+wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
 #Fetch VM PID and use that to fetch Cgroup title
 

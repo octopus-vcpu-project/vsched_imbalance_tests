@@ -152,6 +152,9 @@ set_interference_mode(){
     for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
+    for i in {0..15};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 20))
+    done
 
     for i in {0..3};do
         sudo virsh vcpupin $compete_vm_2 $i $((i + 26))

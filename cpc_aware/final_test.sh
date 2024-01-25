@@ -112,12 +112,12 @@ set_interference_mode(){
     done
     sudo virsh vcpupin $prob_vm 21 38
     sudo virsh vcpupin $prob_vm 20 38
-    sudo virsh vcpupin $compete_vm_1 21 38
-    sudo virsh vcpupin $compete_vm_1 20 38
+    sudo virsh vcpupin $compete_vm_1 21 21
+    sudo virsh vcpupin $compete_vm_1 20 21
     sudo virsh vcpupin $prob_vm 22 39
     sudo virsh vcpupin $prob_vm 23 39
-    sudo virsh vcpupin $compete_vm_1 22 39
-    sudo virsh vcpupin $compete_vm_1 23 39
+    sudo virsh vcpupin $compete_vm_1 22 40
+    sudo virsh vcpupin $compete_vm_1 23 40
 
 
 }

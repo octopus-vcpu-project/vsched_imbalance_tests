@@ -24,7 +24,7 @@ windup_compete_vms(){
 
 reset_prob_vm(){
     virsh shutdown $prob_vm
-    sleep 10
+    sleep 50
     sudo bash ../utility/cleanon_startup.sh $prob_vm 32
     for i in {0..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))

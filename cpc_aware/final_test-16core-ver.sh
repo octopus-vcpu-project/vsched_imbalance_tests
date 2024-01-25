@@ -168,8 +168,8 @@ set_interference_mode(){
 
     sudo virsh vcpupin $prob_vm 0 1
     sudo virsh vcpupin $prob_vm 1 1
-    sudo virsh vcpupin $prob_vm 2 1
-    sudo virsh vcpupin $prob_vm 3 1
+    sudo virsh vcpupin $prob_vm 2 0
+    sudo virsh vcpupin $prob_vm 3 0
 }
 
 

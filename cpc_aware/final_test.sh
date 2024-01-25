@@ -89,6 +89,7 @@ for ((i=0; i<length; i++)); do
 done
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
+length=${#bench_1_[@]}
 for ((g=0; g<length; g++)); do
     bench_1=${bench_1_[$g]}
     (

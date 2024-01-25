@@ -125,7 +125,7 @@ set_interference_mode(){
     done
 
     for i in {0..7};do
-        sudo virsh vcpupin $compete_vm_2 $i 20
+        sudo virsh vcpupin $compete_vm_2 $i $((i + 20))
     done
     sudo virsh vcpupin $prob_vm 21 38
     sudo virsh vcpupin $prob_vm 20 38
@@ -135,8 +135,10 @@ set_interference_mode(){
     sudo virsh vcpupin $prob_vm 23 39
     sudo virsh vcpupin $compete_vm_1 22 40
     sudo virsh vcpupin $compete_vm_1 23 40
-
-
+    sudo virsh vcpupin $prob_vm 24 125
+    sudo virsh vcpupin $prob_vm 25 126
+    sudo virsh vcpupin $compete_vm_1 25 25
+    sudo virsh vcpupin $compete_vm_1 24 25
 }
 
 

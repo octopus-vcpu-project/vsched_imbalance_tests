@@ -9,7 +9,7 @@
 
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
-bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
+#bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
@@ -149,6 +149,19 @@ set_normal_mode(){
 }
 
 set_interference_mode(){
+    for i in {0..3};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 20))
+    done
+    for i in {4..7};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i))
+    done
+    for i in {8..11};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i + 76))
+    done
+    for i in {12..15};do
+        sudo virsh vcpupin $compete_vm_1 $i $((i))
+    done
+
     for i in {0..3};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done

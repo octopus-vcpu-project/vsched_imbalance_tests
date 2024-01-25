@@ -3,7 +3,7 @@
 #bench_1_=("sudo sysbench --threads=16 --time=40 cpu run")
 bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
-bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
+#bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
 
@@ -144,6 +144,7 @@ reset_prob_vm
 windup_compete_vms
 length=${#bench_1_[@]}
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
+ssh ubuntu@$compete_vm_1 "killall sysbench"
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     #(

@@ -100,7 +100,8 @@ reset_prob_vm(){
     for i in {12..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 108))
     done
-    donebuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
+    done
+    ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 }
 
 

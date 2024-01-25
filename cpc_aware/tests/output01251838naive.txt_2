@@ -1,0 +1,94 @@
+root-thread: ./src/tests/shore_kits.cpp:692:main: INPUTFILE (cmdfile)
+root-thread: ./src/tests/shore_kits.cpp:724:main: Starting (tpcc-normal-baseline) kit
+root-thread: ./src/tests/shore_kits.cpp:879:main: Starting Shore Environment
+SLI= disabled
+init: ./src/sm/shore/shore_env.cpp:1050:readconfig: Reading config file (shore.conf)
+init: ./src/sm/shore/shore_env.cpp:1060:readconfig: Reading configuration (tpcc-1)
+init: ./src/sm/shore/shore_env.cpp:1015:print_cpus: MaxCPU=(16) - ActiveCPU=(16)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+(db-clobberdev) (0)
+(shore-fakeiodelay) (0)
+(shore-fakeiodelay-enable) (1)
+(sys-activecpucount) (1024)
+(sys-maxcpucount) (1024)
+(-sm_bufpoolsize) (2048000)
+(-sm_diskrw) (./diskrw)
+(-sm_errlog) (info)
+(-sm_logbufsize) (81920)
+(-sm_logcount) (10)
+(-sm_logdir) (./log)
+(-sm_logging) (yes)
+(-sm_logisraw) (no)
+(-sm_logsize) (2048000)
+(-sm_num_page_writers) (1)
+(device) (./db-tpcc-1)
+(devicequota) (2048000)
+(loadatadir) (databases)
+(sf) (1)
+(system) (baseline)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+(db-clobberdev) (0)
+(shore-fakeiodelay) (0)
+(shore-fakeiodelay-enable) (1)
+(sys-activecpucount) (1024)
+(sys-maxcpucount) (1024)
+(-sm_bufpoolsize) (2048000)
+(-sm_diskrw) (./diskrw)
+(-sm_errlog) (info)
+(-sm_logbufsize) (81920)
+(-sm_logcount) (10)
+(-sm_logdir) (./log)
+(-sm_logging) (yes)
+(-sm_logisraw) (no)
+(-sm_logsize) (2048000)
+(-sm_num_page_writers) (1)
+(device) (./db-tpcc-1)
+(devicequota) (2048000)
+(loadatadir) (databases)
+(sf) (1)
+(system) (baseline)
+init: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:206:set_qf: Invalid queried factor input: 0.0
+root-thread: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:493:start: Starting ()
+root-thread: ./src/workload/tpcc/shore_tpcc_env.cpp:401:info: SF      = (1.0)
+root-thread: ./src/workload/tpcc/shore_tpcc_env.cpp:402:info: Workers = (32)
+root-thread: ./src/tests/shore_kits.cpp:894:main: Preparing for the next run
+root-thread: ./src/tests/shore_kits.cpp:906:main: Starting processing commands
+FILECMD: test 1 0 32 1000000 0 1 0root-thread: ./src/sm/shore/shore_shell.cpp:463:process_cmd_TEST: Updated SF (1.0)
+root-thread: ./src/sm/shore/shore_shell.cpp:222:print_TEST_info: 
+QueriedSF:      (1.0)
+Spread Threads: (No)
+Binding:        (NoBinding)
+NumOfThreads:   (32)
+NumOfTrxs:      (1000000)
+Trx:            (TPCC-Mix)
+Iterations:     (1)
+root-thread: ./src/sm/shore/shore_env.cpp:219:set_sf: New Scaling factor: 1.0
+root-thread: ./src/sm/shore/shore_env.cpp:202:set_qf: New Queried Factor: 1.0
+root-thread: ./src/tests/shore_kits.cpp:331:_cmd_TEST_impl: Iteration [1 of 1]
+root-thread: ./src/tests/shore_kits.cpp:344:_cmd_TEST_impl: begin measurement
+TBENCH_MAXREQS = 600
+TBENCH_WARMUPREQS = 100
+TBENCH_MINSLEEPNS = 1000
+TBENCH_RANDSEED = linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.4) (31.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (28.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (45.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.3) (49.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.3) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (24.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (36.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (27.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (36.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (34.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.2) (32.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (30.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (29.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (35.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (33.0)
+linux-mon: ./src/util/procstat.cpp:254:print_interval: (0.1) (33.0)

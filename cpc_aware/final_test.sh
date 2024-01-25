@@ -74,6 +74,7 @@ set_interference_mode(){
 reset_prob_vm
 windup_compete_vms
 length=${#bench_1_[@]}
+ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     (

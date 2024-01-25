@@ -68,9 +68,9 @@ reset_prob_vm(){
 
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -u 5000" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 8 -u 5000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 20 -s 6000 &  " & 
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 8 -s 5000 &  " & 
     sleep 10
 }
 
@@ -147,17 +147,17 @@ ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 #ssh ubuntu@$compete_vm_1 "sudo killall sysbench"
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
-    #(
-     #   while true; do
-      #      set_normal_mode
-       #     sleep 35
-        #    set_interference_mode
-         #   sleep 35
-        #done
-    #) &
-   #mode_pid=$!
+    (
+        while true; do
+            set_normal_mode
+            sleep 25
+            set_interference_mode
+            sleep 25
+        done
+    ) &
+    mode_pid=$!
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
-    #sudo kill $mode_pid
+    sudo kill $mode_pid
 done
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
@@ -165,15 +165,15 @@ length=${#bench_1_[@]}
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     
-    #(
-     #   while true; do
-      #      set_normal_mode
-       #     sleep 35
-        #    set_interference_mode
-         #   sleep 35
-        #done
-    #) &
-   #mode_pid=$!
+    (
+        while true; do
+            set_normal_mode
+            sleep 25
+            set_interference_mode
+            sleep 25
+        done
+    ) &
+   mode_pid=$!
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE_PROBE}_$i"
-    #sudo kill $mode_pid
+    sudo kill $mode_pid
 done

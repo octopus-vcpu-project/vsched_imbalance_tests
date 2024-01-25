@@ -89,8 +89,8 @@ for ((i=0; i<length; i++)); do
 done
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
-for ((i=0; i<length; i++)); do
-    bench_1=${bench_1_[$i]}
+for ((g=0; g<length; g++)); do
+    bench_1=${bench_1_[$g]}
     (
         while true; do
             set_normal_mode
@@ -99,7 +99,7 @@ for ((i=0; i<length; i++)); do
             sleep 5
         done
     ) &
-    mode_pid=$!
-    ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE_PROBE}_$i" &
-    kill $mode_pid
+    dode_pid=$!
+    ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE_PROBE}_$g" &
+    kill $dode_pid
 done

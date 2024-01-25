@@ -1,4 +1,4 @@
-bench_1_=("sysbench --threads=32 --time=60 cpu run")
+bench_1_=("sysbench --threads=32 --time=40 cpu run")
 
 
 prob_vm="e-vm3"

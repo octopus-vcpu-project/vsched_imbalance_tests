@@ -1,15 +1,15 @@
 
 
 #bench_1_=("sudo sysbench --threads=16 --time=40 cpu run")
-bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
+#bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
-#bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
+#bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
 
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
+bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
@@ -45,6 +45,45 @@ windup_compete_vms(){
     ssh ubuntu@$compete_vm_2 "sudo sysbench --threads=32 --time=10000000 cpu run"&
 }
 
+
+
+runLatencyTest(){
+    latency_option=$1
+    echo "Running Latency benchmark $1" 
+    echo "Running Latency benchmark $1" >> "${OUTPUT_FILE}_$1"
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$1/lats.bin"  >> "${OUTPUT_FILE}_$1" 2>&1
+}
+
+
+
+runLatencyTestSMRT(){
+    latency_option=$1
+    echo "Running Latency benchmark $1" 
+    echo "Running Latency benchmark $1" >> "${OUTPUT_FILE_PROBE}_$1"
+    ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$1/lats.bin"  >> "${OUTPUT_FILE_PROBE}_$1" 2>&1
+}
+
+getLatencyResults(){
+#    runLatencyTest "img-dnn"
+#    runLatencyTest "moses"
+    runLatencyTest "masstree"
+#    runLatencyTest "silo"
+#    runLatencyTest "shore"
+#    runLatencyTest "specjbb"
+#    runLatencyTest "sphinx"
+#    runLatencyTest "xapian"
+}
+
+getLatencyResultsSMRT(){
+#    runLatencyTestSMRT "img-dnn"
+#    runLatencyTestSMRT "moses"
+    runLatencyTestSMRT "masstree"
+#    runLatencyTestSMRT "silo"
+#    runLatencyTestSMRT "shore"
+#    runLatencyTestSMRT "specjbb"
+#    runLatencyTestSMRT "sphinx"
+#    runLatencyTestSMRT "xapian"
+}
 reset_prob_vm(){
     virsh shutdown $prob_vm
     sleep 50
@@ -70,7 +109,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 8 -u 5000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 8 -s 5000 &  " & 
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 20 -s 5000 &  " & 
     sleep 10
 }
 
@@ -161,6 +200,7 @@ for ((i=0; i<length; i++)); do
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
     sudo kill $mode_pid
 done
+getLatencyResults
 activate_vprobers
 ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 length=${#bench_1_[@]}
@@ -179,3 +219,4 @@ for ((i=0; i<length; i++)); do
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE_PROBE}_$i"
     sudo kill $mode_pid
 done
+runLatencyTest

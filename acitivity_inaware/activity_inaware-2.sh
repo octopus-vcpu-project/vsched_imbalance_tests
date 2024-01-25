@@ -41,9 +41,9 @@ runLatencyTest(){
 setLatency(){
     set_latency=$1/1000
     sudo echo $1 > /sys/kernel/debug/sched/min_granularity_ns
-    for i in {0..31};do
-        sudo echo $set_latency $(($set_latency * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    done
+    #for i in {0..31};do
+    #    sudo echo $set_latency $(($set_latency * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    #done
     echo "Set latency to $1" 
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
@@ -51,13 +51,13 @@ setLatency(){
 
 runAllTests(){
     runLatencyTest "img-dnn"
-    runLatencyTest "moses"
-    runLatencyTest "masstree"
-    runLatencyTest "silo"
-    runLatencyTest "shore"
-    runLatencyTest "specjbb"
-    runLatencyTest "sphinx"
-    runLatencyTest "xapian"
+    #runLatencyTest "moses"
+    #runLatencyTest "masstree"
+    #runLatencyTest "silo"
+    #runLatencyTest "shore"
+    #runLatencyTest "specjbb"
+    #runLatencyTest "sphinx"
+    #runLatencyTest "xapian"
 }
 
 
@@ -70,10 +70,16 @@ ssh ubuntu@$compete_vm "sudo $compete_bench" &
 ssh ubuntu@$prob_vm "$idler_bench" &
 sleep 10
 
-setLatency 32000000
+setLatency 24000000
+runAllTests
+
+setLatency 20000000
 runAllTests
 
 setLatency 16000000
+runAllTests
+
+setLatency 12000000
 runAllTests
 
 setLatency 8000000
@@ -82,12 +88,8 @@ runAllTests
 setLatency 4000000
 runAllTests
 
-setLatency 2000000
-runAllTests
 
 setLatency 3000000
-runAllTests
-
 sudo git add .;sudo git commit -m 'new';sudo git push
 
 

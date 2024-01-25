@@ -219,4 +219,4 @@ for ((i=0; i<length; i++)); do
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE_PROBE}_$i"
     sudo kill $mode_pid
 done
-runLatencyTest
+getLatencyResultsSMRT

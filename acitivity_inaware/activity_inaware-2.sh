@@ -39,10 +39,10 @@ runLatencyTest(){
 }
 
 setLatency(){
-    set_latency=$1
+    set_latency=$1/1000
     sudo echo $1 > /sys/kernel/debug/sched/min_granularity_ns
     for i in {0..31};do
-        sudo echo $1 $((i * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+        sudo echo $set_latency $(($set_latency * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
     echo "Set latency to $1" 
     echo "Set latency to $1" >> "$OUTPUT_FILE" 

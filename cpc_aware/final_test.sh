@@ -32,11 +32,12 @@ reset_prob_vm(){
     virsh shutdown $prob_vm
     sleep 50
     sudo bash ../utility/cleanon_startup.sh $prob_vm 32
-       for i in {0..7};do
+    for i in {0..7};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done
     for i in {8..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 92))
+        printf "$((i + 92))\n"
     done
     for i in {16..23};do
         sudo virsh vcpupin $prob_vm $i $((i + 24 ))

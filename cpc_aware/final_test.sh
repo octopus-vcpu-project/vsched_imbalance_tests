@@ -38,7 +38,7 @@ reset_prob_vm(){
 
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 10" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 5" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -v -i 20 -s 2000 &  " & 
     sleep 10
@@ -79,9 +79,9 @@ for ((i=0; i<length; i++)); do
     (
         while true; do
             set_normal_mode
-            sleep 10
+            sleep 20
             set_interference_mode
-            sleep 10
+            sleep 20
         done
     ) &
     mode_pid=$!
@@ -95,9 +95,9 @@ for ((g=0; g<length; g++)); do
     (
         while true; do
             set_normal_mode
-            sleep 5
+            sleep 20
             set_interference_mode
-            sleep 5
+            sleep 20
         done
     ) &
     dode_pid=$!

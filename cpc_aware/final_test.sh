@@ -2,19 +2,19 @@
 
 bench_1_=("sysbench --threads=16 --time=40 cpu run")
 bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
-#bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
+bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
 
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
 
 prob_vm="e-vm3"
 compete_vm_1="e-vm1"
@@ -70,7 +70,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 20 -s 2000 &  " & 
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 20 -s 5000 &  " & 
     sleep 10
 }
 

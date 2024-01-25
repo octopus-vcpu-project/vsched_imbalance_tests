@@ -12,7 +12,7 @@ sleep 2
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 #PIN VCPUS and limit CPU usage using CGROUP
-
+#QPS should be low as to avoid competitoin among queues 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 
 
@@ -51,13 +51,13 @@ setLatency(){
 
 runAllTests(){
     runLatencyTest "img-dnn"
-    #runLatencyTest "moses"
-    #runLatencyTest "masstree"
-    #runLatencyTest "silo"
-    #runLatencyTest "shore"
-    #runLatencyTest "specjbb"
-    #runLatencyTest "sphinx"
-    #runLatencyTest "xapian"
+    runLatencyTest "moses"
+    runLatencyTest "masstree"
+    runLatencyTest "silo"
+    runLatencyTest "shore"
+    runLatencyTest "specjbb"
+    runLatencyTest "sphinx"
+    runLatencyTest "xapian"
 }
 
 wake_and_pin_vm $prob_vm

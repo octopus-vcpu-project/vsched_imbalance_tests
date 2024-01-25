@@ -22,7 +22,8 @@ wake_and_pin_prob(){
     sleep 2
 }
 
-
+#QPS:1100
+#NANOSLEEP:10
 run_test_series(){
     benchmark=$1
     #ssh ubuntu@$prob_vm "sudo killall a.out"

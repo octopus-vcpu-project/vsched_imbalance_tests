@@ -1,20 +1,20 @@
 
 
-#bench_1_=("sudo sysbench --threads=16 --time=40 cpu run")
+bench_1_=("sudo sysbench --threads=16 --time=40 cpu run")
 bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
-#bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
-#bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native")
-#bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
-#bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 16 -i native")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 32 -i native")
+bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
+bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 16 -i native")
 
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
-#bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
+bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
 
 prob_vm="e-vm3"
 compete_vm_1="e-vm1"
@@ -64,25 +64,25 @@ runLatencyTestSMRT(){
 }
 
 getLatencyResults(){
-#    runLatencyTest "img-dnn"
-#    runLatencyTest "moses"
+    runLatencyTest "img-dnn"
+    runLatencyTest "moses"
      runLatencyTest "masstree"
-#    runLatencyTest "silo"
-#    runLatencyTest "shore"
-#    runLatencyTest "specjbb"
-#    runLatencyTest "sphinx"
-#    runLatencyTest "xapian"
+    runLatencyTest "silo"
+    runLatencyTest "shore"
+    runLatencyTest "specjbb"
+    runLatencyTest "sphinx"
+    runLatencyTest "xapian"
 }
 
 getLatencyResultsSMRT(){
-#    runLatencyTestSMRT "img-dnn"
-#    runLatencyTestSMRT "moses"
+    runLatencyTestSMRT "img-dnn"
+    runLatencyTestSMRT "moses"
      runLatencyTestSMRT "masstree"
-#    runLatencyTestSMRT "silo"
-#    runLatencyTestSMRT "shore"
-#    runLatencyTestSMRT "specjbb"
-#    runLatencyTestSMRT "sphinx"
-#    runLatencyTestSMRT "xapian"
+    runLatencyTestSMRT "silo"
+    runLatencyTestSMRT "shore"
+    runLatencyTestSMRT "specjbb"
+    runLatencyTestSMRT "sphinx"
+    runLatencyTestSMRT "xapian"
 }
 reset_prob_vm(){
     virsh shutdown $prob_vm
@@ -148,7 +148,7 @@ set_normal_mode(){
     done
 }
 
-set_interference_mode(){
+set_interference_mode1(){
     for i in {0..3};do
         sudo virsh vcpupin $compete_vm_1 $i $((i + 20))
     done
@@ -185,7 +185,7 @@ set_interference_mode(){
     sudo virsh vcpupin $prob_vm 3 1
 }
 
-set_interference_mode1(){
+set_interference_mode1\(){
     for i in {0..3};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))
     done

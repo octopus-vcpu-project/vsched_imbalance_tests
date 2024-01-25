@@ -7,13 +7,13 @@ compete_vm1=$2
 compete_vm2=$3
 compete_vm3=$4
 benchmark_time=20
-main_command="sysbench --threads=64 --time=30000 cpu run"
+main_command="sysbench --threads=32 --time=30000 cpu run"
 
 OUTPUT_FILE="./tests/acitivity_inaware-1$(date +%m%d%H%M).txt"
 
 wake_and_pin_vm(){
     select_vm=$1
-    sudo bash ../utility/cleanon_startup.sh $select_vm 32
+    sudo bash ../utility/cleanon_startup.sh $select_vm 16
     for i in {0..31};do
         sudo virsh vcpupin $select_vm $i $i
     done

@@ -51,12 +51,11 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     :param name_parameters: List of strings representing the categories for the bars in each group.
     """
     x = np.arange(len(name_parameters))# the label locations
-    x=x*0.35
     print(x*0.3)
     print(x)
-    
-    plt.rc('font', size=22)
-    width = 0.08  # the width of the bars
+    x = x * 0.7
+    plt.rc('font', size=36)
+    width = 0.10  # the width of the bars
     multiplier = 0
     hatches = ['/', 'x', 'o']  # List of patterns
     colors=['red','green','blue']
@@ -75,8 +74,14 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_ylabel('Sysbench Throughput\n(events per second)')
     ax.set_xticks(x + width, name_parameters)
-    plt.ylim(1000, 3500)
-    ax.legend(framealpha=0.1,fontsize=16,prop = { "size": 21 },ncols=2)
+    plt.ylim(2000, 3800)
+    c_for = 1.3
+    xlim,xlim1 = plt.xlim()
+    midlim = (xlim+xlim1)/2
+    xlim = (xlim-midlim) * c_for + midlim
+    xlim1 = (xlim1-midlim) * c_for + midlim
+    plt.xlim(xlim,xlim1)
+    ax.legend(framealpha=0.1,columnspacing=0.5,prop = { "size": 28 },ncols=2)
     plt.show()
 # Initialize an empty list to hold the counts
 list_sysbench_opt = process_file(1,"./test/bym-opt*.txt")
@@ -91,7 +96,8 @@ data = {
     "CFS+vProber":[list_sysbench_smart,asym_smart],
     "CFS+Pinned":[list_sysbench_opt,asym_opt]
 }
-
+print("asym naive",(asym_naive-asym_opt)/asym_opt)
+print("optimal",asym_opt)
 
 plot_grouped_data_with_legends(data,["Symmetric","Assymetric"])
 

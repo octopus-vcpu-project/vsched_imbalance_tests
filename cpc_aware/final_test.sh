@@ -1,11 +1,11 @@
 
 
-bench_1_=("sysbench --threads=16 --time=40 cpu run")
-bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
-bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
-bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
-bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
-bench_1_+=("/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
+bench_1_=("sudo sysbench --threads=16 --time=40 cpu run")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 32 -i native")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 32 -i native")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p raytrace -n 32 -i native")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 32 -i native")
+bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native")
 
 bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
 bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
@@ -155,7 +155,7 @@ for ((i=0; i<length; i++)); do
         done
     ) &
     mode_pid=$!
-    ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE}_$i"
+    ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
     sudo kill $mode_pid
 done
 activate_vprobers
@@ -172,6 +172,6 @@ for ((i=0; i<length; i++)); do
         done
     ) &
     mode_pid=$!
-    ssh ubuntu@$prob_vm "sudo $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
+    ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE_PROBE}_$i"
     sudo kill $mode_pid
 done

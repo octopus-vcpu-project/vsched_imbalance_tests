@@ -1,18 +1,5 @@
 bench_1_=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
-bench_1_+=("sysbench --threads=32 --time=120 cpu run")
+
 
 prob_vm="e-vm3"
 compete_vm_1="e-vm1"

@@ -37,7 +37,7 @@ reset_prob_vm(){
     done
     for i in {8..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 92))
-        printf "$((i + 92))\n"
+        printf "what is happening man"
     done
     for i in {16..23};do
         sudo virsh vcpupin $prob_vm $i $((i + 24 ))

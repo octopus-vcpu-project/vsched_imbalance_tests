@@ -1,0 +1,274 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 1065.51 lat (ms,95%): 29.19
+[PARSEC] Benchmarks to run:  parsec.canneal
+
+[PARSEC] [========== Running benchmark parsec.canneal [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+2500000.nets
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal 16 15000 2000 2500000.nets 6000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threadcount: 16
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: 2500000.nets
+number of temperature steps: 6000
+locs created
+[ 3s ] thds: 8 eps: 904.84 lat (ms,95%): 34.33
+locs assigned
+Just saw element: 100000
+[ 6s ] thds: 8 eps: 1074.28 lat (ms,95%): 29.72
+[ 6s ] thds: 8 eps: 1047.46 lat (ms,95%): 30.81
+Just saw element: 200000
+Just saw element: 300000
+[ 9s ] thds: 8 eps: 1017.31 lat (ms,95%): 29.72
+[ 9s ] thds: 8 eps: 1106.01 lat (ms,95%): 29.19
+Just saw element: 400000
+Just saw element: 500000
+[ 12s ] thds: 8 eps: 1092.14 lat (ms,95%): 29.72
+[ 12s ] thds: 8 eps: 1074.15 lat (ms,95%): 29.19
+Just saw element: 600000
+Just saw element: 700000
+[ 15s ] thds: 8 eps: 1156.11 lat (ms,95%): 29.72
+Just saw element: 800000
+[ 15s ] thds: 8 eps: 1172.47 lat (ms,95%): 28.67
+Just saw element: 900000
+[ 18s ] thds: 8 eps: 1145.30 lat (ms,95%): 29.72
+Just saw element: 1000000
+[ 18s ] thds: 8 eps: 1180.32 lat (ms,95%): 28.67
+Just saw element: 1100000
+[ 21s ] thds: 8 eps: 1176.54 lat (ms,95%): 29.72
+Just saw element: 1200000
+[ 21s ] thds: 8 eps: 1184.09 lat (ms,95%): 28.67
+Just saw element: 1300000
+Just saw element: 1400000
+[ 24s ] thds: 8 eps: 1173.25 lat (ms,95%): 29.72
+[ 24s ] thds: 8 eps: 1183.22 lat (ms,95%): 28.67
+Just saw element: 1500000
+Just saw element: 1600000
+[ 27s ] thds: 8 eps: 1107.78 lat (ms,95%): 29.72
+Just saw element: 1700000
+[ 27s ] thds: 8 eps: 1179.17 lat (ms,95%): 28.67
+Just saw element: 1800000
+[ 30s ] thds: 8 eps: 1185.16 lat (ms,95%): 29.72
+Just saw element: 1900000
+[ 30s ] thds: 8 eps: 1166.52 lat (ms,95%): 28.67
+Just saw element: 2000000
+Just saw element: 2100000
+[ 33s ] thds: 8 eps: 1163.15 lat (ms,95%): 29.72
+[ 33s ] thds: 8 eps: 1163.78 lat (ms,95%): 28.67
+Just saw element: 2200000
+Just saw element: 2300000
+[ 36s ] thds: 8 eps: 1157.06 lat (ms,95%): 29.72
+[ 36s ] thds: 8 eps: 1133.73 lat (ms,95%): 29.72
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[ 39s ] thds: 8 eps: 1112.30 lat (ms,95%): 29.72
+[ 39s ] thds: 8 eps: 1054.87 lat (ms,95%): 30.26
+[ 42s ] thds: 8 eps: 967.99 lat (ms,95%): 31.37
+[ 42s ] thds: 8 eps: 952.49 lat (ms,95%): 33.72
+[ 45s ] thds: 8 eps: 1016.00 lat (ms,95%): 29.72
+[ 45s ] thds: 8 eps: 961.49 lat (ms,95%): 34.95
+[ 48s ] thds: 8 eps: 1014.97 lat (ms,95%): 30.26
+[ 48s ] thds: 8 eps: 959.72 lat (ms,95%): 34.95
+[ 51s ] thds: 8 eps: 1017.35 lat (ms,95%): 29.72
+[ 51s ] thds: 8 eps: 970.54 lat (ms,95%): 33.12
+[ 54s ] thds: 8 eps: 1007.91 lat (ms,95%): 29.19
+[ 54s ] thds: 8 eps: 987.62 lat (ms,95%): 31.94
+[ 57s ] thds: 8 eps: 1015.61 lat (ms,95%): 29.19
+[ 57s ] thds: 8 eps: 973.69 lat (ms,95%): 33.12
+[ 60s ] thds: 8 eps: 1018.71 lat (ms,95%): 29.19
+[ 60s ] thds: 8 eps: 979.12 lat (ms,95%): 33.12
+[ 63s ] thds: 8 eps: 1008.33 lat (ms,95%): 29.19
+[ 63s ] thds: 8 eps: 975.91 lat (ms,95%): 32.53
+[ 66s ] thds: 8 eps: 1009.53 lat (ms,95%): 29.72
+[ 66s ] thds: 8 eps: 980.15 lat (ms,95%): 33.12
+[ 69s ] thds: 8 eps: 1010.01 lat (ms,95%): 29.19
+[ 69s ] thds: 8 eps: 981.98 lat (ms,95%): 31.94
+[ 72s ] thds: 8 eps: 1072.15 lat (ms,95%): 29.19
+[ 72s ] thds: 8 eps: 1098.45 lat (ms,95%): 29.19
+[ 75s ] thds: 8 eps: 1164.62 lat (ms,95%): 29.72
+[ 75s ] thds: 8 eps: 1181.63 lat (ms,95%): 28.67
+Final routing is: 9.03176e+09
+[ 78s ] thds: 8 eps: 1182.81 lat (ms,95%): 29.72
+
+real	1m14.911s
+user	4m22.293s
+sys	0m1.362s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 78s ] thds: 8 eps: 1181.36 lat (ms,95%): 28.67
+[ 81s ] thds: 8 eps: 1145.76 lat (ms,95%): 30.81
+[ 81s ] thds: 8 eps: 1210.51 lat (ms,95%): 28.67
+[ 84s ] thds: 8 eps: 1229.03 lat (ms,95%): 28.67
+non-naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 1140.36 lat (ms,95%): 29.19
+[ 3s ] thds: 8 eps: 1141.47 lat (ms,95%): 29.72
+[PARSEC] Benchmarks to run:  parsec.canneal
+
+[PARSEC] [========== Running benchmark parsec.canneal [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+2500000.nets
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal 16 15000 2000 2500000.nets 6000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threadcount: 16
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: 2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+[ 6s ] thds: 8 eps: 1104.97 lat (ms,95%): 29.72
+[ 6s ] thds: 8 eps: 1091.81 lat (ms,95%): 29.19
+Just saw element: 200000
+Just saw element: 300000
+[ 9s ] thds: 8 eps: 1174.46 lat (ms,95%): 28.67
+[ 9s ] thds: 8 eps: 1182.06 lat (ms,95%): 28.67
+Just saw element: 400000
+Just saw element: 500000
+[ 12s ] thds: 8 eps: 1209.50 lat (ms,95%): 28.67
+[ 12s ] thds: 8 eps: 1173.08 lat (ms,95%): 28.67
+Just saw element: 600000
+Just saw element: 700000
+[ 15s ] thds: 8 eps: 1184.01 lat (ms,95%): 28.67
+[ 15s ] thds: 8 eps: 1168.93 lat (ms,95%): 29.72
+Just saw element: 800000
+Just saw element: 900000
+[ 18s ] thds: 8 eps: 1163.10 lat (ms,95%): 28.67
+[ 18s ] thds: 8 eps: 1174.50 lat (ms,95%): 29.72
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+[ 21s ] thds: 8 eps: 1209.95 lat (ms,95%): 28.67
+[ 21s ] thds: 8 eps: 1173.01 lat (ms,95%): 28.67
+Just saw element: 1300000
+Just saw element: 1400000
+[ 24s ] thds: 8 eps: 1185.99 lat (ms,95%): 28.67
+[ 24s ] thds: 8 eps: 1175.09 lat (ms,95%): 29.72
+Just saw element: 1500000
+Just saw element: 1600000
+[ 27s ] thds: 8 eps: 1172.29 lat (ms,95%): 28.67
+[ 27s ] thds: 8 eps: 1107.55 lat (ms,95%): 29.72
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+[ 30s ] thds: 8 eps: 1185.32 lat (ms,95%): 28.67
+[ 30s ] thds: 8 eps: 1241.15 lat (ms,95%): 29.72
+Just saw element: 2000000
+Just saw element: 2100000
+[ 33s ] thds: 8 eps: 1184.89 lat (ms,95%): 28.67
+[ 33s ] thds: 8 eps: 1145.00 lat (ms,95%): 30.81
+Just saw element: 2200000
+Just saw element: 2300000
+[ 36s ] thds: 8 eps: 1185.46 lat (ms,95%): 28.67
+[ 36s ] thds: 8 eps: 1211.00 lat (ms,95%): 29.72
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[ 39s ] thds: 8 eps: 1076.73 lat (ms,95%): 29.19
+[ 39s ] thds: 8 eps: 1073.60 lat (ms,95%): 29.19
+[ 42s ] thds: 8 eps: 1016.42 lat (ms,95%): 29.19
+[ 42s ] thds: 8 eps: 987.59 lat (ms,95%): 29.19
+[ 45s ] thds: 8 eps: 1002.33 lat (ms,95%): 29.19
+[ 45s ] thds: 8 eps: 989.70 lat (ms,95%): 29.19
+[ 48s ] thds: 8 eps: 1000.02 lat (ms,95%): 29.19
+[ 48s ] thds: 8 eps: 993.68 lat (ms,95%): 29.19
+[ 51s ] thds: 8 eps: 985.39 lat (ms,95%): 29.19
+[ 51s ] thds: 8 eps: 993.61 lat (ms,95%): 29.19
+[ 54s ] thds: 8 eps: 1021.91 lat (ms,95%): 29.19
+[ 54s ] thds: 8 eps: 993.33 lat (ms,95%): 29.19
+[ 57s ] thds: 8 eps: 1003.71 lat (ms,95%): 29.19
+[ 57s ] thds: 8 eps: 993.91 lat (ms,95%): 29.19
+[ 60s ] thds: 8 eps: 1004.65 lat (ms,95%): 29.19
+[ 60s ] thds: 8 eps: 994.70 lat (ms,95%): 29.19
+[ 63s ] thds: 8 eps: 1002.02 lat (ms,95%): 29.19
+[ 63s ] thds: 8 eps: 991.96 lat (ms,95%): 29.19
+[ 66s ] thds: 8 eps: 1095.61 lat (ms,95%): 29.19
+[ 66s ] thds: 8 eps: 1087.84 lat (ms,95%): 29.19
+[ 69s ] thds: 8 eps: 1179.85 lat (ms,95%): 28.67
+[ 69s ] thds: 8 eps: 1183.06 lat (ms,95%): 29.72
+Final routing is: 9.03139e+09
+
+real	1m8.116s
+user	4m19.297s
+sys	0m1.256s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 72s ] thds: 8 eps: 1173.25 lat (ms,95%): 28.67
+[ 72s ] thds: 8 eps: 1167.83 lat (ms,95%): 29.72
+[ 75s ] thds: 8 eps: 1218.92 lat (ms,95%): 28.67
+[ 75s ] thds: 8 eps: 1171.64 lat (ms,95%): 29.19
+[ 78s ] thds: 8 eps: 1190.94 lat (ms,95%): 28.67

@@ -1,0 +1,288 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 1102.63 lat (ms,95%): 29.19
+[PARSEC] Benchmarks to run:  parsec.canneal
+
+[PARSEC] [========== Running benchmark parsec.canneal [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+2500000.nets
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal 32 15000 2000 2500000.nets 6000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threadcount: 32
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: 2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+[ 6s ] thds: 8 eps: 1086.36 lat (ms,95%): 29.72
+Just saw element: 200000
+Just saw element: 300000
+[ 9s ] thds: 8 eps: 1120.92 lat (ms,95%): 29.72
+Just saw element: 400000
+Just saw element: 500000
+[ 12s ] thds: 8 eps: 1110.06 lat (ms,95%): 29.72
+Just saw element: 600000
+Just saw element: 700000
+[ 15s ] thds: 8 eps: 1212.20 lat (ms,95%): 29.72
+Just saw element: 800000
+Just saw element: 900000
+[ 18s ] thds: 8 eps: 1220.83 lat (ms,95%): 29.72
+Just saw element: 1000000
+Just saw element: 1100000
+Just saw element: 1200000
+[ 21s ] thds: 8 eps: 1235.36 lat (ms,95%): 29.72
+Just saw element: 1300000
+Just saw element: 1400000
+[ 24s ] thds: 8 eps: 1223.71 lat (ms,95%): 29.19
+Just saw element: 1500000
+Just saw element: 1600000
+[ 27s ] thds: 8 eps: 1218.38 lat (ms,95%): 29.72
+Just saw element: 1700000
+Just saw element: 1800000
+Just saw element: 1900000
+[ 30s ] thds: 8 eps: 1236.85 lat (ms,95%): 29.72
+Just saw element: 2000000
+Just saw element: 2100000
+[ 33s ] thds: 8 eps: 1225.47 lat (ms,95%): 28.67
+Just saw element: 2200000
+Just saw element: 2300000
+[ 36s ] thds: 8 eps: 1224.75 lat (ms,95%): 29.72
+Just saw element: 2400000
+Just saw element: 2500000
+netlist created. 2500000 elements.
+[ 39s ] thds: 8 eps: 1060.37 lat (ms,95%): 29.72
+[ 42s ] thds: 8 eps: 957.24 lat (ms,95%): 29.72
+[ 45s ] thds: 8 eps: 880.21 lat (ms,95%): 30.81
+[ 48s ] thds: 8 eps: 1025.31 lat (ms,95%): 29.19
+[ 51s ] thds: 8 eps: 945.67 lat (ms,95%): 29.19
+[ 54s ] thds: 8 eps: 935.22 lat (ms,95%): 30.81
+[ 57s ] thds: 8 eps: 927.04 lat (ms,95%): 30.81
+[ 60s ] thds: 8 eps: 1089.32 lat (ms,95%): 29.72
+Final routing is: 9.03439e+09
+[ 63s ] thds: 8 eps: 1227.28 lat (ms,95%): 29.72
+
+real	1m1.643s
+user	4m16.616s
+sys	0m1.988s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[ 66s ] thds: 8 eps: 1208.97 lat (ms,95%): 29.19
+[ 69s ] thds: 8 eps: 1177.09 lat (ms,95%): 29.19
+non-naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 1197.64 lat (ms,95%): 28.67
+[PARSEC] Benchmarks to run:  parsec.canneal
+
+[PARSEC] [========== Running benchmark parsec.canneal [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+2500000.nets
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal 32 15000 2000 2500000.nets 6000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threadcount: 32
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: 2500000.nets
+number of temperature steps: 6000
+locs created
+locs assigned
+Just saw element: 100000
+[ 6s ] thds: 8 eps: 1206.11 lat (ms,95%): 29.72
+Just saw element: 200000
+Just saw element: 300000
+[ 9s ] thds: 8 eps: 1220.49 lat (ms,95%): 29.72
+Just saw element: 400000
+Just saw element: 500000
+[ 12s ] thds: 8 eps: 1228.68 lat (ms,95%): 29.72
+Just saw element: 600000
+Just saw element: 700000
+[ 15s ] thds: 8 eps: 1228.17 lat (ms,95%): 29.72
+Just saw element: 800000
+Just saw element: 900000
+Just saw element: 1000000
+[ 18s ] thds: 8 eps: 1227.21 lat (ms,95%): 29.72
+Just saw element: 1100000
+Just saw element: 1200000
+[ 21s ] thds: 8 eps: 1228.58 lat (ms,95%): 28.67
+Just saw element: 1300000
+Just saw element: 1400000
+[ 24s ] thds: 8 eps: 1227.78 lat (ms,95%): 29.72
+Just saw element: 1500000
+Just saw element: 1600000
+[ 27s ] thds: 8 eps: 1134.63 lat (ms,95%): 29.72
+[ 30s ] thds: 8 eps: 1302.19 lat (ms,95%): 28.67
+[ 33s ] thds: 8 eps: 1245.77 lat (ms,95%): 28.67
+[ 36s ] thds: 8 eps: 1248.36 lat (ms,95%): 28.67
+[ 39s ] thds: 8 eps: 1247.41 lat (ms,95%): 28.67
+[ 42s ] thds: 8 eps: 1231.36 lat (ms,95%): 28.67
+[ 45s ] thds: 8 eps: 1246.34 lat (ms,95%): 28.67
+[ 48s ] thds: 8 eps: 1247.50 lat (ms,95%): 28.67
+[ 51s ] thds: 8 eps: 1247.76 lat (ms,95%): 28.67
+[ 54s ] thds: 8 eps: 1247.42 lat (ms,95%): 28.67
+[ 57s ] thds: 8 eps: 1245.38 lat (ms,95%): 28.67
+[ 60s ] thds: 8 eps: 1247.52 lat (ms,95%): 28.67
+[ 63s ] thds: 8 eps: 1248.49 lat (ms,95%): 28.67
+[ 66s ] thds: 8 eps: 1248.35 lat (ms,95%): 28.67
+[ 69s ] thds: 8 eps: 1248.68 lat (ms,95%): 28.67
+[ 72s ] thds: 8 eps: 1247.69 lat (ms,95%): 28.67
+[ 75s ] thds: 8 eps: 1246.63 lat (ms,95%): 28.67
+[ 78s ] thds: 8 eps: 1245.68 lat (ms,95%): 28.67
+[ 81s ] thds: 8 eps: 1247.33 lat (ms,95%): 28.67
+[ 84s ] thds: 8 eps: 1248.03 lat (ms,95%): 28.67
+[ 87s ] thds: 8 eps: 1242.29 lat (ms,95%): 28.67
+[ 90s ] thds: 8 eps: 1247.33 lat (ms,95%): 28.67
+[ 93s ] thds: 8 eps: 1249.32 lat (ms,95%): 28.67
+[ 96s ] thds: 8 eps: 1247.69 lat (ms,95%): 28.67
+[ 99s ] thds: 8 eps: 1248.35 lat (ms,95%): 28.67
+[ 102s ] thds: 8 eps: 1248.32 lat (ms,95%): 28.67
+[ 105s ] thds: 8 eps: 1248.67 lat (ms,95%): 28.67
+[ 108s ] thds: 8 eps: 1248.33 lat (ms,95%): 28.67
+[ 111s ] thds: 8 eps: 1247.24 lat (ms,95%): 28.67
+[ 114s ] thds: 8 eps: 1248.74 lat (ms,95%): 28.67
+[ 117s ] thds: 8 eps: 1244.43 lat (ms,95%): 28.67
+[ 120s ] thds: 8 eps: 1249.18 lat (ms,95%): 28.67
+[ 123s ] thds: 8 eps: 1235.76 lat (ms,95%): 28.67
+[ 126s ] thds: 8 eps: 1247.30 lat (ms,95%): 28.67
+[ 129s ] thds: 8 eps: 1248.68 lat (ms,95%): 28.67
+[ 132s ] thds: 8 eps: 1248.99 lat (ms,95%): 28.67
+[ 135s ] thds: 8 eps: 1235.75 lat (ms,95%): 28.67
+[ 138s ] thds: 8 eps: 1235.87 lat (ms,95%): 28.67
+[ 141s ] thds: 8 eps: 1225.03 lat (ms,95%): 28.67
+[ 144s ] thds: 8 eps: 1248.34 lat (ms,95%): 28.67
+[ 147s ] thds: 8 eps: 1241.17 lat (ms,95%): 28.67
+[ 150s ] thds: 8 eps: 1249.81 lat (ms,95%): 28.67
+[ 153s ] thds: 8 eps: 1248.66 lat (ms,95%): 28.67
+[ 156s ] thds: 8 eps: 1249.02 lat (ms,95%): 28.67
+[ 159s ] thds: 8 eps: 1247.99 lat (ms,95%): 28.67
+[ 162s ] thds: 8 eps: 1248.99 lat (ms,95%): 28.67
+[ 165s ] thds: 8 eps: 1250.67 lat (ms,95%): 28.67
+[ 168s ] thds: 8 eps: 1249.33 lat (ms,95%): 28.67
+[ 171s ] thds: 8 eps: 1247.32 lat (ms,95%): 28.67
+[ 174s ] thds: 8 eps: 1249.34 lat (ms,95%): 28.67
+[ 177s ] thds: 8 eps: 1249.64 lat (ms,95%): 28.67
+[ 180s ] thds: 8 eps: 1249.66 lat (ms,95%): 28.67
+[ 183s ] thds: 8 eps: 1249.33 lat (ms,95%): 28.67
+[ 186s ] thds: 8 eps: 1249.99 lat (ms,95%): 28.67
+[ 189s ] thds: 8 eps: 1249.66 lat (ms,95%): 28.67
+[ 192s ] thds: 8 eps: 1249.66 lat (ms,95%): 28.67
+[ 195s ] thds: 8 eps: 1250.32 lat (ms,95%): 28.67
+[ 198s ] thds: 8 eps: 1246.66 lat (ms,95%): 28.67
+[ 201s ] thds: 8 eps: 1249.66 lat (ms,95%): 28.67
+[ 204s ] thds: 8 eps: 1244.94 lat (ms,95%): 28.67
+[ 207s ] thds: 8 eps: 1219.08 lat (ms,95%): 28.67
+[ 210s ] thds: 8 eps: 1252.70 lat (ms,95%): 30.81
+[ 213s ] thds: 8 eps: 1244.68 lat (ms,95%): 30.81
+[ 216s ] thds: 8 eps: 1242.39 lat (ms,95%): 30.81
+[ 219s ] thds: 8 eps: 1245.06 lat (ms,95%): 30.81
+[ 222s ] thds: 8 eps: 1245.31 lat (ms,95%): 30.81
+[ 225s ] thds: 8 eps: 1244.92 lat (ms,95%): 30.81
+[ 228s ] thds: 8 eps: 1242.67 lat (ms,95%): 30.81
+[ 231s ] thds: 8 eps: 1243.49 lat (ms,95%): 30.81
+[ 234s ] thds: 8 eps: 1245.65 lat (ms,95%): 30.81
+[ 237s ] thds: 8 eps: 1243.04 lat (ms,95%): 30.81
+[ 240s ] thds: 8 eps: 1244.07 lat (ms,95%): 30.81
+[ 243s ] thds: 8 eps: 1244.69 lat (ms,95%): 30.81
+[ 246s ] thds: 8 eps: 1183.05 lat (ms,95%): 30.81
+[ 249s ] thds: 8 eps: 1314.49 lat (ms,95%): 30.81
+[ 252s ] thds: 8 eps: 1243.95 lat (ms,95%): 30.81
+[ 255s ] thds: 8 eps: 1243.60 lat (ms,95%): 30.81
+[ 258s ] thds: 8 eps: 1239.98 lat (ms,95%): 30.81
+[ 261s ] thds: 8 eps: 1247.09 lat (ms,95%): 30.81
+[ 264s ] thds: 8 eps: 1231.99 lat (ms,95%): 30.81
+[ 267s ] thds: 8 eps: 1246.46 lat (ms,95%): 30.81
+[ 270s ] thds: 8 eps: 1244.56 lat (ms,95%): 30.81
+[ 273s ] thds: 8 eps: 1232.40 lat (ms,95%): 29.72
+[ 276s ] thds: 8 eps: 1257.81 lat (ms,95%): 30.81
+[ 279s ] thds: 8 eps: 1242.69 lat (ms,95%): 30.81
+[ 282s ] thds: 8 eps: 1243.94 lat (ms,95%): 30.81
+[ 285s ] thds: 8 eps: 1245.07 lat (ms,95%): 30.81
+[ 288s ] thds: 8 eps: 1233.52 lat (ms,95%): 28.67
+[ 291s ] thds: 8 eps: 1248.47 lat (ms,95%): 28.67
+[ 294s ] thds: 8 eps: 1247.26 lat (ms,95%): 28.67
+[ 297s ] thds: 8 eps: 1246.38 lat (ms,95%): 28.67
+[ 300s ] thds: 8 eps: 1249.18 lat (ms,95%): 28.67
+[ 303s ] thds: 8 eps: 1248.66 lat (ms,95%): 28.67
+[ 306s ] thds: 8 eps: 1237.01 lat (ms,95%): 28.67
+[ 309s ] thds: 8 eps: 1247.99 lat (ms,95%): 28.67
+[ 312s ] thds: 8 eps: 1248.99 lat (ms,95%): 28.67
+[ 315s ] thds: 8 eps: 1248.48 lat (ms,95%): 28.67
+[ 318s ] thds: 8 eps: 1244.38 lat (ms,95%): 28.67
+[ 321s ] thds: 8 eps: 1249.72 lat (ms,95%): 28.67
+[ 324s ] thds: 8 eps: 1249.65 lat (ms,95%): 28.67
+[ 327s ] thds: 8 eps: 1243.00 lat (ms,95%): 28.67
+[ 330s ] thds: 8 eps: 1248.30 lat (ms,95%): 28.67
+[ 333s ] thds: 8 eps: 1248.67 lat (ms,95%): 28.67
+[ 336s ] thds: 8 eps: 1248.31 lat (ms,95%): 28.67
+[ 339s ] thds: 8 eps: 1249.32 lat (ms,95%): 28.67
+[ 342s ] thds: 8 eps: 1247.66 lat (ms,95%): 28.67
+[ 345s ] thds: 8 eps: 1200.14 lat (ms,95%): 28.67
+[ 348s ] thds: 8 eps: 1216.63 lat (ms,95%): 28.67
+[ 351s ] thds: 8 eps: 866.45 lat (ms,95%): 46.63
+[ 354s ] thds: 8 eps: 705.53 lat (ms,95%): 56.84
+[ 357s ] thds: 8 eps: 572.26 lat (ms,95%): 59.99
+[ 360s ] thds: 8 eps: 575.44 lat (ms,95%): 59.99
+[ 363s ] thds: 8 eps: 577.04 lat (ms,95%): 58.92
+[ 366s ] thds: 8 eps: 575.49 lat (ms,95%): 59.99
+[ 369s ] thds: 8 eps: 574.70 lat (ms,95%): 61.08
+[ 372s ] thds: 8 eps: 577.54 lat (ms,95%): 59.99
+[ 375s ] thds: 8 eps: 573.95 lat (ms,95%): 58.92
+[ 378s ] thds: 8 eps: 574.25 lat (ms,95%): 59.99
+[ 381s ] thds: 8 eps: 575.54 lat (ms,95%): 61.08
+[ 384s ] thds: 8 eps: 573.67 lat (ms,95%): 59.99
+[ 387s ] thds: 8 eps: 518.44 lat (ms,95%): 63.32
+[ 390s ] thds: 8 eps: 517.12 lat (ms,95%): 62.19
+[ 393s ] thds: 8 eps: 525.02 lat (ms,95%): 59.99
+[ 396s ] thds: 8 eps: 572.40 lat (ms,95%): 59.99
+[ 399s ] thds: 8 eps: 578.46 lat (ms,95%): 59.99
+[ 402s ] thds: 8 eps: 631.46 lat (ms,95%): 61.08
+[ 405s ] thds: 8 eps: 1116.00 lat (ms,95%): 30.81
+[ 408s ] thds: 8 eps: 1224.70 lat (ms,95%): 30.26
+[ 411s ] thds: 8 eps: 1201.42 lat (ms,95%): 29.72
+[ 414s ] thds: 8 eps: 1125.48 lat (ms,95%): 28.67
+[ 417s ] thds: 8 eps: 1091.61 lat (ms,95%): 28.67
+[ 420s ] thds: 8 eps: 971.07 lat (ms,95%): 28.67
+[ 423s ] thds: 8 eps: 875.17 lat (ms,95%): 27.17
+[ 426s ] thds: 8 eps: 869.43 lat (ms,95%): 27.17
+[ 429s ] thds: 8 eps: 874.55 lat (ms,95%): 28.16
+[ 432s ] thds: 8 eps: 875.42 lat (ms,95%): 27.17
+[ 435s ] thds: 8 eps: 865.77 lat (ms,95%): 29.19
+[ 438s ] thds: 8 eps: 871.94 lat (ms,95%): 29.19
+[ 441s ] thds: 8 eps: 1193.88 lat (ms,95%): 29.19

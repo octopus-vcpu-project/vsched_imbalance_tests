@@ -1,7 +1,7 @@
 
 
 #bench_1_=("sudo sysbench --threads=16 --time=40 cpu run")
-bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
+bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 16 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 16 -i native")
 #bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p facesim -n 16 -i native")

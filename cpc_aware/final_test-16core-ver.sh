@@ -9,11 +9,11 @@
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p canneal -n 16 -i native")
 
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
-bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;sudo cset proc --set=benchmark_cpuset --exec bash bash run.sh")
+bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
-bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;sudo cset proc --set=benchmark_cpuset --exec bash bash run.sh")
-bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;sudo cset proc --set=benchmark_cpuset --exec bash bash run.sh")
-bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;sudo cset proc --set=benchmark_cpuset --exec bash bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
 

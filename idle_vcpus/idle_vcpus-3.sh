@@ -65,10 +65,10 @@ run_test_series(){
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 
 wake_and_pin_prob $prob_vm
-wake_and_pin_prob $compete_vm
+#wake_and_pin_prob $compete_vm
 sleep 10 
 ssh ubuntu@$compete_vm "sudo killall sysbench"
-ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run"  &
+#ssh ubuntu@$compete_vm "sudo sysbench --time=90000000 --threads=16 cpu run"  &
 sleep 10 
 for i in {0..1};do
     echo "Run $i">> "$OUTPUT_FILE" 

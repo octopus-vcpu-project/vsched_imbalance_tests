@@ -1,5 +1,6 @@
 #set terminal postscript eps enhanced "NimbusSanL-Regu, 20" fontfile "/usr/share/fonts/type1/texlive-fonts-recommended/uhvr8a.pfb"
 set terminal postscript eps enhanced color "NimbusSanL-Regu, 24" fontfile "/Users/morewrong/Downloads/uhvr8a.pfb"
+
 set output "micro-motivate.eps"
 
 set size 1.0,1.0
@@ -14,7 +15,9 @@ set style fill solid 1.00 border 0
 set style data histogram
 set style histogram clustered gap 1
 #set style histogram errorbars gap 1 lw 1
-set key left top font "Times New Roman,35" at -1,229,0
+set key inside right top font "Times New Roman,35"
+
+set key title "Scheduling Strategies"
 set yrange [1000:4000]
 set origin 0.0,0.15
 set size 1.0,0.85

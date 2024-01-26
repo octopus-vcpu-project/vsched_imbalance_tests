@@ -14,7 +14,7 @@
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
-bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
+bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 
 prob_vm="e-vm3"

@@ -65,7 +65,7 @@ runLatencyTestSMRT(){
 }
 
 getLatencyResults(){
-    #runLatencyTest "img-dnn"
+    runLatencyTest "img-dnn"
     #runLatencyTest "moses"
     runLatencyTest "masstree"
     #runLatencyTest "silo"
@@ -77,7 +77,7 @@ getLatencyResults(){
 }
 
 getLatencyResultsSMRT(){
-    #runLatencyTestSMRT "img-dnn"
+    runLatencyTestSMRT "img-dnn"
     #runLatencyTestSMRT "moses"
     runLatencyTestSMRT "masstree"
     #runLatencyTestSMRT "silo"

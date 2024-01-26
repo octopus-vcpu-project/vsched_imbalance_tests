@@ -216,7 +216,7 @@ for ((i=0; i<length; i++)); do
         done
     ) &
    mode_pid=$!
-    ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
+    ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset --exec $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
     sudo kill $mode_pid
 done
 getLatencyResultsSMRT

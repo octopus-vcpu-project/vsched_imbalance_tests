@@ -10,7 +10,7 @@
 
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;time sudo bash run.sh")
-bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;time sudo bash run.sh")
+bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;time sudo bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;time sudo bash run.sh")
@@ -195,7 +195,8 @@ for ((i=0; i<length; i++)); do
         done
     ) &
     mode_pid=$!
-    ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset --exec $bench_1">>"${OUTPUT_FILE}_$i"
+    #ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset --exec $bench_1">>"${OUTPUT_FILE}_$i"
+    ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
     sudo kill $mode_pid
 done
 getLatencyResults
@@ -216,7 +217,8 @@ for ((i=0; i<length; i++)); do
         done
     ) &
    mode_pid=$!
-    ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset --exec $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
+    #ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset --exec $bench_1">>"${OUTPUT_FILE_PROBE}_$i"
+    ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
     sudo kill $mode_pid
 done
 getLatencyResultsSMRT

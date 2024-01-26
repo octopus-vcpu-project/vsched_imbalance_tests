@@ -1,0 +1,106 @@
+naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 775.47 lat (ms,95%): 30.26
+[ 6s ] thds: 8 eps: 858.71 lat (ms,95%): 28.16
+[ 9s ] thds: 8 eps: 840.28 lat (ms,95%): 29.19
+[ 12s ] thds: 8 eps: 846.83 lat (ms,95%): 28.16
+[ 15s ] thds: 8 eps: 731.00 lat (ms,95%): 30.26
+[ 18s ] thds: 8 eps: 848.65 lat (ms,95%): 29.19
+CPU speed:
+    events per second: 30019.35
+
+General statistics:
+    total time:                          20.0969s
+    total number of events:              603406
+
+Latency (ms):
+         min:                                    0.91
+         avg:                                    1.06
+         max:                                  161.23
+         95th percentile:                        1.14
+         sum:                               639124.62
+
+Threads fairness:
+    events (avg/stddev):           18856.4375/3633.23
+    execution time (avg/stddev):   19.9726/0.02
+
+[ 21s ] thds: 8 eps: 777.25 lat (ms,95%): 30.26
+non-naive test
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 32
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 8
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] thds: 8 eps: 817.52 lat (ms,95%): 29.19
+[ 6s ] thds: 8 eps: 844.71 lat (ms,95%): 29.19
+[ 9s ] thds: 8 eps: 814.50 lat (ms,95%): 29.72
+[ 12s ] thds: 8 eps: 850.49 lat (ms,95%): 29.72
+[ 15s ] thds: 8 eps: 855.38 lat (ms,95%): 28.67
+[ 18s ] thds: 8 eps: 856.13 lat (ms,95%): 28.16
+CPU speed:
+    events per second: 30172.65
+
+General statistics:
+    total time:                          20.0011s
+    total number of events:              603595
+
+Latency (ms):
+         min:                                    0.91
+         avg:                                    1.06
+         max:                                   25.15
+         95th percentile:                        1.14
+         sum:                               639541.26
+
+Threads fairness:
+    events (avg/stddev):           18862.3438/1165.11
+    execution time (avg/stddev):   19.9857/0.01
+
+[ 21s ] thds: 8 eps: 826.69 lat (ms,95%): 30.81

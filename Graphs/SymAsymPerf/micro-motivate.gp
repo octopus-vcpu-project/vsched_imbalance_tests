@@ -15,23 +15,22 @@ set style data histogram
 set style histogram clustered gap 1
 #set style histogram errorbars gap 1 lw 1
 set key left top font "Times New Roman,35" at -1,229,0
-set yrange [0:229]
+set yrange [1000:4000]
 set origin 0.0,0.15
 set size 1.0,0.85
 #set label 11 center at graph 0.5,-0.48 "(a) KVM Hypervisor" font "Times New Roman,35"
 #set xtics ("Hbase" 0, "PageRank" 1, "MongoDB" 3, "Kmeans" 4)
 set xtics font "Times New Roman,35"
 set ytics font "Times New Roman,35"
-set xtics ("Mattel" 0, "Large data set" 2)
+set xtics ("Assymetric" 0, "Symmetric" 2)
 #set xtics ("p.dedup" 0, "s.volrend" 1)
 set bmargin 0
 set lmargin 9.5
 set rmargin 0.9
 
-plot "micro-motivate.dat" using 2 title "Matmul" linecolor rgb "red" lt 1 fs pattern 3, \
-		 '' using 3 title "IO before" linecolor rgb "black" lt 1 fs pattern 6, \
-		 '' using 4 title "Matmul" linecolor rgb "red" lt 1 fs pattern 3, \
-		 '' using 5 title "IO After" linecolor rgb "yellow" lt 1 fs pattern 12, \
+plot "micro-motivate.dat" using 2 title "CFS" linecolor rgb "red" lt 1 fs pattern 3, \
+		 '' using 3 title "CFS+vProbing" linecolor rgb "black" lt 1 fs pattern 6, \
+		 '' using 4 title "CFS+Pinning" linecolor rgb "blue" lt 1 fs pattern 9, \
 		 100 notitle lc rgb"black"
 unset style
 

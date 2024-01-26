@@ -20,7 +20,7 @@ def try_test(s):
             for line in ln_1:
                 if "ThreadID" in line:
                     current_thread = line.split(': ')[1][:-1]
-                elif "se.sum_exec_runtime" in line:
+                elif "se.nr_migrations" in line:
                     vruntime = float(line.split(': ')[1][:-1].strip())
                     if current_thread in vruntime_per_thread:
                         vruntime_per_thread[current_thread].append(vruntime)
@@ -50,8 +50,8 @@ def graph_lst(pin_cs,smrt_cs,nve_cs):
 
 
 biggest=-99999999999
-pin_cs = try_test("./test/unf-asym-pin-*.txt")
-smrt_cs = try_test("./test/unf-asym-smrt-*.txt")
-nve_cs = try_test("./test/unf-asym-nve-*.txt")
+pin_cs = try_test("./test/sym-plc-nve-*.txt")
+smrt_cs = try_test("./test/sym-plc-smrt-*.txt")
+nve_cs = try_test("./test/sym-plc-nve-*.txt")
 print(nve_cs)
 graph_lst(pin_cs,smrt_cs,nve_cs)

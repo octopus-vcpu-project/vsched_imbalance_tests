@@ -1,0 +1,4 @@
+cset: --> last message, executed args into cpuset "/benchmark_cpuset", new pid is: 2946
+TBENCH_MAXREQS = 60000
+TBENCH_WARMUPREQS = 2500
+TBENCH_MINSLEEPNS = 1000

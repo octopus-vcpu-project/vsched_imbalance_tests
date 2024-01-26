@@ -1,0 +1,10 @@
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 26479.799 ms | p95 54774.229 ms | p99 57377.787 ms | max 58089.671 ms
+svc: mean 1271.115 ms | p95 1700.428 ms | p99 1842.795 ms | max 1935.149 ms
+end2end: mean 27750.914 ms | p95 56220.572 ms | p99 58701.889 ms | max 59552.412 ms

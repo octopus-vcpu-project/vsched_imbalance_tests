@@ -113,7 +113,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 8 -s 7 -u 12000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 4000 -p 0 -s 5000 &  " & 
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 4000 -p 100 -s 6000 &  " & 
     sleep 10
 }
 

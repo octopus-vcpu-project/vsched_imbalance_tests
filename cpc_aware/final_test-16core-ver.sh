@@ -11,11 +11,11 @@
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
-bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
+#bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;time sudo bash run.sh")
 
 prob_vm="e-vm3"
 compete_vm_1="e-vm1"
@@ -65,26 +65,26 @@ runLatencyTestSMRT(){
 }
 
 getLatencyResults(){
-    runLatencyTest "img-dnn"
-    runLatencyTest "moses"
-    runLatencyTest "masstree"
-    runLatencyTest "silo"
-    runLatencyTest "shore"
+    #runLatencyTest "img-dnn"
+    #runLatencyTest "moses"
+    #runLatencyTest "masstree"
+    #runLatencyTest "silo"
+    #runLatencyTest "shore"
     #runLatencyTest "specjbb"
     #runLatencyTest "sphinx"
-    #runLatencyTest "xapian"
+    runLatencyTest "xapian"
     echo "got latency results"
 }
 
 getLatencyResultsSMRT(){
-    runLatencyTestSMRT "img-dnn"
-    runLatencyTestSMRT "moses"
-    runLatencyTestSMRT "masstree"
+    #runLatencyTestSMRT "img-dnn"
+    #runLatencyTestSMRT "moses"
+    #runLatencyTestSMRT "masstree"
     #runLatencyTestSMRT "silo"
     #runLatencyTestSMRT "shore"
     #runLatencyTestSMRT "specjbb"
     #runLatencyTestSMRT "sphinx"
-    #runLatencyTestSMRT "xapian"
+    runLatencyTestSMRT "xapian"
     echo "got latency results"
 }
 reset_prob_vm(){

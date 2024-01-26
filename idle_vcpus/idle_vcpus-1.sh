@@ -34,7 +34,7 @@ wake_and_pin_prob(){
 wake_and_pin_vm $compete_vm
 wake_and_pin_prob $prob_vm
 #Fetch VM PID and use that to fetch Cgroup title
-ssh ubuntu@$prob_vm"sudo sysbench --threads=64 --time=20 cpu run"
+ssh ubuntu@$prob_vm "sudo sysbench --threads=64 --time=20 cpu run"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 for i in {0..0};do
     echo "naive test" >> "$OUTPUT_FILE"

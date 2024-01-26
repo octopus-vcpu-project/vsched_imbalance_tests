@@ -12,8 +12,8 @@
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/silo;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
-bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
-#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
+#bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/shore;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
+bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/specjbb;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_+=("cd /home/ubuntu/Workloads/Tailbench/tailbench/sphinx;time sudo bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/xapian;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 
@@ -69,8 +69,8 @@ getLatencyResults(){
     #runLatencyTest "moses"
     #runLatencyTest "masstree"
     #runLatencyTest "silo"
-    runLatencyTest "shore"
-    #runLatencyTest "specjbb"
+    #runLatencyTest "shore"
+    runLatencyTest "specjbb"
     #runLatencyTest "sphinx"
     #runLatencyTest "xapian"
     echo "got latency results"
@@ -81,8 +81,8 @@ getLatencyResultsSMRT(){
     #runLatencyTestSMRT "moses"
     #runLatencyTestSMRT "masstree"
     #runLatencyTestSMRT "silo"
-    runLatencyTestSMRT "shore"
-    #runLatencyTestSMRT "specjbb"
+    #runLatencyTestSMRT "shore"
+    runLatencyTestSMRT "specjbb"
     #runLatencyTestSMRT "sphinx"
     #runLatencyTestSMRT "xapian"
     echo "got latency results"

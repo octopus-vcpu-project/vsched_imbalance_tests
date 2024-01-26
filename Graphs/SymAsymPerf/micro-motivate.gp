@@ -28,10 +28,9 @@ set bmargin 0
 set lmargin 9.5
 set rmargin 0.9
 
-plot "micro-motivate.dat" using 2 title "Matmul" linecolor rgb "red" lt 1 fs pattern 3, \
-		 '' using 3 title "IO before" linecolor rgb "black" lt 1 fs pattern 6, \
-		 '' using 4 title "Matmul" linecolor rgb "red" lt 1 fs pattern 3, \
-		 '' using 5 title "IO After" linecolor rgb "yellow" lt 1 fs pattern 12, \
+plot "micro-motivate.dat" using 2 title "CFS" linecolor rgb "red" lt 1 fs pattern 3, \
+		 '' using 3 title "CFS+vProbing" linecolor rgb "black" lt 1 fs pattern 6, \
+		 '' using 4 title "CFS+Pinning" linecolor rgb "red" lt 1 fs pattern 3, \
 		 100 notitle lc rgb"black"
 unset style
 

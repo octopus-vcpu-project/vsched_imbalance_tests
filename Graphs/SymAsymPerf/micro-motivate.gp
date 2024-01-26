@@ -22,7 +22,7 @@ set size 1.0,0.85
 #set xtics ("Hbase" 0, "PageRank" 1, "MongoDB" 3, "Kmeans" 4)
 set xtics font "Times New Roman,35"
 set ytics font "Times New Roman,35"
-set xtics ("Mattel" 0, "Large data set" 2)
+set xtics ("Assymetric" 0, "Symmetric" 2)
 #set xtics ("p.dedup" 0, "s.volrend" 1)
 set bmargin 0
 set lmargin 9.5
@@ -30,7 +30,7 @@ set rmargin 0.9
 
 plot "micro-motivate.dat" using 2 title "CFS" linecolor rgb "red" lt 1 fs pattern 3, \
 		 '' using 3 title "CFS+vProbing" linecolor rgb "black" lt 1 fs pattern 6, \
-		 '' using 4 title "CFS+Pinning" linecolor rgb "red" lt 1 fs pattern 3, \
+		 '' using 4 title "CFS+Pinning" linecolor rgb "blue" lt 1 fs pattern 9, \
 		 100 notitle lc rgb"black"
 unset style
 

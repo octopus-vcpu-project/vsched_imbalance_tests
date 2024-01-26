@@ -65,25 +65,25 @@ runLatencyTestSMRT(){
 }
 
 getLatencyResults(){
-    runLatencyTest "img-dnn"
-    runLatencyTest "moses"
-    runLatencyTest "masstree"
-    runLatencyTest "silo"
-    runLatencyTest "shore"
-    runLatencyTest "specjbb"
-    runLatencyTest "sphinx"
-    runLatencyTest "xapian"
+    #runLatencyTest "img-dnn"
+    #runLatencyTest "moses"
+    #runLatencyTest "masstree"
+    #runLatencyTest "silo"
+    #runLatencyTest "shore"
+    #runLatencyTest "specjbb"
+    #runLatencyTest "sphinx"
+    #runLatencyTest "xapian"
 }
 
 getLatencyResultsSMRT(){
-    runLatencyTestSMRT "img-dnn"
-    runLatencyTestSMRT "moses"
-    runLatencyTestSMRT "masstree"
-    runLatencyTestSMRT "silo"
-    runLatencyTestSMRT "shore"
-    runLatencyTestSMRT "specjbb"
-    runLatencyTestSMRT "sphinx"
-    runLatencyTestSMRT "xapian"
+    #runLatencyTestSMRT "img-dnn"
+    #runLatencyTestSMRT "moses"
+    #runLatencyTestSMRT "masstree"
+    #runLatencyTestSMRT "silo"
+    #runLatencyTestSMRT "shore"
+    #runLatencyTestSMRT "specjbb"
+    #runLatencyTestSMRT "sphinx"
+    #runLatencyTestSMRT "xapian"
 }
 reset_prob_vm(){
     virsh shutdown $prob_vm

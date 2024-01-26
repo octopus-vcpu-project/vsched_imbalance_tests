@@ -73,6 +73,7 @@ getLatencyResults(){
     #runLatencyTest "specjbb"
     #runLatencyTest "sphinx"
     #runLatencyTest "xapian"
+    echo "got latency results"
 }
 
 getLatencyResultsSMRT(){
@@ -84,6 +85,7 @@ getLatencyResultsSMRT(){
     #runLatencyTestSMRT "specjbb"
     #runLatencyTestSMRT "sphinx"
     #runLatencyTestSMRT "xapian"
+    echo "got latency results"
 }
 reset_prob_vm(){
     virsh shutdown $prob_vm

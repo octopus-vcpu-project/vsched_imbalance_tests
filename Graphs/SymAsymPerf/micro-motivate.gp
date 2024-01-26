@@ -10,7 +10,7 @@ set xtics font "Times New Roman, 35" nomirror offset 0,0 rotate by 0
 set ytics nomirror
 
 # plot A
-set ylabel "Normalized throughput (%)\n" font "Times New Roman,35" offset 0,0
+set ylabel "Sysbench Score" font "Times New Roman,35" offset 0,0
 set style fill solid 1.00 border 0
 set style data histogram
 set style histogram clustered gap 1

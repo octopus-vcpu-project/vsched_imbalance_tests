@@ -59,6 +59,7 @@ def process_file(n,s,t):
     files.sort(reverse=True)
     if len(files) >= n:
         file_to_read = files[n-1]
+        print(file_to_read)
         with open(file_to_read, 'r') as f:
             ln_1 = f.readlines()
             current_cpu = -1
@@ -72,7 +73,6 @@ def process_file(n,s,t):
                 elif "total number of events" in line:
                     if(len(interval_values_1)==21):
                         interval_values_1.pop()
-                    print("blah",len(interval_values_1))
                     interval_values_1.append(int(line.split()[-1]))
                     if(t==1):
                         interval_values_1 = [0]

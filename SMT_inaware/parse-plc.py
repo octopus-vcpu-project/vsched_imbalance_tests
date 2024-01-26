@@ -79,6 +79,8 @@ if files:
     sorted_indices = sorted(range(len(values)), key=lambda k: values[k])
     values = [values[i] for i in sorted_indices]
     counts = [counts[i] for i in sorted_indices]
+    print("values",values)
+    print("counts",counts)
     # Plot
     plt.plot(values, counts,marker='o')
     

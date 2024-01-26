@@ -78,7 +78,7 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     
     ax.legend(framealpha=0.1,fontsize=16,prop = { "size": 21 },ncols=2)
     plt.xlim(left=3)
-    plt.show()
+    #plt.show()
 # Initialize an empty list to hold the counts
 list_sysbench_opt = process_file(1,"./test/bym-opt*.txt")
 list_sysbench_smart = process_file(1,"./test/bym-smrt*.txt")
@@ -93,6 +93,9 @@ data = {
     "CFS+Pinned":[list_sysbench_opt,asym_opt]
 }
 
+print([list_sysbench_naive,asym_naive])
+print([list_sysbench_smart,asym_smart])
+print([list_sysbench_opt,asym_opt])
 
 plot_grouped_data_with_legends(data,["Symmetric","Assymetric"])
 

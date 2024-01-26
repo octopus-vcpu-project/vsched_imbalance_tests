@@ -82,7 +82,7 @@ def plot_grouped_data_with_legends(data_dict, name_parameters):
     xlim1 = (xlim1-midlim) * c_for + midlim
     plt.xlim(xlim,xlim1)
     ax.legend(framealpha=0.1,columnspacing=0.5,prop = { "size": 28 },ncols=2)
-    plt.show()
+    #plt.show()
 # Initialize an empty list to hold the counts
 list_sysbench_opt = process_file(1,"./test/bym-opt*.txt")
 list_sysbench_smart = process_file(1,"./test/bym-smrt*.txt")
@@ -99,5 +99,8 @@ data = {
 print("asym naive",(asym_naive-asym_opt)/asym_opt)
 print("optimal",asym_opt)
 
+print([list_sysbench_naive,asym_naive])
+print([list_sysbench_smart,asym_smart])
+print([list_sysbench_opt,asym_opt])
 plot_grouped_data_with_legends(data,["Symmetric","Assymetric"])
 

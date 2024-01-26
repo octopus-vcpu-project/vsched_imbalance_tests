@@ -15,7 +15,7 @@ set style data histogram
 set style histogram clustered gap 1
 #set style histogram errorbars gap 1 lw 1
 set key left top font "Times New Roman,35" at -1,229,0
-set yrange [0:229]
+set yrange [1000:4000]
 set origin 0.0,0.15
 set size 1.0,0.85
 #set label 11 center at graph 0.5,-0.48 "(a) KVM Hypervisor" font "Times New Roman,35"

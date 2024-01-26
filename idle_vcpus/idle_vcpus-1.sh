@@ -3,7 +3,7 @@ prob_vm=$1
 compete_vm=$2
 compete_vm_2=$3
 benchmark_time=20
-latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
+latency_bench="sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 32 -i native"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python parselats-1.py ../img-dnn/lats.bin"
@@ -38,12 +38,14 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 for i in {0..0};do
     echo "naive test" >> "$OUTPUT_FILE"
     ssh ubuntu@$compete_vm "sudo sysbench --threads=8 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "sudo sysbench cpu run --threads=32 --time=20" >> "$OUTPUT_FILE" 
+    sleep 3
+    ssh ubuntu@$prob_vm "$latency_bench" >> "$OUTPUT_FILE" 
     ssh ubuntu@$compete_vm "sudo killall sysbench"
     echo "non-naive test" >> "$OUTPUT_FILE"
     #use progressive, interrutpible sysbench
     ssh ubuntu@$compete_vm "sudo sysbench --threads=8 --report-interval=3 --time=30000000 cpu run" >>"$OUTPUT_FILE" &
-    ssh ubuntu@$prob_vm "taskset -c 1-31 sudo sysbench cpu run --threads=32 --time=20 " >> "$OUTPUT_FILE" 
+    sleep 3
+    ssh ubuntu@$prob_vm "taskset -c 1-31 $latency_bench" >> "$OUTPUT_FILE" 
     ssh ubuntu@$compete_vm "sudo killall sysbench"
 done
 sudo git add .;sudo git commit -m 'new';sudo git push

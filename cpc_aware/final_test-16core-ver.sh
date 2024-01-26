@@ -103,7 +103,7 @@ reset_prob_vm(){
     for i in {12..15};do
         sudo virsh vcpupin $prob_vm $i $((i + 108))
     done
-    ssh ubuntu@$prob_vm "sudo cset proc --set=benchmark_cpuset --cpu 0-15 "
+    ssh ubuntu@$prob_vm "sudo cset set --set=benchmark_cpuset --cpu 0-15 "
 
     ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 }

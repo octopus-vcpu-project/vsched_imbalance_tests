@@ -70,8 +70,8 @@ getLatencyResults(){
     #runLatencyTest "masstree"
     #runLatencyTest "silo"
     #runLatencyTest "shore"
-    runLatencyTest "specjbb"
-    #runLatencyTest "sphinx"
+    #runLatencyTest "specjbb"
+    runLatencyTest "sphinx"
     #runLatencyTest "xapian"
     echo "got latency results"
 }
@@ -82,8 +82,8 @@ getLatencyResultsSMRT(){
     #runLatencyTestSMRT "masstree"
     #runLatencyTestSMRT "silo"
     #runLatencyTestSMRT "shore"
-    runLatencyTestSMRT "specjbb"
-    #runLatencyTestSMRT "sphinx"
+    #runLatencyTestSMRT "specjbb"
+    runLatencyTestSMRT "sphinx"
     #runLatencyTestSMRT "xapian"
     echo "got latency results"
 }

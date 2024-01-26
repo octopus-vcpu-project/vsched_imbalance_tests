@@ -1,4 +1,4 @@
-set terminal postscript eps enhanced color "NimbusSanL-Regu, 24" fontfile "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb"
+set terminal postscript eps enhanced color "NimbusSanL-Regu, 24" fontfile "/Users/morewrong/Downloads/uhvr8a.pfb"
 set output 'fig7_perf_break_v2.eps'
 set boxwidth 0.75 absolute
 #set style fill   solid 1.00 border lt -1
@@ -43,4 +43,4 @@ plot 'fig7_perf_break_v2.dat' using 2 ti col, \
 	'' using 7 ti col, \
 	'' using 8 ti col, \
 	'' using 9 ti col, \
-	'' using 10:key(1) ti col
+	'' using 10 ti col

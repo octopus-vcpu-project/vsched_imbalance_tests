@@ -1,5 +1,6 @@
 
 
+bench_1_=("echo lol")
 #bench_1_=("sudo sysbench --threads=32 --time=40 cpu run")
 bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native")
 bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 16 -i native")
@@ -106,7 +107,7 @@ reset_prob_vm(){
 
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 5 -s 4 -u 7000" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 5 -s 7 -u 7000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 20 -p 80 -s 5000 &  " & 
     sleep 10

@@ -31,10 +31,20 @@ def process_file(n,s):
         return []
 
 def plot_data(index1, index2):
-    dataset1 = process_file(index1,"./tests/1-asym-plc-01181714.txt")
+    dataset1 = process_file(index1,"./tests/1-asym-plc-01181602.txt")
     dataset2 = process_file(index2,"./tests/1-asym-plc-01181832.txt")
-    print(sum(dataset2))
-    print(sum(dataset1))
+    end_str=""
+    for x in range(0,len(dataset1)):
+        end_str+=(str(dataset1[x]) + " ")
+    print(end_str)
+    end_str=""
+    for x in range(0,len(dataset2)):
+        end_str+=(str(dataset2[x]) + " ")
+    print(end_str)  
+    end_str=""
+    for x in range(0,len(dataset2)):
+        end_str+=(str(x) + " ")
+    print(end_str)  
     plt.figure(figsize=(10, 6))
     max_length = max(len(dataset1), len(dataset2))
     # Iterate over each pair of bars and plot the shorter one in front
@@ -56,7 +66,7 @@ def plot_data(index1, index2):
     plt.title('')
     plt.legend(['CFS', 'CFS+vProbing'])
     plt.subplots_adjust(left=0.463, bottom=0.471)
-    plt.show()
+    
 
 
 # Example usage

@@ -87,7 +87,7 @@ getLatencyResultsSMRT(){
 }
 reset_prob_vm(){
     virsh shutdown $prob_vm
-    sleep 50
+    sleep 30
     sudo bash ../utility/cleanon_startup.sh $prob_vm 16
     for i in {0..3};do
         sudo virsh vcpupin $prob_vm $i $((i + 20))

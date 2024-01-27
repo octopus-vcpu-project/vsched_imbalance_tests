@@ -70,12 +70,14 @@ def convertLegible(groups,cluster_labels):
 
 # Example usage
 groups = {
-    "canneal":[114.794,116.471],
-"sysbench":[6340.42,6288.64],
-"bodyTrack":[203.574,210.657],
-"facesim":[748,760.944],
- "dedup":[90.364,48.510],
-"streamCluster":[1063,1029],
+    "SPECJBB":[3.237,1.821],
+    "MassTree":[26.429 ,20.737],
+    "SILO":[9.577,8.005 ],
+"Xapian":[8113.784 ,4874.109 ],
+"MOSES":[42724.298 ,38301.660 ],
+"Shore":[60829.166 ,32321.862 ],
+ "IMG-Dnn":[13779.511 ,9728.214 ],
+"Sphinx":[17,16.828 ],
 }
 
 

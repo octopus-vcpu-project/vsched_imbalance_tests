@@ -66,11 +66,11 @@ def convertLegible(groups,cluster_labels):
             ex_list.append(groups[item][x])
         new_groups[cluster_labels[x]] = ex_list
     return new_groups,test_list
-
+136.541s 130.018s 
 
 # Example usage
 groups = {
-    "canneal":[114.794,116.471],
+    "canneal":[136,130],
 "sysbench":[6340.42,6288.64],
 "bodyTrack":[203.574,210.657],
 "facesim":[748,760.944],

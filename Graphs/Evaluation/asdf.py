@@ -40,9 +40,9 @@ def customize_plot(ax, x_label, y_label, title, font_size, legend_pos,y_lim=[80,
     ax.set_xlabel(x_label, fontsize=font_size)
     ax.set_ylabel(y_label, fontsize=font_size)
     ax.set_title(title, fontsize=font_size)
-    ax.legend(loc=legend_pos, prop={'size': 11},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
+    ax.legend(loc=legend_pos, prop={'size': 12},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
 
-def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=12, legend_pos='upper center'):
+def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=13, legend_pos='upper center'):
     group_labels, values = prepare_data(groups)
     fig, ax = plt.subplots(figsize=(5, 3))
     create_bars(ax, group_labels, values, cluster_labels, bar_width=0.35, font_size=font_size)
@@ -70,16 +70,26 @@ def convertLegible(groups,cluster_labels):
 
 # Example usage
 groups = {
-    "SPECJBB":[3.237,1.821],
-    "MassTree":[26.429 ,20.737],
-    "SILO":[9.577,8.005 ],
+    "Dedup":[64,32.91],
+    "BodyTrack":[227,204],
+    "SILO":[136,130 ],
 "Xapian":[8113.784 ,4874.109 ],
 "MOSES":[42724.298 ,38301.660 ],
 "Shore":[60829.166 ,32321.862 ],
- "IMG-Dnn":[13779.511 ,9728.214 ],
+"Img-dnn":[13779.511 ,9728.214 ],
 "Sphinx":[17,16.828 ],
 }
 
+
+
+# Example usage
+groups = {
+    "Dedup":[64,32.91],
+    "BodyTrack":[227,204],
+    "Canneal":[136,130 ],
+"Sysbench":[5312.11 ,5241.10 ],
+"Ferret":[167 , 155 ],
+}
 
 def normalize_to_positive(asdf):
     for key in asdf:
@@ -89,9 +99,9 @@ def normalize_to_positive(asdf):
             groups[key][z]=norm/groups[key][z] * 100
 normalize_to_positive(groups)
 cluster_labels1 = ["Mean","95"]
-cluster_labels = ["Cfs","Cfs+vProber"]
+cluster_labels = ["CFS","vProber+"]
 
 
 groups, cluster_labels= convertLegible(groups,cluster_labels)
 
-plot_chart(groups, x_label='', y_label='Normalized Performance(%)', cluster_labels=cluster_labels)
+plot_chart(groups, x_label='', y_label='Normalized Throughput\n(Relative to CFS)', cluster_labels=cluster_labels)

@@ -20,7 +20,7 @@ def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.18, font_s
     # Setting x-ticks to be in the middle of each group and adjusting font size
     mid_positions = [(a + b) / 2 for a, b in zip(bar_positions[0], bar_positions[-1])]
     ax.set_xticks(mid_positions)
-    ax.set_xticklabels(cluster_labels,rotation=-20,ha='left', fontsize=font_size)
+    ax.set_xticklabels(cluster_labels, fontsize=font_size)
     # Adjusting y-tick font size
     ax.tick_params(axis='y', labelsize=font_size)
 
@@ -32,7 +32,7 @@ def customize_plot(ax, x_label, y_label, title, font_size, legend_pos,y_lim=[80,
         ax.set_ylim(y_lim)
     ax.legend(loc=legend_pos, prop={'size': 11},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
 
-def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=12, legend_pos='upper center'):
+def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=15, legend_pos='upper center'):
     group_labels, values = prepare_data(groups)
     fig, ax = plt.subplots(figsize=(4, 3))
     create_bars(ax, group_labels, values, cluster_labels, bar_width=0.35, font_size=font_size)
@@ -73,8 +73,8 @@ def normalize_to_positive(asdf):
 
 normalize_to_positive(groups)
 print(groups)
-cluster_labels = ["CFS","CFS+vProber"]
+cluster_labels = ["CFS","vProber+"]
 
 groups, cluster_labels= convertLegible(groups,cluster_labels)
 
-plot_chart(groups, x_label='', y_label='Normalized Performance(%)', cluster_labels=cluster_labels)
+plot_chart(groups, x_label='', y_label='Normalized\n Performance(%)', cluster_labels=cluster_labels)

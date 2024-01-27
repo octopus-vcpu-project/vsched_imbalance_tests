@@ -20,7 +20,7 @@ def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.18, font_s
     # Setting x-ticks to be in the middle of each group and adjusting font size
     mid_positions = [(a + b) / 2 for a, b in zip(bar_positions[0], bar_positions[-1])]
     ax.set_xticks(mid_positions)
-    ax.set_xticklabels(cluster_labels, fontsize=font_size)
+    ax.set_xticklabels(cluster_labels,rotation=-20,ha='left', fontsize=font_size)
     # Adjusting y-tick font size
     ax.tick_params(axis='y', labelsize=font_size)
 

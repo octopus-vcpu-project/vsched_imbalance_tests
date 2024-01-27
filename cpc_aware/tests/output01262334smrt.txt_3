@@ -1,0 +1,18 @@
+cset: --> last message, executed args into cpuset "/benchmark_cpuset", new pid is: 2818
+computing slice 0 (from row 0 to 199)
+computing slice 3 (from row 600 to 799)
+computing slice 1 (from row 200 to 399)
+computing slice 2 (from row 400 to 599)
+computing slice 4 (from row 800 to 999)
+computing slice 5 (from row 1000 to 1199)
+computing slice 6 (from row 1200 to 1399)
+30computing slice 7 (from row 1400 to 1599)
+test 0 5520
+finished slice 3
+finished slice 7
+finished slice 1
+finished slice 2
+finished slice 5
+finished slice 6
+finished slice 4
+finished slice 0

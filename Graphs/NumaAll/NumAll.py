@@ -8,7 +8,7 @@ def prepare_data(groups):
     values = [groups[label] for label in labels]
     return labels, values
 
-def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.08, font_size=12):
+def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.08, font_size=22):
     n_groups = len(values[0])
     print("no groups",n_groups)
     bar_positions = []
@@ -31,7 +31,7 @@ def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.08, font_s
     print("this is zip bar positions",zip(bar_positions[0], bar_positions[-1]))
     ax.set_xticks(mid_positions)
 
-    plt.text(bar_positions[5][0]-0.12, 4, f'{1.08}',fontsize=font_size)
+    plt.text(bar_positions[5][0]-0.12, 4, f'{1.08}',rotation=-20,ha='left',fontsize=font_size)
     ax.set_xticklabels(real_cluster_labels, fontsize=font_size)
     # Adjusting y-tick font size
     ax.tick_params(axis='y', labelsize=font_size)
@@ -42,9 +42,9 @@ def customize_plot(ax, x_label, y_label, title, font_size, legend_pos,y_lim=[0,1
     ax.set_title(title, fontsize=font_size)
     if y_lim:
         ax.set_ylim(y_lim)
-    ax.legend(loc=legend_pos, prop={'size': 11},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
+    ax.legend(loc=legend_pos, prop={'size': 14},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
 
-def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=12, legend_pos='upper center'):
+def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=22, legend_pos='upper center'):
     group_labels, values = prepare_data(groups)
     fig, ax = plt.subplots(figsize=(12, 6))
     create_bars(ax, group_labels, values, cluster_labels, bar_width=0.35, font_size=font_size)
@@ -57,7 +57,7 @@ def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=12,
     handles, labels = plt.gca().get_legend_handles_labels()
     
     by_label = dict(zip(labels, handles))
-    plt.legend(by_label.values(), by_label.keys(),prop={'size': 12}) 
+    plt.legend(by_label.values(), by_label.keys(),prop={'size': 15}) 
     plt.tight_layout()
     plt.show()
 
@@ -90,7 +90,7 @@ for das in groups:
 print(groups)
 
 
-cluster_labels = ["Thoroughput", "IPC", "Ipis","Thoroughputd", "IPCd", "Ipisd"]
+cluster_labels = ["Throughput", "IPC", "IPI","Thoroughputd", "IPCd", "Ipisd"]
 
 groups, cluster_labels= convertLegible(groups,cluster_labels)
 

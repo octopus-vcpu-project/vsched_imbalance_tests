@@ -1,7 +1,19 @@
 import matplotlib.pyplot as plt
-edge_colors=['red','green','blue']
-colors=['none','none','blue']
-hatch = ['/', 'x', 'o'] 
+from matplotlib.pyplot import cm
+import numpy as np
+from matplotlib.colors import hsv_to_rgb
+from cycler import cycler
+from matplotlib.cm import get_cmap
+import matplotlib.pyplot as mpl
+# 1000 distinct colors:
+colors = mpl.colormaps.get_cmap('viridis').resampled(20).colors
+name = "tab10"
+cmap = get_cmap(name)  # type: matplotlib.colors.ListedColormap
+colors = cmap.colors  # type: list
+
+edge_colors=colors
+colors=['none','none',edge_colors[2],'none','none','none']
+hatch = ['/', 'x', 'o','\\','.'] 
 def prepare_data(groups):
     # Preparing data for plotting
     labels = list(groups.keys())
@@ -12,10 +24,10 @@ def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.18, font_s
     n_groups = len(values[0])
     bar_positions = []
     for i, group_values in enumerate(values):
-        positions = [x*1.5 + bar_width*i for x in range(n_groups)]
+        positions = [x*(bar_width*7 + 0.2) + bar_width*i for x in range(n_groups)]
         bar_positions.append(positions)
         print(positions)
-        ax.bar(positions, group_values, bar_width, label=group_labels[i],edgecolor=edge_colors[i],color=colors[i], hatch=hatch[i])
+        ax.bar(positions, group_values, bar_width, label=group_labels[i],edgecolor=edge_colors[i],color=colors[i%5], hatch=hatch[i%4])
 
     # Setting x-ticks to be in the middle of each group and adjusting font size
     mid_positions = [(a + b) / 2 for a, b in zip(bar_positions[0], bar_positions[-1])]
@@ -28,8 +40,6 @@ def customize_plot(ax, x_label, y_label, title, font_size, legend_pos,y_lim=[80,
     ax.set_xlabel(x_label, fontsize=font_size)
     ax.set_ylabel(y_label, fontsize=font_size)
     ax.set_title(title, fontsize=font_size)
-    if y_lim:
-        ax.set_ylim(y_lim)
     ax.legend(loc=legend_pos, prop={'size': 11},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
 
 def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=12, legend_pos='upper center'):
@@ -59,10 +69,17 @@ def convertLegible(groups,cluster_labels):
 
 
 # Example usage
-groups = {
-    "Bodytrack": [88.387,84.993],
-    "Streamcluster": [354,314]
+groups1 = {
+    "No HP": [0.255,0.562],
+    "Standard HP": [0.250 ,0.543 ],
+    "Always on HP":[0.207,0.452 ],
+    "Clumped(Half)":[0.237,0.555 ],
+    "Clumped(Quarter)":[0.245 ,0.652 ],
+    "CFS+Idle":[0.261 ,0.655 ],
+    "Pinned+Idle":[0.110,0.295]
 }
+
+
 
 def normalize_to_positive(asdf):
     for key in asdf:
@@ -71,10 +88,10 @@ def normalize_to_positive(asdf):
         for z in range(0,len(groups[key])):
             groups[key][z]=norm/groups[key][z] * 100
 
-normalize_to_positive(groups)
-print(groups)
-cluster_labels = ["CFS","CFS+vProber"]
+cluster_labels1 = ["Mean","95"]
+cluster_labels = ["No HP","Standard HP","Always on HP","Clumped(Half)","Clumped(Quarter)","CFS+Idle","Pinned+Idle"]
+
 
 groups, cluster_labels= convertLegible(groups,cluster_labels)
 
-plot_chart(groups, x_label='', y_label='Normalized Performance(%)', cluster_labels=cluster_labels)
+plot_chart(groups, x_label='', y_label='Latency(ms)', cluster_labels=cluster_labels)

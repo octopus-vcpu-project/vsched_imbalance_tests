@@ -54,7 +54,7 @@ def plot_data(index1, index2):
     plt.title('', fontsize=35)
     plt.legend(['CFS', 'CFS+vProbing'],loc="upper left", prop={'size': 30})
     plt.subplots_adjust(left=0.463, bottom=0.471)
-    plt.xticks(rotation=-20,ha='left')
+    
     # Adjust y-axis tick font size
     plt.yticks(fontsize=35)
     plt.tight_layout()

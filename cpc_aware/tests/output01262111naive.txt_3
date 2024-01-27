@@ -1,0 +1,32 @@
+cset: --> last message, executed args into cpuset "/benchmark_cpuset", new pid is: 2016
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 24
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  6340.42
+
+General statistics:
+    total time:                          60.0051s
+    total number of events:              380483
+
+Latency (ms):
+         min:                                    0.83
+         avg:                                    3.77
+         max:                                  308.16
+         95th percentile:                       22.28
+         sum:                              1433835.36
+
+Threads fairness:
+    events (avg/stddev):           15853.4583/1627.68
+    execution time (avg/stddev):   59.7431/0.10
+

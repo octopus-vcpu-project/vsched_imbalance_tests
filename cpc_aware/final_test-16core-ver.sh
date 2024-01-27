@@ -2,12 +2,12 @@
 
 #bench_1_=("echo lol")
 #bench_1_=("sudo sysbench -- --threads=8 --time=40 cpu run")
-bench_1_=("./vsched_tests/matmul.out -- 8 30")
+bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p dedup -n 8 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p streamcluster -n 16 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p bodytrack -n 8 -i native")
-#bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p facesim -n 8 -i native")
+#bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p ferret -n 8 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p canneal -n 8 -i native")
-
+bench_1_=("./vsched_tests/matmul.out -- 8 30")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/img-dnn;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/moses;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")
 #bench_1_=("cd /home/ubuntu/Workloads/Tailbench/tailbench/masstree;sudo cset proc --set=benchmark_cpuset --exec bash run.sh")

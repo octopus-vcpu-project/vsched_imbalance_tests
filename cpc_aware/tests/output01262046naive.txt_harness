@@ -1,0 +1,7 @@
+Running Latency benchmark harness
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 112, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 64, in getLatPct
+    assert os.path.exists(latsFile)
+AssertionError

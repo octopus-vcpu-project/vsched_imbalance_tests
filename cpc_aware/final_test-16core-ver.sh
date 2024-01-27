@@ -4,7 +4,7 @@
 #bench_1_=("sudo sysbench -- --threads=32 --time=40 cpu run")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p dedup -n 16 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p streamcluster -n 16 -i native")
-bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p bodytrack -n 16 -i native")
+bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p bodytrack -n 32 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p facesim -n 16 -i native")
 #bench_1_=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p canneal -n 16 -i native")
 
@@ -71,8 +71,8 @@ getLatencyResults(){
     #runLatencyTest "silo"
     #runLatencyTest "shore"
     #runLatencyTest "specjbb"
-    runLatencyTest "sphinx"
-    runLatencyTest "harness"
+   # runLatencyTest "sphinx"
+    #runLatencyTest "harness"
     #runLatencyTest "xapian"
     echo "got latency results"
 }
@@ -84,8 +84,8 @@ getLatencyResultsSMRT(){
     #runLatencyTestSMRT "silo"
     #runLatencyTestSMRT "shore"
     #runLatencyTestSMRT "specjbb"
-    runLatencyTestSMRT "sphinx"
-    runLatencyTestSMRT "harness"
+    #runLatencyTestSMRT "sphinx"
+    #runLatencyTestSMRT "harness"
     #runLatencyTestSMRT "xapian"
     echo "got latency results"
 }
@@ -113,9 +113,9 @@ reset_prob_vm(){
 
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 8 -s 7 -u 12000" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 11 -s 7 -u 12000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/setup_vcapacity.sh"
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 4000 -p 100 -s 6000 &  " & 
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 4000 -p 100 -s 10000 &  " & 
     sleep 10
 }
 
@@ -186,14 +186,14 @@ ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 #ssh ubuntu@$compete_vm_1 "sudo killall sysbench"
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
-    set_normal_mode
+    set_interference_mode
     sleep 3
     (
         while true; do
-            set_normal_mode
-            sleep 30
             set_interference_mode
-            sleep 30
+            sleep 40
+            set_normal_mode
+            sleep 40
         done
     ) &
     mode_pid=$!
@@ -207,14 +207,14 @@ ssh ubuntu@$prob_vm "sudo sysbench --threads=32 --time=10 cpu run"
 length=${#bench_1_[@]}
 for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
-    set_normal_mode
+    set_interference_mode
     sleep 3
     
     (    while true; do
-            set_normal_mode
-            sleep 30
             set_interference_mode
-            sleep 30
+            sleep 40
+            set_normal_mode
+            sleep 40
         done
     ) &
    mode_pid=$!

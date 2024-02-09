@@ -38,6 +38,8 @@ for i in {0..0};do
    echo "naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo $latency_bench" >> "$OUTPUT_FILE" 
    sleep 3
+   ssh ubuntu@$prob_vm "sudo killall a.out" &
+   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $latency_bench" >> "$OUTPUT_FILE" 
    sleep 4

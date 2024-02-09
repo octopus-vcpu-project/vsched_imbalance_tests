@@ -36,7 +36,7 @@ def customize_plot(ax, x_label, y_label, title, font_size, legend_pos,y_lim=[0.8
     ax.set_title(title, fontsize=font_size)
     if y_lim:
         ax.set_ylim(y_lim)
-    ax.legend(loc=legend_pos, prop={'size': 11},columnspacing=0.5, bbox_to_anchor=(0.5, 1.35), ncol=2)
+    ax.legend(loc="upper left", prop={'size': 11},columnspacing=0.5, ncol=2)
 
 def plot_chart(groups, x_label, y_label, cluster_labels, title="", font_size=14, legend_pos='upper center'):
     group_labels, values = prepare_data(groups)

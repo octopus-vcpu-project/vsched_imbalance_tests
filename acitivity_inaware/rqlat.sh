@@ -9,7 +9,7 @@ compete_vm3=$4
 benchmark_time=20
 main_command="sysbench --threads=32 --time=30000 cpu run"
 
-OUTPUT_FILE="./tests/acitivity_inaware-1$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./data/rqlat-$(date +%m%d%H%M).txt"
 
 wake_and_pin_vm(){
     select_vm=$1

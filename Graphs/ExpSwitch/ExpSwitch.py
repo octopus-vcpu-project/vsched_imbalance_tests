@@ -23,8 +23,8 @@ def create_bars(ax, group_labels, values, cluster_labels, bar_width=0.24, font_s
     mid_positions = [((a + b) / 2-0.3) for a, b in zip(bar_positions[0], bar_positions[-1])]
     ax.set_xticks(mid_positions)
     ax.set_xticklabels(cluster_labels,rotation=-45,ha='left', fontsize=font_size-2)
-    plt.text(bar_positions[1][2]+0.1, 1.2, f'{11.20}->',rotation=10,ha='right',fontsize=font_size-1)
-    plt.text(bar_positions[1][3]+0.1, 1.2, f'{11.17}->',rotation=10,ha='right',fontsize=font_size-1)
+    plt.text(bar_positions[1][2]+0.1, 1.2, f'{3.01}->',rotation=10,ha='right',fontsize=font_size-1)
+    plt.text(bar_positions[1][3]+0.1, 1.2, f'{2.99}->',rotation=10,ha='right',fontsize=font_size-1)
 
     # apply offset transform to all x ticklabels.
     # Adjusting y-tick font size

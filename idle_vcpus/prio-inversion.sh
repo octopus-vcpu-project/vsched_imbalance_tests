@@ -6,7 +6,7 @@ latency_bench="sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bo
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python parselats-1.py ../img-dnn/lats.bin"
-OUTPUT_FILE="./tests/idle_vcpu-1$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./data/prio_inversion-$(date +%m%d%H%M).txt"
 
 
 wake_and_pin_prob(){

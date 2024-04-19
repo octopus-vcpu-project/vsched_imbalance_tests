@@ -12,7 +12,7 @@ bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p bo
 bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p ferret -n 16 -i native")
 bench_1_+=("sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -- -a run -p canneal -n 16 -i native")
 
-for i in {0..31};do
+for i in {0..16};do
     sudo virsh vcpupin $prob_vm $i $((i))
     sudo virsh vcpupin $compete_vm $i $((i))
 done

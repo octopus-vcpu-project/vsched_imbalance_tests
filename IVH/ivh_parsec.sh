@@ -26,7 +26,7 @@ activate_vprobers(){
     sleep 10
 }
 
-OUTPUT_FILE="./data/n_smt_plc-$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./data/IVHtesting-$(date +%m%d%H%M).txt"
 
 length=${#bench_1_[@]}
 ssh ubuntu@$compete_vm "sudo sysbench --threads=16 --time=900000 cpu run &"&

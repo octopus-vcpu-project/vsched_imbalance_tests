@@ -37,6 +37,7 @@ for ((i=0; i<length; i++)); do
     bench_1=${bench_1_[$i]}
     #without IVH
     echo "Without IVH" >> "${OUTPUT_FILE}_$i"
+    echo "what"
     ssh ubuntu@$prob_vm "$bench_1">>"${OUTPUT_FILE}_$i"
 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &

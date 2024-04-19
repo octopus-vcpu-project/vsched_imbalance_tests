@@ -21,7 +21,7 @@ done
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
     #ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 8 -s 4 -u 4000" &
-    ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/cpu_profiler/runprober.sh"
+    ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/a.out -i 20 -p 80 -s 10000 &  " & 
     sleep 10
 }
@@ -29,7 +29,7 @@ activate_vprobers(){
 OUTPUT_FILE="./data/n_smt_plc-$(date +%m%d%H%M).txt"
 
 length=${#bench_1_[@]}
-ssh ubuntu@$compete_vm "sudo sysbench --threads=16 --time=900000000000 cpu run &"&
+ssh ubuntu@$compete_vm "sudo sysbench --threads=16 --time=900000 cpu run &"&
 
 activate_vprobers
 

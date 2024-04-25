@@ -6,7 +6,7 @@ latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash r
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 get_lat_val="cd /home/ubuntu/Workloads/tailbench-v0.9/utilities;sudo python parselats-1.py ../img-dnn/lats.bin"
-OUTPUT_FILE="./tests/acitivity_inaware-2$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./data/obj-latency-noidle$(date +%m%d%H%M).txt"
 sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 sleep 2
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)

@@ -67,7 +67,6 @@ wake_and_pin_vm $compete_vm
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-ssh ubuntu@$prob_vm "$idler_bench" &
 sleep 10
 
 setLatency 24000000

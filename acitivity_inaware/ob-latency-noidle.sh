@@ -60,6 +60,41 @@ runAllTests(){
     runLatencyTest "xapian"
 }
 
+runTestBlock(){
+    setLatency 24000000
+    runAllTests
+    runAllTests
+    runAllTests
+
+
+    setLatency 20000000
+    runAllTests
+    runAllTests
+    runAllTests
+
+
+    setLatency 16000000
+    runAllTests
+    runAllTests
+    runAllTests
+
+
+    setLatency 12000000
+    runAllTests
+    runAllTests
+    runAllTests
+
+    setLatency 8000000
+    runAllTests
+    runAllTests
+    runAllTests
+
+    setLatency 4000000
+    runAllTests
+    runAllTests
+    runAllTests
+}
+
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
 #Fetch VM PID and use that to fetch Cgroup title
@@ -69,24 +104,21 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 sleep 10
 
-setLatency 24000000
-runAllTests
+runTestBlock
 
-setLatency 20000000
-runAllTests
+sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 20000000
+echo "20000000(mega high) halt polling" >> "$OUTPUT_FILE" 
 
-setLatency 16000000
-runAllTests
+runTestBlock
 
-setLatency 12000000
-runAllTests
+sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
+echo "200000(standard) halt polling">> "$OUTPUT_FILE" 
+ssh ubuntu@$prob_vm "$idler_bench" &
+sleep 10
+runTestBlock
 
-setLatency 8000000
-runAllTests
-
-setLatency 4000000
-runAllTests
 setLatency 3000000
+
 sudo git add .;sudo git commit -m 'new';sudo git push
 
 

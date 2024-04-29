@@ -15,14 +15,9 @@ sudo virsh shutdown $compete_vm
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 4
-    for i in {0..15};do
-        sudo virsh vcpupin $select_vm $i $((i + 20))
+    for i in {0..3};do
+        sudo virsh vcpupin $select_vm $i $((i))
     done
-
-    for i in {16..31};do
-        sudo virsh vcpupin $select_vm $i $((i + 24))
-    done
-    
     sleep 2
 }
 

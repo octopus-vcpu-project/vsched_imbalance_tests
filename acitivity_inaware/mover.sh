@@ -15,6 +15,7 @@ vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 setLatencyCFS(){
+    echo "Set latency cfs to $1" 
     for i in {0..3};do
         sudo echo $1 $2 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
@@ -23,6 +24,7 @@ setLatencyCFS(){
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 4
+    
     for i in {0..3};do
         sudo virsh vcpupin $select_vm $i $((i))
     done

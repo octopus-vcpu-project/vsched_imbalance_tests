@@ -27,5 +27,5 @@ setLatencyCFS(){
 OUTPUT_FILE="./data/BVStesting-$(date +%m%d%H%M).txt"
 
 
-setLatencyCFS 1000 2000
+setLatencyCFS 1000 3000
 setLatencyCFS 4000 8000

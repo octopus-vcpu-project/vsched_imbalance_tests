@@ -11,6 +11,14 @@ smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <mode
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 sudo virsh shutdown $compete_vm
 
+vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
+vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
+
+setLatencyCFS(){
+    for i in {0..3};do
+        sudo echo $3 $4 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
+}
 
 wake_and_pin_vm(){
     select_vm=$1
@@ -23,6 +31,5 @@ wake_and_pin_vm(){
 
 
 
-ssh ubuntu@$compete_vm "sudo $compete_bench" &
+setLatencyCFS
 wake_and_pin_vm $prob_vm
-wake_and_pin_vm $compete_vm

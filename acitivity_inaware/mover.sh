@@ -16,7 +16,7 @@ vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
 
 setLatencyCFS(){
     for i in {0..3};do
-        sudo echo $3 $4 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+        sudo echo $1 $2 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
 }
 
@@ -31,5 +31,5 @@ wake_and_pin_vm(){
 
 
 
-setLatencyCFS
+setLatencyCFS $3 $4
 wake_and_pin_vm $prob_vm

@@ -1,0 +1,73 @@
+Set latency to 24000000
+queue: mean 95.967 ms | p95 328.298 ms | p99 546.164 ms | max 2159.408 ms
+queue: mean 44.745 ms | p95 189.916 ms | p99 402.391 ms | max 1161.478 ms
+queue: mean 46.502 ms | p95 189.741 ms | p99 419.145 ms | max 1350.942 ms
+Set latency to 20000000
+queue: mean 38.550 ms | p95 184.120 ms | p99 345.069 ms | max 885.698 ms
+queue: mean 42.239 ms | p95 184.129 ms | p99 377.097 ms | max 1062.711 ms
+queue: mean 42.479 ms | p95 184.234 ms | p99 370.503 ms | max 1202.312 ms
+Set latency to 16000000
+queue: mean 35.678 ms | p95 158.209 ms | p99 285.895 ms | max 836.889 ms
+queue: mean 36.101 ms | p95 154.698 ms | p99 303.216 ms | max 963.884 ms
+queue: mean 39.655 ms | p95 169.244 ms | p99 320.404 ms | max 1041.982 ms
+Set latency to 12000000
+queue: mean 27.661 ms | p95 121.277 ms | p99 211.170 ms | max 548.680 ms
+queue: mean 28.914 ms | p95 123.828 ms | p99 227.676 ms | max 578.121 ms
+queue: mean 28.370 ms | p95 125.094 ms | p99 213.528 ms | max 452.302 ms
+Set latency to 8000000
+queue: mean 13.437 ms | p95 52.869 ms | p99 99.832 ms | max 276.408 ms
+queue: mean 18.537 ms | p95 77.188 ms | p99 137.378 ms | max 276.868 ms
+queue: mean 16.241 ms | p95 65.618 ms | p99 123.955 ms | max 358.200 ms
+Set latency to 4000000
+queue: mean 1.301 ms | p95 7.590 ms | p99 16.011 ms | max 55.048 ms
+queue: mean 0.759 ms | p95 4.747 ms | p99 13.303 ms | max 67.712 ms
+queue: mean 0.157 ms | p95 0.389 ms | p99 0.654 ms | max 2.632 ms
+Set latency to 24000000
+queue: mean 53.593 ms | p95 212.962 ms | p99 463.163 ms | max 1392.173 ms
+queue: mean 43.870 ms | p95 192.622 ms | p99 412.234 ms | max 1012.168 ms
+queue: mean 44.309 ms | p95 190.509 ms | p99 397.935 ms | max 960.455 ms
+Set latency to 20000000
+queue: mean 38.595 ms | p95 175.030 ms | p99 332.037 ms | max 822.434 ms
+queue: mean 36.803 ms | p95 173.425 ms | p99 335.568 ms | max 1111.717 ms
+queue: mean 43.621 ms | p95 190.493 ms | p99 386.883 ms | max 1007.149 ms
+Set latency to 16000000
+queue: mean 40.618 ms | p95 197.440 ms | p99 302.885 ms | max 1089.371 ms
+queue: mean 31.916 ms | p95 139.034 ms | p99 271.537 ms | max 776.762 ms
+queue: mean 0.162 ms | p95 0.409 ms | p99 0.677 ms | max 4.210 ms
+Set latency to 12000000
+queue: mean 29.449 ms | p95 126.759 ms | p99 227.723 ms | max 508.331 ms
+queue: mean 25.833 ms | p95 109.077 ms | p99 203.642 ms | max 533.945 ms
+queue: mean 27.899 ms | p95 120.364 ms | p99 218.977 ms | max 548.694 ms
+Set latency to 8000000
+queue: mean 12.863 ms | p95 48.386 ms | p99 102.886 ms | max 301.810 ms
+queue: mean 12.118 ms | p95 46.748 ms | p99 86.555 ms | max 191.736 ms
+queue: mean 12.972 ms | p95 49.777 ms | p99 97.894 ms | max 235.639 ms
+Set latency to 4000000
+queue: mean 3.932 ms | p95 14.735 ms | p99 23.382 ms | max 60.381 ms
+queue: mean 0.155 ms | p95 0.381 ms | p99 0.612 ms | max 2.127 ms
+queue: mean 0.161 ms | p95 0.406 ms | p99 0.666 ms | max 2.192 ms
+Set latency to 24000000
+queue: mean 19.722 ms | p95 79.097 ms | p99 151.209 ms | max 424.659 ms
+queue: mean 19.301 ms | p95 76.219 ms | p99 148.827 ms | max 350.588 ms
+queue: mean 20.096 ms | p95 80.533 ms | p99 161.559 ms | max 524.058 ms
+Set latency to 20000000
+queue: mean 17.155 ms | p95 65.386 ms | p99 130.998 ms | max 272.119 ms
+queue: mean 16.863 ms | p95 64.252 ms | p99 132.178 ms | max 361.051 ms
+queue: mean 16.307 ms | p95 64.251 ms | p99 118.579 ms | max 313.754 ms
+Set latency to 16000000
+queue: mean 16.451 ms | p95 64.362 ms | p99 115.798 ms | max 280.476 ms
+queue: mean 15.199 ms | p95 58.476 ms | p99 114.370 ms | max 266.563 ms
+queue: mean 13.415 ms | p95 49.922 ms | p99 88.947 ms | max 251.463 ms
+Set latency to 12000000
+queue: mean 9.257 ms | p95 34.635 ms | p99 67.514 ms | max 176.128 ms
+queue: mean 8.905 ms | p95 31.829 ms | p99 60.040 ms | max 162.762 ms
+queue: mean 9.161 ms | p95 37.966 ms | p99 79.520 ms | max 192.903 ms
+Set latency to 8000000
+queue: mean 7.848 ms | p95 29.399 ms | p99 72.953 ms | max 266.762 ms
+queue: mean 7.286 ms | p95 29.280 ms | p99 55.051 ms | max 120.150 ms
+queue: mean 7.087 ms | p95 26.986 ms | p99 53.886 ms | max 178.235 ms
+Set latency to 4000000
+queue: mean 3.314 ms | p95 11.941 ms | p99 20.920 ms | max 61.021 ms
+queue: mean 4.108 ms | p95 13.315 ms | p99 34.948 ms | max 212.729 ms
+queue: mean 3.306 ms | p95 12.074 ms | p99 22.086 ms | max 68.190 ms
+Set latency to 3000000

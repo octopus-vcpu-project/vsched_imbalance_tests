@@ -11,6 +11,10 @@ sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 sleep 2
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
+
+compete_vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$compete_vm.xml | awk -F "'" '{print $6}' | head -n 1)
+compete_vm_cgroup_title=$(sudo cat /proc/$compete_vm_pid/cgroup | awk -F "/" '{print $3}')
+
 #PIN VCPUS and limit CPU usage using CGROUP
 #QPS should be low as to avoid competitoin among queues 
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
@@ -39,11 +43,13 @@ runLatencyTest(){
 }
 
 setLatency(){
-    set_latency=$1/1000
-    sudo echo $1 > /sys/kernel/debug/sched/min_granularity_ns
-    #for i in {0..31};do
-    #    sudo echo $set_latency $(($set_latency * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    #done
+    #sudo echo $1 > /sys/kernel/debug/sched/min_granularity_ns
+    for i in {0..31};do
+        sudo echo $1 $(($1 * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
+    for i in {0..31};do
+        sudo echo $1 $(($1 * 2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
     echo "Set latency to $1" 
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
@@ -51,74 +57,68 @@ setLatency(){
 
 runAllTests(){
     runLatencyTest "img-dnn"
-    runLatencyTest "moses"
-    runLatencyTest "masstree"
-    runLatencyTest "silo"
-    runLatencyTest "shore"
-    runLatencyTest "specjbb"
-    runLatencyTest "sphinx"
-    runLatencyTest "xapian"
+    #runLatencyTest "moses"
+    #runLatencyTest "masstree"
+    #runLatencyTest "silo"
+    #runLatencyTest "shore"
+    #runLatencyTest "specjbb"
+    #runLatencyTest "sphinx"
+    #runLatencyTest "xapian"
 }
 
 runTestBlock(){
-    setLatency 24000000
+    setLatency 20000
     runAllTests
-    runAllTests
-    runAllTests
+    #runAllTests
+    #runAllTests
 
 
-    setLatency 20000000
+    setLatency 16000
     runAllTests
-    runAllTests
-    runAllTests
+    #runAllTests
+    #runAllTests
 
 
-    setLatency 16000000
+    setLatency 8000
     runAllTests
-    runAllTests
-    runAllTests
+    #runAllTests
+    #runAllTests
 
 
-    setLatency 12000000
+    setLatency 4000
     runAllTests
-    runAllTests
-    runAllTests
+    #runAllTests
+    #runAllTests
 
-    setLatency 8000000
+    setLatency 3000
     runAllTests
-    runAllTests
-    runAllTests
+    #runAllTests
+    #runAllTests
 
-    setLatency 4000000
+    setLatency 2000
     runAllTests
-    runAllTests
-    runAllTests
+    #runAllTests
+    #runAllTests
 }
 
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
 #Fetch VM PID and use that to fetch Cgroup title
 
+sudo echo 20000000 > /sys/kernel/debug/sched/min_granularity_ns
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 sleep 10
 
 runTestBlock
-
-sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 20000000
-echo "20000000(mega high) halt polling" >> "$OUTPUT_FILE" 
-
-runTestBlock
-
-sudo tee /sys/module/kvm/parameters/halt_poll_ns <<< 200000
-echo "200000(standard) halt polling">> "$OUTPUT_FILE" 
+echo "idler added" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "$idler_bench" &
 sleep 10
 runTestBlock
 
 setLatency 3000000
-
+sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo git add .;sudo git commit -m 'new';sudo git push
 
 

@@ -44,10 +44,11 @@ runLatencyTest(){
 
 setLatency(){
     sudo echo 1000000 > /sys/kernel/debug/sched/min_granularity_ns
-    for i in {0..31};do
-        sudo echo $1 $(($1 * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
-    done
-    for i in {0..31};do
+#    for i in {0..31};do
+#        sudo echo $1 $(($1 * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+#    done
+    for i in $(seq 0 31);do
+        echo "$1 $(($1 * 2))"	
         sudo echo $1 $(($1 * 2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
     sudo echo 1000000 > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/cpu.weight

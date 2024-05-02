@@ -102,11 +102,16 @@ runTestBlock(){
     #runAllTests
 }
 
+
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
+
 #Fetch VM PID and use that to fetch Cgroup title
 
 sudo echo 20000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 30000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+
+ssh ubuntu@$prob_vm "sudo echo 0 > /sys/kernel/debug/sched/wakeup_granularity_ns"
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
@@ -120,6 +125,7 @@ runTestBlock
 
 setLatency 3000000
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 100 > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/cpu.weight
 sudo git add .;sudo git commit -m 'new';sudo git push
 

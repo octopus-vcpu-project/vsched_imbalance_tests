@@ -69,11 +69,6 @@ runAllTests(){
 
 runTestBlock(){
 
-    setLatency 32000
-    runAllTests
-    #runAllTests
-    #runAllTests
-
     setLatency 16000
     runAllTests
     #runAllTests
@@ -104,15 +99,15 @@ wake_and_pin_vm $compete_vm
 
 #Fetch VM PID and use that to fetch Cgroup title
 
-sudo echo 40000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 40000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+sudo echo 20000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 sleep 10
 
-runTestBlock
+#runTestBlock
 echo "idler added" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "$idler_bench" &
 sleep 10

@@ -111,7 +111,6 @@ wake_and_pin_vm $compete_vm
 sudo echo 20000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 30000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 
-ssh ubuntu@$prob_vm "sudo echo 0 > /sys/kernel/debug/sched/wakeup_granularity_ns"
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &

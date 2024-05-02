@@ -1,0 +1,13 @@
+Set latency to 20000
+Running Latency benchmark img-dnn
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:80: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:85: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:90: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 865.303 ms | p95 1664.965 ms | p99 1719.139 ms | max 2009.062 ms
+svc: mean 0.681 ms | p95 0.818 ms | p99 1.802 ms | max 38.991 ms
+end2end: mean 865.984 ms | p95 1665.570 ms | p99 1719.976 ms | max 2009.696 ms
+Set latency to 16000
+Running Latency benchmark img-dnn

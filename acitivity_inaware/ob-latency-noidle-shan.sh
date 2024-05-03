@@ -66,7 +66,8 @@ runAllTests(){
     runLatencyTest "xapian"
 }
 
-numbers=(16000 8000 4000 2000 1000)
+#numbers=(16000 8000 4000 2000 1000)
+numbers=(1000)
 runTestBlock(){
 
 for i in "${numbers[@]}";do
@@ -91,7 +92,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 sleep 10
 
-runTestBlock
+#runTestBlock
 
 echo "idler added" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "$idler_bench" &

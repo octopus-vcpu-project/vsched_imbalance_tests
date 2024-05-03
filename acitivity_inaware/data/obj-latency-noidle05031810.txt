@@ -1,0 +1,12 @@
+idler added
+Set latency to 1000
+Running Latency benchmark xapian
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.271 ms | p95 4.141 ms | p99 7.634 ms | max 16.631 ms
+svc: mean 3.184 ms | p95 8.586 ms | p99 11.049 ms | max 16.513 ms
+end2end: mean 4.455 ms | p95 10.158 ms | p99 13.153 ms | max 19.615 ms

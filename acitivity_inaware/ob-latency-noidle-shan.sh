@@ -18,9 +18,9 @@ wake_and_pin_vm(){
     done
     sleep 2
 }
-virsh shutdown $prob_vm
-virsh shutdown $compete_vm
-sleep 5
+#virsh shutdown $prob_vm
+#virsh shutdown $compete_vm
+#sleep 5
 
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm

@@ -56,18 +56,18 @@ setLatency(){
 
 
 runAllTests(){
-    #runLatencyTest "img-dnn"
-    runLatencyTest "moses"
-    #runLatencyTest "masstree"
+    #runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
+    #runLatencyTest "moses" # QPS=300 SVC=100ms
+    runLatencyTest "masstree" 
     #runLatencyTest "silo"
     #runLatencyTest "shore"
     #runLatencyTest "specjbb"
     #runLatencyTest "sphinx"
-    #runLatencyTest "xapian"
+    #runLatencyTest "xapian" QPS=300 SVC=3ms
 }
 
 numbers=(16000 8000 4000 2000 1000)
-numbers=(1000)
+#numbers=(1000)
 runTestBlock(){
 
 for i in "${numbers[@]}";do

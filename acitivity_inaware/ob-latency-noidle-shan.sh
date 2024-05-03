@@ -57,16 +57,16 @@ setLatency(){
 
 runAllTests(){
     #runLatencyTest "img-dnn"
-    #runLatencyTest "moses"
+    runLatencyTest "moses"
     #runLatencyTest "masstree"
     #runLatencyTest "silo"
     #runLatencyTest "shore"
     #runLatencyTest "specjbb"
     #runLatencyTest "sphinx"
-    runLatencyTest "xapian"
+    #runLatencyTest "xapian"
 }
 
-#numbers=(16000 8000 4000 2000 1000)
+numbers=(16000 8000 4000 2000 1000)
 numbers=(1000)
 runTestBlock(){
 
@@ -92,7 +92,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 sleep 10
 
-#runTestBlock
+runTestBlock
 
 echo "idler added" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "$idler_bench" &

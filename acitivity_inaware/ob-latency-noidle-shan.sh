@@ -56,14 +56,14 @@ setLatency(){
 
 
 runAllTests(){
-    runLatencyTest "img-dnn"
+    #runLatencyTest "img-dnn"
     #runLatencyTest "moses"
     #runLatencyTest "masstree"
     #runLatencyTest "silo"
     #runLatencyTest "shore"
     #runLatencyTest "specjbb"
     #runLatencyTest "sphinx"
-    #runLatencyTest "xapian"
+    runLatencyTest "xapian"
 }
 
 numbers=(16000 8000 4000 2000 1000)

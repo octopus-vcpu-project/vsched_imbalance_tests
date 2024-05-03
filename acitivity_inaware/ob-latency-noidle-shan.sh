@@ -66,13 +66,13 @@ runAllTests(){
     #runLatencyTest "xapian" QPS=300 SVC=3ms
 }
 
-numbers=(16000 8000 4000 2000 1000)
-#numbers=(1000)
+#numbers=(16000 8000 4000 2000 1000)
+numbers=(1000)
 runTestBlock(){
 
 for i in "${numbers[@]}";do
     setLatency $i
-    for i in $(seq 1 1);do
+    for i in $(seq 1 5);do
         runAllTests
     done
 done
@@ -92,7 +92,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 sleep 10
 
-runTestBlock
+#runTestBlock
 
 echo "idler added" >> "$OUTPUT_FILE"
 ssh ubuntu@$prob_vm "$idler_bench" &

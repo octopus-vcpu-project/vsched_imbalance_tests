@@ -18,9 +18,9 @@ wake_and_pin_vm(){
     done
     sleep 2
 }
-#virsh shutdown $prob_vm
-#virsh shutdown $compete_vm
-#sleep 5
+virsh shutdown $prob_vm
+virsh shutdown $compete_vm
+sleep 5
 
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
@@ -56,14 +56,14 @@ setLatency(){
 
 
 runAllTests(){
-    #runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
+    runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
     #runLatencyTest "moses" # QPS=300 SVC=100ms
-    #runLatencyTest "masstree" # QPS=300 SVC=0.5ms
-    #runLatencyTest "silo" # QPS=1000 SVC=0.3ms
+    runLatencyTest "masstree" # QPS=300 SVC=0.5ms
+    runLatencyTest "silo" # QPS=1000 SVC=0.3ms
     #runLatencyTest "shore" # QPS=300 SVC=1000ms
-    runLatencyTest "specjbb"
-    #runLatencyTest "sphinx"
-    #runLatencyTest "xapian" QPS=300 SVC=3ms
+    runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
+    #runLatencyTest "sphinx" #QPS=1 SVC=3000ms
+    runLatencyTest "xapian" QPS=300 SVC=3ms
 }
 
 numbers=(16000 8000 4000 2000)
@@ -72,7 +72,7 @@ runTestBlock(){
 
 for i in "${numbers[@]}";do
     setLatency $i
-    for i in $(seq 1 1);do
+    for i in $(seq 1 3);do
         runAllTests
     done
 done

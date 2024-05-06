@@ -12,16 +12,16 @@ wake_and_pin_vm(){
     #set up first 12 cores 
     for i in {0..11};do
             if [ $((i % 2)) == 0 ]; then
-                virsh vcpupin e-vm3 $((i)) $((i))
+                virsh vcpupin $select_vm $((i)) $((i))
             else
-                virsh vcpupin e-vm3 $((i)) $((i+79))
+                virsh vcpupin $select_vm $((i)) $((i+79))
             fi
     done
     for i in {12..13};do
-        virsh vcpupin e-vm3 $((i)) $((i))
+        virsh vcpupin $select_vm $((i)) $((i))
     done
     for i in {14..15};do
-        virsh vcpupin e-vm3 $((14)) $((14))
+        virsh vcpupin $select_vm $((14)) $((14))
     done
     sleep 3
 }

@@ -38,14 +38,14 @@ for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo $idler_bench" &
    sleep 5
    echo "naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sudo $swaption_test_inver" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo $streamcluster_bench_inver" >> "$OUTPUT_FILE" 
+  # ssh ubuntu@$prob_vm "sudo $swaption_test_inver" >> "$OUTPUT_FILE" 
+ #  ssh ubuntu@$prob_vm "sudo $streamcluster_bench_inver" >> "$OUTPUT_FILE" 
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
-   sh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
+  # sh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
    sleep 5
    echo "non-naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $swaption_test_inver" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
+#   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $swaption_test_inver" >> "$OUTPUT_FILE" 
+ #  ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
    sleep 4
 done
 
@@ -60,7 +60,7 @@ for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
    echo "non idle-just run-smart" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $swaption_test" >> "$OUTPUT_FILE" 
-   #ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
    sleep 4
 done
 

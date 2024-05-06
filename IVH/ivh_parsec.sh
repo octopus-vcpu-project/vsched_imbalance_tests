@@ -23,9 +23,6 @@ OUTPUT_FILE="./data/IVHtesting-$(date +%m%d%H%M).txt"
 length=${#bench_1_[@]}
 ssh ubuntu@$compete_vm "sudo sysbench --threads=16 --time=900000 cpu run &"&
 ssh ubuntu@$prob_vm "sudo killall a.out"
-
-setLatency 5000 5000
-
 setLatency(){
     for i in $(seq 0 3);do
         sudo echo $1 $(($1 * 2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
@@ -36,3 +33,6 @@ setLatency(){
     echo "Set latency to $1" 
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
+setLatency 5000 5000
+
+

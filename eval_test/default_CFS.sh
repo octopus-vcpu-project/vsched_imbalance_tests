@@ -74,7 +74,7 @@ setLatency 4000 6000 14 15 #1ms/60ms
 
 
 sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 1000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+sudo echo 10000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/min_granularity_ns <<< 1000000"

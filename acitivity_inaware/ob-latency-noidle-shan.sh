@@ -61,18 +61,18 @@ runAllTests(){
     runLatencyTest "masstree" # QPS=300 SVC=0.5ms
     runLatencyTest "silo" # QPS=1000 SVC=0.3ms
     #runLatencyTest "shore" # QPS=300 SVC=1000ms
-    runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
+    #runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
     #runLatencyTest "sphinx" #QPS=1 SVC=3000ms
-    runLatencyTest "xapian" QPS=300 SVC=3ms
+    #runLatencyTest "xapian" QPS=300 SVC=3ms
 }
 
-numbers=(16000 8000 4000 2000)
-#numbers=(1000)
+#numbers=(16000 8000 4000 2000)
+numbers=(2000)
 runTestBlock(){
 
 for i in "${numbers[@]}";do
     setLatency $i
-    for i in $(seq 1 3);do
+    for i in $(seq 1 10);do
         runAllTests
     done
 done

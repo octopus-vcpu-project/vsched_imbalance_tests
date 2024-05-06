@@ -21,7 +21,7 @@ wake_and_pin_vm(){
         virsh vcpupin $select_vm $((i)) $((i))
     done
     for i in {14..15};do
-        virsh vcpupin $select_vm $((14)) $((14))
+        virsh vcpupin $select_vm $((i)) $((14))
     done
     sleep 3
 }

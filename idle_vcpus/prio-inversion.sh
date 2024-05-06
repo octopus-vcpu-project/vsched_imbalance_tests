@@ -34,7 +34,7 @@ ssh ubuntu@$prob_vm "sudo sysbench --time=10 --threads=16 cpu run"
 
 #ssh ubuntu@$prob_vm "sudo sysbench --time=10 --threads=16 cpu run" 
 
-for i in {0..0};do
+#for i in {0..0};do
    #ssh ubuntu@$prob_vm "sudo killall spread.out" 
    #ssh ubuntu@$prob_vm "sudo $idler_bench" &
    #sleep 5
@@ -49,7 +49,7 @@ for i in {0..0};do
   #ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $swaption_test_inver" >> "$OUTPUT_FILE" 
    #ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
    #sleep 4
-done
+#done
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 

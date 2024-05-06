@@ -25,9 +25,8 @@ wake_and_pin_prob(){
 
 
 
-
-sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+sudo echo 6000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 40000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 wake_and_pin_prob $prob_vm
 ssh ubuntu@$prob_vm "sudo sysbench --time=10 --threads=16 cpu run" 
 
@@ -51,7 +50,7 @@ ssh ubuntu@$prob_vm "sudo sysbench --time=10 --threads=16 cpu run"
    #sleep 4
 #done
 
-sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 1000000 > /sys/kernel/debug/sched/min_granularity_ns
 
 for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo killall spread.out" 

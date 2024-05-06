@@ -39,14 +39,14 @@ for i in {0..0};do
    sleep 5
    echo "naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo $swaption_test_inver" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo $streamcluster_test_inver" >> "$OUTPUT_FILE" 
+  # ssh ubuntu@$prob_vm "sudo $streamcluster_bench_inver" >> "$OUTPUT_FILE" 
    
    ssh ubuntu@$prob_vm "sudo killall a.out" 
    ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
    sleep 5
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $swaption_test_inver" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
+   #ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
    sleep 4
 done
 

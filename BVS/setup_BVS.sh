@@ -23,9 +23,20 @@ setLatencyCFS(){
 }
 
 
+setLatencyCFS1(){
+    echo "Set latency cfs to $1" 
+    for i in {16..31};do
+        sudo echo $1 $2 > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
+    done
+}
+
+
 
 OUTPUT_FILE="./data/BVStesting-$(date +%m%d%H%M).txt"
 
-
-setLatencyCFS 1000 3000
+#set first 16 cores
 setLatencyCFS 4000 8000
+#set last 16 cores
+setLatencyCFS1 4000 8000
+
+

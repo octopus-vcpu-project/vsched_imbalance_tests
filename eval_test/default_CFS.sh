@@ -124,7 +124,7 @@ runParsecTests(){
 #    runParsecTest "facesim" 
 #    runParsecTest "fluidanimate" 
 #    runParsecTest "freqmine"
-    runParsecTest "raytrace" 
+#    runParsecTest "raytrace" 
     runParsecTest "streamcluster"
     runParsecTest "swaptions" 
     runParsecTest "x624"

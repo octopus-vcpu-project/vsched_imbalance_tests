@@ -8,7 +8,8 @@ swaption_test_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p s
 streamcluster_bench="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 16 -i native"
 streamcluster_bench_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"
 
-idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
+idler_bench="sudo bash /home/ubuntu/idle_load_generator/spread_idler.sh"
+
 OUTPUT_FILE="./data/prio_inversion-$(date +%m%d%H%M).txt"
 
 

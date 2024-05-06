@@ -3,7 +3,10 @@ prob_vm=$1
 compete_vm=$2
 benchmark_time=20
 swaption_test="sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p swaptions -n 16 -i native"
+swaption_test_inver="sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p swaptions -n 8 -i native"
+
 streamcluster_bench="sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 16 -i native"
+streamcluster_bench_inver="sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"
 
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 OUTPUT_FILE="./data/prio_inversion-$(date +%m%d%H%M).txt"
@@ -35,15 +38,15 @@ for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo $idler_bench" &
    sleep 5
    echo "naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sudo $swaption_test" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo $streamcluster_test" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo $swaption_test_inver" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo $streamcluster_test_inver" >> "$OUTPUT_FILE" 
    
    ssh ubuntu@$prob_vm "sudo killall a.out" 
    ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
    sleep 5
    echo "non-naive test" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $swaption_test" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_test" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $swaption_test_inver" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_test_inver" >> "$OUTPUT_FILE" 
    sleep 4
 done
 

@@ -33,12 +33,14 @@ ssh ubuntu@$prob_vm "sudo sysbench --time=10 --threads=16 cpu run"
 for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo killall a.out" 
    ssh ubuntu@$prob_vm "sudo $idler_bench" &
+   sleep 5
    echo "naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo $swaption_test" >> "$OUTPUT_FILE" 
    ssh ubuntu@$prob_vm "sudo $streamcluster_test" >> "$OUTPUT_FILE" 
-   sleep 3
+   
    ssh ubuntu@$prob_vm "sudo killall a.out" 
    ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
+   sleep 5
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $swaption_test" >> "$OUTPUT_FILE" 
    ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_test" >> "$OUTPUT_FILE" 

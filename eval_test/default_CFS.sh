@@ -66,10 +66,10 @@ setLatency 12000 18000 6 8 #12ms/18ms
 setLatency 4000 6000 9 11 #4ms/6ms 
 
 #Two Straggler
-setLatency 1000 60000 12 13 #1ms/60ms 
+setLatency 1000 20000 12 13 #1ms/60ms 
 
 #Two Stacking
-setLatency 1000 60000 14 15 #1ms/60ms 
+setLatency 4000 6000 14 15 #1ms/60ms 
 
 
 

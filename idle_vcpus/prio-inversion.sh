@@ -3,7 +3,7 @@ prob_vm=$1
 compete_vm=$2
 benchmark_time=20
 swaption_test="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 16 -i native"
-swaption_test_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p cnneal -n 8 -i native"
+swaption_test_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p canneal -n 8 -i native"
 
 streamcluster_bench="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 16 -i native"
 streamcluster_bench_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"

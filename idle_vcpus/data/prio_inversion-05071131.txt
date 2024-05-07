@@ -1,0 +1,224 @@
+naive test
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 8 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m54.681s
+user	0m48.613s
+sys	0m19.556s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 8':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+
+real	27m11.842s
+user	31m49.933s
+sys	0m7.240s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+non-naive test
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 8 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m11.864s
+user	0m49.678s
+sys	0m10.460s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 8':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+
+real	4m8.525s
+user	31m39.321s
+sys	0m1.704s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+non idle-just run
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 16 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m23.715s
+user	0m45.521s
+sys	0m25.986s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 16':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+
+real	4m51.644s
+user	33m13.809s
+sys	0m36.376s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+non idle-just run-smart
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+FC-6-x86_64-disc1.iso
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 16 -i FC-6-x86_64-disc1.iso -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      671.58 MB
+Total output size:                     637.28 MB
+Effective compression factor:            1.05x
+
+Mean data chunk size:                    1.88 KB (stddev: 2023.50 KB)
+Amount of duplicate chunks:             54.49%
+Data size after deduplication:         658.95 MB (compression factor: 1.02x)
+Data size after compression:           630.26 MB (compression factor: 1.05x)
+Output overhead:                         1.10%
+
+real	0m23.167s
+user	0m52.945s
+sys	0m19.091s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 16':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+
+real	4m26.618s
+user	33m20.051s
+sys	0m11.115s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.

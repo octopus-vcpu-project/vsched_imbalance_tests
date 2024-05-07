@@ -45,7 +45,7 @@ for i in {0..0};do
    sleep 5
    echo "non-naive test" >> "$OUTPUT_FILE"
    ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $swaption_test_inver" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_bench_inver" >> "$OUTPUT_FILE" 
    sleep 4
 done
 
@@ -54,8 +54,8 @@ sudo echo 1000000 > /sys/kernel/debug/sched/min_granularity_ns
 for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
    echo "non idle-just run" >> "$OUTPUT_FILE"
-   #ssh ubuntu@$prob_vm "sudo $swaption_test" >> "$OUTPUT_FILE" 
-   #ssh ubuntu@$prob_vm "sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo $swaption_test" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
    sleep 3
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
    echo "non idle-just run-smart" >> "$OUTPUT_FILE"

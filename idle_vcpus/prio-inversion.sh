@@ -5,8 +5,8 @@ benchmark_time=20
 swaption_test="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 16 -i native"
 swaption_test_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p bodytrack -n 8 -i native"
 
-streamcluster_bench="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 16 -i native"
-streamcluster_bench_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p dedup -n 8 -i native"
+streamcluster_bench="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 16 -i native"
+streamcluster_bench_inver="/home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p streamcluster -n 8 -i native"
 
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/spread_idler.sh"
 
@@ -39,13 +39,13 @@ for i in {0..0};do
    sleep 5
    echo "naive test" >> "$OUTPUT_FILE"
   # ssh ubuntu@$prob_vm "sudo $swaption_test_inver" >> "$OUTPUT_FILE" 
- #  ssh ubuntu@$prob_vm "sudo $streamcluster_bench_inver" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo $streamcluster_bench_inver" >> "$OUTPUT_FILE" 
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
-  # sh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
+   sh ubuntu@$prob_vm "sudo taskset -c 0-7 $idler_bench" &
    sleep 5
    echo "non-naive test" >> "$OUTPUT_FILE"
 #   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $swaption_test_inver" >> "$OUTPUT_FILE" 
- #  ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
+   ssh ubuntu@$prob_vm "sudo taskset -c 0-7 $streamcluster_test_inver" >> "$OUTPUT_FILE" 
    sleep 4
 done
 
@@ -54,13 +54,13 @@ sudo echo 1000000 > /sys/kernel/debug/sched/min_granularity_ns
 for i in {0..0};do
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
    echo "non idle-just run" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "sudo $swaption_test" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
+   #ssh ubuntu@$prob_vm "sudo $swaption_test" >> "$OUTPUT_FILE" 
+   #ssh ubuntu@$prob_vm "sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
    sleep 3
    ssh ubuntu@$prob_vm "sudo killall spread.out" 
    echo "non idle-just run-smart" >> "$OUTPUT_FILE"
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $swaption_test" >> "$OUTPUT_FILE" 
-   ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
+   #ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $swaption_test" >> "$OUTPUT_FILE" 
+  # ssh ubuntu@$prob_vm "taskset -c 0-7 sudo $streamcluster_bench" >> "$OUTPUT_FILE" 
    sleep 4
 done
 

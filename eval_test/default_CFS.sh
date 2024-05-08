@@ -11,13 +11,7 @@ wake_and_pin_vm(){
     sudo bash ../utility/cleanon_startup.sh $select_vm 16
     #set up first 12 cores 
     for i in {0..11};do
-            if [ $((i % 3)) == 0 ]; then
                 virsh vcpupin $select_vm $((i)) $((i))
-            elif [ $((i % 3)) == 1 ]; then
-                virsh vcpupin $select_vm $((i)) $((i+79))
-            else
-                virsh vcpupin $select_vm $((i)) $((i))
-            fi
     done
     for i in {12..13};do
         virsh vcpupin $select_vm $((i)) $((i))

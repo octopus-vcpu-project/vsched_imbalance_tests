@@ -5,22 +5,6 @@ latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash r
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 OUTPUT_FILE="./data/obj-latency-noidle$(date +%m%d%H%M).txt"
-
-wake_and_pin_vm(){
-    select_vm=$1
-    sudo bash ../utility/cleanon_startup.sh $select_vm 16
-    #set up first 12 cores 
-    for i in {0..11};do
-                virsh vcpupin $select_vm $((i)) $((i))
-    done
-    for i in {12..13};do
-        virsh vcpupin $select_vm $((i)) $((i))
-    done
-    for i in {14..15};do
-        virsh vcpupin $select_vm $((i)) $((i))
-    done
-    sleep 3
-}
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='1'/></cpu>"
 toggle_topological_passthrough(){
@@ -42,18 +26,34 @@ toggle_topological_passthrough(){
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
     fi
     virsh define /tmp/$prob_vm.xml
-    sudo bash ../utility/cleanon_startup.sh $prob_vm 16
     ssh ubuntu@$prob_vm "sudo killall nginx"
     ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
     sleep 5
 }
+
+toggle_topological_passthrough 1
+wake_and_pin_vm(){
+    select_vm=$1
+    sudo bash ../utility/cleanon_startup.sh $select_vm 16
+    #set up first 12 cores 
+    for i in {0..11};do
+                virsh vcpupin $select_vm $((i)) $((i))
+    done
+    for i in {12..13};do
+        virsh vcpupin $select_vm $((i)) $((i))
+    done
+    for i in {14..15};do
+        virsh vcpupin $select_vm $((i)) $((i))
+    done
+    sleep 3
+}
+
 virsh shutdown $prob_vm
 virsh shutdown $compete_vm
 sleep 5
 
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
-toggle_topological_passthrough 1
 #THIS IS IMPORTANT - LAST CPU MUST BE SENT SOMEWHERE ELSE BECAUSE of stacking restrictions
 virsh vcpupin $compete_vm $((15)) $((20))
 

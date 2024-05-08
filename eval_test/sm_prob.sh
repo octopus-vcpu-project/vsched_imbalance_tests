@@ -69,16 +69,16 @@ setLatency 4000 6000 9 11 #4ms/6ms
 setLatency 1000 20000 12 13 #1ms/60ms 
 
 #Two Stacking
-setLatency 4000 6000 14 15 #1ms/60ms 
+setLatency 4000 6000 14 15 #4ms/6ms 
 
 
 
 sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 10000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+sudo echo 1000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$prob_vm "sudo killall a.out"
-#ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/min_granularity_ns <<< 1000000"
-#ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/wakeup_granularity_ns <<< 0"
+ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/min_granularity_ns <<< 1000000"
+ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/wakeup_granularity_ns <<< 0"
 ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
@@ -115,6 +115,16 @@ runLatencyTests(){
     runLatencyTest "xapian" #QPS=300 SVC=3ms
 }
 
+
+
+activate_vprobers(){
+    ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 8 -s 12 -u 8000" &
+    ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 8000 &  " & 
+    sleep 10
+}
+
 #parsec
 runParsecTests(){
     runParsecTest "blackscholes"
@@ -142,7 +152,7 @@ runParsecTests(){
 }
 
 sleep 10
-runLatencyTests
+#runLatencyTests
 runParsecTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

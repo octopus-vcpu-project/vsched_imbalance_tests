@@ -11,12 +11,10 @@ wake_and_pin_vm(){
     sudo bash ../utility/cleanon_startup.sh $select_vm 16
     #set up first 12 cores 
     for i in {0..11};do
-            if [ $((i % 3)) == 0 ]; then
+            if [ $((i % 2)) == 0 ]; then
                 virsh vcpupin $select_vm $((i)) $((i))
-            elif [ $((i % 3)) == 1 ]; then
+            elif [ $((i % 2)) == 1 ]; then
                 virsh vcpupin $select_vm $((i)) $((i+79))
-            else
-                virsh vcpupin $select_vm $((i)) $((i))
             fi
     done
     for i in {12..13};do
@@ -76,7 +74,7 @@ setLatency 4000 6000 14 15 #4ms/6ms
 
 
 sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 1000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+sudo echo 10000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/min_granularity_ns <<< 1000000"
@@ -154,7 +152,8 @@ runParsecTests(){
 }
 
 sleep 10
-#runLatencyTests
+activate_vprobers
+runLatencyTests
 runParsecTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

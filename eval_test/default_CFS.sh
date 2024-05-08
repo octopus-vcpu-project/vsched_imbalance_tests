@@ -42,7 +42,7 @@ toggle_topological_passthrough(){
         sed -i "/<cpu /,/<\/cpu>/c\\$naive_topology_string" /tmp/$prob_vm.xml
     fi
     virsh define /tmp/$prob_vm.xml
-    sudo bash ../utility/cleanon_startup.sh $prob_vm 32
+    sudo bash ../utility/cleanon_startup.sh $prob_vm 16
     ssh ubuntu@$prob_vm "sudo killall nginx"
     ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo taskset -c 16-31 ./nginx_/sbin/nginx -g 'worker_processes auto;'"
     sleep 5

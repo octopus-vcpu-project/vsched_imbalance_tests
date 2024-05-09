@@ -122,7 +122,7 @@ runParsecTest(){
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 16 -i native">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 12 -i native">>"$OUTPUT_FILE"
     done
 }
 
@@ -173,7 +173,7 @@ activate_vprobers(){
 }
 activate_vprobers
 sleep 10
-runLatencyTests
+#runLatencyTests
 runParsecTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

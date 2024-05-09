@@ -166,7 +166,7 @@ runParsecTests(){
 }
 
 sleep 10
-runLatencyTests
+#runLatencyTests
 runParsecTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

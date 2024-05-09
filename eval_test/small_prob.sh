@@ -107,7 +107,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
 runLatencyTest(){
-    for i in $(seq 1 3);do
+    for i in $(seq 1 1);do
         sleep 3
         latency_option=$1
         echo "Running Latency benchmark $1" 
@@ -118,7 +118,7 @@ runLatencyTest(){
 }
 
 runParsecTest(){
-    for i in $(seq 1 3);do
+    for i in $(seq 1 1);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1" >> "$OUTPUT_FILE" 

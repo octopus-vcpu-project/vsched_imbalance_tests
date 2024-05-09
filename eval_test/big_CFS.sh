@@ -3,10 +3,10 @@ prob_vm=$1
 compete_vm=$2
 latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
-compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
+compete_bench="sudo taskset -c 0-23 sysbench --threads=32 --time=1000000 cpu run"
 OUTPUT_FILE="./data/obj-latency-noidle$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
-smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='12' threads='1'/></cpu>"
+smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='32' threads='1'/></cpu>"
 toggle_topological_passthrough(){
     virsh shutdown $prob_vm
     while true; do
@@ -30,24 +30,45 @@ toggle_topological_passthrough(){
 }
 
 toggle_topological_passthrough 0
-sudo bash ../utility/cleanon_startup.sh $prob_vm 12
+sudo bash ../utility/cleanon_startup.sh $prob_vm 32
 toggle_topological_passthrough 1
 
 
 wake_and_pin_vm(){
     select_vm=$1
-    sudo bash ../utility/cleanon_startup.sh $select_vm 12
-    #set up first 8 cores 
-    for i in {0..9};do
+    sudo bash ../utility/cleanon_startup.sh $select_vm 32
+    #set up first socket
+    for i in {0..7};do
     	if [ $((i % 2)) == 0 ]; then
         	virsh vcpupin $select_vm $((i)) $((i))
         elif [ $((i % 2)) == 1 ]; then
         	virsh vcpupin $select_vm $((i)) $((i+79))
         fi
     done
+    #set up second socket
+    for i in {8..15};do
+        if [ $((i % 2)) == 0 ]; then
+                virsh vcpupin $select_vm $((i)) $((i+12))
+        elif [ $((i % 2)) == 1 ]; then
+                virsh vcpupin $select_vm $((i)) $((i+91))
+        fi
+    done
 
-    for i in {10..11};do
-        virsh vcpupin $select_vm $((i)) $((10))
+    #setup third scoket
+    for i in {16..23};do
+        if [ $((i % 2)) == 0 ]; then
+                virsh vcpupin $select_vm $((i)) $((i+24))
+        elif [ $((i % 2)) == 1 ]; then
+                virsh vcpupin $select_vm $((i)) $((i+103))
+        fi
+    done
+    #setup fourth socket
+    for i in {24..31};do
+        if [ $((i % 2)) == 0 ]; then
+                virsh vcpupin $select_vm $((i)) $((i+36))
+        elif [ $((i % 2)) == 1 ]; then
+                virsh vcpupin $select_vm $((i)) $((i+115))
+        fi
     done
     sleep 3
 }
@@ -57,7 +78,7 @@ sleep 5
 wake_and_pin_vm $prob_vm
 wake_and_pin_vm $compete_vm
 #THIS IS IMPORTANT - LAST CPU MUST BE SENT SOMEWHERE ELSE BECAUSE of stacking restrictions
-virsh vcpupin $compete_vm $((11)) $((20))
+#virsh vcpupin $compete_vm $((11)) $((20))
 
 vm_pid=$(sudo grep pid /var/run/libvirt/qemu/$prob_vm.xml | awk -F "'" '{print $6}' | head -n 1)
 vm_cgroup_title=$(sudo cat /proc/$vm_pid/cgroup | awk -F "/" '{print $3}')
@@ -77,24 +98,19 @@ setLatency(){
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
 
-#Setting Next 3 cores  as High Latency/Low Capacity 
-setLatency 6000 18000 0 1 #6ms/18ms 
+for z in {0..2};do
+	#Setting Next 3 cores  as High Latency/Low Capacity 
+	setLatency 6000 18000 $((z*8)) $((z*8+1)) #6ms/18ms 
 
-#Setting Next 3 Cores as Low Latency/Low Capacity
-setLatency 2000 6000 2 3 #2ms/6ms 
+	#Setting Next 3 Cores as Low Latency/Low Capacity
+	setLatency 2000 6000 $((z*8+2)) $((z*8+3)) #2ms/6ms 
 
-#Setting Next 3 Cores as Low Latency/Low Capacity
-setLatency 12000 18000 4 5 #12ms/18ms 
+	#Setting Next 3 Cores as Low Latency/Low Capacity
+	setLatency 12000 18000 $((z*8+4)) $((z*8+5)) #12ms/18ms 
 
-#Setting Next 3 cores  as High Latency/High Capacity 
-setLatency 4000 6000 6 7 #4ms/6ms 
-
-#Two Straggler
-setLatency 1000 20000 8 9 #1ms/60ms 
-
-#Two Stacking
-setLatency 4000 6000 10 11 #1ms/60ms 
-
+	#Setting Next 3 cores  as High Latency/High Capacity 
+	setLatency 4000 6000 $((z*8+6)) $((z*8+7)) #4ms/6ms
+done
 
 
 sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
@@ -122,7 +138,7 @@ runParsecTest(){
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 16 -i native">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 32 -i native">>"$OUTPUT_FILE"
     done
 }
 

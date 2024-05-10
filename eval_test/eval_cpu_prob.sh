@@ -41,7 +41,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -u 8000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
-    ssh -t ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 150 -s 1000 -v" > $OUTPUT_FILE 2>&1 &
+    ssh -t ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 1000 -v" > $OUTPUT_FILE 2>&1 &
     sleep 10
 }
 wake_and_pin_vm(){
@@ -83,16 +83,25 @@ activate_vprobers
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
-setLatency 2000 4000
-sleep 10
-setLatency 3000 4000
-sleep 3
-setLatency 1000 4000
+setLatency 2000 5000 # 40% 
+sleep 5
+setLatency 3000 5000
+sleep 5
+setLatency 4000 5000
+sleep 5
+setLatency 3000 5000
+sleep 5
+setLatency 2000 5000
+sleep 2
+setLatency 1000 10000
 sleep 1
-setLatency 3000 4000
+setLatency 2000 5000
+sleep 2
+setLatency 3000 5000
 sleep 5
-setLatency 1000 4000
-sleep 5
+setLatency 4000 5000
+
+
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 5000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us

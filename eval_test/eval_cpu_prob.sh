@@ -1,4 +1,4 @@
-#!/bin/bash
+e#!/bin/bash
 prob_vm=$1
 compete_vm=$2
 latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
@@ -68,32 +68,29 @@ compete_vm_cgroup_title=$(sudo cat /proc/$compete_vm_pid/cgroup | awk -F "/" '{p
 ssh ubuntu@$prob_vm "sudo killall sysbench" 
 
 setLatency(){
-    for i in $(seq $3 $4);do
+    for i in $(seq 0 15);do
         sudo echo $1 $(($2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
-    for i in $(seq $3 $4);do
+    for i in $(seq 0 15);do
         sudo echo $(($2-$1)) $(($2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
-    echo "Set latency to $1" 
-
-    echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE" 
+    echo "Set latency to $1"
+    echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE"
 }
 
 activate_vprobers
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
-ssh ubuntu@$prob_vm "sudo killall a.out"
-ssh ubuntu@$compete_vm "sudo killall sysbench" 
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
-setLatency 2000 4000 0 15
+setLatency 2000 4000
 sleep 10
-setLatency 3000 4000 0 15
+setLatency 3000 4000
 sleep 3
-setLatency 500 4000 0 15
+setLatency 1000 4000
 sleep 1
-setLatency 3000 4000 0 15
+setLatency 3000 4000
 sleep 5
-setLatency 1000 4000 0 15
+setLatency 1000 4000
 sleep 5
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

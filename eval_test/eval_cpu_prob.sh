@@ -4,7 +4,7 @@ compete_vm=$2
 latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo taskset -c 0-23 sysbench --threads=32 --time=1000000 cpu run"
-OUTPUT_FILE="./data/vprober_react$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./data/vprober_react_corr$(date +%m%d%H%M).txt"
 OUTPUT_FILE2="./data/vprober_react_set$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='1'/></cpu>"
@@ -41,7 +41,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -u 8000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
-    ssh -t ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 1000 -v" > $OUTPUT_FILE 2>&1 &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 1000 -v" >> "$OUTPUT_FILE" &
     sleep 10
 }
 wake_and_pin_vm(){

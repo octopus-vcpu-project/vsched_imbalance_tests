@@ -4,7 +4,8 @@ compete_vm=$2
 latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash run.sh"
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo taskset -c 0-23 sysbench --threads=32 --time=1000000 cpu run"
-OUTPUT_FILE="./data/vprober_reaction$(date +%m%d%H%M).txt"
+OUTPUT_FILE="./data/vprober_react$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./data/vprober_react_set$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='1'/></cpu>"
 toggle_topological_passthrough(){
@@ -75,7 +76,7 @@ setLatency(){
         sudo echo $(($2-$1)) $(($2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
     echo "Set latency to $1"
-    echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE"
+    echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE2"
 }
 
 activate_vprobers

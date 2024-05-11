@@ -30,9 +30,6 @@ toggle_topological_passthrough(){
     sleep 5
 }
 
-toggle_topological_passthrough 0
-sudo bash ../utility/cleanon_startup.sh $prob_vm 16
-toggle_topological_passthrough 1
 
 activate_vprobers(){
     
@@ -53,11 +50,6 @@ wake_and_pin_vm(){
     done
     sleep 3
 }
-virsh shutdown $compete_vm
-sleep 5
-
-wake_and_pin_vm $prob_vm
-wake_and_pin_vm $compete_vm
 #THIS IS IMPORTANT - LAST CPU MUST BE SENT SOMEWHERE ELSE BECAUSE of stacking restrictions
 #virsh vcpupin $compete_vm $((11)) $((20))
 
@@ -79,34 +71,9 @@ setLatency(){
     echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE2"
 }
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
-setLatency 1000 10000
-sleep 5
+setLatency 2000 5000
+sleep 10
 activate_vprobers
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-setLatency 1000 10000
-sleep 30
-setLatency 2000 10000
-sleep 10
-setLatency 2000 5000 # 40% 
-sleep 25
-setLatency 3000 5000
-sleep 35
-setLatency 4000 5000
-sleep 15
-setLatency 3000 5000
-sleep 20
-setLatency 2000 5000
-sleep 15
-setLatency 1000 10000
-sleep 3
-setLatency 3000 5000
-sleep 10
-setLatency 4000 5000
-sleep 10
-ssh ubuntu@$prob_vm "sudo killall cpu_prober.out" 
-
-sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
-sudo git add .;sudo git commit -m 'new';sudo git push
 
 

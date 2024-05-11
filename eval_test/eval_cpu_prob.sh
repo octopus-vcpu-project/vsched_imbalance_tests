@@ -85,23 +85,23 @@ activate_vprobers
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 setLatency 2000 5000 # 40% 
-sleep 5
+sleep 30
 setLatency 3000 5000
-sleep 5
+sleep 30
 setLatency 4000 5000
-sleep 5
+sleep 30
 setLatency 3000 5000
-sleep 5
+sleep 30
 setLatency 2000 5000
-sleep 2
+sleep 12
 setLatency 1000 10000
-sleep 1
+sleep 3
 setLatency 2000 5000
-sleep 2
+sleep 12
 setLatency 3000 5000
-sleep 5
+sleep 30
 setLatency 4000 5000
-sleep 5
+sleep 30
 ssh ubuntu@$prob_vm "sudo killall cpu_prober.out" 
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

@@ -100,7 +100,8 @@ sleep 2
 setLatency 3000 5000
 sleep 5
 setLatency 4000 5000
-
+sleep 5
+ssh ubuntu@$prob_vm "sudo killall cpu_prober.out" 
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

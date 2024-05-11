@@ -79,10 +79,11 @@ setLatency(){
     echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE2"
 }
 
+setLatency 2000 5000
+sleep 10
 activate_vprobers
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-
 setLatency 2000 5000 # 40% 
 sleep 5
 setLatency 3000 5000

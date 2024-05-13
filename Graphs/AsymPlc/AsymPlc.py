@@ -40,6 +40,7 @@ def plot_data(index1, index2):
     for i in range(max_length):
         value1 = dataset1[i] if i < len(dataset1) else 0
         value2 = dataset2[i] if i < len(dataset2) else 0
+        print(str(value1)+" "+str(value2))
 
         if value1 > value2:
             plt.bar(i, value1, color='blue')

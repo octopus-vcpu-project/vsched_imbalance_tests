@@ -19,7 +19,7 @@ done
 sudo echo 0 > /sys/kernel/debug/sched/wakeup_granularity_ns
 
 OUTPUT_FILE="./data/IVHtesting-$(date +%m%d%H%M).txt"
-
+sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 length=${#bench_1_[@]}
 ssh ubuntu@$compete_vm "sudo sysbench --threads=16 --time=900000 cpu run &"&
 ssh ubuntu@$prob_vm "sudo killall a.out"

@@ -1,0 +1,730 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 1000
+Set latency to 4000
+Running Latency benchmark img-dnn
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.415 ms | p95 5.955 ms | p99 10.890 ms | max 35.908 ms
+svc: mean 0.768 ms | p95 1.085 ms | p99 1.461 ms | max 24.616 ms
+end2end: mean 2.183 ms | p95 7.008 ms | p99 11.997 ms | max 36.537 ms
+Running Latency benchmark img-dnn
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.366 ms | p95 5.816 ms | p99 10.656 ms | max 33.529 ms
+svc: mean 0.744 ms | p95 1.074 ms | p99 1.449 ms | max 20.056 ms
+end2end: mean 2.111 ms | p95 6.775 ms | p99 11.821 ms | max 34.512 ms
+Running Latency benchmark img-dnn
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.288 ms | p95 5.523 ms | p99 9.975 ms | max 27.813 ms
+svc: mean 0.745 ms | p95 1.079 ms | p99 1.304 ms | max 20.180 ms
+end2end: mean 2.033 ms | p95 6.482 ms | p99 10.942 ms | max 28.327 ms
+Running Latency benchmark moses
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 166.825 ms | p95 8.387 ms | p99 37.412 ms | max 19929.002 ms
+svc: mean 53.778 ms | p95 10.187 ms | p99 24.016 ms | max 25393.574 ms
+end2end: mean 220.603 ms | p95 15.548 ms | p99 47.765 ms | max 26645.995 ms
+Running Latency benchmark moses
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+queue: mean 90.330 ms | p95 6.969 ms | p99 25.018 ms | max 16120.086 ms
+svc: mean 97.823 ms | p95 8.633 ms | p99 22.936 ms | max 22513.162 ms
+end2end: mean 188.152 ms | p95 14.022 ms | p99 39.963 ms | max 22687.805 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark moses
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+queue: mean 92.941 ms | p95 9.135 ms | p99 22.288 ms | max 16803.886 ms
+svc: mean 89.235 ms | p95 10.554 ms | p99 25.805 ms | max 23460.295 ms
+end2end: mean 182.176 ms | p95 16.547 ms | p99 51.608 ms | max 23501.481 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark masstree
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.985 ms | p95 4.896 ms | p99 8.948 ms | max 17.588 ms
+svc: mean 0.209 ms | p95 0.293 ms | p99 0.413 ms | max 6.037 ms
+end2end: mean 1.194 ms | p95 5.195 ms | p99 9.343 ms | max 17.852 ms
+Running Latency benchmark masstree
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.127 ms | p95 5.366 ms | p99 10.250 ms | max 15.855 ms
+svc: mean 0.208 ms | p95 0.289 ms | p99 0.408 ms | max 6.836 ms
+end2end: mean 1.335 ms | p95 5.601 ms | p99 10.516 ms | max 16.139 ms
+Running Latency benchmark masstree
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.304 ms | p95 6.352 ms | p99 11.012 ms | max 23.459 ms
+svc: mean 0.215 ms | p95 0.297 ms | p99 0.422 ms | max 9.002 ms
+end2end: mean 1.518 ms | p95 6.593 ms | p99 11.246 ms | max 23.676 ms
+Running Latency benchmark silo
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 3.567 ms | p95 7.842 ms | p99 97.442 ms | max 155.458 ms
+svc: mean 0.448 ms | p95 0.263 ms | p99 0.380 ms | max 160.440 ms
+end2end: mean 4.015 ms | p95 8.226 ms | p99 116.150 ms | max 185.827 ms
+Running Latency benchmark silo
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.965 ms | p95 4.772 ms | p99 7.782 ms | max 15.991 ms
+svc: mean 0.144 ms | p95 0.260 ms | p99 0.362 ms | max 2.538 ms
+end2end: mean 1.109 ms | p95 4.966 ms | p99 7.921 ms | max 16.155 ms
+Running Latency benchmark silo
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+queue: mean 1.203 ms | p95 5.887 ms | p99 9.874 ms | max 12.726 ms
+svc: mean 0.147 ms | p95 0.266 ms | p99 0.387 ms | max 2.452 ms
+end2end: mean 1.350 ms | p95 6.093 ms | p99 10.156 ms | max 12.892 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+queue: mean 6696.126 ms | p95 12407.797 ms | p99 13282.974 ms | max 13330.807 ms
+svc: mean 713.404 ms | p95 1892.339 ms | p99 2752.729 ms | max 6537.894 ms
+end2end: mean 7409.529 ms | p95 13421.294 ms | p99 13690.965 ms | max 14639.989 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 5520.896 ms | p95 11681.483 ms | p99 11776.440 ms | max 11868.211 ms
+svc: mean 677.563 ms | p95 1138.017 ms | p99 1850.736 ms | max 4496.804 ms
+end2end: mean 6198.459 ms | p95 11986.264 ms | p99 12065.621 ms | max 13887.899 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+queue: mean 0.831 ms | p95 3.731 ms | p99 10.766 ms | max 38.028 ms
+svc: mean 7.890 ms | p95 26.448 ms | p99 48.177 ms | max 93.891 ms
+end2end: mean 8.721 ms | p95 29.057 ms | p99 52.329 ms | max 94.068 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark specjbb
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.858 ms | p95 3.761 ms | p99 5.718 ms | max 22.074 ms
+svc: mean 0.126 ms | p95 0.151 ms | p99 0.303 ms | max 14.406 ms
+end2end: mean 0.984 ms | p95 3.907 ms | p99 5.869 ms | max 27.021 ms
+Running Latency benchmark specjbb
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.330 ms | p95 8.097 ms | p99 11.423 ms | max 25.339 ms
+svc: mean 0.115 ms | p95 0.164 ms | p99 0.316 ms | max 8.009 ms
+end2end: mean 1.445 ms | p95 8.206 ms | p99 11.544 ms | max 25.473 ms
+Running Latency benchmark specjbb
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.860 ms | p95 3.638 ms | p99 5.561 ms | max 84.227 ms
+svc: mean 0.122 ms | p95 0.158 ms | p99 0.322 ms | max 16.021 ms
+end2end: mean 0.982 ms | p95 3.798 ms | p99 5.717 ms | max 84.305 ms
+Running Latency benchmark sphinx
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+queue: mean 1.218 ms | p95 3.507 ms | p99 3.927 ms | max 4.031 ms
+svc: mean 1264.131 ms | p95 1636.993 ms | p99 1669.353 ms | max 1677.442 ms
+end2end: mean 1265.349 ms | p95 1639.452 ms | p99 1671.392 ms | max 1679.377 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark sphinx
+queue: mean 0.576 ms | p95 1.728 ms | p99 1.955 ms | max 2.012 ms
+svc: mean 1361.308 ms | p95 1817.945 ms | p99 1871.640 ms | max 1885.064 ms
+end2end: mean 1361.884 ms | p95 1818.528 ms | p99 1871.843 ms | max 1885.172 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark sphinx
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 3.060 ms | p95 9.962 ms | p99 11.109 ms | max 11.396 ms
+svc: mean 1320.772 ms | p95 1760.547 ms | p99 1831.911 ms | max 1849.752 ms
+end2end: mean 1323.833 ms | p95 1762.044 ms | p99 1832.299 ms | max 1849.862 ms
+Running Latency benchmark xapian
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.755 ms | p95 3.893 ms | p99 5.818 ms | max 20.985 ms
+svc: mean 1.767 ms | p95 3.905 ms | p99 6.854 ms | max 17.158 ms
+end2end: mean 2.522 ms | p95 6.282 ms | p99 8.398 ms | max 22.428 ms
+Running Latency benchmark xapian
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.753 ms | p95 4.161 ms | p99 5.775 ms | max 11.099 ms
+svc: mean 1.282 ms | p95 3.029 ms | p99 3.551 ms | max 8.965 ms
+end2end: mean 2.035 ms | p95 5.530 ms | p99 7.538 ms | max 12.054 ms
+Running Latency benchmark xapian
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.749 ms | p95 3.898 ms | p99 5.768 ms | max 11.000 ms
+svc: mean 1.281 ms | p95 3.025 ms | p99 3.600 ms | max 6.780 ms
+end2end: mean 2.029 ms | p95 5.411 ms | p99 7.468 ms | max 14.508 ms
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           7                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 3 Minutes [05:44 EDT] 
+        Started Run 1 @ 05:42:08
+        Started Run 2 @ 05:43:03
+        Started Run 3 @ 05:43:55
+        Started Run 4 @ 05:44:47 *
+        Started Run 5 @ 05:45:39 *
+        Started Run 6 @ 05:46:29 *
+        Started Run 7 @ 05:47:22 *
+        Started Run 8 @ 05:48:14 *
+        Started Run 9 @ 05:49:07 *
+        Started Run 10 @ 05:49:58 *
+        Started Run 11 @ 05:50:51 *
+        Started Run 12 @ 05:51:43 *
+        Started Run 13 @ 05:52:39 *
+        Started Run 14 @ 05:53:34 *
+        Started Run 15 @ 05:54:25 *
+
+    FreeBSD-13.0-RELEASE-amd64-memstick.img Compression:
+        50.902266
+        47.914542
+        47.988666
+        47.582523
+        46.036493
+        49.050009
+        47.873321
+        49.274485
+        47.184596
+        48.532994
+        48.908739
+        51.538473
+        50.535134
+        47.575136
+        47.949266
+
+    Average: 48.589776 Seconds
+    Deviation: 3.06%
+    Samples: 15
+
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           7                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 3 Minutes [05:58 EDT] 
+        Started Run 1 @ 05:55:23
+        Started Run 2 @ 05:56:17
+        Started Run 3 @ 05:57:11
+
+    FreeBSD-13.0-RELEASE-amd64-memstick.img Compression:
+        49.245241
+        50.168593
+        48.014808
+
+    Average: 49.142881 Seconds
+    Deviation: 2.20%
+
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           7                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 3 Minutes [06:00 EDT] 
+        Started Run 1 @ 05:58:09
+        Started Run 2 @ 05:59:00
+        Started Run 3 @ 05:59:52
+        Started Run 4 @ 06:00:48 *
+        Started Run 5 @ 06:01:41 *
+        Started Run 6 @ 06:02:33 *
+        Started Run 7 @ 06:03:24 *
+        Started Run 8 @ 06:04:16 *
+        Started Run 9 @ 06:05:09 *
+        Started Run 10 @ 06:06:02 *
+        Started Run 11 @ 06:06:55 *
+        Started Run 12 @ 06:07:49 *
+        Started Run 13 @ 06:08:43 *
+        Started Run 14 @ 06:09:37 *
+
+    FreeBSD-13.0-RELEASE-amd64-memstick.img Compression:
+        47.491613
+        47.456078
+        52.527795
+        48.295764
+        48.0695
+        47.125579
+        48.179124
+        48.661745
+        49.33682
+        48.946364
+        49.797851
+        50.475831
+        49.281586
+        48.559079
+
+    Average: 48.871766 Seconds
+    Deviation: 2.88%
+    Samples: 14
+
+Running Phoronix build-imagemagick
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           7                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Timed ImageMagick Compilation 6.9.0:
+    pts/build-imagemagick-1.7.2
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 7 Minutes [06:16 EDT] 
+        Running Pre-Test Script @ 06:10:35
+        Started Run 1 @ 06:11:36
+        Running Interim Test Script @ 06:14:00
+        Started Run 2 @ 06:14:03
+        Running Interim Test Script @ 06:16:37
+        Started Run 3 @ 06:16:40
+        Running Interim Test Script @ 06:19:08
+        Started Run 4 @ 06:19:10 *
+        Running Interim Test Script @ 06:21:37
+        Started Run 5 @ 06:21:39 *
+        Running Interim Test Script @ 06:24:07
+        Started Run 6 @ 06:24:09 *
+        Running Post-Test Script @ 06:26:37
+
+    Time To Compile:
+        142.77
+        152.506
+        145.466
+        144.692
+        145.378
+        145.36
+
+    Average: 146.029 Seconds
+    Deviation: 2.28%
+    Samples: 6
+
+Running Phoronix build-imagemagick
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           7                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Timed ImageMagick Compilation 6.9.0:
+    pts/build-imagemagick-1.7.2
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 7 Minutes [06:33 EDT] 
+        Running Pre-Test Script @ 06:26:45
+        Started Run 1 @ 06:27:46
+        Running Interim Test Script @ 06:30:17
+        Started Run 2 @ 06:30:20
+        Running Interim Test Script @ 06:32:46
+        Started Run 3 @ 06:32:49
+        Running Post-Test Script @ 06:35:14
+
+    Time To Compile:
+        149.529
+        144.473
+        142.942
+
+    Average: 145.648 Seconds
+    Deviation: 2.37%
+
+Running Phoronix build-imagemagick
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           7                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Timed ImageMagick Compilation 6.9.0:
+    pts/build-imagemagick-1.7.2
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 7 Minutes [06:41 EDT] 
+        Running Pre-Test Script @ 06:35:22
+        Started Run 1 @ 06:36:22
+        Running Interim Test Script @ 06:38:46
+        Started Run 2 @ 06:38:48
+        Running Interim Test Script @ 06:41:13
+        Started Run 3 @ 06:41:16
+        Running Post-Test Script @ 06:43:42
+
+    Time To Compile:
+        142.05
+        142.556
+        144.268
+
+    Average: 142.958 Seconds
+    Deviation: 0.81%
+

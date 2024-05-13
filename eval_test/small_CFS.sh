@@ -126,6 +126,22 @@ runParsecTest(){
     done
 }
 
+runPhoronixTest(){
+    for i in $(seq 1 3);do
+        sleep 3
+        echo "Running Phoronix $1" 
+        echo "Running Phoronix $1" >> "$OUTPUT_FILE" 
+        ssh ubuntu@$prob_vm "sudo phoronix-test-suite batch-run $1">>"$OUTPUT_FILE"
+    done
+}
+
+
+runPhoronixTests(){
+        runPhoronixTest "compress-pbzip2"
+        runPhoronixTest "build-imagemagick"
+}
+
+
 
 #tailbench
 runLatencyTests(){
@@ -166,8 +182,9 @@ runParsecTests(){
 }
 
 sleep 10
-#runLatencyTests
-runParsecTests
+runLatencyTests
+runPhoronixTests
+#runParsecTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

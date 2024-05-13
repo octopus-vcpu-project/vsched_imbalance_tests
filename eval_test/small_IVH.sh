@@ -133,7 +133,7 @@ runPhoronixTests(){
 }
 
 runParsecTest(){
-    for i in $(seq 1 1);do
+    for i in $(seq 1 3);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1" >> "$OUTPUT_FILE" 
@@ -187,13 +187,14 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 150 -s 10000 &  " & 
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh" &
     sleep 10
 }
 activate_vprobers
 sleep 10
 runLatencyTests
 runPhoronixTests
-#runParsecTests
+runParsecTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

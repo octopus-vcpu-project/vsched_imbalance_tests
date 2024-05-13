@@ -1,0 +1,563 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 1000
+Set latency to 4000
+Running Latency benchmark img-dnn
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 6.377 ms | p95 35.568 ms | p99 95.647 ms | max 166.484 ms
+svc: mean 0.993 ms | p95 1.080 ms | p99 11.515 ms | max 62.092 ms
+end2end: mean 7.370 ms | p95 37.716 ms | p99 97.966 ms | max 168.461 ms
+Running Latency benchmark moses
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 214.792 ms | p95 10.737 ms | p99 23.572 ms | max 32083.964 ms
+svc: mean 5.630 ms | p95 13.753 ms | p99 61.148 ms | max 140.055 ms
+end2end: mean 220.422 ms | p95 24.114 ms | p99 85.806 ms | max 32202.479 ms
+Running Latency benchmark masstree
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.830 ms | p95 10.541 ms | p99 15.414 ms | max 66.968 ms
+svc: mean 0.245 ms | p95 0.295 ms | p99 0.444 ms | max 28.696 ms
+end2end: mean 2.075 ms | p95 10.957 ms | p99 16.123 ms | max 67.260 ms
+Running Latency benchmark silo
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.686 ms | p95 9.446 ms | p99 13.984 ms | max 31.892 ms
+svc: mean 0.140 ms | p95 0.262 ms | p99 0.380 ms | max 9.064 ms
+end2end: mean 1.826 ms | p95 9.633 ms | p99 14.150 ms | max 32.127 ms
+Running Latency benchmark shore
+queue: mean 4704.183 ms | p95 9971.983 ms | p99 10099.502 ms | max 10114.965 ms
+svc: mean 580.696 ms | p95 1491.163 ms | p99 4238.711 ms | max 5920.758 ms
+end2end: mean 5284.878 ms | p95 10327.763 ms | p99 10558.749 ms | max 12583.472 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark specjbb
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.290 ms | p95 3.998 ms | p99 16.765 ms | max 42.020 ms
+svc: mean 0.261 ms | p95 0.176 ms | p99 0.347 ms | max 48.743 ms
+end2end: mean 1.550 ms | p95 4.201 ms | p99 23.230 ms | max 58.213 ms
+Running Latency benchmark sphinx
+queue: mean 0.170 ms | p95 0.295 ms | p99 0.325 ms | max 0.333 ms
+svc: mean 1725.150 ms | p95 2355.443 ms | p99 2416.297 ms | max 2431.511 ms
+end2end: mean 1725.320 ms | p95 2355.655 ms | p99 2416.478 ms | max 2431.683 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark xapian
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.003 ms | p95 4.076 ms | p99 9.263 ms | max 23.446 ms
+svc: mean 1.966 ms | p95 4.427 ms | p99 11.243 ms | max 81.052 ms
+end2end: mean 2.969 ms | p95 7.129 ms | p99 13.981 ms | max 87.223 ms
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                    
+    Estimated Time To Completion: 1 Minute [04:21 EDT] 
+        Started Run 1 @ 04:20:18
+        Started Run 2 @ 04:21:14
+        Started Run 3 @ 04:22:10
+
+    FreeBSD-13.0-RELEASE-amd64-memstick.img Compression:
+        51.616806
+        51.796668
+        50.393048
+
+    Average: 51.268841 Seconds
+    Deviation: 1.49%
+
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 3 Minutes [04:25 EDT] 
+        Started Run 1 @ 04:23:11
+        Started Run 2 @ 04:24:06
+        Started Run 3 @ 04:25:06
+        Started Run 4 @ 04:26:03 *
+        Started Run 5 @ 04:26:57 *
+        Started Run 6 @ 04:27:53 *
+        Started Run 7 @ 04:28:50 *
+        Started Run 8 @ 04:29:44 *
+        Started Run 9 @ 04:30:44 *
+        Started Run 10 @ 04:31:44 *
+        Started Run 11 @ 04:32:40 *
+        Started Run 12 @ 04:33:40 *
+        Started Run 13 @ 04:34:35 *
+        Started Run 14 @ 04:35:37 *
+        Started Run 15 @ 04:36:33 *
+
+    FreeBSD-13.0-RELEASE-amd64-memstick.img Compression:
+        50.233796
+        56.441603
+        53.051668
+        50.203251
+        51.869391
+        53.070413
+        50.081773
+        55.267391
+        56.866726
+        51.650263
+        55.606155
+        51.029594
+        58.130889
+        52.440835
+        51.859279
+
+    Average: 53.186868 Seconds
+    Deviation: 4.95%
+    Samples: 15
+
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 3 Minutes [04:40 EDT] 
+        Started Run 1 @ 04:37:36
+        Started Run 2 @ 04:38:33
+        Started Run 3 @ 04:39:36
+        Started Run 4 @ 04:40:32 *
+        Started Run 5 @ 04:41:27 *
+        Started Run 6 @ 04:42:26 *
+        Started Run 7 @ 04:43:26 *
+        Started Run 8 @ 04:44:25 *
+        Started Run 9 @ 04:45:28 *
+        Started Run 10 @ 04:46:26 *
+        Started Run 11 @ 04:47:22 *
+        Started Run 12 @ 04:48:25 *
+        Started Run 13 @ 04:49:28 *
+        Started Run 14 @ 04:50:25 *
+        Started Run 15 @ 04:51:19 *
+
+    FreeBSD-13.0-RELEASE-amd64-memstick.img Compression:
+        51.898574
+        59.151729
+        51.675543
+        50.776229
+        55.80216
+        55.22989
+        55.294301
+        58.971044
+        53.772391
+        52.692524
+        58.753056
+        58.651449
+        53.317578
+        49.904082
+        51.028351
+
+    Average: 54.461260 Seconds
+    Deviation: 5.95%
+    Samples: 15
+
+Running Phoronix build-imagemagick
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Timed ImageMagick Compilation 6.9.0:
+    pts/build-imagemagick-1.7.2
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 4 Minutes [04:56 EDT] 
+        Running Pre-Test Script @ 04:52:21
+        Started Run 1 @ 04:54:01
+        Running Interim Test Script @ 04:56:36
+        Started Run 2 @ 04:56:38
+        Running Interim Test Script @ 04:59:13
+        Started Run 3 @ 04:59:16
+        Running Interim Test Script @ 05:01:59
+        Started Run 4 @ 05:02:02 *
+        Running Interim Test Script @ 05:04:39
+        Started Run 5 @ 05:04:42 *
+        Running Post-Test Script @ 05:07:20
+
+    Time To Compile:
+        152.218
+        152.829
+        160.844
+        154.983
+        156.198
+
+    Average: 155.414 Seconds
+    Deviation: 2.21%
+    Samples: 5
+
+Running Phoronix build-imagemagick
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Timed ImageMagick Compilation 6.9.0:
+    pts/build-imagemagick-1.7.2
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 6 Minutes [05:12 EDT] 
+        Running Pre-Test Script @ 05:07:29
+        Started Run 1 @ 05:09:18
+        Running Interim Test Script @ 05:11:55
+        Started Run 2 @ 05:11:59
+        Running Interim Test Script @ 05:14:38
+        Started Run 3 @ 05:14:41
+        Running Post-Test Script @ 05:17:18
+
+    Time To Compile:
+        155.961
+        156.579
+        155.145
+
+    Average: 155.895 Seconds
+    Deviation: 0.46%
+
+Running Phoronix build-imagemagick
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server                                                                                     
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Timed ImageMagick Compilation 6.9.0:
+    pts/build-imagemagick-1.7.2
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 6 Minutes [05:23 EDT] 
+        Running Pre-Test Script @ 05:17:28
+        Started Run 1 @ 05:19:15
+        Running Interim Test Script @ 05:21:58
+        Started Run 2 @ 05:22:01
+        Running Interim Test Script @ 05:24:44
+        Started Run 3 @ 05:24:47
+        Running Post-Test Script @ 05:27:25
+
+    Time To Compile:
+        161.572
+        160.289
+        155.791
+
+    Average: 159.217 Seconds
+    Deviation: 1.91%
+

@@ -38,10 +38,10 @@ activate_vprobers(){
     
 
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -u 8000" &
+#    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -u 8000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 1000 -v" >> "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/a.out -i 200000 -p 100 -s 1000 -v" >> "$OUTPUT_FILE" &
     sleep 10
 }
 wake_and_pin_vm(){
@@ -76,7 +76,7 @@ setLatency(){
         sudo echo $(($2-$1)) $(($2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
     echo "Set latency to $1"
-    echo "Set latency to $1 at $(date +%m%d%H%M%S.%3N)" >> "$OUTPUT_FILE2"
+    echo "Set latency to $1 at $(date +%M\ %S\ %3N | awk '{printf "%d\n", ($1*60000)+($2*1000)+$3}')" >> "$OUTPUT_FILE2"
 }
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 setLatency 1000 10000

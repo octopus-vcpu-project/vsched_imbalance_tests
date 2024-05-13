@@ -41,7 +41,7 @@ activate_vprobers(){
 #    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -u 8000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/a.out -i 200000 -p 100 -s 1000 -v" >> "$OUTPUT_FILE" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/a.out -i 200000 -p 100 -s 1000 -v -d 2" >> "$OUTPUT_FILE" &
     sleep 10
 }
 wake_and_pin_vm(){
@@ -98,7 +98,7 @@ sleep 20
 setLatency 2000 5000
 sleep 15
 setLatency 1000 10000
-sleep 3
+sleep 1
 setLatency 3000 5000
 sleep 10
 setLatency 4000 5000

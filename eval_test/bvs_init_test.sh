@@ -29,14 +29,11 @@ toggle_topological_passthrough(){
     virsh define /tmp/$prob_vm.xml
     sleep 5
 }
-
-toggle_topological_passthrough 0
-sudo bash ../utility/cleanon_startup.sh $prob_vm 16
-toggle_topological_passthrough 1
+#toggle_topological_passthrough 0
+#sudo bash ../utility/cleanon_startup.sh $prob_vm 16
+#toggle_topological_passthrough 1
 
 activate_vprobers(){
-    
-
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
 #    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -u 8000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
@@ -44,15 +41,17 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/a.out -i 200000 -p 100 -s 1000 -v -d 2" >> "$OUTPUT_FILE" &
     sleep 10
 }
+
 wake_and_pin_vm(){
     select_vm=$1
     sudo bash ../utility/cleanon_startup.sh $select_vm 16
-    #set up first socket
     for i in {0..15};do
         virsh vcpupin $select_vm $((i)) $((i))
     done
     sleep 3
 }
+
+
 virsh shutdown $compete_vm
 sleep 5
 
@@ -72,7 +71,7 @@ setLatency(){
     for i in $(seq $3 $4);do
         sudo echo $1 $(($2)) > /sys/fs/cgroup/machine.slice/$vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
-    for i in $(seq 0 15);do
+    for i in $(seq $3 $4);do
         sudo echo $(($2-$1)) $(($2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
     echo "Set latency to $1"
@@ -83,6 +82,7 @@ activate_vprobers
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 setLatency 16000 32000 0 7
 setLatency 2000 4000 8 15
+
 sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 10000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us

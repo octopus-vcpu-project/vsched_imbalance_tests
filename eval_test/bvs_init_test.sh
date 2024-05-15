@@ -80,8 +80,8 @@ setLatency(){
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 activate_vprobers
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
-setLatency 16000 32000 0 7
-setLatency 2000 4000 8 15
+setLatency 8000 16000 0 7
+setLatency 4000 8000 8 15
 
 sudo echo 18000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 10000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

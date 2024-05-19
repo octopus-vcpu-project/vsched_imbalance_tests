@@ -1,4 +1,3 @@
-sudo bash small_CFS.sh e-vm3 e-vm3-clone
-sudo bash small_prob.sh e-vm3 e-vm3-clone
-sudo bash small_IVH.sh e-vm3 e-vm3-clone
-sudo bash small_BVS.sh e-vm3 e-vm3-clone
+sudo bash small_FINAL.sh e-vm3 e-vm3-clone
+sudo bash big_FINAL.sh e-vm3 e-vm3-clone
+sudo bash ivh_underloaded.sh e-vm3 e-vm3-clone

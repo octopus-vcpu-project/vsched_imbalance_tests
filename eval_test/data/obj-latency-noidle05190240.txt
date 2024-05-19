@@ -1,0 +1,64 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 1000
+Set latency to 4000
+Running Phoronix compress-pbzip2
+
+
+Phoronix Test Suite v10.8.4
+System Information
+
+
+  PROCESSOR:              QEMU Virtual 2.5+
+    Core Count:           6                   
+    Thread Count:         12                  
+    Extensions:           SSE 2               
+    Cache Size:           16 MB               
+    Microcode:            0x1                 
+    Core Family:          Family 15 Model 107 
+
+  GRAPHICS:               Red Hat QXL paravirtual graphic card
+    Vulkan:               1.3.224          
+    Screen:               1024x768         
+
+  MOTHERBOARD:            QEMU Standard PC
+    BIOS Version:         1.15.0-1                       
+    Chipset:              Intel 82G33/G31/P35/P31 + ICH9 
+    Audio:                QEMU Generic                   
+    Network:              Red Hat Virtio device          
+
+  MEMORY:                 2 x 16 GB RAM QEMU
+
+  DISK:                   196GB
+    File-System:          ext4                          
+    Mount Options:        errors=remount-ro relatime rw 
+    Disk Scheduler:       NONE                          
+    Disk Details:         Block Size: 4096              
+
+  OPERATING SYSTEM:       Ubuntu 22.04
+    Kernel:               6.1.36BPF+ (x86_64)                                                                          
+    Desktop:              GNOME Shell 42.9                                                                             
+    Display Server:       X Server 1.21.1.4                                                                            
+    Compiler:             GCC 11.4.0 + Clang 14.0.0-1ubuntu1.1 + LLVM 14.0.0                                           
+    System Layer:         KVM QEMU                                                                                     
+    Security:             itlb_multihit: KVM: Mitigation of VMX unsupported                                            
+                          + l1tf: Mitigation of PTE Inversion                                                          
+                          + mds: Vulnerable: Clear buffers attempted no microcode; SMT Host state unknown              
+                          + meltdown: Mitigation of PTI                                                                
+                          + mmio_stale_data: Unknown: No mitigations                                                   
+                          + retbleed: Not affected                                                                     
+                          + spec_store_bypass: Vulnerable                                                              
+                          + spectre_v1: Mitigation of usercopy/swapgs barriers and __user pointer sanitization         
+                          + spectre_v2: Mitigation of Retpolines STIBP: disabled RSB filling PBRSB-eIBRS: Not affected 
+                          + srbds: Not affected                                                                        
+                          + tsx_async_abort: Not affected                                                              
+
+
+Parallel BZIP2 Compression 1.1.13:
+    pts/compress-pbzip2-1.6.1
+    Test 1 of 1
+    Estimated Trial Run Count:    3                     
+    Estimated Time To Completion: 3 Minutes [02:46 EDT] 
+        Started Run 1 @ 02:43:34

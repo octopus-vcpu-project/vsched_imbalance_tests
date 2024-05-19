@@ -1,0 +1,2773 @@
+Set latency to 4000
+Running Parsec splash2x.fft set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p1:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   1 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 16384
+Transpose: iter_num = 0
+Step 1: 30621651
+FFt1DOnce: iter_num = 114688
+Step 2: 114960164
+Transpose: iter_num = 0
+Step 3: 21839496
+Step 4: 88799993
+Transpose: iter_num = 0
+Step 5: 22758009
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0         278979364       75219156       0.26962
+
+                 TIMING INFORMATION
+Start time                        : 1716075064023272
+Initialization finish time        : 1716075129764081
+Overall finish time               : 1716075408743445
+Total time with initialization    :        344720173
+Total time without initialization :        278979364
+Overall transpose time            :         75219156
+Overall transpose fraction        :          0.26962
+
+
+real	5m46.794s
+user	2m40.889s
+sys	0m12.763s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p1:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   1 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 16384
+Transpose: iter_num = 0
+Step 1: 32760633
+FFt1DOnce: iter_num = 114688
+Step 2: 115104154
+Transpose: iter_num = 0
+Step 3: 22290704
+Step 4: 88652624
+Transpose: iter_num = 0
+Step 5: 23009545
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0         281817685       78060882       0.27699
+
+                 TIMING INFORMATION
+Start time                        : 1716075418420700
+Initialization finish time        : 1716075480727047
+Overall finish time               : 1716075762544732
+Total time with initialization    :        344124032
+Total time without initialization :        281817685
+Overall transpose time            :         78060882
+Overall transpose fraction        :          0.27699
+
+
+real	5m46.223s
+user	2m43.042s
+sys	0m10.222s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p1:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   1 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 16384
+Transpose: iter_num = 0
+Step 1: 32269303
+FFt1DOnce: iter_num = 114688
+Step 2: 114368439
+Transpose: iter_num = 0
+Step 3: 22649490
+Step 4: 88967935
+Transpose: iter_num = 0
+Step 5: 23095037
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0         281350251       78013830       0.27728
+
+                 TIMING INFORMATION
+Start time                        : 1716075772347842
+Initialization finish time        : 1716075835544635
+Overall finish time               : 1716076116894886
+Total time with initialization    :        344547044
+Total time without initialization :        281350251
+Overall transpose time            :         78013830
+Overall transpose fraction        :          0.27728
+
+
+real	5m46.633s
+user	2m42.799s
+sys	0m10.633s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p2:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   2 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 8192
+iter_num = 8192
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+FFt1DOnce: iter_num = 114688
+Step 1: 19348523
+Transpose: iter_num = 0
+Step 2: 52043845
+Transpose: iter_num = 67108864
+Step 3: 10813210
+Step 4: 43546906
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+Step 5:  8906622
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0         134660701       39068355       0.29012
+
+                 TIMING INFORMATION
+Start time                        : 1716076126630274
+Initialization finish time        : 1716076180002391
+Overall finish time               : 1716076314663092
+Total time with initialization    :        188032818
+Total time without initialization :        134660701
+Overall transpose time            :         39068355
+Overall transpose fraction        :          0.29012
+
+
+real	3m9.983s
+user	2m29.867s
+sys	0m17.107s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p2:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   2 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 8192
+iter_num = 8192
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+FFt1DOnce: iter_num = 114688
+Step 1: 19390016
+Step 2: 51830337
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+Step 3: 10868500
+Step 4: 43894205
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+Step 5:  9114598
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0         135105928       39373114       0.29142
+
+                 TIMING INFORMATION
+Start time                        : 1716076324260813
+Initialization finish time        : 1716076377671459
+Overall finish time               : 1716076512777387
+Total time with initialization    :        188516574
+Total time without initialization :        135105928
+Overall transpose time            :         39373114
+Overall transpose fraction        :          0.29142
+
+
+real	3m10.469s
+user	2m30.357s
+sys	0m16.747s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p2:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   2 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 8192
+iter_num = 8192
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+Step 1: 19145011
+FFt1DOnce: iter_num = 114688
+Step 2: 52125146
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+Step 3: 10601240
+Step 4: 43790479
+Transpose: iter_num = 0
+Transpose: iter_num = 67108864
+Step 5:  8975824
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0         134641085       38722075       0.28759
+
+                 TIMING INFORMATION
+Start time                        : 1716076522367846
+Initialization finish time        : 1716076576003432
+Overall finish time               : 1716076710644517
+Total time with initialization    :        188276671
+Total time without initialization :        134641085
+Overall transpose time            :         38722075
+Overall transpose fraction        :          0.28759
+
+
+real	3m10.233s
+user	2m30.250s
+sys	0m16.728s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p4:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   4 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 4096
+iter_num = 4096
+iter_num = 4096
+iter_num = 4096
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+FFt1DOnce: iter_num = 114688
+Step 1: 14481797
+Step 2: 25894055
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+Step 3:  4820820
+Step 4: 21737300
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+Step 5:  4447643
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          71399934       23750260       0.33264
+
+                 TIMING INFORMATION
+Start time                        : 1716076720253931
+Initialization finish time        : 1716076768945974
+Overall finish time               : 1716076840345908
+Total time with initialization    :        120091977
+Total time without initialization :         71399934
+Overall transpose time            :         23750260
+Overall transpose fraction        :          0.33264
+
+
+real	2m2.032s
+user	2m25.477s
+sys	0m29.475s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p4:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   4 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 4096
+iter_num = 4096
+iter_num = 4096
+iter_num = 4096
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+FFt1DOnce: iter_num = 114688
+Step 1: 14213294
+Step 2: 25913611
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+Step 3:  4900549
+Step 4: 21857957
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+Step 5:  4470629
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          71401389       23584472       0.33031
+
+                 TIMING INFORMATION
+Start time                        : 1716076849981739
+Initialization finish time        : 1716076897937977
+Overall finish time               : 1716076969339366
+Total time with initialization    :        119357627
+Total time without initialization :         71401389
+Overall transpose time            :         23584472
+Overall transpose fraction        :          0.33031
+
+
+real	2m1.256s
+user	2m25.674s
+sys	0m28.661s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p4:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   4 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 4096
+iter_num = 4096
+iter_num = 4096
+iter_num = 4096
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+FFt1DOnce: iter_num = 114688
+Step 1: 14222296
+Transpose: iter_num = 0
+Step 2: 26041675
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+Step 3:  4932887
+Step 4: 21754660
+Transpose: iter_num = 0
+Transpose: iter_num = 16777216
+Transpose: iter_num = 33554432
+Transpose: iter_num = 50331648
+Step 5:  4525006
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          71480999       23680189       0.33128
+
+                 TIMING INFORMATION
+Start time                        : 1716076978887453
+Initialization finish time        : 1716077027066554
+Overall finish time               : 1716077098547553
+Total time with initialization    :        119660100
+Total time without initialization :         71480999
+Overall transpose time            :         23680189
+Overall transpose fraction        :          0.33128
+
+
+real	2m1.551s
+user	2m25.237s
+sys	0m29.263s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p8:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   8 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+FFt1DOnce: iter_num = 114688
+Step 1: 15543055
+Step 2: 13272943
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 3:  2504467
+Step 4: 10940823
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 5:  2327677
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          44592227       20375199       0.45692
+
+                 TIMING INFORMATION
+Start time                        : 1716077108077821
+Initialization finish time        : 1716077153723556
+Overall finish time               : 1716077198315783
+Total time with initialization    :         90237962
+Total time without initialization :         44592227
+Overall transpose time            :         20375199
+Overall transpose fraction        :          0.45692
+
+
+real	1m32.129s
+user	2m25.420s
+sys	1m4.256s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p8:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   8 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 1: 13629622
+FFt1DOnce: iter_num = 114688
+Transpose: iter_num = 0
+Step 2: 13289345
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 3:  2581520
+Step 4: 10871381
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 5:  2312183
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          42727128       18523325       0.43353
+
+                 TIMING INFORMATION
+Start time                        : 1716077207892382
+Initialization finish time        : 1716077253764716
+Overall finish time               : 1716077296491844
+Total time with initialization    :         88599462
+Total time without initialization :         42727128
+Overall transpose time            :         18523325
+Overall transpose fraction        :          0.43353
+
+
+real	1m30.477s
+user	2m21.240s
+sys	1m1.025s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p8:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   8 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+iter_num = 2048
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+FFt1DOnce: iter_num = 114688
+Step 1: 13471369
+Transpose: iter_num = 0
+Step 2: 13192597
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 3:  2516868
+Step 4: 10944237
+Transpose: iter_num = 0
+Transpose: iter_num = 4194304
+Transpose: iter_num = 8388608
+Transpose: iter_num = 12582912
+Transpose: iter_num = 16777216
+Transpose: iter_num = 20971520
+Transpose: iter_num = 25165824
+Transpose: iter_num = 29360128
+Step 5:  2329060
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          42456163       18317297       0.43144
+
+                 TIMING INFORMATION
+Start time                        : 1716077306000034
+Initialization finish time        : 1716077352123842
+Overall finish time               : 1716077394580005
+Total time with initialization    :         88579971
+Total time without initialization :         42456163
+Overall transpose time            :         18317297
+Overall transpose fraction        :          0.43144
+
+
+real	1m30.479s
+user	2m20.973s
+sys	1m1.110s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p16:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   16 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+Transpose: iter_num = 0
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+FFt1DOnce: iter_num = 114688
+Step 1:  6934968
+Step 2:  7445868
+Transpose: iter_num = 0
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+Step 3:  1621690
+Step 4:  5560557
+Transpose: iter_num = 0
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+Step 5:  1489259
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          23064226       10045917       0.43556
+
+                 TIMING INFORMATION
+Start time                        : 1716077404100641
+Initialization finish time        : 1716077448851949
+Overall finish time               : 1716077471916175
+Total time with initialization    :         67815534
+Total time without initialization :         23064226
+Overall transpose time            :         10045917
+Overall transpose fraction        :          0.43556
+
+
+real	1m9.671s
+user	2m32.336s
+sys	0m58.478s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p16:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   16 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+Transpose: iter_num = 0
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+FFt1DOnce: iter_num = 114688
+Transpose: iter_num = 15728640
+Step 1:  6938231
+Transpose: iter_num = 0
+Step 2:  7292694
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+Step 3:  1697723
+Transpose: iter_num = 0
+Step 4:  5545252
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+Step 5:  1459668
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          22969346       10095622       0.43953
+
+                 TIMING INFORMATION
+Start time                        : 1716077478358396
+Initialization finish time        : 1716077523042770
+Overall finish time               : 1716077546012116
+Total time with initialization    :         67653720
+Total time without initialization :         22969346
+Overall transpose time            :         10095622
+Overall transpose fraction        :          0.43953
+
+
+real	1m9.508s
+user	2m33.839s
+sys	0m56.544s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.fft set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p16:
+
+FFT with Blocking Transpose
+   268435456 Complex Doubles
+   16 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+iter_num = 1024
+Transpose: iter_num = 0
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+FFt1DOnce: iter_num = 114688
+Transpose: iter_num = 15728640
+Step 1:  6848986
+Transpose: iter_num = 0
+Step 2:  7094969
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+Step 3:  1590331
+Step 4:  5886192
+Transpose: iter_num = 0
+Transpose: iter_num = 1048576
+Transpose: iter_num = 2097152
+Transpose: iter_num = 3145728
+Transpose: iter_num = 4194304
+Transpose: iter_num = 5242880
+Transpose: iter_num = 6291456
+Transpose: iter_num = 7340032
+Transpose: iter_num = 8388608
+Transpose: iter_num = 9437184
+Transpose: iter_num = 10485760
+Transpose: iter_num = 11534336
+Transpose: iter_num = 12582912
+Transpose: iter_num = 13631488
+Transpose: iter_num = 14680064
+Transpose: iter_num = 15728640
+Step 5:  1457677
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0          22920018        9896994       0.43181
+
+                 TIMING INFORMATION
+Start time                        : 1716077552508770
+Initialization finish time        : 1716077597404053
+Overall finish time               : 1716077620324071
+Total time with initialization    :         67815301
+Total time without initialization :         22920018
+Overall transpose time            :          9896994
+Overall transpose fraction        :          0.43181
+
+
+real	1m9.677s
+user	2m41.399s
+sys	0m47.374s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p1 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 1
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0        1055282031          846819925             0.802
+
+                       TIMING INFORMATION
+Start time                        : 1716077626822811
+Initialization finish time        : 1716077736576689
+Overall finish time               : 1716078791858726
+Total time with initialization    :       1165035915
+Total time without initialization :       1055282037
+    (excludes first timestep)
+
+
+real	19m25.633s
+user	9m40.781s
+sys	0m2.514s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p1 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 1
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0        1042215093          834513718             0.801
+
+                       TIMING INFORMATION
+Start time                        : 1716078800159921
+Initialization finish time        : 1716078910323691
+Overall finish time               : 1716079952538815
+Total time with initialization    :       1152378894
+Total time without initialization :       1042215124
+    (excludes first timestep)
+
+
+real	19m12.913s
+user	9m34.219s
+sys	0m2.546s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p1 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 1
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0        1037464247          830645111             0.801
+
+                       TIMING INFORMATION
+Start time                        : 1716079960759273
+Initialization finish time        : 1716080069077073
+Overall finish time               : 1716081106541330
+Total time with initialization    :       1145782057
+Total time without initialization :       1037464257
+    (excludes first timestep)
+
+
+real	19m6.477s
+user	9m31.166s
+sys	0m2.594s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p2 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         529987558          425963757             0.804
+
+                       TIMING INFORMATION
+Start time                        : 1716081114946718
+Initialization finish time        : 1716081170610494
+Overall finish time               : 1716081700598066
+Total time with initialization    :        585651348
+Total time without initialization :        529987572
+    (excludes first timestep)
+
+
+real	9m46.191s
+user	9m38.322s
+sys	0m2.746s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p2 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         529154527          425094497             0.803
+
+                       TIMING INFORMATION
+Start time                        : 1716081708786349
+Initialization finish time        : 1716081764131342
+Overall finish time               : 1716082293303360
+Total time with initialization    :        584517011
+Total time without initialization :        529172018
+    (excludes first timestep)
+
+
+real	9m45.047s
+user	9m36.891s
+sys	0m2.783s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p2 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         531127348          427333999             0.805
+
+                       TIMING INFORMATION
+Start time                        : 1716082301473007
+Initialization finish time        : 1716082357182370
+Overall finish time               : 1716082888342427
+Total time with initialization    :        586869420
+Total time without initialization :        531160057
+    (excludes first timestep)
+
+
+real	9m47.394s
+user	9m39.823s
+sys	0m2.831s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p4 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 4
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         270935069          216320658             0.798
+
+                       TIMING INFORMATION
+Start time                        : 1716082896568146
+Initialization finish time        : 1716082925116014
+Overall finish time               : 1716083196062452
+Total time with initialization    :        299494306
+Total time without initialization :        270946438
+    (excludes first timestep)
+
+
+real	5m0.029s
+user	9m45.030s
+sys	0m3.265s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p4 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 4
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         270888054          216201653             0.798
+
+                       TIMING INFORMATION
+Start time                        : 1716083204256999
+Initialization finish time        : 1716083232822533
+Overall finish time               : 1716083503727057
+Total time with initialization    :        299470058
+Total time without initialization :        270904524
+    (excludes first timestep)
+
+
+real	5m0.161s
+user	9m44.340s
+sys	0m3.440s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p4 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 4
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         270742023          216106476             0.798
+
+                       TIMING INFORMATION
+Start time                        : 1716083512064866
+Initialization finish time        : 1716083540639084
+Overall finish time               : 1716083811391001
+Total time with initialization    :        299326135
+Total time without initialization :        270751917
+    (excludes first timestep)
+
+
+real	4m59.869s
+user	9m44.447s
+sys	0m3.446s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p8 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         147374306          116622568             0.791
+
+                       TIMING INFORMATION
+Start time                        : 1716083819575747
+Initialization finish time        : 1716083835158996
+Overall finish time               : 1716083982538997
+Total time with initialization    :        162963250
+Total time without initialization :        147380001
+    (excludes first timestep)
+
+
+real	2m43.510s
+user	10m27.510s
+sys	0m4.602s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p8 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         147436729          116591710             0.791
+
+                       TIMING INFORMATION
+Start time                        : 1716083990721533
+Initialization finish time        : 1716084006430975
+Overall finish time               : 1716084153879168
+Total time with initialization    :        163157635
+Total time without initialization :        147448193
+    (excludes first timestep)
+
+
+real	2m43.696s
+user	10m27.892s
+sys	0m4.475s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p8 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         146709907          115965808             0.790
+
+                       TIMING INFORMATION
+Start time                        : 1716084162064719
+Initialization finish time        : 1716084177742982
+Overall finish time               : 1716084324463138
+Total time with initialization    :        162398419
+Total time without initialization :        146720156
+    (excludes first timestep)
+
+
+real	2m42.949s
+user	10m25.313s
+sys	0m4.542s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p16 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 16
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         114140710           90868558             0.796
+
+                       TIMING INFORMATION
+Start time                        : 1716084332624881
+Initialization finish time        : 1716084342920090
+Overall finish time               : 1716084457088122
+Total time with initialization    :        124463241
+Total time without initialization :        114168032
+    (excludes first timestep)
+
+
+real	2m4.989s
+user	12m17.840s
+sys	0m5.335s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p16 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 16
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         121279283           96567479             0.796
+
+                       TIMING INFORMATION
+Start time                        : 1716084462289587
+Initialization finish time        : 1716084475254992
+Overall finish time               : 1716084596575319
+Total time with initialization    :        134285732
+Total time without initialization :        121320327
+    (excludes first timestep)
+
+
+real	2m14.816s
+user	11m46.489s
+sys	0m6.917s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_cp set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p16 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 16
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         101335671           79010081             0.780
+
+                       TIMING INFORMATION
+Start time                        : 1716084601763643
+Initialization finish time        : 1716084612800564
+Overall finish time               : 1716084714143138
+Total time with initialization    :        112379495
+Total time without initialization :        101342574
+    (excludes first timestep)
+
+
+real	1m52.910s
+user	12m59.864s
+sys	0m5.957s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p1 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	2m17.941s
+user	1m8.475s
+sys	0m0.379s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p1 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	2m16.550s
+user	1m7.729s
+sys	0m0.459s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p1 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	2m17.276s
+user	1m8.096s
+sys	0m0.466s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p2 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	1m10.951s
+user	1m7.588s
+sys	0m0.455s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p2 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	1m10.640s
+user	1m7.196s
+sys	0m0.436s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p2 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	1m10.680s
+user	1m7.101s
+sys	0m0.506s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p4 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m29.582s
+user	0m55.419s
+sys	0m0.653s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p4 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m31.264s
+user	0m58.852s
+sys	0m0.594s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p4 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m33.329s
+user	1m2.881s
+sys	0m0.622s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p8 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m32.722s
+user	2m1.425s
+sys	0m0.618s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p8 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m32.864s
+user	1m59.924s
+sys	0m0.599s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p8 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m33.184s
+user	2m0.794s
+sys	0m0.590s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p16 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m26.680s
+user	3m0.322s
+sys	0m0.882s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p16 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m26.616s
+user	2m58.667s
+sys	0m1.043s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p16 -e1e-07 -r10000 -t14400:
+Segmentation fault (core dumped)
+
+real	0m26.888s
+user	3m0.505s
+sys	0m0.959s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       65382911        20845899        44536986
+
+                 TIMING INFORMATION
+Start time                        : 1716085721495894
+Initialization finish time        : 1716085865813705
+Overall finish time               : 1716085931196616
+Total time with initialization    :        209700722
+Total time without initialization :         65382911
+
+
+real	3m30.389s
+user	1m41.030s
+sys	0m4.261s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       66373946        21553784        44820119
+
+                 TIMING INFORMATION
+Start time                        : 1716085939462799
+Initialization finish time        : 1716086083002564
+Overall finish time               : 1716086149376510
+Total time with initialization    :        209913711
+Total time without initialization :         66373946
+
+
+real	3m30.612s
+user	1m42.462s
+sys	0m3.007s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       66157265        21493453        44663791
+
+                 TIMING INFORMATION
+Start time                        : 1716086157672304
+Initialization finish time        : 1716086300844839
+Overall finish time               : 1716086367002104
+Total time with initialization    :        209329800
+Total time without initialization :         66157265
+
+
+real	3m30.016s
+user	1m42.290s
+sys	0m2.875s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       33631968        10812313        22653911
+
+                 TIMING INFORMATION
+Start time                        : 1716086375353958
+Initialization finish time        : 1716086446109601
+Overall finish time               : 1716086479741569
+Total time with initialization    :        104387611
+Total time without initialization :         33631968
+
+
+real	1m45.087s
+user	1m41.463s
+sys	0m3.169s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       32961961        10326484        22550054
+
+                 TIMING INFORMATION
+Start time                        : 1716086488057834
+Initialization finish time        : 1716086558974515
+Overall finish time               : 1716086591936476
+Total time with initialization    :        103878642
+Total time without initialization :         32961961
+
+
+real	1m44.575s
+user	1m40.812s
+sys	0m3.314s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       33847037        11109215        22733998
+
+                 TIMING INFORMATION
+Start time                        : 1716086600295138
+Initialization finish time        : 1716086671062428
+Overall finish time               : 1716086704909465
+Total time with initialization    :        104614327
+Total time without initialization :         33847037
+
+
+real	1m45.316s
+user	1m41.567s
+sys	0m3.156s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       17374992         5752902        11567835
+
+                 TIMING INFORMATION
+Start time                        : 1716086713279811
+Initialization finish time        : 1716086748550455
+Overall finish time               : 1716086765925447
+Total time with initialization    :         52645636
+Total time without initialization :         17374992
+
+
+real	0m53.336s
+user	1m41.508s
+sys	0m3.309s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       17139088         5541598        11427997
+
+                 TIMING INFORMATION
+Start time                        : 1716086774233608
+Initialization finish time        : 1716086809501377
+Overall finish time               : 1716086826640465
+Total time with initialization    :         52406857
+Total time without initialization :         17139088
+
+
+real	0m53.111s
+user	1m41.222s
+sys	0m3.230s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       17504970         5885303        11568407
+
+                 TIMING INFORMATION
+Start time                        : 1716086834937537
+Initialization finish time        : 1716086870221402
+Overall finish time               : 1716086887726372
+Total time with initialization    :         52788835
+Total time without initialization :         17504970
+
+
+real	0m53.486s
+user	1m41.810s
+sys	0m3.081s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        8999918         2985353         5982454
+
+                 TIMING INFORMATION
+Start time                        : 1716086896007892
+Initialization finish time        : 1716086913653403
+Overall finish time               : 1716086922653321
+Total time with initialization    :         26645429
+Total time without initialization :          8999918
+
+
+real	0m27.356s
+user	1m42.768s
+sys	0m3.291s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        9211983         2996114         6150790
+
+                 TIMING INFORMATION
+Start time                        : 1716086930960472
+Initialization finish time        : 1716086948597368
+Overall finish time               : 1716086957809351
+Total time with initialization    :         26848879
+Total time without initialization :          9211983
+
+
+real	0m27.559s
+user	1m43.101s
+sys	0m3.322s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        9032028         2945844         6040511
+
+                 TIMING INFORMATION
+Start time                        : 1716086966169644
+Initialization finish time        : 1716086983838331
+Overall finish time               : 1716086992870359
+Total time with initialization    :         26700715
+Total time without initialization :          9032028
+
+
+real	0m27.398s
+user	1m42.679s
+sys	0m3.294s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5255008         1581885         3616526
+
+                 TIMING INFORMATION
+Start time                        : 1716087001199677
+Initialization finish time        : 1716087010222343
+Overall finish time               : 1716087015477351
+Total time with initialization    :         14277674
+Total time without initialization :          5255008
+
+
+real	0m14.968s
+user	1m49.101s
+sys	0m3.711s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5183987         1584370         3576451
+
+                 TIMING INFORMATION
+Start time                        : 1716087020761191
+Initialization finish time        : 1716087029837381
+Overall finish time               : 1716087035021368
+Total time with initialization    :         14260177
+Total time without initialization :          5183987
+
+
+real	0m14.974s
+user	1m48.541s
+sys	0m3.867s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5191964         1575004         3502552
+
+                 TIMING INFORMATION
+Start time                        : 1716087040310925
+Initialization finish time        : 1716087049334353
+Overall finish time               : 1716087054526317
+Total time with initialization    :         14215392
+Total time without initialization :          5191964
+
+
+real	0m14.916s
+user	1m48.820s
+sys	0m3.718s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.

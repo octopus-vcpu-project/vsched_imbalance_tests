@@ -1,0 +1,1261 @@
+Set latency to 4000
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       39703877        13093398        26610453
+
+                 TIMING INFORMATION
+Start time                        : 1716087924454233
+Initialization finish time        : 1716088011481470
+Overall finish time               : 1716088051185347
+Total time with initialization    :        126731114
+Total time without initialization :         39703877
+
+
+real	2m7.139s
+user	1m51.579s
+sys	0m4.154s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       41349724        13555224        27794468
+
+                 TIMING INFORMATION
+Start time                        : 1716088059148471
+Initialization finish time        : 1716088145446494
+Overall finish time               : 1716088186796218
+Total time with initialization    :        127647747
+Total time without initialization :         41349724
+
+
+real	2m8.152s
+user	1m52.233s
+sys	0m3.759s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       39998172        13274788        26723361
+
+                 TIMING INFORMATION
+Start time                        : 1716088194854754
+Initialization finish time        : 1716088282110812
+Overall finish time               : 1716088322108984
+Total time with initialization    :        127254230
+Total time without initialization :         39998172
+
+
+real	2m7.730s
+user	1m52.943s
+sys	0m3.197s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       20937112         7099362        13837544
+
+                 TIMING INFORMATION
+Start time                        : 1716088330179264
+Initialization finish time        : 1716088371258614
+Overall finish time               : 1716088392195726
+Total time with initialization    :         62016462
+Total time without initialization :         20937112
+
+
+real	1m2.501s
+user	1m49.748s
+sys	0m3.391s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       19846637         6666396        13155687
+
+                 TIMING INFORMATION
+Start time                        : 1716088400246166
+Initialization finish time        : 1716088442615014
+Overall finish time               : 1716088462461651
+Total time with initialization    :         62215485
+Total time without initialization :         19846637
+
+
+real	1m2.680s
+user	1m50.122s
+sys	0m3.401s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       18910383         6052117        12857296
+
+                 TIMING INFORMATION
+Start time                        : 1716088470526037
+Initialization finish time        : 1716088513398117
+Overall finish time               : 1716088532308500
+Total time with initialization    :         61782463
+Total time without initialization :         18910383
+
+
+real	1m2.256s
+user	1m49.269s
+sys	0m3.574s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       11137071         3622920         7194217
+
+                 TIMING INFORMATION
+Start time                        : 1716088540368159
+Initialization finish time        : 1716088561620711
+Overall finish time               : 1716088572757782
+Total time with initialization    :         32389623
+Total time without initialization :         11137071
+
+
+real	0m32.929s
+user	1m49.388s
+sys	0m3.330s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       10993404         3637569         7339808
+
+                 TIMING INFORMATION
+Start time                        : 1716088580895316
+Initialization finish time        : 1716088602478407
+Overall finish time               : 1716088613471811
+Total time with initialization    :         32576495
+Total time without initialization :         10993404
+
+
+real	0m33.146s
+user	1m50.573s
+sys	0m3.466s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       11042056         3721695         6986831
+
+                 TIMING INFORMATION
+Start time                        : 1716088621663426
+Initialization finish time        : 1716088643853136
+Overall finish time               : 1716088654895192
+Total time with initialization    :         33231766
+Total time without initialization :         11042056
+
+
+real	0m33.769s
+user	1m49.697s
+sys	0m4.779s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        6821261         2233888         4467919
+
+                 TIMING INFORMATION
+Start time                        : 1716088663057798
+Initialization finish time        : 1716088676264085
+Overall finish time               : 1716088683085346
+Total time with initialization    :         20027548
+Total time without initialization :          6821261
+
+
+real	0m20.610s
+user	1m57.975s
+sys	0m3.673s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        6696152         2190003         4383266
+
+                 TIMING INFORMATION
+Start time                        : 1716088691223455
+Initialization finish time        : 1716088704398305
+Overall finish time               : 1716088711094457
+Total time with initialization    :         19871002
+Total time without initialization :          6696152
+
+
+real	0m20.384s
+user	1m57.308s
+sys	0m3.654s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        6807857         2233928         4426543
+
+                 TIMING INFORMATION
+Start time                        : 1716088719161576
+Initialization finish time        : 1716088732431620
+Overall finish time               : 1716088739239477
+Total time with initialization    :         20077901
+Total time without initialization :          6807857
+
+
+real	0m20.558s
+user	1m57.867s
+sys	0m3.626s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5063018         1549995         3445469
+
+                 TIMING INFORMATION
+Start time                        : 1716088747249539
+Initialization finish time        : 1716088756270613
+Overall finish time               : 1716088761333631
+Total time with initialization    :         14084092
+Total time without initialization :          5063018
+
+
+real	0m14.614s
+user	1m48.173s
+sys	0m3.743s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5042709         1567488         3378425
+
+                 TIMING INFORMATION
+Start time                        : 1716088766415195
+Initialization finish time        : 1716088775421586
+Overall finish time               : 1716088780464295
+Total time with initialization    :         14049100
+Total time without initialization :          5042709
+
+
+real	0m14.529s
+user	1m48.078s
+sys	0m3.656s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5058656         1557641         3467556
+
+                 TIMING INFORMATION
+Start time                        : 1716088785567699
+Initialization finish time        : 1716088794557615
+Overall finish time               : 1716088799616271
+Total time with initialization    :         14048572
+Total time without initialization :          5058656
+
+
+real	0m14.536s
+user	1m47.954s
+sys	0m3.795s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       64999939        21134536        43865370
+
+                 TIMING INFORMATION
+Start time                        : 1716088805017815
+Initialization finish time        : 1716088948243002
+Overall finish time               : 1716089013242941
+Total time with initialization    :        208225126
+Total time without initialization :         64999939
+
+
+real	3m28.917s
+user	1m41.721s
+sys	0m2.881s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       64582293        20795861        43786407
+
+                 TIMING INFORMATION
+Start time                        : 1716089021557185
+Initialization finish time        : 1716089164803773
+Overall finish time               : 1716089229386066
+Total time with initialization    :        207828881
+Total time without initialization :         64582293
+
+
+real	3m28.524s
+user	1m41.299s
+sys	0m3.142s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p1 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     1 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       65222669        20962177        44260448
+
+                 TIMING INFORMATION
+Start time                        : 1716089237677821
+Initialization finish time        : 1716089380689145
+Overall finish time               : 1716089445911814
+Total time with initialization    :        208233993
+Total time without initialization :         65222669
+
+
+real	3m28.923s
+user	1m41.701s
+sys	0m2.857s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       33618951        11192911        22421012
+
+                 TIMING INFORMATION
+Start time                        : 1716089454260825
+Initialization finish time        : 1716089525219143
+Overall finish time               : 1716089558838094
+Total time with initialization    :        104577269
+Total time without initialization :         33618951
+
+
+real	1m45.276s
+user	1m41.192s
+sys	0m3.275s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       32798988        10614398        22057896
+
+                 TIMING INFORMATION
+Start time                        : 1716089567124649
+Initialization finish time        : 1716089637837016
+Overall finish time               : 1716089670636004
+Total time with initialization    :        103511355
+Total time without initialization :         32798988
+
+
+real	1m44.213s
+user	1m40.742s
+sys	0m2.991s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       33383027        10814806        22563672
+
+                 TIMING INFORMATION
+Start time                        : 1716089678943016
+Initialization finish time        : 1716089749830036
+Overall finish time               : 1716089783213063
+Total time with initialization    :        104270047
+Total time without initialization :         33383027
+
+
+real	1m44.958s
+user	1m41.327s
+sys	0m3.099s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       17006974         5569838        11353443
+
+                 TIMING INFORMATION
+Start time                        : 1716089791527354
+Initialization finish time        : 1716089826820147
+Overall finish time               : 1716089843827121
+Total time with initialization    :         52299767
+Total time without initialization :         17006974
+
+
+real	0m52.998s
+user	1m40.394s
+sys	0m4.001s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       16593058         5253484        11244892
+
+                 TIMING INFORMATION
+Start time                        : 1716089852095399
+Initialization finish time        : 1716089887307172
+Overall finish time               : 1716089903900230
+Total time with initialization    :         51804831
+Total time without initialization :         16593058
+
+
+real	0m52.502s
+user	1m40.576s
+sys	0m3.132s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p4 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     4 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       16773101         5428708        11340158
+
+                 TIMING INFORMATION
+Start time                        : 1716089912171748
+Initialization finish time        : 1716089947567292
+Overall finish time               : 1716089964340393
+Total time with initialization    :         52168645
+Total time without initialization :         16773101
+
+
+real	0m52.861s
+user	1m41.010s
+sys	0m3.071s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        9015056         3051801         5876669
+
+                 TIMING INFORMATION
+Start time                        : 1716089972653734
+Initialization finish time        : 1716089990308438
+Overall finish time               : 1716089999323494
+Total time with initialization    :         26669760
+Total time without initialization :          9015056
+
+
+real	0m27.376s
+user	1m42.333s
+sys	0m3.249s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        9137993         3064382         5945662
+
+                 TIMING INFORMATION
+Start time                        : 1716090007662783
+Initialization finish time        : 1716090025299570
+Overall finish time               : 1716090034437563
+Total time with initialization    :         26774780
+Total time without initialization :          9137993
+
+
+real	0m27.464s
+user	1m42.770s
+sys	0m3.390s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p8 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     8 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        8954062         3011507         5780701
+
+                 TIMING INFORMATION
+Start time                        : 1716090042695729
+Initialization finish time        : 1716090060339661
+Overall finish time               : 1716090069293723
+Total time with initialization    :         26597994
+Total time without initialization :          8954062
+
+
+real	0m27.289s
+user	1m42.061s
+sys	0m3.138s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5135990         1581781         3511978
+
+                 TIMING INFORMATION
+Start time                        : 1716090077570887
+Initialization finish time        : 1716090086556713
+Overall finish time               : 1716090091692703
+Total time with initialization    :         14121816
+Total time without initialization :          5135990
+
+
+real	0m14.811s
+user	1m48.176s
+sys	0m3.546s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5139033         1591247         3517317
+
+                 TIMING INFORMATION
+Start time                        : 1716090096940241
+Initialization finish time        : 1716090105939835
+Overall finish time               : 1716090111078868
+Total time with initialization    :         14138627
+Total time without initialization :          5139033
+
+
+real	0m14.845s
+user	1m48.040s
+sys	0m3.652s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radix set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radix
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p16 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     16 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        5104938         1567776         3474623
+
+                 TIMING INFORMATION
+Start time                        : 1716090116359385
+Initialization finish time        : 1716090125579865
+Overall finish time               : 1716090130684803
+Total time with initialization    :         14325418
+Total time without initialization :          5104938
+
+
+real	0m14.998s
+user	1m49.233s
+sys	0m3.764s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.

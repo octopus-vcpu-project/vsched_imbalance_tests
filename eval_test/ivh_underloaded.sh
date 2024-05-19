@@ -173,11 +173,11 @@ runParsecTests(){
  #   runParsecTest "swaptions" 
  #   runParsecTest "x624"
  #   runParsecTest "splash2x.barnes"
-    runParsecTest "splash2x.fft"
+ #   runParsecTest "splash2x.fft"
   #  runParsecTest "splash2x.lu_cb"
  #   runParsecTest "splash2x.lu_ncb"
-    runParsecTest "splash2x.ocean_cp"
-    runParsecTest "splash2x.ocean_ncp"
+  #  runParsecTest "splash2x.ocean_cp"
+ #   runParsecTest "splash2x.ocean_ncp"
   #  runParsecTest "splash2x.radiosity"
     runParsecTest "splash2x.radix"
    # runParsecTest "splash2x.raytrace"
@@ -198,7 +198,7 @@ activate_vprobers
 sleep 10
 #runLatencyTests
 #runPhoronixTests
-#runParsecTests
+runParsecTests
 ssh ubuntu@$prob_vm "sudo killall ivh"
 runParsecTests
 

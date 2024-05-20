@@ -1,0 +1,4343 @@
+Set latency to 4000
+Running Parsec splash2x.radiosity set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 1:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716132206853436
+	Overall end time	    1716132536900800
+	Total time with initialization	           330047364
+	Total time without initialization	           330047359
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31413 (5372.729492)
+	    100          93 (2034.722290)
+	    99          97 (1862.565552)
+	    98          132 (1332.386841)
+	    97          84 (3198.575195)
+	    96          103 (4527.980469)
+	    95          102 (1264.740356)
+	    94          107 (1107.312500)
+	    93          97 (1334.129272)
+	    92          137 (2588.743408)
+	    91          115 (4265.277832)
+	    90          120 (4675.919434)
+	    89          115 (4533.153809)
+	    88          97 (2029.180786)
+	    87          87 (1545.645874)
+	    86          116 (1866.911987)
+	    85          145 (3837.871094)
+	    84          89 (1768.811768)
+	    83          107 (1571.999512)
+	    82          129 (3823.444092)
+	    81          79 (4201.820801)
+	    80          146 (5662.245117)
+	    79          95 (4983.201172)
+	    78          117 (7343.054688)
+	    77          126 (1515.390747)
+	    76          89 (2969.563965)
+	    75          95 (2771.565674)
+	    74          105 (1260.779907)
+	    73          104 (1207.778442)
+	    72          85 (5185.995605)
+	    71          147 (3641.798584)
+	    70          128 (1328.452515)
+	    69          144 (1192.902344)
+	    68          128 (3762.054443)
+	    67          100 (4612.330566)
+	    66          126 (3916.951904)
+	    65          80 (1314.085205)
+	    64          102 (1612.337158)
+	    63          161 (1106.248901)
+	    62          145 (1142.967041)
+	    61          115 (10101.070312)
+	    60          129 (3679.479248)
+	    59          151 (3534.216553)
+	    58          136 (997.245422)
+	    57          116 (1306.291626)
+	    56          131 (3712.007568)
+	    55          141 (3588.559082)
+	    54          129 (9178.874023)
+	    53          135 (3800.448242)
+	    52          130 (9350.544922)
+	    51          150 (1192.038696)
+	    50          148 (3841.310303)
+	    49          159 (3586.439453)
+	    48          151 (8292.603516)
+	    47          142 (3637.617188)
+	    46          133 (1344.751343)
+	    45          95 (5837.244629)
+	    44          117 (5072.976562)
+	    43          128 (1177.553223)
+	    42          90 (8698.473633)
+	    41          102 (8013.739746)
+	    40          124 (12511.450195)
+	    39          110 (1489.097412)
+	    38          149 (8097.045898)
+	    37          104 (4910.658691)
+	    36          165 (1317.484131)
+	    35          121 (4135.119629)
+	    34          168 (3235.211426)
+	    33          143 (5933.362793)
+	    32          123 (7478.608398)
+	    31          146 (6398.843262)
+	    30          133 (6568.726562)
+	    29          88 (1108.887817)
+	    28          209 (1290.908081)
+	    27          105 (4343.910645)
+	    26          146 (1416.285156)
+	    25          116 (10374.742188)
+	    24          170 (1086.280273)
+	    23          258 (3838.314941)
+	    22          1255 (1512.670776)
+	    21          57 (7347.472168)
+	    20          80 (9757.525391)
+	    19          109 (11117.867188)
+	    18          57 (1120.903931)
+	    17          91 (9150.790039)
+	    16          505 (2808.254150)
+	    15          19 (806.278687)
+	    14          47 (8340.996094)
+	    13          26 (42691.414062)
+	    12          31 (15103.320312)
+	    11          30 (1398.629761)
+	    10          23 (1586.710938)
+	    9          17 (1111.039795)
+	    8          28 (962.401062)
+	    7          33 (830.647888)
+	    6          24 (879.637634)
+	    5          16 (522.946350)
+	    4          22 (1012.338928)
+	    3          18 (864.744080)
+	    2          1 (522.946411)
+	    1          4 (522.946411)
+	    0          30 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    1
+	Number of task queues:   1
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   10 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43616
+	Total number of interactions: 14748320
+	          completely visible: 8079021
+	        completely invisible: 1666040
+	           partially visible: 5003259
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9313460
+	       Common for 3 siblings: 2780160
+	       Common for 2 siblings: 1157042
+	       Common for no sibling: 952853
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  27722.4
+	Avg. interactions per element:338.1
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.62%
+
+real	7m34.069s
+user	6m54.648s
+sys	0m1.410s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716132668000877
+	Overall end time	    1716132861361132
+	Total time with initialization	           193360255
+	Total time without initialization	           193360165
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31852 (5311.770508)
+	    100          76 (2443.733643)
+	    99          94 (5650.041992)
+	    98          100 (1214.232910)
+	    97          100 (1504.961670)
+	    96          112 (3605.465088)
+	    95          112 (1653.139282)
+	    94          67 (1250.554077)
+	    93          73 (6750.828125)
+	    92          111 (4775.560059)
+	    91          91 (1448.427246)
+	    90          105 (3684.638916)
+	    89          153 (1837.409668)
+	    88          102 (1629.485962)
+	    87          108 (1251.897339)
+	    86          106 (1502.138306)
+	    85          96 (4822.918945)
+	    84          125 (2056.902588)
+	    83          87 (2392.603027)
+	    82          100 (8419.994141)
+	    81          124 (2342.231689)
+	    80          119 (3304.216309)
+	    79          119 (2365.841309)
+	    78          112 (1431.801392)
+	    77          121 (4337.316406)
+	    76          117 (6526.458008)
+	    75          106 (5861.664551)
+	    74          97 (5043.545898)
+	    73          140 (1315.124512)
+	    72          117 (4095.232910)
+	    71          143 (1221.704224)
+	    70          101 (1190.543823)
+	    69          103 (1290.308105)
+	    68          93 (4724.782715)
+	    67          106 (1397.650635)
+	    66          100 (4541.963379)
+	    65          98 (4498.520508)
+	    64          139 (1023.698853)
+	    63          125 (1226.593994)
+	    62          125 (1114.672974)
+	    61          106 (4212.303223)
+	    60          131 (1300.976562)
+	    59          127 (4177.811035)
+	    58          131 (3730.762451)
+	    57          151 (3576.325439)
+	    56          130 (3891.936279)
+	    55          145 (6052.101562)
+	    54          133 (6305.664062)
+	    53          148 (3290.255615)
+	    52          155 (9877.982422)
+	    51          165 (3354.104248)
+	    50          124 (1817.755371)
+	    49          127 (4271.504395)
+	    48          142 (8576.875000)
+	    47          96 (4858.606445)
+	    46          139 (1380.807373)
+	    45          115 (4274.807617)
+	    44          87 (6574.681641)
+	    43          117 (7113.125000)
+	    42          106 (4610.019043)
+	    41          125 (7064.900391)
+	    40          124 (9511.534180)
+	    39          94 (9278.507812)
+	    38          103 (7957.976562)
+	    37          97 (4892.118164)
+	    36          98 (5606.058105)
+	    35          173 (3218.664307)
+	    34          176 (3009.804443)
+	    33          114 (1050.998535)
+	    32          127 (1561.876953)
+	    31          148 (1431.309692)
+	    30          96 (4726.269043)
+	    29          105 (14491.408203)
+	    28          173 (1232.784302)
+	    27          104 (4580.620117)
+	    26          169 (3696.762207)
+	    25          93 (5019.937988)
+	    24          142 (6113.457031)
+	    23          209 (4475.963379)
+	    22          1255 (1506.021362)
+	    21          50 (15308.738281)
+	    20          79 (5217.382812)
+	    19          117 (4342.254883)
+	    18          75 (5831.108887)
+	    17          103 (4662.150879)
+	    16          512 (3451.822754)
+	    15          26 (14505.272461)
+	    14          15 (48538.082031)
+	    13          31 (13321.428711)
+	    12          20 (40951.917969)
+	    11          28 (780.558228)
+	    10          20 (1121.909424)
+	    9          16 (1684.201050)
+	    8          24 (907.469238)
+	    7          36 (843.382324)
+	    6          28 (608.954529)
+	    5          4 (522.946411)
+	    4          25 (892.088379)
+	    3          8 (907.468811)
+	    2          9 (864.744080)
+	    1          12 (522.946350)
+	    0          27 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15833643
+	          completely visible: 8645301
+	        completely invisible: 1818152
+	           partially visible: 5370190
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10034712
+	       Common for 3 siblings: 2983164
+	       Common for 2 siblings: 1252176
+	       Common for no sibling: 1013283
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29762.5
+	Avg. interactions per element:362.8
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	5m39.301s
+user	8m7.786s
+sys	0m1.116s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716133014925949
+	Overall end time	    1716133202304960
+	Total time with initialization	           187379011
+	Total time without initialization	           187378907
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31729 (5330.032715)
+	    100          77 (2426.709961)
+	    99          102 (4457.320312)
+	    98          125 (1828.505005)
+	    97          106 (1473.046387)
+	    96          123 (2734.372314)
+	    95          103 (2369.566406)
+	    94          67 (1376.155029)
+	    93          83 (1905.163818)
+	    92          132 (6753.098145)
+	    91          86 (1576.701172)
+	    90          101 (3660.787842)
+	    89          171 (1706.747437)
+	    88          91 (1755.404541)
+	    87          129 (1332.415894)
+	    86          99 (1516.060303)
+	    85          111 (4304.967773)
+	    84          110 (2139.742432)
+	    83          85 (2412.968262)
+	    82          93 (8682.029297)
+	    81          108 (3464.481201)
+	    80          125 (3206.290039)
+	    79          102 (1797.422363)
+	    78          123 (1364.961304)
+	    77          133 (4038.849121)
+	    76          119 (6469.719727)
+	    75          106 (2513.660156)
+	    74          120 (7112.783691)
+	    73          127 (1364.382935)
+	    72          112 (4240.145020)
+	    71          164 (1253.022095)
+	    70          99 (1122.321533)
+	    69          113 (1246.544434)
+	    68          96 (1064.273438)
+	    67          99 (8237.074219)
+	    66          106 (1077.142700)
+	    65          82 (1122.463745)
+	    64          124 (1106.921143)
+	    63          128 (1100.777100)
+	    62          133 (1104.175293)
+	    61          98 (4520.612793)
+	    60          134 (1325.326172)
+	    59          138 (3867.310791)
+	    58          137 (3607.821045)
+	    57          166 (3317.111816)
+	    56          133 (3840.878174)
+	    55          137 (8558.457031)
+	    54          138 (6122.563477)
+	    53          154 (3346.068848)
+	    52          166 (7268.601074)
+	    51          153 (5787.303711)
+	    50          127 (1714.625244)
+	    49          124 (4348.296387)
+	    48          136 (6409.726074)
+	    47          108 (7629.184570)
+	    46          139 (1376.684326)
+	    45          104 (1372.785400)
+	    44          82 (11042.945312)
+	    43          114 (7327.418457)
+	    42          106 (1384.343506)
+	    41          129 (9502.598633)
+	    40          127 (9498.130859)
+	    39          93 (9095.135742)
+	    38          114 (7458.979492)
+	    37          98 (4572.986328)
+	    36          93 (5831.603027)
+	    35          184 (3087.769043)
+	    34          168 (3152.590820)
+	    33          104 (1046.448486)
+	    32          128 (1588.608765)
+	    31          153 (1419.754150)
+	    30          97 (4694.900879)
+	    29          99 (15286.725586)
+	    28          179 (1236.229248)
+	    27          103 (4612.243164)
+	    26          172 (3636.933838)
+	    25          91 (5099.343750)
+	    24          147 (5950.465820)
+	    23          200 (4618.613281)
+	    22          1257 (1508.864502)
+	    21          47 (16203.425781)
+	    20          82 (940.741028)
+	    19          120 (7058.118652)
+	    18          79 (5601.280273)
+	    17          95 (4944.398926)
+	    16          516 (3435.037842)
+	    15          22 (17047.513672)
+	    14          19 (38429.632812)
+	    13          23 (1901.458008)
+	    12          27 (30669.716797)
+	    11          29 (13173.872070)
+	    10          20 (1121.909424)
+	    9          16 (1684.201050)
+	    8          24 (907.469238)
+	    7          36 (843.382324)
+	    6          28 (608.954529)
+	    5          4 (522.946411)
+	    4          25 (892.088379)
+	    3          8 (907.468811)
+	    2          9 (864.744080)
+	    1          12 (522.946350)
+	    0          27 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15807359
+	          completely visible: 8637392
+	        completely invisible: 1810965
+	           partially visible: 5359002
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10016996
+	       Common for 3 siblings: 2978637
+	       Common for 2 siblings: 1249422
+	       Common for no sibling: 1011277
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29713.1
+	Avg. interactions per element:362.2
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	5m22.694s
+user	7m47.196s
+sys	0m1.104s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716133345166148
+	Overall end time	    1716133545314579
+	Total time with initialization	           200148431
+	Total time without initialization	           200148334
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31797 (5331.975098)
+	    100          119 (1808.327148)
+	    99          114 (1183.368408)
+	    98          109 (1167.303223)
+	    97          97 (2598.806885)
+	    96          119 (2067.293213)
+	    95          108 (1220.765503)
+	    94          89 (2193.165527)
+	    93          98 (4538.442383)
+	    92          84 (2057.185547)
+	    91          98 (4789.262207)
+	    90          107 (3361.270752)
+	    89          123 (1988.019043)
+	    88          114 (1508.766968)
+	    87          102 (2030.451538)
+	    86          130 (2065.238525)
+	    85          154 (4317.062988)
+	    84          91 (1292.240601)
+	    83          70 (6077.830078)
+	    82          111 (5448.185059)
+	    81          117 (2640.919434)
+	    80          108 (3652.887939)
+	    79          120 (4285.731445)
+	    78          104 (2765.819092)
+	    77          126 (1409.344238)
+	    76          111 (2268.581299)
+	    75          93 (7085.443359)
+	    74          105 (4732.172363)
+	    73          106 (4521.584473)
+	    72          128 (4014.026611)
+	    71          125 (1415.703369)
+	    70          110 (1173.553711)
+	    69          133 (3730.817383)
+	    68          120 (1107.521118)
+	    67          127 (1254.104004)
+	    66          100 (1180.165771)
+	    65          112 (1238.572510)
+	    64          127 (3837.124023)
+	    63          121 (955.345520)
+	    62          132 (1088.684204)
+	    61          111 (4223.797363)
+	    60          144 (3449.159180)
+	    59          128 (1333.044556)
+	    58          156 (3265.977539)
+	    57          149 (6048.505859)
+	    56          130 (9137.176758)
+	    55          136 (1376.505859)
+	    54          167 (5171.862793)
+	    53          141 (5726.574707)
+	    52          118 (4166.603516)
+	    51          161 (5535.565430)
+	    50          114 (7546.828613)
+	    49          125 (4460.163086)
+	    48          136 (6394.798828)
+	    47          109 (4461.650879)
+	    46          129 (1166.187500)
+	    45          113 (4619.909180)
+	    44          114 (4955.041504)
+	    43          126 (9704.050781)
+	    42          78 (1144.927856)
+	    41          129 (10011.763672)
+	    40          111 (13582.585938)
+	    39          109 (7683.071777)
+	    38          94 (4934.488770)
+	    37          109 (1096.503662)
+	    36          106 (1439.068237)
+	    35          141 (6147.155273)
+	    34          152 (1801.824219)
+	    33          115 (4004.417236)
+	    32          118 (1774.527588)
+	    31          141 (1366.881348)
+	    30          106 (4407.081055)
+	    29          88 (9479.583984)
+	    28          174 (5017.432617)
+	    27          109 (4585.330566)
+	    26          159 (3708.285889)
+	    25          114 (4486.925781)
+	    24          159 (5533.801270)
+	    23          199 (4595.133789)
+	    22          1250 (1511.765259)
+	    21          36 (20927.669922)
+	    20          73 (975.336670)
+	    19          115 (7334.882812)
+	    18          73 (5948.349609)
+	    17          91 (5174.176270)
+	    16          522 (3411.031250)
+	    15          33 (11701.502930)
+	    14          18 (40492.832031)
+	    13          26 (1742.398926)
+	    12          33 (36017.476562)
+	    11          16 (973.767090)
+	    10          20 (1121.909424)
+	    9          20 (1605.759277)
+	    8          28 (852.537537)
+	    7          32 (787.306030)
+	    6          16 (673.460693)
+	    5          4 (522.946411)
+	    4          25 (1015.135559)
+	    2          5 (1138.182373)
+	    1          12 (522.946350)
+	    0          15 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15947411
+	          completely visible: 8720518
+	        completely invisible: 1835338
+	           partially visible: 5391555
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10122340
+	       Common for 3 siblings: 2996691
+	       Common for 2 siblings: 1259954
+	       Common for no sibling: 1017253
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29976.3
+	Avg. interactions per element:365.4
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	5m56.246s
+user	8m23.050s
+sys	0m3.470s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 4:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716133709258940
+	Overall end time	    1716133811538809
+	Total time with initialization	           102279869
+	Total time without initialization	           102279699
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32257 (5266.504883)
+	    100          94 (2257.612305)
+	    99          98 (5880.912598)
+	    98          122 (1988.750000)
+	    97          93 (1148.786255)
+	    96          113 (2400.083252)
+	    95          83 (1483.667969)
+	    94          83 (6423.088867)
+	    93          98 (1426.303467)
+	    92          130 (5419.188965)
+	    91          82 (1194.251099)
+	    90          94 (3025.035889)
+	    89          84 (1635.046265)
+	    88          110 (4246.178711)
+	    87          94 (1159.162354)
+	    86          103 (2177.896973)
+	    85          118 (5212.429688)
+	    84          112 (4225.542480)
+	    83          119 (4274.473633)
+	    82          81 (4409.985840)
+	    81          106 (4385.032227)
+	    80          75 (3110.654785)
+	    79          97 (1337.466919)
+	    78          83 (3422.461670)
+	    77          96 (1205.857300)
+	    76          120 (2482.149170)
+	    75          116 (6210.173340)
+	    74          84 (2116.770752)
+	    73          94 (4889.157715)
+	    72          112 (4250.934570)
+	    71          125 (1619.024658)
+	    70          90 (1379.685913)
+	    69          112 (4193.859863)
+	    68          71 (1426.449341)
+	    67          110 (1130.762817)
+	    66          93 (4751.230957)
+	    65          114 (4048.518555)
+	    64          95 (1204.406128)
+	    63          116 (4113.638672)
+	    62          144 (986.799683)
+	    61          137 (1185.698730)
+	    60          132 (3420.782959)
+	    59          166 (7104.200195)
+	    58          149 (3689.708008)
+	    57          150 (1112.637573)
+	    56          141 (3904.433105)
+	    55          109 (7430.554688)
+	    54          137 (5903.765137)
+	    53          111 (4512.748535)
+	    52          120 (4226.544922)
+	    51          146 (1140.030151)
+	    50          156 (3154.362305)
+	    49          134 (3846.730713)
+	    48          127 (11806.967773)
+	    47          86 (10149.053711)
+	    46          119 (1873.406494)
+	    45          92 (5505.180176)
+	    44          139 (1798.532837)
+	    43          108 (4208.794922)
+	    42          106 (7925.619629)
+	    41          108 (1469.816406)
+	    40          115 (4231.214355)
+	    39          127 (6593.898438)
+	    38          104 (14703.063477)
+	    37          127 (6927.290039)
+	    36          128 (1424.739136)
+	    35          171 (3546.233643)
+	    34          114 (4755.836426)
+	    33          95 (5280.892090)
+	    32          100 (1257.328613)
+	    31          128 (3717.324463)
+	    30          97 (4524.699219)
+	    29          105 (11118.740234)
+	    28          117 (7599.124023)
+	    27          107 (8139.948242)
+	    26          156 (1243.692017)
+	    25          85 (1472.807251)
+	    24          121 (10112.180664)
+	    23          196 (1040.361572)
+	    22          1231 (1502.477295)
+	    21          62 (6706.723145)
+	    20          78 (942.777649)
+	    19          139 (11430.561523)
+	    18          100 (4670.941406)
+	    17          85 (13557.179688)
+	    16          510 (2767.082764)
+	    15          23 (16535.109375)
+	    14          17 (22576.306641)
+	    13          21 (1087.397217)
+	    12          49 (24653.556641)
+	    11          31 (929.283691)
+	    10          25 (805.022095)
+	    9          27 (1672.625122)
+	    8          11 (1291.991333)
+	    7          36 (653.928833)
+	    6          23 (890.750793)
+	    5          24 (522.946350)
+	    4          13 (759.575562)
+	    2          8 (907.468811)
+	    1          9 (864.744080)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    4
+	Number of task queues:   4
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 16267903
+	          completely visible: 8777345
+	        completely invisible: 1924780
+	           partially visible: 5565778
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10245192
+	       Common for 3 siblings: 3117534
+	       Common for 2 siblings: 1297734
+	       Common for no sibling: 1053883
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  30578.8
+	Avg. interactions per element:372.8
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	4m29.911s
+user	8m28.937s
+sys	0m3.735s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 4:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716133986379026
+	Overall end time	    1716134080511805
+	Total time with initialization	            94132779
+	Total time without initialization	            94132618
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32221 (5271.650391)
+	    100          97 (2194.921143)
+	    99          102 (6485.405762)
+	    98          107 (1413.452148)
+	    97          97 (1198.028809)
+	    96          130 (2241.398682)
+	    95          88 (1320.184448)
+	    94          75 (7349.157715)
+	    93          107 (4657.402344)
+	    92          120 (1869.048584)
+	    91          84 (2679.189453)
+	    90          99 (2563.118896)
+	    89          96 (1486.530273)
+	    88          102 (4425.483398)
+	    87          101 (1197.020508)
+	    86          119 (2287.216797)
+	    85          97 (5848.444824)
+	    84          110 (1209.333252)
+	    83          118 (4147.866211)
+	    82          85 (8072.061035)
+	    81          98 (4693.757812)
+	    80          90 (2739.141602)
+	    79          93 (1534.251343)
+	    78          93 (2936.234131)
+	    77          103 (1068.816284)
+	    76          98 (3091.756592)
+	    75          117 (5439.976074)
+	    74          78 (3372.138184)
+	    73          103 (7641.618164)
+	    72          127 (1438.281128)
+	    71          126 (1532.777832)
+	    70          84 (1341.536987)
+	    69          110 (1224.116821)
+	    68          76 (5762.086426)
+	    67          105 (1109.890503)
+	    66          81 (5412.703613)
+	    65          126 (3816.621338)
+	    64          97 (1099.701538)
+	    63          105 (4658.390625)
+	    62          154 (962.921875)
+	    61          118 (1153.978271)
+	    60          128 (3567.266846)
+	    59          174 (8768.427734)
+	    58          162 (1392.677856)
+	    57          143 (1120.763672)
+	    56          144 (6114.435059)
+	    55          112 (4225.403809)
+	    54          142 (5836.301270)
+	    53          92 (5195.529785)
+	    52          135 (3772.019043)
+	    51          147 (1100.064575)
+	    50          149 (3343.230957)
+	    49          136 (8804.652344)
+	    48          139 (6037.751953)
+	    47          76 (11348.101562)
+	    46          112 (1556.567505)
+	    45          90 (1818.144775)
+	    44          153 (3618.482910)
+	    43          99 (1477.255737)
+	    42          108 (10902.866211)
+	    41          115 (1823.216309)
+	    40          122 (4106.293457)
+	    39          121 (3960.247559)
+	    38          118 (13165.294922)
+	    37          118 (7386.542480)
+	    36          139 (1387.576782)
+	    35          151 (6177.028320)
+	    34          114 (4741.889160)
+	    33          97 (5427.237793)
+	    32          103 (974.772461)
+	    31          122 (3870.833496)
+	    30          95 (4485.145508)
+	    29          124 (9619.270508)
+	    28          122 (7344.707520)
+	    27          116 (7545.474609)
+	    26          144 (1299.777710)
+	    25          79 (1532.877563)
+	    24          114 (10551.200195)
+	    23          182 (1101.436401)
+	    22          1255 (1491.950073)
+	    21          46 (8780.729492)
+	    20          78 (942.777649)
+	    19          139 (11438.339844)
+	    18          97 (4726.319824)
+	    17          90 (12964.645508)
+	    16          510 (2766.470703)
+	    15          23 (16361.119141)
+	    14          23 (16716.140625)
+	    13          19 (1065.860718)
+	    12          47 (25647.664062)
+	    11          26 (1131.761108)
+	    10          30 (783.644531)
+	    9          28 (1659.031128)
+	    8          11 (1291.991333)
+	    7          32 (670.301514)
+	    6          23 (757.003540)
+	    5          28 (632.809998)
+	    4          13 (759.575562)
+	    2          8 (907.468811)
+	    1          9 (864.744080)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    4
+	Number of task queues:   4
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 16275401
+	          completely visible: 8780355
+	        completely invisible: 1924625
+	           partially visible: 5570421
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10245984
+	       Common for 3 siblings: 3119379
+	       Common for 2 siblings: 1300152
+	       Common for no sibling: 1054363
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  30592.9
+	Avg. interactions per element:372.9
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	3m56.190s
+user	7m47.558s
+sys	0m1.143s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 4:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716134229986797
+	Overall end time	    1716134329170820
+	Total time with initialization	            99184023
+	Total time without initialization	            99183845
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32256 (5267.284668)
+	    100          82 (2349.765869)
+	    99          98 (6673.197754)
+	    98          119 (1343.510620)
+	    97          112 (1105.269165)
+	    96          116 (2364.656494)
+	    95          80 (1474.564453)
+	    94          79 (6712.350586)
+	    93          110 (4823.281738)
+	    92          109 (1996.085693)
+	    91          84 (2217.585449)
+	    90          103 (3056.049561)
+	    89          79 (1169.089478)
+	    88          109 (4219.039551)
+	    87          110 (1162.295288)
+	    86          115 (2330.601562)
+	    85          98 (5717.733398)
+	    84          131 (1367.647217)
+	    83          119 (4216.655273)
+	    82          84 (8239.441406)
+	    81          91 (1253.685425)
+	    80          78 (7394.060059)
+	    79          91 (1494.710815)
+	    78          86 (3186.569824)
+	    77          90 (1106.708374)
+	    76          133 (1753.943237)
+	    75          114 (6294.526367)
+	    74          81 (3229.773193)
+	    73          90 (8637.808594)
+	    72          116 (1308.628540)
+	    71          115 (1603.181030)
+	    70          95 (1354.682739)
+	    69          103 (1265.940186)
+	    68          88 (5051.673828)
+	    67          100 (1123.411133)
+	    66          96 (4697.104492)
+	    65          134 (3696.755859)
+	    64          99 (1143.350220)
+	    63          98 (1209.611938)
+	    62          144 (3343.475098)
+	    61          131 (1150.752930)
+	    60          138 (982.907837)
+	    59          150 (7733.848145)
+	    58          161 (5624.211914)
+	    57          132 (1012.427551)
+	    56          138 (6422.069824)
+	    55          115 (4197.988281)
+	    54          156 (5380.601562)
+	    53          100 (4442.639648)
+	    52          160 (3392.285889)
+	    51          133 (3648.781494)
+	    50          139 (3924.036865)
+	    49          118 (4255.583008)
+	    48          128 (9018.702148)
+	    47          83 (14629.129883)
+	    46          113 (1870.545654)
+	    45          104 (1717.889526)
+	    44          135 (4004.620361)
+	    43          100 (1448.352295)
+	    42          101 (8091.493164)
+	    41          122 (1745.659302)
+	    40          123 (4100.077637)
+	    39          130 (3745.909180)
+	    38          116 (16877.390625)
+	    37          115 (4084.147461)
+	    36          138 (1410.586670)
+	    35          153 (5809.283691)
+	    34          120 (4548.306152)
+	    33          91 (5772.016602)
+	    32          95 (1019.839661)
+	    31          122 (6581.688965)
+	    30          103 (4469.428223)
+	    29          124 (6791.091797)
+	    28          114 (7696.912598)
+	    27          114 (7655.687988)
+	    26          132 (1304.673828)
+	    25          80 (1482.074463)
+	    24          132 (9322.367188)
+	    23          184 (1065.672607)
+	    22          1247 (1495.229736)
+	    21          58 (7249.742676)
+	    20          72 (894.555969)
+	    19          135 (11756.062500)
+	    18          103 (4512.762695)
+	    17          83 (13993.741211)
+	    16          514 (2755.283447)
+	    15          27 (14014.722656)
+	    14          16 (23656.466797)
+	    13          20 (877.078491)
+	    12          48 (25140.255859)
+	    11          32 (1065.673828)
+	    10          24 (816.775208)
+	    9          28 (1631.565186)
+	    8          11 (1291.991333)
+	    7          36 (653.928833)
+	    6          23 (890.750793)
+	    5          24 (522.946350)
+	    4          13 (759.575562)
+	    2          8 (907.468811)
+	    1          9 (864.744080)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    4
+	Number of task queues:   4
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 16269227
+	          completely visible: 8779387
+	        completely invisible: 1922253
+	           partially visible: 5567587
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10243992
+	       Common for 3 siblings: 3117279
+	       Common for 2 siblings: 1299368
+	       Common for no sibling: 1053713
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  30581.3
+	Avg. interactions per element:372.8
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	4m26.164s
+user	8m22.736s
+sys	0m2.497s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 8:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716134504069945
+	Overall end time	    1716134564551364
+	Total time with initialization	            60481419
+	Total time without initialization	            60481091
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31785 (5333.055664)
+	    100          96 (1632.370972)
+	    99          76 (3570.817383)
+	    98          80 (2334.508789)
+	    97          115 (1453.212036)
+	    96          117 (2534.362549)
+	    95          108 (4307.016113)
+	    94          112 (2362.908691)
+	    93          128 (4087.513916)
+	    92          92 (1224.297363)
+	    91          130 (1858.438354)
+	    90          133 (2158.181641)
+	    89          122 (1250.514893)
+	    88          100 (2430.422852)
+	    87          101 (1662.785522)
+	    86          122 (1431.103149)
+	    85          94 (1571.201172)
+	    84          82 (1599.320068)
+	    83          134 (1859.358887)
+	    82          84 (6853.690430)
+	    81          99 (2009.279175)
+	    80          111 (2446.227539)
+	    79          111 (1671.620483)
+	    78          90 (1772.562378)
+	    77          103 (1369.351685)
+	    76          102 (1272.157715)
+	    75          122 (2372.410400)
+	    74          131 (3735.912598)
+	    73          97 (7154.476562)
+	    72          94 (5053.796387)
+	    71          139 (6802.292969)
+	    70          122 (4806.601074)
+	    69          117 (4453.174316)
+	    68          114 (4132.480469)
+	    67          138 (1331.481323)
+	    66          97 (4892.294922)
+	    65          114 (3983.319092)
+	    64          103 (1089.136108)
+	    63          113 (1420.345093)
+	    62          136 (1140.695190)
+	    61          153 (1092.863770)
+	    60          116 (1073.716431)
+	    59          111 (4188.736816)
+	    58          116 (6945.798828)
+	    57          146 (3589.216309)
+	    56          114 (4185.373047)
+	    55          161 (1266.822144)
+	    54          151 (7987.803711)
+	    53          126 (6798.106934)
+	    52          146 (1155.402710)
+	    51          133 (1625.496948)
+	    50          150 (5570.316895)
+	    49          113 (1509.482300)
+	    48          109 (13749.210938)
+	    47          89 (13246.785156)
+	    46          131 (6670.930176)
+	    45          152 (1800.078979)
+	    44          121 (7342.865234)
+	    43          135 (6800.387207)
+	    42          124 (4281.684570)
+	    41          116 (915.559631)
+	    40          114 (7784.079590)
+	    39          140 (1754.296631)
+	    38          134 (4153.907715)
+	    37          123 (4035.945557)
+	    36          111 (7601.800781)
+	    35          141 (8674.024414)
+	    34          148 (3688.290039)
+	    33          118 (10368.848633)
+	    32          155 (951.831726)
+	    31          101 (4554.502441)
+	    30          96 (1388.595825)
+	    29          105 (5411.863770)
+	    28          109 (10666.985352)
+	    27          84 (9873.460938)
+	    26          145 (3723.510742)
+	    25          137 (3568.702881)
+	    24          159 (1110.518921)
+	    23          185 (2954.587891)
+	    22          1227 (1222.130737)
+	    21          64 (958.701172)
+	    20          70 (11412.130859)
+	    19          130 (12026.046875)
+	    18          94 (8669.173828)
+	    17          88 (1107.561890)
+	    16          521 (4126.133301)
+	    15          20 (18930.683594)
+	    14          22 (17227.976562)
+	    13          20 (1430.830811)
+	    12          54 (22400.949219)
+	    11          22 (774.758240)
+	    10          31 (1227.667480)
+	    9          14 (687.741699)
+	    8          22 (1717.060547)
+	    7          38 (792.821106)
+	    5          20 (830.564331)
+	    4          21 (669.431091)
+	    3          8 (522.946350)
+	    2          8 (907.468811)
+	    1          13 (759.575562)
+	    0          39 (522.946533)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    8
+	Number of task queues:   8
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43628
+	Total number of interactions: 15508850
+	          completely visible: 8396694
+	        completely invisible: 1785054
+	           partially visible: 5327102
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9688040
+	       Common for 3 siblings: 2991675
+	       Common for 2 siblings: 1248856
+	       Common for no sibling: 1021667
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29152.0
+	Avg. interactions per element:355.5
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.66%
+
+real	3m36.653s
+user	8m30.222s
+sys	0m1.466s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 8:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716134728198922
+	Overall end time	    1716134787360224
+	Total time with initialization	            59161302
+	Total time without initialization	            59161123
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31764 (5334.979492)
+	    100          75 (3387.427734)
+	    99          79 (2329.122803)
+	    98          112 (1848.365967)
+	    97          113 (1854.005127)
+	    96          117 (1563.577515)
+	    95          125 (4620.163574)
+	    94          98 (2283.839844)
+	    93          120 (4555.367188)
+	    92          98 (1208.474121)
+	    91          104 (2069.879150)
+	    90          120 (2338.202881)
+	    89          111 (1298.446655)
+	    88          86 (2789.253906)
+	    87          113 (1323.257935)
+	    86          112 (1503.908447)
+	    85          99 (1411.069336)
+	    84          76 (1300.697388)
+	    83          129 (2055.193604)
+	    82          107 (2805.780762)
+	    81          112 (1871.240845)
+	    80          112 (5348.903809)
+	    79          114 (1556.882568)
+	    78          64 (1250.758057)
+	    77          100 (2122.578613)
+	    76          108 (4278.897461)
+	    75          109 (2591.019287)
+	    74          139 (1769.297119)
+	    73          135 (5498.870605)
+	    72          88 (5282.548828)
+	    71          131 (3792.454102)
+	    70          132 (4022.988525)
+	    69          114 (4414.159180)
+	    68          121 (9896.964844)
+	    67          139 (1617.458252)
+	    66          94 (1339.670166)
+	    65          108 (1064.273315)
+	    64          109 (1106.091919)
+	    63          107 (4706.095215)
+	    62          126 (1187.536133)
+	    61          158 (1053.101807)
+	    60          135 (3446.166260)
+	    59          115 (1182.985962)
+	    58          122 (6637.233398)
+	    57          124 (4184.555176)
+	    56          118 (4321.320312)
+	    55          149 (3447.927002)
+	    54          146 (3557.947021)
+	    53          129 (4111.675781)
+	    52          148 (1173.115356)
+	    51          130 (6561.528320)
+	    50          166 (7527.860840)
+	    49          133 (1223.293701)
+	    48          99 (8283.424805)
+	    47          108 (8233.648438)
+	    46          151 (8019.374023)
+	    45          144 (6474.514160)
+	    44          122 (1898.025024)
+	    43          116 (4909.509766)
+	    42          113 (10384.030273)
+	    41          110 (4228.281738)
+	    40          135 (3968.799072)
+	    39          129 (4321.053223)
+	    38          133 (1450.922119)
+	    37          120 (4102.405273)
+	    36          111 (7590.145508)
+	    35          161 (9941.673828)
+	    34          152 (5967.695801)
+	    33          130 (1301.502441)
+	    32          129 (6305.388184)
+	    31          106 (1244.846680)
+	    30          69 (6753.460938)
+	    29          127 (6897.083496)
+	    28          106 (5079.060547)
+	    27          89 (9041.759766)
+	    26          143 (3742.734619)
+	    25          130 (3750.078857)
+	    24          170 (1042.100586)
+	    23          182 (3031.985840)
+	    22          1228 (1222.821289)
+	    21          63 (6586.632812)
+	    20          69 (6357.426758)
+	    19          124 (4023.675049)
+	    18          101 (15068.290039)
+	    17          72 (6128.236328)
+	    16          532 (4737.289062)
+	    15          24 (907.469238)
+	    14          17 (984.534363)
+	    13          31 (12961.857422)
+	    12          44 (27196.289062)
+	    11          32 (912.361572)
+	    10          14 (1424.219116)
+	    9          18 (822.019348)
+	    8          30 (1398.629761)
+	    7          30 (784.513306)
+	    6          12 (723.632141)
+	    5          20 (830.564331)
+	    4          21 (669.431091)
+	    3          8 (522.946350)
+	    2          8 (907.468811)
+	    1          16 (715.207581)
+	    0          24 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    8
+	Number of task queues:   8
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43616
+	Total number of interactions: 15476258
+	          completely visible: 8377471
+	        completely invisible: 1779416
+	           partially visible: 5319371
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9652496
+	       Common for 3 siblings: 2993682
+	       Common for 2 siblings: 1249852
+	       Common for no sibling: 1020895
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29090.7
+	Avg. interactions per element:354.8
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.62%
+
+real	3m36.445s
+user	8m26.272s
+sys	0m1.532s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 8:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716134952185719
+	Overall end time	    1716135012928299
+	Total time with initialization	            60742580
+	Total time without initialization	            60742357
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31923 (5314.512695)
+	    100          95 (2800.504395)
+	    99          73 (1383.593750)
+	    98          96 (2243.112549)
+	    97          136 (2571.026367)
+	    96          91 (2441.024658)
+	    95          88 (5322.866699)
+	    94          131 (1307.209351)
+	    93          99 (2298.519775)
+	    92          102 (4473.738770)
+	    91          134 (1487.629272)
+	    90          98 (3285.925293)
+	    89          109 (1320.167847)
+	    88          96 (1335.589233)
+	    87          92 (1679.583618)
+	    86          120 (2313.104248)
+	    85          116 (1275.836182)
+	    84          97 (1344.799927)
+	    83          111 (2192.197998)
+	    82          97 (2577.236084)
+	    81          101 (5423.893555)
+	    80          114 (2328.086426)
+	    79          111 (1160.368042)
+	    78          95 (2302.443359)
+	    77          94 (1555.723877)
+	    76          82 (1115.079590)
+	    75          141 (2165.676758)
+	    74          99 (5307.013672)
+	    73          119 (6056.446777)
+	    72          136 (3977.332764)
+	    71          108 (4458.542480)
+	    70          150 (3338.086426)
+	    69          123 (2158.465332)
+	    68          109 (10860.926758)
+	    67          118 (4024.982178)
+	    66          129 (1084.489502)
+	    65          112 (875.526367)
+	    64          108 (1140.643066)
+	    63          118 (4380.836426)
+	    62          119 (1064.642578)
+	    61          141 (1130.354736)
+	    60          131 (1010.826355)
+	    59          124 (3928.779053)
+	    58          116 (7036.119141)
+	    57          111 (4546.739746)
+	    56          126 (3939.639648)
+	    55          138 (1193.289673)
+	    54          139 (3954.736084)
+	    53          134 (6186.048828)
+	    52          138 (1329.819702)
+	    51          153 (5733.141602)
+	    50          120 (1363.460571)
+	    49          118 (7440.506348)
+	    48          126 (6603.653809)
+	    47          108 (10933.179688)
+	    46          112 (10650.787109)
+	    45          113 (4879.939941)
+	    44          108 (8097.410645)
+	    43          125 (2313.175537)
+	    42          119 (6790.398926)
+	    41          111 (7353.065918)
+	    40          118 (4607.677734)
+	    39          151 (1639.375244)
+	    38          122 (4457.854492)
+	    37          108 (4411.829102)
+	    36          126 (6768.505859)
+	    35          168 (7481.444824)
+	    34          141 (3787.125977)
+	    33          131 (6754.094727)
+	    32          150 (999.447510)
+	    31          99 (8108.539551)
+	    30          80 (5962.078125)
+	    29          94 (1060.406860)
+	    28          103 (9019.510742)
+	    27          91 (12782.279297)
+	    26          149 (3644.397217)
+	    25          131 (3726.708984)
+	    24          171 (1116.520630)
+	    23          167 (3218.373779)
+	    22          1220 (1200.780029)
+	    21          72 (1058.214722)
+	    20          61 (12973.371094)
+	    19          137 (6369.471680)
+	    18          90 (12788.401367)
+	    17          77 (5722.273438)
+	    16          520 (4810.761230)
+	    15          24 (779.294861)
+	    14          25 (879.257202)
+	    13          32 (23908.767578)
+	    12          43 (19523.851562)
+	    11          36 (919.921448)
+	    10          26 (1013.266174)
+	    9          16 (1684.201050)
+	    8          21 (999.022156)
+	    7          34 (753.740784)
+	    6          4 (1125.003906)
+	    5          20 (830.564331)
+	    4          25 (645.993530)
+	    3          4 (522.946411)
+	    2          8 (907.468811)
+	    1          13 (759.575562)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    8
+	Number of task queues:   8
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15694384
+	          completely visible: 8493604
+	        completely invisible: 1812615
+	           partially visible: 5388165
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9814404
+	       Common for 3 siblings: 3024396
+	       Common for 2 siblings: 1261818
+	       Common for no sibling: 1030989
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29500.7
+	Avg. interactions per element:359.6
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	3m39.017s
+user	8m35.775s
+sys	0m1.631s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 16:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716135178945810
+	Overall end time	    1716135224079821
+	Total time with initialization	            45134011
+	Total time without initialization	            45133342
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31913 (5323.837402)
+	    100          107 (1314.034058)
+	    99          78 (1704.412109)
+	    98          112 (4945.120605)
+	    97          87 (2757.436768)
+	    96          97 (1138.278076)
+	    95          88 (1178.751465)
+	    94          112 (1838.376343)
+	    93          133 (1958.618042)
+	    92          84 (5275.821777)
+	    91          119 (1477.824585)
+	    90          82 (2788.738770)
+	    89          103 (1141.433594)
+	    88          82 (1179.569946)
+	    87          126 (4515.337891)
+	    86          113 (2483.665283)
+	    85          107 (3012.540771)
+	    84          105 (1929.222046)
+	    83          98 (2201.920410)
+	    82          106 (2583.325439)
+	    81          104 (5426.607422)
+	    80          87 (2829.893799)
+	    79          82 (5137.049316)
+	    78          95 (2833.427002)
+	    77          118 (1634.432617)
+	    76          132 (1788.275024)
+	    75          114 (9146.172852)
+	    74          65 (2575.426758)
+	    73          101 (11478.796875)
+	    72          92 (1109.845825)
+	    71          97 (4673.167969)
+	    70          140 (1072.013062)
+	    69          170 (3442.636719)
+	    68          124 (1102.916870)
+	    67          89 (1171.155151)
+	    66          125 (1030.204102)
+	    65          117 (4041.402832)
+	    64          83 (1674.145142)
+	    63          92 (1048.938721)
+	    62          115 (4010.514404)
+	    61          115 (1466.096191)
+	    60          119 (1226.045532)
+	    59          155 (7639.127441)
+	    58          131 (1097.414429)
+	    57          111 (7438.399414)
+	    56          117 (4264.781738)
+	    55          150 (3481.614502)
+	    54          129 (6619.660156)
+	    53          123 (9619.780273)
+	    52          167 (1286.954712)
+	    51          158 (3389.750488)
+	    50          118 (1065.139404)
+	    49          150 (3427.931152)
+	    48          140 (4325.682129)
+	    47          156 (7673.408691)
+	    46          107 (1543.099976)
+	    45          119 (13085.765625)
+	    44          117 (1381.090088)
+	    43          149 (3960.312988)
+	    42          103 (4573.270020)
+	    41          104 (4482.073242)
+	    40          127 (1112.808105)
+	    39          138 (14447.574219)
+	    38          149 (6358.485840)
+	    37          108 (4296.501465)
+	    36          117 (10389.481445)
+	    35          135 (6314.402344)
+	    34          158 (1769.883301)
+	    33          128 (1359.778076)
+	    32          169 (1017.357971)
+	    31          125 (1351.003540)
+	    30          114 (4336.085449)
+	    29          77 (14764.399414)
+	    28          129 (1174.714722)
+	    27          104 (8188.178711)
+	    26          172 (1449.351074)
+	    25          106 (7976.877441)
+	    24          160 (7590.424316)
+	    23          213 (1126.868530)
+	    22          1222 (1511.778687)
+	    21          48 (8731.729492)
+	    20          94 (4546.541504)
+	    19          119 (7253.943359)
+	    18          51 (1108.233154)
+	    17          70 (16606.900391)
+	    16          496 (4298.125000)
+	    15          24 (522.946350)
+	    14          25 (804.834717)
+	    13          27 (40952.953125)
+	    12          34 (13911.895508)
+	    11          30 (676.755554)
+	    10          31 (895.065369)
+	    9          22 (2507.453369)
+	    8          28 (934.935181)
+	    7          24 (751.463379)
+	    6          17 (803.582581)
+	    5          12 (522.946350)
+	    4          29 (841.172363)
+	    3          4 (522.946411)
+	    2          10 (830.564331)
+	    1          8 (907.468811)
+	    0          54 (522.946716)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15774694
+	          completely visible: 8594816
+	        completely invisible: 1808731
+	           partially visible: 5371147
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9940672
+	       Common for 3 siblings: 3001755
+	       Common for 2 siblings: 1256712
+	       Common for no sibling: 1023687
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29651.7
+	Avg. interactions per element:361.5
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.70%
+
+real	3m42.619s
+user	8m14.950s
+sys	0m2.383s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 16:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716135406030622
+	Overall end time	    1716135448054138
+	Total time with initialization	            42023516
+	Total time without initialization	            42023288
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32042 (5308.028809)
+	    100          101 (2182.514160)
+	    99          79 (1453.825806)
+	    98          137 (3601.822021)
+	    97          101 (1261.151367)
+	    96          89 (1655.087036)
+	    95          102 (1231.856689)
+	    94          90 (3603.792725)
+	    93          103 (5160.584961)
+	    92          102 (1337.468872)
+	    91          100 (2428.033203)
+	    90          110 (1165.791504)
+	    89          84 (2685.655518)
+	    88          87 (1180.113525)
+	    87          89 (1294.960815)
+	    86          127 (3155.277344)
+	    85          82 (6038.096680)
+	    84          102 (1509.631470)
+	    83          101 (2799.760498)
+	    82          85 (3301.054688)
+	    81          89 (5872.023438)
+	    80          119 (5789.812500)
+	    79          80 (1279.089478)
+	    78          88 (2904.288086)
+	    77          93 (5427.926270)
+	    76          132 (1151.716797)
+	    75          90 (2752.351562)
+	    74          95 (9056.607422)
+	    73          109 (5368.755859)
+	    72          96 (8397.437500)
+	    71          101 (1082.463623)
+	    70          137 (1131.782593)
+	    69          149 (1453.490479)
+	    68          129 (3825.548340)
+	    67          102 (1178.659424)
+	    66          124 (976.309204)
+	    65          106 (4396.313477)
+	    64          82 (1321.896729)
+	    63          118 (1111.276489)
+	    62          108 (971.721375)
+	    61          139 (1554.495972)
+	    60          154 (948.384155)
+	    59          122 (6649.274902)
+	    58          93 (12341.946289)
+	    57          115 (1174.285522)
+	    56          133 (9072.875977)
+	    55          146 (3573.575195)
+	    54          168 (3055.666016)
+	    53          101 (4565.013184)
+	    52          189 (6591.420410)
+	    51          135 (1168.181274)
+	    50          129 (1031.476929)
+	    49          155 (3538.638672)
+	    48          125 (9641.471680)
+	    47          128 (3957.072021)
+	    46          110 (4538.604004)
+	    45          124 (7479.255371)
+	    44          120 (1285.855713)
+	    43          107 (8201.569336)
+	    42          118 (3953.508301)
+	    41          99 (1261.751709)
+	    40          151 (5772.777344)
+	    39          120 (11057.515625)
+	    38          124 (7227.988770)
+	    37          118 (4117.542480)
+	    36          111 (10468.879883)
+	    35          131 (9466.681641)
+	    34          170 (1723.135864)
+	    33          110 (1363.351929)
+	    32          166 (975.783386)
+	    31          130 (1321.145020)
+	    30          121 (7026.482910)
+	    29          65 (12005.609375)
+	    28          127 (3989.606689)
+	    27          104 (1400.911621)
+	    26          177 (3472.950928)
+	    25          116 (7434.468262)
+	    24          147 (5800.660156)
+	    23          188 (1061.267456)
+	    22          1240 (1217.815674)
+	    21          49 (15886.354492)
+	    20          93 (4525.230469)
+	    19          106 (7972.055664)
+	    18          52 (7966.380859)
+	    17          83 (9945.600586)
+	    16          493 (5019.114258)
+	    15          21 (706.052246)
+	    14          26 (1438.018921)
+	    13          22 (33576.332031)
+	    12          38 (21922.779297)
+	    11          36 (629.758484)
+	    10          29 (899.608154)
+	    9          17 (2629.543701)
+	    8          24 (875.425598)
+	    7          28 (828.681824)
+	    6          20 (876.844055)
+	    5          12 (522.946350)
+	    4          29 (841.172363)
+	    3          4 (522.946411)
+	    2          10 (830.564331)
+	    1          8 (907.468811)
+	    0          54 (522.946716)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15760258
+	          completely visible: 8567887
+	        completely invisible: 1814463
+	           partially visible: 5377908
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9913732
+	       Common for 3 siblings: 3011487
+	       Common for 2 siblings: 1256638
+	       Common for no sibling: 1026992
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29624.5
+	Avg. interactions per element:361.1
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.70%
+
+real	3m26.908s
+user	7m58.686s
+sys	0m3.076s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 16:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716135617628074
+	Overall end time	    1716135662189236
+	Total time with initialization	            44561162
+	Total time without initialization	            44552624
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32015 (5311.821777)
+	    100          128 (1999.369995)
+	    99          71 (1429.220337)
+	    98          113 (4241.435547)
+	    97          94 (1226.546997)
+	    96          92 (2134.408691)
+	    95          114 (1394.320068)
+	    94          78 (2714.277588)
+	    93          98 (5218.021973)
+	    92          97 (2494.739014)
+	    91          110 (1250.268066)
+	    90          105 (1396.471680)
+	    89          82 (2854.094971)
+	    88          93 (1168.861450)
+	    87          108 (2905.972412)
+	    86          129 (1218.084717)
+	    85          87 (5735.040527)
+	    84          104 (2937.889648)
+	    83          102 (2179.869385)
+	    82          86 (3183.523682)
+	    81          92 (5829.260254)
+	    80          117 (5150.514648)
+	    79          74 (1334.375610)
+	    78          100 (2532.742432)
+	    77          78 (6079.114258)
+	    76          131 (1750.428833)
+	    75          74 (8199.521484)
+	    74          100 (4732.340820)
+	    73          94 (5971.660156)
+	    72          112 (7281.989258)
+	    71          92 (1563.157593)
+	    70          115 (1193.258545)
+	    69          171 (3233.972656)
+	    68          125 (1337.741943)
+	    67          98 (1114.672974)
+	    66          136 (3736.480225)
+	    65          100 (1089.910522)
+	    64          99 (1406.141235)
+	    63          112 (1010.671204)
+	    62          99 (970.782593)
+	    61          144 (1158.498535)
+	    60          142 (3745.862305)
+	    59          123 (9612.895508)
+	    58          103 (4382.130371)
+	    57          118 (4023.501221)
+	    56          117 (4097.898926)
+	    55          131 (6490.119141)
+	    54          191 (6612.196289)
+	    53          118 (6816.101562)
+	    52          144 (1172.754150)
+	    51          151 (1235.831909)
+	    50          147 (959.227600)
+	    49          156 (5421.148926)
+	    48          115 (5006.883789)
+	    47          150 (6251.942871)
+	    46          99 (4497.979980)
+	    45          100 (8640.715820)
+	    44          134 (4086.475830)
+	    43          120 (4532.354004)
+	    42          135 (3580.121826)
+	    41          95 (5078.778809)
+	    40          151 (1445.136230)
+	    39          129 (10245.487305)
+	    38          114 (13182.332031)
+	    37          128 (1152.550659)
+	    36          96 (8434.712891)
+	    35          149 (10661.625977)
+	    34          155 (1774.679199)
+	    33          108 (1422.183105)
+	    32          158 (935.222290)
+	    31          122 (1411.468750)
+	    30          128 (9484.813477)
+	    29          64 (12343.326172)
+	    28          142 (1006.989746)
+	    27          103 (4974.149414)
+	    26          178 (1394.452026)
+	    25          103 (8409.316406)
+	    24          171 (5071.266113)
+	    23          173 (1056.696899)
+	    22          1252 (1215.938354)
+	    21          51 (8240.655273)
+	    20          98 (8014.613281)
+	    19          117 (10389.129883)
+	    18          45 (1104.479858)
+	    17          80 (14790.918945)
+	    16          489 (4322.897461)
+	    15          25 (553.708130)
+	    14          27 (1170.464844)
+	    13          27 (27449.539062)
+	    12          36 (23180.093750)
+	    11          33 (732.686279)
+	    10          23 (964.430786)
+	    9          14 (1589.014526)
+	    8          31 (1494.421753)
+	    7          25 (742.322754)
+	    6          20 (876.844055)
+	    5          16 (715.207581)
+	    4          25 (769.040955)
+	    3          4 (522.946411)
+	    2          9 (864.744080)
+	    1          9 (864.744080)
+	    0          54 (522.946716)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15682503
+	          completely visible: 8532652
+	        completely invisible: 1801914
+	           partially visible: 5347937
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9864500
+	       Common for 3 siblings: 2993523
+	       Common for 2 siblings: 1251616
+	       Common for no sibling: 1021501
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29478.4
+	Avg. interactions per element:359.4
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.70%
+
+real	3m48.735s
+user	8m17.356s
+sys	0m2.331s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 16
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 1:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716135857410019
+	Overall end time	    1716136448896713
+	Total time with initialization	           591486694
+	Total time without initialization	           591486690
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31413 (5372.729492)
+	    100          93 (2034.722290)
+	    99          97 (1862.565552)
+	    98          132 (1332.386841)
+	    97          84 (3198.575195)
+	    96          103 (4527.980469)
+	    95          102 (1264.740356)
+	    94          107 (1107.312500)
+	    93          97 (1334.129272)
+	    92          137 (2588.743408)
+	    91          115 (4265.277832)
+	    90          120 (4675.919434)
+	    89          115 (4533.153809)
+	    88          97 (2029.180786)
+	    87          87 (1545.645874)
+	    86          116 (1866.911987)
+	    85          145 (3837.871094)
+	    84          89 (1768.811768)
+	    83          107 (1571.999512)
+	    82          129 (3823.444092)
+	    81          79 (4201.820801)
+	    80          146 (5662.245117)
+	    79          95 (4983.201172)
+	    78          117 (7343.054688)
+	    77          126 (1515.390747)
+	    76          89 (2969.563965)
+	    75          95 (2771.565674)
+	    74          105 (1260.779907)
+	    73          104 (1207.778442)
+	    72          85 (5185.995605)
+	    71          147 (3641.798584)
+	    70          128 (1328.452515)
+	    69          144 (1192.902344)
+	    68          128 (3762.054443)
+	    67          100 (4612.330566)
+	    66          126 (3916.951904)
+	    65          80 (1314.085205)
+	    64          102 (1612.337158)
+	    63          161 (1106.248901)
+	    62          145 (1142.967041)
+	    61          115 (10101.070312)
+	    60          129 (3679.479248)
+	    59          151 (3534.216553)
+	    58          136 (997.245422)
+	    57          116 (1306.291626)
+	    56          131 (3712.007568)
+	    55          141 (3588.559082)
+	    54          129 (9178.874023)
+	    53          135 (3800.448242)
+	    52          130 (9350.544922)
+	    51          150 (1192.038696)
+	    50          148 (3841.310303)
+	    49          159 (3586.439453)
+	    48          151 (8292.603516)
+	    47          142 (3637.617188)
+	    46          133 (1344.751343)
+	    45          95 (5837.244629)
+	    44          117 (5072.976562)
+	    43          128 (1177.553223)
+	    42          90 (8698.473633)
+	    41          102 (8013.739746)
+	    40          124 (12511.450195)
+	    39          110 (1489.097412)
+	    38          149 (8097.045898)
+	    37          104 (4910.658691)
+	    36          165 (1317.484131)
+	    35          121 (4135.119629)
+	    34          168 (3235.211426)
+	    33          143 (5933.362793)
+	    32          123 (7478.608398)
+	    31          146 (6398.843262)
+	    30          133 (6568.726562)
+	    29          88 (1108.887817)
+	    28          209 (1290.908081)
+	    27          105 (4343.910645)
+	    26          146 (1416.285156)
+	    25          116 (10374.742188)
+	    24          170 (1086.280273)
+	    23          258 (3838.314941)
+	    22          1255 (1512.670776)
+	    21          57 (7347.472168)
+	    20          80 (9757.525391)
+	    19          109 (11117.867188)
+	    18          57 (1120.903931)
+	    17          91 (9150.790039)
+	    16          505 (2808.254150)
+	    15          19 (806.278687)
+	    14          47 (8340.996094)
+	    13          26 (42691.414062)
+	    12          31 (15103.320312)
+	    11          30 (1398.629761)
+	    10          23 (1586.710938)
+	    9          17 (1111.039795)
+	    8          28 (962.401062)
+	    7          33 (830.647888)
+	    6          24 (879.637634)
+	    5          16 (522.946350)
+	    4          22 (1012.338928)
+	    3          18 (864.744080)
+	    2          1 (522.946411)
+	    1          4 (522.946411)
+	    0          30 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    1
+	Number of task queues:   1
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   10 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43616
+	Total number of interactions: 14748320
+	          completely visible: 8079021
+	        completely invisible: 1666040
+	           partially visible: 5003259
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9313460
+	       Common for 3 siblings: 2780160
+	       Common for 2 siblings: 1157042
+	       Common for no sibling: 952853
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  27722.4
+	Avg. interactions per element:338.1
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.62%
+
+real	13m12.997s
+user	6m35.736s
+sys	0m1.105s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716136658266622
+	Overall end time	    1716136976589635
+	Total time with initialization	           318323013
+	Total time without initialization	           318322915
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31728 (5329.959473)
+	    100          95 (2112.524902)
+	    99          96 (4675.089355)
+	    98          116 (1943.204712)
+	    97          105 (1469.050415)
+	    96          106 (3001.438721)
+	    95          117 (2242.901367)
+	    94          64 (1233.001709)
+	    93          79 (6357.302734)
+	    92          126 (4278.155762)
+	    91          89 (1352.992554)
+	    90          96 (3855.863281)
+	    89          150 (1849.238159)
+	    88          111 (1727.138794)
+	    87          106 (1273.063477)
+	    86          119 (4336.664551)
+	    85          107 (1251.247559)
+	    84          112 (2224.284912)
+	    83          92 (1355.520386)
+	    82          89 (10168.806641)
+	    81          136 (3445.035400)
+	    80          121 (2595.608154)
+	    79          117 (1616.999512)
+	    78          111 (1529.489746)
+	    77          135 (4609.159668)
+	    76          118 (5772.120117)
+	    75          86 (6878.484863)
+	    74          107 (4708.415527)
+	    73          139 (1360.666992)
+	    72          118 (4011.749268)
+	    71          137 (1230.118042)
+	    70          104 (1149.235596)
+	    69          122 (1174.219116)
+	    68          102 (4338.034180)
+	    67          111 (4433.288086)
+	    66          102 (1061.883545)
+	    65          97 (1039.346313)
+	    64          127 (1071.922852)
+	    63          128 (1148.614868)
+	    62          142 (1158.693970)
+	    61          99 (4469.866699)
+	    60          136 (1279.572998)
+	    59          133 (3988.071777)
+	    58          139 (3523.540527)
+	    57          154 (3539.215820)
+	    56          143 (3687.326416)
+	    55          136 (8872.435547)
+	    54          140 (6053.243652)
+	    53          163 (2998.047852)
+	    52          146 (10426.442383)
+	    51          151 (3576.374512)
+	    50          128 (1768.604126)
+	    49          126 (4324.164062)
+	    48          135 (6470.065918)
+	    47          102 (7929.896484)
+	    46          134 (1395.652466)
+	    45          105 (4640.009766)
+	    44          80 (11288.876953)
+	    43          120 (4550.357422)
+	    42          107 (4203.090332)
+	    41          123 (4274.274902)
+	    40          124 (12401.458008)
+	    39          105 (4943.168457)
+	    38          105 (11261.028320)
+	    37          98 (4854.851074)
+	    36          103 (5299.040527)
+	    35          178 (3169.279053)
+	    34          167 (3119.467041)
+	    33          110 (1067.154297)
+	    32          122 (1648.354492)
+	    31          145 (1432.058960)
+	    30          104 (4434.487305)
+	    29          101 (15012.912109)
+	    28          175 (1233.640747)
+	    27          103 (4612.243164)
+	    26          165 (3773.703125)
+	    25          99 (4762.929199)
+	    24          146 (5944.489258)
+	    23          198 (4663.867188)
+	    22          1263 (1502.329956)
+	    21          43 (17662.074219)
+	    20          85 (4940.296875)
+	    19          122 (4217.244141)
+	    18          67 (6373.092773)
+	    17          100 (4761.779297)
+	    16          516 (3435.366211)
+	    15          30 (12743.501953)
+	    14          16 (45585.203125)
+	    13          29 (1775.361694)
+	    12          20 (40951.917969)
+	    11          29 (13173.872070)
+	    10          20 (1121.909424)
+	    9          16 (1684.201050)
+	    8          24 (907.469238)
+	    7          36 (843.382324)
+	    6          28 (608.954529)
+	    5          4 (522.946411)
+	    4          26 (877.890625)
+	    3          7 (962.400574)
+	    2          9 (864.744080)
+	    1          12 (522.946350)
+	    0          27 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15801372
+	          completely visible: 8635591
+	        completely invisible: 1808026
+	           partially visible: 5357755
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10011680
+	       Common for 3 siblings: 2978433
+	       Common for 2 siblings: 1248798
+	       Common for no sibling: 1011338
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29701.8
+	Avg. interactions per element:362.1
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	9m22.907s
+user	7m19.781s
+sys	0m1.235s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716137228786581
+	Overall end time	    1716137547551230
+	Total time with initialization	           318764649
+	Total time without initialization	           318764543
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31749 (5327.279297)
+	    100          82 (2328.413818)
+	    99          95 (4752.606445)
+	    98          102 (2070.228760)
+	    97          107 (1413.153442)
+	    96          134 (2606.093262)
+	    95          91 (2521.683105)
+	    94          71 (1733.564209)
+	    93          87 (5327.443848)
+	    92          115 (4650.253906)
+	    91          90 (1459.413208)
+	    90          104 (3626.731689)
+	    89          152 (1832.136353)
+	    88          97 (1792.400146)
+	    87          107 (1316.848267)
+	    86          123 (1505.188232)
+	    85          110 (4650.953125)
+	    84          108 (1918.645386)
+	    83          102 (2218.513428)
+	    82          101 (8120.783203)
+	    81          97 (2673.096680)
+	    80          120 (3992.809570)
+	    79          113 (1719.113159)
+	    78          124 (1350.359375)
+	    77          135 (7187.560547)
+	    76          118 (2939.927246)
+	    75          94 (2666.347168)
+	    74          118 (7270.736328)
+	    73          138 (1353.602295)
+	    72          109 (4281.084473)
+	    71          142 (1227.232300)
+	    70          109 (1090.061768)
+	    69          115 (1193.124634)
+	    68          98 (1119.404053)
+	    67          108 (7566.292480)
+	    66          121 (1176.049561)
+	    65          83 (1070.932007)
+	    64          122 (1158.453857)
+	    63          129 (1133.170410)
+	    62          149 (1156.435059)
+	    61          98 (4504.708496)
+	    60          126 (1280.169067)
+	    59          141 (3771.893555)
+	    58          141 (3639.823242)
+	    57          166 (3317.713379)
+	    56          133 (3893.612305)
+	    55          152 (8062.545898)
+	    54          135 (6229.670410)
+	    53          145 (3218.341797)
+	    52          164 (7286.977051)
+	    51          145 (6025.292969)
+	    50          117 (1704.098877)
+	    49          129 (4261.052246)
+	    48          135 (6477.550781)
+	    47          109 (7537.674316)
+	    46          140 (1399.039062)
+	    45          107 (1377.252808)
+	    44          86 (14614.794922)
+	    43          111 (4336.730469)
+	    42          99 (1389.939575)
+	    41          135 (9194.492188)
+	    40          113 (7442.849609)
+	    39          104 (11536.942383)
+	    38          104 (8138.025879)
+	    37          107 (4279.841797)
+	    36          95 (5727.215820)
+	    35          164 (3320.621094)
+	    34          162 (3183.814453)
+	    33          109 (999.485657)
+	    32          142 (1558.414429)
+	    31          133 (1422.847290)
+	    30          112 (4251.216309)
+	    29          97 (15578.787109)
+	    28          170 (3315.219971)
+	    27          107 (1210.528442)
+	    26          169 (3676.518555)
+	    25          86 (5365.413574)
+	    24          173 (5201.346191)
+	    23          194 (4715.898926)
+	    22          1251 (1509.164551)
+	    21          43 (17662.074219)
+	    20          80 (5206.768555)
+	    19          120 (4237.760254)
+	    18          82 (5449.231934)
+	    17          95 (4944.398926)
+	    16          512 (3451.822754)
+	    15          30 (12743.501953)
+	    14          18 (40663.734375)
+	    13          27 (15132.049805)
+	    12          20 (40951.917969)
+	    11          29 (771.675110)
+	    10          20 (1121.909424)
+	    9          16 (1684.201050)
+	    8          24 (907.469238)
+	    7          36 (843.382324)
+	    6          28 (608.954529)
+	    5          4 (522.946411)
+	    4          22 (942.425781)
+	    3          8 (907.468811)
+	    2          9 (864.744080)
+	    1          15 (522.946350)
+	    0          27 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15807354
+	          completely visible: 8637866
+	        completely invisible: 1810319
+	           partially visible: 5359169
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10014584
+	       Common for 3 siblings: 2980548
+	       Common for 2 siblings: 1249230
+	       Common for no sibling: 1012129
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29713.1
+	Avg. interactions per element:362.2
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	9m23.671s
+user	7m20.315s
+sys	0m1.184s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 8
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716137799793839
+	Overall end time	    1716138118582559
+	Total time with initialization	           318788720
+	Total time without initialization	           318788644
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31751 (5326.784668)
+	    100          109 (1959.612549)
+	    99          101 (4528.731445)
+	    98          110 (2088.646973)
+	    97          98 (1491.902100)
+	    96          118 (2776.847900)
+	    95          99 (1189.967651)
+	    94          77 (2263.163818)
+	    93          74 (6126.457520)
+	    92          111 (4526.070801)
+	    91          105 (1401.212402)
+	    90          83 (4632.569824)
+	    89          150 (2235.045410)
+	    88          101 (1680.825684)
+	    87          108 (1310.448364)
+	    86          132 (4026.976318)
+	    85          119 (1330.336792)
+	    84          102 (2328.850098)
+	    83          94 (1341.636353)
+	    82          119 (7730.250488)
+	    81          106 (2533.233887)
+	    80          139 (3623.339600)
+	    79          115 (1682.391479)
+	    78          113 (1475.802124)
+	    77          128 (4204.254395)
+	    76          117 (3707.747559)
+	    75          100 (5938.904297)
+	    74          121 (7124.241211)
+	    73          131 (1404.736450)
+	    72          126 (3803.095947)
+	    71          113 (1258.087158)
+	    70          107 (1071.461548)
+	    69          130 (1171.525269)
+	    68          91 (1087.206421)
+	    67          104 (7809.165039)
+	    66          115 (1192.749756)
+	    65          87 (1078.062866)
+	    64          118 (1162.311890)
+	    63          140 (1093.475342)
+	    62          136 (1197.856079)
+	    61          113 (4033.007812)
+	    60          125 (1302.030151)
+	    59          137 (3768.980957)
+	    58          152 (3436.773926)
+	    57          166 (3380.900146)
+	    56          110 (4496.201172)
+	    55          130 (9237.144531)
+	    54          145 (5882.313965)
+	    53          151 (3094.186768)
+	    52          163 (7357.183105)
+	    51          147 (5978.423340)
+	    50          104 (1865.725220)
+	    49          128 (4285.709473)
+	    48          146 (6038.102539)
+	    47          103 (7967.446777)
+	    46          139 (1727.041626)
+	    45          117 (1350.269287)
+	    44          95 (12852.680664)
+	    43          122 (4417.977539)
+	    42          95 (973.394897)
+	    41          122 (10072.880859)
+	    40          114 (10346.934570)
+	    39          96 (8833.389648)
+	    38          110 (10864.666992)
+	    37          101 (1121.281128)
+	    36          93 (5868.166504)
+	    35          168 (3242.384277)
+	    34          155 (3307.333740)
+	    33          106 (995.328003)
+	    32          133 (1677.788086)
+	    31          140 (1396.238281)
+	    30          111 (4242.156738)
+	    29          92 (16473.679688)
+	    28          176 (3209.329590)
+	    27          103 (1163.275269)
+	    26          169 (3720.441162)
+	    25          91 (5104.815430)
+	    24          170 (5289.608887)
+	    23          195 (4663.908691)
+	    22          1247 (1509.099121)
+	    21          41 (18458.814453)
+	    20          87 (4815.716797)
+	    19          117 (4335.654785)
+	    18          70 (6159.792480)
+	    17          102 (4695.191406)
+	    16          517 (4125.124023)
+	    15          26 (14505.272461)
+	    14          14 (26277.468750)
+	    13          30 (13748.044922)
+	    12          20 (40951.917969)
+	    11          29 (771.675110)
+	    10          20 (1121.909424)
+	    9          16 (1684.201050)
+	    8          24 (907.469238)
+	    7          36 (843.382324)
+	    6          28 (608.954529)
+	    5          4 (522.946411)
+	    4          25 (1015.135559)
+	    3          5 (522.946411)
+	    2          9 (864.744080)
+	    1          15 (522.946350)
+	    0          27 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15820693
+	          completely visible: 8646740
+	        completely invisible: 1810490
+	           partially visible: 5363463
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10023544
+	       Common for 3 siblings: 2983251
+	       Common for 2 siblings: 1249730
+	       Common for no sibling: 1012746
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29738.1
+	Avg. interactions per element:362.5
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	9m23.872s
+user	7m20.695s
+sys	0m1.001s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 4:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716138371797472
+	Overall end time	    1716138536600652
+	Total time with initialization	           164803180
+	Total time without initialization	           164799021
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32292 (5261.825195)
+	    100          86 (2341.612061)
+	    99          95 (5906.123047)
+	    98          116 (2144.417236)
+	    97          101 (1117.492920)
+	    96          108 (2495.500977)
+	    95          96 (1389.995728)
+	    94          75 (6991.541016)
+	    93          110 (1380.046143)
+	    92          128 (4712.305176)
+	    91          69 (2727.653076)
+	    90          103 (2994.343262)
+	    89          92 (1188.735596)
+	    88          96 (4677.997070)
+	    87          106 (1175.246216)
+	    86          116 (2017.022583)
+	    85          117 (4482.500977)
+	    84          105 (5269.728027)
+	    83          135 (3797.482666)
+	    82          81 (3488.249268)
+	    81          96 (5593.021484)
+	    80          76 (3124.102295)
+	    79          84 (1421.410156)
+	    78          77 (3712.240967)
+	    77          101 (1113.812134)
+	    76          127 (2452.249512)
+	    75          102 (7054.091309)
+	    74          91 (2086.473877)
+	    73          102 (4417.110840)
+	    72          124 (3965.425049)
+	    71          104 (1683.828369)
+	    70          92 (1293.321655)
+	    69          100 (1268.272461)
+	    68          83 (5419.897461)
+	    67          114 (1116.723633)
+	    66          80 (5325.564453)
+	    65          127 (3675.274658)
+	    64          106 (1119.716064)
+	    63          115 (1284.462769)
+	    62          128 (3685.717041)
+	    61          124 (1202.245483)
+	    60          145 (910.113281)
+	    59          162 (9372.414062)
+	    58          160 (3509.667236)
+	    57          140 (1072.583252)
+	    56          146 (6119.020020)
+	    55          109 (4384.359375)
+	    54          140 (5851.148438)
+	    53          114 (4402.964355)
+	    52          116 (4232.147949)
+	    51          131 (1171.318359)
+	    50          149 (3335.765625)
+	    49          145 (3626.240479)
+	    48          126 (9177.325195)
+	    47          82 (14823.448242)
+	    46          114 (1858.536743)
+	    45          94 (1778.541382)
+	    44          126 (4553.519043)
+	    43          101 (1538.495850)
+	    42          111 (10641.194336)
+	    41          117 (1449.588257)
+	    40          123 (4019.363281)
+	    39          111 (4235.003418)
+	    38          108 (14558.816406)
+	    37          119 (10001.454102)
+	    36          140 (1400.914062)
+	    35          155 (3580.800049)
+	    34          121 (4511.558594)
+	    33          91 (5774.646973)
+	    32          92 (998.748413)
+	    31          127 (3732.723877)
+	    30          95 (4602.008789)
+	    29          108 (10876.398438)
+	    28          118 (7520.266602)
+	    27          125 (7073.009277)
+	    26          136 (1305.386475)
+	    25          89 (1429.334961)
+	    24          120 (10123.308594)
+	    23          197 (1098.359619)
+	    22          1243 (1493.290283)
+	    21          58 (7194.158203)
+	    20          74 (917.685608)
+	    19          135 (11756.062500)
+	    18          100 (4635.580078)
+	    17          91 (12880.348633)
+	    16          510 (2759.537842)
+	    15          23 (16361.119141)
+	    14          15 (24880.646484)
+	    13          21 (1087.397217)
+	    12          47 (25647.664062)
+	    11          32 (1065.673828)
+	    10          25 (805.022095)
+	    9          28 (1659.031128)
+	    8          11 (1291.991333)
+	    7          36 (653.928833)
+	    6          23 (890.750793)
+	    5          24 (522.946350)
+	    4          13 (759.575562)
+	    2          8 (907.468811)
+	    1          9 (864.744080)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    4
+	Number of task queues:   4
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 16281271
+	          completely visible: 8781353
+	        completely invisible: 1928438
+	           partially visible: 5571480
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10252336
+	       Common for 3 siblings: 3119694
+	       Common for 2 siblings: 1300674
+	       Common for no sibling: 1054554
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  30603.9
+	Avg. interactions per element:373.1
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	7m15.710s
+user	7m43.939s
+sys	0m1.312s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 4:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716138814585956
+	Overall end time	    1716138979406264
+	Total time with initialization	           164820308
+	Total time without initialization	           164820160
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32269 (5265.386719)
+	    100          91 (2280.489746)
+	    99          77 (7129.436523)
+	    98          126 (2027.053833)
+	    97          102 (1140.641846)
+	    96          112 (2394.144775)
+	    95          82 (1495.096802)
+	    94          91 (6052.925293)
+	    93          109 (1287.259644)
+	    92          136 (4538.007324)
+	    91          61 (2733.048828)
+	    90          109 (1798.536499)
+	    89          87 (2653.656250)
+	    88          100 (4510.905762)
+	    87          115 (1082.234497)
+	    86          115 (2098.942627)
+	    85          107 (5647.847168)
+	    84          113 (4342.058594)
+	    83          125 (4033.223145)
+	    82          71 (4900.804688)
+	    81          90 (5001.391602)
+	    80          82 (2968.514648)
+	    79          90 (1438.877441)
+	    78          94 (3076.431396)
+	    77          99 (1027.814453)
+	    76          120 (2581.798340)
+	    75          105 (5491.927734)
+	    74          101 (3244.221191)
+	    73          91 (4938.599609)
+	    72          113 (1258.892334)
+	    71          110 (4766.812012)
+	    70          85 (1301.699829)
+	    69          106 (1231.769287)
+	    68          79 (5566.186523)
+	    67          100 (4538.977539)
+	    66          103 (1058.659180)
+	    65          125 (3824.592529)
+	    64          113 (1168.363647)
+	    63          99 (1200.683716)
+	    62          142 (3402.634766)
+	    61          121 (1280.061279)
+	    60          129 (856.740417)
+	    59          161 (9408.459961)
+	    58          176 (3270.441650)
+	    57          127 (1063.987549)
+	    56          142 (3891.157959)
+	    55          121 (6793.454102)
+	    54          138 (5921.615723)
+	    53          104 (4357.472168)
+	    52          130 (3971.903809)
+	    51          145 (1102.583008)
+	    50          150 (3568.881592)
+	    49          147 (5842.577148)
+	    48          119 (6841.548340)
+	    47          78 (15986.916992)
+	    46          112 (1645.940186)
+	    45          107 (1656.122559)
+	    44          118 (4432.601074)
+	    43          110 (1773.136963)
+	    42          117 (9879.432617)
+	    41          101 (1490.430176)
+	    40          118 (4124.090820)
+	    39          123 (3881.828857)
+	    38          105 (14764.039062)
+	    37          127 (9590.541992)
+	    36          141 (1400.840820)
+	    35          155 (4048.547607)
+	    34          113 (4508.444336)
+	    33          93 (5282.406250)
+	    32          101 (1326.284546)
+	    31          118 (3972.114990)
+	    30          111 (4083.671143)
+	    29          102 (11438.229492)
+	    28          117 (7572.516602)
+	    27          123 (7141.011719)
+	    26          135 (1291.831177)
+	    25          90 (1506.837158)
+	    24          119 (10197.210938)
+	    23          185 (1101.237793)
+	    22          1252 (1489.486938)
+	    21          61 (6903.888184)
+	    20          71 (901.869812)
+	    19          136 (11679.121094)
+	    18          97 (4734.248535)
+	    17          99 (11917.490234)
+	    16          506 (2777.217773)
+	    15          21 (17796.273438)
+	    14          18 (20949.205078)
+	    13          21 (1087.397217)
+	    12          47 (25647.664062)
+	    11          33 (1072.531982)
+	    10          27 (841.094116)
+	    9          22 (1759.132690)
+	    8          11 (1291.991333)
+	    7          36 (653.928833)
+	    6          23 (890.750793)
+	    5          24 (522.946350)
+	    4          13 (759.575562)
+	    2          8 (907.468811)
+	    1          9 (864.744080)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    4
+	Number of task queues:   4
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 16268276
+	          completely visible: 8779172
+	        completely invisible: 1922091
+	           partially visible: 5567013
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10242020
+	       Common for 3 siblings: 3118002
+	       Common for 2 siblings: 1299400
+	       Common for no sibling: 1053952
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  30579.5
+	Avg. interactions per element:372.8
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	7m14.897s
+user	7m43.806s
+sys	0m1.048s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 4
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 4:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716139257412928
+	Overall end time	    1716139422324760
+	Total time with initialization	           164911832
+	Total time without initialization	           164911685
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32248 (5268.017578)
+	    100          90 (2174.648682)
+	    99          89 (6419.232422)
+	    98          121 (2020.650879)
+	    97          92 (1200.067749)
+	    96          121 (2340.350586)
+	    95          75 (1566.193359)
+	    94          92 (5866.975098)
+	    93          108 (4500.361816)
+	    92          112 (2283.420410)
+	    91          76 (2373.483887)
+	    90          104 (3047.009033)
+	    89          86 (1143.153809)
+	    88          108 (4247.371582)
+	    87          116 (1175.957275)
+	    86          109 (2144.896240)
+	    85          107 (5656.861328)
+	    84          117 (4159.124512)
+	    83          103 (4650.008301)
+	    82          92 (3847.809326)
+	    81          105 (4404.014160)
+	    80          84 (2896.904541)
+	    79          100 (1410.544678)
+	    78          88 (3384.688965)
+	    77          93 (1208.563721)
+	    76          114 (2576.882324)
+	    75          107 (5813.422852)
+	    74          87 (3192.277588)
+	    73          98 (8127.943848)
+	    72          113 (1268.249878)
+	    71          129 (1591.163818)
+	    70          86 (1272.396118)
+	    69          108 (1343.413452)
+	    68          80 (5351.903809)
+	    67          96 (4713.245117)
+	    66          90 (1210.879150)
+	    65          121 (3792.789307)
+	    64          112 (1213.189453)
+	    63          104 (1221.481079)
+	    62          150 (3256.238281)
+	    61          109 (1258.331177)
+	    60          145 (924.739990)
+	    59          162 (11430.587891)
+	    58          159 (1403.970581)
+	    57          132 (1008.407227)
+	    56          162 (5616.866211)
+	    55          110 (4293.764160)
+	    54          146 (5639.954590)
+	    53          113 (4431.552734)
+	    52          124 (4030.186035)
+	    51          146 (3462.512451)
+	    50          147 (1062.913696)
+	    49          127 (4023.195312)
+	    48          124 (12063.001953)
+	    47          83 (10556.942383)
+	    46          116 (1522.864014)
+	    45          111 (1609.546875)
+	    44          129 (4124.069824)
+	    43          111 (1480.889893)
+	    42          107 (11002.554688)
+	    41          109 (1867.990845)
+	    40          109 (4420.551270)
+	    39          117 (7124.911133)
+	    38          105 (14530.442383)
+	    37          129 (6877.887695)
+	    36          139 (1393.243408)
+	    35          161 (3716.908691)
+	    34          121 (4514.088867)
+	    33          88 (5552.830566)
+	    32          100 (1294.292847)
+	    31          128 (6416.393555)
+	    30          107 (4331.776367)
+	    29          97 (8326.006836)
+	    28          126 (7075.991699)
+	    27          102 (8494.834961)
+	    26          138 (1298.477295)
+	    25          91 (1460.838745)
+	    24          120 (10096.443359)
+	    23          189 (1105.940430)
+	    22          1255 (1486.563843)
+	    21          58 (7194.158203)
+	    20          74 (917.685608)
+	    19          132 (11990.398438)
+	    18          108 (4393.532715)
+	    17          91 (12841.490234)
+	    16          506 (2777.834961)
+	    15          22 (17046.080078)
+	    14          18 (20949.205078)
+	    13          18 (1053.297729)
+	    12          44 (27308.279297)
+	    11          34 (1078.986816)
+	    10          27 (841.094116)
+	    9          28 (1659.031128)
+	    8          11 (1291.991333)
+	    7          36 (653.928833)
+	    6          19 (806.278687)
+	    5          28 (632.809998)
+	    4          13 (759.575562)
+	    2          8 (907.468811)
+	    1          9 (864.744080)
+	    0          31 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    4
+	Number of task queues:   4
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 16262143
+	          completely visible: 8777598
+	        completely invisible: 1921629
+	           partially visible: 5562916
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10240772
+	       Common for 3 siblings: 3116997
+	       Common for 2 siblings: 1297488
+	       Common for no sibling: 1053639
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  30567.9
+	Avg. interactions per element:372.6
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	7m15.536s
+user	7m44.142s
+sys	0m1.181s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 8:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716139700402916
+	Overall end time	    1716139779324812
+	Total time with initialization	            78921896
+	Total time without initialization	            78921599
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31742 (5340.448730)
+	    100          101 (2039.156616)
+	    99          70 (2404.978516)
+	    98          100 (2033.295898)
+	    97          114 (1773.978394)
+	    96          111 (2189.339844)
+	    95          107 (5305.206055)
+	    94          118 (1453.782349)
+	    93          114 (4555.333984)
+	    92          103 (1158.295654)
+	    91          106 (2640.123779)
+	    90          137 (2023.028687)
+	    89          115 (1285.282715)
+	    88          110 (1279.661133)
+	    87          104 (2092.229980)
+	    86          116 (1673.275879)
+	    85          85 (1203.397461)
+	    84          87 (1567.647949)
+	    83          124 (2347.423828)
+	    82          104 (6497.340820)
+	    81          107 (1237.958618)
+	    80          129 (2139.937988)
+	    79          96 (1204.819946)
+	    78          84 (2133.979980)
+	    77          103 (1190.505249)
+	    76          113 (2514.565430)
+	    75          123 (2471.133057)
+	    74          106 (4430.687500)
+	    73          96 (5857.419434)
+	    72          107 (4469.961426)
+	    71          112 (8376.970703)
+	    70          130 (4602.506836)
+	    69          129 (6841.336426)
+	    68          128 (1141.533081)
+	    67          129 (941.404907)
+	    66          91 (4996.814453)
+	    65          131 (3664.060791)
+	    64          102 (1037.122192)
+	    63          105 (1323.030029)
+	    62          110 (1151.163940)
+	    61          166 (1250.773071)
+	    60          115 (1007.707886)
+	    59          92 (4794.935059)
+	    58          143 (5897.126953)
+	    57          134 (3877.683105)
+	    56          149 (3552.372559)
+	    55          145 (1269.917725)
+	    54          135 (6184.454102)
+	    53          115 (7450.617188)
+	    52          159 (3296.575195)
+	    51          150 (3474.386963)
+	    50          145 (3818.468994)
+	    49          130 (1452.912476)
+	    48          135 (11130.451172)
+	    47          91 (12966.693359)
+	    46          150 (1248.591919)
+	    45          130 (9773.358398)
+	    44          123 (7621.060547)
+	    43          131 (3723.322021)
+	    42          123 (4576.987793)
+	    41          119 (952.724609)
+	    40          120 (8040.282715)
+	    39          117 (1310.207397)
+	    38          110 (4503.229492)
+	    37          139 (3918.156982)
+	    36          124 (7289.219727)
+	    35          172 (7302.343750)
+	    34          132 (3728.141357)
+	    33          87 (13882.067383)
+	    32          152 (1007.417969)
+	    31          136 (3676.521484)
+	    30          82 (1449.579834)
+	    29          120 (4318.051270)
+	    28          102 (11756.457031)
+	    27          78 (10613.038086)
+	    26          153 (3585.667969)
+	    25          118 (4321.510742)
+	    24          179 (1072.040894)
+	    23          174 (3084.266846)
+	    22          1234 (1218.164795)
+	    21          59 (7052.371582)
+	    20          74 (10773.668945)
+	    19          125 (9644.599609)
+	    18          102 (8064.921387)
+	    17          77 (1061.302979)
+	    16          530 (4086.114502)
+	    15          17 (22043.392578)
+	    14          22 (17227.976562)
+	    13          22 (1418.209106)
+	    12          52 (16310.994141)
+	    11          30 (12875.841797)
+	    10          23 (1339.041382)
+	    9          15 (522.946350)
+	    8          25 (1666.052368)
+	    7          38 (792.821106)
+	    5          20 (830.564331)
+	    4          21 (669.431091)
+	    3          8 (522.946350)
+	    2          4 (522.946411)
+	    1          17 (884.849854)
+	    0          39 (522.946533)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    8
+	Number of task queues:   8
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43628
+	Total number of interactions: 15497344
+	          completely visible: 8393185
+	        completely invisible: 1780796
+	           partially visible: 5323363
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9676540
+	       Common for 3 siblings: 2992116
+	       Common for 2 siblings: 1248440
+	       Common for no sibling: 1021087
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29130.3
+	Avg. interactions per element:355.2
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.66%
+
+real	5m48.098s
+user	7m28.464s
+sys	0m1.371s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 8:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716140056546985
+	Overall end time	    1716140136441871
+	Total time with initialization	            79894886
+	Total time without initialization	            79894510
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31887 (5323.949707)
+	    100          94 (1892.568604)
+	    99          98 (1562.477051)
+	    98          101 (2895.593750)
+	    97          115 (2348.934814)
+	    96          82 (1681.238403)
+	    95          90 (5255.587891)
+	    94          113 (1187.585083)
+	    93          116 (1766.072876)
+	    92          94 (4986.567383)
+	    91          111 (2475.690430)
+	    90          135 (2047.693237)
+	    89          98 (2193.141602)
+	    88          92 (1296.536743)
+	    87          104 (1449.217651)
+	    86          105 (1760.721680)
+	    85          104 (1196.206787)
+	    84          100 (1473.633911)
+	    83          126 (2795.967773)
+	    82          140 (2206.871094)
+	    81          106 (4373.234375)
+	    80          101 (2487.389404)
+	    79          98 (1189.789429)
+	    78          92 (2343.426025)
+	    77          102 (1020.773926)
+	    76          95 (1218.343384)
+	    75          139 (2300.062256)
+	    74          89 (6469.574219)
+	    73          94 (6900.248535)
+	    72          114 (4455.746582)
+	    71          114 (4564.283203)
+	    70          124 (6681.395508)
+	    69          112 (1919.193237)
+	    68          140 (6228.996582)
+	    67          118 (1129.037476)
+	    66          93 (4737.955078)
+	    65          120 (3900.472900)
+	    64          108 (1103.669556)
+	    63          104 (1327.077026)
+	    62          138 (1060.811890)
+	    61          156 (1082.985474)
+	    60          126 (1065.771973)
+	    59          97 (4677.135254)
+	    58          129 (6486.807129)
+	    57          132 (3756.538330)
+	    56          135 (1483.220337)
+	    55          140 (3607.331299)
+	    54          144 (4073.338135)
+	    53          117 (9853.157227)
+	    52          181 (1139.736938)
+	    51          131 (1228.529053)
+	    50          137 (6771.707031)
+	    49          137 (6029.672363)
+	    48          125 (3952.797119)
+	    47          109 (11358.830078)
+	    46          118 (9760.334961)
+	    45          127 (4484.231934)
+	    44          105 (4953.460938)
+	    43          134 (9503.131836)
+	    42          124 (3976.576172)
+	    41          120 (3936.190674)
+	    40          102 (5155.627930)
+	    39          143 (1306.592896)
+	    38          112 (5475.815918)
+	    37          126 (3963.648926)
+	    36          159 (5612.663574)
+	    35          122 (9889.482422)
+	    34          133 (9294.143555)
+	    33          76 (1538.409546)
+	    32          168 (972.176331)
+	    31          123 (6673.653809)
+	    30          92 (1421.488403)
+	    29          111 (8185.337891)
+	    28          101 (8225.440430)
+	    27          90 (9324.003906)
+	    26          146 (3727.468262)
+	    25          140 (3547.885986)
+	    24          141 (1165.036865)
+	    23          193 (2827.012207)
+	    22          1210 (1220.946533)
+	    21          61 (6927.293945)
+	    20          70 (6263.090820)
+	    19          143 (8475.958008)
+	    18          86 (9385.844727)
+	    17          69 (6331.842285)
+	    16          525 (4110.961426)
+	    15          21 (17944.259766)
+	    14          29 (899.608154)
+	    13          17 (43859.191406)
+	    12          55 (15705.478516)
+	    11          30 (779.295044)
+	    10          26 (1126.562134)
+	    9          13 (1415.036377)
+	    8          22 (981.977295)
+	    7          34 (753.740784)
+	    5          20 (830.564331)
+	    4          21 (669.431091)
+	    3          8 (522.946350)
+	    2          8 (907.468811)
+	    1          13 (759.575562)
+	    0          39 (522.946533)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    8
+	Number of task queues:   8
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43628
+	Total number of interactions: 15676584
+	          completely visible: 8481612
+	        completely invisible: 1810625
+	           partially visible: 5384347
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9806512
+	       Common for 3 siblings: 3020772
+	       Common for 2 siblings: 1258318
+	       Common for no sibling: 1029622
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29467.3
+	Avg. interactions per element:359.3
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.66%
+
+real	5m54.790s
+user	7m35.069s
+sys	0m1.545s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 2
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 8:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716140418538596
+	Overall end time	    1716140497292683
+	Total time with initialization	            78754087
+	Total time without initialization	            78753747
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31765 (5333.820801)
+	    100          84 (1444.391968)
+	    99          65 (2630.844482)
+	    98          110 (2693.861084)
+	    97          119 (1713.087891)
+	    96          110 (5641.333984)
+	    95          98 (1300.730835)
+	    94          100 (2433.261963)
+	    93          115 (2170.049561)
+	    92          122 (3919.135254)
+	    91          108 (2145.305908)
+	    90          116 (2321.028320)
+	    89          132 (1367.542725)
+	    88          91 (1623.586914)
+	    87          112 (2174.982422)
+	    86          114 (1484.898560)
+	    85          68 (1313.118286)
+	    84          92 (2038.786133)
+	    83          140 (1764.685303)
+	    82          91 (3609.492188)
+	    81          124 (3860.906982)
+	    80          101 (2587.896484)
+	    79          89 (1230.070435)
+	    78          97 (1616.461792)
+	    77          97 (1611.213257)
+	    76          120 (2321.065186)
+	    75          120 (2374.152588)
+	    74          114 (4400.105469)
+	    73          118 (4839.062988)
+	    72          105 (5376.925781)
+	    71          124 (4190.491211)
+	    70          123 (7610.648438)
+	    69          114 (4603.017578)
+	    68          126 (3955.177002)
+	    67          125 (3655.516113)
+	    66          105 (1235.286133)
+	    65          106 (4221.070801)
+	    64          104 (1084.191284)
+	    63          110 (1313.062378)
+	    62          108 (1132.827271)
+	    61          165 (1129.903076)
+	    60          126 (979.571411)
+	    59          112 (1162.146729)
+	    58          107 (10587.269531)
+	    57          147 (3715.409912)
+	    56          135 (3686.440430)
+	    55          161 (3295.281738)
+	    54          130 (3909.306396)
+	    53          114 (7611.878418)
+	    52          182 (3123.755859)
+	    51          126 (4236.859863)
+	    50          147 (3392.838135)
+	    49          131 (1413.363281)
+	    48          121 (9574.522461)
+	    47          109 (11003.546875)
+	    46          144 (6170.515625)
+	    45          124 (4345.042969)
+	    44          137 (6809.094727)
+	    43          137 (3780.575928)
+	    42          127 (7194.549316)
+	    41          118 (960.058899)
+	    40          104 (8893.191406)
+	    39          117 (1521.890991)
+	    38          114 (4742.517578)
+	    37          125 (4239.346680)
+	    36          136 (6409.954590)
+	    35          156 (10265.532227)
+	    34          138 (6218.029297)
+	    33          99 (1752.322266)
+	    32          148 (3273.742920)
+	    31          127 (1147.484131)
+	    30          97 (1341.560669)
+	    29          119 (7169.640625)
+	    28          108 (10877.457031)
+	    27          78 (11095.591797)
+	    26          165 (3357.815430)
+	    25          114 (4118.850098)
+	    24          154 (1327.290405)
+	    23          172 (3123.421631)
+	    22          1250 (1504.001343)
+	    21          58 (855.226807)
+	    20          76 (10560.518555)
+	    19          127 (6690.739258)
+	    18          101 (11715.853516)
+	    17          75 (1055.151245)
+	    16          530 (4086.114502)
+	    15          21 (17944.259766)
+	    14          26 (14657.970703)
+	    13          23 (1412.721436)
+	    12          49 (17293.304688)
+	    11          25 (15315.660156)
+	    10          30 (1225.523438)
+	    9          15 (522.946350)
+	    8          22 (1717.060547)
+	    7          38 (792.821106)
+	    5          20 (830.564331)
+	    4          21 (669.431091)
+	    3          8 (522.946350)
+	    2          8 (907.468811)
+	    1          13 (759.575562)
+	    0          39 (522.946533)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    8
+	Number of task queues:   8
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43628
+	Total number of interactions: 15508441
+	          completely visible: 8402756
+	        completely invisible: 1781209
+	           partially visible: 5324476
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9690324
+	       Common for 3 siblings: 2993589
+	       Common for 2 siblings: 1246294
+	       Common for no sibling: 1019915
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29151.2
+	Avg. interactions per element:355.5
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.66%
+
+real	5m47.887s
+user	7m27.809s
+sys	0m1.319s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 16:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716140774205321
+	Overall end time	    1716140818813380
+	Total time with initialization	            44608059
+	Total time without initialization	            44607912
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32107 (5288.278320)
+	    100          119 (4237.636230)
+	    99          87 (2197.801758)
+	    98          90 (1232.832275)
+	    97          102 (4561.928223)
+	    96          80 (2585.585938)
+	    95          90 (1500.135254)
+	    94          95 (4729.755371)
+	    93          91 (2948.033691)
+	    92          114 (2238.846436)
+	    91          73 (1824.092285)
+	    90          126 (1234.857300)
+	    89          102 (2525.191895)
+	    88          114 (1080.328003)
+	    87          102 (2916.677734)
+	    86          108 (1361.414551)
+	    85          83 (6485.201660)
+	    84          101 (1689.160156)
+	    83          93 (2957.557129)
+	    82          110 (2934.218018)
+	    81          79 (6422.281250)
+	    80          132 (4769.489746)
+	    79          69 (1394.577637)
+	    78          89 (2844.509277)
+	    77          94 (1470.945679)
+	    76          134 (1172.772339)
+	    75          85 (11810.323242)
+	    74          98 (4949.908691)
+	    73          112 (8405.705078)
+	    72          117 (1362.937744)
+	    71          90 (4723.674805)
+	    70          117 (1137.857178)
+	    69          160 (1312.834839)
+	    68          137 (3614.669678)
+	    67          110 (1102.728638)
+	    66          117 (4089.956299)
+	    65          94 (1075.567993)
+	    64          79 (1730.391357)
+	    63          101 (1108.137085)
+	    62          121 (1169.285522)
+	    61          133 (1133.461792)
+	    60          133 (6335.633789)
+	    59          135 (6161.442871)
+	    58          114 (4030.168945)
+	    57          137 (3727.509033)
+	    56          93 (12208.110352)
+	    55          112 (1233.972290)
+	    54          163 (5734.777832)
+	    53          103 (7702.563477)
+	    52          159 (3324.172852)
+	    51          169 (1340.316895)
+	    50          123 (3906.042236)
+	    49          124 (4463.017578)
+	    48          132 (1436.763916)
+	    47          140 (3548.409668)
+	    46          102 (7906.637695)
+	    45          112 (10822.173828)
+	    44          110 (4837.536133)
+	    43          133 (6810.351562)
+	    42          119 (1096.093384)
+	    41          108 (4650.559570)
+	    40          147 (3512.862549)
+	    39          113 (14270.721680)
+	    38          129 (7063.251953)
+	    37          114 (4609.212891)
+	    36          88 (9110.234375)
+	    35          138 (8727.409180)
+	    34          167 (1746.398926)
+	    33          129 (1349.974731)
+	    32          141 (992.315186)
+	    31          143 (3618.123535)
+	    30          113 (7421.079102)
+	    29          66 (1866.435791)
+	    28          109 (10626.440430)
+	    27          121 (1426.553955)
+	    26          185 (3332.823975)
+	    25          93 (5152.242676)
+	    24          171 (5143.078613)
+	    23          193 (1032.572266)
+	    22          1239 (1208.429321)
+	    21          57 (13392.844727)
+	    20          90 (9010.368164)
+	    19          109 (1138.041870)
+	    18          56 (13898.528320)
+	    17          78 (10535.829102)
+	    16          490 (4316.711914)
+	    15          24 (15899.979492)
+	    14          20 (881.561401)
+	    13          30 (36694.441406)
+	    12          40 (12319.043945)
+	    11          40 (695.981934)
+	    10          20 (676.755310)
+	    9          22 (2367.626709)
+	    8          24 (875.425598)
+	    7          27 (811.522156)
+	    6          17 (984.534363)
+	    5          20 (676.755310)
+	    4          25 (769.040955)
+	    3          4 (522.946411)
+	    2          10 (830.564331)
+	    1          8 (907.468811)
+	    0          54 (522.946716)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15618169
+	          completely visible: 8499696
+	        completely invisible: 1794039
+	           partially visible: 5324434
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 9839088
+	       Common for 3 siblings: 2973678
+	       Common for 2 siblings: 1239218
+	       Common for no sibling: 1016878
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29357.5
+	Avg. interactions per element:357.9
+	Number of elements in equivalent uniform mesh: 32887
+	Elem(hierarchical)/Elem(uniform): 132.70%
+
+real	5m31.319s
+user	7m52.639s
+sys	0m2.531s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 16:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716141110017922
+	Overall end time	    1716141153054393
+	Total time with initialization	            43036471
+	Total time without initialization	            43035391
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32359 (5253.403809)
+	    100          69 (4082.177490)
+	    99          95 (4698.145508)
+	    98          95 (6441.864258)
+	    97          97 (1347.556396)
+	    96          100 (2807.330322)
+	    95          105 (1232.093750)
+	    94          102 (1086.005615)
+	    93          108 (1736.704834)
+	    92          65 (6549.432129)
+	    91          94 (1595.930298)
+	    90          110 (1212.705444)
+	    89          80 (2713.811035)
+	    88          72 (1906.858887)
+	    87          114 (1934.361328)
+	    86          86 (1167.944946)
+	    85          97 (2470.095703)
+	    84          117 (2317.035645)
+	    83          82 (2821.629639)
+	    82          103 (10032.145508)
+	    81          84 (6644.721680)
+	    80          74 (4341.706055)
+	    79          81 (1094.535522)
+	    78          103 (2742.220215)
+	    77          104 (1566.618042)
+	    76          107 (1163.486694)
+	    75          105 (5729.765625)
+	    74          86 (5271.854492)
+	    73          107 (7809.859375)
+	    72          113 (4921.791992)
+	    71          137 (6466.649902)
+	    70          142 (1079.389160)
+	    69          126 (1288.455444)
+	    68          85 (1177.175415)
+	    67          114 (4055.525391)
+	    66          103 (1167.863159)
+	    65          97 (1052.403687)
+	    64          101 (1312.083862)
+	    63          114 (1167.065674)
+	    62          118 (1098.591675)
+	    61          115 (1245.940918)
+	    60          141 (1625.382202)
+	    59          146 (3358.105225)
+	    58          93 (4722.071777)
+	    57          134 (8664.102539)
+	    56          144 (8573.002930)
+	    55          134 (6218.416016)
+	    54          168 (3129.081055)
+	    53          146 (1094.744019)
+	    52          162 (5520.717773)
+	    51          113 (4559.340332)
+	    50          147 (3427.264648)
+	    49          103 (1283.828857)
+	    48          136 (6122.910156)
+	    47          112 (10339.161133)
+	    46          91 (5240.096680)
+	    45          109 (5756.118652)
+	    44          102 (1494.740967)
+	    43          127 (6857.627441)
+	    42          100 (4688.020996)
+	    41          118 (1198.278076)
+	    40          128 (7157.780273)
+	    39          116 (13619.033203)
+	    38          117 (4204.690918)
+	    37          112 (4290.920410)
+	    36          130 (7117.953125)
+	    35          134 (1276.991333)
+	    34          123 (9998.805664)
+	    33          140 (3911.200928)
+	    32          152 (1005.623535)
+	    31          113 (4753.699707)
+	    30          113 (3964.851807)
+	    29          82 (1074.770142)
+	    28          121 (7048.364746)
+	    27          108 (7993.573730)
+	    26          172 (7555.464355)
+	    25          91 (1346.719482)
+	    24          135 (3668.545654)
+	    23          223 (2732.884033)
+	    22          1208 (1201.351562)
+	    21          62 (1043.543579)
+	    20          78 (5350.105469)
+	    19          111 (14198.987305)
+	    18          48 (8488.813477)
+	    17          83 (14226.379883)
+	    16          492 (3573.161865)
+	    15          15 (522.946350)
+	    14          23 (802.919983)
+	    13          17 (64737.398438)
+	    12          45 (10690.309570)
+	    11          50 (774.875854)
+	    10          25 (1057.378784)
+	    9          20 (1805.847290)
+	    8          31 (969.489075)
+	    7          16 (865.721985)
+	    6          13 (889.932251)
+	    5          24 (779.294861)
+	    4          21 (669.431091)
+	    3          5 (522.946411)
+	    2          13 (996.204773)
+	    1          16 (522.946350)
+	    0          42 (522.946594)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43660
+	Total number of interactions: 16203578
+	          completely visible: 8810363
+	        completely invisible: 1872644
+	           partially visible: 5520571
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10264096
+	       Common for 3 siblings: 3057639
+	       Common for 2 siblings: 1279712
+	       Common for no sibling: 1044368
+	Avg. elements per patch:      82.1
+	Avg. interactions per patch:  30457.9
+	Avg. interactions per element:371.1
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.70%
+
+real	5m53.330s
+user	8m12.875s
+sys	0m2.647s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.radiosity set latency: 1
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 16 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 16:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1716141468020843
+	Overall end time	    1716141511351181
+	Total time with initialization	            43330338
+	Total time without initialization	            43329640
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      32117 (5284.319824)
+	    100          78 (2727.876221)
+	    99          83 (1239.672119)
+	    98          106 (6045.984863)
+	    97          135 (3924.623047)
+	    96          92 (1623.713257)
+	    95          112 (2083.114746)
+	    94          106 (1262.337158)
+	    93          104 (1548.777832)
+	    92          86 (5400.231934)
+	    91          91 (1578.336060)
+	    90          100 (1257.047119)
+	    89          111 (2229.689697)
+	    88          98 (1615.926147)
+	    87          105 (2019.481201)
+	    86          99 (1171.411133)
+	    85          107 (2246.717529)
+	    84          127 (5195.299805)
+	    83          78 (2497.237549)
+	    82          95 (10811.596680)
+	    81          98 (1511.186279)
+	    80          102 (3307.913574)
+	    79          63 (1253.574097)
+	    78          119 (3032.933105)
+	    77          109 (1595.460571)
+	    76          104 (1212.606201)
+	    75          109 (4334.538086)
+	    74          80 (7513.424805)
+	    73          107 (11571.021484)
+	    72          102 (4646.262695)
+	    71          159 (3535.322021)
+	    70          134 (1171.588257)
+	    69          146 (1176.688110)
+	    68          93 (1503.523193)
+	    67          94 (4851.697266)
+	    66          103 (890.398193)
+	    65          71 (1051.816650)
+	    64          97 (1612.281738)
+	    63          127 (1116.250854)
+	    62          115 (1045.750488)
+	    61          114 (1236.770508)
+	    60          141 (1564.124390)
+	    59          149 (3299.057129)
+	    58          120 (6791.609375)
+	    57          118 (9644.828125)
+	    56          141 (3852.710938)
+	    55          136 (8612.109375)
+	    54          173 (3246.681396)
+	    53          117 (1226.788574)
+	    52          158 (3518.719971)
+	    51          109 (7841.060059)
+	    50          166 (1022.670471)
+	    49          110 (7523.596191)
+	    48          142 (3567.643066)
+	    47          116 (4390.261230)
+	    46          116 (7846.375977)
+	    45          107 (4708.305664)
+	    44          108 (1680.068237)
+	    43          150 (5770.138184)
+	    42          109 (7763.489746)
+	    41          120 (3916.997314)
+	    40          125 (3977.609619)
+	    39          112 (14093.398438)
+	    38          122 (4581.065918)
+	    37          105 (4895.191895)
+	    36          154 (6347.835449)
+	    35          128 (6516.870605)
+	    34          139 (6511.968750)
+	    33          137 (1262.976318)
+	    32          145 (973.620483)
+	    31          142 (3698.910645)
+	    30          110 (4542.476562)
+	    29          58 (7412.759277)
+	    28          121 (3997.763184)
+	    27          135 (9355.033203)
+	    26          171 (5493.574707)
+	    25          95 (1334.705566)
+	    24          134 (3763.355957)
+	    23          203 (2944.515625)
+	    22          1203 (1200.967163)
+	    21          55 (1205.009766)
+	    20          89 (4784.135742)
+	    19          110 (10965.839844)
+	    18          39 (19608.625000)
+	    17          87 (13638.744141)
+	    16          483 (3590.812256)
+	    15          26 (611.682251)
+	    14          27 (1023.589355)
+	    13          17 (64321.058594)
+	    12          42 (11603.385742)
+	    11          46 (796.782776)
+	    10          31 (874.466675)
+	    9          20 (1959.656006)
+	    8          17 (703.898071)
+	    7          16 (865.721985)
+	    6          17 (803.582581)
+	    5          16 (715.207581)
+	    4          25 (769.040955)
+	    3          4 (522.946411)
+	    2          14 (962.400574)
+	    1          12 (522.946350)
+	    0          46 (522.946655)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43660
+	Total number of interactions: 16213715
+	          completely visible: 8828291
+	        completely invisible: 1871796
+	           partially visible: 5513628
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10284860
+	       Common for 3 siblings: 3052047
+	       Common for 2 siblings: 1276236
+	       Common for no sibling: 1041121
+	Avg. elements per patch:      82.1
+	Avg. interactions per patch:  30476.9
+	Avg. interactions per element:371.4
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.70%
+
+real	5m56.607s
+user	8m16.376s
+sys	0m2.538s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec streamcluster set latency: 16
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 10 20 128 1000000 200000 5000 none output.txt 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 200000 points

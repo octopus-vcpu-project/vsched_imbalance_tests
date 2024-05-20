@@ -110,46 +110,46 @@ runPhoronixTests(){
 }
 
 runParsecTest(){
-    local test_size="native"  # Default test size
-    if [[ "$1" == "splash2x.ocean_ncp" ]]; then
-    	test_size="simlarge"
-    fi
-    if [[ "$1" == "streamcluster" ]]; then
-        test_size="simlarge"
-    fi
+    #local test_size="native"  # Default test size
+    #if [[ "$1" == "splash2x.ocean_ncp" ]]; then
+    #	test_size="simlarge"
+    #fi
+    #if [[ "$1" == "streamcluster" ]]; then
+     #   test_size="simlarge"
+    #fi
     for i in $(seq 1 1);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 16" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i $test_size">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
     for i in $(seq 1 3);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 8" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 2 -i $test_size">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 2 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
     for i in $(seq 1 3);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 4" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 4 -i $test_size">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 4 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
     for i in $(seq 1 3);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 2" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 8 -i $test_size">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 8 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
     for i in $(seq 1 3);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 1" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 16 -i $test_size">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 16 -i native">>"$OUTPUT_FILE"
     done
 }
 
@@ -176,7 +176,7 @@ runParsecTests(){
 #    runParsecTest "fluidanimate" 
  #   runParsecTest "freqmine"
 #    runParsecTest "raytrace" 
-    runParsecTest "streamcluster"
+  #  runParsecTest "streamcluster"
  #   runParsecTest "swaptions" 
  #   runParsecTest "x624"
  #   runParsecTest "splash2x.barnes"
@@ -184,7 +184,7 @@ runParsecTests(){
   #  runParsecTest "splash2x.lu_cb"
  #   runParsecTest "splash2x.lu_ncb"
   #  runParsecTest "splash2x.ocean_cp"
-    runParsecTest "splash2x.ocean_ncp"
+  #  runParsecTest "splash2x.ocean_ncp"
     runParsecTest "splash2x.radiosity"
  #   runParsecTest "splash2x.radix"
    # runParsecTest "splash2x.raytrace"

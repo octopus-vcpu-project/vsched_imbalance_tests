@@ -143,11 +143,11 @@ runParsecTest(){
 }
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -d 500 -u 25000" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 60 -s 12 -d 500 -u 25000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 10000 &  " & 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/vsched-large" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
 runPhoronixTest(){
@@ -178,7 +178,7 @@ runLatencyTests(){
 
 #parsec
 runParsecTests(){
-    runParsecTest "blackscholes"
+    #runParsecTest "blackscholes"
     runParsecTest "bodytrack"
     runParsecTest "canneal" 
     runParsecTest "dedup"

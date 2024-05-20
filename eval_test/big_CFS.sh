@@ -16,7 +16,7 @@ toggle_topological_passthrough(){
             break
         else
             echo "Waiting for VM to shutdown"
-            sleep 3 
+            sleep 3
         fi
     done
     virsh dumpxml $prob_vm > /tmp/$prob_vm.xml
@@ -141,8 +141,29 @@ runParsecTest(){
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 32 -i native">>"$OUTPUT_FILE"
     done
 }
+activate_vprobers(){
+    ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 30 -s 12 -d 500 -u 25000" &
+    ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
+    ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
+    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 10000 &  " & 
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/vsched-large" &
+    sleep 10
+}
+runPhoronixTest(){
+    for i in $(seq 1 1);do
+        sleep 3
+        echo "Running Phoronix $1"
+        echo "Running Phoronix $1" >> "$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo phoronix-test-suite batch-run $1">>"$OUTPUT_FILE"
+    done
+}
 
 
+runPhoronixTests(){
+        runPhoronixTest "compress-pbzip2"
+        runPhoronixTest "build-imagemagick"
+}
 #tailbench
 runLatencyTests(){
     runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
@@ -160,31 +181,32 @@ runParsecTests(){
     runParsecTest "blackscholes"
     runParsecTest "bodytrack"
     runParsecTest "canneal" 
-    runParsecTest "dedup"
-    runParsecTest "facesim" 
+#    runParsecTest "dedup"
+#    runParsecTest "facesim" 
     runParsecTest "fluidanimate" 
     runParsecTest "freqmine"
 #    runParsecTest "raytrace" 
     runParsecTest "streamcluster"
     runParsecTest "swaptions" 
     runParsecTest "x624"
-    runParsecTest "splash2x.barnes"
-    runParsecTest "splash2x.fft"
-    runParsecTest "splash2x.lu_cb"
-    runParsecTest "splash2x.lu_ncb"
+#    runParsecTest "splash2x.barnes"
+#    runParsecTest "splash2x.fft"
+ #   runParsecTest "splash2x.lu_cb"
+ #   runParsecTest "splash2x.lu_ncb"
     runParsecTest "splash2x.ocean_cp"
-    runParsecTest "splash2x.ocean_ncp"
-    runParsecTest "splash2x.radiosity"
-    runParsecTest "splash2x.radix"
-    runParsecTest "splash2x.raytrace"
+    #runParsecTest "splash2x.ocean_ncp"
+  #  runParsecTest "splash2x.radiosity"
+  #  runParsecTest "splash2x.radix"
+  #  runParsecTest "splash2x.raytrace"
     runParsecTest "splash2x.volrend"
-    runParsecTest "splash2x.water_spatial"
+ #   runParsecTest "splash2x.water_spatial"
 }
 
 sleep 10
-runLatencyTests
+#activate_vprobers
+#runLatencyTests
 runParsecTests
-
+runPhoronixTests
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 5000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us

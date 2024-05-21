@@ -1,0 +1,434 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4773882            1813406             0.380
+
+                       TIMING INFORMATION
+Start time                        : 1716332567041178
+Initialization finish time        : 1716332571526248
+Overall finish time               : 1716332576320441
+Total time with initialization    :          9279263
+Total time without initialization :          4794193
+    (excludes first timestep)
+
+
+real	0m9.429s
+user	1m3.015s
+sys	0m3.192s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           6069929            1926202             0.317
+
+                       TIMING INFORMATION
+Start time                        : 1716332581683060
+Initialization finish time        : 1716332586573573
+Overall finish time               : 1716332592673167
+Total time with initialization    :         10990107
+Total time without initialization :          6099594
+    (excludes first timestep)
+
+
+real	0m11.125s
+user	1m13.837s
+sys	0m4.328s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4858460            1940525             0.399
+
+                       TIMING INFORMATION
+Start time                        : 1716332597698566
+Initialization finish time        : 1716332602105340
+Overall finish time               : 1716332606979041
+Total time with initialization    :          9280475
+Total time without initialization :          4873701
+    (excludes first timestep)
+
+
+real	0m9.361s
+user	1m3.640s
+sys	0m2.252s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   110.38ms  169.39ms   1.43s    93.15%
+    Req/Sec   518.59    127.07     0.88k    80.76%
+  216901 requests in 1.00m, 23.90GB read
+  Socket errors: connect 0, read 0, write 0, timeout 292
+Requests/sec:   3609.40
+Transfer/sec:    407.34MB
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4697348            2016298             0.429
+
+                       TIMING INFORMATION
+Start time                        : 1716332695138838
+Initialization finish time        : 1716332699708638
+Overall finish time               : 1716332704425296
+Total time with initialization    :          9286458
+Total time without initialization :          4716658
+    (excludes first timestep)
+
+
+real	0m9.377s
+user	1m8.112s
+sys	0m2.375s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4625767            1953620             0.422
+
+                       TIMING INFORMATION
+Start time                        : 1716332709167499
+Initialization finish time        : 1716332713703569
+Overall finish time               : 1716332718341612
+Total time with initialization    :          9174113
+Total time without initialization :          4638043
+    (excludes first timestep)
+
+
+real	0m9.250s
+user	1m7.341s
+sys	0m2.241s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4563177            1907465             0.418
+
+                       TIMING INFORMATION
+Start time                        : 1716332723235213
+Initialization finish time        : 1716332727535159
+Overall finish time               : 1716332732124651
+Total time with initialization    :          8889438
+Total time without initialization :          4589492
+    (excludes first timestep)
+
+
+real	0m8.973s
+user	1m7.412s
+sys	0m2.318s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    81.53ms   80.74ms 930.68ms   95.69%
+    Req/Sec   501.64    121.29   820.00     68.67%
+  228766 requests in 1.00m, 25.22GB read
+Requests/sec:   3807.19
+Transfer/sec:    429.73MB
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4529055            1875918             0.414
+
+                       TIMING INFORMATION
+Start time                        : 1716332798054659
+Initialization finish time        : 1716332802627991
+Overall finish time               : 1716332807173236
+Total time with initialization    :          9118577
+Total time without initialization :          4545245
+    (excludes first timestep)
+
+
+real	0m9.199s
+user	1m10.503s
+sys	0m2.297s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4560782            1920098             0.421
+
+                       TIMING INFORMATION
+Start time                        : 1716332811758157
+Initialization finish time        : 1716332816227882
+Overall finish time               : 1716332820813624
+Total time with initialization    :          9055467
+Total time without initialization :          4585742
+    (excludes first timestep)
+
+
+real	0m9.149s
+user	1m9.511s
+sys	0m2.624s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running Parsec splash2x.ocean_ncp
+[PARSEC] Benchmarks to run:  splash2x.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 32 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /home/ubuntu/Workloads/par-bench/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n2050 -p32 -e1e-07 -r20000 -t28800:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 32
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0           4618912            1964710             0.425
+
+                       TIMING INFORMATION
+Start time                        : 1716332825437826
+Initialization finish time        : 1716332829954051
+Overall finish time               : 1716332834580543
+Total time with initialization    :          9142717
+Total time without initialization :          4626492
+    (excludes first timestep)
+
+
+real	0m9.234s
+user	1m9.576s
+sys	0m2.457s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+Running 1m test @ https://127.0.0.1:8089/test.html
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    88.78ms  120.07ms   1.35s    95.70%
+    Req/Sec   502.33    110.53   770.00     75.04%
+  218826 requests in 1.00m, 24.12GB read
+  Socket errors: connect 0, read 0, write 0, timeout 277
+Requests/sec:   3640.89
+Transfer/sec:    410.95MB

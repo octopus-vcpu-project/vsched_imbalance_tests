@@ -124,7 +124,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
 runLatencyTest(){
-    for i in $(seq 1 4);do
+    for i in $(seq 1 3);do
         sleep 3
         latency_option=$1
         echo "Running Latency benchmark $1" 
@@ -139,7 +139,7 @@ runParsecTest(){
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 32 -i native">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 32 -i simlarge">>"$OUTPUT_FILE"
     done
 }
 activate_vprobers(){
@@ -172,9 +172,9 @@ runLatencyTests(){
   #  runLatencyTest "masstree" # QPS=300 SVC=0.5ms
  #   runLatencyTest "silo" # QPS=1000 SVC=0.3ms
  #   runLatencyTest "shore" # QPS=300 SVC=1000ms
-    runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
+  #  runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
    # runLatencyTest "sphinx" #QPS=1 SVC=3000ms
-  #  runLatencyTest "xapian" #QPS=300 SVC=3ms
+    runLatencyTest "xapian" #QPS=300 SVC=3ms
 }
 
 #parsec
@@ -187,47 +187,56 @@ runParsecTests(){
 #    runParsecTest "fluidanimate" 
 #    runParsecTest "freqmine"
 #    runParsecTest "raytrace" 
-    runParsecTest "streamcluster"
+    #runParsecTest "streamcluster"
 #    runParsecTest "swaptions" 
    # runParsecTest "x264"
-    for i in $(seq 1 3);do
-        sleep 3
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p ocean_ncp -n 32 -i simlarge">>"$OUTPUT_FILE"
-    done
+    #for i in $(seq 1 3);do
+     #   sleep 3
+      #  ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p ocean_ncp -n 32 -i simlarge">>"$OUTPUT_FILE"
+    #done
 #    runParsecTest "splash2x.barnes"
 #    runParsecTest "splash2x.fft"
 #    runParsecTest "splash2x.lu_cb"
 #    runParsecTest "splash2x.lu_ncb"
 #    runParsecTest "splash2x.ocean_cp"
-    #runParsecTest "splash2x.ocean_ncp"
+    runParsecTest "splash2x.ocean_ncp"
  #   runParsecTest "splash2x.radiosity"
  #   runParsecTest "splash2x.radix"
  #   runParsecTest "splash2x.raytrace"
  #   runParsecTest "splash2x.volrend"
  #   runParsecTest "splash2x.water_spatial"
+    ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+    ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 60s -c 300 -t 8 https://127.0.0.1:8089/test.html"  >> "$OUTPUT_FILE"
+    ssh ubuntu@$prob_vm "sudo killall nginx"
 }
+
+
+
+
+
+
 sleep 10
-runLatencyTests
-#runParsecTests
+#runLatencyTests
+runParsecTests
 #runPhoronixTests
 
 sleep 10
 activate_vprobers
-runLatencyTests
+#runLatencyTests
 
-#runParsecTests
+runParsecTests
 #runPhoronixTests
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
 
 
-runLatencyTests
-#runParsecTests
+#runLatencyTests
+runParsecTests
 #runPhoronixTests
 
-sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
-sudo echo 5000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
+#sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
+#sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+#sudo echo 5000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 sudo git add .;sudo git commit -m 'new';sudo git push
 
 

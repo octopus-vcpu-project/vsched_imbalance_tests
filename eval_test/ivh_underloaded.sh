@@ -121,7 +121,7 @@ runParsecTest(){
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 16" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i native">>"$OUTPUT_FILE"
+        #ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
     for i in $(seq 1 1);do
@@ -201,7 +201,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
-#activate_vprobers
+activate_vprobers
 #sleep 10
 #runLatencyTests
 #runPhoronixTests

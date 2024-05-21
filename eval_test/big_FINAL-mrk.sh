@@ -166,9 +166,9 @@ runPhoronixTests(){
 }
 #tailbench
 runLatencyTests(){
-    runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
+ #   runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
     runLatencyTest "moses" # QPS=300 SVC=100ms
-    runLatencyTest "masstree" # QPS=300 SVC=0.5ms
+  #  runLatencyTest "masstree" # QPS=300 SVC=0.5ms
     runLatencyTest "silo" # QPS=1000 SVC=0.3ms
     runLatencyTest "shore" # QPS=300 SVC=1000ms
     runLatencyTest "specjbb" # QPS=500 SVC=0.2ms

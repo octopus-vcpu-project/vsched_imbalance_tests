@@ -123,7 +123,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
 runLatencyTest(){
-    for i in $(seq 1 3);do
+    for i in $(seq 1 4);do
         sleep 3
         latency_option=$1
         echo "Running Latency benchmark $1" 
@@ -206,21 +206,23 @@ runParsecTests(){
  #   runParsecTest "splash2x.water_spatial"
 }
 sleep 10
-
-runParsecTests
-runPhoronixTests
+runLatencyTests
+#runParsecTests
+#runPhoronixTests
 
 sleep 10
 activate_vprobers
-#runLatencyTests
+runLatencyTests
 
-runParsecTests
-runPhoronixTests
+#runParsecTests
+#runPhoronixTests
 
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/vsched-large" &
 
-runParsecTests
-runPhoronixTests
+
+runLatencyTests
+#runParsecTests
+#runPhoronixTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

@@ -187,13 +187,12 @@ activate_vprobers(){
     sleep 10
 }
 sleep 10
-runPhoronixTests
-
+runLatencyTests
 activate_vprobers
 sleep 10
-runPhoronixTests
+runLatencyTests
 ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/vsched-small" &
-runPhoronixTests
+runLatencyTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

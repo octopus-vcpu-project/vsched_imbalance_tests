@@ -52,7 +52,6 @@ ssh ubuntu@$prob_vm "sudo killall sysbench"
 runLatencyTest(){
     for i in $(seq 1 3);do
         sleep 3
-        latency_option=$1
         echo "Running Latency benchmark $1" 
         echo "Running Latency benchmark $1" >> "$OUTPUT_FILE" 
         ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$1;time sudo bash run.sh" 
@@ -78,40 +77,10 @@ runPhoronixTests(){
 runParsecTest(){
     for i in $(seq 1 3);do
         sleep 3
-        echo "Running Parsec $1" 
-        echo "Running Parsec $1 set latency: 16" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i native">>"$OUTPUT_FILE"
-	sleep 3
-    done
-    for i in $(seq 1 3);do
-        sleep 3
-        echo "Running Parsec $1" 
-        echo "Running Parsec $1 set latency: 8" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 2 -i native">>"$OUTPUT_FILE"
-	sleep 3
-    done
-    for i in $(seq 1 3);do
-        sleep 3
-        echo "Running Parsec $1" 
-        echo "Running Parsec $1 set latency: 4" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 4 -i native">>"$OUTPUT_FILE"
-	sleep 3
-    done
-    for i in $(seq 1 3);do
-        sleep 3
-        echo "Running Parsec $1" 
-        echo "Running Parsec $1 set latency: 2" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 8 -i native">>"$OUTPUT_FILE"
-	sleep 3
-    done
-    for i in $(seq 1 3);do
-        sleep 3
-        echo "Running Parsec $1" 
-        echo "Running Parsec $1 set latency: 1" >> "$OUTPUT_FILE" 
         ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 16 -i native">>"$OUTPUT_FILE"
+	sleep 3
     done
 }
-
 
 #tailbench
 runLatencyTests(){
@@ -131,7 +100,7 @@ runParsecTests(){
     runParsecTest "bodytrack"
     runParsecTest "canneal" 
     runParsecTest "dedup"
-#    runParsecTest "facesim" 
+    runParsecTest "facesim" 
 #    runParsecTest "fluidanimate" 
  #   runParsecTest "freqmine"
 #    runParsecTest "raytrace" 
@@ -141,11 +110,11 @@ runParsecTests(){
  #   runParsecTest "splash2x.barnes"
     runParsecTest "splash2x.fft"
   #  runParsecTest "splash2x.lu_cb"
- #   runParsecTest "splash2x.lu_ncb"
+    runParsecTest "splash2x.lu_ncb"
     runParsecTest "splash2x.ocean_cp"
     runParsecTest "splash2x.ocean_ncp"
   #  runParsecTest "splash2x.radiosity"
-   # runParsecTest "splash2x.radix"
+    runParsecTest "splash2x.radix"
    # runParsecTest "splash2x.raytrace"
    # runParsecTest "splash2x.volrend"
    # runParsecTest "splash2x.water_spatial"
@@ -153,20 +122,20 @@ runParsecTests(){
 
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 60 -s 12 -u 8000" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 2 -s 10 -d 400 -u 14000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
-    ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 150 -s 10000 &  " & 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 1000  " & 
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
-activate_vprobers
-sleep 10
+
+#runParsecTests
 #runLatencyTests
-#runPhoronixTests
+activate_vprobers
+#sleep 10
 runParsecTests
-ssh ubuntu@$prob_vm "sudo killall ivh"
-runParsecTests
+runLatencyTests
 
 #sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns
 #sudo echo 4000000 > /sys/kernel/debug/sched/wakeup_granularity_ns

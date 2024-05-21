@@ -112,7 +112,7 @@ runLatencyTest(){
         latency_option=$1
         echo "Running Latency benchmark $1" 
         echo "Running Latency benchmark $1" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$1;time sudo bash run.sh" 
+        ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/$1;time sudo bash run-small.sh" 
         ssh ubuntu@$prob_vm "cd /home/ubuntu/Workloads/Tailbench/tailbench/utilities;sudo python parselats-1.py ../$1/lats.bin"  >> "$OUTPUT_FILE" 2>&1
     done
 }

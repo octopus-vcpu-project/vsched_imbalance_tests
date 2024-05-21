@@ -121,21 +121,21 @@ runParsecTest(){
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 16" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i simlarge">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 1 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
-    for i in $(seq 1 3);do
+    for i in $(seq 1 1);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 8" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 2 -i simlarge">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 2 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
-    for i in $(seq 1 3);do
+    for i in $(seq 1 1);do
         sleep 3
         echo "Running Parsec $1" 
         echo "Running Parsec $1 set latency: 4" >> "$OUTPUT_FILE" 
-        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 4 -i simlarge">>"$OUTPUT_FILE"
+        ssh ubuntu@$prob_vm "sudo /home/ubuntu/Workloads/par-bench/bin/parsecmgmt -a run -p $1 -n 4 -i native">>"$OUTPUT_FILE"
 	sleep 3
     done
     for i in $(seq 1 3);do
@@ -198,7 +198,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 150 -s 10000 &  " & 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
 #activate_vprobers

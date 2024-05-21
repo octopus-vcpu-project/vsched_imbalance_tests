@@ -201,16 +201,16 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh" &
     sleep 10
 }
-activate_vprobers
-sleep 10
+#activate_vprobers
+#sleep 10
 #runLatencyTests
 #runPhoronixTests
-runParsecTests
-ssh ubuntu@$prob_vm "sudo killall ivh"
-sleep 5
-runParsecTests
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh-unaware" &
-sleep 10
+#runParsecTests
+#ssh ubuntu@$prob_vm "sudo killall ivh"
+#sleep 5
+#runParsecTests
+#ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh-unaware" &
+#sleep 10
 runParsecTest "streamcluster"
 
 

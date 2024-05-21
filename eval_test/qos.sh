@@ -79,8 +79,8 @@ outputToConsole(){
 makeDisaster(){
 	virsh vcpupin $prob_vm 3 3
 	virsh vcpupin $prob_vm 4 3
-	virsh vcpupin $prob_vm 5 3
-	setLatency 1000 20000 0 2
+	#virsh vcpupin $prob_vm 5 3
+	setLatency 1000 20000 0 1
 	outputToConsole
 
 }
@@ -97,13 +97,13 @@ makeTwoSockets(){
 }
 
 makeAssymetric(){
-	setLatency 6000 8000 0 7
+	setLatency 7000 10000 0 7
 	setLatency 3000 10000 8 15
 	outputToConsole
 }
 
 makeContention(){
-        setLatency 5000 10000 0 15
+        setLatency 8000 10000 0 15
         ssh ubuntu@$compete_vm "sudo $compete_bench" &
         outputToConsole
 }

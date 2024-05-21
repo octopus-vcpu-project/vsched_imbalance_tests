@@ -103,13 +103,13 @@ makeAssymetric(){
 }
 
 makeContention(){
-        setLatency 8000 10000 0 15
+        setLatency 6000 10000 0 15
         ssh ubuntu@$compete_vm "sudo $compete_bench" &
         outputToConsole
 }
 
 sudo echo 4000000 > /sys/kernel/debug/sched/min_granularity_ns
-sudo echo 12000000 > /sys/kernel/debug/sched/wakeup_granularity_ns
+sudo echo 0 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$prob_vm "sudo killall a.out"
 ssh ubuntu@$prob_vm "sudo tee /sys/kernel/debug/sched/min_granularity_ns <<< 1000000"

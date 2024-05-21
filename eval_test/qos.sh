@@ -70,7 +70,6 @@ setLatency(){
 }
 
 #Setting Next 3 cores  as High Latency/Low Capacity 
-setLatency 4000 8000 0 15 #6ms/18ms 
 
 outputToConsole(){
 	echo "phase" >> "$OUTPUT_FILE"

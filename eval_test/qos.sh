@@ -77,9 +77,9 @@ outputToConsole(){
 }
 
 makeDisaster(){
-	virsh vcpupin $prob_vm 2 2
-	virsh vcpupin $prob_vm 3 2
-	virsh vcpupin $prob_vm 4 2
+	virsh vcpupin $prob_vm 3 3
+	virsh vcpupin $prob_vm 4 3
+	virsh vcpupin $prob_vm 5 3
 	setLatency 1000 20000 0 2
 	outputToConsole
 

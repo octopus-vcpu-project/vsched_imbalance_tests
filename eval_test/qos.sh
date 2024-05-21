@@ -129,6 +129,7 @@ activate_vprobers(){
 #activate_vprobers
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
 ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 300 -t 8 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
+sleep 30
 makeTwoSockets
 sleep 30
 makeContention

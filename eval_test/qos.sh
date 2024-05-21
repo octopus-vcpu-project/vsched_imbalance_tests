@@ -5,6 +5,7 @@ latency_bench="cd /home/ubuntu/Workloads/tailbench-v0.9/img-dnn;time sudo bash r
 idler_bench="sudo bash /home/ubuntu/idle_load_generator/idler.sh"
 compete_bench="sudo sysbench --threads=32 --time=1000000 cpu run"
 OUTPUT_FILE="./data/obj-latency-noidle$(date +%m%d%H%M).txt"
+OUTPUT_FILE2="./data/obj-2$(date +%m%d%H%M).txt"
 naive_topology_string="<cpu mode='custom' match='exact' check='none'>\n<model fallback='forbid'>qemu64</model>\n</cpu>"
 smart_topology_string="<cpu mode='custom' match='exact' check='none'>\n    <model fallback='forbid'>qemu64</model>\n    <topology sockets='1' dies='1' cores='16' threads='1'/></cpu>"
 toggle_topological_passthrough(){
@@ -66,20 +67,20 @@ setLatency(){
         sudo echo $(($2-$1)) $(($2)) > /sys/fs/cgroup/machine.slice/$compete_vm_cgroup_title/libvirt/vcpu$i/cpu.max
     done
     echo "Set latency to $1" 
-    echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
 
 #Setting Next 3 cores  as High Latency/Low Capacity 
 
 outputToConsole(){
-	echo "phase" >> "$OUTPUT_FILE"
-	echo "$(date '+%Y-%m-%d %H:%M:%S') $(( $(date +%s) - $(date -d "$(date '+%Y-%m-%d %H:00:00')" +%s) ))" | awk '{print $3}' >> "$OUTPUT_FILE"
+	echo "phase" >> "$OUTPUT_FILE2"
+	echo "$(date '+%Y-%m-%d %H:%M:%S') $(( $(date +%s) - $(date -d "$(date '+%Y-%m-%d %H:00:00')" +%s) ))" | awk '{print $3}' >> "$OUTPUT_FILE2"
 }
 
 makeDisaster(){
 	virsh vcpupin $prob_vm 2 2
 	virsh vcpupin $prob_vm 3 2
-	setLatency 1000 20000 0 1
+	virsh vcpupin $prob_vm 4 2
+	setLatency 1000 20000 0 2
 	outputToConsole
 
 }
@@ -129,8 +130,6 @@ activate_vprobers(){
 #sleep 10
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 8;'"
 ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 300 -t 4 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
-sleep 30
-makeTwoSockets
 sleep 30
 makeContention
 sleep 30

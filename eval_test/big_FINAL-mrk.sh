@@ -98,6 +98,7 @@ setLatency(){
     echo "Set latency to $1" >> "$OUTPUT_FILE" 
 }
 
+
 for z in {0..2};do
 	#Setting Next 3 cores  as High Latency/Low Capacity 
 	setLatency 6000 18000 $((z*8)) $((z*8+1)) #6ms/18ms 
@@ -167,13 +168,13 @@ runPhoronixTests(){
 #tailbench
 runLatencyTests(){
  #   runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
-    runLatencyTest "moses" # QPS=300 SVC=100ms
+ #   runLatencyTest "moses" # QPS=300 SVC=100ms
   #  runLatencyTest "masstree" # QPS=300 SVC=0.5ms
     runLatencyTest "silo" # QPS=1000 SVC=0.3ms
     runLatencyTest "shore" # QPS=300 SVC=1000ms
     runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
-    runLatencyTest "sphinx" #QPS=1 SVC=3000ms
-    runLatencyTest "xapian" #QPS=300 SVC=3ms
+   # runLatencyTest "sphinx" #QPS=1 SVC=3000ms
+  #  runLatencyTest "xapian" #QPS=300 SVC=3ms
 }
 
 #parsec
@@ -217,7 +218,7 @@ runLatencyTests
 #runParsecTests
 #runPhoronixTests
 
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/vsched-large" &
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
 
 
 runLatencyTests

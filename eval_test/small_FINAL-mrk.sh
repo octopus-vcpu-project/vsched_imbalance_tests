@@ -151,8 +151,8 @@ runLatencyTests(){
 #    runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
 #    runLatencyTest "sphinx" #QPS=1 SVC=3000ms
 #    runLatencyTest "xapian" #QPS=300 SVC=3ms
-	for i in $(seq 1 3);do
-     ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 100 -t 4 https://127.0.0.1:8089/test.html"  >> "$OUTPUT_FILE"
+	for i in $(seq 1 4);do
+     ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 150 -t 10 https://127.0.0.1:8089/test.html"  >> "$OUTPUT_FILE"
 	done
 }
 

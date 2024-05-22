@@ -1,0 +1,102 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 1000
+Set latency to 4000
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   145.38ms  131.01ms   1.20s    88.09%
+    Req/Sec   117.88     59.24   420.00     68.92%
+  34338 requests in 30.11s, 3.78GB read
+Requests/sec:   1140.53
+Transfer/sec:    128.73MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   141.56ms  125.83ms   1.20s    87.85%
+    Req/Sec   121.41     64.05   333.00     66.52%
+  35038 requests in 30.11s, 3.86GB read
+Requests/sec:   1163.66
+Transfer/sec:    131.37MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   145.53ms  143.77ms   1.46s    91.07%
+    Req/Sec   119.88     53.16   326.00     67.82%
+  35152 requests in 30.10s, 3.87GB read
+Requests/sec:   1167.68
+Transfer/sec:    131.77MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   136.66ms  110.51ms   1.44s    80.54%
+    Req/Sec   121.75     64.62   432.00     64.00%
+  35333 requests in 30.08s, 3.90GB read
+Requests/sec:   1174.60
+Transfer/sec:    132.63MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   130.16ms   51.34ms 469.93ms   71.71%
+    Req/Sec   115.76     32.71   272.00     71.27%
+  34060 requests in 30.08s, 3.75GB read
+Requests/sec:   1132.26
+Transfer/sec:    127.78MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   149.18ms   70.33ms 631.08ms   69.98%
+    Req/Sec   100.90     33.31   282.00     71.98%
+  29774 requests in 30.10s, 3.28GB read
+Requests/sec:    989.01
+Transfer/sec:    111.65MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   135.01ms   67.40ms 924.63ms   72.10%
+    Req/Sec   111.52     34.06   310.00     71.99%
+  32745 requests in 30.11s, 3.61GB read
+Requests/sec:   1087.59
+Transfer/sec:    122.74MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   143.91ms   63.79ms 504.01ms   70.77%
+    Req/Sec   104.49     34.38   233.00     66.23%
+  30801 requests in 30.09s, 3.39GB read
+Requests/sec:   1023.65
+Transfer/sec:    115.52MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   151.48ms   98.55ms   1.01s    77.16%
+    Req/Sec   104.05     41.57   281.00     70.49%
+  30578 requests in 30.09s, 3.37GB read
+Requests/sec:   1016.07
+Transfer/sec:    114.68MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   145.99ms   76.48ms 766.57ms   66.91%
+    Req/Sec   103.25     36.67   270.00     69.97%
+  30416 requests in 30.11s, 3.35GB read
+Requests/sec:   1010.12
+Transfer/sec:    113.99MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   146.45ms   80.65ms 807.82ms   69.37%
+    Req/Sec   102.56     44.63   300.00     70.28%
+  30147 requests in 30.10s, 3.32GB read
+Requests/sec:   1001.69
+Transfer/sec:    113.05MB
+Running 30s test @ https://127.0.0.1:8089/test.html
+  10 threads and 150 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   142.83ms   67.56ms 563.83ms   71.02%
+    Req/Sec   106.08     36.99   267.00     73.55%
+  30879 requests in 30.13s, 3.40GB read
+Requests/sec:   1025.01
+Transfer/sec:    115.71MB

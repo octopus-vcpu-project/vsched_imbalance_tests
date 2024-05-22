@@ -94,8 +94,8 @@ makeSMT(){
 }
 
 makeAssymetric(){
-	setLatency 6000 10000 0 7
-	setLatency 3000 10000 8 15
+	setLatency 7000 10000 0 5
+	setLatency 4000 10000 6 15
 	outputToConsole
 }
 

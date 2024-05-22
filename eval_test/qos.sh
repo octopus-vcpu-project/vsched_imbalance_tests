@@ -77,7 +77,7 @@ outputToConsole(){
 }
 
 makeDisaster(){
-	setLatency 9000 10000 8 15
+	setLatency 9000 10000 0 15
 	for i in {0..7};do
                 virsh vcpupin $select_vm $((i)) $((i))
         done
@@ -105,8 +105,8 @@ makeSMT(){
 }
 
 makeAssymetric(){
-	setLatency 7500 10000 0 7
-	setLatency 3000 10000 8 15
+	setLatency 6000 10000 0 4
+	setLatency 3000 10000 5 15
 	outputToConsole
 }
 

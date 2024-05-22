@@ -122,19 +122,20 @@ runParsecTests(){
 
 activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo insmod /home/ubuntu/vsched/custom_modules/cust_topo.ko" 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 10 -s 10 -d 400 -u 14000" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vtop/a.out -f 10 -s 12 -d 400 -u 17000" &
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 100 -s 2000  " & 
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
+
 virsh shutdown $compete_vm
 #runParsecTests
 #runLatencyTests
 activate_vprobers
 sleep 10
-runParsecTests
+#runParsecTests
 runLatencyTests
 
 #sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

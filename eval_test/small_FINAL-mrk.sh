@@ -191,7 +191,7 @@ runLatencyTests
 activate_vprobers
 sleep 10
 runLatencyTests
-ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/vsched-small" &
+ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
 runLatencyTests
 
 sudo echo 3000000 > /sys/kernel/debug/sched/min_granularity_ns

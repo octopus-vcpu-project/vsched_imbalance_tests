@@ -1,0 +1,216 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 1000
+Set latency to 4000
+Running Latency benchmark shore
+queue: mean 3.006 ms | p95 15.014 ms | p99 49.387 ms | max 69.590 ms
+svc: mean 49.463 ms | p95 284.553 ms | p99 355.004 ms | max 514.063 ms
+end2end: mean 52.469 ms | p95 300.264 ms | p99 366.955 ms | max 567.206 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+queue: mean 3.533 ms | p95 15.399 ms | p99 30.688 ms | max 84.444 ms
+svc: mean 41.344 ms | p95 130.178 ms | p99 177.205 ms | max 204.639 ms
+end2end: mean 44.877 ms | p95 136.955 ms | p99 183.779 ms | max 206.018 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 2.275 ms | p95 11.550 ms | p99 19.527 ms | max 26.146 ms
+svc: mean 52.522 ms | p95 196.224 ms | p99 327.429 ms | max 382.101 ms
+end2end: mean 54.797 ms | p95 197.239 ms | p99 331.344 ms | max 396.203 ms
+Running Latency benchmark shore
+queue: mean 0.277 ms | p95 0.210 ms | p99 5.668 ms | max 9.281 ms
+svc: mean 4.548 ms | p95 13.610 ms | p99 46.808 ms | max 58.182 ms
+end2end: mean 4.825 ms | p95 14.869 ms | p99 48.837 ms | max 58.820 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 2.483 ms | p95 14.123 ms | p99 18.721 ms | max 21.761 ms
+svc: mean 49.620 ms | p95 148.864 ms | p99 206.123 ms | max 227.902 ms
+end2end: mean 52.103 ms | p95 154.020 ms | p99 206.697 ms | max 241.045 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 5.011 ms | p95 18.876 ms | p99 70.083 ms | max 97.964 ms
+svc: mean 65.892 ms | p95 236.763 ms | p99 332.721 ms | max 399.270 ms
+end2end: mean 70.903 ms | p95 240.663 ms | p99 334.074 ms | max 399.335 ms
+Running Latency benchmark shore
+queue: mean 1.849 ms | p95 10.474 ms | p99 17.848 ms | max 36.333 ms
+svc: mean 17.661 ms | p95 79.324 ms | p99 107.372 ms | max 149.939 ms
+end2end: mean 19.509 ms | p95 84.680 ms | p99 116.889 ms | max 150.005 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+queue: mean 0.828 ms | p95 6.478 ms | p99 11.441 ms | max 18.923 ms
+svc: mean 11.004 ms | p95 58.123 ms | p99 115.038 ms | max 210.190 ms
+end2end: mean 11.833 ms | p95 67.774 ms | p99 115.143 ms | max 217.068 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.427 ms | p95 1.822 ms | p99 7.249 ms | max 12.477 ms
+svc: mean 16.342 ms | p95 73.645 ms | p99 123.957 ms | max 176.758 ms
+end2end: mean 16.770 ms | p95 75.671 ms | p99 124.732 ms | max 176.866 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 1.229 ms | p95 6.121 ms | p99 13.668 ms | max 94.696 ms
+svc: mean 26.060 ms | p95 145.142 ms | p99 382.045 ms | max 507.961 ms
+end2end: mean 27.289 ms | p95 146.482 ms | p99 382.772 ms | max 525.057 ms
+Running Latency benchmark shore
+queue: mean 0.308 ms | p95 0.706 ms | p99 4.018 ms | max 12.996 ms
+svc: mean 3.817 ms | p95 9.452 ms | p99 18.189 ms | max 34.227 ms
+end2end: mean 4.126 ms | p95 10.899 ms | p99 19.678 ms | max 36.145 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+queue: mean 0.481 ms | p95 1.088 ms | p99 11.095 ms | max 12.003 ms
+svc: mean 3.975 ms | p95 10.814 ms | p99 20.443 ms | max 50.896 ms
+end2end: mean 4.455 ms | p95 13.808 ms | p99 23.881 ms | max 51.511 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.232 ms | p95 0.213 ms | p99 2.512 ms | max 9.205 ms
+svc: mean 3.763 ms | p95 8.270 ms | p99 18.115 ms | max 48.179 ms
+end2end: mean 3.995 ms | p95 10.189 ms | p99 18.870 ms | max 57.385 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.269 ms | p95 0.221 ms | p99 5.188 ms | max 8.032 ms
+svc: mean 3.504 ms | p95 8.733 ms | p99 14.734 ms | max 24.921 ms
+end2end: mean 3.773 ms | p95 9.942 ms | p99 16.927 ms | max 26.190 ms
+Running Latency benchmark shore
+queue: mean 0.748 ms | p95 2.577 ms | p99 8.300 ms | max 39.383 ms
+svc: mean 38.634 ms | p95 130.237 ms | p99 175.260 ms | max 213.675 ms
+end2end: mean 39.381 ms | p95 130.409 ms | p99 175.816 ms | max 213.856 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+queue: mean 0.790 ms | p95 4.139 ms | p99 9.742 ms | max 16.350 ms
+svc: mean 22.505 ms | p95 84.458 ms | p99 118.528 ms | max 181.349 ms
+end2end: mean 23.295 ms | p95 87.073 ms | p99 119.612 ms | max 192.143 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+queue: mean 0.262 ms | p95 1.025 ms | p99 3.834 ms | max 5.209 ms
+svc: mean 3.620 ms | p95 9.946 ms | p99 19.079 ms | max 31.442 ms
+end2end: mean 3.881 ms | p95 10.857 ms | p99 20.335 ms | max 31.585 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.196 ms | p95 0.263 ms | p99 1.656 ms | max 10.440 ms
+svc: mean 3.219 ms | p95 5.842 ms | p99 12.734 ms | max 32.353 ms
+end2end: mean 3.415 ms | p95 6.407 ms | p99 13.775 ms | max 32.419 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.221 ms | p95 0.265 ms | p99 2.824 ms | max 6.548 ms
+svc: mean 3.315 ms | p95 6.753 ms | p99 14.693 ms | max 26.152 ms
+end2end: mean 3.536 ms | p95 7.970 ms | p99 16.666 ms | max 26.217 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 0.187 ms | p95 0.256 ms | p99 1.880 ms | max 4.865 ms
+svc: mean 3.006 ms | p95 4.642 ms | p99 9.594 ms | max 37.221 ms
+end2end: mean 3.193 ms | p95 4.843 ms | p99 10.837 ms | max 37.961 ms
+Running Latency benchmark shore
+queue: mean 0.209 ms | p95 0.415 ms | p99 2.199 ms | max 4.818 ms
+svc: mean 3.497 ms | p95 7.368 ms | p99 16.016 ms | max 27.028 ms
+end2end: mean 3.706 ms | p95 8.490 ms | p99 16.893 ms | max 27.125 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)

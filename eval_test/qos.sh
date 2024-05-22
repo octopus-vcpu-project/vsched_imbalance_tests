@@ -77,11 +77,19 @@ outputToConsole(){
 }
 
 makeDisaster(){
-	virsh vcpupin $prob_vm 3 3
-	virsh vcpupin $prob_vm 4 3
-        setLatency 4000 10000 0 15
-	setLatency 9000 10000 3 4
-	setLatency 1000 20000 0 1
+	setLatency 9000 10000 8 15
+	for i in {0..7};do
+                virsh vcpupin $select_vm $((i)) $((i))
+        done
+	for i in {8..15};do
+                virsh vcpupin $select_vm $((i)) $((i-8))
+    	done
+	for i in {0..7};do
+                virsh vcpupin $compete_vm $((i)) $((i))
+        done
+        for i in {8..15};do
+                virsh vcpupin $compete_vm $((i)) $((i-8))
+        done
 	outputToConsole
 }
 
@@ -108,7 +116,7 @@ makeContention(){
         outputToConsole
 }
 
-sudo echo 16000000 > /sys/kernel/debug/sched/min_granularity_ns
+sudo echo 4000000 > /sys/kernel/debug/sched/min_granularity_ns
 sudo echo 0 > /sys/kernel/debug/sched/wakeup_granularity_ns
 sudo echo 1000 > /proc/sys/kernel/sched_cfs_bandwidth_slice_us
 ssh ubuntu@$prob_vm "sudo killall a.out"
@@ -128,8 +136,8 @@ activate_vprobers(){
 }
 #activate_vprobers
 sleep 10
-ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 100 -t 1 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 4;'"
+ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 800 -t 4 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
 sleep 30
 makeContention
 sleep 30

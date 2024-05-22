@@ -147,10 +147,13 @@ runLatencyTests(){
 #    runLatencyTest "moses" # QPS=300 SVC=100ms
 #    runLatencyTest "masstree" # QPS=300 SVC=0.5ms
 #    runLatencyTest "silo" # QPS=1000 SVC=0.3ms
-    runLatencyTest "shore" # QPS=300 SVC=1000ms
+#    runLatencyTest "shore" # QPS=300 SVC=1000ms
 #    runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
 #    runLatencyTest "sphinx" #QPS=1 SVC=3000ms
 #    runLatencyTest "xapian" #QPS=300 SVC=3ms
+	for i in $(seq 1 3);do
+     ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 30s -c 100 -t 4 https://127.0.0.1:8089/test.html"  >> "$OUTPUT_FILE"
+	done
 }
 
 #parsec
@@ -186,6 +189,7 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 150 -s 15000 &  " & 
     sleep 10
 }
+ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
 sleep 10
 runLatencyTests
 activate_vprobers

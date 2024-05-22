@@ -79,7 +79,7 @@ outputToConsole(){
 makeDisaster(){
 	virsh vcpupin $prob_vm 3 3
 	virsh vcpupin $prob_vm 4 3
-	#virsh vcpupin $prob_vm 5 3
+	virsh vcpupin $prob_vm 5 3
 	setLatency 1000 20000 0 1
 	outputToConsole
 
@@ -97,7 +97,7 @@ makeSMT(){
 }
 
 makeAssymetric(){
-	setLatency 7000 10000 0 7
+	setLatency 7500 10000 0 7
 	setLatency 3000 10000 8 15
 	outputToConsole
 }
@@ -126,10 +126,10 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
-activate_vprobers
+#activate_vprobers
 sleep 10
 ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
-ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 150 -t 2 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 50 -t 4 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
 sleep 30
 makeSMT
 sleep 30

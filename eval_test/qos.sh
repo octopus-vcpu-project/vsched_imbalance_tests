@@ -85,12 +85,12 @@ makeDisaster(){
 
 }
 
-makeTwoSockets(){
+makeSMT(){
     for i in {8..15};do
-                virsh vcpupin $select_vm $((i)) $((i+12))
+                virsh vcpupin $select_vm $((i)) $((i+72))
     done
     for i in {8..15};do
-                virsh vcpupin $select_vm $((i)) $((i+12))
+                virsh vcpupin $compete_vm $((i)) $((i+72))
     done
     outputToConsole
 
@@ -103,7 +103,7 @@ makeAssymetric(){
 }
 
 makeContention(){
-        setLatency 6000 10000 0 15
+        setLatency 5000 10000 0 15
         ssh ubuntu@$compete_vm "sudo $compete_bench" &
         outputToConsole
 }
@@ -123,15 +123,15 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo bash /home/ubuntu/runprober.sh"
     ssh ubuntu@$prob_vm 'sudo bash -c "echo "+cpuset" > /sys/fs/cgroup/cgroup.subtree_control"'
     ssh ubuntu@$prob_vm "nohup sudo /home/ubuntu/cpu_profiler/cpu_prober.out -i 200000 -p 150 -s 1000 &  " & 
-    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/ivh" &
+    ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
 #activate_vprobers
 #sleep 10
-ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 6;'"
-ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 100 -t 3 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes auto;'"
+ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 100 -t 1 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
 sleep 30
-makeTwoSockets
+makeSMT
 sleep 30
 makeContention
 sleep 30

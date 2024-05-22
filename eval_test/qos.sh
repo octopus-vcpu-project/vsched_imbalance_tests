@@ -86,11 +86,18 @@ makeDisaster(){
 }
 
 makeSMT(){
-    for i in {8..15};do
-                virsh vcpupin $select_vm $((i)) $((i+72))
+
+    for i in {0..3};do
+                virsh vcpupin $select_vm $((i)) $((i))
     done
-    for i in {8..15};do
-                virsh vcpupin $compete_vm $((i)) $((i+72))
+    for i in {4..7};do
+                virsh vcpupin $select_vm $((i)) $((i))
+    done
+    for i in {8..11};do
+                virsh vcpupin $select_vm $((i)) $((i))
+    done
+    for i in {12..15};do
+                virsh vcpupin $select_vm $((i)) $((i))
     done
     outputToConsole
 
@@ -126,10 +133,10 @@ activate_vprobers(){
     ssh ubuntu@$prob_vm "sudo /home/ubuntu/vsched/tools/bpf/vcfs/atc" &
     sleep 10
 }
-#activate_vprobers
+activate_vprobers
 sleep 10
-ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 4;'"
-ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 400 -t 4 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
+ssh ubuntu@$prob_vm "cd /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1;sudo ./nginx_/sbin/nginx -g 'worker_processes 8;'"
+ssh ubuntu@$prob_vm "sudo /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/wrk-4.2.0/wrk -d 10000s -c 10 -t 3 https://127.0.0.1:8089/test.html -s /var/lib/phoronix-test-suite/installed-tests/pts/nginx-3.0.1/new_script.lua" >> "$OUTPUT_FILE" &
 sleep 30
 makeSMT
 sleep 30

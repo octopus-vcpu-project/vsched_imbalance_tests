@@ -107,7 +107,7 @@ ssh ubuntu@$compete_vm "sudo killall sysbench"
 ssh ubuntu@$compete_vm "sudo $compete_bench" &
 
 runLatencyTest(){
-    for i in $(seq 1 3);do
+    for i in $(seq 1 7);do
         sleep 3
         latency_option=$1
         echo "Running Latency benchmark $1" 
@@ -143,14 +143,14 @@ runParsecTest(){
 
 #tailbench
 runLatencyTests(){
-    runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
+#    runLatencyTest "img-dnn" # QPS=1000 SVC=1ms
 #    runLatencyTest "moses" # QPS=300 SVC=100ms
 #    runLatencyTest "masstree" # QPS=300 SVC=0.5ms
 #    runLatencyTest "silo" # QPS=1000 SVC=0.3ms
     runLatencyTest "shore" # QPS=300 SVC=1000ms
 #    runLatencyTest "specjbb" # QPS=500 SVC=0.2ms
 #    runLatencyTest "sphinx" #QPS=1 SVC=3000ms
-    runLatencyTest "xapian" #QPS=300 SVC=3ms
+#    runLatencyTest "xapian" #QPS=300 SVC=3ms
 }
 
 #parsec

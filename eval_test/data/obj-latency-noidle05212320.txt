@@ -1,0 +1,231 @@
+Set latency to 6000
+Set latency to 2000
+Set latency to 12000
+Set latency to 4000
+Set latency to 1000
+Set latency to 4000
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+queue: mean 299.004 ms | p95 905.083 ms | p99 998.148 ms | max 1023.777 ms
+svc: mean 157.581 ms | p95 457.240 ms | p99 960.982 ms | max 1120.048 ms
+end2end: mean 456.586 ms | p95 1157.854 ms | p99 1369.127 ms | max 1762.552 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+queue: mean 1165.255 ms | p95 1918.727 ms | p99 2054.085 ms | max 2078.658 ms
+svc: mean 241.695 ms | p95 641.287 ms | p99 1544.929 ms | max 2195.962 ms
+end2end: mean 1406.951 ms | p95 2168.504 ms | p99 2544.549 ms | max 3455.019 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+queue: mean 181.637 ms | p95 626.335 ms | p99 1685.452 ms | max 1900.614 ms
+svc: mean 115.757 ms | p95 442.739 ms | p99 927.528 ms | max 1599.978 ms
+end2end: mean 297.395 ms | p95 861.841 ms | p99 2571.890 ms | max 2954.789 ms
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 181.637 ms | p95 626.335 ms | p99 1685.452 ms | max 1900.614 ms
+svc: mean 115.757 ms | p95 442.739 ms | p99 927.528 ms | max 1599.978 ms
+end2end: mean 297.395 ms | p95 861.841 ms | p99 2571.890 ms | max 2954.789 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 181.637 ms | p95 626.335 ms | p99 1685.452 ms | max 1900.614 ms
+svc: mean 115.757 ms | p95 442.739 ms | p99 927.528 ms | max 1599.978 ms
+end2end: mean 297.395 ms | p95 861.841 ms | p99 2571.890 ms | max 2954.789 ms
+Running Latency benchmark shore
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:81: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  q_mean = mean(qTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:86: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  svc_mean = mean(svcTimes)
+/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py:91: DeprecationWarning: scipy.mean is deprecated and will be removed in SciPy 2.0.0, use numpy.mean instead
+  sjrn_mean = mean(sjrnTimes)
+queue: mean 181.637 ms | p95 626.335 ms | p99 1685.452 ms | max 1900.614 ms
+svc: mean 115.757 ms | p95 442.739 ms | p99 927.528 ms | max 1599.978 ms
+end2end: mean 297.395 ms | p95 861.841 ms | p99 2571.890 ms | max 2954.789 ms
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
+Running Latency benchmark shore
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 113, in <module>
+    getLatPct(latsFile)
+  File "/home/ubuntu/Workloads/Tailbench/tailbench/utilities/parselats-1.py", line 80, in getLatPct
+    f.close()
+OSError: [Errno 28] No space left on device
